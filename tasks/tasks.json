@@ -1,0 +1,238 @@
+[
+  {
+    "id": 1,
+    "title": "Project Setup and Infrastructure",
+    "description": "Initialize the Next.js 14 project with TypeScript, TailwindCSS, and establish the basic project structure",
+    "status": "in-progress",
+    "dependencies": [],
+    "priority": "high",
+    "complexity": 4,
+    "details": "Set up Next.js 14 project with TypeScript and TailwindCSS. Configure ESLint and Prettier. Set up project structure following Next.js 14 conventions. Initialize Git repository with appropriate .gitignore. Create README.md with project overview and setup instructions.",
+    "testStrategy": "Verify project builds successfully. Confirm TypeScript compilation works. Test TailwindCSS styling. Check ESLint and Prettier configurations. Validate project structure follows Next.js 14 best practices."
+  },
+  {
+    "id": 2,
+    "title": "Core Data Models Implementation",
+    "description": "Implement the core data models for ArmyList, Unit, and Detachment as specified in the PRD",
+    "status": "pending",
+    "dependencies": [1],
+    "priority": "high",
+    "complexity": 7,
+    "details": "Create TypeScript interfaces for ArmyList, Unit, and Detachment models. Implement validation functions for each model. Add utility functions for model manipulation. Ensure type safety and proper error handling.",
+    "testStrategy": "Write unit tests for model validation. Test type safety with TypeScript compiler. Verify model manipulation functions work correctly. Test error handling scenarios."
+  },
+  {
+    "id": 3,
+    "title": "Space Marines Faction Data",
+    "description": "Create the JSON data structure for Space Marines units, including stats, options, and abilities",
+    "status": "pending",
+    "dependencies": [2],
+    "priority": "high",
+    "complexity": 8.5,
+    "details": "Create JSON data files for Space Marines units. Include unit stats, wargear options, special abilities, and point costs. Structure data to be easily extendable for future factions. Implement data validation.",
+    "testStrategy": "Validate JSON schema. Test data loading and parsing. Verify point calculations match official values. Test data structure extensibility.",
+    "subtasks": [
+      {
+        "id": "3.1",
+        "title": "Core Unit Data Structure",
+        "description": "Define and implement the base data structure for Space Marine units",
+        "status": "pending",
+        "details": "Create TypeScript interfaces for unit data. Implement base unit stats structure. Define common unit properties. Ensure type safety and validation.",
+        "testStrategy": "Test data structure against TypeScript compiler. Verify all required fields are present. Validate type definitions."
+      },
+      {
+        "id": "3.2",
+        "title": "Wargear and Options System",
+        "description": "Implement the data structure for unit wargear and upgrade options",
+        "status": "pending",
+        "details": "Create wargear data structure. Implement upgrade options system. Define point cost modifiers. Ensure proper validation of options.",
+        "testStrategy": "Test wargear data loading. Verify upgrade options validation. Check point cost calculations."
+      },
+      {
+        "id": "3.3",
+        "title": "Special Abilities and Rules",
+        "description": "Create the data structure for unit special abilities and rules",
+        "status": "pending",
+        "details": "Implement special abilities data structure. Create rules reference system. Define ability interactions. Ensure proper validation.",
+        "testStrategy": "Test ability data loading. Verify rule references. Check ability interactions."
+      },
+      {
+        "id": "3.4",
+        "title": "Data Validation System",
+        "description": "Implement comprehensive validation for all faction data",
+        "status": "pending",
+        "details": "Create validation functions for unit data. Implement wargear validation. Add ability validation. Ensure data consistency checks.",
+        "testStrategy": "Test validation against sample data. Verify error handling. Check edge cases."
+      },
+      {
+        "id": "3.5",
+        "title": "Extensibility Framework",
+        "description": "Create the framework for adding future factions",
+        "status": "pending",
+        "details": "Design faction extension system. Implement faction-specific overrides. Create migration utilities. Document extension process.",
+        "testStrategy": "Test adding mock faction. Verify extension system. Check migration process."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Basic UI Components",
+    "description": "Develop reusable UI components for the army builder interface",
+    "status": "pending",
+    "dependencies": [1],
+    "priority": "medium",
+    "complexity": 6,
+    "details": "Create responsive UI components using TailwindCSS. Implement unit cards, detachment views, points display, and validation feedback components. Ensure mobile-first design and accessibility compliance.",
+    "testStrategy": "Test responsive design across different screen sizes. Verify accessibility compliance. Test component interactions. Validate styling consistency."
+  },
+  {
+    "id": 5,
+    "title": "Points Calculation Engine",
+    "description": "Implement the core logic for calculating army points based on units and their options",
+    "status": "pending",
+    "dependencies": [2,3],
+    "priority": "high",
+    "complexity": 9,
+    "details": "Create points calculation service. Implement unit base cost calculation. Add wargear and upgrade cost calculations. Create validation for point limits. Ensure real-time updates.",
+    "testStrategy": "Test point calculations against official values. Verify real-time updates. Test edge cases and error handling. Validate point limit enforcement.",
+    "subtasks": [
+      {
+        "id": "5.1",
+        "title": "Base Points Calculator",
+        "description": "Implement the core points calculation system for base units",
+        "status": "pending",
+        "details": "Create points calculation service. Implement base unit cost logic. Add unit size modifiers. Ensure type safety.",
+        "testStrategy": "Test against official point values. Verify unit size calculations. Check type safety."
+      },
+      {
+        "id": "5.2",
+        "title": "Wargear Points System",
+        "description": "Implement the points calculation for unit wargear and upgrades",
+        "status": "pending",
+        "details": "Create wargear points calculator. Implement upgrade cost logic. Add special rule modifiers. Ensure proper validation.",
+        "testStrategy": "Test wargear point calculations. Verify upgrade costs. Check special rule modifiers."
+      },
+      {
+        "id": "5.3",
+        "title": "Real-time Update System",
+        "description": "Implement the real-time points update mechanism",
+        "status": "pending",
+        "details": "Create update service. Implement change detection. Add caching system. Ensure performance optimization.",
+        "testStrategy": "Test update performance. Verify change detection. Check caching behavior."
+      },
+      {
+        "id": "5.4",
+        "title": "Point Limit Validation",
+        "description": "Implement the system for enforcing point limits",
+        "status": "pending",
+        "details": "Create limit validation service. Implement warning system. Add limit configuration. Ensure clear user feedback.",
+        "testStrategy": "Test limit enforcement. Verify warning system. Check user feedback."
+      },
+      {
+        "id": "5.5",
+        "title": "Edge Case Handler",
+        "description": "Implement handling for special cases and complex calculations",
+        "status": "pending",
+        "details": "Create edge case detection. Implement special rules handler. Add fallback calculations. Ensure error recovery.",
+        "testStrategy": "Test edge cases. Verify special rules. Check error handling."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Unit Selection Interface",
+    "description": "Build the interactive interface for browsing and selecting units to add to an army list",
+    "status": "pending",
+    "dependencies": [3,4,5],
+    "priority": "medium",
+    "complexity": 7.5,
+    "details": "Create unit browser with search and filter capabilities. Implement unit selection and configuration interface. Add wargear and upgrade selection UI. Ensure intuitive user experience.",
+    "testStrategy": "Test search and filter functionality. Verify unit selection process. Test wargear configuration. Validate user experience through usability testing."
+  },
+  {
+    "id": 7,
+    "title": "Army Validation Rules",
+    "description": "Implement the validation system to check army composition against game rules",
+    "status": "pending",
+    "dependencies": [2,5],
+    "priority": "medium",
+    "complexity": 8,
+    "details": "Implement detachment structure validation. Add unit role requirements checking. Create warning system for rule violations. Ensure clear feedback to users.",
+    "testStrategy": "Test validation against official rules. Verify warning system. Test edge cases. Validate user feedback clarity.",
+    "subtasks": [
+      {
+        "id": "7.1",
+        "title": "Detachment Structure Validator",
+        "description": "Implement the core detachment validation system",
+        "status": "pending",
+        "details": "Create detachment validation service. Implement structure checks. Add role requirements. Ensure proper validation.",
+        "testStrategy": "Test detachment validation. Verify role requirements. Check structure rules."
+      },
+      {
+        "id": "7.2",
+        "title": "Unit Role Validator",
+        "description": "Implement validation for unit roles and restrictions",
+        "status": "pending",
+        "details": "Create role validation service. Implement unit restrictions. Add role limits. Ensure proper checks.",
+        "testStrategy": "Test role validation. Verify restrictions. Check role limits."
+      },
+      {
+        "id": "7.3",
+        "title": "Warning System",
+        "description": "Implement the system for generating and displaying validation warnings",
+        "status": "pending",
+        "details": "Create warning service. Implement warning levels. Add user feedback. Ensure clear messaging.",
+        "testStrategy": "Test warning generation. Verify warning levels. Check user feedback."
+      },
+      {
+        "id": "7.4",
+        "title": "Rule Reference System",
+        "description": "Implement the system for referencing and checking game rules",
+        "status": "pending",
+        "details": "Create rule reference service. Implement rule checks. Add rule documentation. Ensure accuracy.",
+        "testStrategy": "Test rule references. Verify rule checks. Check documentation."
+      },
+      {
+        "id": "7.5",
+        "title": "Validation Feedback UI",
+        "description": "Implement the user interface for displaying validation results",
+        "status": "pending",
+        "details": "Create feedback components. Implement error display. Add suggestion system. Ensure user clarity.",
+        "testStrategy": "Test feedback display. Verify error messages. Check suggestion system."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Local Storage Implementation",
+    "description": "Add functionality to save and load army lists using browser local storage",
+    "status": "pending",
+    "dependencies": [2,5,7],
+    "priority": "medium",
+    "complexity": 5,
+    "details": "Implement local storage service for army lists. Add save/load functionality. Create list management interface. Ensure data persistence and error handling.",
+    "testStrategy": "Test save/load functionality. Verify data persistence. Test error handling. Validate list management features."
+  },
+  {
+    "id": 9,
+    "title": "Army List Management UI",
+    "description": "Develop the interface for creating, editing, and managing army lists",
+    "status": "pending",
+    "dependencies": [4,6,7,8],
+    "priority": "medium",
+    "complexity": 6.5,
+    "details": "Create army list management interface. Implement list creation and editing features. Add list organization capabilities. Ensure intuitive user experience.",
+    "testStrategy": "Test list creation and editing. Verify organization features. Test user experience. Validate all management functions."
+  },
+  {
+    "id": 10,
+    "title": "Export and Sharing Functionality",
+    "description": "Implement features to export army lists to PDF and share via URLs",
+    "status": "pending",
+    "dependencies": [8,9],
+    "priority": "low",
+    "complexity": 7,
+    "details": "Implement PDF export functionality. Add URL sharing capabilities. Create shareable list view. Ensure proper formatting and styling.",
+    "testStrategy": "Test PDF generation. Verify URL sharing. Test list view formatting. Validate sharing functionality."
+  }
+]
