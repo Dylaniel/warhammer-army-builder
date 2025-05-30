@@ -44,6 +44,7 @@ interface ArmyList {
     stats: UnitStats;
     options: UnitOption[];
     abilities: string[];
+    // possibly need more, need to check rule books
   }
   
   interface Detachment {
@@ -51,4 +52,5 @@ interface ArmyList {
     type: string;
     units: Unit[];
     restrictions: DetachmentRestriction[];
+    // possibly need more, need to check rule books
   }
