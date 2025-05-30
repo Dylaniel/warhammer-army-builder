@@ -7,21 +7,21 @@ interface UnitStats {
   wounds: number;
   leadership: number;
   objectiveControl: number;
-  // ... other stats
+  // possibly need more, need to check rule books
 }
 
 interface UnitOption {
   id: string;
   name: string;
   points: number;
-  // ... other option properties
+  // possibly need more, need to check rule books
 }
 
 interface DetachmentRestriction {
   type: string;
   min: number;
   max: number;
-  // ... other restriction properties
+  // possibly need more, need to check rule books
 }
 
 interface ArmyList {
