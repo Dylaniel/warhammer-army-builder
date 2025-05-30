@@ -21,6 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+dev-debug.log
 
 # local env files
 .env*.local
@@ -38,6 +39,10 @@ next-env.d.ts
 .idea/
 *.swp
 *.swo
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
 
 # Cursor specific
 .cursor/
@@ -50,4 +55,7 @@ logs
 .npm
 
 # Optional eslint cache
-.eslintcache 
+.eslintcache
+
+# Task files (keeping tasks/ for reference but ignoring new task files)
+tasks.json 
