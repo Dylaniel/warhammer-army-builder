@@ -1,4 +1,4 @@
-type UnitRole = 'HQ' | 'TROOPS' | 'ELITES' | 'FAST_ATTACK' | 'HEAVY_SUPPORT' | 'FLYER' | 'DEDICATED_TRANSPORT';
+type UnitRole = 'HQ' | 'TROOPS' | 'ELITES' | 'FAST_ATTACK' | 'HEAVY_SUPPORT' | 'FLYER' | 'DEDICATED_TRANSPORT'; // possibly need more, need to check rule books
 
 interface UnitStats {
   movement: number;
@@ -34,6 +34,7 @@ interface ArmyList {
     created: Date;
     updated: Date;
     userId: string;
+    // possibly need more, need to check rule books
   }
   
   interface Unit {
