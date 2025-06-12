@@ -5,7 +5,7 @@ import '../styles/globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Warhammer Army Builder',
+  title: 'Battle Forge UI',
   description: 'Build and manage your Warhammer armies',
 }
 
@@ -17,9 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="min-h-screen bg-gray-100">
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   )

@@ -1,90 +1,68 @@
-# Warhammer Army Builder
+# Warhammer Army Builder - Battle Forge UI
 
-A modern web application for building and managing Warhammer 40k army lists. Built with Next.js 14, TypeScript, and Tailwind CSS.
+A React-based Warhammer army builder application with a modern mobile-first UI design.
 
 ## Features
 
-- Create and manage army lists for Warhammer 40k
-- Real-time points calculation
-- Unit selection and customization
-- Army list validation against game rules
-- Local storage for saving army lists
-- Modern, responsive interface
-- Support for Space Marines (initial faction)
+- **Battle Forge Tab**: Create and manage army lists with a clean, card-based interface
+- **Reference Tab**: Quick access to game rules and faction information
+- **Profile Tab**: User settings and profile management
+- **Responsive Design**: Mobile-first design with bottom navigation
+- **Modal System**: Create new armies with a modal form interface
+
+## Component Structure
+
+```
+src/components/
+├── BattleForgeApp.tsx      # Main app shell and tab management
+├── Header.tsx              # App header with title and menu
+├── BottomNavigation.tsx    # Bottom tab navigation
+├── BattleForgeTab.tsx      # Army list management
+├── ReferenceTab.tsx        # Rules and reference content
+├── ProfileTab.tsx          # User profile and settings
+├── NewArmyModal.tsx        # Modal for creating new armies
+└── FloatingActionButton.tsx # FAB for adding new armies
+```
 
 ## Getting Started
 
-### Prerequisites
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-- Node.js 18.0 or later
-- npm or yarn package manager
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-### Installation
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-1. Clone the repository:
-```bash
-git clone [your-repository-url]
-```
+## Technology Stack
 
-2. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-```
-
-3. Run the development server:
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js 14**: React framework with App Router
+- **TypeScript**: Type-safe development
+- **Tailwind CSS**: Utility-first CSS framework
+- **React Hooks**: State management and side effects
 
 ## Development
 
-The project is built with:
+The app is built with a component-based architecture where each tab is a separate component. The main `BattleForgeApp` component manages the active tab state and renders the appropriate content.
 
-- Next.js 14 (App Router)
-- React 18
-- TypeScript
-- Tailwind CSS
-- ESLint & Prettier for code quality
+### Key Features
 
-### Project Structure
+- **Tab Navigation**: Switch between Reference, Battle Forge, and Profile tabs
+- **Modal System**: Create new armies with form validation
+- **Responsive Layout**: Mobile-first design with proper spacing
+- **Dark Theme**: Consistent dark theme throughout the application
 
-```
-src/
-├── app/                 # Next.js 14 app router
-│   ├── layout.tsx      # Root layout
-│   ├── page.tsx        # Home page
-│   └── (routes)/       # Route groups
-├── components/         # React components
-│   ├── ui/            # Basic UI components
-│   └── features/      # Feature-specific components
-├── lib/               # Utility functions and shared logic
-├── types/             # TypeScript type definitions
-├── styles/            # Global styles
-└── utils/             # Helper functions
-```
+## Future Enhancements
 
-### Key Directories
-
-- `/src/app` - Next.js 14 app router pages and layouts
-- `/src/components/ui` - Reusable UI components (buttons, inputs, etc.)
-- `/src/components/features` - Feature-specific components (army lists, units, etc.)
-- `/src/lib` - Core business logic and services
-- `/src/types` - TypeScript interfaces and type definitions
-- `/src/styles` - Global styles and Tailwind configuration
-- `/src/utils` - Helper functions and utilities
-
-### Code Quality
-
-- ESLint for code linting
-- Prettier for code formatting
-- TypeScript for type safety
-- Tailwind CSS for styling
+- Army list editing and management
+- Unit selection and customization
+- Points calculation and validation
+- Army list sharing and export
+- User authentication and data persistence
 
 ## Contributing
 
