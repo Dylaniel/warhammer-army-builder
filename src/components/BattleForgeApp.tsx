@@ -26,24 +26,59 @@ export default function BattleForgeApp() {
   };
 
   return (
-    <div className="bg-gray-900 text-white font-sans h-screen overflow-hidden relative" 
-         style={{ background: "url('https://images.unsplash.com/photo-1549449416-563b711e5057?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60') center/cover no-repeat" }}>
-      
-      {/* Free Version Banner */}
-      <div className="bg-yellow-500 text-gray-900 text-center py-2 px-4 text-sm font-semibold">
-        You are currently using the free version of Battle Forge - you are limited to one army roster.
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+      <div
+        className="bg-gray-900 text-white font-sans overflow-hidden"
+        style={{
+          width: '390px',
+          height: '844px',
+          borderRadius: '1.5rem',
+          boxShadow: '0 0 0 1px #222',
+          background: "url('https://images.unsplash.com/photo-1549449416-563b711e5057?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60') center/cover no-repeat",
+          display: 'grid',
+          gridTemplateRows: 'auto auto 1fr 64px',
+          gridTemplateAreas: `
+            "banner"
+            "header"
+            "content"
+            "navigation"
+          `
+        }}
+      >
+        {/* Free Version Banner - Row 1: Fixed height */}
+        <div
+          className="bg-yellow-500 text-gray-900 text-center py-2 px-4 text-sm font-semibold"
+          style={{ gridArea: 'banner' }}
+        >
+          You are currently using the free version of Battle Forge - you are limited to one army roster.
+        </div>
+
+        {/* App Bar - Row 2: Fixed height */}
+        <div style={{ gridArea: 'header' }}>
+          <Header />
+        </div>
+
+        {/* Main Content Area - Row 3: Flexible height, scrollable */}
+        <main
+          className="overflow-auto pt-4"
+          style={{
+            gridArea: 'content',
+            minHeight: 0 // Important for grid items to allow scrolling
+          }}
+        >
+          {renderActiveTab()}
+        </main>
+
+        {/* Bottom Navigation - Row 4: Fixed height, anchored to bottom */}
+        <div
+          style={{
+            gridArea: 'navigation',
+            height: '64px'
+          }}
+        >
+          <BottomNavigation activeTab={activeTab} onTabChange={setActiveTab} />
+        </div>
       </div>
-
-      {/* App Bar */}
-      <Header />
-
-      {/* Main Content Area */}
-      <main className="overflow-auto pb-32 pt-4 h-[calc(100vh-4rem)]">
-        {renderActiveTab()}
-      </main>
-
-      {/* Bottom Navigation */}
-      <BottomNavigation activeTab={activeTab} onTabChange={setActiveTab} />
     </div>
   );
 } 
