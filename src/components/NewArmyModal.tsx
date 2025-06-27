@@ -12,6 +12,7 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
   const [formData, setFormData] = useState({
     armyName: '',
     faction: '',
+    detatchment: '',
     points: 2000,
   });
 
@@ -63,6 +64,21 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
               onChange={handleInputChange}
               className="w-full px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
               placeholder="e.g. Ultramarines"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1" htmlFor="faction">
+              Detatchment
+            </label>
+            <input
+              id="detatchment"
+              name="detatchment"
+              type="text"
+              value={formData.detatchment}
+              onChange={handleInputChange}
+              className="w-full px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
+              placeholder="e.g. Firestorm assualt force"
               required
             />
           </div>
