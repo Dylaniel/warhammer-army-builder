@@ -12,7 +12,7 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
   const [formData, setFormData] = useState({
     armyName: '',
     faction: '',
-    points: 2000
+    points: 2000,
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -23,9 +23,9 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: name === 'points' ? parseInt(value) || 0 : value
+      [name]: name === 'points' ? parseInt(value) || 0 : value,
     }));
   };
 
@@ -100,4 +100,4 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
       </div>
     </div>
   );
-} 
+}

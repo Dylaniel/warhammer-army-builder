@@ -1,162 +1,274 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Battle Forge UI</title>
-  <!-- Tailwind via CDN for quick prototyping -->
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-900 text-white font-sans h-screen overflow-hidden relative" style="background: url('https://via.placeholder.com/800x600') center/cover no-repeat;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battle Forge UI</title>
+    <!-- Tailwind via CDN for quick prototyping -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-gray-900 text-white font-sans h-screen overflow-hidden relative"
+    style="background: url('https://via.placeholder.com/800x600') center/cover no-repeat"
+  >
+    <!-- App Bar -->
+    <header class="bg-gray-800 bg-opacity-90 flex items-center justify-between px-4 h-16">
+      <h1 class="text-xl font-bold uppercase tracking-wider">Battle Forge</h1>
+      <button class="p-2 rounded-full hover:bg-gray-700">
+        <!-- three-dots icon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M6 10a2 2 0 100-4 2 2 0 000 4zm4 0a2 2 0 100-4 2 2 0 000 4zm4 0a2 2 0 100-4 2 2 0 000 4z"
+          />
+        </svg>
+      </button>
+    </header>
 
-  <!-- App Bar -->
-  <header class="bg-gray-800 bg-opacity-90 flex items-center justify-between px-4 h-16">
-    <h1 class="text-xl font-bold uppercase tracking-wider">Battle Forge</h1>
-    <button class="p-2 rounded-full hover:bg-gray-700">
-      <!-- three-dots icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M6 10a2 2 0 100-4 2 2 0 000 4zm4 0a2 2 0 100-4 2 2 0 000 4zm4 0a2 2 0 100-4 2 2 0 000 4z"/>
-      </svg>
-    </button>
-  </header>
+    <!-- Main Content Area -->
+    <main id="mainContent" class="overflow-auto pb-32 pt-4 h-[calc(100vh-4rem)]">
+      <!-- Reference Tab -->
+      <section id="referenceTab" class="hidden mx-4">
+        <h2 class="text-2xl font-bold uppercase mb-4">Rules</h2>
+        <p class="text-gray-400 mb-4">and faction reference goes here.</p>
+        <details class="bg-gray-800 bg-opacity-80 rounded-md p-4 mb-2">
+          <summary class="cursor-pointer font-semibold">Army Building</summary>
+          <p class="mt-2 text-gray-400 text-sm">
+            Choose units within your point limit; each unit must match your chosen faction.
+          </p>
+        </details>
+        <details class="bg-gray-800 bg-opacity-80 rounded-md p-4 mb-2">
+          <summary class="cursor-pointer font-semibold">Deployment</summary>
+          <p class="mt-2 text-gray-400 text-sm">
+            Alternate placing units on the battlefield until all deployments are complete.
+          </p>
+        </details>
+        <details class="bg-gray-800 bg-opacity-80 rounded-md p-4 mb-2">
+          <summary class="cursor-pointer font-semibold">Turn Sequence</summary>
+          <p class="mt-2 text-gray-400 text-sm">
+            Each turn: Command Phase, Movement Phase, Shooting Phase, Charge Phase, Fight Phase,
+            Morale Phase.
+          </p>
+        </details>
+        <details class="bg-gray-800 bg-opacity-80 rounded-md p-4 mb-2">
+          <summary class="cursor-pointer font-semibold">Combat & Actions</summary>
+          <p class="mt-2 text-gray-400 text-sm">
+            Use unit stats and dice rolls to resolve attacks, saves, and special abilities.
+          </p>
+        </details>
+        <details class="bg-gray-800 bg-opacity-80 rounded-md p-4 mb-2">
+          <summary class="cursor-pointer font-semibold">Victory Conditions</summary>
+          <p class="mt-2 text-gray-400 text-sm">
+            Win by mission objectives, controlling key locations, or eliminating enemy units.
+          </p>
+        </details>
+      </section>
 
-  <!-- Main Content Area -->
-  <main id="mainContent" class="overflow-auto pb-32 pt-4 h-[calc(100vh-4rem)]">
-
-    <!-- Reference Tab -->
-    <section id="referenceTab" class="hidden mx-4">
-      <h2 class="text-2xl font-bold uppercase mb-4">Rules</h2>
-      <p class="text-gray-400 mb-4">and faction reference goes here.</p>
-      <details class="bg-gray-800 bg-opacity-80 rounded-md p-4 mb-2">
-        <summary class="cursor-pointer font-semibold">Army Building</summary>
-        <p class="mt-2 text-gray-400 text-sm">Choose units within your point limit; each unit must match your chosen faction.</p>
-      </details>
-      <details class="bg-gray-800 bg-opacity-80 rounded-md p-4 mb-2">
-        <summary class="cursor-pointer font-semibold">Deployment</summary>
-        <p class="mt-2 text-gray-400 text-sm">Alternate placing units on the battlefield until all deployments are complete.</p>
-      </details>
-      <details class="bg-gray-800 bg-opacity-80 rounded-md p-4 mb-2">
-        <summary class="cursor-pointer font-semibold">Turn Sequence</summary>
-        <p class="mt-2 text-gray-400 text-sm">Each turn: Command Phase, Movement Phase, Shooting Phase, Charge Phase, Fight Phase, Morale Phase.</p>
-      </details>
-      <details class="bg-gray-800 bg-opacity-80 rounded-md p-4 mb-2">
-        <summary class="cursor-pointer font-semibold">Combat & Actions</summary>
-        <p class="mt-2 text-gray-400 text-sm">Use unit stats and dice rolls to resolve attacks, saves, and special abilities.</p>
-      </details>
-      <details class="bg-gray-800 bg-opacity-80 rounded-md p-4 mb-2">
-        <summary class="cursor-pointer font-semibold">Victory Conditions</summary>
-        <p class="mt-2 text-gray-400 text-sm">Win by mission objectives, controlling key locations, or eliminating enemy units.</p>
-      </details>
-    </section>
-
-    <!-- Battle Forge Tab (Default) -->
-    <section id="battleForgeTab" class="mx-4">
-      <div class="bg-gray-800 bg-opacity-80 rounded-lg overflow-hidden flex">
-        <div class="p-4 flex-1">
-          <h2 class="text-2xl font-bold uppercase">Ultramarines</h2>
-          <p class="text-gray-400 mt-1">Ultramarines • Firestorm Assault F...</p>
-          <span class="inline-block bg-gray-100 text-gray-900 px-3 py-1 rounded-full font-semibold mt-3">2000 Points</span>
+      <!-- Battle Forge Tab (Default) -->
+      <section id="battleForgeTab" class="mx-4">
+        <div class="bg-gray-800 bg-opacity-80 rounded-lg overflow-hidden flex">
+          <div class="p-4 flex-1">
+            <h2 class="text-2xl font-bold uppercase">Ultramarines</h2>
+            <p class="text-gray-400 mt-1">Ultramarines • Firestorm Assault F...</p>
+            <span
+              class="inline-block bg-gray-100 text-gray-900 px-3 py-1 rounded-full font-semibold mt-3"
+              >2000 Points</span
+            >
+          </div>
+          <div
+            class="w-32 h-32 bg-cover bg-center"
+            style="background-image: url('https://via.placeholder.com/128')"
+          ></div>
+          <button class="p-3 hover:bg-gray-700">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-gray-300"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M6 10a2 2 0 100-4 2 2 0 000 4zm4 0a2 2 0 100-4 2 2 0 000 4zm4 0a2 2 0 100-4 2 2 0 000 4z"
+              />
+            </svg>
+          </button>
         </div>
-        <div class="w-32 h-32 bg-cover bg-center" style="background-image:url('https://via.placeholder.com/128')"></div>
-        <button class="p-3 hover:bg-gray-700">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M6 10a2 2 0 100-4 2 2 0 000 4zm4 0a2 2 0 100-4 2 2 0 000 4zm4 0a2 2 0 100-4 2 2 0 000 4z"/>
-          </svg>
-        </button>
-      </div>
-      <!-- New Army Modal -->
-      <div id="newArmyModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-        <div class="bg-gray-800 text-white rounded-lg p-6 w-11/12 max-w-md">
-          <h3 class="text-xl font-bold mb-4">Create New Army</h3>
-          <form id="newArmyForm" class="space-y-4">
-            <div>
-              <label class="block text-sm font-medium mb-1" for="armyName">Army Name</label>
-              <input id="armyName" type="text" class="w-full px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring" placeholder="Enter army name"/>
-            </div>
-            <div>
-              <label class="block text-sm font-medium mb-1" for="faction">Faction</label>
-              <input id="faction" type="text" class="w-full px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring" placeholder="e.g. Ultramarines"/>
-            </div>
-            <div>
-              <label class="block text-sm font-medium mb-1" for="points">Points</label>
-              <input id="points" type="number" class="w-full px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring" placeholder="2000"/>
-            </div>
-            <div class="flex justify-end space-x-2 mt-4">
-              <button type="button" id="cancelBtn" class="px-4 py-2 bg-gray-600 rounded hover:bg-gray-500">Cancel</button>
-              <button type="submit" class="px-4 py-2 bg-yellow-500 text-gray-900 rounded hover:bg-yellow-400">Create</button>
-            </div>
-          </form>
+        <!-- New Army Modal -->
+        <div
+          id="newArmyModal"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+        >
+          <div class="bg-gray-800 text-white rounded-lg p-6 w-11/12 max-w-md">
+            <h3 class="text-xl font-bold mb-4">Create New Army</h3>
+            <form id="newArmyForm" class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium mb-1" for="armyName">Army Name</label>
+                <input
+                  id="armyName"
+                  type="text"
+                  class="w-full px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
+                  placeholder="Enter army name"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-1" for="faction">Faction</label>
+                <input
+                  id="faction"
+                  type="text"
+                  class="w-full px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
+                  placeholder="e.g. Ultramarines"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-1" for="points">Points</label>
+                <input
+                  id="points"
+                  type="number"
+                  class="w-full px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
+                  placeholder="2000"
+                />
+              </div>
+              <div class="flex justify-end space-x-2 mt-4">
+                <button
+                  type="button"
+                  id="cancelBtn"
+                  class="px-4 py-2 bg-gray-600 rounded hover:bg-gray-500"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  class="px-4 py-2 bg-yellow-500 text-gray-900 rounded hover:bg-yellow-400"
+                >
+                  Create
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Profile Tab -->
-    <section id="profileTab" class="hidden mx-4">
-      <h2 class="text-2xl font-bold uppercase mb-4">Profile</h2>
-      <p class="text-gray-400">User profile and settings go here.</p>
-    </section>
+      <!-- Profile Tab -->
+      <section id="profileTab" class="hidden mx-4">
+        <h2 class="text-2xl font-bold uppercase mb-4">Profile</h2>
+        <p class="text-gray-400">User profile and settings go here.</p>
+      </section>
+    </main>
 
-  </main>
-
-  <!-- Floating Action Button -->
-  <button id="addArmyBtn" class="fixed bottom-24 right-6 w-16 h-16 bg-gray-200 text-gray-900 rounded-full flex items-center justify-center shadow-xl hover:scale-105 transition">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 20 20">
-      <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"/>
-    </svg>
-  </button>
-
-  <!-- Bottom Navigation -->
-  <nav class="fixed bottom-0 left-0 right-0 bg-gray-800 flex justify-around items-center h-16">
-    <button id="refTabBtn" class="flex flex-col items-center space-y-1 text-gray-400 hover:text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M8 2a2 2 0 00-2 2v12a2 2 0 002 2h8V2H8zm2 2h6v12h-6V4zM2 6v10a2 2 0 002 2h2V4H4a2 2 0 00-2 2z"/>
+    <!-- Floating Action Button -->
+    <button
+      id="addArmyBtn"
+      class="fixed bottom-24 right-6 w-16 h-16 bg-gray-200 text-gray-900 rounded-full flex items-center justify-center shadow-xl hover:scale-105 transition"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+          clip-rule="evenodd"
+        />
       </svg>
-      <span class="text-xs font-semibold">Reference</span>
     </button>
-    <button id="bfTabBtn" class="flex flex-col items-center space-y-1 text-yellow-400">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M10 2l2.39 4.84 5.35.78-3.87 3.77.91 5.32L10 13.77l-4.78 2.52.91-5.32L2.26 7.62l5.35-.78L10 2z"/>
-      </svg>
-      <span class="text-xs font-bold uppercase">Battle Forge</span>
-    </button>
-    <button id="profileTabBtn" class="flex flex-col items-center space-y-1 text-gray-400 hover:text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
-        <path fill-rule="evenodd" d="M10 2a5 5 0 100 10 5 5 0 000-10zm-7 14a7 7 0 0114 0H3z" clip-rule="evenodd"/>
-      </svg>
-      <span class="text-xs font-semibold">Profile</span>
-    </button>
-  </nav>
 
-  <!-- Scripts -->
-  <script>
-    // Modal Logic
-    const addBtn = document.getElementById('addArmyBtn');
-    const modal = document.getElementById('newArmyModal');
-    const cancelBtn = document.getElementById('cancelBtn');
-    addBtn.addEventListener('click', () => { modal.classList.remove('hidden'); modal.classList.add('flex'); });
-    cancelBtn.addEventListener('click', () => { modal.classList.remove('flex'); modal.classList.add('hidden'); });
-    document.getElementById('newArmyForm').addEventListener('submit', e => { e.preventDefault(); modal.classList.remove('flex'); modal.classList.add('hidden'); });
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-gray-800 flex justify-around items-center h-16">
+      <button
+        id="refTabBtn"
+        class="flex flex-col items-center space-y-1 text-gray-400 hover:text-white"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M8 2a2 2 0 00-2 2v12a2 2 0 002 2h8V2H8zm2 2h6v12h-6V4zM2 6v10a2 2 0 002 2h2V4H4a2 2 0 00-2 2z"
+          />
+        </svg>
+        <span class="text-xs font-semibold">Reference</span>
+      </button>
+      <button id="bfTabBtn" class="flex flex-col items-center space-y-1 text-yellow-400">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-7 w-7"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M10 2l2.39 4.84 5.35.78-3.87 3.77.91 5.32L10 13.77l-4.78 2.52.91-5.32L2.26 7.62l5.35-.78L10 2z"
+          />
+        </svg>
+        <span class="text-xs font-bold uppercase">Battle Forge</span>
+      </button>
+      <button
+        id="profileTabBtn"
+        class="flex flex-col items-center space-y-1 text-gray-400 hover:text-white"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 2a5 5 0 100 10 5 5 0 000-10zm-7 14a7 7 0 0114 0H3z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        <span class="text-xs font-semibold">Profile</span>
+      </button>
+    </nav>
 
-    // Tab Navigation Logic
-    const refBtn = document.getElementById('refTabBtn');
-    const bfBtn = document.getElementById('bfTabBtn');
-    const profileBtn = document.getElementById('profileTabBtn');
-    const refTab = document.getElementById('referenceTab');
-    const bfTab = document.getElementById('battleForgeTab');
-    const profileTab = document.getElementById('profileTab');
-    function activateTab(btn, tab) {
-      [refTab, bfTab, profileTab].forEach(t => t.classList.add('hidden'));
-      [refBtn, bfBtn, profileBtn].forEach(b => b.classList.replace('text-yellow-400','text-gray-400'));
-      tab.classList.remove('hidden');
-      btn.classList.replace('text-gray-400','text-yellow-400');
-    }
-    refBtn.addEventListener('click', () => activateTab(refBtn, refTab));
-    bfBtn.addEventListener('click', () => activateTab(bfBtn, bfTab));
-    profileBtn.addEventListener('click', () => activateTab(profileBtn, profileTab));
+    <!-- Scripts -->
+    <script>
+      // Modal Logic
+      const addBtn = document.getElementById('addArmyBtn');
+      const modal = document.getElementById('newArmyModal');
+      const cancelBtn = document.getElementById('cancelBtn');
+      addBtn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+      cancelBtn.addEventListener('click', () => {
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+      });
+      document.getElementById('newArmyForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+      });
 
-    // Initialize default tab
-    activateTab(bfBtn, bfTab);
-  </script>
+      // Tab Navigation Logic
+      const refBtn = document.getElementById('refTabBtn');
+      const bfBtn = document.getElementById('bfTabBtn');
+      const profileBtn = document.getElementById('profileTabBtn');
+      const refTab = document.getElementById('referenceTab');
+      const bfTab = document.getElementById('battleForgeTab');
+      const profileTab = document.getElementById('profileTab');
+      function activateTab(btn, tab) {
+        [refTab, bfTab, profileTab].forEach((t) => t.classList.add('hidden'));
+        [refBtn, bfBtn, profileBtn].forEach((b) =>
+          b.classList.replace('text-yellow-400', 'text-gray-400')
+        );
+        tab.classList.remove('hidden');
+        btn.classList.replace('text-gray-400', 'text-yellow-400');
+      }
+      refBtn.addEventListener('click', () => activateTab(refBtn, refTab));
+      bfBtn.addEventListener('click', () => activateTab(bfBtn, bfTab));
+      profileBtn.addEventListener('click', () => activateTab(profileBtn, profileTab));
 
-</body>
+      // Initialize default tab
+      activateTab(bfBtn, bfTab);
+    </script>
+  </body>
 </html>

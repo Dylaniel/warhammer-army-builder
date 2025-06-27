@@ -5,4 +5,4 @@ export default function ProfileTab() {
       <p className="text-gray-400">User profile and settings go here.</p>
     </section>
   );
-} 
+}

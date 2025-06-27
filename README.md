@@ -27,11 +27,13 @@ src/components/
 ## Getting Started
 
 1. Install dependencies:
+
    ```bash
    npm install
    ```
 
 2. Run the development server:
+
    ```bash
    npm run dev
    ```
@@ -79,6 +81,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Documentation
 
 Additional documentation can be found in the `scripts/` directory:
+
 - `prd.md` - Project Requirements Document
 - `.windsurfrules` - Development guidelines
-- `tasks.json` - Project roadmap and tasks 
+- `tasks.json` - Project roadmap and tasks

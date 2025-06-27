@@ -34,27 +34,38 @@ export default function BattleForgeApp() {
           height: '844px',
           borderRadius: '1.5rem',
           boxShadow: '0 0 0 1px #222',
-          background: "url('https://images.unsplash.com/photo-1549449416-563b711e5057?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60') center/cover no-repeat",
+          background:
+            "url('https://images.unsplash.com/photo-1549449416-563b711e5057?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60') center/cover no-repeat",
           display: 'grid',
-          gridTemplateRows: 'auto auto 1fr 64px',
+          gridTemplateRows: '40px 64px 1fr 64px',
           gridTemplateAreas: `
             "banner"
             "header"
             "content"
             "navigation"
-          `
+          `,
         }}
       >
         {/* Free Version Banner - Row 1: Fixed height */}
         <div
-          className="bg-yellow-500 text-gray-900 text-center py-2 px-4 text-sm font-semibold"
-          style={{ gridArea: 'banner' }}
+          className="bg-yellow-500 text-gray-900 text-center py-2 px-4 text-sm font-semibold flex items-center justify-center"
+          style={{
+            gridArea: 'banner',
+            height: '40px',
+            overflow: 'hidden',
+          }}
         >
-          You are currently using the free version of Battle Forge - you are limited to one army roster.
+          You are currently using the free version of Battle Forge - you are limited to one army
+          roster.
         </div>
 
         {/* App Bar - Row 2: Fixed height */}
-        <div style={{ gridArea: 'header' }}>
+        <div
+          style={{
+            gridArea: 'header',
+            height: '64px',
+          }}
+        >
           <Header />
         </div>
 
@@ -63,7 +74,7 @@ export default function BattleForgeApp() {
           className="overflow-auto pt-4"
           style={{
             gridArea: 'content',
-            minHeight: 0 // Important for grid items to allow scrolling
+            minHeight: 0, // Important for grid items to allow scrolling
           }}
         >
           {renderActiveTab()}
@@ -73,7 +84,7 @@ export default function BattleForgeApp() {
         <div
           style={{
             gridArea: 'navigation',
-            height: '64px'
+            height: '64px',
           }}
         >
           <BottomNavigation activeTab={activeTab} onTabChange={setActiveTab} />
@@ -81,4 +92,4 @@ export default function BattleForgeApp() {
       </div>
     </div>
   );
-} 
+}
