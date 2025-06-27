@@ -7,7 +7,7 @@ import FloatingActionButton from './FloatingActionButton';
 interface Army {
   armyName: string;
   faction: string;
-  detatchment: string;
+  detachment: string;
   points: number;
 }
 
@@ -17,7 +17,7 @@ function ArmyCard({ army }: { army: Army }) {
       <div className="p-4 flex-1">
         <h2 className="text-2xl font-bold uppercase">{army.armyName}</h2>
         <p className="text-gray-400 mt-1">{army.faction}</p>
-        <p className="text-gray-400 mt-1">{army.detatchment}</p>
+        <p className="text-gray-400 mt-1">{army.detachment}</p>
         <span className="inline-block bg-gray-100 text-gray-900 px-3 py-1 rounded-full font-semibold mt-3">
           {army.points} Points
         </span>
@@ -44,7 +44,7 @@ export default function BattleForgeTab() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [army, setArmy] = useState<Army | null>(null);
 
-  const handleCreateArmy = (formData: { armyName: string; faction: string; detatchment:string; points: number }) => {
+  const handleCreateArmy = (formData: { armyName: string; faction: string; detachment:string; points: number }) => {
     setArmy(formData);
     setIsModalOpen(false);
   };

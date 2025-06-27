@@ -5,21 +5,21 @@ import { useState } from 'react';
 interface NewArmyModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (formData: { armyName: string; faction: string; points: number }) => void;
+  onSubmit: (formData: { armyName: string; faction: string; detachment: string; points: number }) => void;
 }
 
 export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModalProps) {
   const [formData, setFormData] = useState({
     armyName: '',
     faction: '',
-    detatchment: '',
+    detachment: '',
     points: 2000,
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSubmit(formData);
-    setFormData({ armyName: '', faction: '', points: 2000 });
+    setFormData({ armyName: '', faction: '', detachment: '', points: 2000 });
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -69,13 +69,13 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
           </div>
           <div>
             <label className="block text-sm font-medium mb-1" htmlFor="faction">
-              Detatchment
+              Detachment
             </label>
             <input
-              id="detatchment"
-              name="detatchment"
+              id="detachment"
+              name="detachment"
               type="text"
-              value={formData.detatchment}
+              value={formData.detachment}
               onChange={handleInputChange}
               className="w-full px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
               placeholder="e.g. Firestorm assualt force"
