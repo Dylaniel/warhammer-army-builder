@@ -6,22 +6,24 @@ import ReferenceTab from './ReferenceTab';
 import BattleForgeTab from './BattleForgeTab';
 import ProfileTab from './ProfileTab';
 import BottomNavigation from './BottomNavigation';
+import { Army } from '../types/army';
 
 type TabType = 'reference' | 'battleForge' | 'profile';
 
 export default function BattleForgeApp() {
   const [activeTab, setActiveTab] = useState<TabType>('battleForge');
+  const [army, setArmy] = useState<Army | null>(null);
 
   const renderActiveTab = () => {
     switch (activeTab) {
       case 'reference':
-        return <ReferenceTab />;
+        return <ReferenceTab army={army} />;
       case 'battleForge':
-        return <BattleForgeTab />;
+        return <BattleForgeTab army={army} setArmy={setArmy} />;
       case 'profile':
-        return <ProfileTab />;
+        return <ProfileTab army={army} />;
       default:
-        return <BattleForgeTab />;
+        return <BattleForgeTab army={army} setArmy={setArmy} />;
     }
   };
 

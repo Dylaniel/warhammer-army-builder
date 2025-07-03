@@ -2,46 +2,47 @@
 
 import { useState } from 'react';
 import NewArmyModal from './NewArmyModal';
+import { Army } from '../types/army';
 
-interface Army {
-  armyName: string;
-  faction: string;
-  detachment: string;
-  points: number;
+interface BattleForgeTabProps {
+  army: Army | null;
+  setArmy: (army: Army | null) => void;
 }
 
 function ArmyCard({ army }: { army: Army }) {
   return (
-    <div className="bg-gray-800 bg-opacity-80 rounded-lg overflow-hidden flex mb-4">
-      <div className="p-4 flex-1">
-        <h2 className="text-2xl font-bold uppercase">{army.armyName}</h2>
-        <p className="text-gray-400 mt-1">{army.faction}</p>
-        <p className="text-gray-400 mt-1">{army.detachment}</p>
-        <span className="inline-block bg-gray-100 text-gray-900 px-3 py-1 rounded-full font-semibold mt-3">
-          {army.points} Points
-        </span>
+    <div className="bg-gray-800 bg-opacity-80 rounded-lg p-4 mb-4 border border-gray-700">
+      <div className="flex items-center justify-between">
+        <div className="flex-1">
+          <h2 className="text-lg font-bold uppercase text-white">{army.armyName}</h2>
+          <div className="flex items-center gap-3 text-sm text-gray-300 mt-1">
+            <span>{army.faction}</span>
+            <span>•</span>
+            <span>{army.detachment}</span>
+          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="bg-yellow-500 text-gray-900 px-2 py-1 rounded text-sm font-bold">
+            {army.points} pts
+          </span>
+          <button className="p-1 hover:bg-gray-700 rounded">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4 text-gray-400"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M6 10a2 2 0 100-4 2 2 0 000 4zm4 0a2 2 0 100-4 2 2 0 000 4zm4 0a2 2 0 100-4 2 2 0 000 4z" />
+            </svg>
+          </button>
+        </div>
       </div>
-      <div
-        className="w-32 h-32 bg-cover bg-center"
-        style={{ backgroundImage: "url('https://via.placeholder.com/128')" }}
-      ></div>
-      <button className="p-3 hover:bg-gray-700">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 text-gray-300"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path d="M6 10a2 2 0 100-4 2 2 0 000 4zm4 0a2 2 0 100-4 2 2 0 000 4zm4 0a2 2 0 100-4 2 2 0 000 4z" />
-        </svg>
-      </button>
     </div>
   );
 }
 
-export default function BattleForgeTab() {
+export default function BattleForgeTab({ army, setArmy }: BattleForgeTabProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [army, setArmy] = useState<Army | null>(null);
 
   const handleCreateArmy = (formData: { armyName: string; faction: string; detachment:string; points: number }) => {
     setArmy(formData);
