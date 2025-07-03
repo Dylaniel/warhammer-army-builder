@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import NewArmyModal from './NewArmyModal';
-import FloatingActionButton from './FloatingActionButton';
 
 interface Army {
   armyName: string;
@@ -69,8 +68,6 @@ export default function BattleForgeTab() {
         onClose={() => setIsModalOpen(false)}
         onSubmit={handleCreateArmy}
       />
-
-      {!army && <FloatingActionButton onClick={() => setIsModalOpen(true)} />}
     </section>
   );
 }

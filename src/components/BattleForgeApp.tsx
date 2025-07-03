@@ -37,7 +37,7 @@ export default function BattleForgeApp() {
           background:
             "url('https://images.unsplash.com/photo-1549449416-563b711e5057?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60') center/cover no-repeat",
           display: 'grid',
-          gridTemplateRows: '40px 64px 603px 64px',
+          gridTemplateRows: '20px 64px 623px 64px',
           gridTemplateAreas: `
             "banner"
             "header"
@@ -46,17 +46,16 @@ export default function BattleForgeApp() {
           `,
         }}
       >
-        {/* Free Version Banner - Row 1: Fixed height */}
+        {/* Spacer Banner - Row 1: Fixed height */}
         <div
           className="bg-yellow-500 text-gray-900 text-center py-2 px-4 text-sm font-semibold flex items-center justify-center"
           style={{
             gridArea: 'banner',
-            height: '40px',
+            height: '10px',
             overflow: 'hidden',
           }}
         >
-          You are currently using the free version of Battle Forge - you are limited to one army
-          roster.
+          
         </div>
 
         {/* App Bar - Row 2: Fixed height */}
