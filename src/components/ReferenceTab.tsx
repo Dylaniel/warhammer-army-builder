@@ -1,10 +1,10 @@
 import { Army } from '../types/army';
 
 interface ReferenceTabProps {
-  army: Army | null;
+  armies: Army[];
 }
 
-export default function ReferenceTab({ army }: ReferenceTabProps) {
+export default function ReferenceTab({ armies }: ReferenceTabProps) {
   return (
     <section className="mx-4">
       <h2 className="text-2xl font-bold uppercase mb-4">Rules</h2>

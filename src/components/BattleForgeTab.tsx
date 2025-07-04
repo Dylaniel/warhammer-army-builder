@@ -5,13 +5,13 @@ import NewArmyModal from './NewArmyModal';
 import { Army } from '../types/army';
 
 interface BattleForgeTabProps {
-  army: Army | null;
-  setArmy: (army: Army | null) => void;
+  armies: Army[];
+  setArmies: (armies: Army[]) => void;
 }
 
-function ArmyCard({ army }: { army: Army }) {
+function ArmyCard({ army, onDelete }: { army: Army; onDelete: () => void }) {
   return (
-    <div className="bg-gray-800 bg-opacity-80 rounded-lg p-4 mb-4 border border-gray-700">
+    <div className="bg-gray-800 bg-opacity-80 rounded-lg p-4 mb-4 border-2 border-black">
       <div className="flex items-center justify-between">
         <div className="flex-1">
           <h2 className="text-lg font-bold uppercase text-white">{army.armyName}</h2>
@@ -25,15 +25,12 @@ function ArmyCard({ army }: { army: Army }) {
           <span className="bg-yellow-500 text-gray-900 px-2 py-1 rounded text-sm font-bold">
             {army.points} pts
           </span>
-          <button className="p-1 hover:bg-gray-700 rounded">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 text-gray-400"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M6 10a2 2 0 100-4 2 2 0 000 4zm4 0a2 2 0 100-4 2 2 0 000 4zm4 0a2 2 0 100-4 2 2 0 000 4z" />
-            </svg>
+          <button 
+            onClick={onDelete}
+            className="px-3 py-1 bg-red-600 text-white text-sm rounded hover:bg-red-700 transition-colors"
+            title="Delete Army"
+          >
+            Delete Army
           </button>
         </div>
       </div>
@@ -41,28 +38,34 @@ function ArmyCard({ army }: { army: Army }) {
   );
 }
 
-export default function BattleForgeTab({ army, setArmy }: BattleForgeTabProps) {
+export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const MAX_ARMIES = 5;
 
   const handleCreateArmy = (formData: { armyName: string; faction: string; detachment:string; points: number }) => {
-    setArmy(formData);
-    setIsModalOpen(false);
+    if (armies.length < MAX_ARMIES) {
+      setArmies([...armies, formData]);
+      setIsModalOpen(false);
+    }
   };
 
   return (
     <section className="mx-4">
-      {army && <ArmyCard army={army} />}
-      {!army && (
-        <div className="flex flex-col items-center justify-center h-48 bg-gray-800 bg-opacity-80 rounded-lg p-6 text-center">
-          <p className="text-lg text-gray-400 mb-4">No army created yet.</p>
-          <button
-            onClick={() => setIsModalOpen(true)}
-            className="px-6 py-3 bg-yellow-500 text-gray-900 rounded-full font-bold text-lg hover:bg-yellow-400 transition-colors shadow-lg"
-          >
-            Create Your First Army
-          </button>
-        </div>
-      )}
+      <button
+        onClick={() => setIsModalOpen(true)}
+        disabled={armies.length >= MAX_ARMIES}
+        className={`w-full px-6 py-3 rounded-lg font-bold text-lg transition-colors shadow-lg mb-4 ${
+          armies.length >= MAX_ARMIES
+            ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
+            : 'bg-yellow-500 text-gray-900 hover:bg-yellow-400'
+        }`}
+      >
+        {armies.length >= MAX_ARMIES ? 'Army Limit Reached (5)' : 'Create Army'}
+      </button>
+
+      {armies.map((army, index) => (
+        <ArmyCard key={index} army={army} onDelete={() => setArmies(armies.filter((a) => a.armyName !== army.armyName))} />
+      ))}
 
       <NewArmyModal
         isOpen={isModalOpen}

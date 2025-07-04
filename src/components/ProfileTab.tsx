@@ -1,10 +1,10 @@
 import { Army } from '../types/army';
 
 interface ProfileTabProps {
-  army: Army | null;
+  armies: Army[];
 }
 
-export default function ProfileTab({ army }: ProfileTabProps) {
+export default function ProfileTab({ armies }: ProfileTabProps) {
   return (
     <section className="mx-4">
       <h2 className="text-2xl font-bold uppercase mb-4">Profile</h2>

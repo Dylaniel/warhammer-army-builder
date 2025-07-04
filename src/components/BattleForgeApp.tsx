@@ -12,18 +12,18 @@ type TabType = 'reference' | 'battleForge' | 'profile';
 
 export default function BattleForgeApp() {
   const [activeTab, setActiveTab] = useState<TabType>('battleForge');
-  const [army, setArmy] = useState<Army | null>(null);
+  const [armies, setArmies] = useState<Army[]>([]);
 
   const renderActiveTab = () => {
     switch (activeTab) {
       case 'reference':
-        return <ReferenceTab army={army} />;
+        return <ReferenceTab armies={armies} />;
       case 'battleForge':
-        return <BattleForgeTab army={army} setArmy={setArmy} />;
+        return <BattleForgeTab armies={armies} setArmies={setArmies} />;
       case 'profile':
-        return <ProfileTab army={army} />;
+        return <ProfileTab armies={armies} />;
       default:
-        return <BattleForgeTab army={army} setArmy={setArmy} />;
+        return <BattleForgeTab armies={armies} setArmies={setArmies} />;
     }
   };
 
