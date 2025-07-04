@@ -36,8 +36,6 @@ export default function BattleForgeApp() {
           height: '844px',
           borderRadius: '1.5rem',
           boxShadow: '0 0 0 1px #222',
-          background:
-            "url('https://images.unsplash.com/photo-1549449416-563b711e5057?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60') center/cover no-repeat",
           display: 'grid',
           gridTemplateRows: '20px 64px 623px 64px',
           gridTemplateAreas: `
