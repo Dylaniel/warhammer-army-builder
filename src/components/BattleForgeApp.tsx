@@ -17,11 +17,11 @@ export default function BattleForgeApp() {
   const renderActiveTab = () => {
     switch (activeTab) {
       case 'reference':
-        return <ReferenceTab armies={armies} />;
+        return <ReferenceTab />;
       case 'battleForge':
         return <BattleForgeTab armies={armies} setArmies={setArmies} />;
       case 'profile':
-        return <ProfileTab armies={armies} />;
+        return <ProfileTab />;
       default:
         return <BattleForgeTab armies={armies} setArmies={setArmies} />;
     }
