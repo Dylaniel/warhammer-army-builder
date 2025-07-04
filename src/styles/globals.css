@@ -11,3 +11,11 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
 }
+
+.bg-red-600 {
+  color: #dc2626;
+}
+
+.bg-yellow-500 {
+  color: #f59e0b;
+}

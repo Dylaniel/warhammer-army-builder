@@ -60,7 +60,7 @@ export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProp
             : 'bg-yellow-500 text-gray-900 hover:bg-yellow-400'
         }`}
       >
-        {armies.length >= MAX_ARMIES ? 'Army Limit Reached (5)' : 'Create Army'}
+        {armies.length >= MAX_ARMIES ? 'Army Limit Reached (4)' : 'Create Army'}
       </button>
 
       {armies.map((army, index) => (
