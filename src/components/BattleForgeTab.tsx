@@ -11,7 +11,7 @@ interface BattleForgeTabProps {
 
 function ArmyCard({ army, onDelete }: { army: Army; onDelete: () => void }) {
   return (
-    <div className="bg-gray-800 bg-opacity-80 rounded-lg p-4 mb-4 border-2 border-black">
+    <div className="bg-gray-800 rounded-lg p-4 mb-4" style={{ boxShadow: '0 0 0 2px #000' }}>
       <div className="flex items-center justify-between">
         <div className="flex-1">
           <h2 className="text-lg font-bold uppercase text-white">{army.armyName}</h2>
