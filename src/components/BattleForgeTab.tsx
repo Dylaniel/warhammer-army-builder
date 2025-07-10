@@ -40,7 +40,7 @@ function ArmyCard({ army, onDelete }: { army: Army; onDelete: () => void }) {
 
 export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const MAX_ARMIES = 4;
+  const MAX_ARMIES = 10;
 
   const handleCreateArmy = (formData: {
     armyName: string;
@@ -65,16 +65,19 @@ export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProp
             : 'bg-yellow-500 text-gray-900 hover:bg-yellow-400'
         }`}
       >
-        {armies.length >= MAX_ARMIES ? 'Army Limit Reached (4)' : 'Create Army'}
+        {armies.length >= MAX_ARMIES ? `Army Limit Reached (${MAX_ARMIES})` : 'Create Army'}
       </button>
 
-      {armies.map((army, index) => (
-        <ArmyCard
-          key={index}
-          army={army}
-          onDelete={() => setArmies(armies.filter((_, i) => i !== index))}
-        />
-      ))}
+      {/* Army List Section */}
+      <div className="overflow-y-auto" style={{ maxHeight: '623px' }}>
+        {armies.map((army, index) => (
+          <ArmyCard
+            key={index}
+            army={army}
+            onDelete={() => setArmies(armies.filter((_, i) => i !== index))}
+          />
+        ))}
+      </div>
 
       <NewArmyModal
         isOpen={isModalOpen}

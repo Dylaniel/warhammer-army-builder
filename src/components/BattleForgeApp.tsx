@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './Header';
 import ReferenceTab from './ReferenceTab';
 import BattleForgeTab from './BattleForgeTab';
@@ -12,7 +12,22 @@ type TabType = 'reference' | 'battleForge' | 'profile';
 
 export default function BattleForgeApp() {
   const [activeTab, setActiveTab] = useState<TabType>('battleForge');
-  const [armies, setArmies] = useState<Army[]>([]);
+  const [armies, setArmies] = useState<Army[]>(() => {
+    const stored = localStorage.getItem('armies');
+    if (stored) {
+      try {
+        return JSON.parse(stored);
+      } catch {
+        localStorage.removeItem('armies');
+      }
+    }
+    return [];
+  });
+
+  // Save armies to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('armies', JSON.stringify(armies));
+  }, [armies]);
 
   const renderActiveTab = () => {
     switch (activeTab) {
@@ -68,7 +83,7 @@ export default function BattleForgeApp() {
 
         {/* Main Content Area - Row 3: Flexible height, scrollable */}
         <main
-          className="overflow-auto pt-4"
+          className="pt-4"
           style={{
             gridArea: 'content',
             minHeight: 0, // Important for grid items to allow scrolling
