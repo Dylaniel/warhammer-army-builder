@@ -42,9 +42,9 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
       <div className="bg-gray-800 text-white rounded-lg p-6 w-11/12 max-w-md">
         <h3 className="text-xl font-bold mb-4">Create New Army</h3>
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium mb-1" htmlFor="armyName">
-              Army Name
+          <div className="flex items-center mb-2">
+            <label className="w-32 text-sm font-medium mr-2" htmlFor="armyName">
+              {"Army Name"}{"\u00A0\u00A0\u200A\u200A\u200A"}
             </label>
             <input
               id="armyName"
@@ -52,14 +52,14 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
               type="text"
               value={formData.armyName}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
+              className="flex-1 px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
               placeholder="Enter army name"
               required
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium mb-1" htmlFor="faction">
-              Faction
+          <div className="flex items-center mb-2">
+            <label className="w-32 text-sm font-medium mr-2" htmlFor="faction">
+              {"Faction"}{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u200A"}
             </label>
             <input
               id="faction"
@@ -67,14 +67,14 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
               type="text"
               value={formData.faction}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
+              className="flex-1 px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
               placeholder="e.g. Ultramarines"
               required
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium mb-1" htmlFor="faction">
-              Detachment
+          <div className="flex items-center mb-2">
+            <label className="w-32 text-sm font-medium mr-2" htmlFor="detachment">
+              {"Detachment"}{"\u00A0\u00A0"}
             </label>
             <input
               id="detachment"
@@ -82,14 +82,14 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
               type="text"
               value={formData.detachment}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
+              className="flex-1 px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
               placeholder="e.g. Firestorm assualt force"
               required
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium mb-1" htmlFor="points">
-              Points
+          <div className="flex items-center mb-2">
+            <label className="w-32 text-sm font-medium mr-2" htmlFor="points">
+              {"Points"}{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}
             </label>
             <input
               id="points"
@@ -97,7 +97,7 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
               type="number"
               value={formData.points}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
+              className="flex-1 px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
               placeholder="2000"
               required
             />
