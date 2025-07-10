@@ -3,4 +3,4 @@ export interface Army {
   faction: string;
   detachment: string;
   points: number;
-} 
+}

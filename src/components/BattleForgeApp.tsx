@@ -54,9 +54,7 @@ export default function BattleForgeApp() {
             height: '10px',
             overflow: 'hidden',
           }}
-        >
-          
-        </div>
+        ></div>
 
         {/* App Bar - Row 2: Fixed height */}
         <div

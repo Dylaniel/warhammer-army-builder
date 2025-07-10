@@ -5,7 +5,12 @@ import { useState } from 'react';
 interface NewArmyModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (formData: { armyName: string; faction: string; detachment: string; points: number }) => void;
+  onSubmit: (formData: {
+    armyName: string;
+    faction: string;
+    detachment: string;
+    points: number;
+  }) => void;
 }
 
 export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModalProps) {

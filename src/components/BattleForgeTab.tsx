@@ -25,7 +25,7 @@ function ArmyCard({ army, onDelete }: { army: Army; onDelete: () => void }) {
           <span className="bg-yellow-500 text-gray-900 px-2 py-1 rounded text-sm font-bold">
             {army.points} pts
           </span>
-          <button 
+          <button
             onClick={onDelete}
             className="px-3 py-1 bg-red-600 text-white text-sm rounded hover:bg-red-700 transition-colors"
             title="Delete Army"
@@ -42,7 +42,12 @@ export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProp
   const [isModalOpen, setIsModalOpen] = useState(false);
   const MAX_ARMIES = 4;
 
-  const handleCreateArmy = (formData: { armyName: string; faction: string; detachment:string; points: number }) => {
+  const handleCreateArmy = (formData: {
+    armyName: string;
+    faction: string;
+    detachment: string;
+    points: number;
+  }) => {
     if (armies.length < MAX_ARMIES) {
       setArmies([...armies, formData]);
       setIsModalOpen(false);
@@ -64,7 +69,11 @@ export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProp
       </button>
 
       {armies.map((army, index) => (
-        <ArmyCard key={index} army={army} onDelete={() => setArmies(armies.filter((_, i) => i !== index))} />
+        <ArmyCard
+          key={index}
+          army={army}
+          onDelete={() => setArmies(armies.filter((_, i) => i !== index))}
+        />
       ))}
 
       <NewArmyModal

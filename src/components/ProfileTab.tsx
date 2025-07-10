@@ -1,6 +1,4 @@
-
-interface ProfileTabProps {
-}
+interface ProfileTabProps {}
 
 export default function ProfileTab({}: ProfileTabProps) {
   return (
