@@ -81,11 +81,12 @@ export default function BattleForgeApp() {
           <Header />
         </div>
 
-        {/* Main Content Area - Row 3: Flexible height, scrollable */}
+        {/* Main Content Area - Row 3: Fixed height, scrollable */}
         <main
-          className="pt-4"
+          className="pt-4 overflow-y-auto"
           style={{
             gridArea: 'content',
+            height: '623px', // Fixed height to enable overflow scrolling
             minHeight: 0, // Important for grid items to allow scrolling
           }}
         >
