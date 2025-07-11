@@ -106,13 +106,13 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
             <button
               type="button"
               onClick={onClose}
-              className="px-4 py-2 bg-gray-600 rounded hover:bg-gray-500"
+              className="px-4 py-2 bg-red-600 rounded hover:bg-gray-500"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="px-4 py-2 bg-yellow-500 text-gray-900 rounded hover:bg-yellow-400"
+              className="px-4 py-2 bg-green-600 text-gray-900 rounded"
             >
               Create
             </button>
