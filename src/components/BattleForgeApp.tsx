@@ -45,7 +45,7 @@ export default function BattleForgeApp() {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
       <div
-        className="bg-gray-900 text-white font-sans overflow-hidden"
+        className="bg-gray-900 text-white font-sans"
         style={{
           width: '390px',
           height: '844px',
@@ -83,7 +83,7 @@ export default function BattleForgeApp() {
 
         {/* Main Content Area - Row 3: Fixed height, scrollable */}
         <main
-          className="pt-4 overflow-y-auto"
+          className="pt-4 overflow-y-scroll"
           style={{
             gridArea: 'content',
             height: '623px', // Fixed height to enable overflow scrolling
