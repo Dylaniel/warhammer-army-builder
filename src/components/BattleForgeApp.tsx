@@ -82,22 +82,26 @@ export default function BattleForgeApp() {
         </div>
 
         {/* Main Content Area - Row 3: Fixed height, scrollable */}
-        <main
-          className="pt-4 overflow-y-scroll"
+        <div
           style={{
             gridArea: 'content',
-            height: '623px', // Fixed height to enable overflow scrolling
-            minHeight: 0, // Important for grid items to allow scrolling
+            position: 'relative',
+            height: '623px',
+            minHeight: 0,
+            zIndex: 1,
           }}
         >
-          {renderActiveTab()}
-        </main>
+          <main className="pt-4 overflow-y-scroll absolute inset-0 h-[600px] w-full z-[1]">
+            {renderActiveTab()}
+          </main>
+        </div>
 
         {/* Bottom Navigation - Row 4: Fixed height, anchored to bottom */}
         <div
           style={{
             gridArea: 'navigation',
             height: '64px',
+            zIndex: 2,
           }}
         >
           <BottomNavigation activeTab={activeTab} onTabChange={setActiveTab} />

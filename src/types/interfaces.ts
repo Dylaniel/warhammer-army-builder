@@ -1,3 +1,4 @@
+/*
 type UnitRole =
   | 'HQ'
   | 'TROOPS'
@@ -31,19 +32,6 @@ interface DetachmentRestriction {
   // possibly need more, need to check rule books
 }
 
-interface ArmyList {
-  id: string;
-  name: string;
-  faction: string;
-  edition: string;
-  points: number;
-  detachments: Detachment[];
-  created: Date;
-  updated: Date;
-  userId: string;
-  // possibly need more, need to check rule books
-}
-
 interface Unit {
   id: string;
   name: string;
@@ -62,3 +50,4 @@ interface Detachment {
   restrictions: DetachmentRestriction[];
   // possibly need more, need to check rule books
 }
+*/

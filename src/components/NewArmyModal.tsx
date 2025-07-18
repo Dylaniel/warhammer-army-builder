@@ -38,87 +38,82 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-gray-800 text-white rounded-lg p-6 w-11/12 max-w-md">
-        <h3 className="text-xl font-bold mb-4">Create New Army</h3>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="flex items-center mb-2">
-            <label className="w-32 text-sm font-medium mr-2" htmlFor="armyName">
-              {"Army Name"}{"\u00A0\u00A0\u200A\u200A\u200A"}
-            </label>
-            <input
-              id="armyName"
-              name="armyName"
-              type="text"
-              value={formData.armyName}
-              onChange={handleInputChange}
-              className="flex-1 px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
-              placeholder="Enter army name"
-              required
-            />
-          </div>
-          <div className="flex items-center mb-2">
-            <label className="w-32 text-sm font-medium mr-2" htmlFor="faction">
-              {"Faction"}{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u200A"}
-            </label>
-            <input
-              id="faction"
-              name="faction"
-              type="text"
-              value={formData.faction}
-              onChange={handleInputChange}
-              className="flex-1 px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
-              placeholder="e.g. Ultramarines"
-              required
-            />
-          </div>
-          <div className="flex items-center mb-2">
-            <label className="w-32 text-sm font-medium mr-2" htmlFor="detachment">
-              {"Detachment"}{"\u00A0\u00A0"}
-            </label>
-            <input
-              id="detachment"
-              name="detachment"
-              type="text"
-              value={formData.detachment}
-              onChange={handleInputChange}
-              className="flex-1 px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
-              placeholder="e.g. Firestorm assualt force"
-              required
-            />
-          </div>
-          <div className="flex items-center mb-2">
-            <label className="w-32 text-sm font-medium mr-2" htmlFor="points">
-              {"Points"}{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}
-            </label>
-            <input
-              id="points"
-              name="points"
-              type="number"
-              value={formData.points}
-              onChange={handleInputChange}
-              className="flex-1 px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
-              placeholder="2000"
-              required
-            />
-          </div>
-          <div className="flex justify-end space-x-2 mt-4">
-            <button
-              type="button"
-              onClick={onClose}
-              className="px-4 py-2 bg-red-600 rounded hover:bg-gray-500"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              className="px-4 py-2 bg-green-600 text-gray-900 rounded"
-            >
-              Create
-            </button>
-          </div>
-        </form>
-      </div>
+    <div className="bg-gray-800 text-white rounded-lg p-6 w-full max-w-md mx-auto mb-4 shadow-lg">
+      <h3 className="text-xl font-bold mb-4">Create New Army</h3>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="flex items-center mb-2">
+          <label className="w-32 text-sm font-medium mr-2" htmlFor="armyName">
+            {'Army Name'}
+          </label>
+          <input
+            id="armyName"
+            name="armyName"
+            type="text"
+            value={formData.armyName}
+            onChange={handleInputChange}
+            className="flex-1 px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
+            placeholder="Enter army name"
+            required
+          />
+        </div>
+        <div className="flex items-center mb-2">
+          <label className="w-32 text-sm font-medium mr-2" htmlFor="faction">
+            {'Faction'}
+          </label>
+          <input
+            id="faction"
+            name="faction"
+            type="text"
+            value={formData.faction}
+            onChange={handleInputChange}
+            className="flex-1 px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
+            placeholder="e.g. Ultramarines"
+            required
+          />
+        </div>
+        <div className="flex items-center mb-2">
+          <label className="w-32 text-sm font-medium mr-2" htmlFor="detachment">
+            {'Detachment'}
+          </label>
+          <input
+            id="detachment"
+            name="detachment"
+            type="text"
+            value={formData.detachment}
+            onChange={handleInputChange}
+            className="flex-1 px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
+            placeholder="e.g. Firestorm assualt force"
+            required
+          />
+        </div>
+        <div className="flex items-center mb-2">
+          <label className="w-32 text-sm font-medium mr-2" htmlFor="points">
+            {'Points'}
+          </label>
+          <input
+            id="points"
+            name="points"
+            type="number"
+            value={formData.points}
+            onChange={handleInputChange}
+            className="flex-1 px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
+            placeholder="2000"
+            required
+          />
+        </div>
+        <div className="flex justify-end space-x-2 mt-4">
+          <button
+            type="button"
+            onClick={onClose}
+            className="px-4 py-2 bg-red-600 rounded hover:bg-gray-500"
+          >
+            Cancel
+          </button>
+          <button type="submit" className="px-4 py-2 bg-green-600 text-gray-900 rounded">
+            Create
+          </button>
+        </div>
+      </form>
     </div>
   );
 }

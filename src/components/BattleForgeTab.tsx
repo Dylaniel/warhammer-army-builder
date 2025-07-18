@@ -12,22 +12,17 @@ interface BattleForgeTabProps {
 function ArmyCard({ army, onDelete }: { army: Army; onDelete: () => void }) {
   return (
     <div className="bg-gray-800 rounded-lg p-4 mb-4" style={{ boxShadow: '0 0 0 2px #000' }}>
-      <div className="flex items-center justify-between">
-        <div className="flex-1">
-          <h2 className="text-lg font-bold uppercase text-white">{army.armyName}</h2>
-          <div className="flex items-center gap-3 text-sm text-gray-300 mt-1">
-            <span>{army.faction}</span>
-            <span>•</span>
-            <span>{army.detachment}</span>
-          </div>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-gray-900 px-2 py-1 rounded text-sm font-bold">
-            {army.points} pts
+      <div>
+        <h2 className="text-lg font-bold uppercase text-white mb-1">{army.armyName}</h2>
+        <div className="text-sm text-gray-300 mb-1">Faction: {army.faction}</div>
+        <div className="text-sm text-gray-300 mb-1">Detachment: {army.detachment}</div>
+        <div className="flex items-center justify-between mt-2">
+          <span className="text-gray-900 px-2 py-1 rounded text-sm font-bold bg-yellow-400">
+            Points: {army.points}
           </span>
           <button
             onClick={onDelete}
-            className="px-3 py-1 bg-red-600 text-white text-sm rounded hover:bg-red-700 transition-colors"
+            className="px-3 py-1 bg-red-600 text-white text-sm rounded hover:bg-red-700 transition-colors ml-2"
             title="Delete Army"
           >
             Delete Army
@@ -68,22 +63,23 @@ export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProp
         {armies.length >= MAX_ARMIES ? `Army Limit Reached (${MAX_ARMIES})` : 'Create Army'}
       </button>
 
-      {/* Army List Section */}
-      <div className="overflow-y-auto" style={{ maxHeight: '623px' }}>
-        {armies.map((army, index) => (
+      {isModalOpen && (
+        <NewArmyModal
+          isOpen={true}
+          onClose={() => setIsModalOpen(false)}
+          onSubmit={handleCreateArmy}
+        />
+      )}
+
+      <div>
+        {[...armies].reverse().map((army, index) => (
           <ArmyCard
             key={index}
             army={army}
-            onDelete={() => setArmies(armies.filter((_, i) => i !== index))}
+            onDelete={() => setArmies(armies.filter((_, i) => i !== armies.length - 1 - index))}
           />
         ))}
       </div>
-
-      <NewArmyModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        onSubmit={handleCreateArmy}
-      />
     </section>
   );
 }
