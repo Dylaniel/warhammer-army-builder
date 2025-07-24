@@ -38,11 +38,11 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
   if (!isOpen) return null;
 
   return (
-    <div className="bg-gray-800 text-white rounded-lg p-6 w-full max-w-md mx-auto mb-4 shadow-lg">
-      <h3 className="text-xl font-bold mb-4">Create New Army</h3>
+    <div className="rounded-lg p-6 w-full max-w-md mx-auto mb-4 shadow-lg bg-gray-800 dark:bg-gray-800 bg-white text-white dark:text-white text-gray-900">
+      <h3 className="text-xl font-bold mb-4 dark:text-white text-gray-900">Create New Army</h3>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex items-center mb-2">
-          <label className="w-32 text-sm font-medium mr-2" htmlFor="armyName">
+          <label className="w-32 text-sm font-medium mr-2 dark:text-gray-300 text-gray-700" htmlFor="armyName">
             {'Army Name'}
           </label>
           <input
@@ -51,13 +51,13 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
             type="text"
             value={formData.armyName}
             onChange={handleInputChange}
-            className="flex-1 px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
+            className="flex-1 px-3 py-2 rounded bg-gray-700 dark:bg-gray-700 bg-gray-100 focus:outline-none focus:ring text-white dark:text-white text-gray-900"
             placeholder="Enter army name"
             required
           />
         </div>
         <div className="flex items-center mb-2">
-          <label className="w-32 text-sm font-medium mr-2" htmlFor="faction">
+          <label className="w-32 text-sm font-medium mr-2 dark:text-gray-300 text-gray-700" htmlFor="faction">
             {'Faction'}
           </label>
           <input
@@ -66,13 +66,13 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
             type="text"
             value={formData.faction}
             onChange={handleInputChange}
-            className="flex-1 px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
+            className="flex-1 px-3 py-2 rounded bg-gray-700 dark:bg-gray-700 bg-gray-100 focus:outline-none focus:ring text-white dark:text-white text-gray-900"
             placeholder="e.g. Ultramarines"
             required
           />
         </div>
         <div className="flex items-center mb-2">
-          <label className="w-32 text-sm font-medium mr-2" htmlFor="detachment">
+          <label className="w-32 text-sm font-medium mr-2 dark:text-gray-300 text-gray-700" htmlFor="detachment">
             {'Detachment'}
           </label>
           <input
@@ -81,13 +81,13 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
             type="text"
             value={formData.detachment}
             onChange={handleInputChange}
-            className="flex-1 px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
+            className="flex-1 px-3 py-2 rounded bg-gray-700 dark:bg-gray-700 bg-gray-100 focus:outline-none focus:ring text-white dark:text-white text-gray-900"
             placeholder="e.g. Firestorm assualt force"
             required
           />
         </div>
         <div className="flex items-center mb-2">
-          <label className="w-32 text-sm font-medium mr-2" htmlFor="points">
+          <label className="w-32 text-sm font-medium mr-2 dark:text-gray-300 text-gray-700" htmlFor="points">
             {'Points'}
           </label>
           <input
@@ -96,7 +96,7 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
             type="number"
             value={formData.points}
             onChange={handleInputChange}
-            className="flex-1 px-3 py-2 rounded bg-gray-700 focus:outline-none focus:ring"
+            className="flex-1 px-3 py-2 rounded bg-gray-700 dark:bg-gray-700 bg-gray-100 focus:outline-none focus:ring text-white dark:text-white text-gray-900"
             placeholder="2000"
             required
           />
@@ -105,11 +105,11 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
           <button
             type="button"
             onClick={onClose}
-            className="px-4 py-2 bg-red-600 rounded hover:bg-gray-500"
+            className="px-4 py-2 bg-red-600 rounded hover:bg-gray-500 text-white dark:text-white text-gray-900"
           >
             Cancel
           </button>
-          <button type="submit" className="px-4 py-2 bg-green-600 text-black rounded">
+          <button type="submit" className="px-4 py-2 bg-green-600 rounded text-black dark:text-black text-white">
             Create
           </button>
         </div>

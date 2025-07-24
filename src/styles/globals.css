@@ -12,14 +12,12 @@ body {
   background: rgb(var(--background-rgb));
 }
 
-.bg-red-600 {
-  color: #dc2626;
+body.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 17, 24, 39; /* Tailwind gray-900 */
 }
 
-.bg-yellow-500 {
-  color: #f59e0b;
-}
-
-.bg-green-600 {
-  color: #16a34a;
+body.light {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 214, 219, 220; /* Tailwind gray-100 */
 }

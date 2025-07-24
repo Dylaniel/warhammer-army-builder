@@ -7,10 +7,12 @@ import BattleForgeTab from './BattleForgeTab';
 import ProfileTab from './ProfileTab';
 import BottomNavigation from './BottomNavigation';
 import { Army } from '../types/army';
+import { useTheme } from './ThemeContext';
 
 type TabType = 'reference' | 'battleForge' | 'profile';
 
 export default function BattleForgeApp() {
+  const { theme } = useTheme();
   const [activeTab, setActiveTab] = useState<TabType>('battleForge');
   const [armies, setArmies] = useState<Army[]>(() => {
     const stored = localStorage.getItem('armies');
@@ -43,12 +45,10 @@ export default function BattleForgeApp() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-[#f5f5dc]"> {/* Always beige */}
       <div
-        className="bg-gray-900 text-white font-sans"
+        className={`font-sans w-[390px] h-[844px] rounded-3xl shadow-lg grid ${theme === 'light' ? 'bg-white text-gray-900' : 'bg-gray-900 text-white'}`}
         style={{
-          width: '390px',
-          height: '844px',
           borderRadius: '1.5rem',
           boxShadow: '0 0 0 1px #222',
           display: 'grid',
