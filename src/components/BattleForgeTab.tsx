@@ -22,7 +22,7 @@ function ArmyCard({ army, onDelete }: { army: Army; onDelete: () => void }) {
           </span>
           <button
             onClick={onDelete}
-            className="px-3 py-1 bg-red-600 text-white text-sm rounded hover:bg-red-700 transition-colors ml-2"
+            className="px-3 py-1 bg-red-600 text-sm rounded text-white hover:bg-red-700 transition-colors ml-2"
             title="Delete Army"
           >
             Delete Army
@@ -57,7 +57,7 @@ export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProp
         className={`w-full px-6 py-3 rounded-lg font-bold text-lg transition-colors shadow-lg mb-4 ${
           armies.length >= MAX_ARMIES
             ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
-            : 'text-gray-900 hover:bg-gray-700'
+            : 'bg-green-600 text-black hover:bg-green-700'
         }`}
       >
         {armies.length >= MAX_ARMIES ? `Army Limit Reached (${MAX_ARMIES})` : 'Create Army'}

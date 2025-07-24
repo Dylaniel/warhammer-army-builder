@@ -109,7 +109,7 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
           >
             Cancel
           </button>
-          <button type="submit" className="px-4 py-2 bg-green-600 text-gray-900 rounded">
+          <button type="submit" className="px-4 py-2 bg-green-600 text-black rounded">
             Create
           </button>
         </div>
