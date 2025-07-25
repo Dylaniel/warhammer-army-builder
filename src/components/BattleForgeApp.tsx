@@ -14,21 +14,27 @@ type TabType = 'reference' | 'battleForge' | 'profile';
 export default function BattleForgeApp() {
   const { theme } = useTheme();
   const [activeTab, setActiveTab] = useState<TabType>('battleForge');
-  const [armies, setArmies] = useState<Army[]>(() => {
-    const stored = localStorage.getItem('armies');
-    if (stored) {
-      try {
-        return JSON.parse(stored);
-      } catch {
-        localStorage.removeItem('armies');
+  const [armies, setArmies] = useState<Army[]>([]);
+
+  // Load armies from localStorage on mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('armies');
+      if (stored) {
+        try {
+          setArmies(JSON.parse(stored));
+        } catch {
+          localStorage.removeItem('armies');
+        }
       }
     }
-    return [];
-  });
+  }, []);
 
   // Save armies to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem('armies', JSON.stringify(armies));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('armies', JSON.stringify(armies));
+    }
   }, [armies]);
 
   const renderActiveTab = () => {
@@ -47,9 +53,10 @@ export default function BattleForgeApp() {
   return (
     <div className="min-h-screen flex items-center justify-center p-4 bg-[#f5f5dc]"> {/* Always beige */}
       <div
-        className={`font-sans w-[390px] h-[844px] rounded-3xl shadow-lg grid ${theme === 'light' ? 'bg-white text-gray-900' : 'bg-gray-900 text-white'}`}
+        className={`font-sans w-[390px] h-[844px] shadow-lg grid ${theme === 'light' ? 'bg-gray-200 text-gray-900' : 'bg-gray-900 text-white'}`}
         style={{
-          borderRadius: '1.5rem',
+          borderBottomLeftRadius: '1.5rem',
+          borderBottomRightRadius: '1.5rem',
           boxShadow: '0 0 0 1px #222',
           display: 'grid',
           gridTemplateRows: '20px 64px 623px 64px',
@@ -68,6 +75,8 @@ export default function BattleForgeApp() {
             gridArea: 'banner',
             height: '10px',
             overflow: 'hidden',
+            borderTopLeftRadius: '1.5rem',
+            borderTopRightRadius: '1.5rem',
           }}
         ></div>
 
