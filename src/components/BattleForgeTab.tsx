@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import NewArmyModal from './NewArmyModal';
 import { Army } from '../types/army';
+import ArmyDetailTab from './ArmyDetailTab';
 
 interface BattleForgeTabProps {
   armies: Army[];
@@ -42,33 +43,6 @@ function ArmyCard({ army, onDelete, onView }: { army: Army; onDelete: () => void
   );
 }
 
-function ArmyDetailView({ army, onBack }: { army: Army; onBack: () => void }) {
-  return (
-    <div className="p-4">
-      <button
-        onClick={onBack}
-        className="mb-4 px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700"
-      >
-        Back to Battle Forge
-      </button>
-      <div className="bg-gray-800 dark:bg-gray-800 bg-gray-100 rounded-lg p-4 mb-4" style={{ boxShadow: '0 0 0 2px #000' }}>
-        <h2 className="text-lg font-bold uppercase mb-1 dark:text-white text-gray-900">{army.armyName}</h2>
-        <div className="text-sm mb-1 dark:text-gray-300 text-gray-700">Faction: {army.faction}</div>
-        <div className="text-sm mb-1 dark:text-gray-300 text-gray-700">Detachment: {army.detachment}</div>
-        <div className="text-sm mb-1 dark:text-gray-300 text-gray-700">Points: {army.points}</div>
-      </div>
-      {/* Unit category labels */}
-      <div className="space-y-3">
-        <div className="w-full bg-gray-200 dark:bg-gray-700 py-3 px-4 text-lg font-bold uppercase text-gray-800 dark:text-gray-100 text-left">Characters</div>
-        <div className="w-full bg-gray-200 dark:bg-gray-700 py-3 px-4 text-lg font-bold uppercase text-gray-800 dark:text-gray-100 text-left">Battleline</div>
-        <div className="w-full bg-gray-200 dark:bg-gray-700 py-3 px-4 text-lg font-bold uppercase text-gray-800 dark:text-gray-100 text-left">Dedicated Transports</div>
-        <div className="w-full bg-gray-200 dark:bg-gray-700 py-3 px-4 text-lg font-bold uppercase text-gray-800 dark:text-gray-100 text-left">Other Datasheets</div>
-        <div className="w-full bg-gray-200 dark:bg-gray-700 py-3 px-4 text-lg font-bold uppercase text-gray-800 dark:text-gray-100 text-left">Allied Units</div>
-      </div>
-    </div>
-  );
-}
-
 export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [viewingArmyIndex, setViewingArmyIndex] = useState<number | null>(null);
@@ -87,7 +61,7 @@ export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProp
   };
 
   if (viewingArmyIndex !== null && armies[viewingArmyIndex]) {
-    return <ArmyDetailView army={armies[viewingArmyIndex]} onBack={() => setViewingArmyIndex(null)} />;
+    return <ArmyDetailTab army={armies[viewingArmyIndex]} onBack={() => setViewingArmyIndex(null)} />;
   }
 
   return (
