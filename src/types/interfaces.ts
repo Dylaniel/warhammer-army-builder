@@ -25,13 +25,6 @@ interface UnitOption {
   // possibly need more, need to check rule books
 }
 
-interface DetachmentRestriction {
-  type: string;
-  min: number;
-  max: number;
-  // possibly need more, need to check rule books
-}
-
 interface Unit {
   id: string;
   name: string;
@@ -40,6 +33,13 @@ interface Unit {
   stats: UnitStats;
   options: UnitOption[];
   abilities: string[];
+  // possibly need more, need to check rule books
+}
+
+interface DetachmentRestriction {
+  type: string;
+  min: number;
+  max: number;
   // possibly need more, need to check rule books
 }
 
