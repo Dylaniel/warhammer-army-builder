@@ -29,10 +29,24 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: name === 'points' ? parseInt(value) || 0 : value,
-    }));
+    
+    if (name === 'points') {
+      // Only allow positive integers
+      const numValue = parseInt(value);
+      if (isNaN(numValue) || numValue < 0) {
+        // If invalid input, don't update the state
+        return;
+      }
+      setFormData((prev) => ({
+        ...prev,
+        [name]: numValue,
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
   };
 
   if (!isOpen) return null;
@@ -94,6 +108,8 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
             id="points"
             name="points"
             type="number"
+            min="1"
+            step="1"
             value={formData.points}
             onChange={handleInputChange}
             className="flex-1 px-3 py-2 rounded bg-gray-700 dark:bg-gray-700 bg-gray-100 focus:outline-none focus:ring text-white dark:text-white text-gray-900"
