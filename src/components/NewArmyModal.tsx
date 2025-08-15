@@ -45,7 +45,7 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
     if (name === 'points') {
       // Only allow positive integers
       const numValue = parseInt(value);
-      if (isNaN(numValue) || numValue < 0) {
+      if (isNaN(numValue) || numValue < 1) {
         // If invalid input, don't update the state
         return;
       }
