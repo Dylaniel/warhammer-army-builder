@@ -53,6 +53,11 @@ export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProp
     faction: string;
     detachment: string;
     points: number;
+    characters: any[];
+    battleline: any[];
+    dedicatedTransports: any[];
+    otherDatasheets: any[];
+    alliedUnits: any[];
   }) => {
     if (armies.length < MAX_ARMIES) {
       setArmies([...armies, formData]);
@@ -61,7 +66,17 @@ export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProp
   };
 
   if (viewingArmyIndex !== null && armies[viewingArmyIndex]) {
-    return <ArmyDetailTab army={armies[viewingArmyIndex]} onBack={() => setViewingArmyIndex(null)} />;
+    return (
+      <ArmyDetailTab 
+        army={armies[viewingArmyIndex]} 
+        onBack={() => setViewingArmyIndex(null)}
+        onArmyUpdate={(updatedArmy) => {
+          const updatedArmies = [...armies];
+          updatedArmies[viewingArmyIndex] = updatedArmy;
+          setArmies(updatedArmies);
+        }}
+      />
+    );
   }
 
   return (

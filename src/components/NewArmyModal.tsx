@@ -10,6 +10,11 @@ interface NewArmyModalProps {
     faction: string;
     detachment: string;
     points: number;
+    characters: any[];
+    battleline: any[];
+    dedicatedTransports: any[];
+    otherDatasheets: any[];
+    alliedUnits: any[];
   }) => void;
 }
 
@@ -23,7 +28,14 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit(formData);
+    onSubmit({
+      ...formData,
+      characters: [],
+      battleline: [],
+      dedicatedTransports: [],
+      otherDatasheets: [],
+      alliedUnits: []
+    });
     setFormData({ armyName: '', faction: '', detachment: '', points: 2000 });
   };
 

@@ -3,6 +3,11 @@ export interface Army {
   faction: string;
   detachment: string;
   points: number;
+  characters: Unit[]; // HQ units
+  battleline: Unit[]; // TROOPS units
+  dedicatedTransports: Unit[]; // DEDICATED_TRANSPORT units
+  otherDatasheets: Unit[]; // ELITES and other units
+  alliedUnits: Unit[]; // Allied units
 }
 
 interface UnitStats {
