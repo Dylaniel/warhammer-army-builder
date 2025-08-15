@@ -67,6 +67,7 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
       : allUnits;
   };
 
+  //adds unit selected to the relevant category
   const handleAddUnit = (unit: Unit, category: string): void => {
     const armyUnit = createArmyUnit(unit);
     const updatedArmy = { ...army };
@@ -92,6 +93,7 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
     onArmyUpdate(updatedArmy);
   };
 
+  //controls which category is expanded to add available units
   const handleToggleCategory = (category: string) => {
     setExpandedCategory(expandedCategory === category ? null : category);
   };
