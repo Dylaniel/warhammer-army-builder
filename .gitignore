@@ -60,3 +60,7 @@ Thumbs.db
 .antigravity/
 .agents/
 *.artifacts/
+
+# --- Antigravity runtime artifacts ---
+.antigravity/cache/
+.antigravity/logs/
