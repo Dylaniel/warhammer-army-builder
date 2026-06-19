@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import NewArmyModal from './NewArmyModal';
-import { Army } from '../types/army';
+import { Army, Unit } from '../types/army';
 import ArmyDetailTab from './ArmyDetailTab';
 
 interface BattleForgeTabProps {
@@ -53,11 +53,11 @@ export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProp
     faction: string;
     detachment: string;
     points: number;
-    characters: any[];
-    battleline: any[];
-    dedicatedTransports: any[];
-    otherDatasheets: any[];
-    alliedUnits: any[];
+    characters: Unit[];
+    battleline: Unit[];
+    dedicatedTransports: Unit[];
+    otherDatasheets: Unit[];
+    alliedUnits: Unit[];
   }) => {
     if (armies.length < MAX_ARMIES) {
       setArmies([...armies, formData]);

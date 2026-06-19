@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Unit } from '../types/army';
 
 interface NewArmyModalProps {
   isOpen: boolean;
@@ -10,11 +11,11 @@ interface NewArmyModalProps {
     faction: string;
     detachment: string;
     points: number;
-    characters: any[];
-    battleline: any[];
-    dedicatedTransports: any[];
-    otherDatasheets: any[];
-    alliedUnits: any[];
+    characters: Unit[];
+    battleline: Unit[];
+    dedicatedTransports: Unit[];
+    otherDatasheets: Unit[];
+    alliedUnits: Unit[];
   }) => void;
 }
 
