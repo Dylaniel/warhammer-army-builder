@@ -57,5 +57,36 @@
     "abilities": [
       "Incendiary Terror"
     ]
+  },
+  {
+    "id": "max-point-tester",
+    "name": "Max Point Tester",
+    "faction": "Space Marines",
+    "role": "HQ",
+    "basePoints": 200000,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "test-weapon",
+        "name": "Test Weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 1,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": ["Test Ability"]
   }
 ]

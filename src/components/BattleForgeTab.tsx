@@ -33,23 +33,21 @@ function ArmyCard({ army, onDelete, onView }: { army: Army; onDelete: () => void
         </div>
         <div className="text-sm mb-1 text-gray-300">Faction: {army.faction}</div>
         <div className="text-sm mb-1 text-gray-300">Detachment: {army.detachment}</div>
-        <div className="flex justify-end mt-2">
-          <div className="flex gap-2">
-            <button
-              onClick={onView}
-              className="px-3 py-1 bg-blue-600 text-sm rounded text-white hover:bg-blue-700 transition-colors"
-              title="View Army"
-            >
-              View Army
-            </button>
-            <button
-              onClick={onDelete}
-              className="px-3 py-1 bg-red-600 text-sm rounded dark:text-white text-white hover:bg-red-700 transition-colors ml-2"
-              title="Delete Army"
-            >
-              Delete Army
-            </button>
-          </div>
+        <div className="flex justify-between items-center mt-4">
+          <button
+            onClick={onDelete}
+            className="px-3 py-1 bg-red-600 text-sm rounded text-white hover:bg-red-700 transition-colors"
+            title="Delete Army"
+          >
+            Delete Army
+          </button>
+          <button
+            onClick={onView}
+            className="px-3 py-1 bg-blue-600 text-sm rounded text-white hover:bg-blue-700 transition-colors"
+            title="View Army"
+          >
+            View Army
+          </button>
         </div>
       </div>
     </div>
