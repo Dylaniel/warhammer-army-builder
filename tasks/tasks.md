@@ -46,9 +46,9 @@ The following items appeared in earlier planning but have been **deliberately sc
   - Display a `X / Y pts` counter in the army detail header at all times.
   - Counter text turns **red** when X > Y. This is a soft warning only — no blocking, no cap enforcement.
 
-- [ ] **1.2 Unit removal**
-  - Add a remove (✕) button to each unit row in `ArmyDetailTab`.
-  - Removing a unit updates army state and persists to localStorage.
+- [x] **1.2 Unit removal & duplication**
+  - Added a 3-dot menu to each unit row in `ArmyDetailTab` with Delete and Duplicate actions.
+  - Modifying units updates army state and persists to localStorage.
 
 - [ ] **1.3 Army editing**
   - Allow editing army name, faction, detachment type, and points limit from the army detail view or army card.
