@@ -269,6 +269,12 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
         })}
       </div>
       </div>
+      <EditArmyModal
+        isOpen={isEditModalOpen}
+        onClose={() => setIsEditModalOpen(false)}
+        onSubmit={handleEditArmy}
+        army={army}
+      />
     </div>
   );
 } 

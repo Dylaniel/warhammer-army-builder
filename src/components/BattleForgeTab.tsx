@@ -42,13 +42,22 @@ function ArmyCard({ army, onDelete, onView, onEdit }: { army: Army; onDelete: ()
           >
             Delete Army
           </button>
-          <button
-            onClick={onView}
-            className="px-3 py-1 bg-blue-600 text-sm rounded text-white hover:bg-blue-700 transition-colors"
-            title="View Army"
-          >
-            View Army
-          </button>
+          <div className="flex space-x-2">
+            <button
+              onClick={onEdit}
+              className="px-3 py-1 bg-gray-600 text-sm rounded text-white hover:bg-gray-700 transition-colors"
+              title="Edit Army"
+            >
+              Edit
+            </button>
+            <button
+              onClick={onView}
+              className="px-3 py-1 bg-blue-600 text-sm rounded text-white hover:bg-blue-700 transition-colors"
+              title="View Army"
+            >
+              View Army
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -129,6 +138,20 @@ export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProp
           );
         })}
       </div>
+
+      {editingArmyIndex !== null && armies[editingArmyIndex] && (
+        <EditArmyModal
+          isOpen={true}
+          onClose={() => setEditingArmyIndex(null)}
+          onSubmit={(updatedData) => {
+            const updatedArmies = [...armies];
+            updatedArmies[editingArmyIndex] = { ...armies[editingArmyIndex], ...updatedData };
+            setArmies(updatedArmies);
+            setEditingArmyIndex(null);
+          }}
+          army={armies[editingArmyIndex]}
+        />
+      )}
     </section>
   );
 }
