@@ -65,7 +65,9 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
   // Get available units for selection
   const getAvailableUnits = (category: string): Unit[] => {
     const categoryRole = getCategoryRole(category);
-    let filteredUnits = categoryRole ? allUnits.filter((unit: Unit) => unit.role === categoryRole) : allUnits;
+    let filteredUnits = categoryRole
+      ? allUnits.filter((unit: Unit) => unit.role === categoryRole)
+      : allUnits;
     filteredUnits = filteredUnits.filter((unit: Unit) => unit.faction === army.faction);
     return filteredUnits;
   };
@@ -302,10 +304,10 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
                     ) : (
                       <>
                         {availableUnits.map((unit) => (
-                          <AvailableUnitRow 
-                            key={unit.id} 
-                            unit={unit} 
-                            onAdd={() => handleAddUnit(unit, category)} 
+                          <AvailableUnitRow
+                            key={unit.id}
+                            unit={unit}
+                            onAdd={() => handleAddUnit(unit, category)}
                           />
                         ))}
                         {availableUnits.length === 0 && (
@@ -359,57 +361,88 @@ function AvailableUnitRow({ unit, onAdd }: { unit: Unit; onAdd: () => void }) {
       {expanded && (
         <div className="p-3 border-t border-blue-200 dark:border-blue-800/50 text-sm bg-white dark:bg-gray-800">
           <div className="mb-3">
-            <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-1 text-xs uppercase">Stats</h4>
+            <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-1 text-xs uppercase">
+              Stats
+            </h4>
             <div className="grid grid-cols-6 gap-1 text-center bg-gray-50 dark:bg-gray-900 rounded p-2">
               <div>
                 <div className="text-[10px] text-gray-500">M</div>
-                <div className="font-medium text-gray-900 dark:text-gray-300">{unit.stats.movement}"</div>
+                <div className="font-medium text-gray-900 dark:text-gray-300">
+                  {unit.stats.movement}&quot;
+                </div>
               </div>
               <div>
                 <div className="text-[10px] text-gray-500">T</div>
-                <div className="font-medium text-gray-900 dark:text-gray-300">{unit.stats.toughness}</div>
+                <div className="font-medium text-gray-900 dark:text-gray-300">
+                  {unit.stats.toughness}
+                </div>
               </div>
               <div>
                 <div className="text-[10px] text-gray-500">SV</div>
-                <div className="font-medium text-gray-900 dark:text-gray-300">{unit.stats.save}</div>
+                <div className="font-medium text-gray-900 dark:text-gray-300">
+                  {unit.stats.save}
+                </div>
               </div>
               <div>
                 <div className="text-[10px] text-gray-500">W</div>
-                <div className="font-medium text-gray-900 dark:text-gray-300">{unit.stats.wounds}</div>
+                <div className="font-medium text-gray-900 dark:text-gray-300">
+                  {unit.stats.wounds}
+                </div>
               </div>
               <div>
                 <div className="text-[10px] text-gray-500">LD</div>
-                <div className="font-medium text-gray-900 dark:text-gray-300">{unit.stats.leadership}</div>
+                <div className="font-medium text-gray-900 dark:text-gray-300">
+                  {unit.stats.leadership}
+                </div>
               </div>
               <div>
                 <div className="text-[10px] text-gray-500">OC</div>
-                <div className="font-medium text-gray-900 dark:text-gray-300">{unit.stats.objectiveControl}</div>
+                <div className="font-medium text-gray-900 dark:text-gray-300">
+                  {unit.stats.objectiveControl}
+                </div>
               </div>
             </div>
           </div>
 
           {unit.weapons && unit.weapons.length > 0 && (
             <div>
-              <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-1 text-xs uppercase">Weapons</h4>
+              <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-1 text-xs uppercase">
+                Weapons
+              </h4>
               <div className="space-y-1">
                 {unit.weapons.map((w) => (
                   <div
                     key={w.id}
                     className="bg-gray-50 dark:bg-gray-900 rounded p-2 text-xs grid grid-cols-12 gap-1 items-center"
                   >
-                    <div className="col-span-5 font-medium text-gray-900 dark:text-gray-300 truncate" title={w.name}>
+                    <div
+                      className="col-span-5 font-medium text-gray-900 dark:text-gray-300 truncate"
+                      title={w.name}
+                    >
                       {w.name}
                     </div>
-                    <div className="col-span-2 text-center text-gray-600 dark:text-gray-400" title="Range">
+                    <div
+                      className="col-span-2 text-center text-gray-600 dark:text-gray-400"
+                      title="Range"
+                    >
                       {w.range === 'Melee' ? 'Melee' : `${w.range}"`}
                     </div>
-                    <div className="col-span-1 text-center text-gray-600 dark:text-gray-400" title="Attacks">
+                    <div
+                      className="col-span-1 text-center text-gray-600 dark:text-gray-400"
+                      title="Attacks"
+                    >
                       {w.attacks}
                     </div>
-                    <div className="col-span-3 text-center text-gray-600 dark:text-gray-400" title="Strength / AP">
+                    <div
+                      className="col-span-3 text-center text-gray-600 dark:text-gray-400"
+                      title="Strength / AP"
+                    >
                       S{w.strength} AP{w.armourPenetration}
                     </div>
-                    <div className="col-span-1 text-center text-gray-600 dark:text-gray-400" title="Damage">
+                    <div
+                      className="col-span-1 text-center text-gray-600 dark:text-gray-400"
+                      title="Damage"
+                    >
                       {w.damage}
                     </div>
                   </div>
