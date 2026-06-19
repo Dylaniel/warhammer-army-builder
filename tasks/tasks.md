@@ -41,7 +41,7 @@ The following items appeared in earlier planning but have been **deliberately sc
 
 > The app shell exists but the features that make it actually useful are missing.
 
-- [ ] **1.1 Live points counter in Army Detail**
+- [x] **1.1 Live points counter in Army Detail**
   - Wire `calculateArmyPoints` (already in `unitUtils.ts`) into `ArmyDetailTab`.
   - Display a `X / Y pts` counter in the army detail header at all times.
   - Counter text turns **red** when X > Y. This is a soft warning only — no blocking, no cap enforcement.

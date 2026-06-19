@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Army, Unit } from '../types/army';
-import { getAllUnits, createArmyUnit } from '../utils/unitUtils';
+import { getAllUnits, createArmyUnit, calculateArmyPoints } from '../utils/unitUtils';
 
 interface ArmyDetailTabProps {
   army: Army;
@@ -11,6 +11,16 @@ interface ArmyDetailTabProps {
 export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetailTabProps) {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const allUnits = getAllUnits();
+
+  const allArmyUnits = [
+    ...(army.characters || []),
+    ...(army.battleline || []),
+    ...(army.dedicatedTransports || []),
+    ...(army.otherDatasheets || []),
+    ...(army.alliedUnits || [])
+  ];
+  const currentPoints = calculateArmyPoints(allArmyUnits);
+  const isOverPoints = currentPoints > army.points;
 
   // Map category names to unit roles for filtering
   const getCategoryRole = (category: string): Unit['role'] | null => {
@@ -108,7 +118,9 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
         <h2 className="text-lg font-bold uppercase mb-1 text-white">{army.armyName}</h2>
         <div className="text-sm mb-1 text-gray-300">Faction: {army.faction}</div>
         <div className="text-sm mb-1 text-gray-300">Detachment: {army.detachment}</div>
-        <div className="text-sm mb-1 text-gray-300">Points: {army.points}</div>
+        <div className={`text-sm mb-1 ${isOverPoints ? 'text-red-500 font-bold' : 'text-gray-300'}`}>
+          Points: {currentPoints} / {army.points} pts
+        </div>
       </div>
 
       {/* Unit categories */}
