@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Army } from '../types/army';
+import { SUPPORTED_FACTIONS } from '../utils/unitUtils';
 
 interface EditArmyModalProps {
   isOpen: boolean;
@@ -34,7 +35,7 @@ export default function EditArmyModal({ isOpen, onClose, onSubmit, army }: EditA
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    
+
     if (name === 'points') {
       const numValue = parseInt(value);
       if (isNaN(numValue) || numValue < 1) {
@@ -52,15 +53,29 @@ export default function EditArmyModal({ isOpen, onClose, onSubmit, army }: EditA
     }
   };
 
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" style={{ zIndex: 100 }}>
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+      style={{ zIndex: 100 }}
+    >
       <div className="rounded-lg p-6 w-full max-w-md mx-auto shadow-lg bg-gray-800 dark:bg-gray-800 bg-white text-gray-900 dark:text-white">
         <h3 className="text-xl font-bold mb-4">Edit Army</h3>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex items-center mb-2">
-            <label className="w-32 text-sm font-medium mr-2 text-gray-700 dark:text-gray-300" htmlFor="armyName">
+            <label
+              className="w-32 text-sm font-medium mr-2 text-gray-700 dark:text-gray-300"
+              htmlFor="armyName"
+            >
               Army Name
             </label>
             <input
@@ -74,21 +89,32 @@ export default function EditArmyModal({ isOpen, onClose, onSubmit, army }: EditA
             />
           </div>
           <div className="flex items-center mb-2">
-            <label className="w-32 text-sm font-medium mr-2 text-gray-700 dark:text-gray-300" htmlFor="faction">
+            <label
+              className="w-32 text-sm font-medium mr-2 text-gray-700 dark:text-gray-300"
+              htmlFor="faction"
+            >
               Faction
             </label>
-            <input
+            <select
               id="faction"
               name="faction"
-              type="text"
               value={formData.faction}
-              onChange={handleInputChange}
+              onChange={handleSelectChange}
               className="flex-1 px-3 py-2 rounded bg-gray-100 dark:bg-gray-700 focus:outline-none focus:ring text-gray-900 dark:text-white"
               required
-            />
+            >
+              {SUPPORTED_FACTIONS.map((faction) => (
+                <option key={faction} value={faction}>
+                  {faction}
+                </option>
+              ))}
+            </select>
           </div>
           <div className="flex items-center mb-2">
-            <label className="w-32 text-sm font-medium mr-2 text-gray-700 dark:text-gray-300" htmlFor="detachment">
+            <label
+              className="w-32 text-sm font-medium mr-2 text-gray-700 dark:text-gray-300"
+              htmlFor="detachment"
+            >
               Detachment
             </label>
             <input
@@ -102,7 +128,10 @@ export default function EditArmyModal({ isOpen, onClose, onSubmit, army }: EditA
             />
           </div>
           <div className="flex items-center mb-2">
-            <label className="w-32 text-sm font-medium mr-2 text-gray-700 dark:text-gray-300" htmlFor="points">
+            <label
+              className="w-32 text-sm font-medium mr-2 text-gray-700 dark:text-gray-300"
+              htmlFor="points"
+            >
               Points Limit
             </label>
             <input
@@ -125,7 +154,10 @@ export default function EditArmyModal({ isOpen, onClose, onSubmit, army }: EditA
             >
               Cancel
             </button>
-            <button type="submit" className="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 text-white">
+            <button
+              type="submit"
+              className="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 text-white"
+            >
               Save Changes
             </button>
           </div>

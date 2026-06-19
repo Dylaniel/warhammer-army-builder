@@ -2,7 +2,12 @@ import { Unit, UnitOption } from '../types/army';
 import unitsData from '../data/units.json';
 
 /**
- * Get all available units
+ * Official supported factions for dropdowns and lazy loading
+ */
+export const SUPPORTED_FACTIONS = ['Space Marines'];
+
+/**
+ * Get all available generic units (from units.json)
  */
 export const getAllUnits = (): Unit[] => {
   return unitsData as Unit[];
@@ -12,14 +17,14 @@ export const getAllUnits = (): Unit[] => {
  * Get units by role
  */
 export const getUnitsByRole = (role: Unit['role']): Unit[] => {
-  return getAllUnits().filter(unit => unit.role === role);
+  return getAllUnits().filter((unit) => unit.role === role);
 };
 
 /**
  * Find a specific unit by ID
  */
 export const getUnitById = (id: string): Unit | undefined => {
-  return getAllUnits().find(unit => unit.id === id);
+  return getAllUnits().find((unit) => unit.id === id);
 };
 
 /**
@@ -27,10 +32,10 @@ export const getUnitById = (id: string): Unit | undefined => {
  */
 export const calculateUnitPoints = (unit: Unit, selectedOptionIds: string[] = []): number => {
   const optionPoints = selectedOptionIds.reduce((total, optionId) => {
-    const option = unit.options.find(opt => opt.id === optionId);
+    const option = unit.options.find((opt) => opt.id === optionId);
     return total + (option?.points || 0);
   }, 0);
-  
+
   return unit.basePoints + optionPoints;
 };
 
@@ -38,25 +43,25 @@ export const calculateUnitPoints = (unit: Unit, selectedOptionIds: string[] = []
  * Get selected options for a unit
  */
 export const getSelectedOptions = (unit: Unit, selectedOptionIds: string[]): UnitOption[] => {
-  return unit.options.filter(option => selectedOptionIds.includes(option.id));
+  return unit.options.filter((option) => selectedOptionIds.includes(option.id));
 };
 
 /**
  * Create an army unit from a base unit with selected options
  */
 export const createArmyUnit = (
-  unit: Unit, 
-  selectedOptionIds: string[] = [], 
+  unit: Unit,
+  selectedOptionIds: string[] = [],
   quantity: number = 1
 ): Unit => {
   const totalPoints = calculateUnitPoints(unit, selectedOptionIds);
-  
+
   return {
     ...unit,
     id: `${unit.id}-${Date.now()}`, // Generate unique ID
     selectedOptions: selectedOptionIds,
     totalPoints,
-    quantity
+    quantity,
   };
 };
 
@@ -64,8 +69,8 @@ export const createArmyUnit = (
  * Validate if selected options are valid for a unit
  */
 export const validateUnitOptions = (unit: Unit, selectedOptionIds: string[]): boolean => {
-  return selectedOptionIds.every(optionId => 
-    unit.options.some(option => option.id === optionId)
+  return selectedOptionIds.every((optionId) =>
+    unit.options.some((option) => option.id === optionId)
   );
 };
 
@@ -74,6 +79,6 @@ export const validateUnitOptions = (unit: Unit, selectedOptionIds: string[]): bo
  */
 export const calculateArmyPoints = (armyUnits: Unit[]): number => {
   return armyUnits.reduce((total, armyUnit) => {
-    return total + ((armyUnit.totalPoints || armyUnit.basePoints) * (armyUnit.quantity || 1));
+    return total + (armyUnit.totalPoints || armyUnit.basePoints) * (armyUnit.quantity || 1);
   }, 0);
 };

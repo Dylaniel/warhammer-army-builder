@@ -3,7 +3,8 @@
  * hydrate-units.js
  *
  * Standalone CLI utility that parses raw Warhammer 40k datasheet text
- * and safely appends a normalized Unit object to src/data/units.json.
+ * and safely appends a normalized Unit object to the appropriate faction JSON
+ * in src/data/factions/.
  *
  * Usage:
  *   node scripts/hydrate-units.js --file <path-to-datasheet.txt>
@@ -17,38 +18,46 @@
 
 'use strict';
 
-const fs   = require('fs');
+const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 
 // ── Constants ────────────────────────────────────────────────────────────────
 
-const UNITS_JSON_PATH = path.resolve(__dirname, '../src/data/units.json');
+const FACTIONS_DIR = path.resolve(__dirname, '../src/data/factions');
+
+function getFactionJsonPath(faction) {
+  const normalized = toKebabCase(faction);
+  return path.join(FACTIONS_DIR, `${normalized}.json`);
+}
 
 const VALID_ROLES = [
-  'HQ', 'TROOPS', 'ELITES', 'FAST_ATTACK',
-  'HEAVY_SUPPORT', 'FLYER', 'DEDICATED_TRANSPORT',
+  'HQ',
+  'TROOPS',
+  'ELITES',
+  'FAST_ATTACK',
+  'HEAVY_SUPPORT',
+  'FLYER',
+  'DEDICATED_TRANSPORT',
 ];
 
-const VALID_WEAPON_TYPES = [
-  'Pistol', 'Assault', 'Rapid Fire', 'Heavy', 'Melee', 'Grenade',
-];
+const VALID_WEAPON_TYPES = ['Pistol', 'Assault', 'Rapid Fire', 'Heavy', 'Melee', 'Grenade'];
 
 // Role aliases found on real datasheets → canonical UnitRole
 const ROLE_ALIASES = {
-  'character':           'HQ',
-  'hq':                  'HQ',
-  'troops':              'TROOPS',
-  'battleline':          'TROOPS',
-  'elites':              'ELITES',
-  'elite':               'ELITES',
-  'fast attack':         'FAST_ATTACK',
-  'fast_attack':         'FAST_ATTACK',
-  'heavy support':       'HEAVY_SUPPORT',
-  'heavy_support':       'HEAVY_SUPPORT',
-  'flyer':               'FLYER',
+  character: 'HQ',
+  hq: 'HQ',
+  troops: 'TROOPS',
+  battleline: 'TROOPS',
+  elites: 'ELITES',
+  elite: 'ELITES',
+  'fast attack': 'FAST_ATTACK',
+  fast_attack: 'FAST_ATTACK',
+  'heavy support': 'HEAVY_SUPPORT',
+  heavy_support: 'HEAVY_SUPPORT',
+  flyer: 'FLYER',
   'dedicated transport': 'DEDICATED_TRANSPORT',
-  'dedicated_transport': 'DEDICATED_TRANSPORT',
+  dedicated_transport: 'DEDICATED_TRANSPORT',
 };
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
@@ -88,7 +97,7 @@ function normalizeWeaponType(raw) {
     if (valid.toLowerCase() === lower) return valid;
   }
   // Partial match fallback
-  const match = VALID_WEAPON_TYPES.find(v => lower.includes(v.toLowerCase()));
+  const match = VALID_WEAPON_TYPES.find((v) => lower.includes(v.toLowerCase()));
   return match || 'Assault';
 }
 
@@ -96,10 +105,10 @@ function normalizeWeaponType(raw) {
 function normalizeRole(raw) {
   const lower = (raw || '').trim().toLowerCase();
   if (ROLE_ALIASES[lower]) return ROLE_ALIASES[lower];
-  const direct = VALID_ROLES.find(r => r.toLowerCase() === lower);
+  const direct = VALID_ROLES.find((r) => r.toLowerCase() === lower);
   if (direct) return direct;
   // Partial match
-  const partial = Object.keys(ROLE_ALIASES).find(k => lower.includes(k));
+  const partial = Object.keys(ROLE_ALIASES).find((k) => lower.includes(k));
   return partial ? ROLE_ALIASES[partial] : 'TROOPS';
 }
 
@@ -137,37 +146,49 @@ function parseDatasheet(text) {
   const lines = text.split(/\r?\n/);
 
   const unit = {
-    id:          '',
-    name:        '',
-    faction:     '',
-    role:        'TROOPS',
-    basePoints:  0,
+    id: '',
+    name: '',
+    faction: '',
+    role: 'TROOPS',
+    basePoints: 0,
     stats: {
-      movement:         0,
-      toughness:        0,
-      save:             '3+',
-      wounds:           1,
-      leadership:       '7+',
+      movement: 0,
+      toughness: 0,
+      save: '3+',
+      wounds: 1,
+      leadership: '7+',
       objectiveControl: 1,
     },
-    options:   [],
-    weapons:   [],
+    options: [],
+    weapons: [],
     abilities: [],
   };
 
   let section = 'header'; // header | stats | statrow | weapons | options | abilities
 
   for (let i = 0; i < lines.length; i++) {
-    const raw  = lines[i];
+    const raw = lines[i];
     const line = raw.trim();
     if (!line) continue;
 
     // ── Section headers ────────────────────────────────────────────────────
     const sectionHeader = line.replace(/:.*$/, '').toLowerCase();
-    if (/^stats?$/i.test(sectionHeader)) { section = 'stats'; continue; }
-    if (/^weapons?$/i.test(sectionHeader)) { section = 'weapons'; continue; }
-    if (/^options?$/i.test(sectionHeader)) { section = 'options'; continue; }
-    if (/^abilities?$/i.test(sectionHeader)) { section = 'abilities'; continue; }
+    if (/^stats?$/i.test(sectionHeader)) {
+      section = 'stats';
+      continue;
+    }
+    if (/^weapons?$/i.test(sectionHeader)) {
+      section = 'weapons';
+      continue;
+    }
+    if (/^options?$/i.test(sectionHeader)) {
+      section = 'options';
+      continue;
+    }
+    if (/^abilities?$/i.test(sectionHeader)) {
+      section = 'abilities';
+      continue;
+    }
 
     // ── Header key-value fields ────────────────────────────────────────────
     if (section === 'header') {
@@ -175,26 +196,38 @@ function parseDatasheet(text) {
       if (kv) {
         const key = kv[1].trim().toLowerCase();
         const val = kv[2].trim();
-        if (key === 'name')    { unit.name = val; unit.id = toKebabCase(val); }
-        if (key === 'faction') { unit.faction = val; }
-        if (key === 'role')    { unit.role = normalizeRole(val); }
-        if (key === 'points')  { unit.basePoints = parseInt(val, 10) || 0; }
+        if (key === 'name') {
+          unit.name = val;
+          unit.id = toKebabCase(val);
+        }
+        if (key === 'faction') {
+          unit.faction = val;
+        }
+        if (key === 'role') {
+          unit.role = normalizeRole(val);
+        }
+        if (key === 'points') {
+          unit.basePoints = parseInt(val, 10) || 0;
+        }
       }
       continue;
     }
 
     // ── Stats — skip the column-header row (M T SV W LD OC) ───────────────
     if (section === 'stats') {
-      if (/^[mM]\s+[tT]\s+/i.test(line)) { section = 'statrow'; continue; }
+      if (/^[mM]\s+[tT]\s+/i.test(line)) {
+        section = 'statrow';
+        continue;
+      }
     }
     if (section === 'statrow') {
       const cells = line.split(/\s+/).filter(Boolean);
       if (cells.length >= 6) {
-        unit.stats.movement         = parseStat(cells[0]);
-        unit.stats.toughness        = parseStat(cells[1]);
-        unit.stats.save             = parseStat(cells[2]);
-        unit.stats.wounds           = parseStat(cells[3]);
-        unit.stats.leadership       = parseStat(cells[4]);
+        unit.stats.movement = parseStat(cells[0]);
+        unit.stats.toughness = parseStat(cells[1]);
+        unit.stats.save = parseStat(cells[2]);
+        unit.stats.wounds = parseStat(cells[3]);
+        unit.stats.leadership = parseStat(cells[4]);
         unit.stats.objectiveControl = parseStat(cells[5]);
       }
       section = 'header'; // stats block done, back to looking for next section
@@ -206,7 +239,7 @@ function parseDatasheet(text) {
       // Skip column-header rows
       if (/^name\s*\|/i.test(line)) continue;
 
-      const parts = line.split('|').map(s => s.trim());
+      const parts = line.split('|').map((s) => s.trim());
       if (parts.length < 7) continue; // malformed, skip
 
       const [wName, wType, wRange, wAtk, wSkill, wStr, wAP, wDmg, wAbilities] = parts;
@@ -215,17 +248,20 @@ function parseDatasheet(text) {
       const weaponId = toKebabCase(wName);
 
       const weapon = {
-        id:               weaponId,
-        name:             wName,
-        type:             normalizeWeaponType(wType),
-        range:            isRanged ? (parseInt(wRange, 10) || wRange) : 'Melee',
-        attacks:          parseDiceField(wAtk),
-        strength:         parseInt(wStr, 10) || 0,
+        id: weaponId,
+        name: wName,
+        type: normalizeWeaponType(wType),
+        range: isRanged ? parseInt(wRange, 10) || wRange : 'Melee',
+        attacks: parseDiceField(wAtk),
+        strength: parseInt(wStr, 10) || 0,
         armourPenetration: parseInt(wAP, 10) || 0,
-        damage:           parseDiceField(wDmg),
-        abilities:        wAbilities
-                            ? wAbilities.split(',').map(s => s.trim()).filter(Boolean)
-                            : [],
+        damage: parseDiceField(wDmg),
+        abilities: wAbilities
+          ? wAbilities
+              .split(',')
+              .map((s) => s.trim())
+              .filter(Boolean)
+          : [],
       };
 
       // Attach BS (ranged) or WS (melee) from the skill column
@@ -244,13 +280,13 @@ function parseDatasheet(text) {
     // ── Options (pipe-separated: Name | id | points) ──────────────────────
     if (section === 'options') {
       if (/^name\s*\|/i.test(line)) continue;
-      const parts = line.split('|').map(s => s.trim());
+      const parts = line.split('|').map((s) => s.trim());
       if (parts.length < 3) continue;
 
       const [oName, oId, oPts] = parts;
       unit.options.push({
-        id:     oId || toKebabCase(oName),
-        name:   oName,
+        id: oId || toKebabCase(oName),
+        name: oName,
         points: parseInt(oPts, 10) || 0,
       });
       continue;
@@ -258,7 +294,10 @@ function parseDatasheet(text) {
 
     // ── Abilities (one per line or comma-separated) ────────────────────────
     if (section === 'abilities') {
-      const abilities = line.split(',').map(s => s.trim()).filter(Boolean);
+      const abilities = line
+        .split(',')
+        .map((s) => s.trim())
+        .filter(Boolean);
       unit.abilities.push(...abilities);
       continue;
     }
@@ -275,46 +314,47 @@ function parseDatasheet(text) {
 function validateUnit(unit) {
   const errors = [];
 
-  if (!unit.id)      errors.push('Missing: id');
-  if (!unit.name)    errors.push('Missing: name');
+  if (!unit.id) errors.push('Missing: id');
+  if (!unit.name) errors.push('Missing: name');
   if (!unit.faction) errors.push('Missing: faction');
   if (!VALID_ROLES.includes(unit.role))
     errors.push(`Invalid role "${unit.role}". Must be one of: ${VALID_ROLES.join(', ')}`);
   if (typeof unit.basePoints !== 'number' || unit.basePoints < 0)
     errors.push('basePoints must be a non-negative number');
-  if (!unit.stats || typeof unit.stats !== 'object')
-    errors.push('Missing: stats');
-  if (!Array.isArray(unit.weapons))
-    errors.push('weapons must be an array');
-  if (!Array.isArray(unit.options))
-    errors.push('options must be an array');
-  if (!Array.isArray(unit.abilities))
-    errors.push('abilities must be an array');
+  if (!unit.stats || typeof unit.stats !== 'object') errors.push('Missing: stats');
+  if (!Array.isArray(unit.weapons)) errors.push('weapons must be an array');
+  if (!Array.isArray(unit.options)) errors.push('options must be an array');
+  if (!Array.isArray(unit.abilities)) errors.push('abilities must be an array');
 
   return errors;
 }
 
 // ── JSON I/O ─────────────────────────────────────────────────────────────────
 
-function loadUnitsJson() {
-  if (!fs.existsSync(UNITS_JSON_PATH)) return [];
+function loadUnitsJson(faction) {
+  const jsonPath = getFactionJsonPath(faction);
+  if (!fs.existsSync(jsonPath)) return [];
   try {
-    const raw = fs.readFileSync(UNITS_JSON_PATH, 'utf8');
+    const raw = fs.readFileSync(jsonPath, 'utf8');
     return JSON.parse(raw);
   } catch (e) {
-    console.error(`[hydrate-units] Failed to parse ${UNITS_JSON_PATH}: ${e.message}`);
+    console.error(`[hydrate-units] Failed to parse ${jsonPath}: ${e.message}`);
     process.exit(1);
   }
 }
 
-function saveUnitsJson(units) {
+function saveUnitsJson(faction, units) {
+  const jsonPath = getFactionJsonPath(faction);
+  if (!fs.existsSync(FACTIONS_DIR)) {
+    fs.mkdirSync(FACTIONS_DIR, { recursive: true });
+  }
   const formatted = JSON.stringify(units, null, 2);
-  fs.writeFileSync(UNITS_JSON_PATH, formatted, 'utf8');
+  fs.writeFileSync(jsonPath, formatted, 'utf8');
 }
 
 function appendUnit(newUnit, dryRun) {
-  const units = loadUnitsJson();
-  const duplicate = units.find(u => u.id === newUnit.id);
+  const units = loadUnitsJson(newUnit.faction);
+  const duplicate = units.find((u) => u.id === newUnit.id);
 
   if (duplicate) {
     console.warn(`[hydrate-units] SKIP — unit with id "${newUnit.id}" already exists.`);
@@ -329,14 +369,16 @@ function appendUnit(newUnit, dryRun) {
   }
 
   units.push(newUnit);
-  saveUnitsJson(units);
-  console.log(`[hydrate-units] ✓ Appended "${newUnit.name}" (${newUnit.id}) to ${UNITS_JSON_PATH}`);
+  saveUnitsJson(newUnit.faction, units);
+  console.log(
+    `[hydrate-units] ✓ Appended "${newUnit.name}" (${newUnit.id}) to ${getFactionJsonPath(newUnit.faction)}`
+  );
   console.log(`  Total units in roster: ${units.length}`);
 }
 
 function overwriteUnit(newUnit, dryRun) {
-  const units = loadUnitsJson();
-  const idx = units.findIndex(u => u.id === newUnit.id);
+  const units = loadUnitsJson(newUnit.faction);
+  const idx = units.findIndex((u) => u.id === newUnit.id);
 
   if (dryRun) {
     console.log('\n[hydrate-units] DRY RUN — parsed unit (not written):\n');
@@ -351,46 +393,46 @@ function overwriteUnit(newUnit, dryRun) {
     units.push(newUnit);
     console.log(`[hydrate-units] ✓ Appended "${newUnit.name}" (${newUnit.id})`);
   }
-  saveUnitsJson(units);
+  saveUnitsJson(newUnit.faction, units);
 }
 
 // ── Interactive mode ──────────────────────────────────────────────────────────
 
 async function runInteractive() {
   const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-  const ask = (q) => new Promise(resolve => rl.question(q, resolve));
+  const ask = (q) => new Promise((resolve) => rl.question(q, resolve));
 
   console.log('\n[hydrate-units] Interactive mode — press Ctrl+C to abort.\n');
 
-  const name    = await ask('Unit name: ');
+  const name = await ask('Unit name: ');
   const faction = await ask('Faction: ');
   const roleRaw = await ask(`Role (${VALID_ROLES.join(' | ')}): `);
-  const points  = await ask('Base points: ');
+  const points = await ask('Base points: ');
 
   console.log('\nStats (press Enter to keep default):');
-  const movement  = await ask('  Movement (e.g. 6): ');
+  const movement = await ask('  Movement (e.g. 6): ');
   const toughness = await ask('  Toughness: ');
-  const save      = await ask('  Save (e.g. 3+): ');
-  const wounds    = await ask('  Wounds: ');
-  const ld        = await ask('  Leadership (e.g. 6+): ');
-  const oc        = await ask('  Objective Control: ');
+  const save = await ask('  Save (e.g. 3+): ');
+  const wounds = await ask('  Wounds: ');
+  const ld = await ask('  Leadership (e.g. 6+): ');
+  const oc = await ask('  Objective Control: ');
 
   const unit = {
-    id:         toKebabCase(name),
-    name:       name.trim(),
-    faction:    faction.trim(),
-    role:       normalizeRole(roleRaw),
+    id: toKebabCase(name),
+    name: name.trim(),
+    faction: faction.trim(),
+    role: normalizeRole(roleRaw),
     basePoints: parseInt(points, 10) || 0,
     stats: {
-      movement:         parseStat(movement  || '6'),
-      toughness:        parseStat(toughness || '4'),
-      save:             parseStat(save      || '3+'),
-      wounds:           parseStat(wounds    || '1'),
-      leadership:       parseStat(ld        || '7+'),
-      objectiveControl: parseStat(oc        || '1'),
+      movement: parseStat(movement || '6'),
+      toughness: parseStat(toughness || '4'),
+      save: parseStat(save || '3+'),
+      wounds: parseStat(wounds || '1'),
+      leadership: parseStat(ld || '7+'),
+      objectiveControl: parseStat(oc || '1'),
     },
-    options:   [],
-    weapons:   [],
+    options: [],
+    weapons: [],
     abilities: [],
   };
 
@@ -412,10 +454,10 @@ async function runInteractive() {
 async function main() {
   const args = process.argv.slice(2);
 
-  const dryRun      = args.includes('--dry-run');
-  const overwrite   = args.includes('--overwrite');
+  const dryRun = args.includes('--dry-run');
+  const overwrite = args.includes('--overwrite');
   const interactive = args.includes('--interactive');
-  const useStdin    = args.includes('--stdin');
+  const useStdin = args.includes('--stdin');
 
   const fileFlag = args.indexOf('--file');
   const filePath = fileFlag !== -1 ? args[fileFlag + 1] : null;
@@ -470,23 +512,25 @@ Datasheet format (pipe-separated weapons/options):
     }
     text = fs.readFileSync(filePath, 'utf8');
   } else if (useStdin) {
-    text = await new Promise(resolve => {
+    text = await new Promise((resolve) => {
       let data = '';
       process.stdin.setEncoding('utf8');
-      process.stdin.on('data', chunk => data += chunk);
+      process.stdin.on('data', (chunk) => (data += chunk));
       process.stdin.on('end', () => resolve(data));
     });
   } else {
-    console.error('[hydrate-units] Specify --file <path>, --stdin, or --interactive. Use --help for details.');
+    console.error(
+      '[hydrate-units] Specify --file <path>, --stdin, or --interactive. Use --help for details.'
+    );
     process.exit(1);
   }
 
-  const unit   = parseDatasheet(text);
+  const unit = parseDatasheet(text);
   const errors = validateUnit(unit);
 
   if (errors.length > 0) {
     console.error('[hydrate-units] Validation failed:');
-    errors.forEach(e => console.error(`  • ${e}`));
+    errors.forEach((e) => console.error(`  • ${e}`));
     process.exit(1);
   }
 
@@ -497,7 +541,7 @@ Datasheet format (pipe-separated weapons/options):
   }
 }
 
-main().catch(err => {
+main().catch((err) => {
   console.error('[hydrate-units] Unexpected error:', err.message);
   process.exit(1);
 });

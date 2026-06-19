@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Unit } from '../types/army';
+import { SUPPORTED_FACTIONS } from '../utils/unitUtils';
 
 interface NewArmyModalProps {
   isOpen: boolean;
@@ -22,7 +23,7 @@ interface NewArmyModalProps {
 export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModalProps) {
   const [formData, setFormData] = useState({
     armyName: '',
-    faction: '',
+    faction: SUPPORTED_FACTIONS[0],
     detachment: '',
     points: 2000,
   });
@@ -35,14 +36,14 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
       battleline: [],
       dedicatedTransports: [],
       otherDatasheets: [],
-      alliedUnits: []
+      alliedUnits: [],
     });
-    setFormData({ armyName: '', faction: '', detachment: '', points: 2000 });
+    setFormData({ armyName: '', faction: SUPPORTED_FACTIONS[0], detachment: '', points: 2000 });
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    
+
     if (name === 'points') {
       // Only allow positive integers
       const numValue = parseInt(value);
@@ -62,6 +63,14 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
     }
   };
 
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -69,7 +78,10 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
       <h3 className="text-xl font-bold mb-4 dark:text-white text-gray-900">Create New Army</h3>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex items-center mb-2">
-          <label className="w-32 text-sm font-medium mr-2 dark:text-gray-300 text-gray-700" htmlFor="armyName">
+          <label
+            className="w-32 text-sm font-medium mr-2 dark:text-gray-300 text-gray-700"
+            htmlFor="armyName"
+          >
             {'Army Name'}
           </label>
           <input
@@ -84,22 +96,32 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
           />
         </div>
         <div className="flex items-center mb-2">
-          <label className="w-32 text-sm font-medium mr-2 dark:text-gray-300 text-gray-700" htmlFor="faction">
+          <label
+            className="w-32 text-sm font-medium mr-2 dark:text-gray-300 text-gray-700"
+            htmlFor="faction"
+          >
             {'Faction'}
           </label>
-          <input
+          <select
             id="faction"
             name="faction"
-            type="text"
             value={formData.faction}
-            onChange={handleInputChange}
+            onChange={handleSelectChange}
             className="flex-1 px-3 py-2 rounded bg-gray-700 dark:bg-gray-700 bg-gray-100 focus:outline-none focus:ring text-white dark:text-white text-gray-900"
-            placeholder="e.g. Ultramarines"
             required
-          />
+          >
+            {SUPPORTED_FACTIONS.map((faction) => (
+              <option key={faction} value={faction}>
+                {faction}
+              </option>
+            ))}
+          </select>
         </div>
         <div className="flex items-center mb-2">
-          <label className="w-32 text-sm font-medium mr-2 dark:text-gray-300 text-gray-700" htmlFor="detachment">
+          <label
+            className="w-32 text-sm font-medium mr-2 dark:text-gray-300 text-gray-700"
+            htmlFor="detachment"
+          >
             {'Detachment'}
           </label>
           <input
@@ -114,7 +136,10 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
           />
         </div>
         <div className="flex items-center mb-2">
-          <label className="w-32 text-sm font-medium mr-2 dark:text-gray-300 text-gray-700" htmlFor="points">
+          <label
+            className="w-32 text-sm font-medium mr-2 dark:text-gray-300 text-gray-700"
+            htmlFor="points"
+          >
             {'Points'}
           </label>
           <input
@@ -138,7 +163,10 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
           >
             Cancel
           </button>
-          <button type="submit" className="px-4 py-2 bg-green-600 rounded text-black dark:text-black text-white">
+          <button
+            type="submit"
+            className="px-4 py-2 bg-green-600 rounded text-black dark:text-black text-white"
+          >
             Create
           </button>
         </div>
