@@ -136,10 +136,10 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
   return (
     <div className="relative pb-4">
       {/* Static Background at the very top */}
-      <div className="absolute top-0 left-0 right-0 h-16 bg-gray-900 border-b border-gray-700 z-0"></div>
+      <div className="absolute top-0 left-0 right-0 h-14 bg-gray-900 border-b border-gray-700 z-0"></div>
 
       {/* Sticky header container for buttons */}
-      <div className="sticky top-0 z-40 px-4 py-3 flex justify-between items-center pointer-events-none mb-4">
+      <div className="sticky top-0 z-40 px-4 py-2 flex justify-between items-center pointer-events-none mb-4">
         <button
           onClick={onBack}
           className="pointer-events-auto px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 shadow-md border border-gray-700"

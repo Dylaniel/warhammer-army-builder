@@ -91,7 +91,7 @@ export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProp
   }
 
   return (
-    <section className="mx-4">
+    <section className="mx-4 mt-4">
       <button
         onClick={() => setIsModalOpen(true)}
         disabled={armies.length >= MAX_ARMIES}
