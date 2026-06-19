@@ -14,9 +14,9 @@ function ArmyCard({ army, onDelete, onView }: { army: Army; onDelete: () => void
   return (
     <div className="bg-gray-800 dark:bg-gray-800 bg-gray-100 rounded-lg p-4 mb-4" style={{ boxShadow: '0 0 0 2px #000' }}>
       <div>
-        <h2 className="text-lg font-bold uppercase mb-1 dark:text-white text-gray-900">{army.armyName}</h2>
-        <div className="text-sm mb-1 dark:text-gray-300 text-gray-700">Faction: {army.faction}</div>
-        <div className="text-sm mb-1 dark:text-gray-300 text-gray-700">Detachment: {army.detachment}</div>
+        <h2 className="text-lg font-bold uppercase mb-1 text-white">{army.armyName}</h2>
+        <div className="text-sm mb-1 text-gray-300">Faction: {army.faction}</div>
+        <div className="text-sm mb-1 text-gray-300">Detachment: {army.detachment}</div>
         <div className="flex items-center justify-between mt-2">
           <span className="text-gray-900 dark:text-gray-900 px-2 py-1 rounded text-sm font-bold bg-yellow-400">
             Points: {army.points}

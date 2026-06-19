@@ -105,10 +105,10 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
       </button>
       
       <div className="bg-gray-800 dark:bg-gray-800 bg-gray-100 rounded-lg p-4 mb-4" style={{ boxShadow: '0 0 0 2px #000' }}>
-        <h2 className="text-lg font-bold uppercase mb-1 dark:text-white text-gray-900">{army.armyName}</h2>
-        <div className="text-sm mb-1 dark:text-gray-300 text-gray-700">Faction: {army.faction}</div>
-        <div className="text-sm mb-1 dark:text-gray-300 text-gray-700">Detachment: {army.detachment}</div>
-        <div className="text-sm mb-1 dark:text-gray-300 text-gray-700">Points: {army.points}</div>
+        <h2 className="text-lg font-bold uppercase mb-1 text-white">{army.armyName}</h2>
+        <div className="text-sm mb-1 text-gray-300">Faction: {army.faction}</div>
+        <div className="text-sm mb-1 text-gray-300">Detachment: {army.detachment}</div>
+        <div className="text-sm mb-1 text-gray-300">Points: {army.points}</div>
       </div>
 
       {/* Unit categories */}
@@ -139,8 +139,8 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
                 <div className="px-4 pb-3 space-y-2">
                   {categoryUnits.map((unit) => (
                     <div key={unit.id} className="flex justify-between items-center py-2 px-3 bg-gray-100 dark:bg-gray-600 rounded">
-                      <span className="font-medium dark:text-white text-gray-900">{unit.name}</span>
-                      <span className="text-sm text-gray-600 dark:text-gray-300">
+                      <span className="font-medium text-white">{unit.name}</span>
+                      <span className="text-sm text-gray-300">
                         {unit.totalPoints || unit.basePoints} pts
                       </span>
                     </div>

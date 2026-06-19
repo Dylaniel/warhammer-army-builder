@@ -6,8 +6,8 @@ export default function ProfileTab({}: ProfileTabProps) {
   const { theme, toggleTheme } = useTheme();
   return (
     <section className="mx-4">
-      <h2 className="text-2xl font-bold uppercase mb-4">Profile</h2>
-      <p className="text-gray-400 mb-4">User profile and settings go here.</p>
+      <h2 className="text-2xl font-bold uppercase mb-4 dark:text-white text-gray-900">Profile</h2>
+      <p className="dark:text-gray-400 text-gray-600 mb-4">User profile and settings go here.</p>
       <div className="flex items-center space-x-4 mt-4">
         <span className={`font-semibold transition-colors ${theme === 'dark' ? 'text-gray-100' : 'text-gray-400'}`}>DARK</span>
         <button
