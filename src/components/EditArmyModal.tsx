@@ -55,7 +55,7 @@ export default function EditArmyModal({ isOpen, onClose, onSubmit, army }: EditA
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[100] p-4">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" style={{ zIndex: 100 }}>
       <div className="rounded-lg p-6 w-full max-w-md mx-auto shadow-lg bg-gray-800 dark:bg-gray-800 bg-white text-gray-900 dark:text-white">
         <h3 className="text-xl font-bold mb-4">Edit Army</h3>
         <form onSubmit={handleSubmit} className="space-y-4">
