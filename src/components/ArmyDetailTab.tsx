@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Army, Unit } from '../types/army';
-import unitsData from '../data/units.json';
+import { getAllUnits, createArmyUnit } from '../utils/unitUtils';
 
 interface ArmyDetailTabProps {
   army: Army;
@@ -10,18 +10,7 @@ interface ArmyDetailTabProps {
 
 export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetailTabProps) {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-  const allUnits = unitsData as Unit[];
-  
-  // Helper function to create army unit
-  const createArmyUnit = (unit: Unit): Unit => {
-    return {
-      ...unit,
-      id: `${unit.id}-${Date.now()}`,
-      selectedOptions: [],
-      totalPoints: unit.basePoints,
-      quantity: 1
-    };
-  };
+  const allUnits = getAllUnits();
 
   // Map category names to unit roles for filtering
   const getCategoryRole = (category: string): Unit['role'] | null => {
