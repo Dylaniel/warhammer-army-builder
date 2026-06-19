@@ -94,7 +94,7 @@ export default function BattleForgeApp() {
             zIndex: 1,
           }}
         >
-          <main className="overflow-y-auto absolute inset-0 h-full w-full z-[1]">
+          <main className="no-scrollbar overflow-y-auto absolute inset-0 h-full w-full z-[1]">
             {renderActiveTab()}
           </main>
         </div>
