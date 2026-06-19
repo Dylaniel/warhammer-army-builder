@@ -19,12 +19,16 @@ export default function ProfileTab({ armies, setArmies }: ProfileTabProps) {
   return (
     <section className="mx-4 mt-4 mb-20">
       <h2 className="text-2xl font-bold uppercase mb-4 dark:text-white text-gray-900">Profile</h2>
-      
+
       {/* Settings section */}
       <div className="mb-6 p-4 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
         <h3 className="text-lg font-semibold mb-4 dark:text-white text-gray-900">App Settings</h3>
         <div className="flex items-center space-x-4">
-          <span className={`font-semibold transition-colors ${theme === 'dark' ? 'text-gray-100' : 'text-gray-400'}`}>DARK</span>
+          <span
+            className={`font-semibold transition-colors ${theme === 'dark' ? 'text-gray-100' : 'text-gray-400'}`}
+          >
+            DARK
+          </span>
           <button
             onClick={toggleTheme}
             aria-label="Toggle light/dark mode"
@@ -36,17 +40,24 @@ export default function ProfileTab({ armies, setArmies }: ProfileTabProps) {
               style={{ transform: theme === 'light' ? 'translateX(40px)' : 'translateX(0)' }}
             />
           </button>
-          <span className={`font-semibold transition-colors ${theme === 'light' ? 'text-gray-900' : 'text-gray-400'}`}>LIGHT</span>
+          <span
+            className={`font-semibold transition-colors ${theme === 'light' ? 'text-gray-900' : 'text-gray-400'}`}
+          >
+            LIGHT
+          </span>
         </div>
       </div>
 
       {/* Data Management section */}
       <div className="mb-6 p-4 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-        <h3 className="text-lg font-semibold mb-3 dark:text-white text-gray-900">Data Management</h3>
+        <h3 className="text-lg font-semibold mb-3 dark:text-white text-gray-900">
+          Data Management
+        </h3>
         <p className="dark:text-gray-300 text-gray-700 mb-4">
-          You currently have <strong>{armies.length}</strong> {armies.length === 1 ? 'army' : 'armies'} saved.
+          You currently have <strong>{armies.length}</strong>{' '}
+          {armies.length === 1 ? 'army' : 'armies'} saved.
         </p>
-        
+
         {showConfirm ? (
           <div className="p-3 bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-800 rounded-md">
             <p className="text-sm text-red-800 dark:text-red-200 mb-3">
@@ -72,8 +83,8 @@ export default function ProfileTab({ armies, setArmies }: ProfileTabProps) {
             onClick={() => setShowConfirm(true)}
             disabled={armies.length === 0}
             className={`px-4 py-2 rounded text-sm font-bold ${
-              armies.length === 0 
-                ? 'bg-gray-300 text-gray-500 dark:bg-gray-700 dark:text-gray-500 cursor-not-allowed' 
+              armies.length === 0
+                ? 'bg-gray-300 text-gray-500 dark:bg-gray-700 dark:text-gray-500 cursor-not-allowed'
                 : 'bg-red-600 hover:bg-red-700 text-white'
             }`}
           >

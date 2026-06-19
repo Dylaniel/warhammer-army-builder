@@ -12,23 +12,38 @@ interface BattleForgeTabProps {
   setArmies: Dispatch<SetStateAction<Army[]>>;
 }
 
-function ArmyCard({ army, onDelete, onView, onEdit }: { army: Army; onDelete: () => void; onView: () => void; onEdit: () => void }) {
+function ArmyCard({
+  army,
+  onDelete,
+  onView,
+  onEdit,
+}: {
+  army: Army;
+  onDelete: () => void;
+  onView: () => void;
+  onEdit: () => void;
+}) {
   const allArmyUnits = [
     ...(army.characters || []),
     ...(army.battleline || []),
     ...(army.dedicatedTransports || []),
     ...(army.otherDatasheets || []),
-    ...(army.alliedUnits || [])
+    ...(army.alliedUnits || []),
   ];
   const currentPoints = calculateArmyPoints(allArmyUnits);
   const isOverPoints = currentPoints > army.points;
 
   return (
-    <div className="bg-gray-800 dark:bg-gray-800 bg-gray-100 rounded-lg p-4 mb-4" style={{ boxShadow: '0 0 0 2px #000' }}>
+    <div
+      className="bg-gray-800 dark:bg-gray-800 bg-gray-100 rounded-lg p-4 mb-4"
+      style={{ boxShadow: '0 0 0 2px #000' }}
+    >
       <div>
         <div className="flex justify-between items-start mb-1">
           <h2 className="text-lg font-bold uppercase text-white pr-2">{army.armyName}</h2>
-          <span className={`px-2 py-1 rounded text-sm font-bold ${isOverPoints ? 'bg-red-500 text-white' : 'bg-yellow-400 text-gray-900 dark:text-gray-900'}`}>
+          <span
+            className={`px-2 py-1 rounded text-sm font-bold ${isOverPoints ? 'bg-red-500 text-white' : 'bg-yellow-400 text-gray-900 dark:text-gray-900'}`}
+          >
             {currentPoints} / {army.points} pts
           </span>
         </div>
@@ -89,8 +104,8 @@ export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProp
 
   if (viewingArmyIndex !== null && armies[viewingArmyIndex]) {
     return (
-      <ArmyDetailTab 
-        army={armies[viewingArmyIndex]} 
+      <ArmyDetailTab
+        army={armies[viewingArmyIndex]}
         onBack={() => setViewingArmyIndex(null)}
         onArmyUpdate={(updatedArmy) => {
           const updatedArmies = [...armies];

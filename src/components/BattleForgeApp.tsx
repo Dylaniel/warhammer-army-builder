@@ -51,7 +51,9 @@ export default function BattleForgeApp() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-[#f5f5dc]"> {/* Always beige */}
+    <div className="min-h-screen flex items-center justify-center p-4 bg-[#f5f5dc]">
+      {' '}
+      {/* Always beige */}
       <div
         className={`font-sans w-[390px] h-[844px] shadow-lg grid overflow-hidden ${theme === 'light' ? 'bg-gray-200 text-gray-900' : 'bg-gray-900 text-white'}`}
         style={{
