@@ -64,3 +64,6 @@ Thumbs.db
 # --- Antigravity runtime artifacts ---
 .antigravity/cache/
 .antigravity/logs/
+
+# --- Compiled CSS artefacts ---
+src/styles/output.css
