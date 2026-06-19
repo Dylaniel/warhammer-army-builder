@@ -65,7 +65,9 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
   // Get available units for selection
   const getAvailableUnits = (category: string): Unit[] => {
     const categoryRole = getCategoryRole(category);
-    return categoryRole ? allUnits.filter((unit: Unit) => unit.role === categoryRole) : allUnits;
+    let filteredUnits = categoryRole ? allUnits.filter((unit: Unit) => unit.role === categoryRole) : allUnits;
+    filteredUnits = filteredUnits.filter((unit: Unit) => unit.faction === army.faction);
+    return filteredUnits;
   };
 
   //adds unit selected to the relevant category
@@ -300,18 +302,11 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
                     ) : (
                       <>
                         {availableUnits.map((unit) => (
-                          <div
-                            key={unit.id}
-                            className="flex justify-between items-center py-2 px-3 bg-blue-50 dark:bg-blue-900/20 rounded cursor-pointer hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors"
-                            onClick={() => handleAddUnit(unit, category)}
-                          >
-                            <span className="font-medium dark:text-white text-gray-900">
-                              {unit.name}
-                            </span>
-                            <span className="text-sm text-gray-600 dark:text-gray-300">
-                              {unit.basePoints} pts
-                            </span>
-                          </div>
+                          <AvailableUnitRow 
+                            key={unit.id} 
+                            unit={unit} 
+                            onAdd={() => handleAddUnit(unit, category)} 
+                          />
                         ))}
                         {availableUnits.length === 0 && (
                           <div className="text-sm text-gray-500 dark:text-gray-400 py-2">
@@ -333,6 +328,97 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
         onSubmit={handleEditArmy}
         army={army}
       />
+    </div>
+  );
+}
+
+function AvailableUnitRow({ unit, onAdd }: { unit: Unit; onAdd: () => void }) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div className="bg-blue-50 dark:bg-blue-900/20 rounded overflow-hidden mb-2 border border-transparent dark:border-blue-800/50">
+      <div
+        className="flex justify-between items-center py-2 px-3 cursor-pointer hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors"
+        onClick={() => setExpanded(!expanded)}
+      >
+        <span className="font-medium dark:text-white text-gray-900">{unit.name}</span>
+        <div className="flex items-center space-x-3">
+          <span className="text-sm text-gray-600 dark:text-gray-300">{unit.basePoints} pts</span>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onAdd();
+            }}
+            className="px-2 py-1 bg-green-600 text-white text-xs rounded hover:bg-green-700 transition-colors"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+
+      {expanded && (
+        <div className="p-3 border-t border-blue-200 dark:border-blue-800/50 text-sm bg-white dark:bg-gray-800">
+          <div className="mb-3">
+            <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-1 text-xs uppercase">Stats</h4>
+            <div className="grid grid-cols-6 gap-1 text-center bg-gray-50 dark:bg-gray-900 rounded p-2">
+              <div>
+                <div className="text-[10px] text-gray-500">M</div>
+                <div className="font-medium text-gray-900 dark:text-gray-300">{unit.stats.movement}"</div>
+              </div>
+              <div>
+                <div className="text-[10px] text-gray-500">T</div>
+                <div className="font-medium text-gray-900 dark:text-gray-300">{unit.stats.toughness}</div>
+              </div>
+              <div>
+                <div className="text-[10px] text-gray-500">SV</div>
+                <div className="font-medium text-gray-900 dark:text-gray-300">{unit.stats.save}</div>
+              </div>
+              <div>
+                <div className="text-[10px] text-gray-500">W</div>
+                <div className="font-medium text-gray-900 dark:text-gray-300">{unit.stats.wounds}</div>
+              </div>
+              <div>
+                <div className="text-[10px] text-gray-500">LD</div>
+                <div className="font-medium text-gray-900 dark:text-gray-300">{unit.stats.leadership}</div>
+              </div>
+              <div>
+                <div className="text-[10px] text-gray-500">OC</div>
+                <div className="font-medium text-gray-900 dark:text-gray-300">{unit.stats.objectiveControl}</div>
+              </div>
+            </div>
+          </div>
+
+          {unit.weapons && unit.weapons.length > 0 && (
+            <div>
+              <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-1 text-xs uppercase">Weapons</h4>
+              <div className="space-y-1">
+                {unit.weapons.map((w) => (
+                  <div
+                    key={w.id}
+                    className="bg-gray-50 dark:bg-gray-900 rounded p-2 text-xs grid grid-cols-12 gap-1 items-center"
+                  >
+                    <div className="col-span-5 font-medium text-gray-900 dark:text-gray-300 truncate" title={w.name}>
+                      {w.name}
+                    </div>
+                    <div className="col-span-2 text-center text-gray-600 dark:text-gray-400" title="Range">
+                      {w.range === 'Melee' ? 'Melee' : `${w.range}"`}
+                    </div>
+                    <div className="col-span-1 text-center text-gray-600 dark:text-gray-400" title="Attacks">
+                      {w.attacks}
+                    </div>
+                    <div className="col-span-3 text-center text-gray-600 dark:text-gray-400" title="Strength / AP">
+                      S{w.strength} AP{w.armourPenetration}
+                    </div>
+                    <div className="col-span-1 text-center text-gray-600 dark:text-gray-400" title="Damage">
+                      {w.damage}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
