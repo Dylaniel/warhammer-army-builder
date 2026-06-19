@@ -4,6 +4,7 @@ import { useState, Dispatch, SetStateAction } from 'react';
 import NewArmyModal from './NewArmyModal';
 import { Army, Unit } from '../types/army';
 import ArmyDetailTab from './ArmyDetailTab';
+import { calculateArmyPoints } from '../utils/unitUtils';
 
 interface BattleForgeTabProps {
   armies: Army[];
@@ -11,16 +12,28 @@ interface BattleForgeTabProps {
 }
 
 function ArmyCard({ army, onDelete, onView }: { army: Army; onDelete: () => void; onView: () => void }) {
+  const allArmyUnits = [
+    ...(army.characters || []),
+    ...(army.battleline || []),
+    ...(army.dedicatedTransports || []),
+    ...(army.otherDatasheets || []),
+    ...(army.alliedUnits || [])
+  ];
+  const currentPoints = calculateArmyPoints(allArmyUnits);
+  const isOverPoints = currentPoints > army.points;
+
   return (
     <div className="bg-gray-800 dark:bg-gray-800 bg-gray-100 rounded-lg p-4 mb-4" style={{ boxShadow: '0 0 0 2px #000' }}>
       <div>
-        <h2 className="text-lg font-bold uppercase mb-1 text-white">{army.armyName}</h2>
+        <div className="flex justify-between items-start mb-1">
+          <h2 className="text-lg font-bold uppercase text-white pr-2">{army.armyName}</h2>
+          <span className={`px-2 py-1 rounded text-sm font-bold ${isOverPoints ? 'bg-red-500 text-white' : 'bg-yellow-400 text-gray-900 dark:text-gray-900'}`}>
+            {currentPoints} / {army.points} pts
+          </span>
+        </div>
         <div className="text-sm mb-1 text-gray-300">Faction: {army.faction}</div>
         <div className="text-sm mb-1 text-gray-300">Detachment: {army.detachment}</div>
-        <div className="flex items-center justify-between mt-2">
-          <span className="text-gray-900 dark:text-gray-900 px-2 py-1 rounded text-sm font-bold bg-yellow-400">
-            Points: {army.points}
-          </span>
+        <div className="flex justify-end mt-2">
           <div className="flex gap-2">
             <button
               onClick={onView}
