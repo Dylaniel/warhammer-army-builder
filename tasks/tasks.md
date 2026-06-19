@@ -50,7 +50,7 @@ The following items appeared in earlier planning but have been **deliberately sc
   - Added a 3-dot menu to each unit row in `ArmyDetailTab` with Delete and Duplicate actions.
   - Modifying units updates army state and persists to localStorage.
 
-- [ ] **1.3 Army editing**
+- [x] **1.3 Army editing**
   - Allow editing army name, faction, detachment type, and points limit from the army detail view or army card.
   - Changes persist to localStorage via the existing `setArmies` pattern.
 
