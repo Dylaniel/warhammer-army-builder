@@ -59,7 +59,7 @@ The following items appeared in earlier planning but have been **deliberately sc
   - MVP scope: 10th edition core rules summary, detachment rules overview, points/limits quick-reference.
   - Does not need to be a full rulebook — enough to be genuinely useful at the table.
 
-- [ ] **1.5 Profile tab — usable content**
+- [x] **1.5 Profile tab — usable content**
   - Expand beyond the lone theme toggle.
   - Minimum additions: army count summary, a "clear all armies" action with confirmation.
 
@@ -107,4 +107,5 @@ Ideas that came up but need more discussion before committing to:
 - Homebrew / Allied category with its own per-category faction filter.
 - Per-model quantity tracking (relevant for units whose points scale with model count in 10th edition).
 - Multiple detachments within a single army list.
+
 

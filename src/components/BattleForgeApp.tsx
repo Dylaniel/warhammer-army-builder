@@ -44,7 +44,7 @@ export default function BattleForgeApp() {
       case 'battleForge':
         return <BattleForgeTab armies={armies} setArmies={setArmies} />;
       case 'profile':
-        return <ProfileTab />;
+        return <ProfileTab armies={armies} setArmies={setArmies} />;
       default:
         return <BattleForgeTab armies={armies} setArmies={setArmies} />;
     }
