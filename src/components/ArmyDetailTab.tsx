@@ -10,6 +10,7 @@ interface ArmyDetailTabProps {
 
 export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetailTabProps) {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+  const [openMenuId, setOpenMenuId] = useState<string | null>(null);
   const allUnits = getAllUnits();
 
   const allArmyUnits = [
@@ -92,6 +93,33 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
     onArmyUpdate(updatedArmy);
   };
 
+  const handleDeleteUnit = (unitId: string, category: string) => {
+    const updatedArmy = { ...army };
+    switch (category) {
+      case 'Characters': updatedArmy.characters = (army.characters || []).filter(u => u.id !== unitId); break;
+      case 'Battleline': updatedArmy.battleline = (army.battleline || []).filter(u => u.id !== unitId); break;
+      case 'Dedicated Transports': updatedArmy.dedicatedTransports = (army.dedicatedTransports || []).filter(u => u.id !== unitId); break;
+      case 'Other Datasheets': updatedArmy.otherDatasheets = (army.otherDatasheets || []).filter(u => u.id !== unitId); break;
+      case 'Allied Units': updatedArmy.alliedUnits = (army.alliedUnits || []).filter(u => u.id !== unitId); break;
+    }
+    onArmyUpdate(updatedArmy);
+    setOpenMenuId(null);
+  };
+
+  const handleDuplicateUnit = (unit: Unit, category: string) => {
+    const updatedArmy = { ...army };
+    const duplicatedUnit = { ...unit, id: `${unit.id.split('-')[0]}-${Date.now()}` };
+    switch (category) {
+      case 'Characters': updatedArmy.characters = [...(army.characters || []), duplicatedUnit]; break;
+      case 'Battleline': updatedArmy.battleline = [...(army.battleline || []), duplicatedUnit]; break;
+      case 'Dedicated Transports': updatedArmy.dedicatedTransports = [...(army.dedicatedTransports || []), duplicatedUnit]; break;
+      case 'Other Datasheets': updatedArmy.otherDatasheets = [...(army.otherDatasheets || []), duplicatedUnit]; break;
+      case 'Allied Units': updatedArmy.alliedUnits = [...(army.alliedUnits || []), duplicatedUnit]; break;
+    }
+    onArmyUpdate(updatedArmy);
+    setOpenMenuId(null);
+  };
+
   //controls which category is expanded to add available units
   const handleToggleCategory = (category: string) => {
     setExpandedCategory(expandedCategory === category ? null : category);
@@ -107,20 +135,20 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
 
   return (
     <div className="p-4">
-      <button
-        onClick={onBack}
-        className="mb-4 px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700"
-      >
-        Back to Battle Forge
-      </button>
+      <div className="flex justify-between items-center mb-4">
+        <button
+          onClick={onBack}
+          className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700"
+        >
+          Back to Battle Forge
+        </button>
+        <span className={`px-3 py-2 rounded text-sm font-bold ${isOverPoints ? 'bg-red-500 text-white' : 'bg-yellow-400 text-gray-900 dark:text-gray-900'}`}>
+          {currentPoints} / {army.points} pts
+        </span>
+      </div>
       
       <div className="bg-gray-800 dark:bg-gray-800 bg-gray-100 rounded-lg p-4 mb-4" style={{ boxShadow: '0 0 0 2px #000' }}>
-        <div className="flex justify-between items-start mb-1">
-          <h2 className="text-lg font-bold uppercase text-white pr-2">{army.armyName}</h2>
-          <span className={`px-2 py-1 rounded text-sm font-bold ${isOverPoints ? 'bg-red-500 text-white' : 'bg-yellow-400 text-gray-900 dark:text-gray-900'}`}>
-            {currentPoints} / {army.points} pts
-          </span>
-        </div>
+        <h2 className="text-lg font-bold uppercase mb-1 text-white">{army.armyName}</h2>
         <div className="text-sm mb-1 text-gray-300">Faction: {army.faction}</div>
         <div className="text-sm mb-1 text-gray-300">Detachment: {army.detachment}</div>
       </div>
@@ -152,11 +180,40 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
               {categoryUnits.length > 0 && (
                 <div className="px-4 pb-3 space-y-2">
                   {categoryUnits.map((unit) => (
-                    <div key={unit.id} className="flex justify-between items-center py-2 px-3 bg-gray-100 dark:bg-gray-600 rounded">
+                    <div key={unit.id} className="relative flex justify-between items-center py-2 px-3 bg-gray-100 dark:bg-gray-600 rounded">
                       <span className="font-medium text-white">{unit.name}</span>
-                      <span className="text-sm text-gray-300">
-                        {unit.totalPoints || unit.basePoints} pts
-                      </span>
+                      <div className="flex items-center">
+                        <span className="text-sm text-gray-300 mr-2">
+                          {unit.totalPoints || unit.basePoints} pts
+                        </span>
+                        <button
+                          onClick={() => setOpenMenuId(openMenuId === unit.id ? null : unit.id)}
+                          className="p-1 text-gray-400 hover:text-white transition-colors"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                          </svg>
+                        </button>
+                        
+                        {openMenuId === unit.id && (
+                          <div className="absolute right-0 top-10 mt-1 w-32 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10 border border-gray-200 dark:border-gray-700 overflow-hidden">
+                            <div className="py-1 text-sm flex flex-col">
+                              <button
+                                onClick={() => handleDuplicateUnit(unit, category)}
+                                className="w-full text-left px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                              >
+                                Duplicate
+                              </button>
+                              <button
+                                onClick={() => handleDeleteUnit(unit.id, category)}
+                                className="w-full text-left px-4 py-2 text-red-600 hover:bg-gray-100 dark:hover:bg-gray-700"
+                              >
+                                Delete
+                              </button>
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>
