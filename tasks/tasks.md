@@ -80,12 +80,12 @@ The following items appeared in earlier planning but have been **deliberately sc
   - Minimum role coverage: HQ ×3, TROOPS ×4, ELITES ×5, FAST_ATTACK ×3, HEAVY_SUPPORT ×4, DEDICATED_TRANSPORT ×2.
   - All entries must pass the schema rules defined in `.agents/AGENTS.md §2`.
 
-- [ ] **2.3 Faction filter in unit picker**
+- [x] **2.3 Faction filter in unit picker**
   - `ArmyDetailTab` already filters units by role.
   - Add a second filter: only show units whose `faction` matches the army's `faction` field.
   - No new UI required — this is a data filter on the existing list, automatic from army context.
 
-- [ ] **2.4 Stat block display in unit picker**
+- [x] **2.4 Stat block display in unit picker**
   - When browsing units to add, show the stat block (M / T / SV / W / LD / OC) and weapon list in the picker row expansion.
   - Users should be able to evaluate a unit before adding it.
 
