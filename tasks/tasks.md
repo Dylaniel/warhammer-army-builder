@@ -1,4 +1,4 @@
-﻿# BattleForge â€” Task List
+# BattleForge â€” Task List
 
 > **For AI agents and human contributors alike.**
 > This is the canonical task list for the BattleForge project.
@@ -54,12 +54,12 @@ The following items appeared in earlier planning but have been **deliberately sc
   - Allow editing army name, faction, detachment type, and points limit from the army detail view or army card.
   - Changes persist to localStorage via the existing `setArmies` pattern.
 
-- [ ] **1.4 Reference tab â€” real content**
+- [x] **1.4 Reference tab — real content**
   - Replace the four placeholder `<details>` accordions with useful content.
   - MVP scope: 10th edition core rules summary, detachment rules overview, points/limits quick-reference.
-  - Does not need to be a full rulebook â€” enough to be genuinely useful at the table.
+  - Does not need to be a full rulebook — enough to be genuinely useful at the table.
 
-- [ ] **1.5 Profile tab â€” usable content**
+- [x] **1.5 Profile tab — usable content**
   - Expand beyond the lone theme toggle.
   - Minimum additions: army count summary, a "clear all armies" action with confirmation.
 
