@@ -69,11 +69,10 @@ The following items appeared in earlier planning but have been **deliberately sc
 
 > The unit picker UI exists but is near-useless with only one unit in the roster.
 
-- [ ] **2.1 Data Architecture & Lazy Loading**
-  - Implement a dynamic loading architecture to replace the static `import unitsData from '../data/units.json'`.
-  - The app must lazy-load faction-specific data files (e.g., `src/data/factions/space-marines.json`) based on the active army's faction.
-  - Set up `scripts/hydrate-units.js` to automatically sort scraped units into these separate faction files rather than one monolithic JSON.
-  - *Rationale*: Doing this now establishes the scalable foundation required to support 1000+ datasheets without bloating the client bundle.
+- [x] **2.1: Data Architecture & Lazy Loading**
+  - Implement a `useFactionUnits` hook to lazy-load specific JSON faction files on demand.
+  - Convert `units.json` into a split structure: `src/data/factions/{faction-name}.json`.
+  - Update `ArmyDetailTab` and `unitUtils` to use the new hook.
 
 - [ ] **2.2 Space Marines core roster**
   - Populate `src/data/factions/space-marines.json` with ~20–30 Space Marines units.
