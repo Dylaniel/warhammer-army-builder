@@ -74,7 +74,7 @@ The following items appeared in earlier planning but have been **deliberately sc
   - Convert `units.json` into a split structure: `src/data/factions/{faction-name}.json`.
   - Update `ArmyDetailTab` and `unitUtils` to use the new hook.
 
-- [ ] **2.2 Space Marines core roster**
+- [x] **2.2 Space Marines core roster**
   - Populate `src/data/factions/space-marines.json` with ~20–30 Space Marines units.
   - Use the newly architected `scripts/hydrate-units.js` as the authoring tool.
   - Minimum role coverage: HQ ×3, TROOPS ×4, ELITES ×5, FAST_ATTACK ×3, HEAVY_SUPPORT ×4, DEDICATED_TRANSPORT ×2.
