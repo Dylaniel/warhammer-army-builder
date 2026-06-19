@@ -27,18 +27,18 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
   const isOverPoints = currentPoints > army.points;
 
   // Map category names to unit roles for filtering
-  const getCategoryRole = (category: string): Unit['role'] | null => {
+  const getCategoryRoles = (category: string): Unit['role'][] | null => {
     switch (category) {
       case 'Characters':
-        return 'HQ';
+        return ['HQ'];
       case 'Battleline':
-        return 'TROOPS';
+        return ['TROOPS'];
       case 'Dedicated Transports':
-        return 'DEDICATED_TRANSPORT';
+        return ['DEDICATED_TRANSPORT'];
       case 'Other Datasheets':
-        return 'ELITES';
+        return ['ELITES', 'FAST_ATTACK', 'HEAVY_SUPPORT', 'FLYER'];
       case 'Allied Units':
-        return null;
+        return []; // We will implement allied unit logic later. For now, it should be empty.
       default:
         return null;
     }
@@ -64,9 +64,9 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
 
   // Get available units for selection
   const getAvailableUnits = (category: string): Unit[] => {
-    const categoryRole = getCategoryRole(category);
-    let filteredUnits = categoryRole
-      ? allUnits.filter((unit: Unit) => unit.role === categoryRole)
+    const categoryRoles = getCategoryRoles(category);
+    let filteredUnits = categoryRoles
+      ? allUnits.filter((unit: Unit) => categoryRoles.includes(unit.role))
       : allUnits;
     filteredUnits = filteredUnits.filter((unit: Unit) => unit.faction === army.faction);
     return filteredUnits;
