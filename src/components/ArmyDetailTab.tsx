@@ -216,22 +216,29 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
                         </button>
                         
                         {openMenuId === unit.id && (
-                          <div className="absolute right-0 top-10 mt-1 w-32 bg-white dark:bg-gray-800 rounded-md shadow-lg z-[50] border border-gray-200 dark:border-gray-700 overflow-hidden">
-                            <div className="py-1 text-sm flex flex-col">
-                              <button
-                                onClick={() => handleDuplicateUnit(unit, category)}
-                                className="w-full text-left px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                              >
-                                Duplicate
-                              </button>
-                              <button
-                                onClick={() => handleDeleteUnit(unit.id, category)}
-                                className="w-full text-left px-4 py-2 text-red-600 hover:bg-gray-100 dark:hover:bg-gray-700"
-                              >
-                                Delete
-                              </button>
+                          <>
+                            {/* Invisible overlay to catch clicks outside the dropdown */}
+                            <div 
+                              className="fixed inset-0 z-40" 
+                              onClick={() => setOpenMenuId(null)}
+                            />
+                            <div className="absolute right-0 top-10 mt-1 w-32 bg-white dark:bg-gray-800 rounded-md shadow-lg z-[50] border border-gray-200 dark:border-gray-700 overflow-hidden">
+                              <div className="py-1 text-sm flex flex-col relative z-50">
+                                <button
+                                  onClick={() => handleDuplicateUnit(unit, category)}
+                                  className="w-full text-left px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                                >
+                                  Duplicate
+                                </button>
+                                <button
+                                  onClick={() => handleDeleteUnit(unit.id, category)}
+                                  className="w-full text-left px-4 py-2 text-red-600 hover:bg-gray-100 dark:hover:bg-gray-700"
+                                >
+                                  Delete
+                                </button>
+                              </div>
                             </div>
-                          </div>
+                          </>
                         )}
                       </div>
                     </div>
