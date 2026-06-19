@@ -1,13 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, Dispatch, SetStateAction } from 'react';
 import NewArmyModal from './NewArmyModal';
 import { Army, Unit } from '../types/army';
 import ArmyDetailTab from './ArmyDetailTab';
 
 interface BattleForgeTabProps {
   armies: Army[];
-  setArmies: (armies: Army[]) => void;
+  setArmies: Dispatch<SetStateAction<Army[]>>;
 }
 
 function ArmyCard({ army, onDelete, onView }: { army: Army; onDelete: () => void; onView: () => void }) {
