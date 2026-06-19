@@ -14,6 +14,7 @@ export default function BottomNavigation({ activeTab, onTabChange }: BottomNavig
         style={{
           width: '33.333%',
           backgroundColor: activeTab === 'reference' ? '#3b82f6' : '#eab308',
+          borderBottomLeftRadius: '1.5rem',
         }}
         onMouseEnter={(e) => {
           if (activeTab !== 'reference') {
@@ -72,6 +73,7 @@ export default function BottomNavigation({ activeTab, onTabChange }: BottomNavig
         style={{
           width: '33.333%',
           backgroundColor: activeTab === 'profile' ? '#3b82f6' : '#eab308',
+          borderBottomRightRadius: '1.5rem',
         }}
         onMouseEnter={(e) => {
           if (activeTab !== 'profile') {

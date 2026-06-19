@@ -59,7 +59,7 @@ export default function BattleForgeApp() {
           borderBottomRightRadius: '1.5rem',
           boxShadow: '0 0 0 1px #222',
           display: 'grid',
-          gridTemplateRows: '20px 64px 623px 64px',
+          gridTemplateRows: '20px 40px 647px 64px',
           gridTemplateAreas: `
             "banner"
             "header"
@@ -84,7 +84,7 @@ export default function BattleForgeApp() {
         <div
           style={{
             gridArea: 'header',
-            height: '64px',
+            height: '40px',
           }}
         >
           <Header />
@@ -95,7 +95,7 @@ export default function BattleForgeApp() {
           style={{
             gridArea: 'content',
             position: 'relative',
-            height: '623px',
+            height: '647px',
             minHeight: 0,
             zIndex: 1,
           }}

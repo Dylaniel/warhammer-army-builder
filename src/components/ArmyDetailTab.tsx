@@ -134,8 +134,8 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
   ];
 
   return (
-    <div className="p-4">
-      <div className="flex justify-between items-center mb-4">
+    <div className="relative pb-4">
+      <div className="sticky top-0 z-40 bg-gray-900 px-4 py-3 flex justify-between items-center shadow-md mb-4 border-b border-gray-700">
         <button
           onClick={onBack}
           className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700"
@@ -147,21 +147,22 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
         </span>
       </div>
       
-      <div className="bg-gray-800 dark:bg-gray-800 bg-gray-100 rounded-lg p-4 mb-4" style={{ boxShadow: '0 0 0 2px #000' }}>
-        <h2 className="text-lg font-bold uppercase mb-1 text-white">{army.armyName}</h2>
-        <div className="text-sm mb-1 text-gray-300">Faction: {army.faction}</div>
-        <div className="text-sm mb-1 text-gray-300">Detachment: {army.detachment}</div>
-      </div>
+      <div className="px-4">
+        <div className="bg-gray-800 dark:bg-gray-800 bg-gray-100 rounded-lg p-4 mb-4" style={{ boxShadow: '0 0 0 2px #000' }}>
+          <h2 className="text-lg font-bold uppercase mb-1 text-white">{army.armyName}</h2>
+          <div className="text-sm mb-1 text-gray-300">Faction: {army.faction}</div>
+          <div className="text-sm mb-1 text-gray-300">Detachment: {army.detachment}</div>
+        </div>
 
-      {/* Unit categories */}
-      <div className="space-y-3">
+        {/* Unit categories */}
+        <div className="space-y-3">
         {categories.map((category) => {
           const categoryUnits = getUnitsForCategory(category);
           const availableUnits = getAvailableUnits(category);
           const isExpanded = expandedCategory === category;
           
           return (
-            <div key={category} className="bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden">
+            <div key={category} className="bg-gray-200 dark:bg-gray-700 rounded-lg">
               <div className="w-full flex items-center justify-between py-3 px-4 text-lg font-bold uppercase text-gray-800 dark:text-gray-100 text-left">
                 <span>{category}</span>
                 <button
@@ -196,7 +197,7 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
                         </button>
                         
                         {openMenuId === unit.id && (
-                          <div className="absolute right-0 top-10 mt-1 w-32 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10 border border-gray-200 dark:border-gray-700 overflow-hidden">
+                          <div className="absolute right-0 top-10 mt-1 w-32 bg-white dark:bg-gray-800 rounded-md shadow-lg z-[50] border border-gray-200 dark:border-gray-700 overflow-hidden">
                             <div className="py-1 text-sm flex flex-col">
                               <button
                                 onClick={() => handleDuplicateUnit(unit, category)}
@@ -247,6 +248,7 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
             </div>
           );
         })}
+      </div>
       </div>
     </div>
   );
