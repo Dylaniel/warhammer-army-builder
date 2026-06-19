@@ -53,13 +53,12 @@ export default function BattleForgeApp() {
   return (
     <div className="min-h-screen flex items-center justify-center p-4 bg-[#f5f5dc]"> {/* Always beige */}
       <div
-        className={`font-sans w-[390px] h-[844px] shadow-lg grid ${theme === 'light' ? 'bg-gray-200 text-gray-900' : 'bg-gray-900 text-white'}`}
+        className={`font-sans w-[390px] h-[844px] shadow-lg grid overflow-hidden ${theme === 'light' ? 'bg-gray-200 text-gray-900' : 'bg-gray-900 text-white'}`}
         style={{
-          borderBottomLeftRadius: '1.5rem',
-          borderBottomRightRadius: '1.5rem',
+          borderRadius: '1.5rem',
           boxShadow: '0 0 0 1px #222',
           display: 'grid',
-          gridTemplateRows: '20px 40px 647px 64px',
+          gridTemplateRows: '20px 40px 1fr 64px',
           gridTemplateAreas: `
             "banner"
             "header"
@@ -70,13 +69,9 @@ export default function BattleForgeApp() {
       >
         {/* Spacer Banner - Row 1: Fixed height */}
         <div
-          className="bg-yellow-500 text-gray-900 text-center py-2 px-4 text-sm font-semibold flex items-center justify-center"
+          className="bg-yellow-500 text-gray-900 flex items-center justify-center"
           style={{
             gridArea: 'banner',
-            height: '10px',
-            overflow: 'hidden',
-            borderTopLeftRadius: '1.5rem',
-            borderTopRightRadius: '1.5rem',
           }}
         ></div>
 
@@ -95,12 +90,11 @@ export default function BattleForgeApp() {
           style={{
             gridArea: 'content',
             position: 'relative',
-            height: '647px',
             minHeight: 0,
             zIndex: 1,
           }}
         >
-          <main className="pt-4 overflow-y-scroll absolute inset-0 h-[600px] w-full z-[1]">
+          <main className="pt-4 overflow-y-auto absolute inset-0 h-full w-full z-[1]">
             {renderActiveTab()}
           </main>
         </div>

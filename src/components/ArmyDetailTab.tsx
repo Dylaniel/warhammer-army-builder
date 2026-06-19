@@ -135,19 +135,23 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
 
   return (
     <div className="relative pb-4">
-      <div className="sticky top-0 z-40 bg-gray-900 px-4 py-3 flex justify-between items-center shadow-md mb-4 border-b border-gray-700">
+      {/* Static Background at the very top */}
+      <div className="absolute top-0 left-0 right-0 h-16 bg-gray-900 border-b border-gray-700 z-0"></div>
+
+      {/* Sticky header container for buttons */}
+      <div className="sticky top-0 z-40 px-4 py-3 flex justify-between items-center pointer-events-none mb-4">
         <button
           onClick={onBack}
-          className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700"
+          className="pointer-events-auto px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 shadow-md border border-gray-700"
         >
           Back to Battle Forge
         </button>
-        <span className={`px-3 py-2 rounded text-sm font-bold ${isOverPoints ? 'bg-red-500 text-white' : 'bg-yellow-400 text-gray-900 dark:text-gray-900'}`}>
+        <span className={`pointer-events-auto px-3 py-2 rounded text-sm font-bold shadow-md border border-gray-700 ${isOverPoints ? 'bg-red-500 text-white' : 'bg-yellow-400 text-gray-900 dark:text-gray-900'}`}>
           {currentPoints} / {army.points} pts
         </span>
       </div>
       
-      <div className="px-4">
+      <div className="px-4 relative z-10">
         <div className="bg-gray-800 dark:bg-gray-800 bg-gray-100 rounded-lg p-4 mb-4" style={{ boxShadow: '0 0 0 2px #000' }}>
           <h2 className="text-lg font-bold uppercase mb-1 text-white">{army.armyName}</h2>
           <div className="text-sm mb-1 text-gray-300">Faction: {army.faction}</div>
