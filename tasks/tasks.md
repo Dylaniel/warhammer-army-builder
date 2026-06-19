@@ -65,22 +65,28 @@ The following items appeared in earlier planning but have been **deliberately sc
 
 ---
 
-## Phase 2 â€” Unit Data & Picker Wiring
+## Phase 2 — Unit Data & Picker Wiring
 
 > The unit picker UI exists but is near-useless with only one unit in the roster.
 
-- [ ] **2.1 Space Marines core roster**
-  - Populate `src/data/units.json` with ~20â€“30 Space Marines units.
-  - Use `scripts/hydrate-units.js` as the authoring tool.
-  - Minimum role coverage: HQ Ã—3, TROOPS Ã—4, ELITES Ã—5, FAST_ATTACK Ã—3, HEAVY_SUPPORT Ã—4, DEDICATED_TRANSPORT Ã—2.
-  - All entries must pass the schema rules defined in `.agents/AGENTS.md Â§2`.
+- [ ] **2.1 Data Architecture & Lazy Loading**
+  - Implement a dynamic loading architecture to replace the static `import unitsData from '../data/units.json'`.
+  - The app must lazy-load faction-specific data files (e.g., `src/data/factions/space-marines.json`) based on the active army's faction.
+  - Set up `scripts/hydrate-units.js` to automatically sort scraped units into these separate faction files rather than one monolithic JSON.
+  - *Rationale*: Doing this now establishes the scalable foundation required to support 1000+ datasheets without bloating the client bundle.
 
-- [ ] **2.2 Faction filter in unit picker**
+- [ ] **2.2 Space Marines core roster**
+  - Populate `src/data/factions/space-marines.json` with ~20–30 Space Marines units.
+  - Use the newly architected `scripts/hydrate-units.js` as the authoring tool.
+  - Minimum role coverage: HQ ×3, TROOPS ×4, ELITES ×5, FAST_ATTACK ×3, HEAVY_SUPPORT ×4, DEDICATED_TRANSPORT ×2.
+  - All entries must pass the schema rules defined in `.agents/AGENTS.md §2`.
+
+- [ ] **2.3 Faction filter in unit picker**
   - `ArmyDetailTab` already filters units by role.
   - Add a second filter: only show units whose `faction` matches the army's `faction` field.
-  - No new UI required â€” this is a data filter on the existing list, automatic from army context.
+  - No new UI required — this is a data filter on the existing list, automatic from army context.
 
-- [ ] **2.3 Stat block display in unit picker**
+- [ ] **2.4 Stat block display in unit picker**
   - When browsing units to add, show the stat block (M / T / SV / W / LD / OC) and weapon list in the picker row expansion.
   - Users should be able to evaluate a unit before adding it.
 
