@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Army, Unit } from '../types/army';
 import { getAllUnits, createArmyUnit, calculateArmyPoints } from '../utils/unitUtils';
+import EditArmyModal from './EditArmyModal';
 
 interface ArmyDetailTabProps {
   army: Army;
@@ -11,6 +12,7 @@ interface ArmyDetailTabProps {
 export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetailTabProps) {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const allUnits = getAllUnits();
 
   const allArmyUnits = [
@@ -125,6 +127,11 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
     setExpandedCategory(expandedCategory === category ? null : category);
   };
 
+  const handleEditArmy = (updatedData) => {
+    onArmyUpdate({ ...army, ...updatedData });
+    setIsEditModalOpen(false);
+  };
+
   const categories = [
     'Characters',
     'Battleline',
@@ -153,7 +160,15 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
       
       <div className="px-4 relative z-10">
         <div className="bg-gray-800 dark:bg-gray-800 bg-gray-100 rounded-lg p-4 mb-4" style={{ boxShadow: '0 0 0 2px #000' }}>
-          <h2 className="text-lg font-bold uppercase mb-1 text-white">{army.armyName}</h2>
+          <div className="flex justify-between items-start mb-1">
+            <h2 className="text-lg font-bold uppercase text-white">{army.armyName}</h2>
+            <button
+              onClick={() => setIsEditModalOpen(true)}
+              className="px-2 py-1 bg-blue-600 text-xs rounded text-white hover:bg-blue-700 transition-colors"
+            >
+              Edit
+            </button>
+          </div>
           <div className="text-sm mb-1 text-gray-300">Faction: {army.faction}</div>
           <div className="text-sm mb-1 text-gray-300">Detachment: {army.detachment}</div>
         </div>

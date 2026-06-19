@@ -4,6 +4,7 @@ import { useState, Dispatch, SetStateAction } from 'react';
 import NewArmyModal from './NewArmyModal';
 import { Army, Unit } from '../types/army';
 import ArmyDetailTab from './ArmyDetailTab';
+import EditArmyModal from './EditArmyModal';
 import { calculateArmyPoints } from '../utils/unitUtils';
 
 interface BattleForgeTabProps {
@@ -11,7 +12,7 @@ interface BattleForgeTabProps {
   setArmies: Dispatch<SetStateAction<Army[]>>;
 }
 
-function ArmyCard({ army, onDelete, onView }: { army: Army; onDelete: () => void; onView: () => void }) {
+function ArmyCard({ army, onDelete, onView, onEdit }: { army: Army; onDelete: () => void; onView: () => void; onEdit: () => void }) {
   const allArmyUnits = [
     ...(army.characters || []),
     ...(army.battleline || []),
@@ -57,6 +58,7 @@ function ArmyCard({ army, onDelete, onView }: { army: Army; onDelete: () => void
 export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [viewingArmyIndex, setViewingArmyIndex] = useState<number | null>(null);
+  const [editingArmyIndex, setEditingArmyIndex] = useState<number | null>(null);
   const MAX_ARMIES = 10;
 
   const handleCreateArmy = (formData: {
@@ -122,6 +124,7 @@ export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProp
               army={army}
               onDelete={() => setArmies(armies.filter((_, i) => i !== realIndex))}
               onView={() => setViewingArmyIndex(realIndex)}
+              onEdit={() => setEditingArmyIndex(realIndex)}
             />
           );
         })}
