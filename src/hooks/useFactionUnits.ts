@@ -34,9 +34,14 @@ export function useFactionUnits(faction: string): UseFactionUnitsResult {
 
         let factionUnits = [];
         try {
-          // Dynamic import
-          const factionData = await import(`../data/factions/${normalizedFaction}.json`);
-          factionUnits = factionData.default || factionData;
+          // Fallback to static if dynamic is breaking Next.js client bundling
+          if (normalizedFaction === 'space-marines') {
+            const data = await import('../data/factions/space-marines.json');
+            factionUnits = data.default || data;
+          } else {
+            const factionData = await import(`../data/factions/${normalizedFaction}.json`);
+            factionUnits = factionData.default || factionData;
+          }
         } catch (importError) {
           console.warn(`Could not load specific data for faction: ${faction}`, importError);
           // If the specific faction JSON doesn't exist, we fallback to just generics
