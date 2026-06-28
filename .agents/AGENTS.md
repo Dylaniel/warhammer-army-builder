@@ -158,33 +158,40 @@ git commit -m "stuff"
 
 ## Workspace Execution & Model Routing Policy
 
-### 1. Multi-Agent Workspace Routing Matrix
-*   **Lead Orchestrator (Branch Splitting, Code Review, Context Ingestion):** 
-    *   *Primary:* `Gemini 3.1 Pro (High)`
-*   **Feature Implementation Agents (Deep Code Writing & Refactoring):** 
-    *   *Primary:* `Claude Sonnet 4.6 (Thinking)`
-    *   *Failover:* `Gemini 3.1 Pro (High)` (Fallback if Claude returns a 429 rate limit or quota exhaustion error)
-*   **Utility & Automation Agents (Data Hydration, Script Execution, Unit Tests):** 
-    *   *Primary:* `Gemini 3.5 Flash (High)`
-    *   *Failover:* `Gemini 3.5 Flash (Medium)`
+### 1. Multi-Agent Complexity-Based Routing Matrix
+Before spawning any sub-agent, you must evaluate the nature and complexity of the task to determine the appropriate compute tier:
 
-### 2. Agent Concurrency Limits
-*   **Anthropic Hard Ceiling:** Under no circumstances should more than **3 Anthropic sub-agents** run concurrently. This cap applies universally across all Claude model variants.
-*   **Google Hard Ceiling:** Allow up to **5 Google sub-agents** to run concurrently.
-*   **Global Workspace Ceiling:** The total number of active sub-agents across *all* providers combined must **never exceed 5**.
+*   **High Tier (Architecture & Core Logic):** Multi-file refactoring, core business logic, schema changes, or complex state/combat machines.
+    *   *Primary Model:* `Claude Sonnet 4.6 (Thinking)`
+    *   *Failover Model:* `Gemini 3.1 Pro (High)`
+    *   *Human Authorization:* **REQUIRED**. You must prompt the user and obtain explicit permission via the interface before spawning.
+*   **Medium Tier (Component & Layout):** Single-file implementation, isolated UI layout modifications, component refinement, or standalone helper functions.
+    *   *Primary Model:* `Gemini 3.1 Pro (High)`
+    *   *Failover Model:* `Gemini 3.5 Flash (High)`
+    *   *Human Authorization:* **Auto-Approve**. You are permitted to execute these silently within concurrency limits.
+*   **Low Tier (Utility & Automation):** Unit test generation, script execution, data hydration, typos, boilerplate, or documentation.
+    *   *Primary Model:* `Gemini 3.5 Flash (High)`
+    *   *Failover Model:* `Gemini 3.5 Flash (Medium)`
+    *   *Human Authorization:* **Auto-Approve**. You are permitted to execute these silently within concurrency limits.
 
-Your parallel distribution must dynamically scale to conform to these rules. Valid permutations include:
-*   3 Anthropic Agents + 2 Google Agents (Global Max)
-*   0 Anthropic Agents + 5 Google Agents (Google Max)
-*   2 Anthropic Agents + 3 Google Agents
-*   *(Any other combination where Anthropic <= 3, Google <= 5, and Total <= 5)*
+### 2. Intelligent Spawning & Throttling Guardrails
+You must actively throttle background agent invocation based on workspace safety, rather than blindly scaling to maximum capacities:
 
-*   **Reasoning:** Prevents excessive file conflicts across Git worktrees and keeps a tight handle on token consumption while maximizing multi-provider throughput.
+*   **Asymmetric Approval Lock:** All Anthropic/Claude allocations are highly intentional and strictly require manual user confirmation to prevent accidental token/quota exhaustion. All native Google/Gemini allocations are granted auto-execution privileges.
+*   **File Blast Radius Filter:** If multiple pending tasks touch the exact same file or tightly coupled directory, parallel execution is strictly forbidden. Force these tasks to run sequentially on a single sub-agent thread to guarantee zero Git merge conflicts.
+*   **Dependency Verification:** Always parse the task tracking list for sequential prerequisites. Never spawn sub-agents for downstream tasks until their upstream dependencies are fully merged and validated.
+*   **Diminishing Returns Cap:** Even if multiple completely independent tasks are available, cap immediate parallel execution at **3 sub-agents max** to preserve system performance and prevent cognitive overhead during code reviews.
 
-### 3. Execution Verification
+### 3. Absolute Provider Caps
+When parallel scaling *is* valid and authorized, the total background pool must strictly respect these hard limits:
+*   **Anthropic Hard Ceiling:** Max **2 active sub-agents** concurrently across any Claude variants.
+*   **Google Hard Ceiling:** Max **5 active sub-agents** concurrently.
+*   **Global Workspace Ceiling:** The total combination of *all* active sub-agents across all providers combined must **never exceed 5**.
+
+### 4. Execution Verification
 *   Every sub-agent must append its runtime signature to its atomic commit log using the format: `[Model: <Model Name>]`.
 
-### 4. Git Isolation & Commit Protocol
+### 5. Git Isolation & Commit Protocol
 
 *   **Branch Isolation:** Every sub-agent must spin up its own isolated Git branch or separate worktree named after the specific task ID (e.g., `task-0.2-cleanup`). Under no circumstances should two sub-agents commit directly to the same branch.
 *   **Atomic Commits:** Sub-agents must make highly atomic commits focused on single changes, appended with their runtime signature (e.g., `git commit -m "feat: added points validator [Model: Sonnet]"`).
