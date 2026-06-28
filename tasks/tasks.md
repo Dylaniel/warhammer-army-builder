@@ -91,17 +91,21 @@ The following items appeared in earlier planning but have been **deliberately sc
 
 ---
 
-## Phase 3 â€” Polish & Export
+## Phase 3 — Unit Interaction & Detail View
 
-> Nice-to-haves that require Phase 1 and 2 to be stable first.
+> Shift from simple army lists to interactive unit inspection and composition editing.
 
-- [ ] **3.1 Soft army composition warnings**
-  - Warn (non-blocking) when the army violates common composition guidelines (e.g. no Battleline units, over points limit).
-  - Display as a banner or badge â€” never a hard block.
+- [ ] **3.1 Army Roster Cards Enhancement**
+  - Make the unit cards in the army roster vertically taller.
+  - Replicate the brief composition display (e.g., `1x Terminator Sergeant \n 4x Terminator`) under the unit name.
+  - The entire unit card should be clickable to navigate to the Unit Detail View.
+  - Ensure the 3-dot menu (Delete, Duplicate) remains accessible and functioning properly on the expanded cards.
 
-- [ ] **3.2 Army list export**
-  - Export army to a clean printable view (browser print stylesheet or PDF).
-  - Lowest priority item on the list.
+- [ ] **3.2 Dedicated Unit Detail View**
+  - Clicking an active unit in the army roster should navigate the user to a dedicated `UnitDetailTab`.
+  - Display the locked content area: the unit's stat block (M, T, SV, W, LD, OC), Weapons, and Abilities.
+  - Include a "Unit Composition" accordion/section that allows the user to view the models, scale the unit quantity, and see the corresponding points changes (e.g., 5-man vs 10-man squads).
+  - Include "Wargear Options" section indicating available selections.
 
 ---
 
@@ -109,8 +113,18 @@ The following items appeared in earlier planning but have been **deliberately sc
 
 Ideas that came up but need more discussion before committing to:
 
-- Homebrew / Allied category with its own per-category faction filter.
-- Per-model quantity tracking (relevant for units whose points scale with model count in 10th edition).
-- Multiple detachments within a single army list.
+- **Soft Army Composition Warnings**
+  - Warn (non-blocking) when the army violates common composition guidelines (e.g., no Battleline units).
+  - Enforce standard 10th edition rules: Max 3 of any given datasheet, Max 6 if Battleline or Dedicated Transport.
+  - Flag if the army is missing a Character to serve as the Warlord.
+  - Display as a soft-warning banner or badge — never a hard block.
 
+- **Army Import / Export via JSON**
+  - Implement a robust system to share army lists natively.
+  - **Export**: Add a "Copy as JSON file" button on the army card for existing armies. This will export the entire army state (all components, options, quantities) into a clean JSON string copied to the clipboard.
+  - **Import**: When creating a new army, add an "Add via JSON" option. This will open a text box where users can paste the JSON payload to instantly reconstruct the full army list with all options retained.
 
+- **Homebrew / Allied category** 
+  - Give it its own per-category faction filter to handle cross-faction complex detachments.
+- **Multiple detachments**
+  - Supporting multiple detachments within a single army list.
