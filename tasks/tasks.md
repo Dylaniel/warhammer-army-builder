@@ -105,13 +105,13 @@ The following items appeared in earlier planning but have been **deliberately sc
   - Clicking an active unit in the army roster should navigate the user to a dedicated `UnitDetailTab`.
   - Display the locked content area: the unit's stat block (M, T, SV, W, LD, OC), Weapons, and Abilities.
   - Include a "Unit Composition" accordion/section that allows the user to view the models, scale the unit quantity, and see the corresponding points changes (e.g., 5-man vs 10-man squads).
-  - Include "Wargear Options" section indicating available selections.
+  - Include "Wargear Options" section indicating available selections (Barebones for now, no real options yet just default).
 
 ---
 
 ## Parking Lot
 
-Ideas that came up but need more discussion before committing to:
+Ideas that came up but need more discussion before committing to. + above marks worthy of addition to Phase 4 of primary tasks. Number next to plust indicates sub task number eg. 4.x.:
 
 - **Soft Army Composition Warnings**
   - Warn (non-blocking) when the army violates common composition guidelines (e.g., no Battleline units).
@@ -119,6 +119,7 @@ Ideas that came up but need more discussion before committing to:
   - Flag if the army is missing a Character to serve as the Warlord.
   - Display as a soft-warning banner or badge — never a hard block.
 
++3
 - **Army Import / Export via JSON**
   - Implement a robust system to share army lists natively.
   - **Export**: Add a "Copy as JSON file" button on the army card for existing armies. This will export the entire army state (all components, options, quantities) into a clean JSON string copied to the clipboard.
@@ -128,3 +129,14 @@ Ideas that came up but need more discussion before committing to:
   - Give it its own per-category faction filter to handle cross-faction complex detachments.
 - **Multiple detachments**
   - Supporting multiple detachments within a single army list.
+
++1
+- **Addition of Remaining Factions**
+  - Currently only space marines faction is present. Must introduce all other factions and ensure full space marine implementation.
+  - New factions should be implemented as barebones, no hydration similar to how space marines were initially implemented.
+
++2
+- **Full Unit Library Hydration**
+  - Currently only space marines are hydrated. Other Factions must recieve their respective units.
+  - Also includes weapon options, rules for unit composition (X min of leader, Y min of subordinate mini's, point cost for different compositions such as Z points for 4 subordinates, but A points for >4 subordinates)
+  - Can refer to tasks 2.2 and 3.2 for reference of implementation for space marines
