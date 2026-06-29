@@ -100,6 +100,8 @@ The following items appeared in earlier planning but have been **deliberately sc
   - Replicate the brief composition display (e.g., `1x Terminator Sergeant \n 4x Terminator`) under the unit name.
   - The entire unit card should be clickable to navigate to the Unit Detail View.
   - Ensure the 3-dot menu (Delete, Duplicate) remains accessible and functioning properly on the expanded cards.
+  - For applicaple units of `Character` category, 3-dot menu should have a "make warlord" option. Only one warlord per army, making another character warlord takes it from current warlord. Option should be greyed out in 3-dot menu if a unit is already warlord. 
+  - Warlord unit should have a small yellow bookmark tag at top that says "HQ" between name and point cost.
 
 - [ ] **3.2 Dedicated Unit Detail View**
   - Clicking an active unit in the army roster should navigate the user to a dedicated `UnitDetailTab`.
@@ -111,7 +113,7 @@ The following items appeared in earlier planning but have been **deliberately sc
 
 ## Parking Lot
 
-Ideas that came up but need more discussion before committing to. + above marks worthy of addition to Phase 4 of primary tasks. Number next to plust indicates sub task number eg. 4.x.:
+Ideas that came up but need more discussion before committing to. + above marks worthy of addition to Phase 4 of primary tasks. Number next to plust indicates recommended sub task number eg. 4.x.:
 
 - **Soft Army Composition Warnings**
   - Warn (non-blocking) when the army violates common composition guidelines (e.g., no Battleline units).
@@ -124,6 +126,13 @@ Ideas that came up but need more discussion before committing to. + above marks 
   - Implement a robust system to share army lists natively.
   - **Export**: Add a "Copy as JSON file" button on the army card for existing armies. This will export the entire army state (all components, options, quantities) into a clean JSON string copied to the clipboard.
   - **Import**: When creating a new army, add an "Add via JSON" option. This will open a text box where users can paste the JSON payload to instantly reconstruct the full army list with all options retained.
+
+- **Army Import/Export via JSON Extended Future**
+  - Implement source feature that utilizes a future account system to list a source for an army as seperate componenet of description. Pureley username in text.
+
+  - **User Account System**
+    - Stores user army info for use on different devices seamlessly.
+    - Simpler solution is account data export/import similar to armies to avoid complexity of being responsible for user data/authentication, circumventing need for real accounts.
 
 - **Homebrew / Allied category** 
   - Give it its own per-category faction filter to handle cross-faction complex detachments.
@@ -140,3 +149,12 @@ Ideas that came up but need more discussion before committing to. + above marks 
   - Currently only space marines are hydrated. Other Factions must recieve their respective units.
   - Also includes weapon options, rules for unit composition (X min of leader, Y min of subordinate mini's, point cost for different compositions such as Z points for 4 subordinates, but A points for >4 subordinates)
   - Can refer to tasks 2.2 and 3.2 for reference of implementation for space marines
+
+- **Edition Picker**
+  - Major task that would warrant being it's own phase due to complexity of overhaul and implementation.
+  - Army should be designated as under a certain edition which indicates what rules the app should follow.
+  - Support would start at 10th edition and future editions, the latest is 11th.
+  - Should be a field during army creation.
+  - Should display briefly (10th or 11th) on army card on right side, vertically between the points box and the two bottom buttons for edit and view army. Display like sideways bookmark coming from right edge and coloured grey.
+  - This feature would require a prerequisite task of designating all current rules as being under 10th edition, and being seperated from hard logic of app functions. Unit options and such may be different and so rules should be identified as a certain edition as seperate logic that is plugged in when an army is of such an edition.
+  - Would also require a special scenario for editing an army where if the edition is changed the user should be warned it will wipe all of that armies data (Perhaps not even allow it to be edited) if the edit is made.
