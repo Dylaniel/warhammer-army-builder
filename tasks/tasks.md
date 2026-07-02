@@ -142,7 +142,11 @@ The following items appeared in earlier planning but have been **deliberately sc
 
 > List sharing and JSON ecosystem integration.
 
-- [ ] **6.1 Army Import / Export via JSON**
+- [ ] **6.1 Entity-Centric Detachment Schema Refactoring**
+  - Refactor the data architecture to decouple detachment rules from parent-state conditional sweeps. Units, weapons, or profiles must explicitly declare their own applicable detachment bonuses within their schema object. Each bonus item must store a validation key indicating which detachment(s) it belongs to. 
+  - **Crucial Rendering Rule:** The bonus text stored and rendered must reflect the exact, verbatim wording of the official tabletop rules. The application must not attempt to summarize or independently interpret ambiguous mechanics; it must provide the exact wording so players and their opponents can exercise human discretion during live gameplay. The rendering engine will simply read the entity's intrinsic array and display this verbatim text if the army's active detachment string matches.
+
+- [ ] **6.2 Army Import / Export via JSON**
   - Implement robust list-sharing capabilities as the final ecosystem layer. Build a clipboard-copy mechanism for exporting full active states as JSON strings, alongside a text-area input window during army creation to parse and reconstruct lists.
 
 ---
