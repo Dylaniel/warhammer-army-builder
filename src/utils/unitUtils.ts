@@ -4,7 +4,35 @@ import unitsData from '../data/units.json';
 /**
  * Official supported factions for dropdowns and lazy loading
  */
-export const SUPPORTED_FACTIONS = ['Space Marines'];
+export const SUPPORTED_FACTIONS = [
+  'Space Marines',
+  'Adepta Sororitas',
+  'Adeptus Custodes',
+  'Adeptus Mechanicus',
+  'Aeldari',
+  'Agents of the Imperium',
+  'Astra Militarum',
+  'Black Templars',
+  'Blood Angels',
+  'Chaos Daemons',
+  'Chaos Knights',
+  'Chaos Space Marines',
+  'Dark Angels',
+  'Death Guard',
+  'Deathwatch',
+  'Drukhari',
+  'Genestealer Cults',
+  'Grey Knights',
+  'Imperial Knights',
+  'Leagues of Votann',
+  'Necrons',
+  'Orks',
+  'Space Wolves',
+  "T'au Empire",
+  'Thousand Sons',
+  'Tyranids',
+  'World Eaters'
+];
 
 /**
  * Get all available generic units (from units.json)

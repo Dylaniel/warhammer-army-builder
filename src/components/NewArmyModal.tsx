@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Unit } from '../types/army';
 import { SUPPORTED_FACTIONS } from '../utils/unitUtils';
+import { FACTION_DETACHMENTS } from '../data/detachments';
 
 interface NewArmyModalProps {
   isOpen: boolean;
@@ -23,7 +24,7 @@ interface NewArmyModalProps {
 export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModalProps) {
   const [formData, setFormData] = useState({
     armyName: '',
-    faction: SUPPORTED_FACTIONS[0],
+    faction: '',
     detachment: '',
     points: 2000,
   });
@@ -38,7 +39,7 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
       otherDatasheets: [],
       alliedUnits: [],
     });
-    setFormData({ armyName: '', faction: SUPPORTED_FACTIONS[0], detachment: '', points: 2000 });
+    setFormData({ armyName: '', faction: '', detachment: '', points: 2000 });
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -65,10 +66,18 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
 
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    if (name === 'faction') {
+      setFormData((prev) => ({
+        ...prev,
+        faction: value,
+        detachment: '',
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
   };
 
   if (!isOpen) return null;
@@ -110,6 +119,7 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
             className="flex-1 px-3 py-2 rounded bg-gray-700 dark:bg-gray-700 bg-gray-100 focus:outline-none focus:ring text-white dark:text-white text-gray-900"
             required
           >
+            <option value="" disabled>Select a Faction...</option>
             {SUPPORTED_FACTIONS.map((faction) => (
               <option key={faction} value={faction}>
                 {faction}
@@ -124,16 +134,22 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
           >
             {'Detachment'}
           </label>
-          <input
+          <select
             id="detachment"
             name="detachment"
-            type="text"
             value={formData.detachment}
-            onChange={handleInputChange}
-            className="flex-1 px-3 py-2 rounded bg-gray-700 dark:bg-gray-700 bg-gray-100 focus:outline-none focus:ring text-white dark:text-white text-gray-900"
-            placeholder="e.g. Firestorm assualt force"
+            onChange={handleSelectChange}
+            className="flex-1 px-3 py-2 rounded bg-gray-700 dark:bg-gray-700 bg-gray-100 focus:outline-none focus:ring text-white dark:text-white text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
             required
-          />
+            disabled={!formData.faction}
+          >
+            <option value="" disabled>Select a Detachment...</option>
+            {formData.faction && FACTION_DETACHMENTS[formData.faction]?.map((det) => (
+              <option key={det} value={det}>
+                {det}
+              </option>
+            ))}
+          </select>
         </div>
         <div className="flex items-center mb-2">
           <label
