@@ -111,6 +111,21 @@ The following items appeared in earlier planning but have been **deliberately sc
 
 ---
 
+## Phase 4 — Ecosystem Expansion & Serialization
+
+> Expansion of faction support, unit hydration, and army list sharing functionality.
+
+- [ ] **4.1 Addition of Remaining Factions**
+  - Introduce barebones, unhydrated JSON structures for all remaining factions matching the current schema standards, establishing the framework files before full asset hydration.
+
+- [ ] **4.2 Full Unit Library Hydration**
+  - Populate the newly added faction files with complete unit rosters, weapon configurations, and scaling point tiers. Reference the baseline implementations built in tasks 2.2 and 3.2 as a code style anchor.
+
+- [ ] **4.3 Army Import / Export via JSON**
+  - Implement list-sharing capabilities. Build a clipboard-copy mechanism for exporting full active states as JSON strings, alongside a text-area input window during army creation to parse and reconstruct lists.
+
+---
+
 ## Parking Lot
 
 Ideas that came up but need more discussion before committing to. + above marks worthy of addition to Phase 4 of primary tasks. Number next to plust indicates recommended sub task number eg. 4.x.:
@@ -120,12 +135,6 @@ Ideas that came up but need more discussion before committing to. + above marks 
   - Enforce standard 10th edition rules: Max 3 of any given datasheet, Max 6 if Battleline or Dedicated Transport.
   - Flag if the army is missing a Character to serve as the Warlord.
   - Display as a soft-warning banner or badge — never a hard block.
-
-+3
-- **Army Import / Export via JSON**
-  - Implement a robust system to share army lists natively.
-  - **Export**: Add a "Copy as JSON file" button on the army card for existing armies. This will export the entire army state (all components, options, quantities) into a clean JSON string copied to the clipboard.
-  - **Import**: When creating a new army, add an "Add via JSON" option. This will open a text box where users can paste the JSON payload to instantly reconstruct the full army list with all options retained.
 
 - **Army Import/Export via JSON Extended Future**
   - Implement source feature that utilizes a future account system to list a source for an army as seperate componenet of description. Pureley username in text.
@@ -138,17 +147,6 @@ Ideas that came up but need more discussion before committing to. + above marks 
   - Give it its own per-category faction filter to handle cross-faction complex detachments.
 - **Multiple detachments**
   - Supporting multiple detachments within a single army list.
-
-+1
-- **Addition of Remaining Factions**
-  - Currently only space marines faction is present. Must introduce all other factions and ensure full space marine implementation.
-  - New factions should be implemented as barebones, no hydration similar to how space marines were initially implemented.
-
-+2
-- **Full Unit Library Hydration**
-  - Currently only space marines are hydrated. Other Factions must recieve their respective units.
-  - Also includes weapon options, rules for unit composition (X min of leader, Y min of subordinate mini's, point cost for different compositions such as Z points for 4 subordinates, but A points for >4 subordinates)
-  - Can refer to tasks 2.2 and 3.2 for reference of implementation for space marines
 
 - **Edition Picker**
   - Major task that would warrant being it's own phase due to complexity of overhaul and implementation.
