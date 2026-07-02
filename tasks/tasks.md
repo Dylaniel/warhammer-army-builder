@@ -111,18 +111,39 @@ The following items appeared in earlier planning but have been **deliberately sc
 
 ---
 
-## Phase 4 — Ecosystem Expansion & Serialization
+## Phase 4 — Ecosystem Expansion & Base Detachments
 
-> Expansion of faction support, unit hydration, and army list sharing functionality.
+> Expansion of faction support, detachment architecture, and unit hydration.
 
 - [ ] **4.1 Addition of Remaining Factions**
-  - Introduce barebones, unhydrated JSON structures for all remaining factions matching the current schema standards, establishing the framework files before full asset hydration.
+  - Introduce barebones, unhydrated JSON structures for all remaining factions matching current repository schema standards, establishing framework files before asset data population.
 
-- [ ] **4.2 Full Unit Library Hydration**
-  - Populate the newly added faction files with complete unit rosters, weapon configurations, and scaling point tiers. Reference the baseline implementations built in tasks 2.2 and 3.2 as a code style anchor.
+- [ ] **4.2 Base Detachment Options UI & Faction Gating**
+  - Hydrate basic detachment naming options per faction. In the army creation UI, the detachment selector dropdown must be disabled (greyed out) until a faction is actively selected. Once selected, dynamically unlock the dropdown populated exclusively with eligible detachment options for that specific faction.
 
-- [ ] **4.3 Army Import / Export via JSON**
-  - Implement list-sharing capabilities. Build a clipboard-copy mechanism for exporting full active states as JSON strings, alongside a text-area input window during army creation to parse and reconstruct lists.
+- [ ] **4.3 Full Unit Library Hydration**
+  - Populate the newly added faction files with complete unit rosters, weapon configurations, and scaling point tiers. Execute this task strictly after base detachment selection architecture is stable to ensure proper data layout alignment.
+
+---
+
+## Phase 5 — Rules Integration & In-Game Battle Mode
+
+> Interactive rule tracking and live tabletop dashboards.
+
+- [ ] **5.1 Detachment Rules, Benefits & Keywords**
+  - Attach target rules engines and static data modifiers to individual detachments. Implement conditional benefits that dynamically track specific unit types or weapon profiles (e.g., granting automated hit/wound bonuses or behavior rules to units carrying flame-based weapons).
+
+- [ ] **5.2 Interactive Battle Mode Dashboard**
+  - Build an optimized, play-focused "Battle Mode" interface for live tabletop usage. This view must aggregate all rule sets, detachments, traits, and abilities associated with the active army list and cleanly filter/display them organized by active game phases (e.g., Command Phase, Movement Phase, Shooting Phase options).
+
+---
+
+## Phase 6 — Data Serialization & Portability
+
+> List sharing and JSON ecosystem integration.
+
+- [ ] **6.1 Army Import / Export via JSON**
+  - Implement robust list-sharing capabilities as the final ecosystem layer. Build a clipboard-copy mechanism for exporting full active states as JSON strings, alongside a text-area input window during army creation to parse and reconstruct lists.
 
 ---
 
