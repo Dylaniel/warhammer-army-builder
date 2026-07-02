@@ -3,6 +3,7 @@ import { Army, Unit } from '../types/army';
 import { createArmyUnit, calculateArmyPoints } from '../utils/unitUtils';
 import { useFactionUnits } from '../hooks/useFactionUnits';
 import EditArmyModal from './EditArmyModal';
+import UnitDetailTab from './UnitDetailTab';
 
 interface ArmyDetailTabProps {
   army: Army;
@@ -14,6 +15,7 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
   const { units: allUnits, loading } = useFactionUnits(army.faction);
 
   const allArmyUnits = [
@@ -147,6 +149,40 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
     setOpenMenuId(null);
   };
 
+  const handleMakeWarlord = (unitId: string, category: string) => {
+    if (category !== 'Characters') return; // Only characters can be warlord
+    const updatedArmy = { ...army };
+    if (updatedArmy.characters) {
+      // remove warlord from all characters
+      updatedArmy.characters = updatedArmy.characters.map((u) => ({ ...u, isWarlord: false }));
+      // assign warlord
+      updatedArmy.characters = updatedArmy.characters.map((u) =>
+        u.id === unitId ? { ...u, isWarlord: true } : u
+      );
+    }
+    onArmyUpdate(updatedArmy);
+    setOpenMenuId(null);
+  };
+
+  const handleUnitUpdate = (updatedUnit: Unit) => {
+    const updatedArmy = { ...army };
+    let found = false;
+    for (const cat of ['characters', 'battleline', 'dedicatedTransports', 'otherDatasheets', 'alliedUnits'] as const) {
+      if (updatedArmy[cat]) {
+        const index = updatedArmy[cat]!.findIndex(u => u.id === updatedUnit.id);
+        if (index !== -1) {
+          updatedArmy[cat]![index] = updatedUnit;
+          found = true;
+          break;
+        }
+      }
+    }
+    if (found) {
+      onArmyUpdate(updatedArmy);
+      setSelectedUnit(updatedUnit);
+    }
+  };
+
   //controls which category is expanded to add available units
   const handleToggleCategory = (category: string) => {
     setExpandedCategory(expandedCategory === category ? null : category);
@@ -164,6 +200,16 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
     'Other Datasheets',
     'Allied Units',
   ];
+
+  if (selectedUnit) {
+    return (
+      <UnitDetailTab
+        unit={selectedUnit}
+        onBack={() => setSelectedUnit(null)}
+        onUpdate={handleUnitUpdate}
+      />
+    );
+  }
 
   return (
     <div className="relative pb-4">
@@ -239,16 +285,32 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
                     {categoryUnits.map((unit) => (
                       <div
                         key={unit.id}
-                        className="relative flex justify-between items-center py-2 px-3 bg-gray-100 dark:bg-gray-600 rounded"
+                        onClick={() => setSelectedUnit(unit)}
+                        className="relative flex justify-between items-center py-3 px-3 bg-gray-100 dark:bg-gray-600 rounded cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-500 transition-colors"
                       >
-                        <span className="font-medium text-white">{unit.name}</span>
+                        <div className="flex flex-col">
+                          <div className="flex items-center">
+                            <span className="font-medium text-gray-900 dark:text-white">{unit.name}</span>
+                            {unit.isWarlord && (
+                              <span className="ml-2 px-1.5 py-0.5 bg-yellow-500 text-yellow-900 text-[10px] font-bold rounded uppercase tracking-wider">
+                                HQ
+                              </span>
+                            )}
+                          </div>
+                          <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                            {unit.quantity || 1}x {unit.name} Models
+                          </span>
+                        </div>
                         <div className="flex items-center">
-                          <span className="text-sm text-gray-300 mr-2">
-                            {unit.totalPoints || unit.basePoints} pts
+                          <span className="text-sm font-bold text-gray-700 dark:text-gray-200 mr-3">
+                            {(unit.totalPoints || unit.basePoints) * (unit.quantity || 1)} pts
                           </span>
                           <button
-                            onClick={() => setOpenMenuId(openMenuId === unit.id ? null : unit.id)}
-                            className="p-1 text-gray-400 hover:text-white transition-colors"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setOpenMenuId(openMenuId === unit.id ? null : unit.id);
+                            }}
+                            className="p-1 text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -270,13 +332,33 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
                               <div className="absolute right-0 top-10 mt-1 w-32 bg-white dark:bg-gray-800 rounded-md shadow-lg z-[50] border border-gray-200 dark:border-gray-700 overflow-hidden">
                                 <div className="py-1 text-sm flex flex-col relative z-50">
                                   <button
-                                    onClick={() => handleDuplicateUnit(unit, category)}
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      handleDuplicateUnit(unit, category);
+                                    }}
                                     className="w-full text-left px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                                   >
                                     Duplicate
                                   </button>
+                                  {category === 'Characters' && (
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (!unit.isWarlord) {
+                                          handleMakeWarlord(unit.id, category);
+                                        }
+                                      }}
+                                      disabled={unit.isWarlord}
+                                      className={`w-full text-left px-4 py-2 ${unit.isWarlord ? 'text-gray-400 dark:text-gray-500 cursor-not-allowed' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
+                                    >
+                                      Make Warlord
+                                    </button>
+                                  )}
                                   <button
-                                    onClick={() => handleDeleteUnit(unit.id, category)}
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      handleDeleteUnit(unit.id, category);
+                                    }}
                                     className="w-full text-left px-4 py-2 text-red-600 hover:bg-gray-100 dark:hover:bg-gray-700"
                                   >
                                     Delete

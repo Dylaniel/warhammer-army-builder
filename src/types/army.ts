@@ -61,6 +61,7 @@ interface Unit {
   selectedOptions?: string[]; // Array of selected option IDs (for army units)
   totalPoints?: number; // Base points + selected options (for army units)
   quantity?: number; // For units that can have multiple models (for army units)
+  isWarlord?: boolean; // Indicates if this unit is the army's Warlord (for army units)
 }
 
 export type { Unit, UnitRole, UnitStats, UnitOption, Weapon };

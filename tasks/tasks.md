@@ -95,7 +95,7 @@ The following items appeared in earlier planning but have been **deliberately sc
 
 > Shift from simple army lists to interactive unit inspection and composition editing.
 
-- [ ] **3.1 Army Roster Cards Enhancement**
+- [x] **3.1 Army Roster Cards Enhancement**
   - Make the unit cards in the army roster vertically taller.
   - Replicate the brief composition display (e.g., `1x Terminator Sergeant \n 4x Terminator`) under the unit name.
   - The entire unit card should be clickable to navigate to the Unit Detail View.
@@ -103,7 +103,7 @@ The following items appeared in earlier planning but have been **deliberately sc
   - For applicaple units of `Character` category, 3-dot menu should have a "make warlord" option. Only one warlord per army, making another character warlord takes it from current warlord. Option should be greyed out in 3-dot menu if a unit is already warlord. 
   - Warlord unit should have a small yellow bookmark tag at top that says "HQ" between name and point cost.
 
-- [ ] **3.2 Dedicated Unit Detail View**
+- [x] **3.2 Dedicated Unit Detail View**
   - Clicking an active unit in the army roster should navigate the user to a dedicated `UnitDetailTab`.
   - Display the locked content area: the unit's stat block (M, T, SV, W, LD, OC), Weapons, and Abilities.
   - Include a "Unit Composition" accordion/section that allows the user to view the models, scale the unit quantity, and see the corresponding points changes (e.g., 5-man vs 10-man squads).
