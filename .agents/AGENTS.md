@@ -183,7 +183,7 @@ You must actively throttle background agent invocation based on workspace safety
 *   **Diminishing Returns Cap:** Even if multiple completely independent tasks are available, cap immediate parallel execution at **3 sub-agents max** to preserve system performance and prevent cognitive overhead during code reviews.
 
 ### 3. Absolute Provider Caps
-When parallel scaling *is* valid and authorized, the total background pool must strictly respect these hard limits:
+When parallel scaling *is* valid and authorized, the total background pool must strictly respect these hard limits. **Note:** These limits apply ONLY to Implementation/Development sub-agents:
 *   **Anthropic Hard Ceiling:** Max **2 active sub-agents** concurrently across any Claude variants.
 *   **Google Hard Ceiling:** Max **5 active sub-agents** concurrently.
 *   **Global Workspace Ceiling:** The total combination of *all* active sub-agents across all providers combined must **never exceed 5**.
@@ -220,3 +220,7 @@ If the QA Sub-Agent detects any failures, errors, or broken visual/state logic d
 Immediately following the second test pass, the multi-agent system must completely freeze background operations and present a comprehensive report to the user. No further automated fixing is allowed without new user prompting. The final output to the user must explicitly include:
 *   **Remaining Failures Summary:** Any issues that the agents could not recognize or failed to fix on the second pass must be surfaced clearly so they can be inspected manually by sentient eyes.
 *   **The Fixes Changelog:** A clear summary of the changes made during the single auto-fix loop, allowing the user to verify the validity of those automated changes before performing a manual check and final Git commit.
+
+### 4. QA Concurrency Limits
+*   **Initial Test Pass (Pass 1) Limit:** The QA sub-agent pool is strictly capped at a maximum of **2 concurrent sub-agents**, regardless of the model provider being used.
+*   **Final Test Pass (Pass 2) Limit:** Following the One-Strike auto-fix loop, the second and final test pass must be executed by **strictly 1 (one) single QA sub-agent**. No parallel execution is allowed during the final verification pass to ensure a completely linear and uncorrupted final log.
