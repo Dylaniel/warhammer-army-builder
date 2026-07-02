@@ -197,3 +197,26 @@ When parallel scaling *is* valid and authorized, the total background pool must 
 *   **Atomic Commits:** Sub-agents must make highly atomic commits focused on single changes, appended with their runtime signature (e.g., `git commit -m "feat: added points validator [Model: Sonnet]"`).
 *   **Orchestrator Review:** Sub-agents must push their completed branches to remote/local stashes and signal the Lead Orchestrator. The Orchestrator (`Gemini 3.1 Pro`) holds the ultimate responsibility for reviewing the code quality, running tests, and safely merging the branches sequentially back into the main development branch. **The Orchestrator must ensure they are updating task tracking lists (e.g., `tasks.md`) to verify task completion as the final step before making their merge commits. The Orchestrator must immediately push its commits to the remote (`git push`) at the end of all merges to ensure changes reflect for the user.**
 *   **Worktree Cleanup:** If utilizing git worktrees for sub-agents, the Orchestrator must ensure they are removed (`git worktree remove`) after the branches are merged to prevent IDE clutter.
+
+## 6. Phase Verification & QA Hand-Off
+
+This protocol enforces a maximum of one self-correction loop per user prompt to prevent infinite token-drain loops and ensure human oversight.
+
+### 1. Initial Test Pass & Changelog Generation
+Whenever an implementation sub-agent completes an initial assignment:
+*   **Generate Changelog:** The Lead Orchestrator compiles a brief, bulleted "Initial Changelog & Test Criteria" summary detailing exactly what UI elements, state changes, or data mutations were built.
+*   **Spawn QA Sub-Agent:** The Orchestrator spawns a dedicated testing agent.
+    *   *Designated QA Model:* `Gemini 3.5 Flash (Medium)` OR `GPT-OSS 120B (Medium)`.
+    *   *Authorization Rule:* **Auto-Approve is STRICTLY EXCLUSIVE to native Google models (e.g., Gemini).** Because `GPT-OSS 120B (Medium)` shares the premium Claude/GPT quota pool, if it (or any other non-Google model) is selected, **explicit manual user authorization is REQUIRED** before spawning. NEVER auto-approve a GPT or Claude model.
+*   **Test Execution:** The QA Sub-Agent uses integrated browser/terminal tools to verify the local development server (e.g., `localhost:3000`), testing the exact items listed in the initial changelog.
+
+### 2. The Single Self-Correction Loop (The "One-Strike" Rule)
+If the QA Sub-Agent detects any failures, errors, or broken visual/state logic during the initial pass, the system is permitted **exactly one** automated fix attempt per user prompt:
+*   **Reroute to Orchestrator (Pass 2):** The QA sub-agent passes the failure logs back to the Lead Orchestrator. The Orchestrator modifies the implementation files exactly *one time* to resolve the specific bugs found.
+*   **Generate Fixes Changelog:** The Orchestrator must generate a dedicated "Fixes Changelog" detailing the exact lines, logic, or components altered during this correction step.
+*   **Final Test Pass:** The Orchestrator hands the project back to the QA Sub-Agent along with an updated summary. The QA Sub-Agent runs its test suite a second time (strictly adhering to the authorization rules outlined in Step 1).
+
+### 3. Absolute Hard Halt & Reporting Gate
+Immediately following the second test pass, the multi-agent system must completely freeze background operations and present a comprehensive report to the user. No further automated fixing is allowed without new user prompting. The final output to the user must explicitly include:
+*   **Remaining Failures Summary:** Any issues that the agents could not recognize or failed to fix on the second pass must be surfaced clearly so they can be inspected manually by sentient eyes.
+*   **The Fixes Changelog:** A clear summary of the changes made during the single auto-fix loop, allowing the user to verify the validity of those automated changes before performing a manual check and final Git commit.
