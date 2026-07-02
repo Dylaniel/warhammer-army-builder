@@ -123,6 +123,10 @@ The following items appeared in earlier planning but have been **deliberately sc
 
 - [ ] **4.3 Full Unit Library Hydration**
   - Populate the newly added faction files with complete unit rosters, weapon configurations, and scaling point tiers. Execute this task strictly after base detachment selection architecture is stable to ensure proper data layout alignment.
+  - **UX Enhancements to incorporate:** 
+    - Ensure weapon sections in the unit viewer have their stats labeled above them inline with the weapons title (e.g., Range, A, S, AP, D).
+    - Ensure unit abilities explicitly state the language of the rules in the viewer.
+    - *Note:* These UX enhancements must also be retroactively applied to the Space Marines units since they were already implemented.
 
 ---
 

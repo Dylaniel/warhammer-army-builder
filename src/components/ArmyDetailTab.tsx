@@ -351,7 +351,7 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
                                       disabled={unit.isWarlord}
                                       className={`w-full text-left px-4 py-2 ${unit.isWarlord ? 'text-gray-400 dark:text-gray-500 cursor-not-allowed' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
                                     >
-                                      Make Warlord
+                                      Make Warlord (HQ)
                                     </button>
                                   )}
                                   <button
