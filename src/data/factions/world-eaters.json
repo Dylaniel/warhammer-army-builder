@@ -1,1 +1,256 @@
-[]
+﻿[
+  {
+    "id": "we-angron",
+    "name": "Angron",
+    "faction": "World Eaters",
+    "role": "HQ",
+    "basePoints": 415,
+    "stats": { "movement": 14, "toughness": 11, "save": "2+", "wounds": 16, "leadership": "5+", "objectiveControl": 6 },
+    "options": [],
+    "weapons": [
+      { "id": "samniarius-and-spinegrinder-strike", "name": "Samni'arius and Spinegrinder (Strike)", "type": "Melee", "range": "Melee", "attacks": 8, "weaponSkill": 2, "strength": 16, "armourPenetration": -4, "damage": "D6+2", "abilities": [] },
+      { "id": "samniarius-and-spinegrinder-sweep", "name": "Samni'arius and Spinegrinder (Sweep)", "type": "Melee", "range": "Melee", "attacks": 18, "weaponSkill": 2, "strength": 8, "armourPenetration": -2, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Reborn in Blood", "description": "[Rules text requires manual verification]" },
+      { "name": "Wrathful Presence", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "we-kharn-the-betrayer",
+    "name": "Kharn the Betrayer",
+    "faction": "World Eaters",
+    "role": "HQ",
+    "basePoints": 100,
+    "stats": { "movement": 6, "toughness": 4, "save": "3+", "wounds": 5, "leadership": "5+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "gorechild", "name": "Gorechild", "type": "Melee", "range": "Melee", "attacks": 8, "weaponSkill": 2, "strength": 6, "armourPenetration": -3, "damage": 3, "abilities": [] },
+      { "id": "plasma-pistol", "name": "Plasma Pistol", "type": "Pistol", "range": 12, "attacks": 1, "ballisticSkill": 2, "strength": 8, "armourPenetration": -3, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "The Betrayer", "description": "[Rules text requires manual verification]" },
+      { "name": "Legendary Killer", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "we-lord-invocatus",
+    "name": "Lord Invocatus",
+    "faction": "World Eaters",
+    "role": "HQ",
+    "basePoints": 140,
+    "stats": { "movement": 12, "toughness": 5, "save": "3+", "wounds": 7, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "bolt-pistol", "name": "Bolt Pistol", "type": "Pistol", "range": 12, "attacks": 1, "ballisticSkill": 2, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "cowards-bane", "name": "Coward's Bane", "type": "Melee", "range": "Melee", "attacks": 7, "weaponSkill": 2, "strength": 6, "armourPenetration": -2, "damage": 2, "abilities": ["Devastating Wounds"] },
+      { "id": "juggernauts-bladed-horn", "name": "Juggernaut's Bladed Horn", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 3, "strength": 6, "armourPenetration": -1, "damage": 2, "abilities": ["Extra Attacks"] }
+    ],
+    "abilities": [
+      { "name": "Road of Eight Bloody Steps", "description": "[Rules text requires manual verification]" },
+      { "name": "Master of the Hunt", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "we-master-of-executions",
+    "name": "World Eaters Master of Executions",
+    "faction": "World Eaters",
+    "role": "HQ",
+    "basePoints": 105,
+    "stats": { "movement": 6, "toughness": 4, "save": "3+", "wounds": 4, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "axe-of-dismemberment", "name": "Axe of Dismemberment", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 2, "strength": 7, "armourPenetration": -2, "damage": 2, "abilities": ["Devastating Wounds", "Precision"] }
+    ],
+    "abilities": [
+      { "name": "Trophy Taker", "description": "[Rules text requires manual verification]" },
+      { "name": "Warp-sighted Butcher", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "we-daemon-prince",
+    "name": "World Eaters Daemon Prince",
+    "faction": "World Eaters",
+    "role": "HQ",
+    "basePoints": 200,
+    "stats": { "movement": 8, "toughness": 10, "save": "2+", "wounds": 10, "leadership": "6+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "infernal-cannon", "name": "Infernal Cannon", "type": "Assault", "range": 24, "attacks": 3, "ballisticSkill": 2, "strength": 5, "armourPenetration": -1, "damage": 2, "abilities": [] },
+      { "id": "hellforged-weapons-strike", "name": "Hellforged Weapons (Strike)", "type": "Melee", "range": "Melee", "attacks": 6, "weaponSkill": 2, "strength": 8, "armourPenetration": -2, "damage": 3, "abilities": [] },
+      { "id": "hellforged-weapons-sweep", "name": "Hellforged Weapons (Sweep)", "type": "Melee", "range": "Melee", "attacks": 14, "weaponSkill": 2, "strength": 6, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Aura of Mutagenic Presence", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D3", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "we-khorne-berzerkers",
+    "name": "Khorne Berzerkers",
+    "faction": "World Eaters",
+    "role": "TROOPS",
+    "basePoints": 100,
+    "stats": { "movement": 6, "toughness": 4, "save": "3+", "wounds": 2, "leadership": "6+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "bolt-pistol", "name": "Bolt Pistol", "type": "Pistol", "range": 12, "attacks": 1, "ballisticSkill": 3, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "berzerker-chainblade", "name": "Berzerker Chainblade", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 3, "strength": 5, "armourPenetration": -1, "damage": 1, "abilities": [] },
+      { "id": "khornate-eviscerator", "name": "Khornate Eviscerator", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 3, "strength": 6, "armourPenetration": -2, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Blood Surge", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "we-jakhals",
+    "name": "Jakhals",
+    "faction": "World Eaters",
+    "role": "TROOPS",
+    "basePoints": 65,
+    "stats": { "movement": 6, "toughness": 3, "save": "6+", "wounds": 1, "leadership": "7+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "autopistol", "name": "Autopistol", "type": "Pistol", "range": 12, "attacks": 1, "ballisticSkill": 4, "strength": 3, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "jakhal-chainblades", "name": "Jakhal Chainblades", "type": "Melee", "range": "Melee", "attacks": 2, "weaponSkill": 4, "strength": 3, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "mauler-chainblade", "name": "Mauler Chainblade", "type": "Melee", "range": "Melee", "attacks": 2, "weaponSkill": 4, "strength": 5, "armourPenetration": -1, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Stimms", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "we-eightbound",
+    "name": "Eightbound",
+    "faction": "World Eaters",
+    "role": "ELITES",
+    "basePoints": 145,
+    "stats": { "movement": 9, "toughness": 5, "save": "3+", "wounds": 3, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "eightbound-eviscerators", "name": "Eightbound Eviscerators", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 3, "strength": 6, "armourPenetration": -2, "damage": 2, "abilities": [] },
+      { "id": "heavy-chainglaive", "name": "Heavy Chainglaive", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 3, "strength": 7, "armourPenetration": -3, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Blood Fury", "description": "[Rules text requires manual verification]" },
+      { "name": "Scouts 6\"", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "we-exalted-eightbound",
+    "name": "Exalted Eightbound",
+    "faction": "World Eaters",
+    "role": "ELITES",
+    "basePoints": 160,
+    "stats": { "movement": 9, "toughness": 5, "save": "3+", "wounds": 3, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "eightbound-chainfist", "name": "Eightbound Chainfist", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 3, "strength": 14, "armourPenetration": -3, "damage": 2, "abilities": ["Anti-Vehicle 3+"] },
+      { "id": "eightbound-eviscerator", "name": "Eightbound Eviscerator", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 3, "strength": 6, "armourPenetration": -2, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Deep Strike", "description": "[Rules text requires manual verification]" },
+      { "name": "Blood Fury", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "we-terminator-squad",
+    "name": "World Eaters Terminator Squad",
+    "faction": "World Eaters",
+    "role": "ELITES",
+    "basePoints": 190,
+    "stats": { "movement": 5, "toughness": 5, "save": "2+", "wounds": 3, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "combi-bolter", "name": "Combi-bolter", "type": "Rapid Fire", "range": 24, "attacks": 2, "ballisticSkill": 3, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": ["Rapid Fire 2"] },
+      { "id": "power-fist", "name": "Power Fist", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 3, "strength": 8, "armourPenetration": -2, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Deep Strike", "description": "[Rules text requires manual verification]" },
+      { "name": "Blood-crazed Killers", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "we-chaos-spawn",
+    "name": "World Eaters Chaos Spawn",
+    "faction": "World Eaters",
+    "role": "FAST_ATTACK",
+    "basePoints": 65,
+    "stats": { "movement": 8, "toughness": 5, "save": "4+", "wounds": 4, "leadership": "8+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "hideous-mutations", "name": "Hideous Mutations", "type": "Melee", "range": "Melee", "attacks": "D6", "weaponSkill": 4, "strength": 5, "armourPenetration": -1, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Fearsome", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "we-helbrute",
+    "name": "World Eaters Helbrute",
+    "faction": "World Eaters",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 130,
+    "stats": { "movement": 6, "toughness": 9, "save": "2+", "wounds": 8, "leadership": "6+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "multi-melta", "name": "Multi-melta", "type": "Heavy", "range": 18, "attacks": 2, "ballisticSkill": 3, "strength": 9, "armourPenetration": -4, "damage": "D6", "abilities": ["Melta 2"] },
+      { "id": "helbrute-fist", "name": "Helbrute Fist", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 3, "strength": 12, "armourPenetration": -2, "damage": 3, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Frenzy", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise 1", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "we-forgefiend",
+    "name": "World Eaters Forgefiend",
+    "faction": "World Eaters",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 145,
+    "stats": { "movement": 8, "toughness": 10, "save": "3+", "wounds": 12, "leadership": "6+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "ectoplasma-cannon", "name": "Ectoplasma Cannon", "type": "Heavy", "range": 36, "attacks": "D3", "ballisticSkill": 3, "strength": 10, "armourPenetration": -3, "damage": 3, "abilities": ["Blast"] },
+      { "id": "forgefiend-jaws", "name": "Forgefiend Jaws", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 3, "strength": 7, "armourPenetration": 0, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Daemonic Machine Spirit", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D3", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "we-maulerfiend",
+    "name": "World Eaters Maulerfiend",
+    "faction": "World Eaters",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 140,
+    "stats": { "movement": 10, "toughness": 10, "save": "3+", "wounds": 12, "leadership": "6+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "maulerfiend-fists", "name": "Maulerfiend Fists", "type": "Melee", "range": "Melee", "attacks": 6, "weaponSkill": 3, "strength": 12, "armourPenetration": -2, "damage": 3, "abilities": [] },
+      { "id": "magma-cutters", "name": "Magma Cutters", "type": "Melee", "range": "Melee", "attacks": 2, "weaponSkill": 3, "strength": 7, "armourPenetration": -3, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Siege Crawler", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D3", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "we-rhino",
+    "name": "World Eaters Rhino",
+    "faction": "World Eaters",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 75,
+    "stats": { "movement": 12, "toughness": 9, "save": "3+", "wounds": 10, "leadership": "6+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "combi-bolter", "name": "Combi-bolter", "type": "Rapid Fire", "range": 24, "attacks": 2, "ballisticSkill": 3, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": ["Rapid Fire 2"] }
+    ],
+    "abilities": [
+      { "name": "Transport", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D3", "description": "[Rules text requires manual verification]" }
+    ]
+  }
+]
