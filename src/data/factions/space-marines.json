@@ -60,6 +60,22 @@
         "name": "Incendiary Terror",
         "description": "[Rules text requires manual verification]"
       }
+    ],
+    "detachmentBonuses": [
+      {
+        "validationKeys": [
+          "Gladius Task Force"
+        ],
+        "name": "Combat Doctrines",
+        "description": "[Detachment rule text requires manual verification]",
+        "phase": [
+          "Command",
+          "Movement",
+          "Shooting",
+          "Charge",
+          "Fight"
+        ]
+      }
     ]
   },
   {
@@ -383,6 +399,22 @@
       {
         "name": "Objective Secured",
         "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "detachmentBonuses": [
+      {
+        "validationKeys": [
+          "Gladius Task Force"
+        ],
+        "name": "Combat Doctrines",
+        "description": "[Detachment rule text requires manual verification]",
+        "phase": [
+          "Command",
+          "Movement",
+          "Shooting",
+          "Charge",
+          "Fight"
+        ]
       }
     ]
   },

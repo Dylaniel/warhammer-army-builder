@@ -1,3 +1,12 @@
+export type GamePhase = 'Command' | 'Movement' | 'Shooting' | 'Charge' | 'Fight';
+
+export interface DetachmentBonus {
+  validationKeys: string[];
+  name: string;
+  description: string;
+  phase: GamePhase[];
+}
+
 export interface Army {
   armyName: string;
   faction: string;
@@ -37,6 +46,7 @@ interface Weapon {
   armourPenetration: number;
   damage: number | string; // Can be "D3", "D6", etc.
   abilities: string[];
+  detachmentBonuses?: DetachmentBonus[];
 }
 
 type UnitRole =
@@ -57,7 +67,8 @@ interface Unit {
   stats: UnitStats;
   options: UnitOption[];
   weapons: Weapon[];
-  abilities: (string | { name: string; description: string })[];
+  abilities: (string | { name: string; description: string; phase?: GamePhase[] })[];
+  detachmentBonuses?: DetachmentBonus[];
   selectedOptions?: string[]; // Array of selected option IDs (for army units)
   totalPoints?: number; // Base points + selected options (for army units)
   quantity?: number; // For units that can have multiple models (for army units)
