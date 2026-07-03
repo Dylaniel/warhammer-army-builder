@@ -1,1 +1,792 @@
-[]
+﻿[
+  {
+    "id": "ik-knight-castellan",
+    "name": "Knight Castellan",
+    "faction": "Imperial Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 525,
+    "stats": { "movement": 10, "toughness": 13, "save": "3+", "wounds": 24, "leadership": "6+", "objectiveControl": 10 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "volcano-lance",
+        "name": "Volcano lance",
+        "type": "Heavy",
+        "range": 72,
+        "attacks": "D3",
+        "ballisticSkill": 3,
+        "strength": 18,
+        "armourPenetration": -5,
+        "damage": "D6+8",
+        "abilities": ["Blast"]
+      },
+      {
+        "id": "plasma-decimator",
+        "name": "Plasma decimator",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": "2D6",
+        "ballisticSkill": 3,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": ["Blast"]
+      },
+      {
+        "id": "titanic-feet",
+        "name": "Titanic feet",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 8,
+        "armourPenetration": 0,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Code Chivalric", "description": "[Rules text requires manual verification]" },
+      { "name": "Super-heavy Walker", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6+2", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 5+ (Ranged)", "description": "[Rules text requires manual verification]" },
+      { "name": "Bondsman Ability", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ik-knight-valiant",
+    "name": "Knight Valiant",
+    "faction": "Imperial Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 530,
+    "stats": { "movement": 10, "toughness": 13, "save": "3+", "wounds": 24, "leadership": "6+", "objectiveControl": 10 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "conflagration-cannon",
+        "name": "Conflagration cannon",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": "3D6",
+        "ballisticSkill": 3,
+        "strength": 7,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": ["Ignores Cover", "Torrent"]
+      },
+      {
+        "id": "thundercoil-harpoon",
+        "name": "Thundercoil harpoon",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 24,
+        "armourPenetration": -6,
+        "damage": 12,
+        "abilities": ["Anti-Monster 4+", "Anti-Vehicle 4+", "Devastating Wounds"]
+      },
+      {
+        "id": "titanic-feet",
+        "name": "Titanic feet",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 8,
+        "armourPenetration": 0,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Code Chivalric", "description": "[Rules text requires manual verification]" },
+      { "name": "Super-heavy Walker", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6+2", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 5+ (Ranged)", "description": "[Rules text requires manual verification]" },
+      { "name": "Bondsman Ability", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ik-knight-crusader",
+    "name": "Knight Crusader",
+    "faction": "Imperial Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 445,
+    "stats": { "movement": 10, "toughness": 12, "save": "3+", "wounds": 22, "leadership": "6+", "objectiveControl": 10 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "avenger-gatling-cannon",
+        "name": "Avenger gatling cannon",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 18,
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "thermal-cannon",
+        "name": "Thermal cannon",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": "2D3",
+        "ballisticSkill": 3,
+        "strength": 12,
+        "armourPenetration": -4,
+        "damage": "D6",
+        "abilities": ["Blast", "Melta 2"]
+      },
+      {
+        "id": "titanic-feet",
+        "name": "Titanic feet",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 8,
+        "armourPenetration": 0,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Code Chivalric", "description": "[Rules text requires manual verification]" },
+      { "name": "Super-heavy Walker", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 5+ (Ranged)", "description": "[Rules text requires manual verification]" },
+      { "name": "Bondsman Ability", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ik-knight-errant",
+    "name": "Knight Errant",
+    "faction": "Imperial Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 405,
+    "stats": { "movement": 10, "toughness": 12, "save": "3+", "wounds": 22, "leadership": "6+", "objectiveControl": 10 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "thermal-cannon",
+        "name": "Thermal cannon",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": "2D3",
+        "ballisticSkill": 3,
+        "strength": 12,
+        "armourPenetration": -4,
+        "damage": "D6",
+        "abilities": ["Blast", "Melta 2"]
+      },
+      {
+        "id": "reaper-chainsword-strike",
+        "name": "Reaper chainsword - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 14,
+        "armourPenetration": -4,
+        "damage": 6,
+        "abilities": []
+      },
+      {
+        "id": "reaper-chainsword-sweep",
+        "name": "Reaper chainsword - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 12,
+        "weaponSkill": 3,
+        "strength": 9,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Code Chivalric", "description": "[Rules text requires manual verification]" },
+      { "name": "Super-heavy Walker", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 5+ (Ranged)", "description": "[Rules text requires manual verification]" },
+      { "name": "Bondsman Ability", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ik-knight-gallant",
+    "name": "Knight Gallant",
+    "faction": "Imperial Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 400,
+    "stats": { "movement": 12, "toughness": 12, "save": "3+", "wounds": 22, "leadership": "6+", "objectiveControl": 10 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "reaper-chainsword-strike",
+        "name": "Reaper chainsword - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 14,
+        "armourPenetration": -4,
+        "damage": 6,
+        "abilities": []
+      },
+      {
+        "id": "reaper-chainsword-sweep",
+        "name": "Reaper chainsword - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 18,
+        "weaponSkill": 2,
+        "strength": 9,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "thunderstrike-gauntlet-strike",
+        "name": "Thunderstrike gauntlet - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 20,
+        "armourPenetration": -3,
+        "damage": 8,
+        "abilities": []
+      },
+      {
+        "id": "thunderstrike-gauntlet-sweep",
+        "name": "Thunderstrike gauntlet - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 10,
+        "weaponSkill": 2,
+        "strength": 10,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Code Chivalric", "description": "[Rules text requires manual verification]" },
+      { "name": "Super-heavy Walker", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 5+ (Ranged)", "description": "[Rules text requires manual verification]" },
+      { "name": "Bondsman Ability", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ik-knight-paladin",
+    "name": "Knight Paladin",
+    "faction": "Imperial Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 425,
+    "stats": { "movement": 10, "toughness": 12, "save": "3+", "wounds": 22, "leadership": "6+", "objectiveControl": 10 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "rapid-fire-battle-cannon",
+        "name": "Rapid-fire battle cannon",
+        "type": "Heavy",
+        "range": 72,
+        "attacks": "2D6",
+        "ballisticSkill": 3,
+        "strength": 10,
+        "armourPenetration": -1,
+        "damage": 3,
+        "abilities": ["Blast"]
+      },
+      {
+        "id": "reaper-chainsword-strike",
+        "name": "Reaper chainsword - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 14,
+        "armourPenetration": -4,
+        "damage": 6,
+        "abilities": []
+      },
+      {
+        "id": "reaper-chainsword-sweep",
+        "name": "Reaper chainsword - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 12,
+        "weaponSkill": 3,
+        "strength": 9,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Code Chivalric", "description": "[Rules text requires manual verification]" },
+      { "name": "Super-heavy Walker", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 5+ (Ranged)", "description": "[Rules text requires manual verification]" },
+      { "name": "Bondsman Ability", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ik-knight-warden",
+    "name": "Knight Warden",
+    "faction": "Imperial Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 450,
+    "stats": { "movement": 10, "toughness": 12, "save": "3+", "wounds": 22, "leadership": "6+", "objectiveControl": 10 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "avenger-gatling-cannon",
+        "name": "Avenger gatling cannon",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 18,
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "thunderstrike-gauntlet-strike",
+        "name": "Thunderstrike gauntlet - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 20,
+        "armourPenetration": -3,
+        "damage": 8,
+        "abilities": []
+      },
+      {
+        "id": "thunderstrike-gauntlet-sweep",
+        "name": "Thunderstrike gauntlet - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 8,
+        "weaponSkill": 3,
+        "strength": 10,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Code Chivalric", "description": "[Rules text requires manual verification]" },
+      { "name": "Super-heavy Walker", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 5+ (Ranged)", "description": "[Rules text requires manual verification]" },
+      { "name": "Bondsman Ability", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ik-knight-preceptor",
+    "name": "Knight Preceptor",
+    "faction": "Imperial Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 405,
+    "stats": { "movement": 10, "toughness": 12, "save": "3+", "wounds": 22, "leadership": "6+", "objectiveControl": 10 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "las-impulsor",
+        "name": "Las-impulsor",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 14,
+        "armourPenetration": -3,
+        "damage": 4,
+        "abilities": ["Blast"]
+      },
+      {
+        "id": "reaper-chainsword-strike",
+        "name": "Reaper chainsword - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 14,
+        "armourPenetration": -4,
+        "damage": 6,
+        "abilities": []
+      },
+      {
+        "id": "reaper-chainsword-sweep",
+        "name": "Reaper chainsword - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 12,
+        "weaponSkill": 3,
+        "strength": 9,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Code Chivalric", "description": "[Rules text requires manual verification]" },
+      { "name": "Super-heavy Walker", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 5+ (Ranged)", "description": "[Rules text requires manual verification]" },
+      { "name": "Bondsman Ability", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ik-canis-rex",
+    "name": "Canis Rex",
+    "faction": "Imperial Knights",
+    "role": "HQ",
+    "basePoints": 435,
+    "stats": { "movement": 10, "toughness": 12, "save": "3+", "wounds": 22, "leadership": "5+", "objectiveControl": 10 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "las-impulsor",
+        "name": "Las-impulsor",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": "D6",
+        "ballisticSkill": 2,
+        "strength": 14,
+        "armourPenetration": -3,
+        "damage": 4,
+        "abilities": ["Blast", "Sustained Hits 1"]
+      },
+      {
+        "id": "freedoms-hand-strike",
+        "name": "Freedom's Hand - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 20,
+        "armourPenetration": -3,
+        "damage": 9,
+        "abilities": []
+      },
+      {
+        "id": "freedoms-hand-sweep",
+        "name": "Freedom's Hand - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 10,
+        "weaponSkill": 2,
+        "strength": 10,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Code Chivalric", "description": "[Rules text requires manual verification]" },
+      { "name": "Super-heavy Walker", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 5+ (Ranged)", "description": "[Rules text requires manual verification]" },
+      { "name": "Sir Hekhtur", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ik-armiger-helverin",
+    "name": "Armiger Helverin",
+    "faction": "Imperial Knights",
+    "role": "TROOPS",
+    "basePoints": 140,
+    "stats": { "movement": 12, "toughness": 10, "save": "3+", "wounds": 12, "leadership": "7+", "objectiveControl": 8 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "armiger-autocannon",
+        "name": "Armiger autocannon",
+        "type": "Heavy",
+        "range": 60,
+        "attacks": 4,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": -1,
+        "damage": 3,
+        "abilities": ["Anti-Fly 2+"]
+      },
+      {
+        "id": "armoured-feet",
+        "name": "Armoured feet",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Code Chivalric", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D3", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 5+ (Ranged)", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ik-armiger-warglaive",
+    "name": "Armiger Warglaive",
+    "faction": "Imperial Knights",
+    "role": "TROOPS",
+    "basePoints": 150,
+    "stats": { "movement": 12, "toughness": 10, "save": "3+", "wounds": 12, "leadership": "7+", "objectiveControl": 8 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "thermal-spear",
+        "name": "Thermal spear",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 12,
+        "armourPenetration": -4,
+        "damage": "D6",
+        "abilities": ["Melta 4"]
+      },
+      {
+        "id": "reaper-chain-cleaver-strike",
+        "name": "Reaper chain-cleaver - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 10,
+        "armourPenetration": -3,
+        "damage": 3,
+        "abilities": []
+      },
+      {
+        "id": "reaper-chain-cleaver-sweep",
+        "name": "Reaper chain-cleaver - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 8,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Code Chivalric", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D3", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 5+ (Ranged)", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ik-cerastus-knight-lancer",
+    "name": "Cerastus Knight Lancer",
+    "faction": "Imperial Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 465,
+    "stats": { "movement": 14, "toughness": 12, "save": "3+", "wounds": 25, "leadership": "6+", "objectiveControl": 10 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "cerastus-shock-lance",
+        "name": "Cerastus shock lance",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 6,
+        "ballisticSkill": 3,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": ["Assault"]
+      },
+      {
+        "id": "cerastus-shock-lance-strike",
+        "name": "Cerastus shock lance - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 20,
+        "armourPenetration": -3,
+        "damage": 8,
+        "abilities": ["Extra Attacks", "Lance"]
+      },
+      {
+        "id": "cerastus-shock-lance-sweep",
+        "name": "Cerastus shock lance - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 10,
+        "weaponSkill": 2,
+        "strength": 10,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": ["Extra Attacks"]
+      }
+    ],
+    "abilities": [
+      { "name": "Code Chivalric", "description": "[Rules text requires manual verification]" },
+      { "name": "Super-heavy Walker", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 4+", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ik-cerastus-knight-castigator",
+    "name": "Cerastus Knight Castigator",
+    "faction": "Imperial Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 465,
+    "stats": { "movement": 12, "toughness": 12, "save": "3+", "wounds": 25, "leadership": "6+", "objectiveControl": 10 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "castigator-bolt-cannon",
+        "name": "Castigator bolt cannon",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 18,
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": ["Sustained Hits 1", "Twin-linked"]
+      },
+      {
+        "id": "tempest-warblade-strike",
+        "name": "Tempest warblade - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 14,
+        "armourPenetration": -3,
+        "damage": 6,
+        "abilities": []
+      },
+      {
+        "id": "tempest-warblade-sweep",
+        "name": "Tempest warblade - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 12,
+        "weaponSkill": 3,
+        "strength": 9,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Code Chivalric", "description": "[Rules text requires manual verification]" },
+      { "name": "Super-heavy Walker", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 5+ (Ranged)", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ik-cerastus-knight-acheron",
+    "name": "Cerastus Knight Acheron",
+    "faction": "Imperial Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 425,
+    "stats": { "movement": 14, "toughness": 12, "save": "3+", "wounds": 25, "leadership": "6+", "objectiveControl": 10 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "acheron-flame-cannon",
+        "name": "Acheron flame cannon",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": "2D6",
+        "ballisticSkill": 3,
+        "strength": 8,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": ["Ignores Cover", "Torrent"]
+      },
+      {
+        "id": "reaper-chainfist-strike",
+        "name": "Reaper chainfist - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 14,
+        "armourPenetration": -4,
+        "damage": 6,
+        "abilities": []
+      },
+      {
+        "id": "reaper-chainfist-sweep",
+        "name": "Reaper chainfist - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 12,
+        "weaponSkill": 3,
+        "strength": 9,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Code Chivalric", "description": "[Rules text requires manual verification]" },
+      { "name": "Super-heavy Walker", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 5+ (Ranged)", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ik-acastus-knight-porphyrion",
+    "name": "Acastus Knight Porphyrion",
+    "faction": "Imperial Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 715,
+    "stats": { "movement": 8, "toughness": 13, "save": "2+", "wounds": 30, "leadership": "6+", "objectiveControl": 12 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "twin-magna-lascannon",
+        "name": "Twin magna lascannon",
+        "type": "Heavy",
+        "range": 72,
+        "attacks": "D3",
+        "ballisticSkill": 3,
+        "strength": 18,
+        "armourPenetration": -4,
+        "damage": "D6+6",
+        "abilities": ["Blast", "Twin-linked"]
+      },
+      {
+        "id": "titanic-feet",
+        "name": "Titanic feet",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 8,
+        "armourPenetration": 0,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Code Chivalric", "description": "[Rules text requires manual verification]" },
+      { "name": "Super-heavy Walker", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise 2D6", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 5+ (Ranged)", "description": "[Rules text requires manual verification]" }
+    ]
+  }
+]
