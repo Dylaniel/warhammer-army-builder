@@ -134,10 +134,10 @@ The following items appeared in earlier planning but have been **deliberately sc
 
 > Interactive rule tracking and live tabletop dashboards.
 
-- [ ] **5.1 Detachment Rules, Benefits & Keywords**
+- [x] **5.1 Detachment Rules, Benefits & Keywords**
   - Attach target rules engines and static data modifiers to individual detachments. Implement conditional benefits that dynamically track specific unit types or weapon profiles (e.g., granting automated hit/wound bonuses or behavior rules to units carrying flame-based weapons).
 
-- [ ] **5.2 Interactive Battle Mode Dashboard**
+- [x] **5.2 Interactive Battle Mode Dashboard**
   - Build an optimized, play-focused "Battle Mode" interface for live tabletop usage. This view must aggregate all rule sets, detachments, traits, and abilities associated with the active army list and cleanly filter/display them organized by active game phases (e.g., Command Phase, Movement Phase, Shooting Phase options).
 
 ---
