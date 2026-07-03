@@ -1,1 +1,944 @@
-[]
+[
+  {
+    "id": "ac-trajann-valoris",
+    "name": "Trajann Valoris",
+    "faction": "Adeptus Custodes",
+    "role": "HQ",
+    "basePoints": 150,
+    "stats": {
+      "movement": 6,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 7,
+      "leadership": "5+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "watchers-axe-ranged",
+        "name": "Watcher's Axe (Ranged)",
+        "type": "Assault",
+        "range": 12,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "watchers-axe-melee",
+        "name": "Watcher's Axe (Melee)",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 10,
+        "armourPenetration": -3,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Feel No Pain",
+        "description": "5+"
+      },
+      {
+        "name": "Captain-General",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Moment Shackle",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ac-blade-champion",
+    "name": "Blade Champion",
+    "faction": "Adeptus Custodes",
+    "role": "HQ",
+    "basePoints": 110,
+    "stats": {
+      "movement": 6,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 6,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "vaultswords-behemor",
+        "name": "Vaultswords - Behemor",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 7,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Precision"
+        ]
+      },
+      {
+        "id": "vaultswords-victor",
+        "name": "Vaultswords - Victor",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Sustained Hits 1"
+        ]
+      },
+      {
+        "id": "vaultswords-huris",
+        "name": "Vaultswords - Huris",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 9,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Legacy of Combat",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ac-shield-captain",
+    "name": "Shield-Captain",
+    "faction": "Adeptus Custodes",
+    "role": "HQ",
+    "basePoints": 140,
+    "stats": {
+      "movement": 6,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 6,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "guardian-spear",
+        "name": "Guardian Spear",
+        "points": 0
+      },
+      {
+        "id": "castellan-axe",
+        "name": "Castellan Axe",
+        "points": 0
+      },
+      {
+        "id": "sentinel-blade-and-praesidium-shield",
+        "name": "Sentinel Blade & Praesidium Shield",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "guardian-spear",
+        "name": "Guardian Spear",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 7,
+        "weaponSkill": 2,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Strategic Mastery",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ac-shield-captain-allarus",
+    "name": "Shield-Captain in Allarus Terminator Armour",
+    "faction": "Adeptus Custodes",
+    "role": "HQ",
+    "basePoints": 140,
+    "stats": {
+      "movement": 5,
+      "toughness": 7,
+      "save": "2+",
+      "wounds": 7,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "guardian-spear",
+        "name": "Guardian Spear",
+        "points": 0
+      },
+      {
+        "id": "castellan-axe",
+        "name": "Castellan Axe",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "castellan-axe",
+        "name": "Castellan Axe",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 9,
+        "armourPenetration": -1,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "From Golden Light",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ac-shield-captain-dawneagle",
+    "name": "Shield-Captain on Dawneagle Jetbike",
+    "faction": "Adeptus Custodes",
+    "role": "HQ",
+    "basePoints": 140,
+    "stats": {
+      "movement": 12,
+      "toughness": 6,
+      "save": "2+",
+      "wounds": 7,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "salvo-launcher",
+        "name": "Salvo Launcher",
+        "points": 0
+      },
+      {
+        "id": "hurricane-bolter",
+        "name": "Hurricane Bolter",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "interceptor-lance",
+        "name": "Interceptor Lance",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Lance"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Sweeping Advance",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ac-custodian-guard",
+    "name": "Custodian Guard",
+    "faction": "Adeptus Custodes",
+    "role": "BATTLELINE",
+    "basePoints": 180,
+    "stats": {
+      "movement": 6,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "guardian-spear",
+        "name": "Guardian Spear",
+        "points": 0
+      },
+      {
+        "id": "sentinel-blade-and-praesidium-shield",
+        "name": "Sentinel Blade & Praesidium Shield",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "guardian-spear-melee",
+        "name": "Guardian Spear (Melee)",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Stand Firm",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ac-custodian-wardens",
+    "name": "Custodian Wardens",
+    "faction": "Adeptus Custodes",
+    "role": "ELITES",
+    "basePoints": 200,
+    "stats": {
+      "movement": 6,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "guardian-spear",
+        "name": "Guardian Spear",
+        "points": 0
+      },
+      {
+        "id": "castellan-axe",
+        "name": "Castellan Axe",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "castellan-axe",
+        "name": "Castellan Axe",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 9,
+        "armourPenetration": -1,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Resolute Oath",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Living Fortress",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ac-allarus-custodians",
+    "name": "Allarus Custodians",
+    "faction": "Adeptus Custodes",
+    "role": "ELITES",
+    "basePoints": 130,
+    "stats": {
+      "movement": 5,
+      "toughness": 7,
+      "save": "2+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "guardian-spear",
+        "name": "Guardian Spear",
+        "points": 0
+      },
+      {
+        "id": "castellan-axe",
+        "name": "Castellan Axe",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "balistus-grenade-launcher",
+        "name": "Balistus Grenade Launcher",
+        "type": "Assault",
+        "range": 18,
+        "attacks": "D3",
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Blast"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Slayers of Tyrants",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ac-vertus-praetors",
+    "name": "Vertus Praetors",
+    "faction": "Adeptus Custodes",
+    "role": "FAST_ATTACK",
+    "basePoints": 225,
+    "stats": {
+      "movement": 12,
+      "toughness": 6,
+      "save": "2+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "salvo-launcher",
+        "name": "Salvo Launcher",
+        "points": 0
+      },
+      {
+        "id": "hurricane-bolter",
+        "name": "Hurricane Bolter",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "salvo-launcher",
+        "name": "Salvo Launcher",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 9,
+        "armourPenetration": -3,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "interceptor-lance",
+        "name": "Interceptor Lance",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Lance"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Quicksilver Execution",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ac-venerable-contemptor",
+    "name": "Venerable Contemptor Dreadnought",
+    "faction": "Adeptus Custodes",
+    "role": "ELITES",
+    "basePoints": 170,
+    "stats": {
+      "movement": 6,
+      "toughness": 9,
+      "save": "2+",
+      "wounds": 10,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [
+      {
+        "id": "multi-melta",
+        "name": "Multi-melta",
+        "points": 0
+      },
+      {
+        "id": "assault-cannon",
+        "name": "Assault Cannon",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "multi-melta",
+        "name": "Multi-melta",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 9,
+        "armourPenetration": -4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "contemptor-combat-weapon",
+        "name": "Contemptor Combat Weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 12,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Deadly Demise",
+        "description": "D3"
+      },
+      {
+        "name": "Unyielding Ancient",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ac-venerable-land-raider",
+    "name": "Venerable Land Raider",
+    "faction": "Adeptus Custodes",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 240,
+    "stats": {
+      "movement": 10,
+      "toughness": 12,
+      "save": "2+",
+      "wounds": 16,
+      "leadership": "6+",
+      "objectiveControl": 5
+    },
+    "options": [
+      {
+        "id": "hunter-killer-missile",
+        "name": "Hunter-killer Missile",
+        "points": 0
+      },
+      {
+        "id": "storm-bolter",
+        "name": "Storm Bolter",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "godhammer-lascannon",
+        "name": "Godhammer Lascannon",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 12,
+        "armourPenetration": -3,
+        "damage": "D6+1",
+        "abilities": []
+      },
+      {
+        "id": "twin-heavy-bolter",
+        "name": "Twin Heavy Bolter",
+        "type": "Sustained Hits 1",
+        "range": 36,
+        "attacks": 3,
+        "ballisticSkill": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Twin-linked"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deadly Demise",
+        "description": "D6"
+      },
+      {
+        "name": "Assault Ramp",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ac-prosecutors",
+    "name": "Prosecutors",
+    "faction": "Adeptus Custodes",
+    "role": "BATTLELINE",
+    "basePoints": 40,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "boltgun",
+        "name": "Boltgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Feel No Pain",
+        "description": "3+ against Psychic Attacks"
+      },
+      {
+        "name": "Daughters of the Abyss",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Purity of Execution",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ac-vigilators",
+    "name": "Vigilators",
+    "faction": "Adeptus Custodes",
+    "role": "ELITES",
+    "basePoints": 50,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "executioner-greatblade",
+        "name": "Executioner Greatblade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Feel No Pain",
+        "description": "3+ against Psychic Attacks"
+      },
+      {
+        "name": "Daughters of the Abyss",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Creeping Dread",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ac-witchseekers",
+    "name": "Witchseekers",
+    "faction": "Adeptus Custodes",
+    "role": "FAST_ATTACK",
+    "basePoints": 50,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "witchseeker-flamer",
+        "name": "Witchseeker Flamer",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Torrent",
+          "Ignores Cover"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Feel No Pain",
+        "description": "3+ against Psychic Attacks"
+      },
+      {
+        "name": "Daughters of the Abyss",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Sanctified Promethium",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ac-aleya",
+    "name": "Aleya",
+    "faction": "Adeptus Custodes",
+    "role": "HQ",
+    "basePoints": 75,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "somnus",
+        "name": "Somnus",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Feel No Pain",
+        "description": "3+ against Psychic Attacks"
+      },
+      {
+        "name": "Daughters of the Abyss",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Fierce Animosity",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ac-knight-centura",
+    "name": "Knight-Centura",
+    "faction": "Adeptus Custodes",
+    "role": "HQ",
+    "basePoints": 70,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "executioner-greatblade",
+        "name": "Executioner Greatblade",
+        "points": 0
+      },
+      {
+        "id": "master-crafted-boltgun",
+        "name": "Master-crafted Boltgun",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "executioner-greatblade",
+        "name": "Executioner Greatblade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Feel No Pain",
+        "description": "3+ against Psychic Attacks"
+      },
+      {
+        "name": "Daughters of the Abyss",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Pursuit of the Unclean",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ac-anathema-psykana-rhino",
+    "name": "Anathema Psykana Rhino",
+    "faction": "Adeptus Custodes",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 75,
+    "stats": {
+      "movement": 12,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 10,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "hunter-killer-missile",
+        "name": "Hunter-killer Missile",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm Bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deadly Demise",
+        "description": "D3"
+      },
+      {
+        "name": "Self-repair",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  }
+]
