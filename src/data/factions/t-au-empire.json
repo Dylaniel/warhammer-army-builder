@@ -1,1 +1,265 @@
-[]
+﻿[
+  {
+    "id": "tau-commander-farsight",
+    "name": "Commander Farsight",
+    "faction": "T'au Empire",
+    "role": "HQ",
+    "basePoints": 90,
+    "stats": { "movement": 10, "toughness": 5, "save": "3+", "wounds": 6, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "high-intensity-plasma-rifle", "name": "High-intensity Plasma Rifle", "type": "Rapid Fire", "range": 24, "attacks": 1, "ballisticSkill": 2, "strength": 8, "armourPenetration": -3, "damage": 3, "abilities": ["Rapid Fire 1"] },
+      { "id": "dawn-blade", "name": "Dawn Blade", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 2, "strength": 8, "armourPenetration": -3, "damage": 3, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Way of the Short Blade", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tau-commander-shadowsun",
+    "name": "Commander Shadowsun",
+    "faction": "T'au Empire",
+    "role": "HQ",
+    "basePoints": 100,
+    "stats": { "movement": 10, "toughness": 4, "save": "3+", "wounds": 6, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "high-energy-fusion-blaster", "name": "High-energy Fusion Blaster", "type": "Assault", "range": 18, "attacks": 2, "ballisticSkill": 2, "strength": 9, "armourPenetration": -4, "damage": "D6", "abilities": ["Melta 2"] },
+      { "id": "light-missile-pod", "name": "Light Missile Pod", "type": "Assault", "range": 24, "attacks": 2, "ballisticSkill": 2, "strength": 7, "armourPenetration": -1, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Genius of Kauyon", "description": "[Rules text requires manual verification]" },
+      { "name": "Defender of the Greater Good", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tau-cadre-fireblade",
+    "name": "Cadre Fireblade",
+    "faction": "T'au Empire",
+    "role": "HQ",
+    "basePoints": 40,
+    "stats": { "movement": 6, "toughness": 3, "save": "4+", "wounds": 3, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "fireblade-pulse-rifle", "name": "Fireblade Pulse Rifle", "type": "Rapid Fire", "range": 30, "attacks": 2, "ballisticSkill": 3, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": ["Rapid Fire 1"] },
+      { "id": "close-combat-weapon", "name": "Close Combat Weapon", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 5, "strength": 3, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Volley Fire", "description": "[Rules text requires manual verification]" },
+      { "name": "Crack Shot", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tau-ethereal",
+    "name": "Ethereal",
+    "faction": "T'au Empire",
+    "role": "HQ",
+    "basePoints": 50,
+    "stats": { "movement": 6, "toughness": 3, "save": "5+", "wounds": 4, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "honour-stave", "name": "Honour Stave", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 4, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Wisdom of the Guides", "description": "[Rules text requires manual verification]" },
+      { "name": "Failure Is Not An Option", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tau-commander-crisis",
+    "name": "Commander in Crisis Battlesuit",
+    "faction": "T'au Empire",
+    "role": "HQ",
+    "basePoints": 90,
+    "stats": { "movement": 10, "toughness": 5, "save": "3+", "wounds": 6, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "burst-cannon", "name": "Burst Cannon", "type": "Assault", "range": 18, "attacks": 4, "ballisticSkill": 2, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "battlesuit-fists", "name": "Battlesuit Fists", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 5, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Tactical Acumen", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tau-strike-team",
+    "name": "Strike Team",
+    "faction": "T'au Empire",
+    "role": "TROOPS",
+    "basePoints": 80,
+    "stats": { "movement": 6, "toughness": 3, "save": "4+", "wounds": 1, "leadership": "7+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "pulse-rifle", "name": "Pulse Rifle", "type": "Rapid Fire", "range": 30, "attacks": 1, "ballisticSkill": 4, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": ["Rapid Fire 1"] },
+      { "id": "close-combat-weapon", "name": "Close Combat Weapon", "type": "Melee", "range": "Melee", "attacks": 1, "weaponSkill": 5, "strength": 3, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Suppressing Fire", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tau-breacher-team",
+    "name": "Breacher Team",
+    "faction": "T'au Empire",
+    "role": "TROOPS",
+    "basePoints": 90,
+    "stats": { "movement": 6, "toughness": 3, "save": "4+", "wounds": 1, "leadership": "7+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "pulse-blaster", "name": "Pulse Blaster", "type": "Assault", "range": 10, "attacks": 2, "ballisticSkill": 3, "strength": 6, "armourPenetration": -1, "damage": 1, "abilities": [] },
+      { "id": "close-combat-weapon", "name": "Close Combat Weapon", "type": "Melee", "range": "Melee", "attacks": 1, "weaponSkill": 5, "strength": 3, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Breach and Clear", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tau-crisis-battlesuits",
+    "name": "Crisis Battlesuits",
+    "faction": "T'au Empire",
+    "role": "ELITES",
+    "basePoints": 200,
+    "stats": { "movement": 10, "toughness": 5, "save": "3+", "wounds": 4, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "plasma-rifle", "name": "Plasma Rifle", "type": "Assault", "range": 24, "attacks": 1, "ballisticSkill": 4, "strength": 8, "armourPenetration": -3, "damage": 3, "abilities": [] },
+      { "id": "battlesuit-fists", "name": "Battlesuit Fists", "type": "Melee", "range": "Melee", "attacks": 2, "weaponSkill": 5, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Crisis Suits", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tau-stealth-battlesuits",
+    "name": "Stealth Battlesuits",
+    "faction": "T'au Empire",
+    "role": "ELITES",
+    "basePoints": 60,
+    "stats": { "movement": 8, "toughness": 4, "save": "3+", "wounds": 2, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "burst-cannon", "name": "Burst Cannon", "type": "Assault", "range": 18, "attacks": 4, "ballisticSkill": 4, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "battlesuit-fists", "name": "Battlesuit Fists", "type": "Melee", "range": "Melee", "attacks": 2, "weaponSkill": 5, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Forward Observers", "description": "[Rules text requires manual verification]" },
+      { "name": "Stealth", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tau-ghostkeel-battlesuit",
+    "name": "Ghostkeel Battlesuit",
+    "faction": "T'au Empire",
+    "role": "ELITES",
+    "basePoints": 160,
+    "stats": { "movement": 10, "toughness": 8, "save": "3+", "wounds": 12, "leadership": "7+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "cyclic-ion-raker", "name": "Cyclic Ion Raker", "type": "Heavy", "range": 36, "attacks": 6, "ballisticSkill": 4, "strength": 7, "armourPenetration": -1, "damage": 2, "abilities": [] },
+      { "id": "ghostkeel-fists", "name": "Ghostkeel Fists", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 5, "strength": 6, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Lone Operative", "description": "[Rules text requires manual verification]" },
+      { "name": "Stealth", "description": "[Rules text requires manual verification]" },
+      { "name": "Stealth Drones", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tau-pathfinder-team",
+    "name": "Pathfinder Team",
+    "faction": "T'au Empire",
+    "role": "FAST_ATTACK",
+    "basePoints": 90,
+    "stats": { "movement": 7, "toughness": 3, "save": "5+", "wounds": 1, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "pulse-carbine", "name": "Pulse Carbine", "type": "Assault", "range": 20, "attacks": 2, "ballisticSkill": 4, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "close-combat-weapon", "name": "Close Combat Weapon", "type": "Melee", "range": "Melee", "attacks": 1, "weaponSkill": 5, "strength": 3, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Target Uploaded", "description": "[Rules text requires manual verification]" },
+      { "name": "Scouts 6\"", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tau-piranhas",
+    "name": "Piranhas",
+    "faction": "T'au Empire",
+    "role": "FAST_ATTACK",
+    "basePoints": 55,
+    "stats": { "movement": 14, "toughness": 6, "save": "4+", "wounds": 7, "leadership": "7+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "piranha-burst-cannon", "name": "Piranha Burst Cannon", "type": "Assault", "range": 18, "attacks": 4, "ballisticSkill": 4, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Harassment Tactics", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise 1", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tau-broadside-battlesuits",
+    "name": "Broadside Battlesuits",
+    "faction": "T'au Empire",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 90,
+    "stats": { "movement": 5, "toughness": 6, "save": "2+", "wounds": 8, "leadership": "7+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "heavy-rail-rifle", "name": "Heavy Rail Rifle", "type": "Heavy", "range": 60, "attacks": 2, "ballisticSkill": 4, "strength": 12, "armourPenetration": -4, "damage": "D6+1", "abilities": ["Devastating Wounds"] },
+      { "id": "crushing-bulk", "name": "Crushing Bulk", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 5, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Advanced Targeting System", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tau-hammerhead-gunship",
+    "name": "Hammerhead Gunship",
+    "faction": "T'au Empire",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 130,
+    "stats": { "movement": 10, "toughness": 10, "save": "3+", "wounds": 14, "leadership": "7+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "railgun", "name": "Railgun", "type": "Heavy", "range": 72, "attacks": 1, "ballisticSkill": 4, "strength": 20, "armourPenetration": -5, "damage": "D6+6", "abilities": ["Devastating Wounds"] }
+    ],
+    "abilities": [
+      { "name": "Targeting Array", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D3", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tau-riptide-battlesuit",
+    "name": "Riptide Battlesuit",
+    "faction": "T'au Empire",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 165,
+    "stats": { "movement": 10, "toughness": 9, "save": "2+", "wounds": 14, "leadership": "7+", "objectiveControl": 4 },
+    "options": [],
+    "weapons": [
+      { "id": "ion-accelerator", "name": "Ion Accelerator", "type": "Heavy", "range": 72, "attacks": 6, "ballisticSkill": 4, "strength": 7, "armourPenetration": -2, "damage": 3, "abilities": [] },
+      { "id": "riptide-fists", "name": "Riptide Fists", "type": "Melee", "range": "Melee", "attacks": 6, "weaponSkill": 5, "strength": 6, "armourPenetration": 0, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Nova Reactor", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D3", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tau-devilfish",
+    "name": "Devilfish",
+    "faction": "T'au Empire",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 75,
+    "stats": { "movement": 12, "toughness": 9, "save": "3+", "wounds": 13, "leadership": "7+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "accelerator-burst-cannon", "name": "Accelerator Burst Cannon", "type": "Assault", "range": 18, "attacks": 4, "ballisticSkill": 4, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Rapid Deployment", "description": "[Rules text requires manual verification]" },
+      { "name": "Transport", "description": "[Rules text requires manual verification]" }
+    ]
+  }
+]
