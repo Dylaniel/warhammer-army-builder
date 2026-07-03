@@ -1,1 +1,690 @@
-[]
+﻿[
+  {
+    "id": "nec-imotekh-the-stormlord",
+    "name": "Imotekh the Stormlord",
+    "faction": "Necrons",
+    "role": "HQ",
+    "basePoints": 100,
+    "stats": { "movement": 5, "toughness": 5, "save": "2+", "wounds": 5, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "gauntlet-of-fire",
+        "name": "Gauntlet of Fire",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": ["Ignores Cover", "Torrent"]
+      },
+      {
+        "id": "staff-of-the-destroyer",
+        "name": "Staff of the Destroyer",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": ["Devastating Wounds"]
+      }
+    ],
+    "abilities": [
+      { "name": "Leader", "description": "[Rules text requires manual verification]" },
+      { "name": "Lord of the Storm", "description": "[Rules text requires manual verification]" },
+      { "name": "Grand Strategist", "description": "[Rules text requires manual verification]" },
+      { "name": "Reanimation Protocols", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 4+", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "nec-overlord",
+    "name": "Overlord",
+    "faction": "Necrons",
+    "role": "HQ",
+    "basePoints": 85,
+    "stats": { "movement": 5, "toughness": 5, "save": "2+", "wounds": 6, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "tachyon-arrow",
+        "name": "Tachyon arrow",
+        "type": "Heavy",
+        "range": 72,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 16,
+        "armourPenetration": -5,
+        "damage": "D6+2",
+        "abilities": ["One Shot"]
+      },
+      {
+        "id": "overlords-blade",
+        "name": "Overlord's blade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": ["Devastating Wounds"]
+      }
+    ],
+    "abilities": [
+      { "name": "Leader", "description": "[Rules text requires manual verification]" },
+      { "name": "My Will Be Done", "description": "[Rules text requires manual verification]" },
+      { "name": "Resurrection Orb", "description": "[Rules text requires manual verification]" },
+      { "name": "Reanimation Protocols", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 4+", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "nec-technomancer",
+    "name": "Technomancer",
+    "faction": "Necrons",
+    "role": "HQ",
+    "basePoints": 85,
+    "stats": { "movement": 10, "toughness": 4, "save": "4+", "wounds": 4, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "staff-of-light-shooting",
+        "name": "Staff of light (shooting)",
+        "type": "Rapid Fire",
+        "range": 18,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "staff-of-light-melee",
+        "name": "Staff of light (melee)",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Leader", "description": "[Rules text requires manual verification]" },
+      { "name": "Rites of Reanimation", "description": "[Rules text requires manual verification]" },
+      { "name": "Canoptek Cloak", "description": "[Rules text requires manual verification]" },
+      { "name": "Reanimation Protocols", "description": "[Rules text requires manual verification]" },
+      { "name": "Lone Operative (If near Canoptek)", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "nec-plasmancer",
+    "name": "Plasmancer",
+    "faction": "Necrons",
+    "role": "HQ",
+    "basePoints": 65,
+    "stats": { "movement": 5, "toughness": 4, "save": "4+", "wounds": 4, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plasmic-lance-shooting",
+        "name": "Plasmic lance (shooting)",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 7,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": ["Blast"]
+      },
+      {
+        "id": "plasmic-lance-melee",
+        "name": "Plasmic lance (melee)",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Leader", "description": "[Rules text requires manual verification]" },
+      { "name": "Harbinger of Destruction", "description": "[Rules text requires manual verification]" },
+      { "name": "Living Lightning", "description": "[Rules text requires manual verification]" },
+      { "name": "Reanimation Protocols", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "nec-chronomancer",
+    "name": "Chronomancer",
+    "faction": "Necrons",
+    "role": "HQ",
+    "basePoints": 65,
+    "stats": { "movement": 5, "toughness": 4, "save": "4+", "wounds": 4, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "aeonstave-shooting",
+        "name": "Aeonstave (shooting)",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": "D3",
+        "abilities": ["Blast"]
+      },
+      {
+        "id": "aeonstave-melee",
+        "name": "Aeonstave (melee)",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Leader", "description": "[Rules text requires manual verification]" },
+      { "name": "Chronometron", "description": "[Rules text requires manual verification]" },
+      { "name": "Timesplinter Mantle", "description": "[Rules text requires manual verification]" },
+      { "name": "Reanimation Protocols", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 4+", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "nec-illuminor-szeras",
+    "name": "Illuminor Szeras",
+    "faction": "Necrons",
+    "role": "HQ",
+    "basePoints": 175,
+    "stats": { "movement": 6, "toughness": 8, "save": "2+", "wounds": 9, "leadership": "6+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "eldritch-lance-shooting",
+        "name": "Eldritch lance (shooting)",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": -3,
+        "damage": 3,
+        "abilities": ["Anti-Vehicle 4+"]
+      },
+      {
+        "id": "eldritch-lance-melee",
+        "name": "Eldritch lance (melee)",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 3,
+        "abilities": ["Anti-Vehicle 4+"]
+      }
+    ],
+    "abilities": [
+      { "name": "Illuminor", "description": "[Rules text requires manual verification]" },
+      { "name": "Mechanical Anatomy", "description": "[Rules text requires manual verification]" },
+      { "name": "Atomic Energy Manipulator", "description": "[Rules text requires manual verification]" },
+      { "name": "Reanimation Protocols", "description": "[Rules text requires manual verification]" },
+      { "name": "Feel No Pain 4+", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 4+", "description": "[Rules text requires manual verification]" },
+      { "name": "Lone Operative", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "nec-warriors",
+    "name": "Necron Warriors",
+    "faction": "Necrons",
+    "role": "TROOPS",
+    "basePoints": 100,
+    "stats": { "movement": 5, "toughness": 4, "save": "4+", "wounds": 1, "leadership": "7+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "gauss-reaper",
+        "name": "Gauss reaper",
+        "type": "Assault",
+        "range": 12,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": ["Lethal Hits"]
+      },
+      {
+        "id": "gauss-flayer",
+        "name": "Gauss flayer",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": ["Lethal Hits"]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 1,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Their Number Is Legion", "description": "[Rules text requires manual verification]" },
+      { "name": "Reanimation Protocols", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "nec-immortals",
+    "name": "Immortals",
+    "faction": "Necrons",
+    "role": "TROOPS",
+    "basePoints": 75,
+    "stats": { "movement": 5, "toughness": 5, "save": "3+", "wounds": 1, "leadership": "7+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "gauss-blaster",
+        "name": "Gauss blaster",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": ["Lethal Hits"]
+      },
+      {
+        "id": "tesla-carbine",
+        "name": "Tesla carbine",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": ["Sustained Hits 2"]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 1,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Implacable Eradication", "description": "[Rules text requires manual verification]" },
+      { "name": "Reanimation Protocols", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "nec-lychguard",
+    "name": "Lychguard",
+    "faction": "Necrons",
+    "role": "ELITES",
+    "basePoints": 85,
+    "stats": { "movement": 5, "toughness": 5, "save": "3+", "wounds": 2, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "warscythe",
+        "name": "Warscythe",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": ["Devastating Wounds"]
+      },
+      {
+        "id": "hyperphase-sword",
+        "name": "Hyperphase sword and dispersion shield",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Guardian Protocols", "description": "[Rules text requires manual verification]" },
+      { "name": "Reanimation Protocols", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 4+ (with Dispersion Shield)", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "nec-skorpekh-destroyers",
+    "name": "Skorpekh Destroyers",
+    "faction": "Necrons",
+    "role": "ELITES",
+    "basePoints": 90,
+    "stats": { "movement": 6, "toughness": 6, "save": "3+", "wounds": 3, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "skorpekh-hyperphase-weapons",
+        "name": "Skorpekh hyperphase weapons",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Whirling Onslaught", "description": "[Rules text requires manual verification]" },
+      { "name": "Reanimation Protocols", "description": "[Rules text requires manual verification]" },
+      { "name": "Plasmacyte Infusion", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "nec-lokhust-heavy-destroyers",
+    "name": "Lokhust Heavy Destroyers",
+    "faction": "Necrons",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 50,
+    "stats": { "movement": 8, "toughness": 6, "save": "3+", "wounds": 4, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "gauss-destructor",
+        "name": "Gauss destructor",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 14,
+        "armourPenetration": -4,
+        "damage": 6,
+        "abilities": ["Lethal Hits"]
+      },
+      {
+        "id": "enmitic-exterminator",
+        "name": "Enmitic exterminator",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 6,
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": ["Sustained Hits 1", "Rapid Fire 6"]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Optimised for Slaughter", "description": "[Rules text requires manual verification]" },
+      { "name": "Reanimation Protocols", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "nec-canoptek-wraiths",
+    "name": "Canoptek Wraiths",
+    "faction": "Necrons",
+    "role": "FAST_ATTACK",
+    "basePoints": 125,
+    "stats": { "movement": 10, "toughness": 6, "save": "3+", "wounds": 4, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "particle-caster",
+        "name": "Particle caster",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 3,
+        "ballisticSkill": 4,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "vicious-claws",
+        "name": "Vicious claws",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "whip-coils",
+        "name": "Whip coils",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 8,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Wraith Form", "description": "[Rules text requires manual verification]" },
+      { "name": "Reanimation Protocols", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 4+", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "nec-monolith",
+    "name": "Monolith",
+    "faction": "Necrons",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 375,
+    "stats": { "movement": 7, "toughness": 14, "save": "2+", "wounds": 20, "leadership": "6+", "objectiveControl": 8 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "death-ray",
+        "name": "Death ray",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 12,
+        "armourPenetration": -4,
+        "damage": "D6+1",
+        "abilities": ["Sustained Hits D3"]
+      },
+      {
+        "id": "gauss-flux-arc",
+        "name": "Gauss flux arc",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": ["Lethal Hits", "Rapid Fire 3"]
+      },
+      {
+        "id": "particle-whip",
+        "name": "Particle whip",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": "3D3",
+        "ballisticSkill": 3,
+        "strength": 12,
+        "armourPenetration": -3,
+        "damage": 3,
+        "abilities": ["Blast"]
+      },
+      {
+        "id": "portal-of-exile",
+        "name": "Portal of exile",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Eternity Gate", "description": "[Rules text requires manual verification]" },
+      { "name": "Reanimation Protocols", "description": "[Rules text requires manual verification]" },
+      { "name": "Deep Strike", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise 2D6", "description": "[Rules text requires manual verification]" },
+      { "name": "Towering", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "nec-ctan-shard-of-the-nightbringer",
+    "name": "C'tan Shard of the Nightbringer",
+    "faction": "Necrons",
+    "role": "ELITES",
+    "basePoints": 295,
+    "stats": { "movement": 6, "toughness": 11, "save": "4+", "wounds": 12, "leadership": "6+", "objectiveControl": 4 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "gaze-of-death",
+        "name": "Gaze of death",
+        "type": "Assault",
+        "range": 18,
+        "attacks": "D3",
+        "ballisticSkill": 2,
+        "strength": 12,
+        "armourPenetration": -3,
+        "damage": "D6",
+        "abilities": ["Blast"]
+      },
+      {
+        "id": "scythe-of-the-nightbringer-strike",
+        "name": "Scythe of the Nightbringer - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 14,
+        "armourPenetration": -4,
+        "damage": "D6",
+        "abilities": ["Devastating Wounds"]
+      },
+      {
+        "id": "scythe-of-the-nightbringer-sweep",
+        "name": "Scythe of the Nightbringer - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 14,
+        "weaponSkill": 2,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Enslaved Star God", "description": "[Rules text requires manual verification]" },
+      { "name": "Necrodermis", "description": "[Rules text requires manual verification]" },
+      { "name": "Drain Life", "description": "[Rules text requires manual verification]" },
+      { "name": "Reanimation Protocols", "description": "[Rules text requires manual verification]" },
+      { "name": "Feel No Pain 5+", "description": "[Rules text requires manual verification]" },
+      { "name": "Invulnerable Save 4+", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "nec-deathmarks",
+    "name": "Deathmarks",
+    "faction": "Necrons",
+    "role": "ELITES",
+    "basePoints": 60,
+    "stats": { "movement": 5, "toughness": 5, "save": "3+", "wounds": 1, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      {
+        "id": "synaptic-disintegrator",
+        "name": "Synaptic disintegrator",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": ["Precision"]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 1,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      { "name": "Hyperspace Hunters", "description": "[Rules text requires manual verification]" },
+      { "name": "Reanimation Protocols", "description": "[Rules text requires manual verification]" },
+      { "name": "Deep Strike", "description": "[Rules text requires manual verification]" }
+    ]
+  }
+]
