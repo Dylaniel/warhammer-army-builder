@@ -1,1 +1,240 @@
-[]
+﻿[
+  {
+    "id": "orks-ghazghkull-thraka",
+    "name": "Ghazghkull Thraka",
+    "faction": "Orks",
+    "role": "HQ",
+    "basePoints": 235,
+    "stats": { "movement": 5, "toughness": 6, "save": "2+", "wounds": 10, "leadership": "6+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "morks-roar", "name": "Mork's Roar", "type": "Rapid Fire", "range": 36, "attacks": 12, "ballisticSkill": 5, "strength": 5, "armourPenetration": -1, "damage": 1, "abilities": ["Rapid Fire 4"] },
+      { "id": "ghazghkulls-klaw", "name": "Ghazghkull's Klaw", "type": "Melee", "range": "Melee", "attacks": 6, "weaponSkill": 2, "strength": 14, "armourPenetration": -3, "damage": 4, "abilities": ["Sweep"] }
+    ],
+    "abilities": [
+      { "name": "Prophet of Gork and Mork", "description": "[Rules text requires manual verification]" },
+      { "name": "Waaagh! Energy", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "orks-warboss",
+    "name": "Warboss",
+    "faction": "Orks",
+    "role": "HQ",
+    "basePoints": 65,
+    "stats": { "movement": 6, "toughness": 5, "save": "4+", "wounds": 5, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "kombi-weapon", "name": "Kombi-weapon", "type": "Rapid Fire", "range": 24, "attacks": 1, "ballisticSkill": 5, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": ["Anti-Infantry 4+", "Devastating Wounds"] },
+      { "id": "power-klaw", "name": "Power Klaw", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 3, "strength": 10, "armourPenetration": -2, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Warboss", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "orks-weirdboy",
+    "name": "Weirdboy",
+    "faction": "Orks",
+    "role": "HQ",
+    "basePoints": 55,
+    "stats": { "movement": 6, "toughness": 5, "save": "6+", "wounds": 4, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "weirdboy-staff", "name": "Weirdboy Staff", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 3, "strength": 8, "armourPenetration": -1, "damage": "D3", "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Da Jump (Psychic)", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "orks-beastboss",
+    "name": "Beastboss",
+    "faction": "Orks",
+    "role": "HQ",
+    "basePoints": 100,
+    "stats": { "movement": 6, "toughness": 5, "save": "4+", "wounds": 5, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "shoota", "name": "Shoota", "type": "Assault", "range": 18, "attacks": 2, "ballisticSkill": 5, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "beastchoppa", "name": "Beastchoppa", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 3, "strength": 6, "armourPenetration": -1, "damage": 2, "abilities": ["Anti-Monster 4+", "Anti-Vehicle 4+"] }
+    ],
+    "abilities": [
+      { "name": "Beastboss", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "orks-boyz",
+    "name": "Boyz",
+    "faction": "Orks",
+    "role": "TROOPS",
+    "basePoints": 85,
+    "stats": { "movement": 6, "toughness": 5, "save": "5+", "wounds": 1, "leadership": "7+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "slugga", "name": "Slugga", "type": "Pistol", "range": 12, "attacks": 1, "ballisticSkill": 5, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "choppa", "name": "Choppa", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 3, "strength": 4, "armourPenetration": -1, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Mob Rule", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "orks-beast-snagga-boyz",
+    "name": "Beast Snagga Boyz",
+    "faction": "Orks",
+    "role": "TROOPS",
+    "basePoints": 105,
+    "stats": { "movement": 6, "toughness": 5, "save": "5+", "wounds": 1, "leadership": "7+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "slugga", "name": "Slugga", "type": "Pistol", "range": 12, "attacks": 1, "ballisticSkill": 5, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "choppa", "name": "Choppa", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 3, "strength": 5, "armourPenetration": -1, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Monster Hunters", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "orks-nobz",
+    "name": "Nobz",
+    "faction": "Orks",
+    "role": "ELITES",
+    "basePoints": 105,
+    "stats": { "movement": 6, "toughness": 5, "save": "4+", "wounds": 2, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "slugga", "name": "Slugga", "type": "Pistol", "range": 12, "attacks": 1, "ballisticSkill": 5, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "big-choppa", "name": "Big Choppa", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 3, "strength": 7, "armourPenetration": -1, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Keepin' Order", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "orks-meganobz",
+    "name": "Meganobz",
+    "faction": "Orks",
+    "role": "ELITES",
+    "basePoints": 90,
+    "stats": { "movement": 5, "toughness": 6, "save": "2+", "wounds": 3, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "kombi-weapon", "name": "Kombi-weapon", "type": "Rapid Fire", "range": 24, "attacks": 1, "ballisticSkill": 5, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": ["Anti-Infantry 4+", "Devastating Wounds"] },
+      { "id": "power-klaw", "name": "Power Klaw", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 4, "strength": 10, "armourPenetration": -2, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Armour of Gork", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "orks-trukk",
+    "name": "Trukk",
+    "faction": "Orks",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 65,
+    "stats": { "movement": 12, "toughness": 8, "save": "4+", "wounds": 10, "leadership": "7+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "big-shoota", "name": "Big Shoota", "type": "Rapid Fire", "range": 36, "attacks": 3, "ballisticSkill": 5, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Transport", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "orks-stormboyz",
+    "name": "Stormboyz",
+    "faction": "Orks",
+    "role": "FAST_ATTACK",
+    "basePoints": 65,
+    "stats": { "movement": 12, "toughness": 5, "save": "5+", "wounds": 1, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "slugga", "name": "Slugga", "type": "Pistol", "range": 12, "attacks": 1, "ballisticSkill": 5, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "choppa", "name": "Choppa", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 3, "strength": 4, "armourPenetration": -1, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Rokkit Pack", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "orks-warbikers",
+    "name": "Warbikers",
+    "faction": "Orks",
+    "role": "FAST_ATTACK",
+    "basePoints": 70,
+    "stats": { "movement": 12, "toughness": 6, "save": "4+", "wounds": 3, "leadership": "7+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "dakkagun", "name": "Dakkagun", "type": "Assault", "range": 18, "attacks": 3, "ballisticSkill": 5, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": ["Twin-linked"] },
+      { "id": "choppa", "name": "Choppa", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 3, "strength": 4, "armourPenetration": -1, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Exhaust Cloud", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "orks-deff-dread",
+    "name": "Deff Dread",
+    "faction": "Orks",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 130,
+    "stats": { "movement": 8, "toughness": 9, "save": "3+", "wounds": 8, "leadership": "7+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "dread-klaw", "name": "Dread Klaw", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 3, "strength": 10, "armourPenetration": -2, "damage": 3, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Deadly Demise D3", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "orks-flash-gitz",
+    "name": "Flash Gitz",
+    "faction": "Orks",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 95,
+    "stats": { "movement": 6, "toughness": 5, "save": "4+", "wounds": 2, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "snazzgun", "name": "Snazzgun", "type": "Heavy", "range": 24, "attacks": 3, "ballisticSkill": 5, "strength": 6, "armourPenetration": -1, "damage": 2, "abilities": ["Heavy"] }
+    ],
+    "abilities": [
+      { "name": "Gun-crazy Show-offs", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "orks-kill-rig",
+    "name": "Kill Rig",
+    "faction": "Orks",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 200,
+    "stats": { "movement": 10, "toughness": 10, "save": "3+", "wounds": 16, "leadership": "7+", "objectiveControl": 5 },
+    "options": [],
+    "weapons": [
+      { "id": "lobba", "name": "Lobba", "type": "Heavy", "range": 48, "attacks": "D6", "ballisticSkill": 5, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": ["Blast", "Indirect Fire"] },
+      { "id": "stikka-kannon", "name": "Stikka Kannon", "type": "Heavy", "range": 24, "attacks": 1, "ballisticSkill": 5, "strength": 12, "armourPenetration": -3, "damage": "D6", "abilities": ["Anti-Monster 4+", "Anti-Vehicle 4+"] }
+    ],
+    "abilities": [
+      { "name": "Wurrboy Tower", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "orks-gretchin",
+    "name": "Gretchin",
+    "faction": "Orks",
+    "role": "TROOPS",
+    "basePoints": 40,
+    "stats": { "movement": 6, "toughness": 2, "save": "7+", "wounds": 1, "leadership": "8+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "grot-blaster", "name": "Grot Blaster", "type": "Pistol", "range": 12, "attacks": 1, "ballisticSkill": 4, "strength": 3, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "close-combat-weapon", "name": "Close Combat Weapon", "type": "Melee", "range": "Melee", "attacks": 1, "weaponSkill": 5, "strength": 2, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Runtherd", "description": "[Rules text requires manual verification]" }
+    ]
+  }
+]
