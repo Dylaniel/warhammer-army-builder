@@ -4,6 +4,7 @@ import { createArmyUnit, calculateArmyPoints } from '../utils/unitUtils';
 import { useFactionUnits } from '../hooks/useFactionUnits';
 import EditArmyModal from './EditArmyModal';
 import UnitDetailTab from './UnitDetailTab';
+import BattleModeTab from './BattleModeTab';
 
 interface ArmyDetailTabProps {
   army: Army;
@@ -15,6 +16,7 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [isBattleModeOpen, setIsBattleModeOpen] = useState(false);
   const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
   const { units: allUnits, loading } = useFactionUnits(army.faction);
 
@@ -211,6 +213,15 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
     );
   }
 
+  if (isBattleModeOpen) {
+    return (
+      <BattleModeTab 
+        army={army} 
+        onBack={() => setIsBattleModeOpen(false)} 
+      />
+    );
+  }
+
   return (
     <div className="relative pb-4">
       {/* Static Background at the very top */}
@@ -220,9 +231,15 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
       <div className="sticky top-0 z-40 px-4 py-2 flex justify-between items-center pointer-events-none mb-4">
         <button
           onClick={onBack}
-          className="pointer-events-auto px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 shadow-md border border-gray-700"
+          className="pointer-events-auto px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 shadow-md border border-gray-700 text-sm"
         >
-          Back to Battle Forge
+          Back
+        </button>
+        <button
+          onClick={() => setIsBattleModeOpen(true)}
+          className="pointer-events-auto px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 shadow-[0_0_8px_rgba(220,38,38,0.6)] border border-red-800 text-sm font-bold uppercase tracking-wider"
+        >
+          Battle Mode
         </button>
         <span
           className={`pointer-events-auto px-3 py-2 rounded text-sm font-bold shadow-md border border-gray-700 ${isOverPoints ? 'bg-red-500 text-white' : 'bg-yellow-400 text-gray-900 dark:text-gray-900'}`}
