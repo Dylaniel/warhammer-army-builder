@@ -1,1 +1,906 @@
-[]
+[
+  {
+    "id": "dg-mortarion",
+    "name": "Mortarion",
+    "faction": "Death Guard",
+    "role": "HQ",
+    "basePoints": 325,
+    "stats": {
+      "movement": 10,
+      "toughness": 12,
+      "save": "2+",
+      "wounds": 16,
+      "leadership": "5+",
+      "objectiveControl": 6
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "the-lantern",
+        "name": "The Lantern",
+        "type": "Pistol",
+        "range": 18,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 9,
+        "armourPenetration": -3,
+        "damage": 3,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "silence-strike",
+        "name": "Silence - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 14,
+        "armourPenetration": -3,
+        "damage": 4,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "silence-sweep",
+        "name": "Silence - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 15,
+        "weaponSkill": 2,
+        "strength": 7,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Host of Plagues",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Primarch of the Death Guard",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deadly Demise D6",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Feel No Pain 5+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dg-typhus",
+    "name": "Typhus",
+    "faction": "Death Guard",
+    "role": "HQ",
+    "basePoints": 80,
+    "stats": {
+      "movement": 4,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 6,
+      "leadership": "5+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "master-crafted-manreaper",
+        "name": "Master-crafted manreaper",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "The Destroyer Hive",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Herald of Nurgle",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dg-lord-of-virulence",
+    "name": "Lord of Virulence",
+    "faction": "Death Guard",
+    "role": "HQ",
+    "basePoints": 80,
+    "stats": {
+      "movement": 4,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 6,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "twin-plague-spewer",
+        "name": "Twin plague spewer",
+        "type": "Rapid Fire",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Twin-linked",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "heavy-plague-fist",
+        "name": "Heavy plague fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Master of Destruction",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Blight Bombardment",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dg-lord-of-contagion",
+    "name": "Lord of Contagion",
+    "faction": "Death Guard",
+    "role": "HQ",
+    "basePoints": 80,
+    "stats": {
+      "movement": 4,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 6,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plaguereaper",
+        "name": "Plaguereaper",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Vector of Disease",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Lord of the Death Guard",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dg-malignant-plaguecaster",
+    "name": "Malignant Plaguecaster",
+    "faction": "Death Guard",
+    "role": "HQ",
+    "basePoints": 65,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plague-wind",
+        "name": "Plague Wind",
+        "type": "Assault",
+        "range": 18,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Psychic",
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "corrupted-staff",
+        "name": "Corrupted staff",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": "D3",
+        "abilities": [
+          "Psychic",
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Gift of Plagues",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Pestilent Fallout",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dg-plague-marines",
+    "name": "Plague Marines",
+    "faction": "Death Guard",
+    "role": "TROOPS",
+    "basePoints": 90,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plague-boltgun",
+        "name": "Plague boltgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "plague-knives",
+        "name": "Plague knives",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Remorseless",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dg-poxwalkers",
+    "name": "Poxwalkers",
+    "faction": "Death Guard",
+    "role": "TROOPS",
+    "basePoints": 50,
+    "stats": {
+      "movement": 4,
+      "toughness": 4,
+      "save": "7+",
+      "wounds": 1,
+      "leadership": "8+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "improvised-weapons",
+        "name": "Improvised weapons",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 5,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Curse of the Walking Pox",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Mindless",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dg-deathshroud-terminators",
+    "name": "Deathshroud Terminators",
+    "faction": "Death Guard",
+    "role": "ELITES",
+    "basePoints": 120,
+    "stats": {
+      "movement": 4,
+      "toughness": 6,
+      "save": "2+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plaguespurt-gauntlet",
+        "name": "Plaguespurt gauntlet",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Lethal Hits",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "manreaper-strike",
+        "name": "Manreaper - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 2,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "manreaper-sweep",
+        "name": "Manreaper - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Silent Bodyguards",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dg-blightlord-terminators",
+    "name": "Blightlord Terminators",
+    "faction": "Death Guard",
+    "role": "ELITES",
+    "basePoints": 155,
+    "stats": {
+      "movement": 4,
+      "toughness": 6,
+      "save": "2+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plague-combi-bolter",
+        "name": "Plague combi-bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Lethal Hits",
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "bubotic-weapons",
+        "name": "Bubotic weapons",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Blistering Fusillade",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dg-foul-blightspawn",
+    "name": "Foul Blightspawn",
+    "faction": "Death Guard",
+    "role": "ELITES",
+    "basePoints": 60,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plague-sprayer",
+        "name": "Plague sprayer",
+        "type": "Heavy",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Ignores Cover",
+          "Lethal Hits",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Putrefying Stink",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dg-biologus-putrifier",
+    "name": "Biologus Putrifier",
+    "faction": "Death Guard",
+    "role": "ELITES",
+    "basePoints": 60,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "hyper-blight-grenades",
+        "name": "Hyper blight grenades",
+        "type": "Grenade",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Blast",
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "injector-pistol",
+        "name": "Injector pistol",
+        "type": "Pistol",
+        "range": 3,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 3,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "plague-knives",
+        "name": "Plague knives",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Foul Infusion",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Explosive Maladies",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dg-tallyman",
+    "name": "Tallyman",
+    "faction": "Death Guard",
+    "role": "ELITES",
+    "basePoints": 45,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "infected-plasma-pistol",
+        "name": "Infected plasma pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "The Seven-fold Chant",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Malicious Fervour",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dg-plague-surgeon",
+    "name": "Plague Surgeon",
+    "faction": "Death Guard",
+    "role": "ELITES",
+    "basePoints": 65,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bale-sword",
+        "name": "Bale sword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Tainted Narthecium",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dg-foetid-bloat-drone",
+    "name": "Foetid Bloat-drone",
+    "faction": "Death Guard",
+    "role": "FAST_ATTACK",
+    "basePoints": 90,
+    "stats": {
+      "movement": 10,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 10,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plaguespitter",
+        "name": "Plaguespitter",
+        "type": "Heavy",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Lethal Hits",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "plague-probe",
+        "name": "Plague probe",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Hovering Death",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dg-myphitic-blight-haulers",
+    "name": "Myphitic Blight-haulers",
+    "faction": "Death Guard",
+    "role": "FAST_ATTACK",
+    "basePoints": 90,
+    "stats": {
+      "movement": 10,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 10,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "multi-melta",
+        "name": "Multi-melta",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": -4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "missile-launcher",
+        "name": "Missile launcher",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": -2,
+        "damage": "D6",
+        "abilities": []
+      },
+      {
+        "id": "gnashing-maw",
+        "name": "Gnashing maw",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Tank Hunters",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dg-plagueburst-crawler",
+    "name": "Plagueburst Crawler",
+    "faction": "Death Guard",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 180,
+    "stats": {
+      "movement": 10,
+      "toughness": 10,
+      "save": "3+",
+      "wounds": 12,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plagueburst-mortar",
+        "name": "Plagueburst mortar",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Blast",
+          "Indirect Fire",
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "plaguespitter",
+        "name": "Plaguespitter",
+        "type": "Heavy",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Lethal Hits",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "heavy-slugger",
+        "name": "Heavy slugger",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "armoured-tracks",
+        "name": "Armoured tracks",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Spore-laced Shock Waves",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  }
+]

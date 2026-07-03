@@ -1,1 +1,749 @@
-[]
+[
+  {
+    "id": "dw-watch-master",
+    "name": "Watch Master",
+    "faction": "Deathwatch",
+    "role": "HQ",
+    "basePoints": 115,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 5,
+      "leadership": "5+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "vigil-spear-ranged",
+        "name": "Vigil spear (ranged)",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "vigil-spear-melee",
+        "name": "Vigil spear (melee)",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Lance"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Watch Master",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Strategic Knowledge",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dw-watch-captain-artemis",
+    "name": "Watch Captain Artemis",
+    "faction": "Deathwatch",
+    "role": "HQ",
+    "basePoints": 75,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "hellfire-extremis",
+        "name": "Hellfire Extremis",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent",
+          "Anti-Infantry 4+"
+        ]
+      },
+      {
+        "id": "power-weapon",
+        "name": "Power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Tactical Instinct",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Unstoppable Champion",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dw-deathwatch-veterans",
+    "name": "Deathwatch Veterans",
+    "faction": "Deathwatch",
+    "role": "TROOPS",
+    "basePoints": 110,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "long-vigil-ranged-weapon",
+        "name": "Long Vigil ranged weapon",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 4+",
+          "Devastating Wounds"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Death to the Alien",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dw-proteus-kill-team",
+    "name": "Proteus Kill Team",
+    "faction": "Deathwatch",
+    "role": "ELITES",
+    "basePoints": 360,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "long-vigil-ranged-weapon",
+        "name": "Long Vigil ranged weapon",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 4+",
+          "Devastating Wounds"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Proteus Kill Team",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dw-fortis-kill-team",
+    "name": "Fortis Kill Team",
+    "faction": "Deathwatch",
+    "role": "ELITES",
+    "basePoints": 230,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-rifle",
+        "name": "Bolt rifle",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Heavy"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Fortis Kill Team",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dw-indomitor-kill-team",
+    "name": "Indomitor Kill Team",
+    "faction": "Deathwatch",
+    "role": "ELITES",
+    "basePoints": 270,
+    "stats": {
+      "movement": 5,
+      "toughness": 6,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-bolt-rifle",
+        "name": "Heavy bolt rifle",
+        "type": "Assault",
+        "range": 30,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Heavy"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Indomitor Kill Team",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dw-spectrus-kill-team",
+    "name": "Spectrus Kill Team",
+    "faction": "Deathwatch",
+    "role": "ELITES",
+    "basePoints": 210,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "marksman-bolt-carbine",
+        "name": "Marksman bolt carbine",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Spectrus Kill Team",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dw-corvus-blackstar",
+    "name": "Corvus Blackstar",
+    "faction": "Deathwatch",
+    "role": "FLYER",
+    "basePoints": 180,
+    "stats": {
+      "movement": "20+",
+      "toughness": 10,
+      "save": "3+",
+      "wounds": 14,
+      "leadership": "6+",
+      "objectiveControl": 0
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "twin-assault-cannon",
+        "name": "Twin assault cannon",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 6,
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds",
+          "Twin-linked"
+        ]
+      },
+      {
+        "id": "blackstar-rocket-launcher",
+        "name": "Blackstar rocket launcher",
+        "type": "Heavy",
+        "range": 30,
+        "attacks": "D6+1",
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Blast"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Blackstar Cluster Launcher",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dw-veteran-bike-squad",
+    "name": "Veteran Bike Squad",
+    "faction": "Deathwatch",
+    "role": "FAST_ATTACK",
+    "basePoints": 80,
+    "stats": {
+      "movement": 12,
+      "toughness": 5,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "twin-boltgun",
+        "name": "Twin boltgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Twin-linked"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Turbo-boost",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dw-deathwatch-terminator-squad",
+    "name": "Deathwatch Terminator Squad",
+    "faction": "Deathwatch",
+    "role": "ELITES",
+    "basePoints": 210,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "power-fist",
+        "name": "Power fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Terminator Honours",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dw-captain",
+    "name": "Captain",
+    "faction": "Deathwatch",
+    "role": "HQ",
+    "basePoints": 80,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "master-crafted-power-weapon",
+        "name": "Master-crafted power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Rites of Battle",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dw-librarian",
+    "name": "Librarian",
+    "faction": "Deathwatch",
+    "role": "HQ",
+    "basePoints": 65,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "smite",
+        "name": "Smite",
+        "type": "Assault",
+        "range": 24,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": "D3",
+        "abilities": [
+          "Psychic"
+        ]
+      },
+      {
+        "id": "force-weapon",
+        "name": "Force weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": "D3",
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Psychic Hood",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Mental Fortress",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dw-chaplain",
+    "name": "Chaplain",
+    "faction": "Deathwatch",
+    "role": "HQ",
+    "basePoints": 60,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "5+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "crozius-arcanum",
+        "name": "Crozius arcanum",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Litany of Hate",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Spiritual Leader",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dw-dreadnought",
+    "name": "Dreadnought",
+    "faction": "Deathwatch",
+    "role": "ELITES",
+    "basePoints": 135,
+    "stats": {
+      "movement": 6,
+      "toughness": 9,
+      "save": "2+",
+      "wounds": 8,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "assault-cannon",
+        "name": "Assault cannon",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 6,
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      },
+      {
+        "id": "dreadnought-combat-weapon",
+        "name": "Dreadnought combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 3,
+        "strength": 12,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Wisdom of the Ancients",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "dw-drop-pod",
+    "name": "Drop Pod",
+    "faction": "Deathwatch",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 70,
+    "stats": {
+      "movement": 0,
+      "toughness": 8,
+      "save": "3+",
+      "wounds": 10,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Drop Pod Assault",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  }
+]

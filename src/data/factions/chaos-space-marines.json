@@ -1,1 +1,928 @@
-[]
+[
+  {
+    "id": "csm-abaddon",
+    "name": "Abaddon the Despoiler",
+    "faction": "Chaos Space Marines",
+    "role": "HQ",
+    "basePoints": 310,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 9,
+      "leadership": "5+",
+      "objectiveControl": 4
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "talon-of-horus-ranged",
+        "name": "Talon of Horus (Ranged)",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 4,
+        "ballisticSkill": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Rapid Fire 4"
+        ]
+      },
+      {
+        "id": "talon-of-horus-melee",
+        "name": "Talon of Horus (Melee)",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 14,
+        "weaponSkill": 2,
+        "strength": 7,
+        "armourPenetration": -3,
+        "damage": 1,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "drachnyen",
+        "name": "Drach'nyen",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 8,
+        "weaponSkill": 2,
+        "strength": 14,
+        "armourPenetration": -4,
+        "damage": 3,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Warmaster",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Mark of Chaos Ascendant",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Dark Destiny",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "csm-chaos-lord",
+    "name": "Chaos Lord",
+    "faction": "Chaos Space Marines",
+    "role": "HQ",
+    "basePoints": 90,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plasma-pistol",
+        "name": "Plasma pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "daemon-hammer",
+        "name": "Daemon hammer",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Chaos Lord",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Chance for Glory",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "csm-chaos-lord-terminator",
+    "name": "Chaos Lord in Terminator Armour",
+    "faction": "Chaos Space Marines",
+    "role": "HQ",
+    "basePoints": 95,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 6,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "combi-bolter",
+        "name": "Combi-bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2",
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "exalted-weapon",
+        "name": "Exalted weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Chaos Lord",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Terminator Armour",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "csm-sorcerer",
+    "name": "Sorcerer",
+    "faction": "Chaos Space Marines",
+    "role": "HQ",
+    "basePoints": 60,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "infernal-gaze",
+        "name": "Infernal Gaze",
+        "type": "Assault",
+        "range": 18,
+        "attacks": "D3",
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": "D3",
+        "abilities": [
+          "Psychic"
+        ]
+      },
+      {
+        "id": "force-weapon",
+        "name": "Force weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": "D3",
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Prescience",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Gift of Chaos",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "csm-master-of-possession",
+    "name": "Master of Possession",
+    "faction": "Chaos Space Marines",
+    "role": "HQ",
+    "basePoints": 70,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "rite-of-possession",
+        "name": "Rite of Possession",
+        "type": "Assault",
+        "range": 18,
+        "attacks": "D3",
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Psychic",
+          "Anti-Psyker 2+",
+          "Devastating Wounds"
+        ]
+      },
+      {
+        "id": "staff-of-possession",
+        "name": "Staff of possession",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": "D3",
+        "abilities": [
+          "Psychic",
+          "Anti-Psyker 2+",
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Mutated Invigoration",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Sacrificial Dagger",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "csm-master-of-executions",
+    "name": "Master of Executions",
+    "faction": "Chaos Space Marines",
+    "role": "HQ",
+    "basePoints": 80,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "axe-of-dismemberment",
+        "name": "Axe of dismemberment",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds",
+          "Precision"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Warp-sighted Butcher",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Trophy Taker",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "csm-dark-apostle",
+    "name": "Dark Apostle",
+    "faction": "Chaos Space Marines",
+    "role": "HQ",
+    "basePoints": 75,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "5+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "accursed-crozius",
+        "name": "Accursed crozius",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Dark Zealotry",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Demagogue",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "csm-warpsmith",
+    "name": "Warpsmith",
+    "faction": "Chaos Space Marines",
+    "role": "HQ",
+    "basePoints": 70,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plasma-pistol",
+        "name": "Plasma pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "melta-tendril",
+        "name": "Melta tendril",
+        "type": "Assault",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": -4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "exalted-weapon",
+        "name": "Exalted weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "mechatendrils",
+        "name": "Mechatendrils",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Extra Attacks"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Master of Mechanisms",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Daemonic Smith",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "csm-legionaries",
+    "name": "Legionaries",
+    "faction": "Chaos Space Marines",
+    "role": "TROOPS",
+    "basePoints": 90,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "boltgun",
+        "name": "Boltgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "astartes-chainsword",
+        "name": "Astartes chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Veterans of the Long War",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "csm-cultist-mob",
+    "name": "Cultist Mob",
+    "faction": "Chaos Space Marines",
+    "role": "TROOPS",
+    "basePoints": 50,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "6+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "cultist-firearm",
+        "name": "Cultist firearm",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "brutal-assault-weapon",
+        "name": "Brutal assault weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "For the Dark Gods",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "csm-chosen",
+    "name": "Chosen",
+    "faction": "Chaos Space Marines",
+    "role": "ELITES",
+    "basePoints": 130,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "boltgun",
+        "name": "Boltgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "accursed-weapon",
+        "name": "Accursed weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Chosen Marauders",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "csm-chaos-terminators",
+    "name": "Chaos Terminators",
+    "faction": "Chaos Space Marines",
+    "role": "ELITES",
+    "basePoints": 185,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "combi-bolter",
+        "name": "Combi-bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "accursed-weapon",
+        "name": "Accursed weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Despoilers",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "csm-possessed",
+    "name": "Possessed",
+    "faction": "Chaos Space Marines",
+    "role": "ELITES",
+    "basePoints": 130,
+    "stats": {
+      "movement": 9,
+      "toughness": 5,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "hideous-mutations",
+        "name": "Hideous mutations",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Fearsome Predators",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "csm-warp-talons",
+    "name": "Warp Talons",
+    "faction": "Chaos Space Marines",
+    "role": "FAST_ATTACK",
+    "basePoints": 110,
+    "stats": {
+      "movement": 12,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "warp-claws",
+        "name": "Warp claws",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Twin-linked"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Warp Strike",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "csm-raptors",
+    "name": "Raptors",
+    "faction": "Chaos Space Marines",
+    "role": "FAST_ATTACK",
+    "basePoints": 90,
+    "stats": {
+      "movement": 12,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "astartes-chainsword",
+        "name": "Astartes chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Fearsome Assault",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "csm-havocs",
+    "name": "Havocs",
+    "faction": "Chaos Space Marines",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 135,
+    "stats": {
+      "movement": 6,
+      "toughness": 5,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "havoc-autocannon",
+        "name": "Havoc autocannon",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": -1,
+        "damage": 3,
+        "abilities": []
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Stabilisation Talons",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "csm-obliterators",
+    "name": "Obliterators",
+    "faction": "Chaos Space Marines",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 180,
+    "stats": {
+      "movement": 4,
+      "toughness": 7,
+      "save": "2+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "fleshmetal-guns",
+        "name": "Fleshmetal guns",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": "D3",
+        "ballisticSkill": 3,
+        "strength": 12,
+        "armourPenetration": -3,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "crushing-fists",
+        "name": "Crushing fists",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Warp-spawned Physiology",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  }
+]
