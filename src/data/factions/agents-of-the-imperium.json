@@ -1,1 +1,815 @@
-[]
+[
+  {
+    "id": "aoi-inquisitor-coteaz",
+    "name": "Inquisitor Coteaz",
+    "faction": "Agents of the Imperium",
+    "role": "HQ",
+    "basePoints": 75,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "2+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "nemesis-daemon-hammer",
+        "name": "Nemesis Daemon Hammer",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Spy Network",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "aoi-inquisitor-karamazov",
+    "name": "Inquisitor Karamazov",
+    "faction": "Agents of the Imperium",
+    "role": "HQ",
+    "basePoints": 130,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "3+",
+      "wounds": 7,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "master-crafted-multi-melta",
+        "name": "Master-crafted Multi-melta",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 9,
+        "armourPenetration": -4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "master-crafted-power-sword",
+        "name": "Master-crafted Power Sword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Dreadful Resolve",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "aoi-inquisitor-eisenhorn",
+    "name": "Inquisitor Eisenhorn",
+    "faction": "Agents of the Imperium",
+    "role": "HQ",
+    "basePoints": 65,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "artificer-bolt-pistol",
+        "name": "Artificer Bolt Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "barbarisater",
+        "name": "Barbarisater",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Feel No Pain",
+        "description": "5+"
+      },
+      {
+        "name": "Malus Codicium",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "aoi-inquisitor",
+    "name": "Inquisitor",
+    "faction": "Agents of the Imperium",
+    "role": "HQ",
+    "basePoints": 55,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "combi-weapon",
+        "name": "Combi-weapon",
+        "points": 0
+      },
+      {
+        "id": "force-weapon",
+        "name": "Force Weapon",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "chainsword",
+        "name": "Chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Authority of the Inquisition",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "aoi-rogue-trader-entourage",
+    "name": "Rogue Trader Entourage",
+    "faction": "Agents of the Imperium",
+    "role": "HQ",
+    "basePoints": 105,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "household-pistol",
+        "name": "Household Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Warrant of Trade",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "aoi-voidsmen-at-arms",
+    "name": "Voidsmen-at-Arms",
+    "faction": "Agents of the Imperium",
+    "role": "BATTLELINE",
+    "basePoints": 50,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "rotor-cannon",
+        "name": "Rotor Cannon",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "lasgun",
+        "name": "Lasgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Masters of the Void",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "aoi-eversor-assassin",
+    "name": "Eversor Assassin",
+    "faction": "Agents of the Imperium",
+    "role": "ELITES",
+    "basePoints": 75,
+    "stats": {
+      "movement": 9,
+      "toughness": 4,
+      "save": "6+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "executor-pistol",
+        "name": "Executor Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 4,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "power-sword-and-neuro-gauntlet",
+        "name": "Power Sword and Neuro-gauntlet",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Anti-INFANTRY 4+"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Lone Operative",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Frenzied Metabolism",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "aoi-culexus-assassin",
+    "name": "Culexus Assassin",
+    "faction": "Agents of the Imperium",
+    "role": "ELITES",
+    "basePoints": 85,
+    "stats": {
+      "movement": 7,
+      "toughness": 4,
+      "save": "6+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "animus-speculum",
+        "name": "Animus Speculum",
+        "type": "Assault",
+        "range": 18,
+        "attacks": "D6",
+        "ballisticSkill": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Anti-PSYKER 2+"
+        ]
+      },
+      {
+        "id": "life-draining-touch",
+        "name": "Life-draining Touch",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 2,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Anti-PSYKER 2+"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Lone Operative",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Abomination",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "aoi-callidus-assassin",
+    "name": "Callidus Assassin",
+    "faction": "Agents of the Imperium",
+    "role": "ELITES",
+    "basePoints": 90,
+    "stats": {
+      "movement": 7,
+      "toughness": 4,
+      "save": "6+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "neural-shredder",
+        "name": "Neural Shredder",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Torrent"
+        ]
+      },
+      {
+        "id": "phase-sword",
+        "name": "Phase Sword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 4,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Lone Operative",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Polymorphine",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Reign of Confusion",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "aoi-vindicare-assassin",
+    "name": "Vindicare Assassin",
+    "faction": "Agents of the Imperium",
+    "role": "ELITES",
+    "basePoints": 80,
+    "stats": {
+      "movement": 7,
+      "toughness": 4,
+      "save": "6+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "exitus-rifle",
+        "name": "Exitus Rifle",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 7,
+        "armourPenetration": -3,
+        "damage": "D3+3",
+        "abilities": [
+          "Precision",
+          "Ignores Cover"
+        ]
+      },
+      {
+        "id": "exitus-pistol",
+        "name": "Exitus Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Lone Operative",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Stealth",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deadshot",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "aoi-exaction-squad",
+    "name": "Exaction Squad",
+    "faction": "Agents of the Imperium",
+    "role": "BATTLELINE",
+    "basePoints": 35,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "executioner-shotgun",
+        "name": "Executioner Shotgun",
+        "points": 0
+      },
+      {
+        "id": "webber",
+        "name": "Webber",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "combat-shotgun",
+        "name": "Combat Shotgun",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Feel No Pain",
+        "description": "5+"
+      },
+      {
+        "name": "Ruthless Efficiency",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "aoi-navy-breachers",
+    "name": "Navy Breachers",
+    "faction": "Agents of the Imperium",
+    "role": "BATTLELINE",
+    "basePoints": 90,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "navis-las-volley",
+        "name": "Navis Las-volley",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "navis-shotgun",
+        "name": "Navis Shotgun",
+        "type": "Assault",
+        "range": 12,
+        "attacks": 2,
+        "ballisticSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Breaching Charge",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "aoi-subductor-squad",
+    "name": "Subductor Squad",
+    "faction": "Agents of the Imperium",
+    "role": "BATTLELINE",
+    "basePoints": 85,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "shock-maul",
+        "name": "Shock Maul",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Subdue and Capture",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "aoi-vigilant-squad",
+    "name": "Vigilant Squad",
+    "faction": "Agents of the Imperium",
+    "role": "BATTLELINE",
+    "basePoints": 85,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "executioner-shotgun",
+        "name": "Executioner Shotgun",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "combat-shotgun",
+        "name": "Combat Shotgun",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Feel No Pain",
+        "description": "5+"
+      },
+      {
+        "name": "Enforcers of the Lex",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "aoi-lord-inquisitor-kyria-draxus",
+    "name": "Lord Inquisitor Kyria Draxus",
+    "faction": "Agents of the Imperium",
+    "role": "HQ",
+    "basePoints": 85,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "dirgesinger",
+        "name": "Dirgesinger",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 4,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Anti-INFANTRY 4+"
+        ]
+      },
+      {
+        "id": "power-fist",
+        "name": "Power Fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Radical",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "aoi-inquisitorial-agents",
+    "name": "Inquisitorial Agents",
+    "faction": "Agents of the Imperium",
+    "role": "ELITES",
+    "basePoints": 50,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "plasma-pistol",
+        "name": "Plasma Pistol",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "auto-pistol",
+        "name": "Auto Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Acolytes",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  }
+]

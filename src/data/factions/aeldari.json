@@ -1,1 +1,1095 @@
-[]
+[
+  {
+    "id": "ae-eldrad-ulthran",
+    "name": "Eldrad Ulthran",
+    "faction": "Aeldari",
+    "role": "HQ",
+    "basePoints": 110,
+    "stats": {
+      "movement": 7,
+      "toughness": 3,
+      "save": "6+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "staff-of-ulthamar",
+        "name": "Staff of Ulthamar",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": "D3",
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Feel No Pain",
+        "description": "5+"
+      },
+      {
+        "name": "Divination",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-autarch",
+    "name": "Autarch",
+    "faction": "Aeldari",
+    "role": "HQ",
+    "basePoints": 75,
+    "stats": {
+      "movement": 8,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "star-glaive",
+        "name": "Star Glaive",
+        "points": 0
+      },
+      {
+        "id": "fusion-pistol",
+        "name": "Fusion Pistol",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "star-glaive",
+        "name": "Star Glaive",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Path of Command",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-farseer",
+    "name": "Farseer",
+    "faction": "Aeldari",
+    "role": "HQ",
+    "basePoints": 80,
+    "stats": {
+      "movement": 7,
+      "toughness": 3,
+      "save": "6+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "witchblade",
+        "name": "Witchblade",
+        "points": 0
+      },
+      {
+        "id": "singing-spear",
+        "name": "Singing Spear",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "witchblade",
+        "name": "Witchblade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 2,
+        "abilities": [
+          "Anti-INFANTRY 2+"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Branching Fates",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Fortune",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-spiritseer",
+    "name": "Spiritseer",
+    "faction": "Aeldari",
+    "role": "HQ",
+    "basePoints": 65,
+    "stats": {
+      "movement": 7,
+      "toughness": 3,
+      "save": "6+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "witch-staff",
+        "name": "Witch Staff",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "shuriken-pistol",
+        "name": "Shuriken Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Spirit Mark",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Tears of Isha",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-guardian-defenders",
+    "name": "Guardian Defenders",
+    "faction": "Aeldari",
+    "role": "BATTLELINE",
+    "basePoints": 110,
+    "stats": {
+      "movement": 8,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "heavy-weapon-platform",
+        "name": "Heavy Weapon Platform",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "shuriken-catapult",
+        "name": "Shuriken Catapult",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Defenders of Ulthwe",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-storm-guardians",
+    "name": "Storm Guardians",
+    "faction": "Aeldari",
+    "role": "BATTLELINE",
+    "basePoints": 115,
+    "stats": {
+      "movement": 8,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "serpent-scale-platform",
+        "name": "Serpent Scale Platform",
+        "points": 0
+      },
+      {
+        "id": "fusion-gun",
+        "name": "Fusion Gun",
+        "points": 0
+      },
+      {
+        "id": "flamer",
+        "name": "Flamer",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "shuriken-pistol",
+        "name": "Shuriken Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "guardian-combat-weapon",
+        "name": "Guardian Combat Weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Storm of Blades",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-dire-avengers",
+    "name": "Dire Avengers",
+    "faction": "Aeldari",
+    "role": "ELITES",
+    "basePoints": 70,
+    "stats": {
+      "movement": 8,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 1,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "shuriken-catapult",
+        "name": "Shuriken Catapult",
+        "points": 0
+      },
+      {
+        "id": "direshword",
+        "name": "Diresword",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "avenger-shuriken-catapult",
+        "name": "Avenger Shuriken Catapult",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Defense Tactics",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-howling-banshees",
+    "name": "Howling Banshees",
+    "faction": "Aeldari",
+    "role": "ELITES",
+    "basePoints": 85,
+    "stats": {
+      "movement": 8,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 1,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "executioner",
+        "name": "Executioner",
+        "points": 0
+      },
+      {
+        "id": "mirrorswords",
+        "name": "Mirrorswords",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "banshee-blade",
+        "name": "Banshee Blade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": -3,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Acrobatic",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Banshee Mask",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-striking-scorpions",
+    "name": "Striking Scorpions",
+    "faction": "Aeldari",
+    "role": "ELITES",
+    "basePoints": 75,
+    "stats": {
+      "movement": 8,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 1,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "biting-blade",
+        "name": "Biting Blade",
+        "points": 0
+      },
+      {
+        "id": "scorpions-claw",
+        "name": "Scorpion's Claw",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "scorpion-chainsword",
+        "name": "Scorpion Chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Sustained Hits 1"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Mandiblasters",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Shadow Strike",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-fire-dragons",
+    "name": "Fire Dragons",
+    "faction": "Aeldari",
+    "role": "ELITES",
+    "basePoints": 85,
+    "stats": {
+      "movement": 8,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 1,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "firepike",
+        "name": "Firepike",
+        "points": 0
+      },
+      {
+        "id": "dragons-breath-flamer",
+        "name": "Dragon's Breath Flamer",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "fusion-gun",
+        "name": "Fusion Gun",
+        "type": "Assault",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": -4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Assured Destruction",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-wraithguard",
+    "name": "Wraithguard",
+    "faction": "Aeldari",
+    "role": "ELITES",
+    "basePoints": 190,
+    "stats": {
+      "movement": 5,
+      "toughness": 7,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "wraithcannon",
+        "name": "Wraithcannon",
+        "points": 0
+      },
+      {
+        "id": "d-scythe",
+        "name": "D-scythe",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "wraithcannon",
+        "name": "Wraithcannon",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 14,
+        "armourPenetration": -4,
+        "damage": "D6",
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Construct",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Implacable",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-wraithblades",
+    "name": "Wraithblades",
+    "faction": "Aeldari",
+    "role": "ELITES",
+    "basePoints": 170,
+    "stats": {
+      "movement": 5,
+      "toughness": 7,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "ghostswords",
+        "name": "Ghostswords",
+        "points": 0
+      },
+      {
+        "id": "ghostaxe-and-forceshield",
+        "name": "Ghostaxe and Forceshield",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "ghostswords",
+        "name": "Ghostswords",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Construct",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Wraithbone Form",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-swooping-hawks",
+    "name": "Swooping Hawks",
+    "faction": "Aeldari",
+    "role": "FAST_ATTACK",
+    "basePoints": 75,
+    "stats": {
+      "movement": 14,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 1,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "hawks-talon",
+        "name": "Hawk's Talon",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "lasblaster",
+        "name": "Lasblaster",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 4,
+        "ballisticSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Skyleap",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-warp-spiders",
+    "name": "Warp Spiders",
+    "faction": "Aeldari",
+    "role": "FAST_ATTACK",
+    "basePoints": 115,
+    "stats": {
+      "movement": 14,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 1,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "twin-death-spinner",
+        "name": "Twin Death Spinner",
+        "points": 0
+      },
+      {
+        "id": "powerblades",
+        "name": "Powerblades",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "death-spinner",
+        "name": "Death Spinner",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds",
+          "Torrent"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Warp Jump",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Flickerjump",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-windriders",
+    "name": "Windriders",
+    "faction": "Aeldari",
+    "role": "FAST_ATTACK",
+    "basePoints": 80,
+    "stats": {
+      "movement": 14,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "shuriken-cannon",
+        "name": "Shuriken Cannon",
+        "points": 0
+      },
+      {
+        "id": "scatter-laser",
+        "name": "Scatter Laser",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "twin-shuriken-catapult",
+        "name": "Twin Shuriken Catapult",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Twin-linked"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Swift Demise",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-wave-serpent",
+    "name": "Wave Serpent",
+    "faction": "Aeldari",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 120,
+    "stats": {
+      "movement": 14,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 13,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "twin-bright-lance",
+        "name": "Twin Bright Lance",
+        "points": 0
+      },
+      {
+        "id": "twin-starcannon",
+        "name": "Twin Starcannon",
+        "points": 0
+      },
+      {
+        "id": "twin-scatter-laser",
+        "name": "Twin Scatter Laser",
+        "points": 0
+      },
+      {
+        "id": "twin-shuriken-cannon",
+        "name": "Twin Shuriken Cannon",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "twin-shuriken-cannon",
+        "name": "Twin Shuriken Cannon",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Sustained Hits 1",
+          "Twin-linked"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Deadly Demise",
+        "description": "D3"
+      },
+      {
+        "name": "Serpent Shield",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-falcon",
+    "name": "Falcon",
+    "faction": "Aeldari",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 140,
+    "stats": {
+      "movement": 14,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 11,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "bright-lance",
+        "name": "Bright Lance",
+        "points": 0
+      },
+      {
+        "id": "starcannon",
+        "name": "Starcannon",
+        "points": 0
+      },
+      {
+        "id": "scatter-laser",
+        "name": "Scatter Laser",
+        "points": 0
+      },
+      {
+        "id": "shuriken-cannon",
+        "name": "Shuriken Cannon",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "pulse-laser",
+        "name": "Pulse Laser",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": -3,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Deadly Demise",
+        "description": "D3"
+      },
+      {
+        "name": "Cloudstrike",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-wraithlord",
+    "name": "Wraithlord",
+    "faction": "Aeldari",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 160,
+    "stats": {
+      "movement": 8,
+      "toughness": 11,
+      "save": "2+",
+      "wounds": 10,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [
+      {
+        "id": "ghostglaive",
+        "name": "Ghostglaive",
+        "points": 0
+      },
+      {
+        "id": "bright-lance",
+        "name": "Bright Lance",
+        "points": 0
+      },
+      {
+        "id": "starcannon",
+        "name": "Starcannon",
+        "points": 0
+      },
+      {
+        "id": "scatter-laser",
+        "name": "Scatter Laser",
+        "points": 0
+      },
+      {
+        "id": "shuriken-cannon",
+        "name": "Shuriken Cannon",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "wraithbone-fists",
+        "name": "Wraithbone Fists",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 3,
+        "strength": 10,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Deadly Demise",
+        "description": "D3"
+      },
+      {
+        "name": "Construct",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Wraithbone Form",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ae-avatar-of-khaine",
+    "name": "Avatar of Khaine",
+    "faction": "Aeldari",
+    "role": "HQ",
+    "basePoints": 335,
+    "stats": {
+      "movement": 10,
+      "toughness": 12,
+      "save": "2+",
+      "wounds": 14,
+      "leadership": "5+",
+      "objectiveControl": 5
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "the-wailing-doom-ranged",
+        "name": "The Wailing Doom (Ranged)",
+        "type": "Assault",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 14,
+        "armourPenetration": -4,
+        "damage": "D6+2",
+        "abilities": [
+          "Melta 2",
+          "Sustained Hits 1"
+        ]
+      },
+      {
+        "id": "the-wailing-doom-strike",
+        "name": "The Wailing Doom (Strike)",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 14,
+        "armourPenetration": -4,
+        "damage": "D6+2",
+        "abilities": []
+      },
+      {
+        "id": "the-wailing-doom-sweep",
+        "name": "The Wailing Doom (Sweep)",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 10,
+        "weaponSkill": 2,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Feel No Pain",
+        "description": "5+"
+      },
+      {
+        "name": "Deadly Demise",
+        "description": "D6"
+      },
+      {
+        "name": "Molten Form",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  }
+]
