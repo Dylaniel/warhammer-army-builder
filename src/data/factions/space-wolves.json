@@ -1,1 +1,246 @@
-[]
+﻿[
+  {
+    "id": "sw-logan-grimnar",
+    "name": "Logan Grimnar",
+    "faction": "Space Wolves",
+    "role": "HQ",
+    "basePoints": 100,
+    "stats": { "movement": 5, "toughness": 5, "save": "2+", "wounds": 6, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "storm-bolter", "name": "Storm Bolter", "type": "Rapid Fire", "range": 24, "attacks": 2, "ballisticSkill": 2, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": ["Rapid Fire 2"] },
+      { "id": "the-axe-morkai", "name": "The Axe Morkai", "type": "Melee", "range": "Melee", "attacks": 6, "weaponSkill": 2, "strength": 8, "armourPenetration": -3, "damage": 3, "abilities": ["Devastating Wounds"] }
+    ],
+    "abilities": [
+      { "name": "The High King", "description": "[Rules text requires manual verification]" },
+      { "name": "High King of Fenris", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "sw-bjorn-the-fell-handed",
+    "name": "Bjorn the Fell-Handed",
+    "faction": "Space Wolves",
+    "role": "HQ",
+    "basePoints": 180,
+    "stats": { "movement": 8, "toughness": 9, "save": "2+", "wounds": 8, "leadership": "6+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "assault-cannon", "name": "Assault Cannon", "type": "Heavy", "range": 24, "attacks": 6, "ballisticSkill": 2, "strength": 6, "armourPenetration": 0, "damage": 1, "abilities": ["Devastating Wounds"] },
+      { "id": "trueclaw", "name": "Trueclaw", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 2, "strength": 12, "armourPenetration": -3, "damage": "D6+1", "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Legendary Tenacity", "description": "[Rules text requires manual verification]" },
+      { "name": "Ancient Tactician", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "sw-ragnar-blackmane",
+    "name": "Ragnar Blackmane",
+    "faction": "Space Wolves",
+    "role": "HQ",
+    "basePoints": 90,
+    "stats": { "movement": 6, "toughness": 4, "save": "3+", "wounds": 5, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "bolt-pistol", "name": "Bolt Pistol", "type": "Pistol", "range": 12, "attacks": 1, "ballisticSkill": 2, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "frostfang", "name": "Frostfang", "type": "Melee", "range": "Melee", "attacks": 10, "weaponSkill": 2, "strength": 6, "armourPenetration": -3, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "War Howl", "description": "[Rules text requires manual verification]" },
+      { "name": "Battlelust", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "sw-njal-stormcaller",
+    "name": "Njal Stormcaller",
+    "faction": "Space Wolves",
+    "role": "HQ",
+    "basePoints": 85,
+    "stats": { "movement": 5, "toughness": 5, "save": "2+", "wounds": 5, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "living-lightning", "name": "Living Lightning", "type": "Assault", "range": 18, "attacks": "D6", "ballisticSkill": 3, "strength": 6, "armourPenetration": -2, "damage": 1, "abilities": ["Psychic"] },
+      { "id": "staff-of-the-stormcaller", "name": "Staff of the Stormcaller", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 3, "strength": 6, "armourPenetration": -1, "damage": "D3", "abilities": ["Psychic"] }
+    ],
+    "abilities": [
+      { "name": "Tempest's Wrath (Psychic)", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "sw-arjac-rockfist",
+    "name": "Arjac Rockfist",
+    "faction": "Space Wolves",
+    "role": "HQ",
+    "basePoints": 95,
+    "stats": { "movement": 5, "toughness": 5, "save": "2+", "wounds": 5, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "foehammer-thrown", "name": "Foehammer (Thrown)", "type": "Assault", "range": 12, "attacks": 1, "ballisticSkill": 2, "strength": 8, "armourPenetration": -2, "damage": 3, "abilities": [] },
+      { "id": "foehammer-melee", "name": "Foehammer (Melee)", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 2, "strength": 8, "armourPenetration": -2, "damage": 3, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Champion of the Kingsguard", "description": "[Rules text requires manual verification]" },
+      { "name": "Anvil of Fenris", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "sw-blood-claws",
+    "name": "Blood Claws",
+    "faction": "Space Wolves",
+    "role": "TROOPS",
+    "basePoints": 140,
+    "stats": { "movement": 6, "toughness": 4, "save": "3+", "wounds": 2, "leadership": "6+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "bolt-pistol", "name": "Bolt Pistol", "type": "Pistol", "range": 12, "attacks": 1, "ballisticSkill": 3, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "astartes-chainsword", "name": "Astartes Chainsword", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 3, "strength": 4, "armourPenetration": -1, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Berserk Charge", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "sw-grey-hunters",
+    "name": "Grey Hunters",
+    "faction": "Space Wolves",
+    "role": "TROOPS",
+    "basePoints": 85,
+    "stats": { "movement": 6, "toughness": 4, "save": "3+", "wounds": 2, "leadership": "6+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "boltgun", "name": "Boltgun", "type": "Rapid Fire", "range": 24, "attacks": 1, "ballisticSkill": 3, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": ["Rapid Fire 1"] },
+      { "id": "close-combat-weapon", "name": "Close Combat Weapon", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 3, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Cunning of the Wolf", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "sw-wolf-guard",
+    "name": "Wolf Guard",
+    "faction": "Space Wolves",
+    "role": "ELITES",
+    "basePoints": 95,
+    "stats": { "movement": 6, "toughness": 4, "save": "3+", "wounds": 2, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "boltgun", "name": "Boltgun", "type": "Rapid Fire", "range": 24, "attacks": 1, "ballisticSkill": 3, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": ["Rapid Fire 1"] },
+      { "id": "heirloom-weapon", "name": "Heirloom Weapon", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 3, "strength": 5, "armourPenetration": -2, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Pack Leaders", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "sw-wolf-guard-terminators",
+    "name": "Wolf Guard Terminators",
+    "faction": "Space Wolves",
+    "role": "ELITES",
+    "basePoints": 185,
+    "stats": { "movement": 5, "toughness": 5, "save": "2+", "wounds": 3, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "storm-bolter", "name": "Storm Bolter", "type": "Rapid Fire", "range": 24, "attacks": 2, "ballisticSkill": 3, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": ["Rapid Fire 2"] },
+      { "id": "power-fist", "name": "Power Fist", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 3, "strength": 8, "armourPenetration": -2, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Terminator Armour", "description": "[Rules text requires manual verification]" },
+      { "name": "Arrogance of Valor", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "sw-wulfen",
+    "name": "Wulfen",
+    "faction": "Space Wolves",
+    "role": "ELITES",
+    "basePoints": 80,
+    "stats": { "movement": 8, "toughness": 5, "save": "4+", "wounds": 3, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "wulfen-claws", "name": "Wulfen Claws", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 3, "strength": 5, "armourPenetration": -1, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Death Frenzy", "description": "[Rules text requires manual verification]" },
+      { "name": "Curse of the Wulfen", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "sw-thunderwolf-cavalry",
+    "name": "Thunderwolf Cavalry",
+    "faction": "Space Wolves",
+    "role": "FAST_ATTACK",
+    "basePoints": 90,
+    "stats": { "movement": 10, "toughness": 6, "save": "3+", "wounds": 4, "leadership": "6+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "heirloom-weapon", "name": "Heirloom Weapon", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 3, "strength": 5, "armourPenetration": -2, "damage": 1, "abilities": [] },
+      { "id": "crushing-teeth-and-claws", "name": "Crushing Teeth and Claws", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 4, "strength": 5, "armourPenetration": -1, "damage": 1, "abilities": ["Extra Attacks"] }
+    ],
+    "abilities": [
+      { "name": "Ferocious Charge", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "sw-cyberwolves",
+    "name": "Cyberwolves",
+    "faction": "Space Wolves",
+    "role": "FAST_ATTACK",
+    "basePoints": 20,
+    "stats": { "movement": 10, "toughness": 4, "save": "4+", "wounds": 2, "leadership": "7+", "objectiveControl": 0 },
+    "options": [],
+    "weapons": [
+      { "id": "teeth-and-claws", "name": "Teeth and Claws", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 3, "strength": 4, "armourPenetration": -1, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Alpha Hunter", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "sw-fenrisian-wolves",
+    "name": "Fenrisian Wolves",
+    "faction": "Space Wolves",
+    "role": "FAST_ATTACK",
+    "basePoints": 30,
+    "stats": { "movement": 10, "toughness": 4, "save": "6+", "wounds": 1, "leadership": "7+", "objectiveControl": 0 },
+    "options": [],
+    "weapons": [
+      { "id": "teeth-and-claws", "name": "Teeth and Claws", "type": "Melee", "range": "Melee", "attacks": 2, "weaponSkill": 4, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Swift Hunters", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "sw-wulfen-dreadnought",
+    "name": "Wulfen Dreadnought",
+    "faction": "Space Wolves",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 130,
+    "stats": { "movement": 8, "toughness": 9, "save": "3+", "wounds": 8, "leadership": "6+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "fenrisian-great-axe-strike", "name": "Fenrisian Great Axe (Strike)", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 3, "strength": 10, "armourPenetration": -3, "damage": "D6+1", "abilities": [] },
+      { "id": "fenrisian-great-axe-sweep", "name": "Fenrisian Great Axe (Sweep)", "type": "Melee", "range": "Melee", "attacks": 10, "weaponSkill": 3, "strength": 6, "armourPenetration": -3, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Murderous Blizzard", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise 1", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "sw-long-fangs",
+    "name": "Long Fangs",
+    "faction": "Space Wolves",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 150,
+    "stats": { "movement": 6, "toughness": 4, "save": "3+", "wounds": 2, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "heavy-bolter", "name": "Heavy Bolter", "type": "Heavy", "range": 36, "attacks": 3, "ballisticSkill": 4, "strength": 5, "armourPenetration": -1, "damage": 2, "abilities": ["Heavy", "Sustained Hits 1"] },
+      { "id": "close-combat-weapon", "name": "Close Combat Weapon", "type": "Melee", "range": "Melee", "attacks": 2, "weaponSkill": 3, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Fire Discipline", "description": "[Rules text requires manual verification]" }
+    ]
+  }
+]
