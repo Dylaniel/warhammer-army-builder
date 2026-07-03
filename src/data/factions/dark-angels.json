@@ -1,1 +1,836 @@
-[]
+[
+  {
+    "id": "da-lion-eljonson",
+    "name": "Lion El'Jonson",
+    "faction": "Dark Angels",
+    "role": "HQ",
+    "basePoints": 380,
+    "stats": {
+      "movement": 8,
+      "toughness": 9,
+      "save": "2+",
+      "wounds": 10,
+      "leadership": "5+",
+      "objectiveControl": 4
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "arma-luminis-strike",
+        "name": "Arma Luminis - strike",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 4,
+        "ballisticSkill": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "fealty-strike",
+        "name": "Fealty - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 8,
+        "weaponSkill": 2,
+        "strength": 12,
+        "armourPenetration": -4,
+        "damage": 4,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "fealty-sweep",
+        "name": "Fealty - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 16,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "The Emperor's Shield",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Primarch of the First Legion",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "da-azrael",
+    "name": "Azrael",
+    "faction": "Dark Angels",
+    "role": "HQ",
+    "basePoints": 105,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 6,
+      "leadership": "5+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "lion-wrath",
+        "name": "Lion's Wrath",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      },
+      {
+        "id": "sword-of-secrets",
+        "name": "Sword of Secrets",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Supreme Tactician",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Keeper of the Truth",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "da-belial",
+    "name": "Belial",
+    "faction": "Dark Angels",
+    "role": "HQ",
+    "basePoints": 85,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 6,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "master-crafted-storm-bolter",
+        "name": "Master-crafted storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 2,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "sword-of-silence",
+        "name": "Sword of Silence",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Precision"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Grand Master of the Deathwing",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Strikes of Retribution",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "da-sammael",
+    "name": "Sammael",
+    "faction": "Dark Angels",
+    "role": "HQ",
+    "basePoints": 130,
+    "stats": {
+      "movement": 12,
+      "toughness": 5,
+      "save": "3+",
+      "wounds": 6,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plasma-cannon",
+        "name": "Plasma cannon",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": "D3",
+        "ballisticSkill": 2,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Blast"
+        ]
+      },
+      {
+        "id": "twin-storm-bolter",
+        "name": "Twin storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Twin-linked"
+        ]
+      },
+      {
+        "id": "raven-sword",
+        "name": "Raven Sword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Grand Master of the Ravenwing",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "da-ezekiel",
+    "name": "Ezekiel",
+    "faction": "Dark Angels",
+    "role": "HQ",
+    "basePoints": 75,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 5,
+      "leadership": "5+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "the-deliverer",
+        "name": "The Deliverer",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "mind-wipe",
+        "name": "Mind Wipe",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": [
+          "Psychic"
+        ]
+      },
+      {
+        "id": "traitors-bane",
+        "name": "Traitor's Bane",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": "D3",
+        "abilities": [
+          "Anti-Chaos 2+"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Book of Salvation",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Engulfing Fear",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "da-asmodai",
+    "name": "Asmodai",
+    "faction": "Dark Angels",
+    "role": "HQ",
+    "basePoints": 70,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "5+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "crozius-arcanum",
+        "name": "Crozius arcanum",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "blades-of-reason",
+        "name": "Blades of Reason",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 2,
+        "abilities": [
+          "Extra Attacks",
+          "Precision"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Exemplar of Hate",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Feared Interrogator",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "da-deathwing-knights",
+    "name": "Deathwing Knights",
+    "faction": "Dark Angels",
+    "role": "ELITES",
+    "basePoints": 235,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "mace-of-absolution",
+        "name": "Mace of absolution",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 3,
+        "abilities": []
+      },
+      {
+        "id": "power-weapon",
+        "name": "Power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Inner Circle",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "da-deathwing-terminator-squad",
+    "name": "Deathwing Terminator Squad",
+    "faction": "Dark Angels",
+    "role": "ELITES",
+    "basePoints": 180,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "power-fist",
+        "name": "Power fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deathwing",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "da-inner-circle-companions",
+    "name": "Inner Circle Companions",
+    "faction": "Dark Angels",
+    "role": "ELITES",
+    "basePoints": 90,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-bolt-pistol",
+        "name": "Heavy bolt pistol",
+        "type": "Pistol",
+        "range": 18,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "calibanite-greatsword-strike",
+        "name": "Calibanite greatsword - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "calibanite-greatsword-sweep",
+        "name": "Calibanite greatsword - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Sustained Hits 2"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Guardsmen of the Primarch",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "da-ravenwing-black-knights",
+    "name": "Ravenwing Black Knights",
+    "faction": "Dark Angels",
+    "role": "FAST_ATTACK",
+    "basePoints": 90,
+    "stats": {
+      "movement": 12,
+      "toughness": 5,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plasma-talon",
+        "name": "Plasma talon",
+        "type": "Rapid Fire",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Twin-linked"
+        ]
+      },
+      {
+        "id": "corvus-hammer",
+        "name": "Corvus hammer",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Anti-Vehicle 4+"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Knights of Caliban",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "da-ravenwing-command-squad",
+    "name": "Ravenwing Command Squad",
+    "faction": "Dark Angels",
+    "role": "FAST_ATTACK",
+    "basePoints": 130,
+    "stats": {
+      "movement": 12,
+      "toughness": 5,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plasma-talon",
+        "name": "Plasma talon",
+        "type": "Rapid Fire",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Twin-linked"
+        ]
+      },
+      {
+        "id": "corvus-hammer",
+        "name": "Corvus hammer",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Anti-Vehicle 4+"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Narthecium",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Astartes Banner",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "da-ravenwing-dark-talon",
+    "name": "Ravenwing Dark Talon",
+    "faction": "Dark Angels",
+    "role": "FLYER",
+    "basePoints": 210,
+    "stats": {
+      "movement": "20+",
+      "toughness": 8,
+      "save": "3+",
+      "wounds": 10,
+      "leadership": "6+",
+      "objectiveControl": 0
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "rift-cannon",
+        "name": "Rift cannon",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": "D3",
+        "ballisticSkill": 3,
+        "strength": 16,
+        "armourPenetration": -4,
+        "damage": 3,
+        "abilities": [
+          "Blast",
+          "Devastating Wounds"
+        ]
+      },
+      {
+        "id": "hurricane-bolter",
+        "name": "Hurricane bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 3",
+          "Twin-linked"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Stasis Bomb",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "da-nephilim-jetfighter",
+    "name": "Nephilim Jetfighter",
+    "faction": "Dark Angels",
+    "role": "FLYER",
+    "basePoints": 195,
+    "stats": {
+      "movement": "20+",
+      "toughness": 8,
+      "save": "3+",
+      "wounds": 10,
+      "leadership": "6+",
+      "objectiveControl": 0
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "avenger-mega-bolter",
+        "name": "Avenger mega bolter",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 10,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "twin-heavy-bolter",
+        "name": "Twin heavy bolter",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Sustained Hits 1",
+          "Twin-linked"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Air Superiority",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "da-ravenwing-darkshroud",
+    "name": "Ravenwing Darkshroud",
+    "faction": "Dark Angels",
+    "role": "FAST_ATTACK",
+    "basePoints": 115,
+    "stats": {
+      "movement": 14,
+      "toughness": 8,
+      "save": "3+",
+      "wounds": 10,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-bolter",
+        "name": "Heavy bolter",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Sustained Hits 1"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Icon of Old Caliban",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "da-ravenwing-land-speeder-vengeance",
+    "name": "Ravenwing Land Speeder Vengeance",
+    "faction": "Dark Angels",
+    "role": "FAST_ATTACK",
+    "basePoints": 140,
+    "stats": {
+      "movement": 14,
+      "toughness": 8,
+      "save": "3+",
+      "wounds": 10,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plasma-storm-battery",
+        "name": "Plasma storm battery",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Blast"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Vengeance",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  }
+]
