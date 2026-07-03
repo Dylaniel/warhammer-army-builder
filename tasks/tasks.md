@@ -115,10 +115,10 @@ The following items appeared in earlier planning but have been **deliberately sc
 
 > Expansion of faction support, detachment architecture, and unit hydration.
 
-- [ ] **4.1 Addition of Remaining Factions**
+- [x] **4.1 Addition of Remaining Factions**
   - Introduce barebones, unhydrated JSON structures for all remaining factions matching current repository schema standards, establishing framework files before asset data population.
 
-- [ ] **4.2 Base Detachment Options UI & Faction Gating**
+- [x] **4.2 Base Detachment Options UI & Faction Gating**
   - Hydrate basic detachment naming options per faction. In the army creation UI, the detachment selector dropdown must be disabled (greyed out) until a faction is actively selected. Once selected, dynamically unlock the dropdown populated exclusively with eligible detachment options for that specific faction.
 
 - [ ] **4.3 Full Unit Library Hydration**
