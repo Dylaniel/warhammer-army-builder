@@ -1,1 +1,271 @@
-[]
+﻿[
+  {
+    "id": "tyranids-hive-tyrant",
+    "name": "Hive Tyrant",
+    "faction": "Tyranids",
+    "role": "HQ",
+    "basePoints": 235,
+    "stats": { "movement": 8, "toughness": 10, "save": "2+", "wounds": 10, "leadership": "7+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "heavy-venom-cannon", "name": "Heavy Venom Cannon", "type": "Assault", "range": 36, "attacks": "D3", "ballisticSkill": 2, "strength": 9, "armourPenetration": -2, "damage": 3, "abilities": ["Blast"] },
+      { "id": "monstrous-bonesword-and-lash-whip", "name": "Monstrous Bonesword and Lash Whip", "type": "Melee", "range": "Melee", "attacks": 6, "weaponSkill": 2, "strength": 9, "armourPenetration": -2, "damage": 3, "abilities": ["Twin-linked"] }
+    ],
+    "abilities": [
+      { "name": "Will of the Hive Mind", "description": "[Rules text requires manual verification]" },
+      { "name": "Synapse", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tyranids-winged-hive-tyrant",
+    "name": "Winged Hive Tyrant",
+    "faction": "Tyranids",
+    "role": "HQ",
+    "basePoints": 210,
+    "stats": { "movement": 12, "toughness": 9, "save": "3+", "wounds": 10, "leadership": "7+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "monstrous-bonesword-and-lash-whip", "name": "Monstrous Bonesword and Lash Whip", "type": "Melee", "range": "Melee", "attacks": 6, "weaponSkill": 2, "strength": 9, "armourPenetration": -2, "damage": 3, "abilities": ["Twin-linked"] },
+      { "id": "tyrant-talons", "name": "Tyrant Talons", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 2, "strength": 7, "armourPenetration": -1, "damage": 2, "abilities": ["Extra Attacks"] }
+    ],
+    "abilities": [
+      { "name": "Paroxysm", "description": "[Rules text requires manual verification]" },
+      { "name": "Synapse", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tyranids-broodlord",
+    "name": "Broodlord",
+    "faction": "Tyranids",
+    "role": "HQ",
+    "basePoints": 90,
+    "stats": { "movement": 8, "toughness": 5, "save": "4+", "wounds": 6, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "broodlord-claws-and-talons", "name": "Broodlord Claws and Talons", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 2, "strength": 6, "armourPenetration": -2, "damage": 2, "abilities": ["Devastating Wounds"] }
+    ],
+    "abilities": [
+      { "name": "Hypnotic Gaze", "description": "[Rules text requires manual verification]" },
+      { "name": "Synapse", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tyranids-tervigon",
+    "name": "Tervigon",
+    "faction": "Tyranids",
+    "role": "HQ",
+    "basePoints": 190,
+    "stats": { "movement": 8, "toughness": 11, "save": "2+", "wounds": 16, "leadership": "7+", "objectiveControl": 5 },
+    "options": [],
+    "weapons": [
+      { "id": "stinger-salvoes", "name": "Stinger Salvoes", "type": "Assault", "range": 24, "attacks": 8, "ballisticSkill": 3, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "massive-scything-talons-strike", "name": "Massive Scything Talons (Strike)", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 3, "strength": 10, "armourPenetration": -3, "damage": "D6", "abilities": [] },
+      { "id": "massive-scything-talons-sweep", "name": "Massive Scything Talons (Sweep)", "type": "Melee", "range": "Melee", "attacks": 8, "weaponSkill": 3, "strength": 6, "armourPenetration": -1, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Spawn Termagants", "description": "[Rules text requires manual verification]" },
+      { "name": "Synapse", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tyranids-neurotyrant",
+    "name": "Neurotyrant",
+    "faction": "Tyranids",
+    "role": "HQ",
+    "basePoints": 105,
+    "stats": { "movement": 6, "toughness": 8, "save": "4+", "wounds": 9, "leadership": "7+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "psychic-scream", "name": "Psychic Scream", "type": "Assault", "range": 18, "attacks": "D6", "ballisticSkill": 3, "strength": 5, "armourPenetration": -1, "damage": 2, "abilities": ["Ignores Cover", "Psychic", "Torrent"] },
+      { "id": "neurotyrant-claws", "name": "Neurotyrant Claws", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 3, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Node of the Hive Mind", "description": "[Rules text requires manual verification]" },
+      { "name": "Synapse", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tyranids-termagants",
+    "name": "Termagants",
+    "faction": "Tyranids",
+    "role": "TROOPS",
+    "basePoints": 60,
+    "stats": { "movement": 6, "toughness": 3, "save": "5+", "wounds": 1, "leadership": "8+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "fleshborer", "name": "Fleshborer", "type": "Assault", "range": 18, "attacks": 1, "ballisticSkill": 4, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "chitnous-claws-and-teeth", "name": "Chitinous Claws and Teeth", "type": "Melee", "range": "Melee", "attacks": 1, "weaponSkill": 4, "strength": 3, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Skulking Horrors", "description": "[Rules text requires manual verification]" },
+      { "name": "Endless Multitude", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tyranids-hormagaunts",
+    "name": "Hormagaunts",
+    "faction": "Tyranids",
+    "role": "TROOPS",
+    "basePoints": 65,
+    "stats": { "movement": 10, "toughness": 3, "save": "5+", "wounds": 1, "leadership": "8+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "hormagaunt-talons", "name": "Hormagaunt Talons", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 4, "strength": 3, "armourPenetration": -1, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Bounding Leap", "description": "[Rules text requires manual verification]" },
+      { "name": "Endless Multitude", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tyranids-gargoyles",
+    "name": "Gargoyles",
+    "faction": "Tyranids",
+    "role": "TROOPS",
+    "basePoints": 85,
+    "stats": { "movement": 12, "toughness": 3, "save": "6+", "wounds": 1, "leadership": "8+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "fleshborer", "name": "Fleshborer", "type": "Assault", "range": 18, "attacks": 1, "ballisticSkill": 4, "strength": 5, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "blinding-venom", "name": "Blinding Venom", "type": "Melee", "range": "Melee", "attacks": 1, "weaponSkill": 4, "strength": 3, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Swooping Pounce", "description": "[Rules text requires manual verification]" },
+      { "name": "Endless Multitude", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tyranids-genestealers",
+    "name": "Genestealers",
+    "faction": "Tyranids",
+    "role": "ELITES",
+    "basePoints": 75,
+    "stats": { "movement": 8, "toughness": 4, "save": "5+", "wounds": 2, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "genestealer-claws-and-talons", "name": "Genestealer Claws and Talons", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 2, "strength": 4, "armourPenetration": -2, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Vanguard Predator", "description": "[Rules text requires manual verification]" },
+      { "name": "Scouts 8\"", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tyranids-tyranid-warriors-ranged",
+    "name": "Tyranid Warriors with Ranged Bio-Weapons",
+    "faction": "Tyranids",
+    "role": "ELITES",
+    "basePoints": 70,
+    "stats": { "movement": 6, "toughness": 5, "save": "4+", "wounds": 3, "leadership": "7+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "devourer", "name": "Devourer", "type": "Assault", "range": 18, "attacks": 5, "ballisticSkill": 3, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": [] },
+      { "id": "bio-weapons", "name": "Bio-weapons", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 3, "strength": 5, "armourPenetration": -1, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Fall Back and Shoot", "description": "[Rules text requires manual verification]" },
+      { "name": "Synapse", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tyranids-tyranid-warriors-melee",
+    "name": "Tyranid Warriors with Melee Bio-Weapons",
+    "faction": "Tyranids",
+    "role": "ELITES",
+    "basePoints": 75,
+    "stats": { "movement": 6, "toughness": 5, "save": "4+", "wounds": 3, "leadership": "7+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "tyranid-warrior-claws-and-talons", "name": "Tyranid Warrior Claws and Talons", "type": "Melee", "range": "Melee", "attacks": 6, "weaponSkill": 3, "strength": 5, "armourPenetration": -2, "damage": 1, "abilities": ["Twin-linked"] }
+    ],
+    "abilities": [
+      { "name": "Synaptic Imperative", "description": "[Rules text requires manual verification]" },
+      { "name": "Synapse", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tyranids-lictor",
+    "name": "Lictor",
+    "faction": "Tyranids",
+    "role": "ELITES",
+    "basePoints": 60,
+    "stats": { "movement": 8, "toughness": 6, "save": "4+", "wounds": 6, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "lictor-claws-and-talons", "name": "Lictor Claws and Talons", "type": "Melee", "range": "Melee", "attacks": 6, "weaponSkill": 2, "strength": 7, "armourPenetration": -2, "damage": 2, "abilities": ["Precision"] }
+    ],
+    "abilities": [
+      { "name": "Chameleonic Mutation", "description": "[Rules text requires manual verification]" },
+      { "name": "Lone Operative", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tyranids-zoanthropes",
+    "name": "Zoanthropes",
+    "faction": "Tyranids",
+    "role": "ELITES",
+    "basePoints": 110,
+    "stats": { "movement": 5, "toughness": 5, "save": "4+", "wounds": 3, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "warp-blast-focused", "name": "Warp Blast (Focused)", "type": "Assault", "range": 24, "attacks": 1, "ballisticSkill": 3, "strength": 12, "armourPenetration": -3, "damage": "D6+1", "abilities": ["Lethal Hits", "Psychic"] },
+      { "id": "warp-blast-burst", "name": "Warp Blast (Burst)", "type": "Assault", "range": 24, "attacks": "D3", "ballisticSkill": 3, "strength": 7, "armourPenetration": -1, "damage": "D3", "abilities": ["Blast", "Psychic"] },
+      { "id": "zoanthrope-claws", "name": "Zoanthrope Claws", "type": "Melee", "range": "Melee", "attacks": 1, "weaponSkill": 5, "strength": 3, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Warp Field", "description": "[Rules text requires manual verification]" },
+      { "name": "Synapse", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tyranids-exocrine",
+    "name": "Exocrine",
+    "faction": "Tyranids",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 135,
+    "stats": { "movement": 8, "toughness": 10, "save": "3+", "wounds": 14, "leadership": "7+", "objectiveControl": 4 },
+    "options": [],
+    "weapons": [
+      { "id": "bio-plasmic-cannon", "name": "Bio-plasmic Cannon", "type": "Heavy", "range": 36, "attacks": "D6+3", "ballisticSkill": 3, "strength": 8, "armourPenetration": -3, "damage": 3, "abilities": ["Blast", "Heavy"] },
+      { "id": "powerful-limbs", "name": "Powerful Limbs", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 3, "strength": 7, "armourPenetration": 0, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Symbiotic Targeting", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D3", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tyranids-tyrannofex",
+    "name": "Tyrannofex",
+    "faction": "Tyranids",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 190,
+    "stats": { "movement": 8, "toughness": 12, "save": "2+", "wounds": 16, "leadership": "7+", "objectiveControl": 5 },
+    "options": [],
+    "weapons": [
+      { "id": "rupture-cannon", "name": "Rupture Cannon", "type": "Heavy", "range": 48, "attacks": 2, "ballisticSkill": 3, "strength": 18, "armourPenetration": -4, "damage": "2D6", "abilities": ["Heavy"] },
+      { "id": "powerful-limbs", "name": "Powerful Limbs", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 3, "strength": 7, "armourPenetration": 0, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Massive Scythed Carapace", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "tyranids-carnifexes",
+    "name": "Carnifexes",
+    "faction": "Tyranids",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 125,
+    "stats": { "movement": 8, "toughness": 9, "save": "2+", "wounds": 8, "leadership": "7+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "heavy-venom-cannon", "name": "Heavy Venom Cannon", "type": "Assault", "range": 36, "attacks": "D3", "ballisticSkill": 4, "strength": 9, "armourPenetration": -2, "damage": 3, "abilities": ["Blast"] },
+      { "id": "carnifex-crushing-claws", "name": "Carnifex Crushing Claws", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 4, "strength": 12, "armourPenetration": -3, "damage": "D6+1", "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Blistering Assault", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise 1", "description": "[Rules text requires manual verification]" }
+    ]
+  }
+]
