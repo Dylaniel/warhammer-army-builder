@@ -139,6 +139,7 @@ Every commit made by an AI agent in this repository must follow this format:
 - **Always stage specific files** (`git add <file> <file>`). Never `git add .` or `git add -A` without first running `git status` to verify exactly what is staged.
 - The `[Model: ...]` line is the **final line** of every commit message. It records which model authored the commit for traceability — it is not an assertion of correctness. **Include as many details as possible** in the model name (e.g., `[Model: Google Gemini 3.1 Pro (High)]` or `[Model: Anthropic Claude Sonnet 4.6 (Thinking)]`). This convention should be the standard always.
 - Human reviewers must verify AI-authored changes before merging to main.
+- **Zero Uncommitted Changes (Orchestrator Hygiene):** The Lead Orchestrator must never conclude its execution cycle with an unclean working directory. Immediately before shutting down, the Orchestrator must run `git status`. If any modifications exist (including updates to `AGENTS.md` or other configuration files), the Orchestrator must stage, commit, and push them to the remote repository.
 
 ```bash
 # ✅ DO: targeted staging, atomic commit, model tag
@@ -195,7 +196,7 @@ When parallel scaling *is* valid and authorized, the total background pool must 
 
 *   **Branch Isolation:** Every sub-agent must spin up its own isolated Git branch or separate worktree named after the specific task ID (e.g., `task-0.2-cleanup`). Under no circumstances should two sub-agents commit directly to the same branch.
 *   **Atomic Commits:** Sub-agents must make highly atomic commits focused on single changes, appended with their runtime signature (e.g., `git commit -m "feat: added points validator [Model: Sonnet]"`).
-*   **Orchestrator Review:** Sub-agents must push their completed branches to remote/local stashes and signal the Lead Orchestrator. The Orchestrator (`Gemini 3.1 Pro`) holds the ultimate responsibility for reviewing the code quality, running tests, and safely merging the branches sequentially back into the main development branch. **The Orchestrator must ensure they are updating task tracking lists (e.g., `tasks.md`) to verify task completion as the final step before making their merge commits. The Orchestrator must immediately push its commits to the remote (`git push`) at the end of all merges to ensure changes reflect for the user.**
+*   **Orchestrator Review & Auto-Merge:** Sub-agents must push their completed branches to remote/local stashes and signal the Lead Orchestrator. The Orchestrator (`Gemini 3.1 Pro`) holds the responsibility for running tests via QA sub-agents. If a QA test passes (either during Pass 1 or Pass 2), the Orchestrator must **automatically merge** the feature branch into `main` and push to the remote. Do not halt and ask for permission to merge. **The Orchestrator must ensure they are updating task tracking lists (e.g., `tasks.md`) to verify task completion as the final step before making their merge commits. The Orchestrator must immediately push its commits to the remote (`git push`) at the end of all merges to ensure changes reflect for the user.**
 *   **Worktree Cleanup:** If utilizing git worktrees for sub-agents, the Orchestrator must ensure they are removed (`git worktree remove`) after the branches are merged to prevent IDE clutter.
 
 ## 6. Phase Verification & QA Hand-Off
@@ -208,7 +209,10 @@ Whenever an implementation sub-agent completes an initial assignment:
 *   **Spawn QA Sub-Agent:** The Orchestrator spawns a dedicated testing agent.
     *   *Designated QA Model:* `Gemini 3.5 Flash (Medium)` OR `GPT-OSS 120B (Medium)`.
     *   *Authorization Rule:* **Auto-Approve is STRICTLY EXCLUSIVE to native Google models (e.g., Gemini).** Because `GPT-OSS 120B (Medium)` shares the premium Claude/GPT quota pool, if it (or any other non-Google model) is selected, **explicit manual user authorization is REQUIRED** before spawning. NEVER auto-approve a GPT or Claude model.
-*   **Test Execution:** The QA Sub-Agent uses integrated browser/terminal tools to verify the local development server (e.g., `localhost:3000`), testing the exact items listed in the initial changelog.
+*   **Test Execution & Adversarial Mandate:** The QA Sub-Agent uses integrated browser/terminal tools to verify the local development server (e.g., `localhost:3000`), testing the exact items listed in the initial changelog.
+    *   **Adversarial Mindset:** The primary objective of the QA Sub-Agent is **to fail the implementation, not to pass it.** The agent must actively attempt to break the UI, bypass state gating, and prove that the implementation is flawed.
+    *   **Beyond the Happy Path:** While the QA agent must verify the items listed in the Changelog, it must intentionally test edge cases, invalid inputs, rapid/out-of-order clicks, and boundary conditions to ensure the application does not crash under duress.
+    *   **Burden of Proof:** A test pass is only considered successful if the implementation survives deliberate attempts to break the specific logic being tested.
 
 ### 2. The Single Self-Correction Loop (The "One-Strike" Rule)
 If the QA Sub-Agent detects any failures, errors, or broken visual/state logic during the initial pass, the system is permitted **exactly one** automated fix attempt per user prompt:
@@ -216,11 +220,13 @@ If the QA Sub-Agent detects any failures, errors, or broken visual/state logic d
 *   **Generate Fixes Changelog:** The Orchestrator must generate a dedicated "Fixes Changelog" detailing the exact lines, logic, or components altered during this correction step.
 *   **Final Test Pass:** The Orchestrator hands the project back to the QA Sub-Agent along with an updated summary. The QA Sub-Agent runs its test suite a second time (strictly adhering to the authorization rules outlined in Step 1).
 
-### 3. Absolute Hard Halt & Reporting Gate
-Immediately following the second test pass, the multi-agent system must completely freeze background operations and present a comprehensive report to the user. No further automated fixing is allowed without new user prompting. The final output to the user must explicitly include:
-*   **Remaining Failures Summary:** Any issues that the agents could not recognize or failed to fix on the second pass must be surfaced clearly so they can be inspected manually by sentient eyes.
-*   **The Fixes Changelog:** A clear summary of the changes made during the single auto-fix loop, allowing the user to verify the validity of those automated changes before performing a manual check and final Git commit.
+### 3. Post-Merge Reporting Gate & Hard Halt Exception
+If a QA test passes (Pass 1 or Pass 2), the Orchestrator will automatically merge the feature branch into `main`. The Orchestrator will present the final report (and any Fixes Changelog) *after* the merge is complete. If the automated fixes are incorrect, the user will manually instruct a Git revert.
+*   **Hard Halt Exception:** Only halt and refuse to merge if Pass 2 QA explicitly fails with unresolved critical bugs. In this scenario, the system must completely freeze background operations and present a comprehensive report of the remaining failures to the user. No further automated fixing is allowed without new user prompting.
 
 ### 4. QA Concurrency Limits
 *   **Initial Test Pass (Pass 1) Limit:** The QA sub-agent pool is strictly capped at a maximum of **2 concurrent sub-agents**, regardless of the model provider being used.
 *   **Final Test Pass (Pass 2) Limit:** Following the One-Strike auto-fix loop, the second and final test pass must be executed by **strictly 1 (one) single QA sub-agent**. No parallel execution is allowed during the final verification pass to ensure a completely linear and uncorrupted final log.
+
+### 5. Sub-Agent Lifecycle & Termination Protocol
+*   **Explicit Teardown:** QA sub-agents must never be left running idle. The Lead Orchestrator is responsible for explicitly terminating and shutting down all sub-agent instances immediately after they complete their test passes, and strictly before the Orchestrator itself finishes its execution block.

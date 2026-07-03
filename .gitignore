@@ -58,7 +58,6 @@ Thumbs.db
 
 # --- Google Antigravity Agent Assets ---
 .antigravity/
-.agents/
 *.artifacts/
 
 # --- Antigravity runtime artifacts ---
