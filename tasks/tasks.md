@@ -121,7 +121,7 @@ The following items appeared in earlier planning but have been **deliberately sc
 - [x] **4.2 Base Detachment Options UI & Faction Gating**
   - Hydrate basic detachment naming options per faction. In the army creation UI, the detachment selector dropdown must be disabled (greyed out) until a faction is actively selected. Once selected, dynamically unlock the dropdown populated exclusively with eligible detachment options for that specific faction.
 
-- [ ] **4.3 Full Unit Library Hydration**
+- [x] **4.3 Full Unit Library Hydration**
   - Populate the newly added faction files with complete unit rosters, weapon configurations, and scaling point tiers. Execute this task strictly after base detachment selection architecture is stable to ensure proper data layout alignment.
   - **UX Enhancements to incorporate:** 
     - Ensure weapon sections in the unit viewer have their stats labeled above them inline with the weapons title (e.g., Range, A, S, AP, D).
