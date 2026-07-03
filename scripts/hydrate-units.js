@@ -292,13 +292,25 @@ function parseDatasheet(text) {
       continue;
     }
 
-    // ── Abilities (one per line or comma-separated) ────────────────────────
+    // ── Abilities (pipe-separated: Name | Description) ─────────────────────
     if (section === 'abilities') {
-      const abilities = line
-        .split(',')
-        .map((s) => s.trim())
-        .filter(Boolean);
-      unit.abilities.push(...abilities);
+      // Legacy support for plain strings separated by commas (fallback)
+      if (!line.includes('|')) {
+        const abilities = line
+          .split(',')
+          .map((s) => s.trim())
+          .filter(Boolean);
+        unit.abilities.push(...abilities);
+        continue;
+      }
+      
+      const parts = line.split('|').map((s) => s.trim());
+      if (parts.length >= 2) {
+        unit.abilities.push({
+          name: parts[0],
+          description: parts.slice(1).join(' | ').trim()
+        });
+      }
       continue;
     }
   }
@@ -493,7 +505,7 @@ Datasheet format (pipe-separated weapons/options):
   <Name> | <id> | <points>
 
   Abilities:
-  <Ability Name>, <Ability Name>
+  <Ability Name> | <Ability Description>
 `);
     process.exit(0);
   }

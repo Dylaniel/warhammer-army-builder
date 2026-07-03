@@ -37,7 +37,10 @@
         "strength": 4,
         "armourPenetration": -1,
         "damage": 1,
-        "abilities": ["Torrent", "Ignores Cover"]
+        "abilities": [
+          "Torrent",
+          "Ignores Cover"
+        ]
       },
       {
         "id": "close-combat-weapon",
@@ -52,7 +55,12 @@
         "abilities": []
       }
     ],
-    "abilities": ["Incendiary Terror"]
+    "abilities": [
+      {
+        "name": "Incendiary Terror",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "captain-in-gravis-armour",
@@ -103,7 +111,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Pistol"],
+        "abilities": [
+          "Pistol"
+        ],
         "ballisticSkill": 2
       },
       {
@@ -143,7 +153,16 @@
         "weaponSkill": 2
       }
     ],
-    "abilities": ["Leader", "Rites of Battle"]
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Rites of Battle",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "librarian-in-phobos-armour",
@@ -170,7 +189,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Pistol"],
+        "abilities": [
+          "Pistol"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -182,7 +203,9 @@
         "strength": 5,
         "armourPenetration": -1,
         "damage": "D3",
-        "abilities": ["Psychic"],
+        "abilities": [
+          "Psychic"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -194,7 +217,10 @@
         "strength": 6,
         "armourPenetration": -2,
         "damage": "D3",
-        "abilities": ["Psychic", "Hazardous"],
+        "abilities": [
+          "Psychic",
+          "Hazardous"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -206,11 +232,26 @@
         "strength": 6,
         "armourPenetration": -1,
         "damage": "D3",
-        "abilities": ["Psychic"],
+        "abilities": [
+          "Psychic"
+        ],
         "weaponSkill": 3
       }
     ],
-    "abilities": ["Leader", "Psychic Hood", "Shrouding"]
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Psychic Hood",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Shrouding",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "chaplain",
@@ -237,7 +278,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Pistol"],
+        "abilities": [
+          "Pistol"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -253,7 +296,16 @@
         "weaponSkill": 2
       }
     ],
-    "abilities": ["Leader", "Litany of Hate"]
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Litany of Hate",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "intercessor-squad",
@@ -280,7 +332,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Pistol"],
+        "abilities": [
+          "Pistol"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -292,7 +346,10 @@
         "strength": 4,
         "armourPenetration": -1,
         "damage": 1,
-        "abilities": ["Assault", "Heavy"],
+        "abilities": [
+          "Assault",
+          "Heavy"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -304,7 +361,9 @@
         "strength": 8,
         "armourPenetration": -1,
         "damage": "D3",
-        "abilities": ["Blast"],
+        "abilities": [
+          "Blast"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -320,7 +379,12 @@
         "weaponSkill": 3
       }
     ],
-    "abilities": ["Objective Secured"]
+    "abilities": [
+      {
+        "name": "Objective Secured",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "assault-intercessor-squad",
@@ -347,7 +411,9 @@
         "strength": 4,
         "armourPenetration": -1,
         "damage": 1,
-        "abilities": ["Pistol"],
+        "abilities": [
+          "Pistol"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -359,7 +425,9 @@
         "strength": 7,
         "armourPenetration": -2,
         "damage": 1,
-        "abilities": ["Pistol"],
+        "abilities": [
+          "Pistol"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -371,7 +439,10 @@
         "strength": 8,
         "armourPenetration": -3,
         "damage": 2,
-        "abilities": ["Pistol", "Hazardous"],
+        "abilities": [
+          "Pistol",
+          "Hazardous"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -419,11 +490,18 @@
         "strength": 8,
         "armourPenetration": -2,
         "damage": 2,
-        "abilities": ["Devastating Wounds"],
+        "abilities": [
+          "Devastating Wounds"
+        ],
         "weaponSkill": 4
       }
     ],
-    "abilities": ["Shock Assault"]
+    "abilities": [
+      {
+        "name": "Shock Assault",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "heavy-intercessor-squad",
@@ -450,7 +528,9 @@
         "strength": 4,
         "armourPenetration": -1,
         "damage": 1,
-        "abilities": ["Pistol"],
+        "abilities": [
+          "Pistol"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -462,7 +542,10 @@
         "strength": 5,
         "armourPenetration": -1,
         "damage": 1,
-        "abilities": ["Assault", "Heavy"],
+        "abilities": [
+          "Assault",
+          "Heavy"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -474,7 +557,10 @@
         "strength": 5,
         "armourPenetration": -1,
         "damage": 2,
-        "abilities": ["Heavy", "Sustained Hits 1"],
+        "abilities": [
+          "Heavy",
+          "Sustained Hits 1"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -490,7 +576,12 @@
         "weaponSkill": 3
       }
     ],
-    "abilities": ["Unyielding in the Face of the Foe"]
+    "abilities": [
+      {
+        "name": "Unyielding in the Face of the Foe",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "tactical-squad",
@@ -517,7 +608,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Pistol"],
+        "abilities": [
+          "Pistol"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -541,7 +634,10 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Ignores Cover", "Torrent"],
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ],
         "ballisticSkill": 0
       },
       {
@@ -553,7 +649,9 @@
         "strength": 9,
         "armourPenetration": -4,
         "damage": "D6",
-        "abilities": ["Melta 2"],
+        "abilities": [
+          "Melta 2"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -577,7 +675,9 @@
         "strength": 8,
         "armourPenetration": -3,
         "damage": 2,
-        "abilities": ["Hazardous"],
+        "abilities": [
+          "Hazardous"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -589,7 +689,10 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Blast", "Heavy"],
+        "abilities": [
+          "Blast",
+          "Heavy"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -601,7 +704,9 @@
         "strength": 9,
         "armourPenetration": -2,
         "damage": "D6",
-        "abilities": ["Heavy"],
+        "abilities": [
+          "Heavy"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -617,7 +722,12 @@
         "weaponSkill": 3
       }
     ],
-    "abilities": ["Combat Squads"]
+    "abilities": [
+      {
+        "name": "Combat Squads",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "bladeguard-veteran-squad",
@@ -644,7 +754,9 @@
         "strength": 4,
         "armourPenetration": -1,
         "damage": 1,
-        "abilities": ["Pistol"],
+        "abilities": [
+          "Pistol"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -656,7 +768,10 @@
         "strength": 5,
         "armourPenetration": 0,
         "damage": 2,
-        "abilities": ["Devastating Wounds", "Pistol"],
+        "abilities": [
+          "Devastating Wounds",
+          "Pistol"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -672,7 +787,16 @@
         "weaponSkill": 3
       }
     ],
-    "abilities": ["Swords of the Imperium", "Invulnerable Save 4+"]
+    "abilities": [
+      {
+        "name": "Swords of the Imperium",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "terminator-squad",
@@ -699,7 +823,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Rapid Fire 2"],
+        "abilities": [
+          "Rapid Fire 2"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -711,7 +837,9 @@
         "strength": 6,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Devastating Wounds"],
+        "abilities": [
+          "Devastating Wounds"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -723,7 +851,10 @@
         "strength": 5,
         "armourPenetration": -1,
         "damage": 1,
-        "abilities": ["Ignores Cover", "Torrent"],
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ],
         "ballisticSkill": 0
       },
       {
@@ -735,7 +866,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Blast"],
+        "abilities": [
+          "Blast"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -759,7 +892,9 @@
         "strength": 8,
         "armourPenetration": -2,
         "damage": 2,
-        "abilities": ["Anti-Vehicle 3+"],
+        "abilities": [
+          "Anti-Vehicle 3+"
+        ],
         "weaponSkill": 4
       },
       {
@@ -775,7 +910,20 @@
         "weaponSkill": 3
       }
     ],
-    "abilities": ["Deep Strike", "Teleport Homer", "Invulnerable Save 4+"]
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Homer",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "sternguard-veteran-squad",
@@ -802,7 +950,10 @@
         "strength": 4,
         "armourPenetration": -1,
         "damage": 1,
-        "abilities": ["Devastating Wounds", "Pistol"],
+        "abilities": [
+          "Devastating Wounds",
+          "Pistol"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -814,7 +965,11 @@
         "strength": 4,
         "armourPenetration": -1,
         "damage": 1,
-        "abilities": ["Assault", "Devastating Wounds", "Heavy"],
+        "abilities": [
+          "Assault",
+          "Devastating Wounds",
+          "Heavy"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -826,7 +981,11 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Anti-Infantry 4+", "Devastating Wounds", "Rapid Fire 1"],
+        "abilities": [
+          "Anti-Infantry 4+",
+          "Devastating Wounds",
+          "Rapid Fire 1"
+        ],
         "ballisticSkill": 4
       },
       {
@@ -838,7 +997,11 @@
         "strength": 5,
         "armourPenetration": -1,
         "damage": 2,
-        "abilities": ["Devastating Wounds", "Heavy", "Sustained Hits 1"],
+        "abilities": [
+          "Devastating Wounds",
+          "Heavy",
+          "Sustained Hits 1"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -854,7 +1017,12 @@
         "weaponSkill": 3
       }
     ],
-    "abilities": ["Bolter Drill"]
+    "abilities": [
+      {
+        "name": "Bolter Drill",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "redemptor-dreadnought",
@@ -881,7 +1049,10 @@
         "strength": 5,
         "armourPenetration": -1,
         "damage": 1,
-        "abilities": ["Ignores Cover", "Torrent"],
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ],
         "ballisticSkill": 0
       },
       {
@@ -893,7 +1064,9 @@
         "strength": 6,
         "armourPenetration": -1,
         "damage": 1,
-        "abilities": ["Devastating Wounds"],
+        "abilities": [
+          "Devastating Wounds"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -905,7 +1078,9 @@
         "strength": 8,
         "armourPenetration": -3,
         "damage": 2,
-        "abilities": ["Blast"],
+        "abilities": [
+          "Blast"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -917,7 +1092,10 @@
         "strength": 9,
         "armourPenetration": -4,
         "damage": 3,
-        "abilities": ["Blast", "Hazardous"],
+        "abilities": [
+          "Blast",
+          "Hazardous"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -929,7 +1107,9 @@
         "strength": 5,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Devastating Wounds"],
+        "abilities": [
+          "Devastating Wounds"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -941,7 +1121,9 @@
         "strength": 8,
         "armourPenetration": -1,
         "damage": 2,
-        "abilities": ["Anti-Fly 2+"],
+        "abilities": [
+          "Anti-Fly 2+"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -953,7 +1135,10 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Blast", "Twin-linked"],
+        "abilities": [
+          "Blast",
+          "Twin-linked"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -965,7 +1150,10 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Rapid Fire 2", "Twin-linked"],
+        "abilities": [
+          "Rapid Fire 2",
+          "Twin-linked"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -981,7 +1169,16 @@
         "weaponSkill": 3
       }
     ],
-    "abilities": ["Duty Eternal", "Deadly Demise D3"]
+    "abilities": [
+      {
+        "name": "Duty Eternal",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deadly Demise D3",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "aggressor-squad",
@@ -1008,7 +1205,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Twin-linked"],
+        "abilities": [
+          "Twin-linked"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1020,7 +1219,11 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Ignores Cover", "Torrent", "Twin-linked"],
+        "abilities": [
+          "Ignores Cover",
+          "Torrent",
+          "Twin-linked"
+        ],
         "ballisticSkill": 0
       },
       {
@@ -1032,7 +1235,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Blast"],
+        "abilities": [
+          "Blast"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1044,11 +1249,18 @@
         "strength": 8,
         "armourPenetration": -2,
         "damage": 2,
-        "abilities": ["Twin-linked"],
+        "abilities": [
+          "Twin-linked"
+        ],
         "weaponSkill": 3
       }
     ],
-    "abilities": ["Fire Discipline"]
+    "abilities": [
+      {
+        "name": "Fire Discipline",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "inceptor-squad",
@@ -1075,7 +1287,11 @@
         "strength": 5,
         "armourPenetration": -1,
         "damage": 2,
-        "abilities": ["Assault", "Pistol", "Twin-linked"],
+        "abilities": [
+          "Assault",
+          "Pistol",
+          "Twin-linked"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1087,7 +1303,11 @@
         "strength": 7,
         "armourPenetration": -2,
         "damage": 1,
-        "abilities": ["Assault", "Pistol", "Twin-linked"],
+        "abilities": [
+          "Assault",
+          "Pistol",
+          "Twin-linked"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1099,7 +1319,12 @@
         "strength": 8,
         "armourPenetration": -3,
         "damage": 2,
-        "abilities": ["Assault", "Hazardous", "Pistol", "Twin-linked"],
+        "abilities": [
+          "Assault",
+          "Hazardous",
+          "Pistol",
+          "Twin-linked"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1115,7 +1340,16 @@
         "weaponSkill": 3
       }
     ],
-    "abilities": ["Deep Strike", "Meteoric Descent"]
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Meteoric Descent",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "outrider-squad",
@@ -1142,7 +1376,9 @@
         "strength": 4,
         "armourPenetration": -1,
         "damage": 1,
-        "abilities": ["Pistol"],
+        "abilities": [
+          "Pistol"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1154,7 +1390,9 @@
         "strength": 4,
         "armourPenetration": -1,
         "damage": 1,
-        "abilities": ["Twin-linked"],
+        "abilities": [
+          "Twin-linked"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1170,7 +1408,12 @@
         "weaponSkill": 3
       }
     ],
-    "abilities": ["Turbo-boost"]
+    "abilities": [
+      {
+        "name": "Turbo-boost",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "storm-speeder-hailstrike",
@@ -1197,7 +1440,9 @@
         "strength": 5,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Devastating Wounds"],
+        "abilities": [
+          "Devastating Wounds"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1209,7 +1454,10 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Blast", "Twin-linked"],
+        "abilities": [
+          "Blast",
+          "Twin-linked"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1221,7 +1469,10 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Rapid Fire 3", "Twin-linked"],
+        "abilities": [
+          "Rapid Fire 3",
+          "Twin-linked"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1237,7 +1488,20 @@
         "weaponSkill": 3
       }
     ],
-    "abilities": ["Deep Strike", "Hailstrike", "Deadly Demise 1"]
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Hailstrike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deadly Demise 1",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "eradicator-squad",
@@ -1264,7 +1528,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Pistol"],
+        "abilities": [
+          "Pistol"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1276,7 +1542,10 @@
         "strength": 9,
         "armourPenetration": -4,
         "damage": "D6",
-        "abilities": ["Heavy", "Melta 2"],
+        "abilities": [
+          "Heavy",
+          "Melta 2"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1288,7 +1557,10 @@
         "strength": 9,
         "armourPenetration": -4,
         "damage": "D6",
-        "abilities": ["Heavy", "Melta 2"],
+        "abilities": [
+          "Heavy",
+          "Melta 2"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1304,7 +1576,12 @@
         "weaponSkill": 3
       }
     ],
-    "abilities": ["Total Obliteration"]
+    "abilities": [
+      {
+        "name": "Total Obliteration",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "hellblaster-squad",
@@ -1331,7 +1608,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Pistol"],
+        "abilities": [
+          "Pistol"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1343,7 +1622,10 @@
         "strength": 7,
         "armourPenetration": -2,
         "damage": 1,
-        "abilities": ["Assault", "Heavy"],
+        "abilities": [
+          "Assault",
+          "Heavy"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1355,7 +1637,11 @@
         "strength": 8,
         "armourPenetration": -3,
         "damage": 2,
-        "abilities": ["Assault", "Hazardous", "Heavy"],
+        "abilities": [
+          "Assault",
+          "Hazardous",
+          "Heavy"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1371,7 +1657,12 @@
         "weaponSkill": 3
       }
     ],
-    "abilities": ["For the Chapter!"]
+    "abilities": [
+      {
+        "name": "For the Chapter!",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "gladiator-lancer",
@@ -1398,7 +1689,9 @@
         "strength": 14,
         "armourPenetration": -4,
         "damage": "D6+3",
-        "abilities": ["Heavy"],
+        "abilities": [
+          "Heavy"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1410,7 +1703,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Rapid Fire 2"],
+        "abilities": [
+          "Rapid Fire 2"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1422,7 +1717,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Rapid Fire 3"],
+        "abilities": [
+          "Rapid Fire 3"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1434,7 +1731,9 @@
         "strength": 8,
         "armourPenetration": -1,
         "damage": 2,
-        "abilities": ["Anti-Fly 2+"],
+        "abilities": [
+          "Anti-Fly 2+"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1450,7 +1749,16 @@
         "weaponSkill": 4
       }
     ],
-    "abilities": ["Deadly Demise D3", "Aquilon Optics"]
+    "abilities": [
+      {
+        "name": "Deadly Demise D3",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Aquilon Optics",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "repulsor-executioner",
@@ -1477,7 +1785,9 @@
         "strength": 16,
         "armourPenetration": -4,
         "damage": "D6+4",
-        "abilities": ["Heavy"],
+        "abilities": [
+          "Heavy"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1489,7 +1799,9 @@
         "strength": 8,
         "armourPenetration": -3,
         "damage": 2,
-        "abilities": ["Blast"],
+        "abilities": [
+          "Blast"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1501,7 +1813,10 @@
         "strength": 9,
         "armourPenetration": -4,
         "damage": 3,
-        "abilities": ["Blast", "Hazardous"],
+        "abilities": [
+          "Blast",
+          "Hazardous"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1513,7 +1828,9 @@
         "strength": 6,
         "armourPenetration": -1,
         "damage": 1,
-        "abilities": ["Devastating Wounds"],
+        "abilities": [
+          "Devastating Wounds"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1537,7 +1854,10 @@
         "strength": 5,
         "armourPenetration": -1,
         "damage": 2,
-        "abilities": ["Sustained Hits 1", "Twin-linked"],
+        "abilities": [
+          "Sustained Hits 1",
+          "Twin-linked"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1549,7 +1869,11 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Anti-Fly 4+", "Rapid Fire 3", "Twin-linked"],
+        "abilities": [
+          "Anti-Fly 4+",
+          "Rapid Fire 3",
+          "Twin-linked"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1561,7 +1885,9 @@
         "strength": 8,
         "armourPenetration": -1,
         "damage": 2,
-        "abilities": ["Anti-Fly 2+"],
+        "abilities": [
+          "Anti-Fly 2+"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1577,7 +1903,16 @@
         "weaponSkill": 4
       }
     ],
-    "abilities": ["Deadly Demise D6", "Executioner"]
+    "abilities": [
+      {
+        "name": "Deadly Demise D6",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Executioner",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "rhino",
@@ -1604,7 +1939,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Rapid Fire 2"],
+        "abilities": [
+          "Rapid Fire 2"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1616,7 +1953,9 @@
         "strength": 14,
         "armourPenetration": -3,
         "damage": "D6",
-        "abilities": ["One Shot"],
+        "abilities": [
+          "One Shot"
+        ],
         "ballisticSkill": 2
       },
       {
@@ -1632,7 +1971,24 @@
         "weaponSkill": 4
       }
     ],
-    "abilities": ["Deadly Demise D3", "Self-repair", "Firing Deck 2", "Transport 12"]
+    "abilities": [
+      {
+        "name": "Deadly Demise D3",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Self-repair",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Firing Deck 2",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Transport 12",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   },
   {
     "id": "impulsor",
@@ -1659,7 +2015,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Rapid Fire 2"],
+        "abilities": [
+          "Rapid Fire 2"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1671,7 +2029,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Rapid Fire 3"],
+        "abilities": [
+          "Rapid Fire 3"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1683,7 +2043,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Blast"],
+        "abilities": [
+          "Blast"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1707,7 +2069,9 @@
         "strength": 8,
         "armourPenetration": -1,
         "damage": 2,
-        "abilities": ["Anti-Fly 2+"],
+        "abilities": [
+          "Anti-Fly 2+"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1719,7 +2083,9 @@
         "strength": 4,
         "armourPenetration": 0,
         "damage": 1,
-        "abilities": ["Anti-Fly 4+"],
+        "abilities": [
+          "Anti-Fly 4+"
+        ],
         "ballisticSkill": 3
       },
       {
@@ -1735,6 +2101,23 @@
         "weaponSkill": 4
       }
     ],
-    "abilities": ["Deadly Demise D3", "Assault Vehicle", "Shield Dome", "Transport 6"]
+    "abilities": [
+      {
+        "name": "Deadly Demise D3",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Assault Vehicle",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Shield Dome",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Transport 6",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
   }
 ]

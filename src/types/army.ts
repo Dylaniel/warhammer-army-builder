@@ -57,7 +57,7 @@ interface Unit {
   stats: UnitStats;
   options: UnitOption[];
   weapons: Weapon[];
-  abilities: string[];
+  abilities: (string | { name: string; description: string })[];
   selectedOptions?: string[]; // Array of selected option IDs (for army units)
   totalPoints?: number; // Base points + selected options (for army units)
   quantity?: number; // For units that can have multiple models (for army units)

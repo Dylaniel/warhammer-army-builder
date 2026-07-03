@@ -56,6 +56,13 @@ export default function UnitDetailTab({ unit, onBack, onUpdate }: UnitDetailTabP
           {unit.weapons && unit.weapons.length > 0 && (
             <div className="mb-4">
               <h4 className="font-semibold text-gray-400 mb-1 text-xs uppercase tracking-wider">Weapons</h4>
+              <div className="grid grid-cols-12 gap-1 px-2 mb-1 text-[10px] text-gray-500 font-semibold uppercase tracking-wider">
+                <div className="col-span-5">Weapon</div>
+                <div className="col-span-2 text-center">Range</div>
+                <div className="col-span-1 text-center">A</div>
+                <div className="col-span-3 text-center">S / AP</div>
+                <div className="col-span-1 text-center">D</div>
+              </div>
               <div className="space-y-1">
                 {unit.weapons.map(w => (
                   <div key={w.id} className="bg-gray-900 rounded p-2 text-xs grid grid-cols-12 gap-1 items-center border border-gray-700">
@@ -75,9 +82,13 @@ export default function UnitDetailTab({ unit, onBack, onUpdate }: UnitDetailTabP
             <div>
               <h4 className="font-semibold text-gray-400 mb-1 text-xs uppercase tracking-wider">Abilities</h4>
               <div className="bg-gray-900 rounded p-2 border border-gray-700">
-                <ul className="list-disc list-inside text-sm text-gray-300">
+                <ul className="list-disc list-inside text-sm text-gray-300 space-y-1">
                   {unit.abilities.map((ability, idx) => (
-                    <li key={idx}>{ability}</li>
+                    typeof ability === 'string' ? (
+                      <li key={idx}>{ability}</li>
+                    ) : (
+                      <li key={idx}><span className="font-bold text-white">{ability.name}:</span> {ability.description}</li>
+                    )
                   ))}
                 </ul>
               </div>
