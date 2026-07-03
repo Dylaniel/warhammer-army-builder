@@ -1,1 +1,980 @@
-[]
+[
+  {
+    "id": "ck-knight-desecrator",
+    "name": "Knight Desecrator",
+    "faction": "Chaos Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 425,
+    "stats": {
+      "movement": 10,
+      "toughness": 12,
+      "save": "3+",
+      "wounds": 22,
+      "leadership": "6+",
+      "objectiveControl": 10
+    },
+    "options": [
+      {
+        "id": "opt-ruinspear-rocket-pod",
+        "name": "Ruinspear rocket pod",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "desecrator-laser-destructor",
+        "name": "Desecrator laser destructor",
+        "type": "Heavy",
+        "range": 72,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 18,
+        "armourPenetration": 4,
+        "damage": "D6+3",
+        "abilities": [
+          "Blast"
+        ]
+      },
+      {
+        "id": "reaper-chainsword-strike",
+        "name": "Reaper chainsword - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 14,
+        "armourPenetration": 4,
+        "damage": 6,
+        "abilities": []
+      },
+      {
+        "id": "reaper-chainsword-sweep",
+        "name": "Reaper chainsword - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 12,
+        "weaponSkill": 3,
+        "strength": 9,
+        "armourPenetration": 3,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Towering Terror",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ck-knight-rampager",
+    "name": "Knight Rampager",
+    "faction": "Chaos Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 380,
+    "stats": {
+      "movement": 12,
+      "toughness": 12,
+      "save": "3+",
+      "wounds": 22,
+      "leadership": "6+",
+      "objectiveControl": 10
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-stubber",
+        "name": "Diabolus heavy stubber",
+        "type": "Rapid Fire",
+        "range": 36,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 3"
+        ]
+      },
+      {
+        "id": "reaper-chainsword-strike",
+        "name": "Reaper chainsword - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 14,
+        "armourPenetration": 4,
+        "damage": 6,
+        "abilities": []
+      },
+      {
+        "id": "reaper-chainsword-sweep",
+        "name": "Reaper chainsword - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 18,
+        "weaponSkill": 2,
+        "strength": 9,
+        "armourPenetration": 3,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "warpstrike-claw-strike",
+        "name": "Warpstrike claw - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 20,
+        "armourPenetration": 3,
+        "damage": 8,
+        "abilities": []
+      },
+      {
+        "id": "warpstrike-claw-sweep",
+        "name": "Warpstrike claw - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 10,
+        "weaponSkill": 2,
+        "strength": 10,
+        "armourPenetration": 2,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Frenzied Charge",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ck-knight-despoiler",
+    "name": "Knight Despoiler",
+    "faction": "Chaos Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 410,
+    "stats": {
+      "movement": 10,
+      "toughness": 12,
+      "save": "3+",
+      "wounds": 22,
+      "leadership": "6+",
+      "objectiveControl": 10
+    },
+    "options": [
+      {
+        "id": "opt-double-battle-cannon",
+        "name": "Two Despoiler battle cannons",
+        "points": 0
+      },
+      {
+        "id": "opt-double-thermal-cannon",
+        "name": "Two Thermal cannons",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "despoiler-battle-cannon",
+        "name": "Despoiler battle cannon",
+        "type": "Heavy",
+        "range": 72,
+        "attacks": "2D6",
+        "ballisticSkill": 3,
+        "strength": 10,
+        "armourPenetration": 1,
+        "damage": 3,
+        "abilities": [
+          "Blast"
+        ]
+      },
+      {
+        "id": "thermal-cannon",
+        "name": "Thermal cannon",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": "D3",
+        "ballisticSkill": 3,
+        "strength": 12,
+        "armourPenetration": 4,
+        "damage": "D6+6",
+        "abilities": [
+          "Blast",
+          "Melta 3"
+        ]
+      },
+      {
+        "id": "titanic-feet",
+        "name": "Titanic feet",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": 1,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Ruins of the Realm",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ck-knight-abominant",
+    "name": "Knight Abominant",
+    "faction": "Chaos Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 395,
+    "stats": {
+      "movement": 10,
+      "toughness": 12,
+      "save": "3+",
+      "wounds": 22,
+      "leadership": "6+",
+      "objectiveControl": 10
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "volkite-combustor",
+        "name": "Volkite combustor",
+        "type": "Heavy",
+        "range": 30,
+        "attacks": 10,
+        "ballisticSkill": 3,
+        "strength": 10,
+        "armourPenetration": 1,
+        "damage": 3,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      },
+      {
+        "id": "electroscourge",
+        "name": "Electroscourge",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 9,
+        "weaponSkill": 3,
+        "strength": 10,
+        "armourPenetration": 2,
+        "damage": 3,
+        "abilities": []
+      },
+      {
+        "id": "balemace",
+        "name": "Balemace",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": 1,
+        "damage": 2,
+        "abilities": [
+          "Extra Attacks"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Vortex Terrors",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ck-knight-tyrant",
+    "name": "Knight Tyrant",
+    "faction": "Chaos Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 510,
+    "stats": {
+      "movement": 8,
+      "toughness": 13,
+      "save": "2+",
+      "wounds": 24,
+      "leadership": "6+",
+      "objectiveControl": 10
+    },
+    "options": [
+      {
+        "id": "opt-volcano-lance",
+        "name": "Brimstone volcano lance",
+        "points": 0
+      },
+      {
+        "id": "opt-plasma-decimator",
+        "name": "Ectoplasma decimator",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "brimstone-volcano-lance",
+        "name": "Brimstone volcano lance",
+        "type": "Heavy",
+        "range": 72,
+        "attacks": "D3",
+        "ballisticSkill": 3,
+        "strength": 18,
+        "armourPenetration": 5,
+        "damage": "D6+8",
+        "abilities": [
+          "Blast"
+        ]
+      },
+      {
+        "id": "ectoplasma-decimator",
+        "name": "Ectoplasma decimator",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": "3D3",
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": 4,
+        "damage": 3,
+        "abilities": [
+          "Blast"
+        ]
+      },
+      {
+        "id": "titanic-feet",
+        "name": "Titanic feet",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 8,
+        "armourPenetration": 1,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Dark Dominance",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ck-war-dog-brigand",
+    "name": "War Dog Brigand",
+    "faction": "Chaos Knights",
+    "role": "BATTLELINE",
+    "basePoints": 170,
+    "stats": {
+      "movement": 12,
+      "toughness": 10,
+      "save": "3+",
+      "wounds": 12,
+      "leadership": "7+",
+      "objectiveControl": 8
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "avenger-chaincannon",
+        "name": "Avenger chaincannon",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 12,
+        "ballisticSkill": 2,
+        "strength": 6,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "daemonbreath-spear",
+        "name": "Daemonbreath spear",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 12,
+        "armourPenetration": 4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 4"
+        ]
+      },
+      {
+        "id": "armoured-feet",
+        "name": "Armoured feet",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Brigand's Duty",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ck-war-dog-executioner",
+    "name": "War Dog Executioner",
+    "faction": "Chaos Knights",
+    "role": "BATTLELINE",
+    "basePoints": 150,
+    "stats": {
+      "movement": 12,
+      "toughness": 10,
+      "save": "3+",
+      "wounds": 12,
+      "leadership": "7+",
+      "objectiveControl": 8
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "war-dog-autocannon",
+        "name": "War Dog autocannon",
+        "type": "Heavy",
+        "range": 60,
+        "attacks": "4",
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": 1,
+        "damage": 3,
+        "abilities": []
+      },
+      {
+        "id": "armoured-feet",
+        "name": "Armoured feet",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Executioner's Toll",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ck-war-dog-huntsman",
+    "name": "War Dog Huntsman",
+    "faction": "Chaos Knights",
+    "role": "BATTLELINE",
+    "basePoints": 150,
+    "stats": {
+      "movement": 12,
+      "toughness": 10,
+      "save": "3+",
+      "wounds": 12,
+      "leadership": "7+",
+      "objectiveControl": 8
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "daemonbreath-spear",
+        "name": "Daemonbreath spear",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 12,
+        "armourPenetration": 4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 4"
+        ]
+      },
+      {
+        "id": "reaper-chaintalon-strike",
+        "name": "Reaper chaintalon - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 10,
+        "armourPenetration": 3,
+        "damage": 3,
+        "abilities": []
+      },
+      {
+        "id": "reaper-chaintalon-sweep",
+        "name": "Reaper chaintalon - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 8,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": 2,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Prey Sight",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ck-war-dog-karnivore",
+    "name": "War Dog Karnivore",
+    "faction": "Chaos Knights",
+    "role": "BATTLELINE",
+    "basePoints": 140,
+    "stats": {
+      "movement": 14,
+      "toughness": 10,
+      "save": "3+",
+      "wounds": 12,
+      "leadership": "7+",
+      "objectiveControl": 8
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "reaper-chaintalon-strike",
+        "name": "Reaper chaintalon - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 10,
+        "armourPenetration": 3,
+        "damage": 3,
+        "abilities": []
+      },
+      {
+        "id": "reaper-chaintalon-sweep",
+        "name": "Reaper chaintalon - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 12,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": 2,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "slaughterclaw-strike",
+        "name": "Slaughterclaw - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 2,
+        "strength": 14,
+        "armourPenetration": 3,
+        "damage": "D6+2",
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Bloodlust",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ck-war-dog-stalker",
+    "name": "War Dog Stalker",
+    "faction": "Chaos Knights",
+    "role": "BATTLELINE",
+    "basePoints": 150,
+    "stats": {
+      "movement": 12,
+      "toughness": 10,
+      "save": "3+",
+      "wounds": 12,
+      "leadership": "7+",
+      "objectiveControl": 8
+    },
+    "options": [
+      {
+        "id": "opt-daemonbreath-spear",
+        "name": "Daemonbreath spear",
+        "points": 0
+      },
+      {
+        "id": "opt-avenger-chaincannon",
+        "name": "Avenger chaincannon",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "avenger-chaincannon",
+        "name": "Avenger chaincannon",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 12,
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "reaper-chaintalon-strike",
+        "name": "Reaper chaintalon - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 10,
+        "armourPenetration": 3,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Savage Stalker",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ck-war-dog-moirax",
+    "name": "War Dog Moirax",
+    "faction": "Chaos Knights",
+    "role": "BATTLELINE",
+    "basePoints": 160,
+    "stats": {
+      "movement": 12,
+      "toughness": 10,
+      "save": "3+",
+      "wounds": 12,
+      "leadership": "7+",
+      "objectiveControl": 8
+    },
+    "options": [
+      {
+        "id": "opt-lightning-lock",
+        "name": "Lightning lock",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "lightning-lock",
+        "name": "Lightning lock",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 6,
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Sustained Hits 2"
+        ]
+      },
+      {
+        "id": "armoured-feet",
+        "name": "Armoured feet",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Protection of the Dark Mechanicum",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ck-chaos-cerastus-knight-lancer",
+    "name": "Chaos Cerastus Knight Lancer",
+    "faction": "Chaos Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 420,
+    "stats": {
+      "movement": 14,
+      "toughness": 12,
+      "save": "3+",
+      "wounds": 25,
+      "leadership": "6+",
+      "objectiveControl": 10
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "cerastus-shock-lance",
+        "name": "Cerastus shock lance",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 6,
+        "ballisticSkill": 3,
+        "strength": 7,
+        "armourPenetration": 1,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "cerastus-shock-lance-strike",
+        "name": "Cerastus shock lance - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 20,
+        "armourPenetration": 3,
+        "damage": 8,
+        "abilities": [
+          "Lance"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Ion Gauntlet Shield",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ck-chaos-cerastus-knight-castigator",
+    "name": "Chaos Cerastus Knight Castigator",
+    "faction": "Chaos Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 445,
+    "stats": {
+      "movement": 12,
+      "toughness": 12,
+      "save": "3+",
+      "wounds": 25,
+      "leadership": "6+",
+      "objectiveControl": 10
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "castigator-bolt-cannon",
+        "name": "Castigator bolt cannon",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 18,
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": [
+          "Sustained Hits 1"
+        ]
+      },
+      {
+        "id": "tempest-warblade-strike",
+        "name": "Tempest warblade - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 14,
+        "armourPenetration": 3,
+        "damage": 4,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Flanking Fire",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ck-chaos-cerastus-knight-acheron",
+    "name": "Chaos Cerastus Knight Acheron",
+    "faction": "Chaos Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 400,
+    "stats": {
+      "movement": 12,
+      "toughness": 12,
+      "save": "3+",
+      "wounds": 25,
+      "leadership": "6+",
+      "objectiveControl": 10
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "acheron-flame-cannon",
+        "name": "Acheron flame cannon",
+        "type": "Assault",
+        "range": 18,
+        "attacks": "2D6",
+        "ballisticSkill": 3,
+        "strength": 8,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": [
+          "Torrent",
+          "Ignores Cover"
+        ]
+      },
+      {
+        "id": "reaper-chainfist-strike",
+        "name": "Reaper chainfist - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 3,
+        "strength": 20,
+        "armourPenetration": 4,
+        "damage": 6,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Sunder Armour",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  },
+  {
+    "id": "ck-chaos-acastus-knight-asterius",
+    "name": "Chaos Acastus Knight Asterius",
+    "faction": "Chaos Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 840,
+    "stats": {
+      "movement": 8,
+      "toughness": 13,
+      "save": "2+",
+      "wounds": 30,
+      "leadership": "6+",
+      "objectiveControl": 12
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "twin-conversion-beam-cannon",
+        "name": "Twin conversion beam cannon",
+        "type": "Heavy",
+        "range": 72,
+        "attacks": "2D3",
+        "ballisticSkill": 3,
+        "strength": 16,
+        "armourPenetration": 4,
+        "damage": 4,
+        "abilities": [
+          "Blast",
+          "Conversion"
+        ]
+      },
+      {
+        "id": "titanic-feet",
+        "name": "Titanic feet",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 8,
+        "armourPenetration": 1,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Bastion of Darkness",
+        "description": "[Rules text requires manual verification]"
+      }
+    ]
+  }
+]
