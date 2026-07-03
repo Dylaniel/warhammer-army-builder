@@ -1,1 +1,251 @@
-[]
+﻿[
+  {
+    "id": "ts-magnus-the-red",
+    "name": "Magnus the Red",
+    "faction": "Thousand Sons",
+    "role": "HQ",
+    "basePoints": 440,
+    "stats": { "movement": 14, "toughness": 11, "save": "2+", "wounds": 16, "leadership": "5+", "objectiveControl": 6 },
+    "options": [],
+    "weapons": [
+      { "id": "gaze-of-magnus", "name": "Gaze of Magnus", "type": "Assault", "range": 24, "attacks": "3D3", "ballisticSkill": 2, "strength": 9, "armourPenetration": -2, "damage": 3, "abilities": ["Devastating Wounds", "Psychic"] },
+      { "id": "blade-of-magnus-strike", "name": "Blade of Magnus (Strike)", "type": "Melee", "range": "Melee", "attacks": 7, "weaponSkill": 2, "strength": 16, "armourPenetration": -3, "damage": 3, "abilities": ["Psychic"] },
+      { "id": "blade-of-magnus-sweep", "name": "Blade of Magnus (Sweep)", "type": "Melee", "range": "Melee", "attacks": 14, "weaponSkill": 2, "strength": 8, "armourPenetration": -1, "damage": 1, "abilities": ["Psychic"] }
+    ],
+    "abilities": [
+      { "name": "Crimson King", "description": "[Rules text requires manual verification]" },
+      { "name": "Lord of the Planet of the Sorcerers", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D6", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ts-ahriman",
+    "name": "Ahriman",
+    "faction": "Thousand Sons",
+    "role": "HQ",
+    "basePoints": 130,
+    "stats": { "movement": 6, "toughness": 4, "save": "3+", "wounds": 5, "leadership": "5+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "inferno-bolt-pistol", "name": "Inferno Bolt Pistol", "type": "Pistol", "range": 12, "attacks": 1, "ballisticSkill": 2, "strength": 4, "armourPenetration": -1, "damage": 1, "abilities": [] },
+      { "id": "black-staff-of-ahriman", "name": "The Black Staff of Ahriman", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 2, "strength": 7, "armourPenetration": -1, "damage": 3, "abilities": ["Psychic"] }
+    ],
+    "abilities": [
+      { "name": "Arch-Sorcerer of Tzeentch", "description": "[Rules text requires manual verification]" },
+      { "name": "Rubric Lord", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ts-exalted-sorcerer",
+    "name": "Exalted Sorcerer",
+    "faction": "Thousand Sons",
+    "role": "HQ",
+    "basePoints": 100,
+    "stats": { "movement": 6, "toughness": 4, "save": "3+", "wounds": 5, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "astral-blast", "name": "Astral Blast", "type": "Assault", "range": 18, "attacks": "D6", "ballisticSkill": 2, "strength": 6, "armourPenetration": -2, "damage": 1, "abilities": ["Blast", "Psychic"] },
+      { "id": "force-weapon", "name": "Force Weapon", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 3, "strength": 6, "armourPenetration": -1, "damage": "D3", "abilities": ["Psychic"] }
+    ],
+    "abilities": [
+      { "name": "Rebind Rubricae", "description": "[Rules text requires manual verification]" },
+      { "name": "Arcane Shield", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ts-sorcerer-in-terminator-armour",
+    "name": "Thousand Sons Sorcerer in Terminator Armour",
+    "faction": "Thousand Sons",
+    "role": "HQ",
+    "basePoints": 115,
+    "stats": { "movement": 5, "toughness": 5, "save": "2+", "wounds": 5, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "inferno-combi-bolter", "name": "Inferno Combi-bolter", "type": "Rapid Fire", "range": 24, "attacks": 2, "ballisticSkill": 3, "strength": 4, "armourPenetration": -1, "damage": 1, "abilities": ["Rapid Fire 2"] },
+      { "id": "force-weapon", "name": "Force Weapon", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 3, "strength": 6, "armourPenetration": -1, "damage": "D3", "abilities": ["Psychic"] }
+    ],
+    "abilities": [
+      { "name": "Marked by Fate", "description": "[Rules text requires manual verification]" },
+      { "name": "Terminator Armour", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ts-infernal-master",
+    "name": "Infernal Master",
+    "faction": "Thousand Sons",
+    "role": "HQ",
+    "basePoints": 90,
+    "stats": { "movement": 6, "toughness": 4, "save": "3+", "wounds": 4, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "screamer-invocation", "name": "Screamer Invocation", "type": "Assault", "range": 18, "attacks": "D6", "ballisticSkill": 3, "strength": 6, "armourPenetration": -2, "damage": 1, "abilities": ["Torrent", "Psychic"] },
+      { "id": "force-weapon", "name": "Force Weapon", "type": "Melee", "range": "Melee", "attacks": 4, "weaponSkill": 3, "strength": 6, "armourPenetration": -1, "damage": "D3", "abilities": ["Psychic"] }
+    ],
+    "abilities": [
+      { "name": "Malefic Pacts", "description": "[Rules text requires manual verification]" },
+      { "name": "Glimpse of Eternity", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ts-rubric-marines",
+    "name": "Rubric Marines",
+    "faction": "Thousand Sons",
+    "role": "TROOPS",
+    "basePoints": 105,
+    "stats": { "movement": 5, "toughness": 4, "save": "3+", "wounds": 2, "leadership": "7+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "inferno-boltgun", "name": "Inferno Boltgun", "type": "Rapid Fire", "range": 24, "attacks": 1, "ballisticSkill": 3, "strength": 4, "armourPenetration": -1, "damage": 1, "abilities": ["Rapid Fire 1"] },
+      { "id": "close-combat-weapon", "name": "Close Combat Weapon", "type": "Melee", "range": "Melee", "attacks": 2, "weaponSkill": 3, "strength": 4, "armourPenetration": 0, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Icon of Flame", "description": "[Rules text requires manual verification]" },
+      { "name": "All is Dust", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ts-tzaangors",
+    "name": "Tzaangors",
+    "faction": "Thousand Sons",
+    "role": "TROOPS",
+    "basePoints": 65,
+    "stats": { "movement": 6, "toughness": 4, "save": "6+", "wounds": 1, "leadership": "7+", "objectiveControl": 2 },
+    "options": [],
+    "weapons": [
+      { "id": "tzaangor-blades", "name": "Tzaangor Blades", "type": "Melee", "range": "Melee", "attacks": 2, "weaponSkill": 4, "strength": 4, "armourPenetration": -1, "damage": 1, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Relic Hunters", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ts-scarab-occult-terminators",
+    "name": "Scarab Occult Terminators",
+    "faction": "Thousand Sons",
+    "role": "ELITES",
+    "basePoints": 215,
+    "stats": { "movement": 5, "toughness": 5, "save": "2+", "wounds": 3, "leadership": "6+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "inferno-combi-bolter", "name": "Inferno Combi-bolter", "type": "Rapid Fire", "range": 24, "attacks": 2, "ballisticSkill": 3, "strength": 4, "armourPenetration": -1, "damage": 1, "abilities": ["Rapid Fire 2"] },
+      { "id": "prosperine-khopesh", "name": "Prosperine Khopesh", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 3, "strength": 5, "armourPenetration": -2, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "All is Dust", "description": "[Rules text requires manual verification]" },
+      { "name": "Terminator Armour", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ts-tzaangor-shaman",
+    "name": "Tzaangor Shaman",
+    "faction": "Thousand Sons",
+    "role": "ELITES",
+    "basePoints": 60,
+    "stats": { "movement": 10, "toughness": 4, "save": "6+", "wounds": 4, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "mutating-orb", "name": "Mutating Orb", "type": "Assault", "range": 18, "attacks": "D3", "ballisticSkill": 3, "strength": 5, "armourPenetration": -1, "damage": 1, "abilities": ["Psychic"] },
+      { "id": "force-stave", "name": "Force Stave", "type": "Melee", "range": "Melee", "attacks": 3, "weaponSkill": 4, "strength": 6, "armourPenetration": -1, "damage": "D3", "abilities": ["Psychic"] }
+    ],
+    "abilities": [
+      { "name": "Bestial Prophet", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ts-chaos-spawn",
+    "name": "Thousand Sons Chaos Spawn",
+    "faction": "Thousand Sons",
+    "role": "FAST_ATTACK",
+    "basePoints": 65,
+    "stats": { "movement": 8, "toughness": 5, "save": "4+", "wounds": 4, "leadership": "8+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "hideous-mutations", "name": "Hideous Mutations", "type": "Melee", "range": "Melee", "attacks": "D6", "weaponSkill": 4, "strength": 5, "armourPenetration": -1, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Fearsome", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ts-tzaangor-enlightened",
+    "name": "Tzaangor Enlightened",
+    "faction": "Thousand Sons",
+    "role": "FAST_ATTACK",
+    "basePoints": 45,
+    "stats": { "movement": 10, "toughness": 4, "save": "6+", "wounds": 2, "leadership": "7+", "objectiveControl": 1 },
+    "options": [],
+    "weapons": [
+      { "id": "fatecaster-greatbow", "name": "Fatecaster Greatbow", "type": "Assault", "range": 24, "attacks": 1, "ballisticSkill": 3, "strength": 4, "armourPenetration": -1, "damage": 2, "abilities": ["Precision"] },
+      { "id": "divining-spear", "name": "Divining Spear", "type": "Melee", "range": "Melee", "attacks": 2, "weaponSkill": 4, "strength": 5, "armourPenetration": -1, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Guided by Fate", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ts-mutalith-vortex-beast",
+    "name": "Mutalith Vortex Beast",
+    "faction": "Thousand Sons",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 165,
+    "stats": { "movement": 10, "toughness": 10, "save": "4+", "wounds": 13, "leadership": "7+", "objectiveControl": 4 },
+    "options": [],
+    "weapons": [
+      { "id": "warp-vortex", "name": "Warp Vortex", "type": "Assault", "range": 24, "attacks": "D6", "ballisticSkill": 3, "strength": 9, "armourPenetration": -2, "damage": "D3", "abilities": ["Blast", "Psychic"] },
+      { "id": "mutalith-claws", "name": "Mutalith Claws", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 3, "strength": 7, "armourPenetration": -1, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Mutant Appendages", "description": "[Rules text requires manual verification]" },
+      { "name": "Warp Vortex", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ts-forgefiend",
+    "name": "Thousand Sons Forgefiend",
+    "faction": "Thousand Sons",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 135,
+    "stats": { "movement": 8, "toughness": 10, "save": "3+", "wounds": 12, "leadership": "7+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "hades-autocannon", "name": "Hades Autocannon", "type": "Heavy", "range": 36, "attacks": 6, "ballisticSkill": 3, "strength": 8, "armourPenetration": -1, "damage": 2, "abilities": [] },
+      { "id": "forgefiend-jaws", "name": "Forgefiend Jaws", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 3, "strength": 7, "armourPenetration": 0, "damage": 2, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Daemonic Machine Spirit", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ts-maulerfiend",
+    "name": "Thousand Sons Maulerfiend",
+    "faction": "Thousand Sons",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 140,
+    "stats": { "movement": 10, "toughness": 10, "save": "3+", "wounds": 12, "leadership": "7+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "maulerfiend-fists", "name": "Maulerfiend Fists", "type": "Melee", "range": "Melee", "attacks": 6, "weaponSkill": 3, "strength": 12, "armourPenetration": -2, "damage": 3, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Siege Crawler", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise D3", "description": "[Rules text requires manual verification]" }
+    ]
+  },
+  {
+    "id": "ts-helbrute",
+    "name": "Thousand Sons Helbrute",
+    "faction": "Thousand Sons",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 145,
+    "stats": { "movement": 6, "toughness": 9, "save": "2+", "wounds": 8, "leadership": "6+", "objectiveControl": 3 },
+    "options": [],
+    "weapons": [
+      { "id": "multi-melta", "name": "Multi-melta", "type": "Heavy", "range": 18, "attacks": 2, "ballisticSkill": 3, "strength": 9, "armourPenetration": -4, "damage": "D6", "abilities": ["Melta 2"] },
+      { "id": "helbrute-fist", "name": "Helbrute Fist", "type": "Melee", "range": "Melee", "attacks": 5, "weaponSkill": 3, "strength": 12, "armourPenetration": -2, "damage": 3, "abilities": [] }
+    ],
+    "abilities": [
+      { "name": "Crazed", "description": "[Rules text requires manual verification]" },
+      { "name": "Deadly Demise 1", "description": "[Rules text requires manual verification]" }
+    ]
+  }
+]
