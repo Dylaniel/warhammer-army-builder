@@ -65,4 +65,8 @@ Thumbs.db
 .antigravity/logs/
 
 # --- Compiled CSS artefacts ---
-src/styles/output.css
+src/styles/output.css
+
+# --- Raw Data (Not version controlled) ---
+/raw-data/
+/official_sources/

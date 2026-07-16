@@ -150,10 +150,16 @@ The following items appeared in earlier planning but have been **deliberately sc
   - Refactor the data architecture to decouple detachment rules from parent-state conditional sweeps. Units, weapons, or profiles must explicitly declare their own applicable detachment bonuses within their schema object. Each bonus item must store a validation key indicating which detachment(s) it belongs to. 
   - **Crucial Rendering Rule:** The bonus text stored and rendered must reflect the exact, verbatim wording of the official tabletop rules. The application must not attempt to summarize or independently interpret ambiguous mechanics; it must provide the exact wording so players and their opponents can exercise human discretion during live gameplay. The rendering engine will simply read the entity's intrinsic array and display this verbatim text if the army's active detachment string matches.
 
-- [ ] **6.2 Automated Data Pipeline & Full Hydration**
-  - Build a Node.js parsing script (`scripts/parse-bsdata.ts`) to read machine-readable community XML/CAT files (provided by the user in `/raw-data`) and transform them into 10th-edition compliant JSON files mapped perfectly to the Task 6.1 entity-centric schema. Spawn parallel sub-agents to execute this script across all 26 factions, replacing the currently incomplete partial-hydration files with perfectly accurate datasets.
+- [ ] **6.2 Unit Composition Schema & UI Refactor**
+  - Update `army.ts` so `Unit` contains a `profiles: Profile[]` array (moving M, T, SV, W, LD, OC into the Profile). Completely rebuild the "Unit Composition" accordion in `UnitDetailTab` to replace the single "Model Quantity" counter with independent increment/decrement counters for each distinct profile in the unit (e.g., allowing independent scaling of a Sergeant vs. standard troops). Update the `ArmyDetailTab` roster cards to display this mixed composition accurately.
 
-- [ ] **6.3 Army Import / Export via JSON**
+- [ ] **6.3 HQ / Warlord Validation Warning**
+  - Implement a soft, non-blocking warning banner on the `ArmyDetailTab` that alerts the user if their army does not currently contain a designated Warlord/HQ unit.
+
+- [ ] **6.4 Automated Data Pipeline & Full Hydration**
+  - Build a Node.js parsing script (`scripts/parse-bsdata.ts`) to read machine-readable community XML/CAT files (fetched automatically from the community repository at `https://github.com/BSData/wh40k-10e.git` into `/raw-data`) and transform them into 10th-edition compliant JSON files mapped perfectly to the Task 6.1 entity-centric schema. Spawn parallel sub-agents to execute this script across all 26 factions, replacing the currently incomplete partial-hydration files with perfectly accurate datasets.
+
+- [ ] **6.5 Army Import / Export via JSON**
   - Implement robust list-sharing capabilities as the final ecosystem layer. Build a clipboard-copy mechanism for exporting full active states as JSON strings, alongside a text-area input window during army creation to parse and reconstruct lists.
 
 ---
