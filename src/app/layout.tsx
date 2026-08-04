@@ -6,7 +6,7 @@ import { ThemeProvider } from '../components/ThemeContext';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Battle Forge UI',
+  title: 'OpenForge',
   description: 'Build and manage your Warhammer armies',
 };
 

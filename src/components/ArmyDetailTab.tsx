@@ -314,13 +314,17 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
                               </span>
                             )}
                           </div>
-                          <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                            {unit.quantity || 1}x {unit.name} Models
-                          </span>
+                          <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                            {unit.composition && Object.keys(unit.composition).length > 0
+                              ? Object.entries(unit.composition)
+                                  .map(([profileName, count]) => `${count}x ${profileName}`)
+                                  .join(', ')
+                              : `${unit.quantity || 1}x ${unit.name} Models`}
+                          </div>
                         </div>
                         <div className="flex items-center">
                           <span className="text-sm font-bold text-gray-700 dark:text-gray-200 mr-3">
-                            {(unit.totalPoints || unit.basePoints) * (unit.quantity || 1)} pts
+                            {unit.totalPoints || unit.basePoints} pts
                           </span>
                           <button
                             onClick={(e) => {

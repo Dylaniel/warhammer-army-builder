@@ -58,20 +58,31 @@ type UnitRole =
   | 'FLYER'
   | 'DEDICATED_TRANSPORT';
 
+export interface Profile {
+  name: string; 
+  stats: UnitStats;
+  minQuantity: number; // e.g., 1 for a Sergeant, 4 for standard troops
+  maxQuantity: number; // e.g., 1 for a Sergeant, 9 for standard troops
+  equippedWeapons?: string[]; // Array of weapon IDs/Names assigned specifically to this profile
+}
+
 interface Unit {
   id: string;
   name: string;
   faction: string;
   role: UnitRole;
-  basePoints: number;
-  stats: UnitStats;
+  basePoints: number; // Legacy fallback points
+  pointsTiers?: { models: number; points: number }[]; // 10th edition tiered point costs based on total squad size
+  stats: UnitStats; // Legacy fallback
+  profiles?: Profile[]; // 10th edition explicit model profiles
   options: UnitOption[];
   weapons: Weapon[];
   abilities: (string | { name: string; description: string; phase?: GamePhase[] })[];
   detachmentBonuses?: DetachmentBonus[];
   selectedOptions?: string[]; // Array of selected option IDs (for army units)
   totalPoints?: number; // Base points + selected options (for army units)
-  quantity?: number; // For units that can have multiple models (for army units)
+  quantity?: number; // Legacy single-counter fallback
+  composition?: Record<string, number>; // Dictionary mapping Profile name -> current active quantity
   isWarlord?: boolean; // Indicates if this unit is the army's Warlord (for army units)
 }
 

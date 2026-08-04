@@ -64,7 +64,36 @@ export const calculateUnitPoints = (unit: Unit, selectedOptionIds: string[] = []
     return total + (option?.points || 0);
   }, 0);
 
-  return unit.basePoints + optionPoints;
+  let baseCost = unit.basePoints;
+
+  // 10th edition tiered point costing based on total models in the unit
+  if (unit.pointsTiers && unit.pointsTiers.length > 0) {
+    let totalModels = 0;
+    if (unit.composition && Object.keys(unit.composition).length > 0) {
+      totalModels = Object.values(unit.composition).reduce((a, b) => a + b, 0);
+    } else if (unit.quantity) {
+      totalModels = unit.quantity;
+    } else if (unit.profiles) {
+      totalModels = unit.profiles.reduce((sum, p) => sum + p.minQuantity, 0);
+    } else {
+      totalModels = 1;
+    }
+
+    // Sort tiers by models ascending
+    const sortedTiers = [...unit.pointsTiers].sort((a, b) => a.models - b.models);
+    
+    // Find the tier that accommodates the total models
+    const applicableTier = sortedTiers.find(tier => totalModels <= tier.models);
+    
+    // If we exceed the max tier, use the highest tier cost (or a custom formula, but typically max tier)
+    if (applicableTier) {
+      baseCost = applicableTier.points;
+    } else {
+      baseCost = sortedTiers[sortedTiers.length - 1].points;
+    }
+  }
+
+  return baseCost + optionPoints;
 };
 
 /**
@@ -107,6 +136,6 @@ export const validateUnitOptions = (unit: Unit, selectedOptionIds: string[]): bo
  */
 export const calculateArmyPoints = (armyUnits: Unit[]): number => {
   return armyUnits.reduce((total, armyUnit) => {
-    return total + (armyUnit.totalPoints || armyUnit.basePoints) * (armyUnit.quantity || 1);
+    return total + (armyUnit.totalPoints || armyUnit.basePoints);
   }, 0);
 };
