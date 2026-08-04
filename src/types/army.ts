@@ -59,7 +59,7 @@ type UnitRole =
   | 'DEDICATED_TRANSPORT';
 
 export interface Profile {
-  name: string; 
+  name: string;
   stats: UnitStats;
   minQuantity: number; // e.g., 1 for a Sergeant, 4 for standard troops
   maxQuantity: number; // e.g., 1 for a Sergeant, 9 for standard troops

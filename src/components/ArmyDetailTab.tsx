@@ -169,9 +169,15 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
   const handleUnitUpdate = (updatedUnit: Unit) => {
     const updatedArmy = { ...army };
     let found = false;
-    for (const cat of ['characters', 'battleline', 'dedicatedTransports', 'otherDatasheets', 'alliedUnits'] as const) {
+    for (const cat of [
+      'characters',
+      'battleline',
+      'dedicatedTransports',
+      'otherDatasheets',
+      'alliedUnits',
+    ] as const) {
       if (updatedArmy[cat]) {
-        const index = updatedArmy[cat]!.findIndex(u => u.id === updatedUnit.id);
+        const index = updatedArmy[cat]!.findIndex((u) => u.id === updatedUnit.id);
         if (index !== -1) {
           updatedArmy[cat]![index] = updatedUnit;
           found = true;
@@ -214,12 +220,7 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
   }
 
   if (isBattleModeOpen) {
-    return (
-      <BattleModeTab 
-        army={army} 
-        onBack={() => setIsBattleModeOpen(false)} 
-      />
-    );
+    return <BattleModeTab army={army} onBack={() => setIsBattleModeOpen(false)} />;
   }
 
   return (
@@ -307,7 +308,9 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
                       >
                         <div className="flex flex-col">
                           <div className="flex items-center">
-                            <span className="font-medium text-gray-900 dark:text-white">{unit.name}</span>
+                            <span className="font-medium text-gray-900 dark:text-white">
+                              {unit.name}
+                            </span>
                             {unit.isWarlord && (
                               <span className="ml-2 px-1.5 py-0.5 bg-yellow-500 text-yellow-900 text-[10px] font-bold rounded uppercase tracking-wider">
                                 HQ

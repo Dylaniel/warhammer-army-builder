@@ -119,7 +119,9 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
             className="flex-1 px-3 py-2 rounded bg-gray-700 dark:bg-gray-700 bg-gray-100 focus:outline-none focus:ring text-white dark:text-white text-gray-900"
             required
           >
-            <option value="" disabled>Select a Faction...</option>
+            <option value="" disabled>
+              Select a Faction...
+            </option>
             {SUPPORTED_FACTIONS.map((faction) => (
               <option key={faction} value={faction}>
                 {faction}
@@ -143,12 +145,15 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
             required
             disabled={!formData.faction}
           >
-            <option value="" disabled>Select a Detachment...</option>
-            {formData.faction && FACTION_DETACHMENTS[formData.faction]?.map((det) => (
-              <option key={det} value={det}>
-                {det}
-              </option>
-            ))}
+            <option value="" disabled>
+              Select a Detachment...
+            </option>
+            {formData.faction &&
+              FACTION_DETACHMENTS[formData.faction]?.map((det) => (
+                <option key={det} value={det}>
+                  {det}
+                </option>
+              ))}
           </select>
         </div>
         <div className="flex items-center mb-2">

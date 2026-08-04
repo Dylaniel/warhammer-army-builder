@@ -64,7 +64,7 @@ export default function BottomNavigation({ activeTab, onTabChange }: BottomNavig
         >
           <path d="M10 2l2.39 4.84 5.35.78-3.87 3.77.91 5.32L10 13.77l-4.78 2.52.91-5.32L2.26 7.62l5.35-.78L10 2z" />
         </svg>
-        <span className="text-xs font-bold uppercase">Battle Forge</span>
+        <span className="text-xs font-bold uppercase">OpenForge</span>
       </button>
 
       <button

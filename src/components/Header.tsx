@@ -9,7 +9,7 @@ export default function Header() {
       <h1
         className={`italic text-xl font-bold uppercase tracking-wider ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}
       >
-        Battle Forge
+        OpenForge
       </h1>
     </header>
   );

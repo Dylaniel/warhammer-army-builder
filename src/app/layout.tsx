@@ -6,8 +6,8 @@ import { ThemeProvider } from '../components/ThemeContext';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'OpenForge',
-  description: 'Build and manage your Warhammer armies',
+  title: 'OpenForge — Warhammer Army Builder',
+  description: 'OpenForge: Build, manage, and battle-plan your Warhammer 40,000 armies.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

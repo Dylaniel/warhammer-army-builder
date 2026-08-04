@@ -31,7 +31,7 @@ export const SUPPORTED_FACTIONS = [
   "T'au Empire",
   'Thousand Sons',
   'Tyranids',
-  'World Eaters'
+  'World Eaters',
 ];
 
 /**
@@ -81,10 +81,10 @@ export const calculateUnitPoints = (unit: Unit, selectedOptionIds: string[] = []
 
     // Sort tiers by models ascending
     const sortedTiers = [...unit.pointsTiers].sort((a, b) => a.models - b.models);
-    
+
     // Find the tier that accommodates the total models
-    const applicableTier = sortedTiers.find(tier => totalModels <= tier.models);
-    
+    const applicableTier = sortedTiers.find((tier) => totalModels <= tier.models);
+
     // If we exceed the max tier, use the highest tier cost (or a custom formula, but typically max tier)
     if (applicableTier) {
       baseCost = applicableTier.points;
