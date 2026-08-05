@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { Army, Unit } from '../types/army';
-import { createArmyUnit, calculateArmyPoints } from '../utils/unitUtils';
+import {
+  createArmyUnit,
+  calculateArmyPoints,
+  describeUnitComposition,
+  getDisplayStats,
+} from '../utils/unitUtils';
 import { useFactionUnits } from '../hooks/useFactionUnits';
 import EditArmyModal from './EditArmyModal';
 import UnitDetailTab from './UnitDetailTab';
@@ -318,11 +323,7 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
                             )}
                           </div>
                           <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                            {unit.composition && Object.keys(unit.composition).length > 0
-                              ? Object.entries(unit.composition)
-                                  .map(([profileName, count]) => `${count}x ${profileName}`)
-                                  .join(', ')
-                              : `${unit.quantity || 1}x ${unit.name} Models`}
+                            {describeUnitComposition(unit)}
                           </div>
                         </div>
                         <div className="flex items-center">
@@ -442,6 +443,10 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
 
 function AvailableUnitRow({ unit, onAdd }: { unit: Unit; onAdd: () => void }) {
   const [expanded, setExpanded] = useState(false);
+  // Task 6.4 schema: prefer the unit's modelGroups for the preview
+  // statline, falling back to legacy profiles/stats so unmigrated or
+  // malformed data can never crash this row.
+  const displayStats = getDisplayStats(unit);
 
   return (
     <div className="bg-blue-50 dark:bg-blue-900/20 rounded overflow-hidden mb-2 border border-transparent dark:border-blue-800/50">
@@ -474,37 +479,37 @@ function AvailableUnitRow({ unit, onAdd }: { unit: Unit; onAdd: () => void }) {
               <div>
                 <div className="text-[10px] text-gray-500">M</div>
                 <div className="font-medium text-gray-900 dark:text-gray-300">
-                  {unit.stats.movement}&quot;
+                  {displayStats.movement}&quot;
                 </div>
               </div>
               <div>
                 <div className="text-[10px] text-gray-500">T</div>
                 <div className="font-medium text-gray-900 dark:text-gray-300">
-                  {unit.stats.toughness}
+                  {displayStats.toughness}
                 </div>
               </div>
               <div>
                 <div className="text-[10px] text-gray-500">SV</div>
                 <div className="font-medium text-gray-900 dark:text-gray-300">
-                  {unit.stats.save}
+                  {displayStats.save}
                 </div>
               </div>
               <div>
                 <div className="text-[10px] text-gray-500">W</div>
                 <div className="font-medium text-gray-900 dark:text-gray-300">
-                  {unit.stats.wounds}
+                  {displayStats.wounds}
                 </div>
               </div>
               <div>
                 <div className="text-[10px] text-gray-500">LD</div>
                 <div className="font-medium text-gray-900 dark:text-gray-300">
-                  {unit.stats.leadership}
+                  {displayStats.leadership}
                 </div>
               </div>
               <div>
                 <div className="text-[10px] text-gray-500">OC</div>
                 <div className="font-medium text-gray-900 dark:text-gray-300">
-                  {unit.stats.objectiveControl}
+                  {displayStats.objectiveControl}
                 </div>
               </div>
             </div>
