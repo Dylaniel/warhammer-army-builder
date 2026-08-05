@@ -159,6 +159,12 @@ git commit -m "stuff"
 
 ## Workspace Execution & Model Routing Policy
 
+### 0. Model Agnosticism / Claude Code Exception
+
+This routing policy was authored assuming a Gemini-based orchestrator (e.g., Antigravity) driving Google-native sub-agents. When **Claude Code** is the acting agent, the requirement to route sub-agent or script execution through specific Google/Gemini models is **waived**: Claude Code executes tasks natively using Anthropic's models via its own CLI, file-editing tools, sub-agent spawning, and standard Node.js scripts. Any instruction elsewhere in this document that names a specific Google model for a task, parsing script, or QA pass should be read as "use Claude Code's native execution tools" instead when Claude Code is doing the work.
+
+This exception applies only to *which model/tooling performs the work*. It does **not** waive this policy's human-authorization requirements — High Tier spawns, any Anthropic-model sub-agent allocation, and merges/pushes to shared branches still require explicit user confirmation before proceeding.
+
 ### 1. Multi-Agent Complexity-Based Routing Matrix
 Before spawning any sub-agent, you must evaluate the nature and complexity of the task to determine the appropriate compute tier:
 
