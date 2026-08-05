@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { ModelGroup, Unit, UnitStats } from '../types/army';
-import { calculateUnitPoints, normalizeModelGroupComposition } from '../utils/unitUtils';
+import {
+  calculateUnitPoints,
+  getUnitModelCeiling,
+  normalizeModelGroupComposition,
+} from '../utils/unitUtils';
 
 interface UnitDetailTabProps {
   unit: Unit;
@@ -47,18 +51,27 @@ function StatGrid({ label, stats }: { label?: string; stats: UnitStats }) {
   );
 }
 
-/** Independent [-]/count/[+] counter for a single ModelGroup, clamped to its own min/max. */
+/**
+ * Independent [-]/count/[+] counter for a single ModelGroup, clamped to its
+ * own min/max AND to the unit-wide total model ceiling derived from
+ * `pointTiers` (see `getUnitModelCeiling`) — `atUnitCeiling` disables
+ * further increments on every group once the unit's total model count has
+ * reached that ceiling, regardless of any individual group's own
+ * `maxQuantity` headroom.
+ */
 function ModelGroupCounter({
   group,
   current,
+  atUnitCeiling,
   onChange,
 }: {
   group: ModelGroup;
   current: number;
+  atUnitCeiling: boolean;
   onChange: (delta: number) => void;
 }) {
   const canDecrease = current > group.minQuantity;
-  const canIncrease = current < group.maxQuantity;
+  const canIncrease = current < group.maxQuantity && !atUnitCeiling;
 
   return (
     <div className="flex items-center justify-between">
@@ -104,6 +117,16 @@ export default function UnitDetailTab({ unit, onBack, onUpdate }: UnitDetailTabP
     ? normalizeModelGroupComposition(unit, unit.composition)
     : {};
 
+  // Defect 3 fix: the unit's true model ceiling (from `pointTiers`, not the
+  // uncapped sum of each group's own `maxQuantity`) and whether the current
+  // composition has already reached it, so every group's [+] disables once
+  // the unit-wide total is maxed — see `getUnitModelCeiling`.
+  const modelCeiling = modelGroups ? getUnitModelCeiling(unit) : undefined;
+  const currentTotalModels = modelGroups
+    ? Object.values(modelGroupComposition).reduce((sum, count) => sum + count, 0)
+    : 0;
+  const atUnitCeiling = modelCeiling !== undefined && currentTotalModels >= modelCeiling;
+
   // Legacy fallback composition, keyed by Profile name (pre Task 6.4 data).
   const legacyComposition = unit.composition || {};
   if (!modelGroups && Object.keys(legacyComposition).length === 0 && unit.profiles) {
@@ -120,7 +143,23 @@ export default function UnitDetailTab({ unit, onBack, onUpdate }: UnitDetailTabP
     onUpdate((prevUnit) => {
       const prevComposition = normalizeModelGroupComposition(prevUnit, prevUnit.composition);
       const current = prevComposition[group.id] ?? group.minQuantity;
-      const next = Math.max(group.minQuantity, Math.min(group.maxQuantity, current + delta));
+      let next = Math.max(group.minQuantity, Math.min(group.maxQuantity, current + delta));
+
+      if (next > current) {
+        // Defect 3 fix: never let an increment push the unit's TOTAL model
+        // count above its `pointTiers`-derived ceiling, even though this
+        // group's own `maxQuantity` would otherwise allow it (see
+        // `getUnitModelCeiling` for why per-group maxima alone aren't a
+        // reliable cap).
+        const ceiling = getUnitModelCeiling(prevUnit);
+        if (ceiling !== undefined) {
+          const totalOtherGroups = Object.entries(prevComposition).reduce(
+            (sum, [id, count]) => (id === group.id ? sum : sum + count),
+            0
+          );
+          next = Math.min(next, Math.max(current, ceiling - totalOtherGroups));
+        }
+      }
 
       const newComposition = { ...prevComposition, [group.id]: next };
       const updatedUnit: Unit = { ...prevUnit, composition: newComposition };
@@ -283,6 +322,7 @@ export default function UnitDetailTab({ unit, onBack, onUpdate }: UnitDetailTabP
                       key={group.id}
                       group={group}
                       current={modelGroupComposition[group.id] ?? group.minQuantity}
+                      atUnitCeiling={atUnitCeiling}
                       onChange={(delta) => handleModelGroupChange(group, delta)}
                     />
                   ))}

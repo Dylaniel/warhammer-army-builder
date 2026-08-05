@@ -158,6 +158,32 @@ export const resolveModelGroupPoints = (
 };
 
 /**
+ * The maximum total model count a unit can ever legally field, derived from
+ * its `pointTiers` rather than the sum of each `modelGroup`'s own
+ * `maxQuantity`. Follower ModelGroups are generated independently and their
+ * individual maxima can sum to more models than any priced tier actually
+ * covers — e.g. an Intercessor Squad's Sergeant(1) + Intercessor(4-9) +
+ * Intercessor w/ Grenade Launcher(0-2) groups allow 12 models by their own
+ * per-group limits, but in real 10th-edition rules the grenade-launcher
+ * variant REPLACES base Intercessors rather than adding to them, and no
+ * `pointTiers` entry prices above 10 models. The true ceiling is the
+ * largest total model count that appears across all of the unit's defined
+ * `pointTiers`.
+ *
+ * Returns `undefined` when the unit has no `pointTiers`, so callers can
+ * leave per-group min/max as the only cap and units without pointTiers are
+ * unaffected.
+ */
+export const getUnitModelCeiling = (unit: Unit): number | undefined => {
+  if (!unit.pointTiers || unit.pointTiers.length === 0) return undefined;
+
+  return unit.pointTiers.reduce((max, tier) => {
+    const tierTotal = Object.values(tier.composition).reduce((sum, count) => sum + count, 0);
+    return Math.max(max, tierTotal);
+  }, 0);
+};
+
+/**
  * Resolve a representative statline for display purposes (e.g. the
  * unit-picker preview stat block). Prefers the first `leader` model group,
  * then the first defined model group, then falls back to legacy
