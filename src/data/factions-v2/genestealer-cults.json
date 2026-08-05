@@ -1,0 +1,1374 @@
+﻿[
+  {
+    "id": "gsc-patriarch",
+    "name": "Patriarch",
+    "faction": "Genestealer Cults",
+    "role": "HQ",
+    "basePoints": 85,
+    "stats": {
+      "movement": 8,
+      "toughness": 4,
+      "save": "4+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "patriarchs-claws",
+        "name": "Patriarch's claws",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds",
+          "Twin-linked"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Psychic Familiar",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cosmic Horror (Psychic)",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Scouts 8\"",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cult Ambush",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gsc-patriarch-model": {
+        "id": "gsc-patriarch-model",
+        "name": "Patriarch",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 4,
+          "save": "4+",
+          "wounds": 5,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gsc-patriarch-model": 1
+        },
+        "points": 85
+      }
+    ]
+  },
+  {
+    "id": "gsc-primus",
+    "name": "Primus",
+    "faction": "Genestealer Cults",
+    "role": "HQ",
+    "basePoints": 90,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "needle-pistol",
+        "name": "Needle pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 1,
+        "armourPenetration": -1,
+        "damage": "D3",
+        "abilities": [
+          "Anti-infantry 2+",
+          "Toxic"
+        ]
+      },
+      {
+        "id": "toxin-injector-claw",
+        "name": "Toxin injector claw",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 2,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Anti-infantry 2+"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cult Demagogue",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Meticulous Planner",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cult Ambush",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gsc-primus-model": {
+        "id": "gsc-primus-model",
+        "name": "Primus",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gsc-primus-model": 1
+        },
+        "points": 90
+      }
+    ]
+  },
+  {
+    "id": "gsc-magus",
+    "name": "Magus",
+    "faction": "Genestealer Cults",
+    "role": "HQ",
+    "basePoints": 50,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "autopistol",
+        "name": "Autopistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "magus-stave",
+        "name": "Magus stave",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": "D3",
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Psychic Familiar",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Spiritual Leader (Psychic)",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Mind Control (Psychic)",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cult Ambush",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gsc-magus-model": {
+        "id": "gsc-magus-model",
+        "name": "Magus",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gsc-magus-model": 1
+        },
+        "points": 50
+      }
+    ]
+  },
+  {
+    "id": "gsc-acolyte-iconward",
+    "name": "Acolyte Iconward",
+    "faction": "Genestealer Cults",
+    "role": "HQ",
+    "basePoints": 50,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "autopistol",
+        "name": "Autopistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "cult-claws",
+        "name": "Cult claws",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Nexus of Devotion",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Blood Surge",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cult Ambush",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gsc-acolyte-iconward-model": {
+        "id": "gsc-acolyte-iconward-model",
+        "name": "Acolyte Iconward",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gsc-acolyte-iconward-model": 1
+        },
+        "points": 50
+      }
+    ]
+  },
+  {
+    "id": "gsc-abominant",
+    "name": "Abominant",
+    "faction": "Genestealer Cults",
+    "role": "HQ",
+    "basePoints": 75,
+    "stats": {
+      "movement": 6,
+      "toughness": 5,
+      "save": "5+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "power-sledgehammer",
+        "name": "Power sledgehammer",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 12,
+        "armourPenetration": -2,
+        "damage": "D6+1",
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Mindwyrm Familiar",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "The Chosen One",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Regenerating Monstrosity",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Feel No Pain 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cult Ambush",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gsc-abominant-model": {
+        "id": "gsc-abominant-model",
+        "name": "Abominant",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 5,
+          "save": "5+",
+          "wounds": 5,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gsc-abominant-model": 1
+        },
+        "points": 75
+      }
+    ]
+  },
+  {
+    "id": "gsc-kelermorph",
+    "name": "Kelermorph",
+    "faction": "Genestealer Cults",
+    "role": "ELITES",
+    "basePoints": 55,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "liberator-autostubs",
+        "name": "Liberator autostubs",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 6,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Precision"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Lone Operative",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cult Ambush",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Heroic Intervention",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Hypersensory Reflexes",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gsc-kelermorph-model": {
+        "id": "gsc-kelermorph-model",
+        "name": "Kelermorph",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gsc-kelermorph-model": 1
+        },
+        "points": 55
+      }
+    ]
+  },
+  {
+    "id": "gsc-reductus-saboteur",
+    "name": "Reductus Saboteur",
+    "faction": "Genestealer Cults",
+    "role": "ELITES",
+    "basePoints": 65,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "remote-explosives",
+        "name": "Remote explosives",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6+3",
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast"
+        ]
+      },
+      {
+        "id": "demolition-charges",
+        "name": "Demolition charges",
+        "type": "Assault",
+        "range": 6,
+        "attacks": "D6+3",
+        "ballisticSkill": 3,
+        "strength": 12,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Blast",
+          "Hazardous",
+          "One Shot"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Lone Operative",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cult Ambush",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Infiltrators",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Stealth",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Planted Explosives",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Booby Traps",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gsc-reductus-saboteur-model": {
+        "id": "gsc-reductus-saboteur-model",
+        "name": "Reductus Saboteur",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gsc-reductus-saboteur-model": 1
+        },
+        "points": 65
+      }
+    ]
+  },
+  {
+    "id": "gsc-neophyte-hybrids",
+    "name": "Neophyte Hybrids",
+    "faction": "Genestealer Cults",
+    "role": "TROOPS",
+    "basePoints": 90,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "hybrid-firearm",
+        "name": "Hybrid firearm",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 1,
+        "weaponSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cult Ambush",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "A Plan Generations in the Making",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cult Icon",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gsc-neophyte-hybrids-model": {
+        "id": "gsc-neophyte-hybrids-model",
+        "name": "Neophyte Hybrids",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gsc-neophyte-hybrids-model": 1
+        },
+        "points": 90
+      }
+    ]
+  },
+  {
+    "id": "gsc-acolyte-hybrids",
+    "name": "Acolyte Hybrids",
+    "faction": "Genestealer Cults",
+    "role": "TROOPS",
+    "basePoints": 85,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "autopistol",
+        "name": "Autopistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "cult-claws",
+        "name": "Cult claws and knife",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cult Ambush",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Flawless Execution",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cult Icon",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gsc-acolyte-hybrids-model": {
+        "id": "gsc-acolyte-hybrids-model",
+        "name": "Acolyte Hybrids",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gsc-acolyte-hybrids-model": 1
+        },
+        "points": 85
+      }
+    ]
+  },
+  {
+    "id": "gsc-purestrain-genestealers",
+    "name": "Purestrain Genestealers",
+    "faction": "Genestealer Cults",
+    "role": "ELITES",
+    "basePoints": 75,
+    "stats": {
+      "movement": 8,
+      "toughness": 4,
+      "save": "5+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "cult-claws-and-talons",
+        "name": "Cult claws and talons",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 2,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Scouts 8\"",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cult Ambush",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Vanguard Predator",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gsc-purestrain-genestealers-model": {
+        "id": "gsc-purestrain-genestealers-model",
+        "name": "Purestrain Genestealers",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 4,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gsc-purestrain-genestealers-model": 1
+        },
+        "points": 75
+      }
+    ]
+  },
+  {
+    "id": "gsc-aberrants",
+    "name": "Aberrants",
+    "faction": "Genestealer Cults",
+    "role": "ELITES",
+    "basePoints": 185,
+    "stats": {
+      "movement": 6,
+      "toughness": 6,
+      "save": "5+",
+      "wounds": 3,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-power-weapon",
+        "name": "Heavy power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Cult Ambush",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Feel No Pain 4+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Hulking Brutes",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gsc-aberrants-model": {
+        "id": "gsc-aberrants-model",
+        "name": "Aberrants",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 6,
+          "save": "5+",
+          "wounds": 3,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gsc-aberrants-model": 1
+        },
+        "points": 185
+      }
+    ]
+  },
+  {
+    "id": "gsc-achilles-ridgerunners",
+    "name": "Achilles Ridgerunners",
+    "faction": "Genestealer Cults",
+    "role": "FAST_ATTACK",
+    "basePoints": 85,
+    "stats": {
+      "movement": 12,
+      "toughness": 8,
+      "save": "3+",
+      "wounds": 8,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-mining-laser",
+        "name": "Heavy mining laser",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 2,
+        "ballisticSkill": 4,
+        "strength": 12,
+        "armourPenetration": -3,
+        "damage": "D6+1",
+        "abilities": []
+      },
+      {
+        "id": "twin-heavy-stubber",
+        "name": "Twin heavy stubber",
+        "type": "Rapid Fire",
+        "range": 36,
+        "attacks": 3,
+        "ballisticSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Twin-linked",
+          "Rapid Fire 3"
+        ]
+      },
+      {
+        "id": "armoured-hull",
+        "name": "Armoured hull",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Scouts 9\"",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cult Ambush",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Crossfire",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Spotter",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gsc-achilles-ridgerunners-model": {
+        "id": "gsc-achilles-ridgerunners-model",
+        "name": "Achilles Ridgerunners",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 8,
+          "save": "3+",
+          "wounds": 8,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gsc-achilles-ridgerunners-model": 1
+        },
+        "points": 85
+      }
+    ]
+  },
+  {
+    "id": "gsc-goliath-rockgrinder",
+    "name": "Goliath Rockgrinder",
+    "faction": "Genestealer Cults",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 155,
+    "stats": {
+      "movement": 10,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 10,
+      "leadership": "7+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-mining-laser",
+        "name": "Heavy mining laser",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 2,
+        "ballisticSkill": 4,
+        "strength": 12,
+        "armourPenetration": -3,
+        "damage": "D6+1",
+        "abilities": []
+      },
+      {
+        "id": "drilldozer-blade",
+        "name": "Drilldozer blade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Cult Ambush",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Grinding Clearance",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Transport 6",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gsc-goliath-rockgrinder-model": {
+        "id": "gsc-goliath-rockgrinder-model",
+        "name": "Goliath Rockgrinder",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 9,
+          "save": "3+",
+          "wounds": 10,
+          "leadership": "7+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gsc-goliath-rockgrinder-model": 1
+        },
+        "points": 155
+      }
+    ]
+  },
+  {
+    "id": "gsc-goliath-truck",
+    "name": "Goliath Truck",
+    "faction": "Genestealer Cults",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 110,
+    "stats": {
+      "movement": 12,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 10,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "twin-autocannon",
+        "name": "Twin autocannon",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 2,
+        "ballisticSkill": 4,
+        "strength": 9,
+        "armourPenetration": -1,
+        "damage": 3,
+        "abilities": [
+          "Twin-linked"
+        ]
+      },
+      {
+        "id": "heavy-stubber",
+        "name": "Heavy stubber",
+        "type": "Rapid Fire",
+        "range": 36,
+        "attacks": 3,
+        "ballisticSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 3"
+        ]
+      },
+      {
+        "id": "armoured-hull",
+        "name": "Armoured hull",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Cult Ambush",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Firing Deck 12",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Rugged Transport",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Transport 12",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gsc-goliath-truck-model": {
+        "id": "gsc-goliath-truck-model",
+        "name": "Goliath Truck",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 9,
+          "save": "3+",
+          "wounds": 10,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gsc-goliath-truck-model": 1
+        },
+        "points": 110
+      }
+    ]
+  },
+  {
+    "id": "gsc-jackal-alphus",
+    "name": "Jackal Alphus",
+    "faction": "Genestealer Cults",
+    "role": "HQ",
+    "basePoints": 60,
+    "stats": {
+      "movement": 12,
+      "toughness": 4,
+      "save": "4+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "cult-sniper-rifle",
+        "name": "Cult sniper rifle",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": [
+          "Precision"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cult Ambush",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Scouts 9\"",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Target Priority",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gsc-jackal-alphus-model": {
+        "id": "gsc-jackal-alphus-model",
+        "name": "Jackal Alphus",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "4+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gsc-jackal-alphus-model": 1
+        },
+        "points": 60
+      }
+    ]
+  }
+]

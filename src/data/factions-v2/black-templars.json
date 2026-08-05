@@ -1,0 +1,1482 @@
+[
+  {
+    "id": "bt-high-marshal-helbrecht",
+    "name": "High Marshal Helbrecht",
+    "faction": "Black Templars",
+    "role": "HQ",
+    "basePoints": 120,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 6,
+      "leadership": "5+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "ferocity",
+        "name": "Ferocity",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 5,
+        "armourPenetration": 1,
+        "damage": 2,
+        "abilities": [
+          "Assault",
+          "Melta 1"
+        ]
+      },
+      {
+        "id": "sword-of-the-high-marshals",
+        "name": "Sword of the High Marshals",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 8,
+        "armourPenetration": 3,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Chapter Master",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "High Marshal",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Crusade of Wrath",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bt-high-marshal-helbrecht-model": {
+        "id": "bt-high-marshal-helbrecht-model",
+        "name": "High Marshal Helbrecht",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "2+",
+          "wounds": 6,
+          "leadership": "5+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bt-high-marshal-helbrecht-model": 1
+        },
+        "points": 120
+      }
+    ]
+  },
+  {
+    "id": "bt-chaplain-grimaldus",
+    "name": "Chaplain Grimaldus",
+    "faction": "Black Templars",
+    "role": "HQ",
+    "basePoints": 120,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 5,
+      "leadership": "5+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plasma-pistol",
+        "name": "Plasma pistol - standard",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 7,
+        "armourPenetration": 2,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ]
+      },
+      {
+        "id": "artificer-crozius",
+        "name": "Artificer crozius",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Spiritual Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Relics of the Emperor's Champion",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bt-chaplain-grimaldus-model": {
+        "id": "bt-chaplain-grimaldus-model",
+        "name": "Chaplain Grimaldus",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 5,
+          "leadership": "5+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bt-chaplain-grimaldus-model": 1
+        },
+        "points": 120
+      }
+    ]
+  },
+  {
+    "id": "bt-emperors-champion",
+    "name": "The Emperor's Champion",
+    "faction": "Black Templars",
+    "role": "HQ",
+    "basePoints": 75,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ]
+      },
+      {
+        "id": "black-sword-strike",
+        "name": "Black Sword - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 8,
+        "armourPenetration": 3,
+        "damage": 3,
+        "abilities": [
+          "Precision"
+        ]
+      },
+      {
+        "id": "black-sword-sweep",
+        "name": "Black Sword - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 10,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": 2,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Skilful Parry",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Slayer of Champions",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bt-emperors-champion-model": {
+        "id": "bt-emperors-champion-model",
+        "name": "The Emperor's Champion",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "2+",
+          "wounds": 5,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bt-emperors-champion-model": 1
+        },
+        "points": 75
+      }
+    ]
+  },
+  {
+    "id": "bt-primaris-crusader-squad",
+    "name": "Primaris Crusader Squad",
+    "faction": "Black Templars",
+    "role": "TROOPS",
+    "basePoints": 140,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "opt-10-extra",
+        "name": "10 additional models",
+        "points": 140
+      }
+    ],
+    "weapons": [
+      {
+        "id": "auto-bolt-rifle",
+        "name": "Auto bolt rifle",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Assault"
+        ]
+      },
+      {
+        "id": "heavy-bolt-pistol",
+        "name": "Heavy bolt pistol",
+        "type": "Pistol",
+        "range": 18,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ]
+      },
+      {
+        "id": "astartes-chainsword",
+        "name": "Astartes chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Righteous Zeal",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bt-primaris-crusader-squad-model": {
+        "id": "bt-primaris-crusader-squad-model",
+        "name": "Primaris Crusader Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bt-primaris-crusader-squad-model": 1
+        },
+        "points": 140
+      }
+    ]
+  },
+  {
+    "id": "bt-crusader-squad",
+    "name": "Crusader Squad",
+    "faction": "Black Templars",
+    "role": "TROOPS",
+    "basePoints": 85,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "opt-5-extra",
+        "name": "5 additional models",
+        "points": 85
+      }
+    ],
+    "weapons": [
+      {
+        "id": "boltgun",
+        "name": "Boltgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 1"
+        ]
+      },
+      {
+        "id": "astartes-chainsword",
+        "name": "Astartes chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Righteous Zeal",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bt-crusader-squad-model": {
+        "id": "bt-crusader-squad-model",
+        "name": "Crusader Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bt-crusader-squad-model": 1
+        },
+        "points": 85
+      }
+    ]
+  },
+  {
+    "id": "bt-sword-brethren",
+    "name": "Primaris Sword Brethren",
+    "faction": "Black Templars",
+    "role": "ELITES",
+    "basePoints": 150,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "opt-5-extra",
+        "name": "5 additional models",
+        "points": 150
+      }
+    ],
+    "weapons": [
+      {
+        "id": "heavy-bolt-pistol",
+        "name": "Heavy bolt pistol",
+        "type": "Pistol",
+        "range": 18,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ]
+      },
+      {
+        "id": "power-weapon",
+        "name": "Power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": 2,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "thunder-hammer",
+        "name": "Thunder hammer",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 8,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Vow-sworn Bladesmen",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bt-sword-brethren-model": {
+        "id": "bt-sword-brethren-model",
+        "name": "Primaris Sword Brethren",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bt-sword-brethren-model": 1
+        },
+        "points": 150
+      }
+    ]
+  },
+  {
+    "id": "bt-castellan",
+    "name": "Castellan",
+    "faction": "Black Templars",
+    "role": "HQ",
+    "basePoints": 70,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "combi-weapon",
+        "name": "Combi-weapon",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 4+",
+          "Devastating Wounds",
+          "Rapid Fire 1"
+        ]
+      },
+      {
+        "id": "master-crafted-power-weapon",
+        "name": "Master-crafted power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Target Priority",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Tactical Precision",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bt-castellan-model": {
+        "id": "bt-castellan-model",
+        "name": "Castellan",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bt-castellan-model": 1
+        },
+        "points": 70
+      }
+    ]
+  },
+  {
+    "id": "bt-marshal",
+    "name": "Marshal",
+    "faction": "Black Templars",
+    "role": "HQ",
+    "basePoints": 80,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plasma-pistol",
+        "name": "Plasma pistol - standard",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 7,
+        "armourPenetration": 2,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ]
+      },
+      {
+        "id": "master-crafted-power-weapon",
+        "name": "Master-crafted power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Rites of Battle",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bt-marshal-model": {
+        "id": "bt-marshal-model",
+        "name": "Marshal",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 5,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bt-marshal-model": 1
+        },
+        "points": 80
+      }
+    ]
+  },
+  {
+    "id": "bt-gladiator-lancer",
+    "name": "Black Templars Gladiator Lancer",
+    "faction": "Black Templars",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 165,
+    "stats": {
+      "movement": 10,
+      "toughness": 10,
+      "save": "3+",
+      "wounds": 12,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "lancer-laser-destroyer",
+        "name": "Lancer laser destroyer",
+        "type": "Heavy",
+        "range": 72,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 14,
+        "armourPenetration": 4,
+        "damage": "D6+3",
+        "abilities": [
+          "Heavy"
+        ]
+      },
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolters",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "multi-melta",
+        "name": "Multi-melta",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": 4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "armoured-hull",
+        "name": "Armoured hull",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Aquilon Optics",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bt-gladiator-lancer-model": {
+        "id": "bt-gladiator-lancer-model",
+        "name": "Black Templars Gladiator Lancer",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 10,
+          "save": "3+",
+          "wounds": 12,
+          "leadership": "6+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bt-gladiator-lancer-model": 1
+        },
+        "points": 165
+      }
+    ]
+  },
+  {
+    "id": "bt-gladiator-reaper",
+    "name": "Black Templars Gladiator Reaper",
+    "faction": "Black Templars",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 155,
+    "stats": {
+      "movement": 10,
+      "toughness": 10,
+      "save": "3+",
+      "wounds": 12,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "twin-heavy-onslaught-gatling-cannon",
+        "name": "Twin heavy onslaught gatling cannon",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 12,
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds",
+          "Twin-linked"
+        ]
+      },
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolters",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "multi-melta",
+        "name": "Multi-melta",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": 4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "armoured-hull",
+        "name": "Armoured hull",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Rotating Death",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bt-gladiator-reaper-model": {
+        "id": "bt-gladiator-reaper-model",
+        "name": "Black Templars Gladiator Reaper",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 10,
+          "save": "3+",
+          "wounds": 12,
+          "leadership": "6+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bt-gladiator-reaper-model": 1
+        },
+        "points": 155
+      }
+    ]
+  },
+  {
+    "id": "bt-gladiator-valiant",
+    "name": "Black Templars Gladiator Valiant",
+    "faction": "Black Templars",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 155,
+    "stats": {
+      "movement": 10,
+      "toughness": 10,
+      "save": "3+",
+      "wounds": 12,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "twin-las-talon",
+        "name": "Twin las-talon",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 10,
+        "armourPenetration": 3,
+        "damage": "D6+1",
+        "abilities": [
+          "Twin-linked"
+        ]
+      },
+      {
+        "id": "multi-melta",
+        "name": "Multi-melta",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": 4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "armoured-hull",
+        "name": "Armoured hull",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Ferocious Assault",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bt-gladiator-valiant-model": {
+        "id": "bt-gladiator-valiant-model",
+        "name": "Black Templars Gladiator Valiant",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 10,
+          "save": "3+",
+          "wounds": 12,
+          "leadership": "6+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bt-gladiator-valiant-model": 1
+        },
+        "points": 155
+      }
+    ]
+  },
+  {
+    "id": "bt-impulsor",
+    "name": "Black Templars Impulsor",
+    "faction": "Black Templars",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 85,
+    "stats": {
+      "movement": 12,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 11,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "opt-shield-dome",
+        "name": "Shield Dome",
+        "points": 0
+      },
+      {
+        "id": "opt-orbital-comms-array",
+        "name": "Orbital Comms Array",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolters",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "multi-melta",
+        "name": "Multi-melta",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": 4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "armoured-hull",
+        "name": "Armoured hull",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Assault Vehicle",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Transport: 6",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bt-impulsor-model": {
+        "id": "bt-impulsor-model",
+        "name": "Black Templars Impulsor",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 9,
+          "save": "3+",
+          "wounds": 11,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bt-impulsor-model": 1
+        },
+        "points": 85
+      }
+    ]
+  },
+  {
+    "id": "bt-repulsor",
+    "name": "Black Templars Repulsor",
+    "faction": "Black Templars",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 190,
+    "stats": {
+      "movement": 10,
+      "toughness": 12,
+      "save": "3+",
+      "wounds": 16,
+      "leadership": "6+",
+      "objectiveControl": 5
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-onslaught-gatling-cannon",
+        "name": "Heavy onslaught gatling cannon",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 12,
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      },
+      {
+        "id": "multi-melta",
+        "name": "Multi-melta",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": 4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "armoured-hull",
+        "name": "Armoured hull",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 4,
+        "strength": 8,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Emergency Combat Embarkation",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Transport: 12",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bt-repulsor-model": {
+        "id": "bt-repulsor-model",
+        "name": "Black Templars Repulsor",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 12,
+          "save": "3+",
+          "wounds": 16,
+          "leadership": "6+",
+          "objectiveControl": 5
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bt-repulsor-model": 1
+        },
+        "points": 190
+      }
+    ]
+  },
+  {
+    "id": "bt-repulsor-executioner",
+    "name": "Black Templars Repulsor Executioner",
+    "faction": "Black Templars",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 220,
+    "stats": {
+      "movement": 10,
+      "toughness": 12,
+      "save": "3+",
+      "wounds": 16,
+      "leadership": "6+",
+      "objectiveControl": 5
+    },
+    "options": [
+      {
+        "id": "opt-heavy-laser-destroyer",
+        "name": "Heavy laser destroyer",
+        "points": 0
+      },
+      {
+        "id": "opt-macro-plasma-incinerator",
+        "name": "Macro plasma incinerator",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "heavy-laser-destroyer",
+        "name": "Heavy laser destroyer",
+        "type": "Heavy",
+        "range": 72,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 16,
+        "armourPenetration": 4,
+        "damage": "D6+4",
+        "abilities": []
+      },
+      {
+        "id": "multi-melta",
+        "name": "Multi-melta",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": 4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "armoured-hull",
+        "name": "Armoured hull",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 4,
+        "strength": 8,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Executioner",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Transport: 6",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bt-repulsor-executioner-model": {
+        "id": "bt-repulsor-executioner-model",
+        "name": "Black Templars Repulsor Executioner",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 12,
+          "save": "3+",
+          "wounds": 16,
+          "leadership": "6+",
+          "objectiveControl": 5
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bt-repulsor-executioner-model": 1
+        },
+        "points": 220
+      }
+    ]
+  },
+  {
+    "id": "bt-terminator-squad",
+    "name": "Terminator Squad",
+    "faction": "Black Templars",
+    "role": "ELITES",
+    "basePoints": 185,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "opt-5-extra",
+        "name": "5 additional models",
+        "points": 185
+      }
+    ],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "power-fist",
+        "name": "Power fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Homer",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Fury of the First",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bt-terminator-squad-model": {
+        "id": "bt-terminator-squad-model",
+        "name": "Terminator Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "2+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bt-terminator-squad-model": 1
+        },
+        "points": 185
+      }
+    ]
+  },
+  {
+    "id": "bt-bladeguard-veteran-squad",
+    "name": "Bladeguard Veteran Squad",
+    "faction": "Black Templars",
+    "role": "ELITES",
+    "basePoints": 90,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "opt-3-extra",
+        "name": "3 additional models",
+        "points": 90
+      }
+    ],
+    "weapons": [
+      {
+        "id": "heavy-bolt-pistol",
+        "name": "Heavy bolt pistol",
+        "type": "Pistol",
+        "range": 18,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ]
+      },
+      {
+        "id": "master-crafted-power-weapon",
+        "name": "Master-crafted power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Bladeguard",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bt-bladeguard-veteran-squad-model": {
+        "id": "bt-bladeguard-veteran-squad-model",
+        "name": "Bladeguard Veteran Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bt-bladeguard-veteran-squad-model": 1
+        },
+        "points": 90
+      }
+    ]
+  }
+]

@@ -1,0 +1,2749 @@
+[
+  {
+    "id": "sm-infernus-squad",
+    "name": "Infernus Squad",
+    "faction": "Space Marines",
+    "role": "TROOPS",
+    "basePoints": 90,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "pyreblaster",
+        "name": "Pyreblaster",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Torrent",
+          "Ignores Cover"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close Combat Weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Incendiary Terror",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "detachmentBonuses": [
+      {
+        "validationKeys": [
+          "Gladius Task Force"
+        ],
+        "name": "Combat Doctrines",
+        "description": "[Detachment rule text requires manual verification]",
+        "phase": [
+          "Command",
+          "Movement",
+          "Shooting",
+          "Charge",
+          "Fight"
+        ]
+      }
+    ],
+    "modelGroups": {
+      "sm-infernus-squad-model": {
+        "id": "sm-infernus-squad-model",
+        "name": "Infernus Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "sm-infernus-squad-model": 1
+        },
+        "points": 90
+      }
+    ]
+  },
+  {
+    "id": "captain-in-gravis-armour",
+    "name": "Captain in Gravis Armour",
+    "faction": "Space Marines",
+    "role": "HQ",
+    "basePoints": 80,
+    "stats": {
+      "movement": 5,
+      "toughness": 6,
+      "save": "3+",
+      "wounds": 6,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "master-crafted-heavy-bolt-rifle",
+        "name": "Master-crafted heavy bolt rifle",
+        "type": "Rapid Fire",
+        "range": 36,
+        "attacks": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [],
+        "ballisticSkill": 2
+      },
+      {
+        "id": "master-crafted-power-sword",
+        "name": "Master-crafted power sword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 2
+      },
+      {
+        "id": "boltstorm-gauntlet",
+        "name": "Boltstorm gauntlet",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 2
+      },
+      {
+        "id": "power-fist",
+        "name": "Power fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 2
+      },
+      {
+        "id": "relic-blade",
+        "name": "Relic blade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 2
+      },
+      {
+        "id": "relic-chainsword",
+        "name": "Relic chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 8,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 2
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Rites of Battle",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "captain-in-gravis-armour-model": {
+        "id": "captain-in-gravis-armour-model",
+        "name": "Captain in Gravis Armour",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 6,
+          "save": "3+",
+          "wounds": 6,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "captain-in-gravis-armour-model": 1
+        },
+        "points": 80
+      }
+    ]
+  },
+  {
+    "id": "librarian-in-phobos-armour",
+    "name": "Librarian in Phobos Armour",
+    "faction": "Space Marines",
+    "role": "HQ",
+    "basePoints": 70,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "smite-witchfire",
+        "name": "Smite - witchfire",
+        "type": "Assault",
+        "range": 24,
+        "attacks": "D6",
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": "D3",
+        "abilities": [
+          "Psychic"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "smite-focused-witchfire",
+        "name": "Smite - focused witchfire",
+        "type": "Assault",
+        "range": 24,
+        "attacks": "D6",
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": "D3",
+        "abilities": [
+          "Psychic",
+          "Hazardous"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "force-weapon",
+        "name": "Force weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": "D3",
+        "abilities": [
+          "Psychic"
+        ],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Psychic Hood",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Shrouding",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "librarian-in-phobos-armour-model": {
+        "id": "librarian-in-phobos-armour-model",
+        "name": "Librarian in Phobos Armour",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "librarian-in-phobos-armour-model": 1
+        },
+        "points": 70
+      }
+    ]
+  },
+  {
+    "id": "chaplain",
+    "name": "Chaplain",
+    "faction": "Space Marines",
+    "role": "HQ",
+    "basePoints": 60,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "5+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "crozius-arcanum",
+        "name": "Crozius arcanum",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 2
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Litany of Hate",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "chaplain-model": {
+        "id": "chaplain-model",
+        "name": "Chaplain",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 4,
+          "leadership": "5+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "chaplain-model": 1
+        },
+        "points": 60
+      }
+    ]
+  },
+  {
+    "id": "intercessor-squad",
+    "name": "Intercessor Squad",
+    "faction": "Space Marines",
+    "role": "TROOPS",
+    "basePoints": 80,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "bolt-rifle",
+        "name": "Bolt rifle",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Assault",
+          "Heavy"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "astartes-grenade-launcher",
+        "name": "Astartes grenade launcher",
+        "type": "Assault",
+        "range": 24,
+        "attacks": "D3",
+        "strength": 8,
+        "armourPenetration": -1,
+        "damage": "D3",
+        "abilities": [
+          "Blast"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Objective Secured",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "detachmentBonuses": [
+      {
+        "validationKeys": [
+          "Gladius Task Force"
+        ],
+        "name": "Combat Doctrines",
+        "description": "[Detachment rule text requires manual verification]",
+        "phase": [
+          "Command",
+          "Movement",
+          "Shooting",
+          "Charge",
+          "Fight"
+        ]
+      }
+    ],
+    "modelGroups": {
+      "intercessor-squad-model": {
+        "id": "intercessor-squad-model",
+        "name": "Intercessor Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "intercessor-squad-model": 1
+        },
+        "points": 80
+      }
+    ]
+  },
+  {
+    "id": "assault-intercessor-squad",
+    "name": "Assault Intercessor Squad",
+    "faction": "Space Marines",
+    "role": "TROOPS",
+    "basePoints": 75,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-bolt-pistol",
+        "name": "Heavy bolt pistol",
+        "type": "Pistol",
+        "range": 18,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-pistol-standard",
+        "name": "Plasma pistol - standard",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-pistol-supercharge",
+        "name": "Plasma pistol - supercharge",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Pistol",
+          "Hazardous"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "astartes-chainsword",
+        "name": "Astartes chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "power-fist",
+        "name": "Power fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "power-weapon",
+        "name": "Power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "thunder-hammer",
+        "name": "Thunder hammer",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds"
+        ],
+        "weaponSkill": 4
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Shock Assault",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "assault-intercessor-squad-model": {
+        "id": "assault-intercessor-squad-model",
+        "name": "Assault Intercessor Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "assault-intercessor-squad-model": 1
+        },
+        "points": 75
+      }
+    ]
+  },
+  {
+    "id": "heavy-intercessor-squad",
+    "name": "Heavy Intercessor Squad",
+    "faction": "Space Marines",
+    "role": "TROOPS",
+    "basePoints": 100,
+    "stats": {
+      "movement": 5,
+      "toughness": 6,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-bolt-pistol",
+        "name": "Heavy bolt pistol",
+        "type": "Pistol",
+        "range": 18,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "heavy-bolt-rifle",
+        "name": "Heavy bolt rifle",
+        "type": "Assault",
+        "range": 30,
+        "attacks": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Assault",
+          "Heavy"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "heavy-bolter",
+        "name": "Heavy bolter",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Heavy",
+          "Sustained Hits 1"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Unyielding in the Face of the Foe",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "heavy-intercessor-squad-model": {
+        "id": "heavy-intercessor-squad-model",
+        "name": "Heavy Intercessor Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 6,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "heavy-intercessor-squad-model": 1
+        },
+        "points": 100
+      }
+    ]
+  },
+  {
+    "id": "tactical-squad",
+    "name": "Tactical Squad",
+    "faction": "Space Marines",
+    "role": "TROOPS",
+    "basePoints": 140,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "boltgun",
+        "name": "Boltgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "flamer",
+        "name": "Flamer",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ],
+        "ballisticSkill": 0
+      },
+      {
+        "id": "meltagun",
+        "name": "Meltagun",
+        "type": "Assault",
+        "range": 12,
+        "attacks": 1,
+        "strength": 9,
+        "armourPenetration": -4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-gun-standard",
+        "name": "Plasma gun - standard",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-gun-supercharge",
+        "name": "Plasma gun - supercharge",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Hazardous"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "missile-launcher-frag",
+        "name": "Missile launcher - frag",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": "D6",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast",
+          "Heavy"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "missile-launcher-krak",
+        "name": "Missile launcher - krak",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 1,
+        "strength": 9,
+        "armourPenetration": -2,
+        "damage": "D6",
+        "abilities": [
+          "Heavy"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Combat Squads",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "tactical-squad-model": {
+        "id": "tactical-squad-model",
+        "name": "Tactical Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "tactical-squad-model": 1
+        },
+        "points": 140
+      }
+    ]
+  },
+  {
+    "id": "bladeguard-veteran-squad",
+    "name": "Bladeguard Veteran Squad",
+    "faction": "Space Marines",
+    "role": "ELITES",
+    "basePoints": 90,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-bolt-pistol",
+        "name": "Heavy bolt pistol",
+        "type": "Pistol",
+        "range": 18,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "neo-volkite-pistol",
+        "name": "Neo-volkite pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds",
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "master-crafted-power-weapon",
+        "name": "Master-crafted power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Swords of the Imperium",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "bladeguard-veteran-squad-model": {
+        "id": "bladeguard-veteran-squad-model",
+        "name": "Bladeguard Veteran Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "bladeguard-veteran-squad-model": 1
+        },
+        "points": 90
+      }
+    ]
+  },
+  {
+    "id": "terminator-squad",
+    "name": "Terminator Squad",
+    "faction": "Space Marines",
+    "role": "ELITES",
+    "basePoints": 175,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "assault-cannon",
+        "name": "Assault cannon",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 6,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "heavy-flamer",
+        "name": "Heavy flamer",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ],
+        "ballisticSkill": 0
+      },
+      {
+        "id": "cyclone-missile-launcher-frag",
+        "name": "Cyclone missile launcher - frag",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": "2D6",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "cyclone-missile-launcher-krak",
+        "name": "Cyclone missile launcher - krak",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 2,
+        "strength": 9,
+        "armourPenetration": -2,
+        "damage": "D6",
+        "abilities": [],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "chainfist",
+        "name": "Chainfist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Anti-Vehicle 3+"
+        ],
+        "weaponSkill": 4
+      },
+      {
+        "id": "power-fist",
+        "name": "Power fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Homer",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "terminator-squad-model": {
+        "id": "terminator-squad-model",
+        "name": "Terminator Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "2+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "terminator-squad-model": 1
+        },
+        "points": 175
+      }
+    ]
+  },
+  {
+    "id": "sternguard-veteran-squad",
+    "name": "Sternguard Veteran Squad",
+    "faction": "Space Marines",
+    "role": "ELITES",
+    "basePoints": 90,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "sternguard-bolt-pistol",
+        "name": "Sternguard bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds",
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "sternguard-bolt-rifle",
+        "name": "Sternguard bolt rifle",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Assault",
+          "Devastating Wounds",
+          "Heavy"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "combi-weapon",
+        "name": "Combi-weapon",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 4+",
+          "Devastating Wounds",
+          "Rapid Fire 1"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "sternguard-heavy-bolter",
+        "name": "Sternguard heavy bolter",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds",
+          "Heavy",
+          "Sustained Hits 1"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Bolter Drill",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "sternguard-veteran-squad-model": {
+        "id": "sternguard-veteran-squad-model",
+        "name": "Sternguard Veteran Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "sternguard-veteran-squad-model": 1
+        },
+        "points": 90
+      }
+    ]
+  },
+  {
+    "id": "redemptor-dreadnought",
+    "name": "Redemptor Dreadnought",
+    "faction": "Space Marines",
+    "role": "ELITES",
+    "basePoints": 210,
+    "stats": {
+      "movement": 8,
+      "toughness": 10,
+      "save": "2+",
+      "wounds": 12,
+      "leadership": "6+",
+      "objectiveControl": 4
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-flamer",
+        "name": "Heavy flamer",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ],
+        "ballisticSkill": 0
+      },
+      {
+        "id": "heavy-onslaught-gatling-cannon",
+        "name": "Heavy onslaught gatling cannon",
+        "type": "Heavy",
+        "range": 30,
+        "attacks": 12,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "macro-plasma-incinerator-standard",
+        "name": "Macro plasma incinerator - standard",
+        "type": "Assault",
+        "range": 36,
+        "attacks": "D6",
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Blast"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "macro-plasma-incinerator-supercharge",
+        "name": "Macro plasma incinerator - supercharge",
+        "type": "Assault",
+        "range": 36,
+        "attacks": "D6",
+        "strength": 9,
+        "armourPenetration": -4,
+        "damage": 3,
+        "abilities": [
+          "Blast",
+          "Hazardous"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "onslaught-gatling-cannon",
+        "name": "Onslaught gatling cannon",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 8,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "icarus-rocket-pod",
+        "name": "Icarus rocket pod",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": "D3",
+        "strength": 8,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Anti-Fly 2+"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "twin-fragstorm-grenade-launcher",
+        "name": "Twin fragstorm grenade launcher",
+        "type": "Assault",
+        "range": 18,
+        "attacks": "D6",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast",
+          "Twin-linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "twin-storm-bolter",
+        "name": "Twin storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2",
+          "Twin-linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "redemptor-fist",
+        "name": "Redemptor fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "strength": 12,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": [],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Duty Eternal",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deadly Demise D3",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "redemptor-dreadnought-model": {
+        "id": "redemptor-dreadnought-model",
+        "name": "Redemptor Dreadnought",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 10,
+          "save": "2+",
+          "wounds": 12,
+          "leadership": "6+",
+          "objectiveControl": 4
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "redemptor-dreadnought-model": 1
+        },
+        "points": 210
+      }
+    ]
+  },
+  {
+    "id": "aggressor-squad",
+    "name": "Aggressor Squad",
+    "faction": "Space Marines",
+    "role": "ELITES",
+    "basePoints": 120,
+    "stats": {
+      "movement": 5,
+      "toughness": 6,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "auto-boltstorm-gauntlets",
+        "name": "Auto boltstorm gauntlets",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Twin-linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "flamestorm-gauntlets",
+        "name": "Flamestorm gauntlets",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent",
+          "Twin-linked"
+        ],
+        "ballisticSkill": 0
+      },
+      {
+        "id": "fragstorm-grenade-launcher",
+        "name": "Fragstorm grenade launcher",
+        "type": "Assault",
+        "range": 18,
+        "attacks": "D6",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "power-fist",
+        "name": "Power fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Twin-linked"
+        ],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Fire Discipline",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "aggressor-squad-model": {
+        "id": "aggressor-squad-model",
+        "name": "Aggressor Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 6,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "aggressor-squad-model": 1
+        },
+        "points": 120
+      }
+    ]
+  },
+  {
+    "id": "inceptor-squad",
+    "name": "Inceptor Squad",
+    "faction": "Space Marines",
+    "role": "FAST_ATTACK",
+    "basePoints": 130,
+    "stats": {
+      "movement": 10,
+      "toughness": 6,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "assault-bolters",
+        "name": "Assault bolters",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Assault",
+          "Pistol",
+          "Twin-linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-exterminators-standard",
+        "name": "Plasma exterminators - standard",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 2,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Assault",
+          "Pistol",
+          "Twin-linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-exterminators-supercharge",
+        "name": "Plasma exterminators - supercharge",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 2,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Assault",
+          "Hazardous",
+          "Pistol",
+          "Twin-linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Meteoric Descent",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "inceptor-squad-model": {
+        "id": "inceptor-squad-model",
+        "name": "Inceptor Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 6,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "inceptor-squad-model": 1
+        },
+        "points": 130
+      }
+    ]
+  },
+  {
+    "id": "outrider-squad",
+    "name": "Outrider Squad",
+    "faction": "Space Marines",
+    "role": "FAST_ATTACK",
+    "basePoints": 80,
+    "stats": {
+      "movement": 12,
+      "toughness": 5,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-bolt-pistol",
+        "name": "Heavy bolt pistol",
+        "type": "Pistol",
+        "range": 18,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "twin-bolt-rifle",
+        "name": "Twin bolt rifle",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Twin-linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "astartes-chainsword",
+        "name": "Astartes chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Turbo-boost",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "outrider-squad-model": {
+        "id": "outrider-squad-model",
+        "name": "Outrider Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 5,
+          "save": "3+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "outrider-squad-model": 1
+        },
+        "points": 80
+      }
+    ]
+  },
+  {
+    "id": "storm-speeder-hailstrike",
+    "name": "Storm Speeder Hailstrike",
+    "faction": "Space Marines",
+    "role": "FAST_ATTACK",
+    "basePoints": 130,
+    "stats": {
+      "movement": 14,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 11,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "onslaught-gatling-cannon",
+        "name": "Onslaught gatling cannon",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 8,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "twin-fragstorm-grenade-launcher",
+        "name": "Twin fragstorm grenade launcher",
+        "type": "Assault",
+        "range": 18,
+        "attacks": "D6",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast",
+          "Twin-linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "twin-ironhail-heavy-stubber",
+        "name": "Twin ironhail heavy stubber",
+        "type": "Rapid Fire",
+        "range": 36,
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 3",
+          "Twin-linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Hailstrike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deadly Demise 1",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "storm-speeder-hailstrike-model": {
+        "id": "storm-speeder-hailstrike-model",
+        "name": "Storm Speeder Hailstrike",
+        "category": "follower",
+        "stats": {
+          "movement": 14,
+          "toughness": 9,
+          "save": "3+",
+          "wounds": 11,
+          "leadership": "6+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "storm-speeder-hailstrike-model": 1
+        },
+        "points": 130
+      }
+    ]
+  },
+  {
+    "id": "eradicator-squad",
+    "name": "Eradicator Squad",
+    "faction": "Space Marines",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 95,
+    "stats": {
+      "movement": 5,
+      "toughness": 6,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "melta-rifle",
+        "name": "Melta rifle",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 1,
+        "strength": 9,
+        "armourPenetration": -4,
+        "damage": "D6",
+        "abilities": [
+          "Heavy",
+          "Melta 2"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "multi-melta",
+        "name": "Multi-melta",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 2,
+        "strength": 9,
+        "armourPenetration": -4,
+        "damage": "D6",
+        "abilities": [
+          "Heavy",
+          "Melta 2"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Total Obliteration",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "eradicator-squad-model": {
+        "id": "eradicator-squad-model",
+        "name": "Eradicator Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 6,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "eradicator-squad-model": 1
+        },
+        "points": 95
+      }
+    ]
+  },
+  {
+    "id": "hellblaster-squad",
+    "name": "Hellblaster Squad",
+    "faction": "Space Marines",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 115,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-incinerator-standard",
+        "name": "Plasma incinerator - standard",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Assault",
+          "Heavy"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-incinerator-supercharge",
+        "name": "Plasma incinerator - supercharge",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Assault",
+          "Hazardous",
+          "Heavy"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "For the Chapter!",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "hellblaster-squad-model": {
+        "id": "hellblaster-squad-model",
+        "name": "Hellblaster Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "hellblaster-squad-model": 1
+        },
+        "points": 115
+      }
+    ]
+  },
+  {
+    "id": "gladiator-lancer",
+    "name": "Gladiator Lancer",
+    "faction": "Space Marines",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 160,
+    "stats": {
+      "movement": 10,
+      "toughness": 10,
+      "save": "3+",
+      "wounds": 12,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "gladiator-lancer-laser-destroyer",
+        "name": "Gladiator lancer laser destroyer",
+        "type": "Heavy",
+        "range": 72,
+        "attacks": 2,
+        "strength": 14,
+        "armourPenetration": -4,
+        "damage": "D6+3",
+        "abilities": [
+          "Heavy"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "2-storm-bolters",
+        "name": "2 storm bolters",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "ironhail-heavy-stubber",
+        "name": "Ironhail heavy stubber",
+        "type": "Rapid Fire",
+        "range": 36,
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 3"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "icarus-rocket-pod",
+        "name": "Icarus rocket pod",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": "D3",
+        "strength": 8,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Anti-Fly 2+"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "armoured-hull",
+        "name": "Armoured hull",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deadly Demise D3",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Aquilon Optics",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gladiator-lancer-model": {
+        "id": "gladiator-lancer-model",
+        "name": "Gladiator Lancer",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 10,
+          "save": "3+",
+          "wounds": 12,
+          "leadership": "6+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gladiator-lancer-model": 1
+        },
+        "points": 160
+      }
+    ]
+  },
+  {
+    "id": "repulsor-executioner",
+    "name": "Repulsor Executioner",
+    "faction": "Space Marines",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 220,
+    "stats": {
+      "movement": 10,
+      "toughness": 11,
+      "save": "3+",
+      "wounds": 16,
+      "leadership": "6+",
+      "objectiveControl": 5
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-laser-destroyer",
+        "name": "Heavy laser destroyer",
+        "type": "Heavy",
+        "range": 72,
+        "attacks": 2,
+        "strength": 16,
+        "armourPenetration": -4,
+        "damage": "D6+4",
+        "abilities": [
+          "Heavy"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "macro-plasma-incinerator-standard",
+        "name": "Macro plasma incinerator - standard",
+        "type": "Assault",
+        "range": 36,
+        "attacks": "D6",
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Blast"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "macro-plasma-incinerator-supercharge",
+        "name": "Macro plasma incinerator - supercharge",
+        "type": "Assault",
+        "range": 36,
+        "attacks": "D6",
+        "strength": 9,
+        "armourPenetration": -4,
+        "damage": 3,
+        "abilities": [
+          "Blast",
+          "Hazardous"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "heavy-onslaught-gatling-cannon",
+        "name": "Heavy onslaught gatling cannon",
+        "type": "Heavy",
+        "range": 30,
+        "attacks": 12,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "repulsor-executioner-defensive-array",
+        "name": "Repulsor Executioner defensive array",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 10,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "twin-heavy-bolter",
+        "name": "Twin heavy bolter",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Sustained Hits 1",
+          "Twin-linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "twin-icarus-ironhail-heavy-stubber",
+        "name": "Twin Icarus ironhail heavy stubber",
+        "type": "Rapid Fire",
+        "range": 36,
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Anti-Fly 4+",
+          "Rapid Fire 3",
+          "Twin-linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "icarus-rocket-pod",
+        "name": "Icarus rocket pod",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": "D3",
+        "strength": 8,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Anti-Fly 2+"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "armoured-hull",
+        "name": "Armoured hull",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "strength": 8,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deadly Demise D6",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Executioner",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "repulsor-executioner-model": {
+        "id": "repulsor-executioner-model",
+        "name": "Repulsor Executioner",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 11,
+          "save": "3+",
+          "wounds": 16,
+          "leadership": "6+",
+          "objectiveControl": 5
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "repulsor-executioner-model": 1
+        },
+        "points": 220
+      }
+    ]
+  },
+  {
+    "id": "rhino",
+    "name": "Rhino",
+    "faction": "Space Marines",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 75,
+    "stats": {
+      "movement": 12,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 10,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "hunter-killer-missile",
+        "name": "Hunter-killer missile",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 1,
+        "strength": 14,
+        "armourPenetration": -3,
+        "damage": "D6",
+        "abilities": [
+          "One Shot"
+        ],
+        "ballisticSkill": 2
+      },
+      {
+        "id": "armoured-tracks",
+        "name": "Armoured tracks",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deadly Demise D3",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Self-repair",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Firing Deck 2",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Transport 12",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "rhino-model": {
+        "id": "rhino-model",
+        "name": "Rhino",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 9,
+          "save": "3+",
+          "wounds": 10,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "rhino-model": 1
+        },
+        "points": 75
+      }
+    ]
+  },
+  {
+    "id": "impulsor",
+    "name": "Impulsor",
+    "faction": "Space Marines",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 80,
+    "stats": {
+      "movement": 12,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 11,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "2-storm-bolters",
+        "name": "2 storm bolters",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "ironhail-heavy-stubber",
+        "name": "Ironhail heavy stubber",
+        "type": "Rapid Fire",
+        "range": 36,
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 3"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "bellicatus-missile-array-frag",
+        "name": "Bellicatus missile array - frag",
+        "type": "Assault",
+        "range": 48,
+        "attacks": "D6",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "bellicatus-missile-array-krak",
+        "name": "Bellicatus missile array - krak",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 1,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": "D6",
+        "abilities": [],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "bellicatus-missile-array-icarus",
+        "name": "Bellicatus missile array - Icarus",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": "D3",
+        "strength": 8,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Anti-Fly 2+"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "ironhail-skytalon-array",
+        "name": "Ironhail skytalon array",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 8,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Anti-Fly 4+"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "armoured-hull",
+        "name": "Armoured hull",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deadly Demise D3",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Assault Vehicle",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Shield Dome",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Transport 6",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "impulsor-model": {
+        "id": "impulsor-model",
+        "name": "Impulsor",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 9,
+          "save": "3+",
+          "wounds": 11,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "impulsor-model": 1
+        },
+        "points": 80
+      }
+    ]
+  }
+]

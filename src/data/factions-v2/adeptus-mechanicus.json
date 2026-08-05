@@ -1,0 +1,1380 @@
+[
+  {
+    "id": "am-belisarius-cawl",
+    "name": "Belisarius Cawl",
+    "faction": "Adeptus Mechanicus",
+    "role": "HQ",
+    "basePoints": 185,
+    "stats": {
+      "movement": 6,
+      "toughness": 8,
+      "save": "2+",
+      "wounds": 10,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "solar-atomiser",
+        "name": "Solar Atomiser",
+        "type": "Assault",
+        "range": 18,
+        "attacks": "D3",
+        "ballisticSkill": 2,
+        "strength": 14,
+        "armourPenetration": -4,
+        "damage": 3,
+        "abilities": [
+          "Blast",
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "arc-scourge",
+        "name": "Arc Scourge",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Anti-VEHICLE 4+"
+        ]
+      },
+      {
+        "id": "omnissian-axe",
+        "name": "Omnissian Axe",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Canticles of the Omnissiah",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Mechanicus Locum",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-belisarius-cawl-model": {
+        "id": "am-belisarius-cawl-model",
+        "name": "Belisarius Cawl",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 8,
+          "save": "2+",
+          "wounds": 10,
+          "leadership": "6+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-belisarius-cawl-model": 1
+        },
+        "points": 185
+      }
+    ]
+  },
+  {
+    "id": "am-tech-priest-dominus",
+    "name": "Tech-Priest Dominus",
+    "faction": "Adeptus Mechanicus",
+    "role": "HQ",
+    "basePoints": 75,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 4,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "macrostubber",
+        "name": "Macrostubber",
+        "points": 0
+      },
+      {
+        "id": "phosphor-serpenta",
+        "name": "Phosphor Serpenta",
+        "points": 0
+      },
+      {
+        "id": "volkite-blaster",
+        "name": "Volkite Blaster",
+        "points": 0
+      },
+      {
+        "id": "eradication-ray",
+        "name": "Eradication Ray",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "omnissian-axe",
+        "name": "Omnissian Axe",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Feel No Pain",
+        "description": "5+"
+      },
+      {
+        "name": "Lord of the Machine Cult",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-tech-priest-dominus-model": {
+        "id": "am-tech-priest-dominus-model",
+        "name": "Tech-Priest Dominus",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "2+",
+          "wounds": 4,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-tech-priest-dominus-model": 1
+        },
+        "points": 75
+      }
+    ]
+  },
+  {
+    "id": "am-skitarii-rangers",
+    "name": "Skitarii Rangers",
+    "faction": "Adeptus Mechanicus",
+    "role": "BATTLELINE",
+    "basePoints": 90,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "omnispex",
+        "name": "Omnispex",
+        "points": 0
+      },
+      {
+        "id": "enhanced-data-tether",
+        "name": "Enhanced Data-tether",
+        "points": 0
+      },
+      {
+        "id": "arc-rifle",
+        "name": "Arc Rifle",
+        "points": 0
+      },
+      {
+        "id": "plasma-caliver",
+        "name": "Plasma Caliver",
+        "points": 0
+      },
+      {
+        "id": "transuranic-arquebus",
+        "name": "Transuranic Arquebus",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "galvanic-rifle",
+        "name": "Galvanic Rifle",
+        "type": "Heavy",
+        "range": 30,
+        "attacks": 2,
+        "ballisticSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Rangers",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-skitarii-rangers-model": {
+        "id": "am-skitarii-rangers-model",
+        "name": "Skitarii Rangers",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-skitarii-rangers-model": 1
+        },
+        "points": 90
+      }
+    ]
+  },
+  {
+    "id": "am-skitarii-vanguard",
+    "name": "Skitarii Vanguard",
+    "faction": "Adeptus Mechanicus",
+    "role": "BATTLELINE",
+    "basePoints": 80,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "omnispex",
+        "name": "Omnispex",
+        "points": 0
+      },
+      {
+        "id": "enhanced-data-tether",
+        "name": "Enhanced Data-tether",
+        "points": 0
+      },
+      {
+        "id": "arc-rifle",
+        "name": "Arc Rifle",
+        "points": 0
+      },
+      {
+        "id": "plasma-caliver",
+        "name": "Plasma Caliver",
+        "points": 0
+      },
+      {
+        "id": "transuranic-arquebus",
+        "name": "Transuranic Arquebus",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "radium-carbine",
+        "name": "Radium Carbine",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 3,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Anti-INFANTRY 4+"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Rad-saturation",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-skitarii-vanguard-model": {
+        "id": "am-skitarii-vanguard-model",
+        "name": "Skitarii Vanguard",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-skitarii-vanguard-model": 1
+        },
+        "points": 80
+      }
+    ]
+  },
+  {
+    "id": "am-kataphron-breachers",
+    "name": "Kataphron Breachers",
+    "faction": "Adeptus Mechanicus",
+    "role": "BATTLELINE",
+    "basePoints": 145,
+    "stats": {
+      "movement": 5,
+      "toughness": 7,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "heavy-arc-rifle",
+        "name": "Heavy Arc Rifle",
+        "points": 0
+      },
+      {
+        "id": "torsion-cannon",
+        "name": "Torsion Cannon",
+        "points": 0
+      },
+      {
+        "id": "arc-claw",
+        "name": "Arc Claw",
+        "points": 0
+      },
+      {
+        "id": "hydraulic-claw",
+        "name": "Hydraulic Claw",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "heavy-arc-rifle",
+        "name": "Heavy Arc Rifle",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 2,
+        "ballisticSkill": 4,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": [
+          "Anti-VEHICLE 4+"
+        ]
+      },
+      {
+        "id": "hydraulic-claw",
+        "name": "Hydraulic Claw",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Breaching Command",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-kataphron-breachers-model": {
+        "id": "am-kataphron-breachers-model",
+        "name": "Kataphron Breachers",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 7,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-kataphron-breachers-model": 1
+        },
+        "points": 145
+      }
+    ]
+  },
+  {
+    "id": "am-kataphron-destroyers",
+    "name": "Kataphron Destroyers",
+    "faction": "Adeptus Mechanicus",
+    "role": "BATTLELINE",
+    "basePoints": 115,
+    "stats": {
+      "movement": 5,
+      "toughness": 7,
+      "save": "4+",
+      "wounds": 3,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "heavy-grav-cannon",
+        "name": "Heavy Grav-cannon",
+        "points": 0
+      },
+      {
+        "id": "plasma-culverin",
+        "name": "Plasma Culverin",
+        "points": 0
+      },
+      {
+        "id": "phosphor-blaster",
+        "name": "Phosphor Blaster",
+        "points": 0
+      },
+      {
+        "id": "cognis-flamer",
+        "name": "Cognis Flamer",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "heavy-grav-cannon",
+        "name": "Heavy Grav-cannon",
+        "type": "Heavy",
+        "range": 30,
+        "attacks": 4,
+        "ballisticSkill": 4,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Anti-VEHICLE 2+"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close Combat Weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 4,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Sentinel Protocols",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-kataphron-destroyers-model": {
+        "id": "am-kataphron-destroyers-model",
+        "name": "Kataphron Destroyers",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 7,
+          "save": "4+",
+          "wounds": 3,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-kataphron-destroyers-model": 1
+        },
+        "points": 115
+      }
+    ]
+  },
+  {
+    "id": "am-sicarian-infiltrators",
+    "name": "Sicarian Infiltrators",
+    "faction": "Adeptus Mechanicus",
+    "role": "ELITES",
+    "basePoints": 70,
+    "stats": {
+      "movement": 8,
+      "toughness": 4,
+      "save": "4+",
+      "wounds": 2,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "stubcarbine-and-power-sword",
+        "name": "Stubcarbine & Power Sword",
+        "points": 0
+      },
+      {
+        "id": "flechette-blaster-and-taser-goad",
+        "name": "Flechette Blaster & Taser Goad",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "stubcarbine",
+        "name": "Stubcarbine",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "power-weapon",
+        "name": "Power Weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Infiltrators",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Neurostatic Interference",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-sicarian-infiltrators-model": {
+        "id": "am-sicarian-infiltrators-model",
+        "name": "Sicarian Infiltrators",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 4,
+          "save": "4+",
+          "wounds": 2,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-sicarian-infiltrators-model": 1
+        },
+        "points": 70
+      }
+    ]
+  },
+  {
+    "id": "am-sicarian-ruststalkers",
+    "name": "Sicarian Ruststalkers",
+    "faction": "Adeptus Mechanicus",
+    "role": "ELITES",
+    "basePoints": 70,
+    "stats": {
+      "movement": 8,
+      "toughness": 4,
+      "save": "4+",
+      "wounds": 2,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "transonic-razor-and-chordclaw",
+        "name": "Transonic Razor & Chordclaw",
+        "points": 0
+      },
+      {
+        "id": "transonic-blades",
+        "name": "Transonic Blades",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "transonic-blades",
+        "name": "Transonic Blades",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Optimised Gait",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-sicarian-ruststalkers-model": {
+        "id": "am-sicarian-ruststalkers-model",
+        "name": "Sicarian Ruststalkers",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 4,
+          "save": "4+",
+          "wounds": 2,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-sicarian-ruststalkers-model": 1
+        },
+        "points": 70
+      }
+    ]
+  },
+  {
+    "id": "am-pteraxii-sterylizors",
+    "name": "Pteraxii Sterylizors",
+    "faction": "Adeptus Mechanicus",
+    "role": "FAST_ATTACK",
+    "basePoints": 65,
+    "stats": {
+      "movement": 12,
+      "toughness": 4,
+      "save": "4+",
+      "wounds": 2,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "phosphor-torch",
+        "name": "Phosphor Torch",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Torrent",
+          "Ignores Cover"
+        ]
+      },
+      {
+        "id": "pteraxii-talons",
+        "name": "Pteraxii Talons",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Searing Light",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-pteraxii-sterylizors-model": {
+        "id": "am-pteraxii-sterylizors-model",
+        "name": "Pteraxii Sterylizors",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "4+",
+          "wounds": 2,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-pteraxii-sterylizors-model": 1
+        },
+        "points": 65
+      }
+    ]
+  },
+  {
+    "id": "am-serberys-raiders",
+    "name": "Serberys Raiders",
+    "faction": "Adeptus Mechanicus",
+    "role": "FAST_ATTACK",
+    "basePoints": 60,
+    "stats": {
+      "movement": 12,
+      "toughness": 4,
+      "save": "4+",
+      "wounds": 2,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "enhanced-data-tether",
+        "name": "Enhanced Data-tether",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "galvanic-carbine",
+        "name": "Galvanic Carbine",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "cavalry-sabre",
+        "name": "Cavalry Sabre",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Scouts 9",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Eye of Serberys",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-serberys-raiders-model": {
+        "id": "am-serberys-raiders-model",
+        "name": "Serberys Raiders",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "4+",
+          "wounds": 2,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-serberys-raiders-model": 1
+        },
+        "points": 60
+      }
+    ]
+  },
+  {
+    "id": "am-ironstrider-ballistarii",
+    "name": "Ironstrider Ballistarii",
+    "faction": "Adeptus Mechanicus",
+    "role": "FAST_ATTACK",
+    "basePoints": 50,
+    "stats": {
+      "movement": 10,
+      "toughness": 7,
+      "save": "3+",
+      "wounds": 6,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "twin-cognis-autocannon",
+        "name": "Twin Cognis Autocannon",
+        "points": 0
+      },
+      {
+        "id": "twin-cognis-lascannon",
+        "name": "Twin Cognis Lascannon",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "twin-cognis-lascannon",
+        "name": "Twin Cognis Lascannon",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 12,
+        "armourPenetration": -3,
+        "damage": "D6+1",
+        "abilities": [
+          "Twin-linked"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Broad-spectrum Data-tether",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-ironstrider-ballistarii-model": {
+        "id": "am-ironstrider-ballistarii-model",
+        "name": "Ironstrider Ballistarii",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 7,
+          "save": "3+",
+          "wounds": 6,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-ironstrider-ballistarii-model": 1
+        },
+        "points": 50
+      }
+    ]
+  },
+  {
+    "id": "am-onager-dunecrawler",
+    "name": "Onager Dunecrawler",
+    "faction": "Adeptus Mechanicus",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 140,
+    "stats": {
+      "movement": 8,
+      "toughness": 10,
+      "save": "2+",
+      "wounds": 11,
+      "leadership": "7+",
+      "objectiveControl": 3
+    },
+    "options": [
+      {
+        "id": "eradication-beamer",
+        "name": "Eradication Beamer",
+        "points": 0
+      },
+      {
+        "id": "neutron-laser",
+        "name": "Neutron Laser",
+        "points": 0
+      },
+      {
+        "id": "icarus-array",
+        "name": "Icarus Array",
+        "points": 0
+      },
+      {
+        "id": "twin-onager-heavy-phosphor-blaster",
+        "name": "Twin Onager Heavy Phosphor Blaster",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "neutron-laser",
+        "name": "Neutron Laser",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 2,
+        "ballisticSkill": 4,
+        "strength": 16,
+        "armourPenetration": -4,
+        "damage": "D6+1",
+        "abilities": [
+          "Blast"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Deadly Demise",
+        "description": "D3"
+      },
+      {
+        "name": "Broad-spectrum Data-tether",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Emanatus Force Field",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-onager-dunecrawler-model": {
+        "id": "am-onager-dunecrawler-model",
+        "name": "Onager Dunecrawler",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 10,
+          "save": "2+",
+          "wounds": 11,
+          "leadership": "7+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-onager-dunecrawler-model": 1
+        },
+        "points": 140
+      }
+    ]
+  },
+  {
+    "id": "am-kastelan-robots",
+    "name": "Kastelan Robots",
+    "faction": "Adeptus Mechanicus",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 200,
+    "stats": {
+      "movement": 6,
+      "toughness": 9,
+      "save": "2+",
+      "wounds": 7,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "kastelan-phosphor-blaster",
+        "name": "Kastelan Phosphor Blaster",
+        "points": 0
+      },
+      {
+        "id": "kastelan-fist",
+        "name": "Kastelan Fist",
+        "points": 0
+      },
+      {
+        "id": "incendine-combustor",
+        "name": "Incendine Combustor",
+        "points": 0
+      },
+      {
+        "id": "twin-kastelan-phosphor-blaster",
+        "name": "Twin Kastelan Phosphor Blaster",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "kastelan-fist",
+        "name": "Kastelan Fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 12,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": [
+          "Twin-linked"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Deadly Demise",
+        "description": "1"
+      },
+      {
+        "name": "Repulsor Grid",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-kastelan-robots-model": {
+        "id": "am-kastelan-robots-model",
+        "name": "Kastelan Robots",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 9,
+          "save": "2+",
+          "wounds": 7,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-kastelan-robots-model": 1
+        },
+        "points": 200
+      }
+    ]
+  },
+  {
+    "id": "am-skorpius-disintegrator",
+    "name": "Skorpius Disintegrator",
+    "faction": "Adeptus Mechanicus",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 180,
+    "stats": {
+      "movement": 10,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 11,
+      "leadership": "7+",
+      "objectiveControl": 3
+    },
+    "options": [
+      {
+        "id": "belleros-energy-cannon",
+        "name": "Belleros Energy Cannon",
+        "points": 0
+      },
+      {
+        "id": "ferrumite-cannon",
+        "name": "Ferrumite Cannon",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "ferrumite-cannon",
+        "name": "Ferrumite Cannon",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 10,
+        "armourPenetration": -3,
+        "damage": 3,
+        "abilities": []
+      },
+      {
+        "id": "disruptor-missile-launcher",
+        "name": "Disruptor Missile Launcher",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Blast"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Deadly Demise",
+        "description": "D3"
+      },
+      {
+        "name": "Broad-spectrum Data-tether",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-skorpius-disintegrator-model": {
+        "id": "am-skorpius-disintegrator-model",
+        "name": "Skorpius Disintegrator",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 9,
+          "save": "3+",
+          "wounds": 11,
+          "leadership": "7+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-skorpius-disintegrator-model": 1
+        },
+        "points": 180
+      }
+    ]
+  },
+  {
+    "id": "am-skorpius-dunerider",
+    "name": "Skorpius Dunerider",
+    "faction": "Adeptus Mechanicus",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 80,
+    "stats": {
+      "movement": 12,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 11,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "twin-cognis-heavy-stubber",
+        "name": "Twin Cognis Heavy Stubber",
+        "type": "Rapid Fire",
+        "range": 36,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Twin-linked"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Deadly Demise",
+        "description": "D3"
+      },
+      {
+        "name": "Broad-spectrum Data-tether",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Fire Support",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-skorpius-dunerider-model": {
+        "id": "am-skorpius-dunerider-model",
+        "name": "Skorpius Dunerider",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 9,
+          "save": "3+",
+          "wounds": 11,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-skorpius-dunerider-model": 1
+        },
+        "points": 80
+      }
+    ]
+  }
+]

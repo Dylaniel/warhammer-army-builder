@@ -1,0 +1,1493 @@
+[
+  {
+    "id": "drukhari-archon",
+    "name": "Archon",
+    "faction": "Drukhari",
+    "role": "HQ",
+    "basePoints": 75,
+    "stats": {
+      "movement": 8,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "splinter-pistol",
+        "name": "Splinter pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 3+"
+        ]
+      },
+      {
+        "id": "huskblade",
+        "name": "Huskblade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Anti-Infantry 3+"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Overlord",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Shadowfield",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-archon-model": {
+        "id": "drukhari-archon-model",
+        "name": "Archon",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 3,
+          "save": "4+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-archon-model": 1
+        },
+        "points": 75
+      }
+    ]
+  },
+  {
+    "id": "drukhari-succubus",
+    "name": "Succubus",
+    "faction": "Drukhari",
+    "role": "HQ",
+    "basePoints": 45,
+    "stats": {
+      "movement": 8,
+      "toughness": 3,
+      "save": "6+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "succubus-weapons",
+        "name": "Succubus weapons",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 3+"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Combat Drugs",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Brides of Death",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-succubus-model": {
+        "id": "drukhari-succubus-model",
+        "name": "Succubus",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 3,
+          "save": "6+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-succubus-model": 1
+        },
+        "points": 45
+      }
+    ]
+  },
+  {
+    "id": "drukhari-haemonculus",
+    "name": "Haemonculus",
+    "faction": "Drukhari",
+    "role": "HQ",
+    "basePoints": 60,
+    "stats": {
+      "movement": 7,
+      "toughness": 4,
+      "save": "6+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "stinger-pistol",
+        "name": "Stinger pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 2,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Anti-Infantry 2+"
+        ]
+      },
+      {
+        "id": "haemonculus-tools",
+        "name": "Haemonculus tools and scissorhands",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 3,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 2+"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Master of Pain",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Fleshcraft",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-haemonculus-model": {
+        "id": "drukhari-haemonculus-model",
+        "name": "Haemonculus",
+        "category": "follower",
+        "stats": {
+          "movement": 7,
+          "toughness": 4,
+          "save": "6+",
+          "wounds": 5,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-haemonculus-model": 1
+        },
+        "points": 60
+      }
+    ]
+  },
+  {
+    "id": "drukhari-drazhar",
+    "name": "Drazhar",
+    "faction": "Drukhari",
+    "role": "HQ",
+    "basePoints": 75,
+    "stats": {
+      "movement": 7,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "demiklaives-single",
+        "name": "The Executioner's Demiklaives - single blade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "demiklaives-dual",
+        "name": "The Executioner's Demiklaives - dual blades",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 7,
+        "weaponSkill": 2,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Twin-linked"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Master of Blades",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Murderous Assault",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-drazhar-model": {
+        "id": "drukhari-drazhar-model",
+        "name": "Drazhar",
+        "category": "follower",
+        "stats": {
+          "movement": 7,
+          "toughness": 4,
+          "save": "2+",
+          "wounds": 5,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-drazhar-model": 1
+        },
+        "points": 75
+      }
+    ]
+  },
+  {
+    "id": "drukhari-lelith-hesperax",
+    "name": "Lelith Hesperax",
+    "faction": "Drukhari",
+    "role": "HQ",
+    "basePoints": 85,
+    "stats": {
+      "movement": 8,
+      "toughness": 3,
+      "save": "6+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "lelith-blades",
+        "name": "Lelith's blades",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 8,
+        "weaponSkill": 2,
+        "strength": 4,
+        "armourPenetration": -3,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 2+"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "A League Apart",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Natural Perfection",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-lelith-hesperax-model": {
+        "id": "drukhari-lelith-hesperax-model",
+        "name": "Lelith Hesperax",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 3,
+          "save": "6+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-lelith-hesperax-model": 1
+        },
+        "points": 85
+      }
+    ]
+  },
+  {
+    "id": "drukhari-urien-rakarth",
+    "name": "Urien Rakarth",
+    "faction": "Drukhari",
+    "role": "HQ",
+    "basePoints": 80,
+    "stats": {
+      "movement": 7,
+      "toughness": 4,
+      "save": "6+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "casket-of-flensing",
+        "name": "Casket of Flensing",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D3",
+        "ballisticSkill": 2,
+        "strength": 3,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Anti-Infantry 2+"
+        ]
+      },
+      {
+        "id": "haemonculus-tools",
+        "name": "Haemonculus tools and ichor injector",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 3,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 2+"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Master of Pain",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Clone Field",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-urien-rakarth-model": {
+        "id": "drukhari-urien-rakarth-model",
+        "name": "Urien Rakarth",
+        "category": "follower",
+        "stats": {
+          "movement": 7,
+          "toughness": 4,
+          "save": "6+",
+          "wounds": 5,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-urien-rakarth-model": 1
+        },
+        "points": 80
+      }
+    ]
+  },
+  {
+    "id": "drukhari-kabalite-warriors",
+    "name": "Kabalite Warriors",
+    "faction": "Drukhari",
+    "role": "TROOPS",
+    "basePoints": 110,
+    "stats": {
+      "movement": 8,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 1,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "splinter-rifle",
+        "name": "Splinter rifle",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 3+"
+        ]
+      },
+      {
+        "id": "dark-lance",
+        "name": "Dark lance",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 12,
+        "armourPenetration": -3,
+        "damage": "D6+2",
+        "abilities": []
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Sadistic Raiders",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-kabalite-warriors-model": {
+        "id": "drukhari-kabalite-warriors-model",
+        "name": "Kabalite Warriors",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 3,
+          "save": "4+",
+          "wounds": 1,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-kabalite-warriors-model": 1
+        },
+        "points": 110
+      }
+    ]
+  },
+  {
+    "id": "drukhari-wyches",
+    "name": "Wyches",
+    "faction": "Drukhari",
+    "role": "TROOPS",
+    "basePoints": 90,
+    "stats": {
+      "movement": 8,
+      "toughness": 3,
+      "save": "6+",
+      "wounds": 1,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "splinter-pistol",
+        "name": "Splinter pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 3+"
+        ]
+      },
+      {
+        "id": "hekatarii-blade",
+        "name": "Hekatarii blade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Dodge",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "No Escape",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-wyches-model": {
+        "id": "drukhari-wyches-model",
+        "name": "Wyches",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 3,
+          "save": "6+",
+          "wounds": 1,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-wyches-model": 1
+        },
+        "points": 90
+      }
+    ]
+  },
+  {
+    "id": "drukhari-wracks",
+    "name": "Wracks",
+    "faction": "Drukhari",
+    "role": "TROOPS",
+    "basePoints": 60,
+    "stats": {
+      "movement": 7,
+      "toughness": 4,
+      "save": "6+",
+      "wounds": 1,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "liquifier-gun",
+        "name": "Liquifier gun",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "wrack-blades",
+        "name": "Wrack blades",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 3+"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "The Torturer's Craft",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-wracks-model": {
+        "id": "drukhari-wracks-model",
+        "name": "Wracks",
+        "category": "follower",
+        "stats": {
+          "movement": 7,
+          "toughness": 4,
+          "save": "6+",
+          "wounds": 1,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-wracks-model": 1
+        },
+        "points": 60
+      }
+    ]
+  },
+  {
+    "id": "drukhari-incubi",
+    "name": "Incubi",
+    "faction": "Drukhari",
+    "role": "ELITES",
+    "basePoints": 75,
+    "stats": {
+      "movement": 7,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 1,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "klaive",
+        "name": "Klaive",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 2,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Tormentors",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-incubi-model": {
+        "id": "drukhari-incubi-model",
+        "name": "Incubi",
+        "category": "follower",
+        "stats": {
+          "movement": 7,
+          "toughness": 3,
+          "save": "3+",
+          "wounds": 1,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-incubi-model": 1
+        },
+        "points": 75
+      }
+    ]
+  },
+  {
+    "id": "drukhari-mandrakes",
+    "name": "Mandrakes",
+    "faction": "Drukhari",
+    "role": "ELITES",
+    "basePoints": 65,
+    "stats": {
+      "movement": 8,
+      "toughness": 3,
+      "save": "7+",
+      "wounds": 1,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "baleblast",
+        "name": "Baleblast",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      },
+      {
+        "id": "glimmersteel-blade",
+        "name": "Glimmersteel blade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Shadowbale",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Fade Away",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-mandrakes-model": {
+        "id": "drukhari-mandrakes-model",
+        "name": "Mandrakes",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 3,
+          "save": "7+",
+          "wounds": 1,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-mandrakes-model": 1
+        },
+        "points": 65
+      }
+    ]
+  },
+  {
+    "id": "drukhari-scourges",
+    "name": "Scourges",
+    "faction": "Drukhari",
+    "role": "FAST_ATTACK",
+    "basePoints": 110,
+    "stats": {
+      "movement": 14,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 1,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "dark-lance",
+        "name": "Dark lance",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 12,
+        "armourPenetration": -3,
+        "damage": "D6+2",
+        "abilities": []
+      },
+      {
+        "id": "shardcarbine",
+        "name": "Shardcarbine",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 3+"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Winged Strike",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-scourges-model": {
+        "id": "drukhari-scourges-model",
+        "name": "Scourges",
+        "category": "follower",
+        "stats": {
+          "movement": 14,
+          "toughness": 3,
+          "save": "4+",
+          "wounds": 1,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-scourges-model": 1
+        },
+        "points": 110
+      }
+    ]
+  },
+  {
+    "id": "drukhari-hellions",
+    "name": "Hellions",
+    "faction": "Drukhari",
+    "role": "FAST_ATTACK",
+    "basePoints": 100,
+    "stats": {
+      "movement": 14,
+      "toughness": 4,
+      "save": "6+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "splinter-pods",
+        "name": "Splinter pods",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 3+",
+          "Twin-linked"
+        ]
+      },
+      {
+        "id": "hellglaive",
+        "name": "Hellglaive",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Hit and Run",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-hellions-model": {
+        "id": "drukhari-hellions-model",
+        "name": "Hellions",
+        "category": "follower",
+        "stats": {
+          "movement": 14,
+          "toughness": 4,
+          "save": "6+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-hellions-model": 1
+        },
+        "points": 100
+      }
+    ]
+  },
+  {
+    "id": "drukhari-reavers",
+    "name": "Reavers",
+    "faction": "Drukhari",
+    "role": "FAST_ATTACK",
+    "basePoints": 60,
+    "stats": {
+      "movement": 16,
+      "toughness": 4,
+      "save": "4+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "splinter-rifle",
+        "name": "Splinter rifle",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 3+"
+        ]
+      },
+      {
+        "id": "bladevanes",
+        "name": "Bladevanes",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Eviscerating Fly-by",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-reavers-model": {
+        "id": "drukhari-reavers-model",
+        "name": "Reavers",
+        "category": "follower",
+        "stats": {
+          "movement": 16,
+          "toughness": 4,
+          "save": "4+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-reavers-model": 1
+        },
+        "points": 60
+      }
+    ]
+  },
+  {
+    "id": "drukhari-talos",
+    "name": "Talos",
+    "faction": "Drukhari",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 80,
+    "stats": {
+      "movement": 7,
+      "toughness": 7,
+      "save": "3+",
+      "wounds": 7,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "talos-gauntlet",
+        "name": "Talos gauntlet",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": []
+      },
+      {
+        "id": "macro-scalpel",
+        "name": "Macro-scalpel",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 3,
+        "strength": 7,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Pain Engine",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-talos-model": {
+        "id": "drukhari-talos-model",
+        "name": "Talos",
+        "category": "follower",
+        "stats": {
+          "movement": 7,
+          "toughness": 7,
+          "save": "3+",
+          "wounds": 7,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-talos-model": 1
+        },
+        "points": 80
+      }
+    ]
+  },
+  {
+    "id": "drukhari-cronos",
+    "name": "Cronos",
+    "faction": "Drukhari",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 50,
+    "stats": {
+      "movement": 7,
+      "toughness": 7,
+      "save": "3+",
+      "wounds": 7,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "spirit-syphon",
+        "name": "Spirit syphon",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "spirit-leech-tentacles",
+        "name": "Spirit-leech tentacles",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Pain Parasite",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-cronos-model": {
+        "id": "drukhari-cronos-model",
+        "name": "Cronos",
+        "category": "follower",
+        "stats": {
+          "movement": 7,
+          "toughness": 7,
+          "save": "3+",
+          "wounds": 7,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-cronos-model": 1
+        },
+        "points": 50
+      }
+    ]
+  },
+  {
+    "id": "drukhari-ravager",
+    "name": "Ravager",
+    "faction": "Drukhari",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 115,
+    "stats": {
+      "movement": 14,
+      "toughness": 8,
+      "save": "4+",
+      "wounds": 11,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "dark-lance",
+        "name": "Dark lance",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 12,
+        "armourPenetration": -3,
+        "damage": "D6+2",
+        "abilities": []
+      },
+      {
+        "id": "bladevanes",
+        "name": "Bladevanes",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Eradicate the Foe",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-ravager-model": {
+        "id": "drukhari-ravager-model",
+        "name": "Ravager",
+        "category": "follower",
+        "stats": {
+          "movement": 14,
+          "toughness": 8,
+          "save": "4+",
+          "wounds": 11,
+          "leadership": "6+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-ravager-model": 1
+        },
+        "points": 115
+      }
+    ]
+  },
+  {
+    "id": "drukhari-raider",
+    "name": "Raider",
+    "faction": "Drukhari",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 80,
+    "stats": {
+      "movement": 14,
+      "toughness": 8,
+      "save": "4+",
+      "wounds": 11,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "dark-lance",
+        "name": "Dark lance",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 12,
+        "armourPenetration": -3,
+        "damage": "D6+2",
+        "abilities": []
+      },
+      {
+        "id": "bladevanes",
+        "name": "Bladevanes",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Aethersails",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-raider-model": {
+        "id": "drukhari-raider-model",
+        "name": "Raider",
+        "category": "follower",
+        "stats": {
+          "movement": 14,
+          "toughness": 8,
+          "save": "4+",
+          "wounds": 11,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-raider-model": 1
+        },
+        "points": 80
+      }
+    ]
+  },
+  {
+    "id": "drukhari-venom",
+    "name": "Venom",
+    "faction": "Drukhari",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 70,
+    "stats": {
+      "movement": 14,
+      "toughness": 6,
+      "save": "4+",
+      "wounds": 6,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "splinter-cannon",
+        "name": "Splinter cannon",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 3,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Anti-Infantry 3+",
+          "Sustained Hits 1"
+        ]
+      },
+      {
+        "id": "bladevanes",
+        "name": "Bladevanes",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Athletic Aerialists",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "drukhari-venom-model": {
+        "id": "drukhari-venom-model",
+        "name": "Venom",
+        "category": "follower",
+        "stats": {
+          "movement": 14,
+          "toughness": 6,
+          "save": "4+",
+          "wounds": 6,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "drukhari-venom-model": 1
+        },
+        "points": 70
+      }
+    ]
+  }
+]

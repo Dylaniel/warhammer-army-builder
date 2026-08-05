@@ -1,0 +1,1220 @@
+﻿[
+  {
+    "id": "lov-uthar-the-destined",
+    "name": "Ûthar the Destined",
+    "faction": "Leagues of Votann",
+    "role": "HQ",
+    "basePoints": 80,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "3+",
+      "wounds": 5,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "volkanite-disintegrator",
+        "name": "Volkanite disintegrator",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 3,
+        "ballisticSkill": 2,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      },
+      {
+        "id": "blade-of-the-ancestors",
+        "name": "Blade of the Ancestors",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Ancestral Fortune",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Destined",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Grim Efficiency",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "lov-uthar-the-destined-model": {
+        "id": "lov-uthar-the-destined-model",
+        "name": "Ûthar the Destined",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "3+",
+          "wounds": 5,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "lov-uthar-the-destined-model": 1
+        },
+        "points": 80
+      }
+    ]
+  },
+  {
+    "id": "lov-kahl",
+    "name": "Kâhl",
+    "faction": "Leagues of Votann",
+    "role": "HQ",
+    "basePoints": 70,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "3+",
+      "wounds": 5,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "autoch-pattern-combi-bolter",
+        "name": "Autoch-pattern combi-bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "forgewrought-plasma-axe",
+        "name": "Forgewrought plasma axe",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Grim Efficiency",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Kindred Hero",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Rampart Crest",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "lov-kahl-model": {
+        "id": "lov-kahl-model",
+        "name": "Kâhl",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "3+",
+          "wounds": 5,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "lov-kahl-model": 1
+        },
+        "points": 70
+      }
+    ]
+  },
+  {
+    "id": "lov-einhyr-champion",
+    "name": "Einhyr Champion",
+    "faction": "Leagues of Votann",
+    "role": "HQ",
+    "basePoints": 60,
+    "stats": {
+      "movement": 5,
+      "toughness": 6,
+      "save": "2+",
+      "wounds": 5,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "autoch-pattern-combi-bolter",
+        "name": "Autoch-pattern combi-bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "mass-hammer",
+        "name": "Mass hammer",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 12,
+        "armourPenetration": -2,
+        "damage": "D6+1",
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Mass Driver Accelerators",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Exo-armour",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "lov-einhyr-champion-model": {
+        "id": "lov-einhyr-champion-model",
+        "name": "Einhyr Champion",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 6,
+          "save": "2+",
+          "wounds": 5,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "lov-einhyr-champion-model": 1
+        },
+        "points": 60
+      }
+    ]
+  },
+  {
+    "id": "lov-brokhyr-iron-master",
+    "name": "Brôkhyr Iron-master",
+    "faction": "Leagues of Votann",
+    "role": "HQ",
+    "basePoints": 65,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "4+",
+      "wounds": 4,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "graviton-rifle",
+        "name": "Graviton rifle",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Anti-Vehicle 2+"
+        ]
+      },
+      {
+        "id": "graviton-hammer",
+        "name": "Graviton hammer",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": [
+          "Anti-Vehicle 2+"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Brôkhyr Forge-Master",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Multispectral Visor",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "E-COG Assistants",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "lov-brokhyr-iron-master-model": {
+        "id": "lov-brokhyr-iron-master-model",
+        "name": "Brôkhyr Iron-master",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "4+",
+          "wounds": 4,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "lov-brokhyr-iron-master-model": 1
+        },
+        "points": 65
+      }
+    ]
+  },
+  {
+    "id": "lov-grimnyr",
+    "name": "Grimnyr",
+    "faction": "Leagues of Votann",
+    "role": "HQ",
+    "basePoints": 65,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "4+",
+      "wounds": 4,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "ancestors-wrath",
+        "name": "Ancestor's Wrath",
+        "type": "Psychic",
+        "range": 24,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": "D3",
+        "abilities": [
+          "Psychic"
+        ]
+      },
+      {
+        "id": "corvs",
+        "name": "CORVs",
+        "type": "Rapid Fire",
+        "range": 18,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "ancestral-ward-stave",
+        "name": "Ancestral ward stave",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": "D3",
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Fortify (Psychic)",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Lord of the Ancestors",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "lov-grimnyr-model": {
+        "id": "lov-grimnyr-model",
+        "name": "Grimnyr",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "4+",
+          "wounds": 4,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "lov-grimnyr-model": 1
+        },
+        "points": 65
+      }
+    ]
+  },
+  {
+    "id": "lov-hearthkyn-warriors",
+    "name": "Hearthkyn Warriors",
+    "faction": "Leagues of Votann",
+    "role": "TROOPS",
+    "basePoints": 100,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "4+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "autoch-pattern-bolter",
+        "name": "Autoch-pattern bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 1,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Luck Has. Need Keeps. Toil Earns.",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Medipack",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Pan-spectral Scanner",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Comms Array",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "lov-hearthkyn-warriors-model": {
+        "id": "lov-hearthkyn-warriors-model",
+        "name": "Hearthkyn Warriors",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "4+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "lov-hearthkyn-warriors-model": 1
+        },
+        "points": 100
+      }
+    ]
+  },
+  {
+    "id": "lov-einhyr-hearthguard",
+    "name": "Einhyr Hearthguard",
+    "faction": "Leagues of Votann",
+    "role": "ELITES",
+    "basePoints": 160,
+    "stats": {
+      "movement": 5,
+      "toughness": 6,
+      "save": "2+",
+      "wounds": 2,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "exo-armour-grenade-launcher",
+        "name": "Exo-armour grenade launcher",
+        "type": "Assault",
+        "range": 18,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast"
+        ]
+      },
+      {
+        "id": "volkanite-disintegrator",
+        "name": "Volkanite disintegrator",
+        "type": "Rapid Fire",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      },
+      {
+        "id": "concussion-gauntlet",
+        "name": "Concussion gauntlet",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 3,
+        "strength": 9,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Oathband Bodyguard",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "lov-einhyr-hearthguard-model": {
+        "id": "lov-einhyr-hearthguard-model",
+        "name": "Einhyr Hearthguard",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 6,
+          "save": "2+",
+          "wounds": 2,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "lov-einhyr-hearthguard-model": 1
+        },
+        "points": 160
+      }
+    ]
+  },
+  {
+    "id": "lov-cthonian-beserks",
+    "name": "Cthonian Beserks",
+    "faction": "Leagues of Votann",
+    "role": "ELITES",
+    "basePoints": 100,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "6+",
+      "wounds": 2,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-plasma-axe-strike",
+        "name": "Heavy plasma axe - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "heavy-plasma-axe-sweep",
+        "name": "Heavy plasma axe - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Feel No Pain 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cyberstimms",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Subterranean Explosives",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "lov-cthonian-beserks-model": {
+        "id": "lov-cthonian-beserks-model",
+        "name": "Cthonian Beserks",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "6+",
+          "wounds": 2,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "lov-cthonian-beserks-model": 1
+        },
+        "points": 100
+      }
+    ]
+  },
+  {
+    "id": "lov-hernkyn-pioneers",
+    "name": "Hernkyn Pioneers",
+    "faction": "Leagues of Votann",
+    "role": "FAST_ATTACK",
+    "basePoints": 90,
+    "stats": {
+      "movement": 12,
+      "toughness": 5,
+      "save": "4+",
+      "wounds": 3,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "magna-coil-autocannon",
+        "name": "Magna-coil autocannon",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 3,
+        "ballisticSkill": 4,
+        "strength": 7,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "bolt-revolver",
+        "name": "Bolt revolver",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Scouts 9\"",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Outflanking Mag-Riders",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Pan-spectral Scanner",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "lov-hernkyn-pioneers-model": {
+        "id": "lov-hernkyn-pioneers-model",
+        "name": "Hernkyn Pioneers",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 5,
+          "save": "4+",
+          "wounds": 3,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "lov-hernkyn-pioneers-model": 1
+        },
+        "points": 90
+      }
+    ]
+  },
+  {
+    "id": "lov-sagitaur",
+    "name": "Sagitaur",
+    "faction": "Leagues of Votann",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 115,
+    "stats": {
+      "movement": 12,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 9,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "l7-missile-launcher-blast",
+        "name": "L7 missile launcher - blast",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast"
+        ]
+      },
+      {
+        "id": "l7-missile-launcher-focused",
+        "name": "L7 missile launcher - focused",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": -2,
+        "damage": "D6",
+        "abilities": []
+      },
+      {
+        "id": "sagitaur-missile-launcher",
+        "name": "Sagitaur missile launcher",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 12,
+        "armourPenetration": -3,
+        "damage": "D6",
+        "abilities": []
+      },
+      {
+        "id": "armoured-hull",
+        "name": "Armoured hull",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Scouts 6\"",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Armoured Advance",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Transport 6",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Split Squads",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "lov-sagitaur-model": {
+        "id": "lov-sagitaur-model",
+        "name": "Sagitaur",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 9,
+          "save": "3+",
+          "wounds": 9,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "lov-sagitaur-model": 1
+        },
+        "points": 115
+      }
+    ]
+  },
+  {
+    "id": "lov-hekaton-land-fortress",
+    "name": "Hekaton Land Fortress",
+    "faction": "Leagues of Votann",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 225,
+    "stats": {
+      "movement": 10,
+      "toughness": 12,
+      "save": "2+",
+      "wounds": 16,
+      "leadership": "7+",
+      "objectiveControl": 5
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-magna-rail-cannon",
+        "name": "Heavy magna-rail cannon",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 18,
+        "armourPenetration": -4,
+        "damage": "D6+6",
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      },
+      {
+        "id": "matr-autocannon",
+        "name": "MATR autocannon",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 6,
+        "ballisticSkill": 3,
+        "strength": 7,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "armoured-hull",
+        "name": "Armoured hull",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Fire Support",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Transport 12",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deadly Demise D6",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "lov-hekaton-land-fortress-model": {
+        "id": "lov-hekaton-land-fortress-model",
+        "name": "Hekaton Land Fortress",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 12,
+          "save": "2+",
+          "wounds": 16,
+          "leadership": "7+",
+          "objectiveControl": 5
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "lov-hekaton-land-fortress-model": 1
+        },
+        "points": 225
+      }
+    ]
+  },
+  {
+    "id": "lov-brokhyr-thunderkyn",
+    "name": "Brôkhyr Thunderkyn",
+    "faction": "Leagues of Votann",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 85,
+    "stats": {
+      "movement": 5,
+      "toughness": 6,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "graviton-blast-cannon",
+        "name": "Graviton blast cannon",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Anti-Vehicle 2+",
+          "Blast"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Omni-visor",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Covering Fire",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "lov-brokhyr-thunderkyn-model": {
+        "id": "lov-brokhyr-thunderkyn-model",
+        "name": "Brôkhyr Thunderkyn",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 6,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "lov-brokhyr-thunderkyn-model": 1
+        },
+        "points": 85
+      }
+    ]
+  },
+  {
+    "id": "lov-hernkyn-yaegirs",
+    "name": "Hernkyn Yaegirs",
+    "faction": "Leagues of Votann",
+    "role": "ELITES",
+    "basePoints": 80,
+    "stats": {
+      "movement": 6,
+      "toughness": 5,
+      "save": "4+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-revolver",
+        "name": "Bolt revolver",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "yaegir-combat-knife",
+        "name": "Yaegir combat knife",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Infiltrators",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Stealth",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Scouts 6\"",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Resourceful Hunters",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "lov-hernkyn-yaegirs-model": {
+        "id": "lov-hernkyn-yaegirs-model",
+        "name": "Hernkyn Yaegirs",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 5,
+          "save": "4+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "lov-hernkyn-yaegirs-model": 1
+        },
+        "points": 80
+      }
+    ]
+  }
+]
