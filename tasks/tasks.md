@@ -150,11 +150,11 @@ The following items appeared in earlier planning but have been **deliberately sc
   - Refactor the data architecture to decouple detachment rules from parent-state conditional sweeps. Units, weapons, or profiles must explicitly declare their own applicable detachment bonuses within their schema object. Each bonus item must store a validation key indicating which detachment(s) it belongs to. 
   - **Crucial Rendering Rule:** The bonus text stored and rendered must reflect the exact, verbatim wording of the official tabletop rules. The application must not attempt to summarize or independently interpret ambiguous mechanics; it must provide the exact wording so players and their opponents can exercise human discretion during live gameplay. The rendering engine will simply read the entity's intrinsic array and display this verbatim text if the army's active detachment string matches.
 
-- [ ] **6.2 Rebrand App to "OpenForge"**
-  - Officially update all public-facing titles, browser tab headers, meta tags, welcome screens, and UI headers from "BattleForge" to **OpenForge**.
+- [x] **6.2 Rebrand App to "OpenForge"**
+  - Public-facing titles, meta tags, and UI headers already read OpenForge from earlier work. Completed the rebrand by also renaming the internal component files/exports (`BattleForgeApp.tsx` → `OpenForgeApp.tsx`, `BattleForgeTab.tsx` → `OpenForgeTab.tsx`, `TabType`'s `'battleForge'` key → `'openForge'`), `package.json`'s `name` field, and doc references in `README.md`/`AGENTS.md` for full consistency. Verified in dev server: header, nav tab, and page `<title>` all read OpenForge.
 
-- [ ] **6.3 Vercel Deployment Readiness**
-  - Configure the project for seamless zero-config deployment on Vercel by creating a `vercel.json` with SPA routing rewrites, validating that `npm run build` succeeds without errors, and properly bundling all public assets.
+- [x] **6.3 Vercel Deployment Readiness**
+  - `vercel.json` previously contained a Vite/CRA-style SPA rewrite (`/(.*) → /index.html`) that doesn't apply to this Next.js App Router project — Next.js doesn't emit a root `index.html`, and Vercel auto-detects and zero-configs Next.js deployments on its own. That file would likely have broken routing on an actual deploy despite `npm run build` passing locally (Next's local build pipeline ignores `vercel.json`). Removed it; deployment now relies on Vercel's built-in Next.js zero-config handling. `npm run build` verified clean (no TS/build errors).
 
 - [ ] **6.4 Unit Composition Schema & UI Refactor**
   - Update `army.ts` so `Unit` contains a `profiles: Profile[]` array (moving M, T, SV, W, LD, OC into the Profile). Completely rebuild the "Unit Composition" accordion in `UnitDetailTab` to replace the single "Model Quantity" counter with independent increment/decrement counters for each distinct profile in the unit (e.g., allowing independent scaling of a Sergeant vs. standard troops). Update the `ArmyDetailTab` roster cards to display this mixed composition accurately.

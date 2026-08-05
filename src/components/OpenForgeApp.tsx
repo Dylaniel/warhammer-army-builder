@@ -3,17 +3,17 @@
 import { useState, useEffect } from 'react';
 import Header from './Header';
 import ReferenceTab from './ReferenceTab';
-import BattleForgeTab from './BattleForgeTab';
+import OpenForgeTab from './OpenForgeTab';
 import ProfileTab from './ProfileTab';
 import BottomNavigation from './BottomNavigation';
 import { Army } from '../types/army';
 import { useTheme } from './ThemeContext';
 
-type TabType = 'reference' | 'battleForge' | 'profile';
+type TabType = 'reference' | 'openForge' | 'profile';
 
-export default function BattleForgeApp() {
+export default function OpenForgeApp() {
   const { theme } = useTheme();
-  const [activeTab, setActiveTab] = useState<TabType>('battleForge');
+  const [activeTab, setActiveTab] = useState<TabType>('openForge');
   const [armies, setArmies] = useState<Army[]>([]);
 
   // Load armies from localStorage on mount
@@ -41,12 +41,12 @@ export default function BattleForgeApp() {
     switch (activeTab) {
       case 'reference':
         return <ReferenceTab />;
-      case 'battleForge':
-        return <BattleForgeTab armies={armies} setArmies={setArmies} />;
+      case 'openForge':
+        return <OpenForgeTab armies={armies} setArmies={setArmies} />;
       case 'profile':
         return <ProfileTab armies={armies} setArmies={setArmies} />;
       default:
-        return <BattleForgeTab armies={armies} setArmies={setArmies} />;
+        return <OpenForgeTab armies={armies} setArmies={setArmies} />;
     }
   };
 

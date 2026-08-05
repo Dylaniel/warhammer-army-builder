@@ -1,8 +1,8 @@
 'use client';
 
 interface BottomNavigationProps {
-  activeTab: 'reference' | 'battleForge' | 'profile';
-  onTabChange: (tab: 'reference' | 'battleForge' | 'profile') => void;
+  activeTab: 'reference' | 'openForge' | 'profile';
+  onTabChange: (tab: 'reference' | 'openForge' | 'profile') => void;
 }
 
 export default function BottomNavigation({ activeTab, onTabChange }: BottomNavigationProps) {
@@ -39,19 +39,19 @@ export default function BottomNavigation({ activeTab, onTabChange }: BottomNavig
       </button>
 
       <button
-        onClick={() => onTabChange('battleForge')}
+        onClick={() => onTabChange('openForge')}
         className="flex flex-col items-center justify-center space-y-1 flex-1 min-w-0 text-white py-2 px-1 h-full transition-colors duration-200"
         style={{
           width: '33.333%',
-          backgroundColor: activeTab === 'battleForge' ? '#3b82f6' : '#eab308',
+          backgroundColor: activeTab === 'openForge' ? '#3b82f6' : '#eab308',
         }}
         onMouseEnter={(e) => {
-          if (activeTab !== 'battleForge') {
+          if (activeTab !== 'openForge') {
             e.currentTarget.style.backgroundColor = '#facc15';
           }
         }}
         onMouseLeave={(e) => {
-          if (activeTab !== 'battleForge') {
+          if (activeTab !== 'openForge') {
             e.currentTarget.style.backgroundColor = '#eab308';
           }
         }}

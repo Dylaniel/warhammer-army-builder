@@ -1,10 +1,10 @@
-# Warhammer Army Builder - Battle Forge UI
+# OpenForge - Warhammer Army Builder
 
 A React-based Warhammer army builder application with a modern mobile-first UI design.
 
 ## Features
 
-- **Battle Forge Tab**: Create and manage army lists with a clean, card-based interface
+- **OpenForge Tab**: Create and manage army lists with a clean, card-based interface
 - **Reference Tab**: Quick access to game rules and faction information
 - **Profile Tab**: User settings and profile management
 - **Responsive Design**: Mobile-first design with bottom navigation
@@ -14,10 +14,10 @@ A React-based Warhammer army builder application with a modern mobile-first UI d
 
 ```
 src/components/
-├── BattleForgeApp.tsx      # Main app shell and tab management
+├── OpenForgeApp.tsx        # Main app shell and tab management
 ├── Header.tsx              # App header with title and menu
 ├── BottomNavigation.tsx    # Bottom tab navigation
-├── BattleForgeTab.tsx      # Army list management
+├── OpenForgeTab.tsx        # Army list management
 ├── ReferenceTab.tsx        # Rules and reference content
 ├── ProfileTab.tsx          # User profile and settings
 ├── NewArmyModal.tsx        # Modal for creating new armies
@@ -49,11 +49,11 @@ src/components/
 
 ## Development
 
-The app is built with a component-based architecture where each tab is a separate component. The main `BattleForgeApp` component manages the active tab state and renders the appropriate content.
+The app is built with a component-based architecture where each tab is a separate component. The main `OpenForgeApp` component manages the active tab state and renders the appropriate content.
 
 ### Key Features
 
-- **Tab Navigation**: Switch between Reference, Battle Forge, and Profile tabs
+- **Tab Navigation**: Switch between Reference, OpenForge, and Profile tabs
 - **Modal System**: Create new armies with form validation
 - **Responsive Layout**: Mobile-first design with proper spacing
 - **Dark Theme**: Consistent dark theme throughout the application

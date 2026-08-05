@@ -1,6 +1,6 @@
 'use client';
-import BattleForgeApp from '../components/BattleForgeApp';
+import OpenForgeApp from '../components/OpenForgeApp';
 
 export default function Home() {
-  return <BattleForgeApp />;
+  return <OpenForgeApp />;
 }

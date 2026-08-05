@@ -7,7 +7,7 @@ import ArmyDetailTab from './ArmyDetailTab';
 import EditArmyModal from './EditArmyModal';
 import { calculateArmyPoints } from '../utils/unitUtils';
 
-interface BattleForgeTabProps {
+interface OpenForgeTabProps {
   armies: Army[];
   setArmies: Dispatch<SetStateAction<Army[]>>;
 }
@@ -79,7 +79,7 @@ function ArmyCard({
   );
 }
 
-export default function BattleForgeTab({ armies, setArmies }: BattleForgeTabProps) {
+export default function OpenForgeTab({ armies, setArmies }: OpenForgeTabProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [viewingArmyIndex, setViewingArmyIndex] = useState<number | null>(null);
   const [editingArmyIndex, setEditingArmyIndex] = useState<number | null>(null);

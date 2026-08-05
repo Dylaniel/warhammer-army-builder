@@ -36,7 +36,7 @@ export default function UnitCard({ unit, opts }: any) {
 
 ### Styling
 
-- **Tailwind utility classes only** — no inline `style={{}}` objects except for truly dynamic values that Tailwind cannot express (e.g. pixel-precise `gridTemplateRows`). See `BattleForgeApp.tsx` for the current approved exception pattern.
+- **Tailwind utility classes only** — no inline `style={{}}` objects except for truly dynamic values that Tailwind cannot express (e.g. pixel-precise `gridTemplateRows`). See `OpenForgeApp.tsx` for the current approved exception pattern.
 - Do not introduce a new CSS file unless absolutely necessary. The project uses Tailwind; keep it that way.
 - Theme-aware styling uses the `useTheme()` hook from `ThemeContext.tsx`. Never hardcode light/dark color values — always branch on `theme`.
 
@@ -91,8 +91,8 @@ Every entry in `src/data/units.json` **must** conform to the `Unit` interface in
 
 ## 3. State Management
 
-- Army state lives at the top of `BattleForgeApp.tsx` and is passed down as props. **Do not introduce a global store** (Redux, Zustand, Context for army state) without explicit discussion — the current prop-drilling depth is intentional and sufficient at this scale.
-- **`localStorage` is the persistence layer.** The load/save `useEffect` pair in `BattleForgeApp.tsx` is the canonical pattern. Any new persistent state must follow it.
+- Army state lives at the top of `OpenForgeApp.tsx` and is passed down as props. **Do not introduce a global store** (Redux, Zustand, Context for army state) without explicit discussion — the current prop-drilling depth is intentional and sufficient at this scale.
+- **`localStorage` is the persistence layer.** The load/save `useEffect` pair in `OpenForgeApp.tsx` is the canonical pattern. Any new persistent state must follow it.
 - Always wrap `localStorage` access in a `typeof window !== 'undefined'` guard. Next.js may render on the server.
 
 ```typescript
