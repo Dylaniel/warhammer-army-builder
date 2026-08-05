@@ -1,4 +1,4 @@
-import { Unit, UnitOption, UnitStats } from '../types/army';
+import { Army, Unit, UnitOption, UnitStats } from '../types/army';
 import unitsData from '../data/units.json';
 
 /**
@@ -284,4 +284,34 @@ export const calculateArmyPoints = (armyUnits: Unit[]): number => {
   return armyUnits.reduce((total, armyUnit) => {
     return total + (armyUnit.totalPoints || armyUnit.basePoints);
   }, 0);
+};
+
+/**
+ * Reports whether an army currently has a valid, designated Warlord.
+ * Only units in `army.characters` (HQ role) are eligible to be Warlord —
+ * see `handleMakeWarlord` in `ArmyDetailTab`, which enforces this at the
+ * point of assignment. This is a read-only, non-blocking status check: the
+ * app warns about a missing Warlord but never prevents play, so callers
+ * must only use this to render advisory UI, never to gate an action.
+ *
+ * The two "missing" cases are distinguished because they call for different
+ * user guidance:
+ * - `no-characters`: the army has no Character units at all, so it cannot
+ *   have a Warlord yet — the user needs to add one first.
+ * - `no-warlord-designated`: the army has one or more Characters, but none
+ *   of them is flagged `isWarlord` — the user just needs to designate one.
+ */
+export type WarlordStatus =
+  | { state: 'no-characters' }
+  | { state: 'no-warlord-designated' }
+  | { state: 'ok' };
+
+export const getWarlordStatus = (army: Army): WarlordStatus => {
+  const characters = army.characters || [];
+  if (characters.length === 0) {
+    return { state: 'no-characters' };
+  }
+
+  const hasWarlord = characters.some((unit) => unit.isWarlord === true);
+  return hasWarlord ? { state: 'ok' } : { state: 'no-warlord-designated' };
 };
