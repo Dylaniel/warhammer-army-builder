@@ -36,10 +36,10 @@ export function useFactionUnits(faction: string): UseFactionUnitsResult {
         try {
           // Fallback to static if dynamic is breaking Next.js client bundling
           if (normalizedFaction === 'space-marines') {
-            const data = await import('../data/factions/space-marines.json');
+            const data = await import('../data/factions-v2/space-marines.json');
             factionUnits = data.default || data;
           } else {
-            const factionData = await import(`../data/factions/${normalizedFaction}.json`);
+            const factionData = await import(`../data/factions-v2/${normalizedFaction}.json`);
             factionUnits = factionData.default || factionData;
           }
         } catch (importError) {

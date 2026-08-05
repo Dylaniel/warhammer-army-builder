@@ -1,0 +1,1440 @@
+﻿[
+  {
+    "id": "gk-kaldor-draigo",
+    "name": "Kaldor Draigo",
+    "faction": "Grey Knights",
+    "role": "HQ",
+    "basePoints": 125,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 7,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "scourge-of-daemons",
+        "name": "Scourge of Daemons",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Anti-Daemon 2+",
+          "Ignores Cover"
+        ]
+      },
+      {
+        "id": "the-titansword",
+        "name": "The Titansword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 8,
+        "armourPenetration": -4,
+        "damage": 3,
+        "abilities": [
+          "Anti-Daemon 2+"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Assault",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "One with the Warp",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Feel No Pain 4+ (against Mortal Wounds)",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 3+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gk-kaldor-draigo-model": {
+        "id": "gk-kaldor-draigo-model",
+        "name": "Kaldor Draigo",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "2+",
+          "wounds": 7,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gk-kaldor-draigo-model": 1
+        },
+        "points": 125
+      }
+    ]
+  },
+  {
+    "id": "gk-grand-master-voldus",
+    "name": "Grand Master Voldus",
+    "faction": "Grey Knights",
+    "role": "HQ",
+    "basePoints": 95,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 6,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "malleus-argyrum",
+        "name": "Malleus Argyrum",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 9,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Assault",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Wardmaker",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gk-grand-master-voldus-model": {
+        "id": "gk-grand-master-voldus-model",
+        "name": "Grand Master Voldus",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "2+",
+          "wounds": 6,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gk-grand-master-voldus-model": 1
+        },
+        "points": 95
+      }
+    ]
+  },
+  {
+    "id": "gk-grand-master-in-nemesis-dreadknight",
+    "name": "Grand Master in Nemesis Dreadknight",
+    "faction": "Grey Knights",
+    "role": "HQ",
+    "basePoints": 200,
+    "stats": {
+      "movement": 8,
+      "toughness": 8,
+      "save": "2+",
+      "wounds": 13,
+      "leadership": "6+",
+      "objectiveControl": 4
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-incinerator",
+        "name": "Heavy incinerator",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": "D6",
+        "ballisticSkill": 2,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "heavy-psycannon",
+        "name": "Heavy psycannon",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 6,
+        "ballisticSkill": 2,
+        "strength": 10,
+        "armourPenetration": -1,
+        "damage": 3,
+        "abilities": [
+          "Psychic"
+        ]
+      },
+      {
+        "id": "nemesis-daemon-greathammer",
+        "name": "Nemesis daemon greathammer",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 3,
+        "strength": 14,
+        "armourPenetration": -3,
+        "damage": "D6",
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Assault",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Grand Master",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Surge of Wrath",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gk-grand-master-in-nemesis-dreadknight-model": {
+        "id": "gk-grand-master-in-nemesis-dreadknight-model",
+        "name": "Grand Master in Nemesis Dreadknight",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 8,
+          "save": "2+",
+          "wounds": 13,
+          "leadership": "6+",
+          "objectiveControl": 4
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gk-grand-master-in-nemesis-dreadknight-model": 1
+        },
+        "points": 200
+      }
+    ]
+  },
+  {
+    "id": "gk-brotherhood-librarian",
+    "name": "Brotherhood Librarian",
+    "faction": "Grey Knights",
+    "role": "HQ",
+    "basePoints": 120,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "purge-soul",
+        "name": "Purge Soul",
+        "type": "Psychic",
+        "range": 18,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": "D3",
+        "abilities": [
+          "Precision",
+          "Psychic"
+        ]
+      },
+      {
+        "id": "nemesis-force-weapon",
+        "name": "Nemesis force weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Assault",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Vortex of Doom (Psychic)",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gk-brotherhood-librarian-model": {
+        "id": "gk-brotherhood-librarian-model",
+        "name": "Brotherhood Librarian",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "2+",
+          "wounds": 5,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gk-brotherhood-librarian-model": 1
+        },
+        "points": 120
+      }
+    ]
+  },
+  {
+    "id": "gk-castellan-crowe",
+    "name": "Castellan Crowe",
+    "faction": "Grey Knights",
+    "role": "HQ",
+    "basePoints": 90,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "purifying-flame",
+        "name": "Purifying Flame",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 3,
+        "ballisticSkill": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 2+",
+          "Ignores Cover",
+          "Psychic"
+        ]
+      },
+      {
+        "id": "black-blade-of-antwyr",
+        "name": "Black Blade of Antwyr",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Precision"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Assault",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Champion of the Order",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gk-castellan-crowe-model": {
+        "id": "gk-castellan-crowe-model",
+        "name": "Castellan Crowe",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "2+",
+          "wounds": 5,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gk-castellan-crowe-model": 1
+        },
+        "points": 90
+      }
+    ]
+  },
+  {
+    "id": "gk-strike-squad",
+    "name": "Strike Squad",
+    "faction": "Grey Knights",
+    "role": "TROOPS",
+    "basePoints": 120,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "nemesis-force-weapon",
+        "name": "Nemesis force weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Assault",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Scouts 6\"",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Sanctifying Ritual",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gk-strike-squad-model": {
+        "id": "gk-strike-squad-model",
+        "name": "Strike Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "2+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gk-strike-squad-model": 1
+        },
+        "points": 120
+      }
+    ]
+  },
+  {
+    "id": "gk-brotherhood-terminator-squad",
+    "name": "Brotherhood Terminator Squad",
+    "faction": "Grey Knights",
+    "role": "TROOPS",
+    "basePoints": 210,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "nemesis-force-weapon",
+        "name": "Nemesis force weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Assault",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Hammerhand (Psychic)",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Narthecium",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gk-brotherhood-terminator-squad-model": {
+        "id": "gk-brotherhood-terminator-squad-model",
+        "name": "Brotherhood Terminator Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "2+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gk-brotherhood-terminator-squad-model": 1
+        },
+        "points": 210
+      }
+    ]
+  },
+  {
+    "id": "gk-paladin-squad",
+    "name": "Paladin Squad",
+    "faction": "Grey Knights",
+    "role": "ELITES",
+    "basePoints": 225,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "nemesis-force-weapon",
+        "name": "Nemesis force weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Assault",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Inner Fire",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gk-paladin-squad-model": {
+        "id": "gk-paladin-squad-model",
+        "name": "Paladin Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "2+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gk-paladin-squad-model": 1
+        },
+        "points": 225
+      }
+    ]
+  },
+  {
+    "id": "gk-purifier-squad",
+    "name": "Purifier Squad",
+    "faction": "Grey Knights",
+    "role": "ELITES",
+    "basePoints": 125,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "purifying-flame",
+        "name": "Purifying Flame",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 2+",
+          "Ignores Cover",
+          "Psychic"
+        ]
+      },
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "nemesis-force-weapon",
+        "name": "Nemesis force weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Assault",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Sanctic Awe",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gk-purifier-squad-model": {
+        "id": "gk-purifier-squad-model",
+        "name": "Purifier Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "2+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gk-purifier-squad-model": 1
+        },
+        "points": 125
+      }
+    ]
+  },
+  {
+    "id": "gk-interceptor-squad",
+    "name": "Interceptor Squad",
+    "faction": "Grey Knights",
+    "role": "FAST_ATTACK",
+    "basePoints": 130,
+    "stats": {
+      "movement": 12,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "nemesis-force-weapon",
+        "name": "Nemesis force weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Assault",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Personal Teleporters",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gk-interceptor-squad-model": {
+        "id": "gk-interceptor-squad-model",
+        "name": "Interceptor Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "2+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gk-interceptor-squad-model": 1
+        },
+        "points": 130
+      }
+    ]
+  },
+  {
+    "id": "gk-purgation-squad",
+    "name": "Purgation Squad",
+    "faction": "Grey Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 130,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "psycannon",
+        "name": "Psycannon",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 3,
+        "ballisticSkill": 3,
+        "strength": 8,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Psychic"
+        ]
+      },
+      {
+        "id": "nemesis-force-weapon",
+        "name": "Nemesis force weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Assault",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Astral Aim",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gk-purgation-squad-model": {
+        "id": "gk-purgation-squad-model",
+        "name": "Purgation Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "2+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gk-purgation-squad-model": 1
+        },
+        "points": 130
+      }
+    ]
+  },
+  {
+    "id": "gk-nemesis-dreadknight",
+    "name": "Nemesis Dreadknight",
+    "faction": "Grey Knights",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 195,
+    "stats": {
+      "movement": 8,
+      "toughness": 8,
+      "save": "2+",
+      "wounds": 13,
+      "leadership": "6+",
+      "objectiveControl": 4
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-incinerator",
+        "name": "Heavy incinerator",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "heavy-psycannon",
+        "name": "Heavy psycannon",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 6,
+        "ballisticSkill": 3,
+        "strength": 10,
+        "armourPenetration": -1,
+        "damage": 3,
+        "abilities": [
+          "Psychic"
+        ]
+      },
+      {
+        "id": "nemesis-greatsword",
+        "name": "Nemesis greatsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 3,
+        "strength": 10,
+        "armourPenetration": -2,
+        "damage": "D6",
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Assault",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Advanced Teleportarium",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gk-nemesis-dreadknight-model": {
+        "id": "gk-nemesis-dreadknight-model",
+        "name": "Nemesis Dreadknight",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 8,
+          "save": "2+",
+          "wounds": 13,
+          "leadership": "6+",
+          "objectiveControl": 4
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gk-nemesis-dreadknight-model": 1
+        },
+        "points": 195
+      }
+    ]
+  },
+  {
+    "id": "gk-brother-captain",
+    "name": "Brother-Captain",
+    "faction": "Grey Knights",
+    "role": "HQ",
+    "basePoints": 90,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 6,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "nemesis-force-weapon",
+        "name": "Nemesis force weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Assault",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Fearsome Aura",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gk-brother-captain-model": {
+        "id": "gk-brother-captain-model",
+        "name": "Brother-Captain",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "2+",
+          "wounds": 6,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gk-brother-captain-model": 1
+        },
+        "points": 90
+      }
+    ]
+  },
+  {
+    "id": "gk-brotherhood-champion",
+    "name": "Brotherhood Champion",
+    "faction": "Grey Knights",
+    "role": "HQ",
+    "basePoints": 80,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "nemesis-force-weapon",
+        "name": "Nemesis force weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Psychic",
+          "Precision"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Assault",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Martial Superiority",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gk-brotherhood-champion-model": {
+        "id": "gk-brotherhood-champion-model",
+        "name": "Brotherhood Champion",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "2+",
+          "wounds": 5,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gk-brotherhood-champion-model": 1
+        },
+        "points": 80
+      }
+    ]
+  },
+  {
+    "id": "gk-grand-master",
+    "name": "Grand Master",
+    "faction": "Grey Knights",
+    "role": "HQ",
+    "basePoints": 95,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 6,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "nemesis-force-weapon",
+        "name": "Nemesis force weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Teleport Assault",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Master Strategist",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "gk-grand-master-model": {
+        "id": "gk-grand-master-model",
+        "name": "Grand Master",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "2+",
+          "wounds": 6,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gk-grand-master-model": 1
+        },
+        "points": 95
+      }
+    ]
+  }
+]

@@ -1,24 +1,133 @@
 import React, { useState } from 'react';
-import { Unit } from '../types/army';
-import { calculateUnitPoints } from '../utils/unitUtils';
+import { ModelGroup, Unit, UnitStats } from '../types/army';
+import { calculateUnitPoints, normalizeModelGroupComposition } from '../utils/unitUtils';
 
 interface UnitDetailTabProps {
   unit: Unit;
   onBack: () => void;
-  onUpdate: (updatedUnit: Unit) => void;
+  // Functional updater rather than a plain Unit: the caller resolves this
+  // against the latest committed unit state (not a snapshot captured at
+  // render time), so rapid successive calls all apply instead of racing
+  // against a stale `unit` prop and silently dropping updates.
+  onUpdate: (update: (prevUnit: Unit) => Unit) => void;
+}
+
+/** Six-characteristic (M/T/SV/W/LD/OC) statline, optionally labeled. */
+function StatGrid({ label, stats }: { label?: string; stats: UnitStats }) {
+  return (
+    <div className="flex flex-col">
+      {label && <span className="text-xs text-gray-300 font-bold mb-1">{label}</span>}
+      <div className="grid grid-cols-6 gap-1 text-center bg-gray-900 rounded p-2 border border-gray-700">
+        <div>
+          <div className="text-[10px] text-gray-500">M</div>
+          <div className="font-medium text-white">{stats.movement}&quot;</div>
+        </div>
+        <div>
+          <div className="text-[10px] text-gray-500">T</div>
+          <div className="font-medium text-white">{stats.toughness}</div>
+        </div>
+        <div>
+          <div className="text-[10px] text-gray-500">SV</div>
+          <div className="font-medium text-white">{stats.save}</div>
+        </div>
+        <div>
+          <div className="text-[10px] text-gray-500">W</div>
+          <div className="font-medium text-white">{stats.wounds}</div>
+        </div>
+        <div>
+          <div className="text-[10px] text-gray-500">LD</div>
+          <div className="font-medium text-white">{stats.leadership}</div>
+        </div>
+        <div>
+          <div className="text-[10px] text-gray-500">OC</div>
+          <div className="font-medium text-white">{stats.objectiveControl}</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/** Independent [-]/count/[+] counter for a single ModelGroup, clamped to its own min/max. */
+function ModelGroupCounter({
+  group,
+  current,
+  onChange,
+}: {
+  group: ModelGroup;
+  current: number;
+  onChange: (delta: number) => void;
+}) {
+  const canDecrease = current > group.minQuantity;
+  const canIncrease = current < group.maxQuantity;
+
+  return (
+    <div className="flex items-center justify-between">
+      <div>
+        <div className="font-medium text-sm">{group.name}</div>
+        <div className="text-xs text-gray-400">
+          Min: {group.minQuantity} | Max: {group.maxQuantity}
+        </div>
+      </div>
+      <div className="flex items-center space-x-3 bg-gray-900 rounded-lg p-1 border border-gray-700">
+        <button
+          onClick={() => onChange(-1)}
+          disabled={!canDecrease}
+          className={`w-8 h-8 flex items-center justify-center rounded font-bold ${canDecrease ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-800 text-gray-600 cursor-not-allowed'}`}
+        >
+          -
+        </button>
+        <span className="font-bold text-base min-w-[2ch] text-center">{current}</span>
+        <button
+          onClick={() => onChange(1)}
+          disabled={!canIncrease}
+          className={`w-8 h-8 flex items-center justify-center rounded font-bold ${canIncrease ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-800 text-gray-600 cursor-not-allowed'}`}
+        >
+          +
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export default function UnitDetailTab({ unit, onBack, onUpdate }: UnitDetailTabProps) {
   const [isCompositionOpen, setIsCompositionOpen] = useState(true);
   const [isWargearOpen, setIsWargearOpen] = useState(true);
 
-  // Initialize composition if not present, but profiles exist
-  const currentComposition = unit.composition || {};
-  if (Object.keys(currentComposition).length === 0 && unit.profiles) {
+  const modelGroups =
+    unit.modelGroups && Object.keys(unit.modelGroups).length > 0 ? unit.modelGroups : null;
+
+  // Task 6.4 schema: composition normalized against this unit's modelGroups.
+  // normalizeModelGroupComposition defensively drops unknown/stale keys
+  // (e.g. an older army saved with composition keyed by legacy Profile name)
+  // so a mismatched localStorage army can never crash this screen.
+  const modelGroupComposition = modelGroups
+    ? normalizeModelGroupComposition(unit, unit.composition)
+    : {};
+
+  // Legacy fallback composition, keyed by Profile name (pre Task 6.4 data).
+  const legacyComposition = unit.composition || {};
+  if (!modelGroups && Object.keys(legacyComposition).length === 0 && unit.profiles) {
     unit.profiles.forEach((p) => {
-      currentComposition[p.name] = p.minQuantity;
+      legacyComposition[p.name] = p.minQuantity;
     });
   }
+
+  const handleModelGroupChange = (group: ModelGroup, delta: number) => {
+    // Derive `current` from the latest committed unit (prevUnit), not the
+    // `modelGroupComposition` closed over from this render's `unit` prop —
+    // otherwise clicks that land before a render round-trip read stale data
+    // and get silently dropped.
+    onUpdate((prevUnit) => {
+      const prevComposition = normalizeModelGroupComposition(prevUnit, prevUnit.composition);
+      const current = prevComposition[group.id] ?? group.minQuantity;
+      const next = Math.max(group.minQuantity, Math.min(group.maxQuantity, current + delta));
+
+      const newComposition = { ...prevComposition, [group.id]: next };
+      const updatedUnit: Unit = { ...prevUnit, composition: newComposition };
+      updatedUnit.totalPoints = calculateUnitPoints(updatedUnit, updatedUnit.selectedOptions);
+      return updatedUnit;
+    });
+  };
 
   const handleCompositionChange = (
     profileName: string,
@@ -26,23 +135,26 @@ export default function UnitDetailTab({ unit, onBack, onUpdate }: UnitDetailTabP
     min: number,
     max: number
   ) => {
-    const current = currentComposition[profileName] || min;
-    const next = Math.max(min, Math.min(max, current + delta));
+    onUpdate((prevUnit) => {
+      const prevLegacyComposition = prevUnit.composition || {};
+      const current = prevLegacyComposition[profileName] || min;
+      const next = Math.max(min, Math.min(max, current + delta));
 
-    const newComposition = { ...currentComposition, [profileName]: next };
-    const updatedUnit = { ...unit, composition: newComposition };
-    updatedUnit.totalPoints = calculateUnitPoints(updatedUnit, updatedUnit.selectedOptions);
-
-    onUpdate(updatedUnit);
+      const newComposition = { ...prevLegacyComposition, [profileName]: next };
+      const updatedUnit: Unit = { ...prevUnit, composition: newComposition };
+      updatedUnit.totalPoints = calculateUnitPoints(updatedUnit, updatedUnit.selectedOptions);
+      return updatedUnit;
+    });
   };
 
   const handleLegacyQuantityChange = (delta: number) => {
-    const current = unit.quantity || 1;
-    const next = Math.max(1, current + delta);
-    const updatedUnit = { ...unit, quantity: next };
-    updatedUnit.totalPoints = calculateUnitPoints(updatedUnit, updatedUnit.selectedOptions);
-
-    onUpdate(updatedUnit);
+    onUpdate((prevUnit) => {
+      const current = prevUnit.quantity || 1;
+      const next = Math.max(1, current + delta);
+      const updatedUnit: Unit = { ...prevUnit, quantity: next };
+      updatedUnit.totalPoints = calculateUnitPoints(updatedUnit, updatedUnit.selectedOptions);
+      return updatedUnit;
+    });
   };
 
   return (
@@ -72,69 +184,20 @@ export default function UnitDetailTab({ unit, onBack, onUpdate }: UnitDetailTabP
               Stats
             </h4>
 
-            {unit.profiles && unit.profiles.length > 0 ? (
+            {modelGroups ? (
+              <div className="space-y-2">
+                {Object.values(modelGroups).map((group) => (
+                  <StatGrid key={group.id} label={group.name} stats={group.stats} />
+                ))}
+              </div>
+            ) : unit.profiles && unit.profiles.length > 0 ? (
               <div className="space-y-2">
                 {unit.profiles.map((profile) => (
-                  <div key={profile.name} className="flex flex-col">
-                    <span className="text-xs text-gray-300 font-bold mb-1">{profile.name}</span>
-                    <div className="grid grid-cols-6 gap-1 text-center bg-gray-900 rounded p-2 border border-gray-700">
-                      <div>
-                        <div className="text-[10px] text-gray-500">M</div>
-                        <div className="font-medium text-white">{profile.stats.movement}&quot;</div>
-                      </div>
-                      <div>
-                        <div className="text-[10px] text-gray-500">T</div>
-                        <div className="font-medium text-white">{profile.stats.toughness}</div>
-                      </div>
-                      <div>
-                        <div className="text-[10px] text-gray-500">SV</div>
-                        <div className="font-medium text-white">{profile.stats.save}</div>
-                      </div>
-                      <div>
-                        <div className="text-[10px] text-gray-500">W</div>
-                        <div className="font-medium text-white">{profile.stats.wounds}</div>
-                      </div>
-                      <div>
-                        <div className="text-[10px] text-gray-500">LD</div>
-                        <div className="font-medium text-white">{profile.stats.leadership}</div>
-                      </div>
-                      <div>
-                        <div className="text-[10px] text-gray-500">OC</div>
-                        <div className="font-medium text-white">
-                          {profile.stats.objectiveControl}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <StatGrid key={profile.name} label={profile.name} stats={profile.stats} />
                 ))}
               </div>
             ) : (
-              <div className="grid grid-cols-6 gap-1 text-center bg-gray-900 rounded p-2 border border-gray-700">
-                <div>
-                  <div className="text-[10px] text-gray-500">M</div>
-                  <div className="font-medium text-white">{unit.stats.movement}&quot;</div>
-                </div>
-                <div>
-                  <div className="text-[10px] text-gray-500">T</div>
-                  <div className="font-medium text-white">{unit.stats.toughness}</div>
-                </div>
-                <div>
-                  <div className="text-[10px] text-gray-500">SV</div>
-                  <div className="font-medium text-white">{unit.stats.save}</div>
-                </div>
-                <div>
-                  <div className="text-[10px] text-gray-500">W</div>
-                  <div className="font-medium text-white">{unit.stats.wounds}</div>
-                </div>
-                <div>
-                  <div className="text-[10px] text-gray-500">LD</div>
-                  <div className="font-medium text-white">{unit.stats.leadership}</div>
-                </div>
-                <div>
-                  <div className="text-[10px] text-gray-500">OC</div>
-                  <div className="font-medium text-white">{unit.stats.objectiveControl}</div>
-                </div>
-              </div>
+              <StatGrid stats={unit.stats} />
             )}
           </div>
 
@@ -213,10 +276,21 @@ export default function UnitDetailTab({ unit, onBack, onUpdate }: UnitDetailTabP
           </button>
           {isCompositionOpen && (
             <div className="p-4 text-white">
-              {unit.profiles && unit.profiles.length > 0 ? (
+              {modelGroups ? (
+                <div className="space-y-3 mb-4">
+                  {Object.values(modelGroups).map((group) => (
+                    <ModelGroupCounter
+                      key={group.id}
+                      group={group}
+                      current={modelGroupComposition[group.id] ?? group.minQuantity}
+                      onChange={(delta) => handleModelGroupChange(group, delta)}
+                    />
+                  ))}
+                </div>
+              ) : unit.profiles && unit.profiles.length > 0 ? (
                 <div className="space-y-3 mb-4">
                   {unit.profiles.map((profile) => {
-                    const current = currentComposition[profile.name] ?? profile.minQuantity;
+                    const current = legacyComposition[profile.name] ?? profile.minQuantity;
                     const canDecrease = current > profile.minQuantity;
                     const canIncrease = current < profile.maxQuantity;
                     return (

@@ -1,0 +1,1575 @@
+[
+  {
+    "id": "am-lord-solar-leontus",
+    "name": "Lord Solar Leontus",
+    "faction": "Astra Militarum",
+    "role": "HQ",
+    "basePoints": 125,
+    "stats": {
+      "movement": 12,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 8,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "sols-righteous-gaze",
+        "name": "Sol's Righteous Gaze",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 3,
+        "ballisticSkill": 2,
+        "strength": 5,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": [
+          "Pistol"
+        ]
+      },
+      {
+        "id": "conquest",
+        "name": "Conquest",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Lord Solar",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "The Collegiate Astro-lexic",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-lord-solar-leontus-model": {
+        "id": "am-lord-solar-leontus-model",
+        "name": "Lord Solar Leontus",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 8,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-lord-solar-leontus-model": 1
+        },
+        "points": 125
+      }
+    ]
+  },
+  {
+    "id": "am-ursula-creed",
+    "name": "Ursula Creed",
+    "faction": "Astra Militarum",
+    "role": "HQ",
+    "basePoints": 55,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "duty-and-vengeance",
+        "name": "Duty and Vengeance",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 5,
+        "armourPenetration": 1,
+        "damage": 2,
+        "abilities": [
+          "Pistol"
+        ]
+      },
+      {
+        "id": "power-weapon",
+        "name": "Power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 2,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Lord Castellan",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Tactical Genius",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-ursula-creed-model": {
+        "id": "am-ursula-creed-model",
+        "name": "Ursula Creed",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "4+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-ursula-creed-model": 1
+        },
+        "points": 55
+      }
+    ]
+  },
+  {
+    "id": "am-cadian-castellan",
+    "name": "Cadian Castellan",
+    "faction": "Astra Militarum",
+    "role": "HQ",
+    "basePoints": 45,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 4,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "laspistol",
+        "name": "Laspistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ]
+      },
+      {
+        "id": "chainsword",
+        "name": "Chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Senior Officer",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Refractor Field",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-cadian-castellan-model": {
+        "id": "am-cadian-castellan-model",
+        "name": "Cadian Castellan",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 4,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-cadian-castellan-model": 1
+        },
+        "points": 45
+      }
+    ]
+  },
+  {
+    "id": "am-tank-commander",
+    "name": "Tank Commander",
+    "faction": "Astra Militarum",
+    "role": "HQ",
+    "basePoints": 205,
+    "stats": {
+      "movement": 10,
+      "toughness": 11,
+      "save": "2+",
+      "wounds": 13,
+      "leadership": "7+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "leman-russ-battle-cannon",
+        "name": "Leman Russ battle cannon",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": "D6+3",
+        "ballisticSkill": 4,
+        "strength": 10,
+        "armourPenetration": 1,
+        "damage": 3,
+        "abilities": [
+          "Blast"
+        ]
+      },
+      {
+        "id": "lascannon",
+        "name": "Lascannon",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 12,
+        "armourPenetration": 3,
+        "damage": "D6+1",
+        "abilities": []
+      },
+      {
+        "id": "armoured-tracks",
+        "name": "Armoured tracks",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Death Roll",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Tank Orders",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-tank-commander-model": {
+        "id": "am-tank-commander-model",
+        "name": "Tank Commander",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 11,
+          "save": "2+",
+          "wounds": 13,
+          "leadership": "7+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-tank-commander-model": 1
+        },
+        "points": 205
+      }
+    ]
+  },
+  {
+    "id": "am-primaris-psyker",
+    "name": "Primaris Psyker",
+    "faction": "Astra Militarum",
+    "role": "HQ",
+    "basePoints": 60,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 4,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "laspistol",
+        "name": "Laspistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ]
+      },
+      {
+        "id": "psychic-maelstrom-focused",
+        "name": "Psychic Maelstrom - focused",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": 2,
+        "damage": "D3",
+        "abilities": [
+          "Psychic",
+          "Hazardous"
+        ]
+      },
+      {
+        "id": "force-weapon",
+        "name": "Force weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": 1,
+        "damage": "D3",
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Psychic Barrier",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-primaris-psyker-model": {
+        "id": "am-primaris-psyker-model",
+        "name": "Primaris Psyker",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 4,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-primaris-psyker-model": 1
+        },
+        "points": 60
+      }
+    ]
+  },
+  {
+    "id": "am-cadian-shock-troops",
+    "name": "Cadian Shock Troops",
+    "faction": "Astra Militarum",
+    "role": "TROOPS",
+    "basePoints": 60,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "opt-extra-models",
+        "name": "10 additional models",
+        "points": 60
+      }
+    ],
+    "weapons": [
+      {
+        "id": "lasgun",
+        "name": "Lasgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 1"
+        ]
+      },
+      {
+        "id": "plasma-gun",
+        "name": "Plasma gun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 7,
+        "armourPenetration": 2,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 1"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 1,
+        "weaponSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Shock Troops",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-cadian-shock-troops-model": {
+        "id": "am-cadian-shock-troops-model",
+        "name": "Cadian Shock Troops",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-cadian-shock-troops-model": 1
+        },
+        "points": 60
+      }
+    ]
+  },
+  {
+    "id": "am-infantry-squad",
+    "name": "Infantry Squad",
+    "faction": "Astra Militarum",
+    "role": "TROOPS",
+    "basePoints": 60,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "opt-heavy-weapon-team",
+        "name": "Heavy Weapon Team",
+        "points": 0
+      },
+      {
+        "id": "opt-extra-models",
+        "name": "10 additional models",
+        "points": 60
+      }
+    ],
+    "weapons": [
+      {
+        "id": "lasgun",
+        "name": "Lasgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 1"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 1,
+        "weaponSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Defenders of Humanity",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-infantry-squad-model": {
+        "id": "am-infantry-squad-model",
+        "name": "Infantry Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-infantry-squad-model": 1
+        },
+        "points": 60
+      }
+    ]
+  },
+  {
+    "id": "am-death-korps-of-krieg",
+    "name": "Death Korps of Krieg",
+    "faction": "Astra Militarum",
+    "role": "TROOPS",
+    "basePoints": 65,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "opt-extra-models",
+        "name": "10 additional models",
+        "points": 65
+      }
+    ],
+    "weapons": [
+      {
+        "id": "lasgun",
+        "name": "Lasgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 1"
+        ]
+      },
+      {
+        "id": "meltagun",
+        "name": "Meltagun",
+        "type": "Assault",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 9,
+        "armourPenetration": 4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 1,
+        "weaponSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Grim Demeanour",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-death-korps-of-krieg-model": {
+        "id": "am-death-korps-of-krieg-model",
+        "name": "Death Korps of Krieg",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-death-korps-of-krieg-model": 1
+        },
+        "points": 65
+      }
+    ]
+  },
+  {
+    "id": "am-catachan-jungle-fighters",
+    "name": "Catachan Jungle Fighters",
+    "faction": "Astra Militarum",
+    "role": "TROOPS",
+    "basePoints": 55,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "opt-extra-models",
+        "name": "10 additional models",
+        "points": 55
+      }
+    ],
+    "weapons": [
+      {
+        "id": "lasgun",
+        "name": "Lasgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 1"
+        ]
+      },
+      {
+        "id": "flamer",
+        "name": "Flamer",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Jungle Fighters",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-catachan-jungle-fighters-model": {
+        "id": "am-catachan-jungle-fighters-model",
+        "name": "Catachan Jungle Fighters",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-catachan-jungle-fighters-model": 1
+        },
+        "points": 55
+      }
+    ]
+  },
+  {
+    "id": "am-kasrkin",
+    "name": "Kasrkin",
+    "faction": "Astra Militarum",
+    "role": "ELITES",
+    "basePoints": 120,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "hot-shot-lasgun",
+        "name": "Hot-shot lasgun",
+        "type": "Rapid Fire",
+        "range": 18,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 3,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 1"
+        ]
+      },
+      {
+        "id": "hot-shot-volley-gun",
+        "name": "Hot-shot volley gun",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 1,
+        "weaponSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Warrior Elite",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-kasrkin-model": {
+        "id": "am-kasrkin-model",
+        "name": "Kasrkin",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "4+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-kasrkin-model": 1
+        },
+        "points": 120
+      }
+    ]
+  },
+  {
+    "id": "am-tempestus-scions",
+    "name": "Tempestus Scions",
+    "faction": "Astra Militarum",
+    "role": "ELITES",
+    "basePoints": 50,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "4+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "opt-extra-models",
+        "name": "5 additional models",
+        "points": 50
+      }
+    ],
+    "weapons": [
+      {
+        "id": "hot-shot-lasgun",
+        "name": "Hot-shot lasgun",
+        "type": "Rapid Fire",
+        "range": 18,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 3,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 1"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 1,
+        "weaponSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Storm Troopers",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-tempestus-scions-model": {
+        "id": "am-tempestus-scions-model",
+        "name": "Tempestus Scions",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "4+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-tempestus-scions-model": 1
+        },
+        "points": 50
+      }
+    ]
+  },
+  {
+    "id": "am-leman-russ-battle-tank",
+    "name": "Leman Russ Battle Tank",
+    "faction": "Astra Militarum",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 170,
+    "stats": {
+      "movement": 10,
+      "toughness": 11,
+      "save": "2+",
+      "wounds": 13,
+      "leadership": "7+",
+      "objectiveControl": 3
+    },
+    "options": [
+      {
+        "id": "opt-heavy-bolter-sponsons",
+        "name": "2 Heavy Bolters",
+        "points": 0
+      },
+      {
+        "id": "opt-plasma-cannon-sponsons",
+        "name": "2 Plasma Cannons",
+        "points": 0
+      },
+      {
+        "id": "opt-multi-melta-sponsons",
+        "name": "2 Multi-meltas",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "leman-russ-battle-cannon",
+        "name": "Leman Russ battle cannon",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": "D6+3",
+        "ballisticSkill": 4,
+        "strength": 10,
+        "armourPenetration": 1,
+        "damage": 3,
+        "abilities": [
+          "Blast"
+        ]
+      },
+      {
+        "id": "lascannon",
+        "name": "Lascannon",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 1,
+        "ballisticSkill": 4,
+        "strength": 12,
+        "armourPenetration": 3,
+        "damage": "D6+1",
+        "abilities": []
+      },
+      {
+        "id": "armoured-tracks",
+        "name": "Armoured tracks",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Re-roll 1s To Hit",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-leman-russ-battle-tank-model": {
+        "id": "am-leman-russ-battle-tank-model",
+        "name": "Leman Russ Battle Tank",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 11,
+          "save": "2+",
+          "wounds": 13,
+          "leadership": "7+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-leman-russ-battle-tank-model": 1
+        },
+        "points": 170
+      }
+    ]
+  },
+  {
+    "id": "am-rogal-dorn-battle-tank",
+    "name": "Rogal Dorn Battle Tank",
+    "faction": "Astra Militarum",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 240,
+    "stats": {
+      "movement": 10,
+      "toughness": 12,
+      "save": "2+",
+      "wounds": 18,
+      "leadership": "7+",
+      "objectiveControl": 5
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "oppressor-cannon",
+        "name": "Oppressor cannon",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": "D6+3",
+        "ballisticSkill": 4,
+        "strength": 10,
+        "armourPenetration": 2,
+        "damage": 3,
+        "abilities": [
+          "Blast"
+        ]
+      },
+      {
+        "id": "co-axial-autocannon",
+        "name": "Co-axial autocannon",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 2,
+        "ballisticSkill": 4,
+        "strength": 9,
+        "armourPenetration": 1,
+        "damage": 3,
+        "abilities": []
+      },
+      {
+        "id": "pulveriser-cannon",
+        "name": "Pulveriser cannon",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": "D3",
+        "ballisticSkill": 4,
+        "strength": 9,
+        "armourPenetration": 3,
+        "damage": 3,
+        "abilities": [
+          "Blast"
+        ]
+      },
+      {
+        "id": "armoured-tracks",
+        "name": "Armoured tracks",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 4,
+        "strength": 8,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Ablative Plating",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-rogal-dorn-battle-tank-model": {
+        "id": "am-rogal-dorn-battle-tank-model",
+        "name": "Rogal Dorn Battle Tank",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 12,
+          "save": "2+",
+          "wounds": 18,
+          "leadership": "7+",
+          "objectiveControl": 5
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-rogal-dorn-battle-tank-model": 1
+        },
+        "points": 240
+      }
+    ]
+  },
+  {
+    "id": "am-chimera",
+    "name": "Chimera",
+    "faction": "Astra Militarum",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 70,
+    "stats": {
+      "movement": 10,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 11,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "chimera-multi-laser",
+        "name": "Chimera multi-laser",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 4,
+        "ballisticSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "heavy-bolter",
+        "name": "Heavy bolter",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 3,
+        "ballisticSkill": 4,
+        "strength": 5,
+        "armourPenetration": 1,
+        "damage": 2,
+        "abilities": [
+          "Sustained Hits 1"
+        ]
+      },
+      {
+        "id": "lasgun-array",
+        "name": "Lasgun array",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 6,
+        "ballisticSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 6"
+        ]
+      },
+      {
+        "id": "armoured-tracks",
+        "name": "Armoured tracks",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Mobile Command Vehicle",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-chimera-model": {
+        "id": "am-chimera-model",
+        "name": "Chimera",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 9,
+          "save": "3+",
+          "wounds": 11,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-chimera-model": 1
+        },
+        "points": 70
+      }
+    ]
+  },
+  {
+    "id": "am-scout-sentinels",
+    "name": "Scout Sentinels",
+    "faction": "Astra Militarum",
+    "role": "FAST_ATTACK",
+    "basePoints": 60,
+    "stats": {
+      "movement": 10,
+      "toughness": 7,
+      "save": "4+",
+      "wounds": 7,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "opt-extra-models",
+        "name": "2 additional models",
+        "points": 120
+      }
+    ],
+    "weapons": [
+      {
+        "id": "militarum-multi-laser",
+        "name": "Militarum multi-laser",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 4,
+        "ballisticSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "sentinel-chainsaw",
+        "name": "Sentinel chainsaw",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Daring Recon",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-scout-sentinels-model": {
+        "id": "am-scout-sentinels-model",
+        "name": "Scout Sentinels",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 7,
+          "save": "4+",
+          "wounds": 7,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-scout-sentinels-model": 1
+        },
+        "points": 60
+      }
+    ]
+  },
+  {
+    "id": "am-armoured-sentinels",
+    "name": "Armoured Sentinels",
+    "faction": "Astra Militarum",
+    "role": "FAST_ATTACK",
+    "basePoints": 65,
+    "stats": {
+      "movement": 8,
+      "toughness": 8,
+      "save": "3+",
+      "wounds": 7,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "opt-extra-models",
+        "name": "2 additional models",
+        "points": 130
+      }
+    ],
+    "weapons": [
+      {
+        "id": "militarum-multi-laser",
+        "name": "Militarum multi-laser",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 4,
+        "ballisticSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "sentinel-chainsaw",
+        "name": "Sentinel chainsaw",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Mobile Hunter-Killers",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-armoured-sentinels-model": {
+        "id": "am-armoured-sentinels-model",
+        "name": "Armoured Sentinels",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 8,
+          "save": "3+",
+          "wounds": 7,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-armoured-sentinels-model": 1
+        },
+        "points": 65
+      }
+    ]
+  },
+  {
+    "id": "am-basilisk",
+    "name": "Basilisk",
+    "faction": "Astra Militarum",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 140,
+    "stats": {
+      "movement": 10,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 11,
+      "leadership": "7+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "earthshaker-cannon",
+        "name": "Earthshaker cannon",
+        "type": "Heavy",
+        "range": 240,
+        "attacks": "D6+3",
+        "ballisticSkill": 4,
+        "strength": 8,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": [
+          "Blast",
+          "Indirect Fire"
+        ]
+      },
+      {
+        "id": "heavy-bolter",
+        "name": "Heavy bolter",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 3,
+        "ballisticSkill": 4,
+        "strength": 5,
+        "armourPenetration": 1,
+        "damage": 2,
+        "abilities": [
+          "Sustained Hits 1"
+        ]
+      },
+      {
+        "id": "armoured-tracks",
+        "name": "Armoured tracks",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Earthshaker Rounds",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "am-basilisk-model": {
+        "id": "am-basilisk-model",
+        "name": "Basilisk",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 9,
+          "save": "3+",
+          "wounds": 11,
+          "leadership": "7+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "am-basilisk-model": 1
+        },
+        "points": 140
+      }
+    ]
+  }
+]

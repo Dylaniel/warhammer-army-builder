@@ -1,0 +1,1367 @@
+[
+  {
+    "id": "as-morvenn-vahl",
+    "name": "Morvenn Vahl",
+    "faction": "Adepta Sororitas",
+    "role": "HQ",
+    "basePoints": 160,
+    "stats": {
+      "movement": 8,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 8,
+      "leadership": "5+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "fidelis",
+        "name": "Fidelis",
+        "type": "Rapid Fire",
+        "range": 36,
+        "attacks": 3,
+        "ballisticSkill": 2,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      },
+      {
+        "id": "lance-of-illumination-strike",
+        "name": "Lance of Illumination - Strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 3,
+        "abilities": [
+          "Sweep"
+        ]
+      },
+      {
+        "id": "lance-of-illumination-sweep",
+        "name": "Lance of Illumination - Sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 10,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Abbess Sanctorum",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Righteous Repugnance",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "as-morvenn-vahl-model": {
+        "id": "as-morvenn-vahl-model",
+        "name": "Morvenn Vahl",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 5,
+          "save": "2+",
+          "wounds": 8,
+          "leadership": "5+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "as-morvenn-vahl-model": 1
+        },
+        "points": 160
+      }
+    ]
+  },
+  {
+    "id": "as-celestine",
+    "name": "Celestine, the Living Saint",
+    "faction": "Adepta Sororitas",
+    "role": "HQ",
+    "basePoints": 135,
+    "stats": {
+      "movement": 12,
+      "toughness": 3,
+      "save": "2+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "the-ardent-blade",
+        "name": "The Ardent Blade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      },
+      {
+        "id": "the-ardent-blade-ranged",
+        "name": "The Ardent Blade (Ranged)",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Torrent",
+          "Ignores Cover"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Healing Tears",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Miraculous Intervention",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "as-celestine-model": {
+        "id": "as-celestine-model",
+        "name": "Celestine, the Living Saint",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 3,
+          "save": "2+",
+          "wounds": 5,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "as-celestine-model": 1
+        },
+        "points": 135
+      }
+    ]
+  },
+  {
+    "id": "as-canoness",
+    "name": "Canoness",
+    "faction": "Adepta Sororitas",
+    "role": "HQ",
+    "basePoints": 50,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "blessed-blade",
+        "name": "Blessed Blade",
+        "points": 0
+      },
+      {
+        "id": "inferno-pistol",
+        "name": "Inferno Pistol",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "chainsword",
+        "name": "Chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Lead the Righteous",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "as-canoness-model": {
+        "id": "as-canoness-model",
+        "name": "Canoness",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "3+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "as-canoness-model": 1
+        },
+        "points": 50
+      }
+    ]
+  },
+  {
+    "id": "as-battle-sisters-squad",
+    "name": "Battle Sisters Squad",
+    "faction": "Adepta Sororitas",
+    "role": "TROOPS",
+    "basePoints": 100,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "simulacrum-imperialis",
+        "name": "Simulacrum Imperialis",
+        "points": 0
+      },
+      {
+        "id": "heavy-bolter",
+        "name": "Heavy Bolter",
+        "points": 0
+      },
+      {
+        "id": "multi-melta",
+        "name": "Multi-melta",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "boltgun",
+        "name": "Boltgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Cherub",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Defenders of the Faith",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "as-battle-sisters-squad-model": {
+        "id": "as-battle-sisters-squad-model",
+        "name": "Battle Sisters Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "3+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "as-battle-sisters-squad-model": 1
+        },
+        "points": 100
+      }
+    ]
+  },
+  {
+    "id": "as-palatine",
+    "name": "Palatine",
+    "faction": "Adepta Sororitas",
+    "role": "HQ",
+    "basePoints": 50,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plasma-pistol",
+        "name": "Plasma Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "power-weapon",
+        "name": "Power Weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Fury of the Righteous",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "as-palatine-model": {
+        "id": "as-palatine-model",
+        "name": "Palatine",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "3+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "as-palatine-model": 1
+        },
+        "points": 50
+      }
+    ]
+  },
+  {
+    "id": "as-repentia-squad",
+    "name": "Repentia Squad",
+    "faction": "Adepta Sororitas",
+    "role": "ELITES",
+    "basePoints": 110,
+    "stats": {
+      "movement": 7,
+      "toughness": 3,
+      "save": "7+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "penitent-eviscerator",
+        "name": "Penitent Eviscerator",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Feel No Pain",
+        "description": "5+"
+      },
+      {
+        "name": "Zealot",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Solace in Anguish",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "as-repentia-squad-model": {
+        "id": "as-repentia-squad-model",
+        "name": "Repentia Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 7,
+          "toughness": 3,
+          "save": "7+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "as-repentia-squad-model": 1
+        },
+        "points": 110
+      }
+    ]
+  },
+  {
+    "id": "as-arco-flagellants",
+    "name": "Arco-flagellants",
+    "faction": "Adepta Sororitas",
+    "role": "ELITES",
+    "basePoints": 130,
+    "stats": {
+      "movement": 7,
+      "toughness": 3,
+      "save": "7+",
+      "wounds": 2,
+      "leadership": "8+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "arco-flails",
+        "name": "Arco-flails",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Sustained Hits 1"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Feel No Pain",
+        "description": "4+"
+      },
+      {
+        "name": "Extremis Trigger Word",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "as-arco-flagellants-model": {
+        "id": "as-arco-flagellants-model",
+        "name": "Arco-flagellants",
+        "category": "follower",
+        "stats": {
+          "movement": 7,
+          "toughness": 3,
+          "save": "7+",
+          "wounds": 2,
+          "leadership": "8+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "as-arco-flagellants-model": 1
+        },
+        "points": 130
+      }
+    ]
+  },
+  {
+    "id": "as-retributor-squad",
+    "name": "Retributor Squad",
+    "faction": "Adepta Sororitas",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 105,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "heavy-bolter",
+        "name": "Heavy Bolter",
+        "points": 0
+      },
+      {
+        "id": "heavy-flamer",
+        "name": "Heavy Flamer",
+        "points": 0
+      },
+      {
+        "id": "multi-melta",
+        "name": "Multi-melta",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "heavy-bolter",
+        "name": "Heavy Bolter",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 3,
+        "ballisticSkill": 4,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Sustained Hits 1"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Storm of Retribution",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "as-retributor-squad-model": {
+        "id": "as-retributor-squad-model",
+        "name": "Retributor Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "3+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "as-retributor-squad-model": 1
+        },
+        "points": 105
+      }
+    ]
+  },
+  {
+    "id": "as-seraphim-squad",
+    "name": "Seraphim Squad",
+    "faction": "Adepta Sororitas",
+    "role": "FAST_ATTACK",
+    "basePoints": 70,
+    "stats": {
+      "movement": 12,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "hand-flamers",
+        "name": "Hand Flamers",
+        "points": 0
+      },
+      {
+        "id": "inferno-pistols",
+        "name": "Inferno Pistols",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Angelic Descent",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "as-seraphim-squad-model": {
+        "id": "as-seraphim-squad-model",
+        "name": "Seraphim Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 3,
+          "save": "3+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "as-seraphim-squad-model": 1
+        },
+        "points": 70
+      }
+    ]
+  },
+  {
+    "id": "as-zephyrim-squad",
+    "name": "Zephyrim Squad",
+    "faction": "Adepta Sororitas",
+    "role": "FAST_ATTACK",
+    "basePoints": 60,
+    "stats": {
+      "movement": 12,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "sacred-banner",
+        "name": "Sacred Banner",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "power-weapon",
+        "name": "Power Weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "5+"
+      },
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Embodied Prophecy",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "as-zephyrim-squad-model": {
+        "id": "as-zephyrim-squad-model",
+        "name": "Zephyrim Squad",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 3,
+          "save": "3+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "as-zephyrim-squad-model": 1
+        },
+        "points": 60
+      }
+    ]
+  },
+  {
+    "id": "as-celestian-sacresants",
+    "name": "Celestian Sacresants",
+    "faction": "Adepta Sororitas",
+    "role": "ELITES",
+    "basePoints": 65,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "3+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "hallowed-mace",
+        "name": "Hallowed Mace",
+        "points": 0
+      },
+      {
+        "id": "anointed-halberd",
+        "name": "Anointed Halberd",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "hallowed-mace",
+        "name": "Hallowed Mace",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "4+"
+      },
+      {
+        "name": "Sworn Protectors",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "as-celestian-sacresants-model": {
+        "id": "as-celestian-sacresants-model",
+        "name": "Celestian Sacresants",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "3+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "as-celestian-sacresants-model": 1
+        },
+        "points": 65
+      }
+    ]
+  },
+  {
+    "id": "as-exorcist",
+    "name": "Exorcist",
+    "faction": "Adepta Sororitas",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 160,
+    "stats": {
+      "movement": 10,
+      "toughness": 10,
+      "save": "3+",
+      "wounds": 11,
+      "leadership": "7+",
+      "objectiveControl": 3
+    },
+    "options": [
+      {
+        "id": "exorcist-missile-launcher",
+        "name": "Exorcist Missile Launcher",
+        "points": 0
+      },
+      {
+        "id": "exorcist-conflagration-rockets",
+        "name": "Exorcist Conflagration Rockets",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "exorcist-missile-launcher",
+        "name": "Exorcist Missile Launcher",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": "3D6",
+        "ballisticSkill": 3,
+        "strength": 10,
+        "armourPenetration": -2,
+        "damage": "D6",
+        "abilities": [
+          "Indirect Fire"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Deadly Demise",
+        "description": "D3"
+      },
+      {
+        "name": "Mobile Shrine",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "as-exorcist-model": {
+        "id": "as-exorcist-model",
+        "name": "Exorcist",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 10,
+          "save": "3+",
+          "wounds": 11,
+          "leadership": "7+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "as-exorcist-model": 1
+        },
+        "points": 160
+      }
+    ]
+  },
+  {
+    "id": "as-castigator",
+    "name": "Castigator",
+    "faction": "Adepta Sororitas",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 140,
+    "stats": {
+      "movement": 10,
+      "toughness": 10,
+      "save": "3+",
+      "wounds": 11,
+      "leadership": "7+",
+      "objectiveControl": 3
+    },
+    "options": [
+      {
+        "id": "castigator-battle-cannon",
+        "name": "Castigator Battle Cannon",
+        "points": 0
+      },
+      {
+        "id": "castigator-autocannons",
+        "name": "Castigator Autocannons",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "castigator-battle-cannon",
+        "name": "Castigator Battle Cannon",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": "D6+3",
+        "ballisticSkill": 3,
+        "strength": 10,
+        "armourPenetration": -1,
+        "damage": 3,
+        "abilities": [
+          "Blast",
+          "Ignores Cover"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Deadly Demise",
+        "description": "D3"
+      },
+      {
+        "name": "Rites of Castigation",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "as-castigator-model": {
+        "id": "as-castigator-model",
+        "name": "Castigator",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 10,
+          "save": "3+",
+          "wounds": 11,
+          "leadership": "7+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "as-castigator-model": 1
+        },
+        "points": 140
+      }
+    ]
+  },
+  {
+    "id": "as-penitent-engines",
+    "name": "Penitent Engines",
+    "faction": "Adepta Sororitas",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 60,
+    "stats": {
+      "movement": 8,
+      "toughness": 6,
+      "save": "4+",
+      "wounds": 5,
+      "leadership": "8+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "penitent-flamer",
+        "name": "Penitent Flamer",
+        "points": 0
+      },
+      {
+        "id": "penitent-buzz-blades",
+        "name": "Penitent Buzz-blades",
+        "points": 0
+      },
+      {
+        "id": "penitent-flails",
+        "name": "Penitent Flails",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "penitent-flamer",
+        "name": "Penitent Flamer",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 4,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Torrent",
+          "Ignores Cover"
+        ]
+      },
+      {
+        "id": "penitent-buzz-blades",
+        "name": "Penitent Buzz-blades",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 10,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Sustained Hits 1"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Feel No Pain",
+        "description": "5+"
+      },
+      {
+        "name": "Deadly Demise",
+        "description": "1"
+      },
+      {
+        "name": "Endless Suffering",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "as-penitent-engines-model": {
+        "id": "as-penitent-engines-model",
+        "name": "Penitent Engines",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 6,
+          "save": "4+",
+          "wounds": 5,
+          "leadership": "8+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "as-penitent-engines-model": 1
+        },
+        "points": 60
+      }
+    ]
+  },
+  {
+    "id": "as-sororitas-rhino",
+    "name": "Sororitas Rhino",
+    "faction": "Adepta Sororitas",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 75,
+    "stats": {
+      "movement": 12,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 10,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "hunter-killer-missile",
+        "name": "Hunter-killer Missile",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "storm-bolter",
+        "name": "Storm Bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Deadly Demise",
+        "description": "D3"
+      },
+      {
+        "name": "Self-repair",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "as-sororitas-rhino-model": {
+        "id": "as-sororitas-rhino-model",
+        "name": "Sororitas Rhino",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 9,
+          "save": "3+",
+          "wounds": 10,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "as-sororitas-rhino-model": 1
+        },
+        "points": 75
+      }
+    ]
+  },
+  {
+    "id": "as-immolator",
+    "name": "Immolator",
+    "faction": "Adepta Sororitas",
+    "role": "DEDICATED_TRANSPORT",
+    "basePoints": 115,
+    "stats": {
+      "movement": 12,
+      "toughness": 9,
+      "save": "3+",
+      "wounds": 10,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [
+      {
+        "id": "immolation-flamers",
+        "name": "Immolation Flamers",
+        "points": 0
+      },
+      {
+        "id": "twin-multi-melta",
+        "name": "Twin Multi-melta",
+        "points": 0
+      },
+      {
+        "id": "twin-heavy-bolter",
+        "name": "Twin Heavy Bolter",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "immolation-flamers",
+        "name": "Immolation Flamers",
+        "type": "Assault",
+        "range": 18,
+        "attacks": "2D6",
+        "ballisticSkill": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Torrent",
+          "Ignores Cover"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "6+"
+      },
+      {
+        "name": "Deadly Demise",
+        "description": "D3"
+      },
+      {
+        "name": "Fire Support",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "as-immolator-model": {
+        "id": "as-immolator-model",
+        "name": "Immolator",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 9,
+          "save": "3+",
+          "wounds": 10,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "as-immolator-model": 1
+        },
+        "points": 115
+      }
+    ]
+  }
+]

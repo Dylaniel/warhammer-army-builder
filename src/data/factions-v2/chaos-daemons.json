@@ -1,0 +1,1415 @@
+[
+  {
+    "id": "cd-belakor",
+    "name": "Be'lakor",
+    "faction": "Chaos Daemons",
+    "role": "HQ",
+    "basePoints": 350,
+    "stats": {
+      "movement": 12,
+      "toughness": 10,
+      "save": "4+",
+      "wounds": 18,
+      "leadership": "5+",
+      "objectiveControl": 5
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "blade-of-shadows-strike",
+        "name": "The Blade of Shadows - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 14,
+        "armourPenetration": 4,
+        "damage": "D6+1",
+        "abilities": [
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "blade-of-shadows-sweep",
+        "name": "The Blade of Shadows - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 14,
+        "weaponSkill": 2,
+        "strength": 7,
+        "armourPenetration": 3,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Shadow Form",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Wreathed in Shades",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "cd-belakor-model": {
+        "id": "cd-belakor-model",
+        "name": "Be'lakor",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 10,
+          "save": "4+",
+          "wounds": 18,
+          "leadership": "5+",
+          "objectiveControl": 5
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cd-belakor-model": 1
+        },
+        "points": 350
+      }
+    ]
+  },
+  {
+    "id": "cd-skarbrand",
+    "name": "Skarbrand",
+    "faction": "Chaos Daemons",
+    "role": "HQ",
+    "basePoints": 345,
+    "stats": {
+      "movement": 10,
+      "toughness": 11,
+      "save": "4+",
+      "wounds": 20,
+      "leadership": "5+",
+      "objectiveControl": 5
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bellow-of-endless-fury",
+        "name": "Bellow of endless fury",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 2,
+        "strength": 8,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": [
+          "Torrent",
+          "Ignores Cover"
+        ]
+      },
+      {
+        "id": "slaughter-and-carnage-strike",
+        "name": "Slaughter and Carnage - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 8,
+        "weaponSkill": 2,
+        "strength": 16,
+        "armourPenetration": 4,
+        "damage": "6",
+        "abilities": [
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "slaughter-and-carnage-sweep",
+        "name": "Slaughter and Carnage - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 16,
+        "weaponSkill": 2,
+        "strength": 8,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Rage Embodied",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "cd-skarbrand-model": {
+        "id": "cd-skarbrand-model",
+        "name": "Skarbrand",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 11,
+          "save": "4+",
+          "wounds": 20,
+          "leadership": "5+",
+          "objectiveControl": 5
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cd-skarbrand-model": 1
+        },
+        "points": 345
+      }
+    ]
+  },
+  {
+    "id": "cd-bloodthirster",
+    "name": "Bloodthirster",
+    "faction": "Chaos Daemons",
+    "role": "HQ",
+    "basePoints": 320,
+    "stats": {
+      "movement": 12,
+      "toughness": 11,
+      "save": "4+",
+      "wounds": 18,
+      "leadership": "6+",
+      "objectiveControl": 5
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bloodflail",
+        "name": "Bloodflail",
+        "type": "Assault",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 16,
+        "armourPenetration": 4,
+        "damage": "D6+2",
+        "abilities": []
+      },
+      {
+        "id": "great-axe-of-khorne-strike",
+        "name": "Great axe of Khorne - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 7,
+        "weaponSkill": 2,
+        "strength": 16,
+        "armourPenetration": 4,
+        "damage": "D6+2",
+        "abilities": []
+      },
+      {
+        "id": "great-axe-of-khorne-sweep",
+        "name": "Great axe of Khorne - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 14,
+        "weaponSkill": 2,
+        "strength": 8,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Relentless Carnage",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "cd-bloodthirster-model": {
+        "id": "cd-bloodthirster-model",
+        "name": "Bloodthirster",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 11,
+          "save": "4+",
+          "wounds": 18,
+          "leadership": "6+",
+          "objectiveControl": 5
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cd-bloodthirster-model": 1
+        },
+        "points": 320
+      }
+    ]
+  },
+  {
+    "id": "cd-kairos-fateweaver",
+    "name": "Kairos Fateweaver",
+    "faction": "Chaos Daemons",
+    "role": "HQ",
+    "basePoints": 285,
+    "stats": {
+      "movement": 12,
+      "toughness": 10,
+      "save": "4+",
+      "wounds": 16,
+      "leadership": "5+",
+      "objectiveControl": 4
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "infernal-gateway",
+        "name": "Infernal Gateway",
+        "type": "Psychic",
+        "range": 18,
+        "attacks": "D6+3",
+        "ballisticSkill": 2,
+        "strength": 9,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": [
+          "Blast"
+        ]
+      },
+      {
+        "id": "staff-of-tomorrow",
+        "name": "Staff of Tomorrow",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 4,
+        "strength": 8,
+        "armourPenetration": 2,
+        "damage": 3,
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "One Head Looks Forward",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "One Head Looks Back",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "cd-kairos-fateweaver-model": {
+        "id": "cd-kairos-fateweaver-model",
+        "name": "Kairos Fateweaver",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 10,
+          "save": "4+",
+          "wounds": 16,
+          "leadership": "5+",
+          "objectiveControl": 4
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cd-kairos-fateweaver-model": 1
+        },
+        "points": 285
+      }
+    ]
+  },
+  {
+    "id": "cd-lord-of-change",
+    "name": "Lord of Change",
+    "faction": "Chaos Daemons",
+    "role": "HQ",
+    "basePoints": 260,
+    "stats": {
+      "movement": 12,
+      "toughness": 10,
+      "save": "4+",
+      "wounds": 16,
+      "leadership": "6+",
+      "objectiveControl": 4
+    },
+    "options": [
+      {
+        "id": "opt-baleful-sword",
+        "name": "Baleful sword",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "bolt-of-change",
+        "name": "Bolt of Change",
+        "type": "Psychic",
+        "range": 18,
+        "attacks": "D6+3",
+        "ballisticSkill": 2,
+        "strength": 9,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": [
+          "Blast"
+        ]
+      },
+      {
+        "id": "staff-of-tzeentch",
+        "name": "Staff of Tzeentch",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 4,
+        "strength": 8,
+        "armourPenetration": 1,
+        "damage": 3,
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Grand Schemer",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "cd-lord-of-change-model": {
+        "id": "cd-lord-of-change-model",
+        "name": "Lord of Change",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 10,
+          "save": "4+",
+          "wounds": 16,
+          "leadership": "6+",
+          "objectiveControl": 4
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cd-lord-of-change-model": 1
+        },
+        "points": 260
+      }
+    ]
+  },
+  {
+    "id": "cd-rotigus",
+    "name": "Rotigus",
+    "faction": "Chaos Daemons",
+    "role": "HQ",
+    "basePoints": 260,
+    "stats": {
+      "movement": 7,
+      "toughness": 12,
+      "save": "4+",
+      "wounds": 22,
+      "leadership": "5+",
+      "objectiveControl": 5
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "streams-of-brackish-filth",
+        "name": "Streams of brackish filth",
+        "type": "Psychic",
+        "range": 12,
+        "attacks": "2D6",
+        "ballisticSkill": 2,
+        "strength": 5,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": [
+          "Torrent",
+          "Ignores Cover",
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "gnarlrod",
+        "name": "Gnarlrod",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 8,
+        "armourPenetration": 2,
+        "damage": 3,
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Deluge of Nurgle",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "cd-rotigus-model": {
+        "id": "cd-rotigus-model",
+        "name": "Rotigus",
+        "category": "follower",
+        "stats": {
+          "movement": 7,
+          "toughness": 12,
+          "save": "4+",
+          "wounds": 22,
+          "leadership": "5+",
+          "objectiveControl": 5
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cd-rotigus-model": 1
+        },
+        "points": 260
+      }
+    ]
+  },
+  {
+    "id": "cd-great-unclean-one",
+    "name": "Great Unclean One",
+    "faction": "Chaos Daemons",
+    "role": "HQ",
+    "basePoints": 230,
+    "stats": {
+      "movement": 7,
+      "toughness": 12,
+      "save": "4+",
+      "wounds": 20,
+      "leadership": "6+",
+      "objectiveControl": 5
+    },
+    "options": [
+      {
+        "id": "opt-doomsday-bell",
+        "name": "Doomsday bell",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "plague-flail",
+        "name": "Plague flail",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 2,
+        "strength": 6,
+        "armourPenetration": 1,
+        "damage": 2,
+        "abilities": [
+          "Torrent",
+          "Ignores Cover",
+          "Lethal Hits"
+        ]
+      },
+      {
+        "id": "bileblade",
+        "name": "Bileblade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": [
+          "Lethal Hits",
+          "Extra Attacks"
+        ]
+      },
+      {
+        "id": "bilesword-strike",
+        "name": "Bilesword - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 8,
+        "armourPenetration": 2,
+        "damage": 3,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Reverberating Summons",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "cd-great-unclean-one-model": {
+        "id": "cd-great-unclean-one-model",
+        "name": "Great Unclean One",
+        "category": "follower",
+        "stats": {
+          "movement": 7,
+          "toughness": 12,
+          "save": "4+",
+          "wounds": 20,
+          "leadership": "6+",
+          "objectiveControl": 5
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cd-great-unclean-one-model": 1
+        },
+        "points": 230
+      }
+    ]
+  },
+  {
+    "id": "cd-shalaxi-helbane",
+    "name": "Shalaxi Helbane",
+    "faction": "Chaos Daemons",
+    "role": "HQ",
+    "basePoints": 450,
+    "stats": {
+      "movement": 14,
+      "toughness": 10,
+      "save": "4+",
+      "wounds": 18,
+      "leadership": "5+",
+      "objectiveControl": 5
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "soulpiercer-strike",
+        "name": "Soulpiercer - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 14,
+        "armourPenetration": 3,
+        "damage": "D6",
+        "abilities": [
+          "Anti-Monster 2+",
+          "Anti-Vehicle 2+"
+        ]
+      },
+      {
+        "id": "soulpiercer-sweep",
+        "name": "Soulpiercer - sweep",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 12,
+        "weaponSkill": 2,
+        "strength": 8,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Monarch of the Hunt",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "cd-shalaxi-helbane-model": {
+        "id": "cd-shalaxi-helbane-model",
+        "name": "Shalaxi Helbane",
+        "category": "follower",
+        "stats": {
+          "movement": 14,
+          "toughness": 10,
+          "save": "4+",
+          "wounds": 18,
+          "leadership": "5+",
+          "objectiveControl": 5
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cd-shalaxi-helbane-model": 1
+        },
+        "points": 450
+      }
+    ]
+  },
+  {
+    "id": "cd-keeper-of-secrets",
+    "name": "Keeper of Secrets",
+    "faction": "Chaos Daemons",
+    "role": "HQ",
+    "basePoints": 290,
+    "stats": {
+      "movement": 14,
+      "toughness": 10,
+      "save": "4+",
+      "wounds": 18,
+      "leadership": "6+",
+      "objectiveControl": 5
+    },
+    "options": [
+      {
+        "id": "opt-shining-aegis",
+        "name": "Shining aegis",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "phantasmagoria",
+        "name": "Phantasmagoria",
+        "type": "Psychic",
+        "range": 18,
+        "attacks": 6,
+        "ballisticSkill": 2,
+        "strength": 6,
+        "armourPenetration": 1,
+        "damage": 2,
+        "abilities": []
+      },
+      {
+        "id": "snapping-claws",
+        "name": "Snapping claws",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": [
+          "Extra Attacks"
+        ]
+      },
+      {
+        "id": "witstealer-sword-strike",
+        "name": "Witstealer sword - strike",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 8,
+        "armourPenetration": 2,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Mesmerising Aura",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "cd-keeper-of-secrets-model": {
+        "id": "cd-keeper-of-secrets-model",
+        "name": "Keeper of Secrets",
+        "category": "follower",
+        "stats": {
+          "movement": 14,
+          "toughness": 10,
+          "save": "4+",
+          "wounds": 18,
+          "leadership": "6+",
+          "objectiveControl": 5
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cd-keeper-of-secrets-model": 1
+        },
+        "points": 290
+      }
+    ]
+  },
+  {
+    "id": "cd-bloodletters",
+    "name": "Bloodletters",
+    "faction": "Chaos Daemons",
+    "role": "BATTLELINE",
+    "basePoints": 120,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "7+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "hellblade",
+        "name": "Hellblade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Murderous Tide",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "cd-bloodletters-model": {
+        "id": "cd-bloodletters-model",
+        "name": "Bloodletters",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "7+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cd-bloodletters-model": 1
+        },
+        "points": 120
+      }
+    ]
+  },
+  {
+    "id": "cd-pink-horrors",
+    "name": "Pink Horrors",
+    "faction": "Chaos Daemons",
+    "role": "BATTLELINE",
+    "basePoints": 140,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "7+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "coruscating-flames",
+        "name": "Coruscating flames",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      },
+      {
+        "id": "pink-horror-jaws",
+        "name": "Pink Horror jaws",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 1,
+        "weaponSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Splitting",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "cd-pink-horrors-model": {
+        "id": "cd-pink-horrors-model",
+        "name": "Pink Horrors",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "7+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cd-pink-horrors-model": 1
+        },
+        "points": 140
+      }
+    ]
+  },
+  {
+    "id": "cd-plaguebearers",
+    "name": "Plaguebearers",
+    "faction": "Chaos Daemons",
+    "role": "BATTLELINE",
+    "basePoints": 110,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "7+",
+      "wounds": 2,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plaguesword",
+        "name": "Plaguesword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Cloud of Flies",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "cd-plaguebearers-model": {
+        "id": "cd-plaguebearers-model",
+        "name": "Plaguebearers",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "7+",
+          "wounds": 2,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cd-plaguebearers-model": 1
+        },
+        "points": 110
+      }
+    ]
+  },
+  {
+    "id": "cd-daemonettes",
+    "name": "Daemonettes",
+    "faction": "Chaos Daemons",
+    "role": "BATTLELINE",
+    "basePoints": 110,
+    "stats": {
+      "movement": 9,
+      "toughness": 3,
+      "save": "7+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "piercing-claws",
+        "name": "Piercing claws",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Swift Strikes",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "cd-daemonettes-model": {
+        "id": "cd-daemonettes-model",
+        "name": "Daemonettes",
+        "category": "follower",
+        "stats": {
+          "movement": 9,
+          "toughness": 3,
+          "save": "7+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cd-daemonettes-model": 1
+        },
+        "points": 110
+      }
+    ]
+  },
+  {
+    "id": "cd-flesh-hounds",
+    "name": "Flesh Hounds",
+    "faction": "Chaos Daemons",
+    "role": "FAST_ATTACK",
+    "basePoints": 70,
+    "stats": {
+      "movement": 12,
+      "toughness": 4,
+      "save": "7+",
+      "wounds": 2,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "opt-5-extra",
+        "name": "5 additional models",
+        "points": 70
+      }
+    ],
+    "weapons": [
+      {
+        "id": "gore-drenched-fangs",
+        "name": "Gore-drenched fangs",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Collar of Khorne",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "cd-flesh-hounds-model": {
+        "id": "cd-flesh-hounds-model",
+        "name": "Flesh Hounds",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "7+",
+          "wounds": 2,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cd-flesh-hounds-model": 1
+        },
+        "points": 70
+      }
+    ]
+  },
+  {
+    "id": "cd-nurglings",
+    "name": "Nurglings",
+    "faction": "Chaos Daemons",
+    "role": "FAST_ATTACK",
+    "basePoints": 40,
+    "stats": {
+      "movement": 5,
+      "toughness": 3,
+      "save": "7+",
+      "wounds": 4,
+      "leadership": "8+",
+      "objectiveControl": 0
+    },
+    "options": [
+      {
+        "id": "opt-3-extra",
+        "name": "3 additional models",
+        "points": 40
+      },
+      {
+        "id": "opt-6-extra",
+        "name": "6 additional models",
+        "points": 80
+      }
+    ],
+    "weapons": [
+      {
+        "id": "diseased-claws-and-teeth",
+        "name": "Diseased claws and teeth",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 4,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 6+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Infiltrators",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Mischievous Swarm",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "cd-nurglings-model": {
+        "id": "cd-nurglings-model",
+        "name": "Nurglings",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 3,
+          "save": "7+",
+          "wounds": 4,
+          "leadership": "8+",
+          "objectiveControl": 0
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cd-nurglings-model": 1
+        },
+        "points": 40
+      }
+    ]
+  },
+  {
+    "id": "cd-flamers",
+    "name": "Flamers",
+    "faction": "Chaos Daemons",
+    "role": "ELITES",
+    "basePoints": 80,
+    "stats": {
+      "movement": 9,
+      "toughness": 4,
+      "save": "7+",
+      "wounds": 3,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "opt-3-extra",
+        "name": "3 additional models",
+        "points": 80
+      }
+    ],
+    "weapons": [
+      {
+        "id": "flickering-flames",
+        "name": "Flickering flames",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Torrent",
+          "Ignores Cover"
+        ]
+      },
+      {
+        "id": "flamer-jaws",
+        "name": "Flamer jaws",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Invulnerable Save 4+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Bounding Leap",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "cd-flamers-model": {
+        "id": "cd-flamers-model",
+        "name": "Flamers",
+        "category": "follower",
+        "stats": {
+          "movement": 9,
+          "toughness": 4,
+          "save": "7+",
+          "wounds": 3,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cd-flamers-model": 1
+        },
+        "points": 80
+      }
+    ]
+  }
+]

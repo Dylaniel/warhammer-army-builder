@@ -107,10 +107,18 @@ export default function OpenForgeTab({ armies, setArmies }: OpenForgeTabProps) {
       <ArmyDetailTab
         army={armies[viewingArmyIndex]}
         onBack={() => setViewingArmyIndex(null)}
-        onArmyUpdate={(updatedArmy) => {
-          const updatedArmies = [...armies];
-          updatedArmies[viewingArmyIndex] = updatedArmy;
-          setArmies(updatedArmies);
+        onArmyUpdate={(update) => {
+          // Resolve against the latest committed `armies` state (the
+          // functional form of setArmies), not the `armies` prop closed
+          // over at render time — otherwise N rapid updates collapse into
+          // 1 because each one is computed from the same stale snapshot.
+          setArmies((prevArmies) => {
+            const prevArmy = prevArmies[viewingArmyIndex];
+            if (!prevArmy) return prevArmies;
+            const updatedArmies = [...prevArmies];
+            updatedArmies[viewingArmyIndex] = update(prevArmy);
+            return updatedArmies;
+          });
         }}
       />
     );

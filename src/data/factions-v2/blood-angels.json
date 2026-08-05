@@ -1,0 +1,1356 @@
+[
+  {
+    "id": "ba-commander-dante",
+    "name": "Commander Dante",
+    "faction": "Blood Angels",
+    "role": "HQ",
+    "basePoints": 120,
+    "stats": {
+      "movement": 12,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 6,
+      "leadership": "5+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "perdition-pistol",
+        "name": "Perdition Pistol",
+        "type": "Pistol",
+        "range": 6,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 8,
+        "armourPenetration": 4,
+        "damage": "D3",
+        "abilities": [
+          "Pistol",
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "axe-mortalis",
+        "name": "The Axe Mortalis",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 8,
+        "weaponSkill": 2,
+        "strength": 7,
+        "armourPenetration": 3,
+        "damage": 2,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Chapter Master",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Lord Regent of Imperium Nihilus",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "ba-commander-dante-model": {
+        "id": "ba-commander-dante-model",
+        "name": "Commander Dante",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "2+",
+          "wounds": 6,
+          "leadership": "5+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ba-commander-dante-model": 1
+        },
+        "points": 120
+      }
+    ]
+  },
+  {
+    "id": "ba-mephiston",
+    "name": "Mephiston, Lord of Death",
+    "faction": "Blood Angels",
+    "role": "HQ",
+    "basePoints": 110,
+    "stats": {
+      "movement": 7,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 6,
+      "leadership": "5+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plasma-pistol",
+        "name": "Plasma pistol - standard",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 7,
+        "armourPenetration": 2,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ]
+      },
+      {
+        "id": "vitarus",
+        "name": "Vitarus",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "weaponSkill": 2,
+        "strength": 7,
+        "armourPenetration": 3,
+        "damage": "D3",
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Feel No Pain 5+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Lord of Death",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "ba-mephiston-model": {
+        "id": "ba-mephiston-model",
+        "name": "Mephiston, Lord of Death",
+        "category": "follower",
+        "stats": {
+          "movement": 7,
+          "toughness": 5,
+          "save": "2+",
+          "wounds": 6,
+          "leadership": "5+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ba-mephiston-model": 1
+        },
+        "points": 110
+      }
+    ]
+  },
+  {
+    "id": "ba-lemartes",
+    "name": "Lemartes",
+    "faction": "Blood Angels",
+    "role": "HQ",
+    "basePoints": 110,
+    "stats": {
+      "movement": 12,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 5,
+      "leadership": "5+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ]
+      },
+      {
+        "id": "blood-crozius",
+        "name": "The Blood Crozius",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": [
+          "Lethal Hits"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Feel No Pain 6+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Guardian of the Lost",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "ba-lemartes-model": {
+        "id": "ba-lemartes-model",
+        "name": "Lemartes",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 5,
+          "leadership": "5+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ba-lemartes-model": 1
+        },
+        "points": 110
+      }
+    ]
+  },
+  {
+    "id": "ba-astorath",
+    "name": "Astorath",
+    "faction": "Blood Angels",
+    "role": "HQ",
+    "basePoints": 85,
+    "stats": {
+      "movement": 12,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 5,
+      "leadership": "5+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ]
+      },
+      {
+        "id": "executioners-axe",
+        "name": "The Executioner's Axe",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 2,
+        "strength": 7,
+        "armourPenetration": 3,
+        "damage": 3,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Redeemer of the Lost",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Mass of Doom",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "ba-astorath-model": {
+        "id": "ba-astorath-model",
+        "name": "Astorath",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "2+",
+          "wounds": 5,
+          "leadership": "5+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ba-astorath-model": 1
+        },
+        "points": 85
+      }
+    ]
+  },
+  {
+    "id": "ba-the-sanguinor",
+    "name": "The Sanguinor",
+    "faction": "Blood Angels",
+    "role": "HQ",
+    "basePoints": 140,
+    "stats": {
+      "movement": 12,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 6,
+      "leadership": "5+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "encarmine-broadsword",
+        "name": "Encarmine broadsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 8,
+        "weaponSkill": 2,
+        "strength": 6,
+        "armourPenetration": 3,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Lone Operative",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Miraculous Saviour",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Aura of Fervour",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "ba-the-sanguinor-model": {
+        "id": "ba-the-sanguinor-model",
+        "name": "The Sanguinor",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "2+",
+          "wounds": 6,
+          "leadership": "5+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ba-the-sanguinor-model": 1
+        },
+        "points": 140
+      }
+    ]
+  },
+  {
+    "id": "ba-captain-tycho",
+    "name": "Captain Tycho",
+    "faction": "Blood Angels",
+    "role": "HQ",
+    "basePoints": 75,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "blood-song",
+        "name": "Blood Song",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 2,
+        "strength": 4,
+        "armourPenetration": 1,
+        "damage": 2,
+        "abilities": [
+          "Assault",
+          "Melta 2",
+          "Anti-Infantry 4+"
+        ]
+      },
+      {
+        "id": "dead-mans-hand",
+        "name": "Dead Man's Hand",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 2,
+        "strength": 5,
+        "armourPenetration": 2,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Gift of the Blood",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "ba-captain-tycho-model": {
+        "id": "ba-captain-tycho-model",
+        "name": "Captain Tycho",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "2+",
+          "wounds": 5,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ba-captain-tycho-model": 1
+        },
+        "points": 75
+      }
+    ]
+  },
+  {
+    "id": "ba-sanguinary-priest",
+    "name": "Sanguinary Priest",
+    "faction": "Blood Angels",
+    "role": "HQ",
+    "basePoints": 90,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "opt-jump-pack",
+        "name": "Jump Pack",
+        "points": 10
+      }
+    ],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ]
+      },
+      {
+        "id": "astartes-chainsword",
+        "name": "Astartes chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Blood Chalice",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "ba-sanguinary-priest-model": {
+        "id": "ba-sanguinary-priest-model",
+        "name": "Sanguinary Priest",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ba-sanguinary-priest-model": 1
+        },
+        "points": 90
+      }
+    ]
+  },
+  {
+    "id": "ba-death-company-marines",
+    "name": "Death Company Marines",
+    "faction": "Blood Angels",
+    "role": "ELITES",
+    "basePoints": 115,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "opt-5-extra",
+        "name": "5 additional models",
+        "points": 115
+      }
+    ],
+    "weapons": [
+      {
+        "id": "boltgun",
+        "name": "Boltgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 1"
+        ]
+      },
+      {
+        "id": "astartes-chainsword",
+        "name": "Astartes chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Feel No Pain 6+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Black Rage",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "ba-death-company-marines-model": {
+        "id": "ba-death-company-marines-model",
+        "name": "Death Company Marines",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ba-death-company-marines-model": 1
+        },
+        "points": 115
+      }
+    ]
+  },
+  {
+    "id": "ba-death-company-marines-with-jump-packs",
+    "name": "Death Company Marines with Jump Packs",
+    "faction": "Blood Angels",
+    "role": "ELITES",
+    "basePoints": 130,
+    "stats": {
+      "movement": 12,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "opt-5-extra",
+        "name": "5 additional models",
+        "points": 130
+      }
+    ],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt Pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ]
+      },
+      {
+        "id": "astartes-chainsword",
+        "name": "Astartes chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Feel No Pain 6+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Black Rage",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "ba-death-company-marines-with-jump-packs-model": {
+        "id": "ba-death-company-marines-with-jump-packs-model",
+        "name": "Death Company Marines with Jump Packs",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ba-death-company-marines-with-jump-packs-model": 1
+        },
+        "points": 130
+      }
+    ]
+  },
+  {
+    "id": "ba-death-company-intercessors",
+    "name": "Death Company Intercessors",
+    "faction": "Blood Angels",
+    "role": "ELITES",
+    "basePoints": 85,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "opt-5-extra",
+        "name": "5 additional models",
+        "points": 85
+      }
+    ],
+    "weapons": [
+      {
+        "id": "bolt-rifle",
+        "name": "Bolt rifle",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": [
+          "Heavy",
+          "Assault"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Feel No Pain 6+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Black Rage",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "ba-death-company-intercessors-model": {
+        "id": "ba-death-company-intercessors-model",
+        "name": "Death Company Intercessors",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ba-death-company-intercessors-model": 1
+        },
+        "points": 85
+      }
+    ]
+  },
+  {
+    "id": "ba-sanguinary-guard",
+    "name": "Sanguinary Guard",
+    "faction": "Blood Angels",
+    "role": "ELITES",
+    "basePoints": 175,
+    "stats": {
+      "movement": 12,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "opt-3-extra",
+        "name": "3 additional models",
+        "points": 175
+      }
+    ],
+    "weapons": [
+      {
+        "id": "angelus-boltguns",
+        "name": "Angelus boltgun",
+        "type": "Assault",
+        "range": 12,
+        "attacks": 2,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": [
+          "Assault"
+        ]
+      },
+      {
+        "id": "encarmine-blade",
+        "name": "Encarmine blade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 5,
+        "armourPenetration": 2,
+        "damage": 2,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Angelic Visage",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "ba-sanguinary-guard-model": {
+        "id": "ba-sanguinary-guard-model",
+        "name": "Sanguinary Guard",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "2+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ba-sanguinary-guard-model": 1
+        },
+        "points": 175
+      }
+    ]
+  },
+  {
+    "id": "ba-baal-predator",
+    "name": "Baal Predator",
+    "faction": "Blood Angels",
+    "role": "HEAVY_SUPPORT",
+    "basePoints": 125,
+    "stats": {
+      "movement": 12,
+      "toughness": 10,
+      "save": "3+",
+      "wounds": 11,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [
+      {
+        "id": "opt-heavy-bolter-sponsons",
+        "name": "2 Heavy Bolters",
+        "points": 0
+      },
+      {
+        "id": "opt-heavy-flamer-sponsons",
+        "name": "2 Heavy Flamers",
+        "points": 0
+      }
+    ],
+    "weapons": [
+      {
+        "id": "baal-flamestorm-cannon",
+        "name": "Baal flamestorm cannon",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": "D6+3",
+        "ballisticSkill": 4,
+        "strength": 6,
+        "armourPenetration": 1,
+        "damage": 2,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "armoured-tracks",
+        "name": "Armoured tracks",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "weaponSkill": 4,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Overcharged Engines",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "ba-baal-predator-model": {
+        "id": "ba-baal-predator-model",
+        "name": "Baal Predator",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 10,
+          "save": "3+",
+          "wounds": 11,
+          "leadership": "6+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ba-baal-predator-model": 1
+        },
+        "points": 125
+      }
+    ]
+  },
+  {
+    "id": "ba-furioso-dreadnought",
+    "name": "Furioso Dreadnought",
+    "faction": "Blood Angels",
+    "role": "ELITES",
+    "basePoints": 150,
+    "stats": {
+      "movement": 8,
+      "toughness": 9,
+      "save": "2+",
+      "wounds": 8,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "meltagun",
+        "name": "Meltagun",
+        "type": "Assault",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": 4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "furioso-fists",
+        "name": "Furioso fists",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 3,
+        "strength": 12,
+        "armourPenetration": 3,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Wrathful Rampage",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "ba-furioso-dreadnought-model": {
+        "id": "ba-furioso-dreadnought-model",
+        "name": "Furioso Dreadnought",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 9,
+          "save": "2+",
+          "wounds": 8,
+          "leadership": "6+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ba-furioso-dreadnought-model": 1
+        },
+        "points": 150
+      }
+    ]
+  },
+  {
+    "id": "ba-death-company-dreadnought",
+    "name": "Death Company Dreadnought",
+    "faction": "Blood Angels",
+    "role": "ELITES",
+    "basePoints": 165,
+    "stats": {
+      "movement": 8,
+      "toughness": 9,
+      "save": "2+",
+      "wounds": 8,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "meltagun",
+        "name": "Meltagun",
+        "type": "Assault",
+        "range": 12,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 9,
+        "armourPenetration": 4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ]
+      },
+      {
+        "id": "furioso-fists",
+        "name": "Furioso fists",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "weaponSkill": 3,
+        "strength": 12,
+        "armourPenetration": 3,
+        "damage": 3,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Feel No Pain 6+",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Black Rage",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Frenzied Reprisal",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "ba-death-company-dreadnought-model": {
+        "id": "ba-death-company-dreadnought-model",
+        "name": "Death Company Dreadnought",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 9,
+          "save": "2+",
+          "wounds": 8,
+          "leadership": "6+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ba-death-company-dreadnought-model": 1
+        },
+        "points": 165
+      }
+    ]
+  },
+  {
+    "id": "ba-librarian-dreadnought",
+    "name": "Librarian Dreadnought",
+    "faction": "Blood Angels",
+    "role": "HQ",
+    "basePoints": 170,
+    "stats": {
+      "movement": 8,
+      "toughness": 9,
+      "save": "2+",
+      "wounds": 8,
+      "leadership": "6+",
+      "objectiveControl": 3
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "blood-lance",
+        "name": "Blood Lance",
+        "type": "Psychic",
+        "range": 18,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 10,
+        "armourPenetration": 3,
+        "damage": "D6",
+        "abilities": [
+          "Sustained Hits 1"
+        ]
+      },
+      {
+        "id": "furioso-force-halberd",
+        "name": "Furioso force halberd",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 10,
+        "armourPenetration": 3,
+        "damage": 3,
+        "abilities": [
+          "Psychic"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Wings of Sanguinius",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "ba-librarian-dreadnought-model": {
+        "id": "ba-librarian-dreadnought-model",
+        "name": "Librarian Dreadnought",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 9,
+          "save": "2+",
+          "wounds": 8,
+          "leadership": "6+",
+          "objectiveControl": 3
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ba-librarian-dreadnought-model": 1
+        },
+        "points": 170
+      }
+    ]
+  },
+  {
+    "id": "ba-assault-intercessor-squad-with-jump-packs",
+    "name": "Assault Intercessor Squad with Jump Packs",
+    "faction": "Blood Angels",
+    "role": "FAST_ATTACK",
+    "basePoints": 85,
+    "stats": {
+      "movement": 12,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "opt-5-extra",
+        "name": "5 additional models",
+        "points": 85
+      }
+    ],
+    "weapons": [
+      {
+        "id": "heavy-bolt-pistol",
+        "name": "Heavy bolt pistol",
+        "type": "Pistol",
+        "range": 18,
+        "attacks": 1,
+        "ballisticSkill": 3,
+        "strength": 4,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ]
+      },
+      {
+        "id": "astartes-chainsword",
+        "name": "Astartes chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "weaponSkill": 3,
+        "strength": 4,
+        "armourPenetration": 1,
+        "damage": 1,
+        "abilities": []
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Deep Strike",
+        "description": "[Rules text requires manual verification]"
+      },
+      {
+        "name": "Hammer of Wrath",
+        "description": "[Rules text requires manual verification]"
+      }
+    ],
+    "modelGroups": {
+      "ba-assault-intercessor-squad-with-jump-packs-model": {
+        "id": "ba-assault-intercessor-squad-with-jump-packs-model",
+        "name": "Assault Intercessor Squad with Jump Packs",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ba-assault-intercessor-squad-with-jump-packs-model": 1
+        },
+        "points": 85
+      }
+    ]
+  }
+]
