@@ -376,15 +376,35 @@ export const validateUnitOptions = (unit: Unit, selectedOptionIds: string[]): bo
 };
 
 /**
+ * Coerce a value that is supposed to be a point total into a finite number,
+ * returning `undefined` for anything else (a non-numeric string smuggled in
+ * via corrupt/legacy localStorage, `NaN`, `Infinity`, `null`, `undefined`,
+ * etc.) so callers can safely fall back instead of silently string-
+ * concatenating or propagating `NaN`/`Infinity`.
+ */
+const toFinitePoints = (value: unknown): number | undefined =>
+  typeof value === 'number' && Number.isFinite(value) ? value : undefined;
+
+/**
+ * Resolve the points to display/sum for a single army-unit instance.
+ * Prefers `totalPoints`, falls back to `basePoints`, and finally to 0 if
+ * both are invalid — the result is always a clean finite number, no matter
+ * what shape of data is sitting in `localStorage`.
+ *
+ * Nullish-style fallback semantics are preserved deliberately: some units
+ * (e.g. spawned Spore Mines, Ripper Swarms) are legitimately 0 points, and
+ * treating 0 as "missing" would wrongly substitute a nonzero fallback price
+ * for them. `toFinitePoints` only rejects genuinely non-numeric/non-finite
+ * values, never a valid 0.
+ */
+export const getSafeUnitPoints = (armyUnit: Unit): number =>
+  toFinitePoints(armyUnit.totalPoints) ?? toFinitePoints(armyUnit.basePoints) ?? 0;
+
+/**
  * Get total points for an army
  */
 export const calculateArmyPoints = (armyUnits: Unit[]): number => {
-  return armyUnits.reduce((total, armyUnit) => {
-    // Nullish coalescing, not `||`: some units (e.g. spawned Spore Mines,
-    // Ripper Swarms) are legitimately 0 points, and `0 || basePoints` would
-    // wrongly substitute a nonzero fallback price for them.
-    return total + (armyUnit.totalPoints ?? armyUnit.basePoints);
-  }, 0);
+  return armyUnits.reduce((total, armyUnit) => total + getSafeUnitPoints(armyUnit), 0);
 };
 
 /**

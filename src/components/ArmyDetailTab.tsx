@@ -5,6 +5,7 @@ import {
   calculateArmyPoints,
   describeUnitComposition,
   getDisplayStats,
+  getSafeUnitPoints,
   getUnitPickerPrice,
   generateArmyUnitId,
   getWarlordStatus,
@@ -365,7 +366,7 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
                         </div>
                         <div className="flex items-center">
                           <span className="text-sm font-bold text-gray-700 dark:text-gray-200 mr-3">
-                            {unit.totalPoints ?? unit.basePoints} pts
+                            {getSafeUnitPoints(unit)} pts
                           </span>
                           <button
                             onClick={(e) => {

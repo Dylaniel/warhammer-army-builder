@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ModelGroup, Unit, UnitStats } from '../types/army';
 import {
   calculateUnitPoints,
+  getSafeUnitPoints,
   getUnitModelCeiling,
   normalizeModelGroupComposition,
 } from '../utils/unitUtils';
@@ -209,7 +210,7 @@ export default function UnitDetailTab({ unit, onBack, onUpdate }: UnitDetailTabP
           Back to Roster
         </button>
         <span className="pointer-events-auto px-3 py-2 rounded text-sm font-bold shadow-md border border-gray-700 bg-gray-800 text-white">
-          {unit.totalPoints ?? unit.basePoints} pts
+          {getSafeUnitPoints(unit)} pts
         </span>
       </div>
 
@@ -406,9 +407,7 @@ export default function UnitDetailTab({ unit, onBack, onUpdate }: UnitDetailTabP
 
               <div className="text-sm text-gray-400 border-t border-gray-700 pt-3">
                 Total unit cost:{' '}
-                <span className="font-bold text-yellow-400">
-                  {unit.totalPoints ?? unit.basePoints} pts
-                </span>
+                <span className="font-bold text-yellow-400">{getSafeUnitPoints(unit)} pts</span>
               </div>
             </div>
           )}
