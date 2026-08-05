@@ -77,7 +77,7 @@ const compositionsMatch = (a: Record<string, number>, b: Record<string, number>)
  * current `modelGroups`. Armies persisted in localStorage before Task 6.4
  * may carry a `composition` keyed by legacy Profile *name* rather than
  * ModelGroup id, or reference groups that no longer exist. Unknown keys are
- * dropped and missing groups are filled in at their `minQuantity` so the
+ * dropped and missing groups are filled in at a sensible default so the
  * app can never crash on load. Returns `{}` when the unit has no
  * `modelGroups` (legacy/unmigrated data).
  */
@@ -88,11 +88,29 @@ export const normalizeModelGroupComposition = (
   const groups = unit.modelGroups;
   if (!groups) return {};
 
+  // Some generated datasheets are composed entirely of interchangeable
+  // weapon-loadout variants with no single mandatory "leader" group — e.g.
+  // Necron Warriors has two follower groups (gauss flayer / gauss reaper)
+  // that each independently allow `minQuantity: 0`, even though the unit
+  // itself always fields 10+ models per its cheapest `pointTiers` entry.
+  // Seeding a fresh composition purely from `minQuantity` in that case
+  // yields an all-zero composition — wrong (the unit isn't free) and
+  // unusable (nothing to decrement from). When every group's minimum is 0,
+  // fall back to the cheapest defined tier's composition as the default
+  // instead. This only affects filling in *missing* keys (a group absent
+  // from `composition`), never a key the caller explicitly set to 0.
+  const allMinsZero = Object.values(groups).every((g) => g.minQuantity === 0);
+  const cheapestTierComposition =
+    allMinsZero && unit.pointTiers && unit.pointTiers.length > 0
+      ? [...unit.pointTiers].sort((a, b) => a.points - b.points)[0].composition
+      : undefined;
+
   const normalized: Record<string, number> = {};
   for (const groupId of Object.keys(groups)) {
     const group = groups[groupId];
     const raw = composition ? composition[groupId] : undefined;
-    const value = typeof raw === 'number' && Number.isFinite(raw) ? raw : group.minQuantity;
+    const defaultValue = cheapestTierComposition?.[groupId] ?? group.minQuantity;
+    const value = typeof raw === 'number' && Number.isFinite(raw) ? raw : defaultValue;
     normalized[groupId] = Math.max(group.minQuantity, Math.min(group.maxQuantity, value));
   }
   return normalized;
@@ -100,9 +118,18 @@ export const normalizeModelGroupComposition = (
 
 /**
  * Resolve the total points for a unit's current model-group composition
- * against its `pointTiers` (Task 6.4 schema). Falls back to the lowest
- * defined tier if no exact match exists (e.g. a composition outside
- * currently-migrated data) rather than guessing a formula.
+ * against its `pointTiers` (Task 6.4 schema).
+ *
+ * Prefers an exact composition match (most precise when a tier corresponds
+ * to a specific loadout combination, not just a raw model count). When no
+ * exact match exists, falls back to resolving by total model count: per
+ * TABLETOP_RULES.md, 10th-edition points are strictly tier-based on total
+ * squad size and are NEVER computed per-model, so this rounds UP to the
+ * cheapest tier whose total model count is >= the current total, rather
+ * than interpolating or defaulting to the lowest tier (which would
+ * undercharge, e.g. a 7-model Intercessor Squad silently priced at the
+ * 5-model tier). Only falls back to the highest tier if the composition's
+ * total exceeds every defined tier's total.
  */
 export const resolveModelGroupPoints = (
   unit: Unit,
@@ -112,8 +139,22 @@ export const resolveModelGroupPoints = (
     return unit.basePoints;
   }
 
-  const match = unit.pointTiers.find((tier) => compositionsMatch(tier.composition, composition));
-  return match ? match.points : unit.pointTiers[0].points;
+  const exactMatch = unit.pointTiers.find((tier) =>
+    compositionsMatch(tier.composition, composition)
+  );
+  if (exactMatch) return exactMatch.points;
+
+  const totalModels = Object.values(composition).reduce((sum, count) => sum + count, 0);
+
+  const tiersByModelCount = unit.pointTiers
+    .map((tier) => ({
+      tier,
+      totalModels: Object.values(tier.composition).reduce((sum, count) => sum + count, 0),
+    }))
+    .sort((a, b) => a.totalModels - b.totalModels);
+
+  const applicable = tiersByModelCount.find((t) => t.totalModels >= totalModels);
+  return (applicable ?? tiersByModelCount[tiersByModelCount.length - 1]).tier.points;
 };
 
 /**
@@ -282,7 +323,10 @@ export const validateUnitOptions = (unit: Unit, selectedOptionIds: string[]): bo
  */
 export const calculateArmyPoints = (armyUnits: Unit[]): number => {
   return armyUnits.reduce((total, armyUnit) => {
-    return total + (armyUnit.totalPoints || armyUnit.basePoints);
+    // Nullish coalescing, not `||`: some units (e.g. spawned Spore Mines,
+    // Ripper Swarms) are legitimately 0 points, and `0 || basePoints` would
+    // wrongly substitute a nonzero fallback price for them.
+    return total + (armyUnit.totalPoints ?? armyUnit.basePoints);
   }, 0);
 };
 
