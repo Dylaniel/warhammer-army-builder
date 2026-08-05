@@ -179,6 +179,17 @@ export const getDisplayStats = (unit: Unit): UnitStats => {
  * Build a human-readable "1x Sergeant, 4x Marine" summary of a unit's
  * current composition, resolving each key against `modelGroups` (falling
  * back to legacy `composition`/`quantity` for unmigrated data).
+ *
+ * When a unit HAS `modelGroups`, that branch is authoritative and always
+ * returns from within it — it must never fall through to the legacy
+ * `unit.composition` branch below, which formats entries as
+ * `${count}x ${name}` treating its keys as display names. For `modelGroups`
+ * composition maps, the keys are ModelGroup *ids* (kebab-case, e.g.
+ * "warrior-w-gauss-reaper"), not names, so falling through there would leak
+ * raw ids into the UI. This matters especially for the all-zero-count case
+ * (every group's `minQuantity` is 0, e.g. Necron Warriors' interchangeable
+ * weapon-loadout followers) — that case must still resolve using the
+ * groups' `name` fields, never their ids.
  */
 export const describeUnitComposition = (unit: Unit): string => {
   if (unit.modelGroups && Object.keys(unit.modelGroups).length > 0) {
@@ -187,6 +198,9 @@ export const describeUnitComposition = (unit: Unit): string => {
       .filter(([, count]) => count > 0)
       .map(([groupId, count]) => `${count}x ${unit.modelGroups?.[groupId]?.name ?? groupId}`);
     if (parts.length > 0) return parts.join(', ');
+
+    const groupNames = Object.values(unit.modelGroups).map((g) => g.name);
+    return `No models selected (choose from: ${groupNames.join(', ')})`;
   }
 
   if (unit.composition && Object.keys(unit.composition).length > 0) {
