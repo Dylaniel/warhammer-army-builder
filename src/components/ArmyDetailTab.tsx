@@ -14,7 +14,12 @@ import BattleModeTab from './BattleModeTab';
 interface ArmyDetailTabProps {
   army: Army;
   onBack: () => void;
-  onArmyUpdate: (updatedArmy: Army) => void;
+  // Functional updater rather than a plain Army: the caller (OpenForgeTab)
+  // resolves this against the latest committed armies state, not a
+  // snapshot captured at render time. This lets N rapid interactions
+  // (duplicate/add/delete/etc.) all apply instead of racing against a
+  // stale `army` prop and silently dropping updates.
+  onArmyUpdate: (update: (prevArmy: Army) => Army) => void;
 }
 
 export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetailTabProps) {
@@ -22,7 +27,10 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isBattleModeOpen, setIsBattleModeOpen] = useState(false);
-  const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
+  // Store only the id of the open unit, not the Unit object itself. The
+  // displayed unit is derived below from the latest `army` prop on every
+  // render, so it can never go stale after an update.
+  const [selectedUnitId, setSelectedUnitId] = useState<string | null>(null);
   const { units: allUnits, loading } = useFactionUnits(army.faction);
 
   const allArmyUnits = [
@@ -34,6 +42,9 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
   ];
   const currentPoints = calculateArmyPoints(allArmyUnits);
   const isOverPoints = currentPoints > army.points;
+  const selectedUnit = selectedUnitId
+    ? (allArmyUnits.find((u) => u.id === selectedUnitId) ?? null)
+    : null;
 
   // Map category names to unit roles for filtering
   const getCategoryRoles = (category: string): Unit['role'][] | null => {
@@ -84,116 +95,132 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
   //adds unit selected to the relevant category
   const handleAddUnit = (unit: Unit, category: string): void => {
     const armyUnit = createArmyUnit(unit);
-    const updatedArmy = { ...army };
 
-    switch (category) {
-      case 'Characters':
-        updatedArmy.characters = [...(army.characters || []), armyUnit];
-        break;
-      case 'Battleline':
-        updatedArmy.battleline = [...(army.battleline || []), armyUnit];
-        break;
-      case 'Dedicated Transports':
-        updatedArmy.dedicatedTransports = [...(army.dedicatedTransports || []), armyUnit];
-        break;
-      case 'Other Datasheets':
-        updatedArmy.otherDatasheets = [...(army.otherDatasheets || []), armyUnit];
-        break;
-      case 'Allied Units':
-        updatedArmy.alliedUnits = [...(army.alliedUnits || []), armyUnit];
-        break;
-    }
-
-    onArmyUpdate(updatedArmy);
+    onArmyUpdate((prevArmy) => {
+      const updatedArmy = { ...prevArmy };
+      switch (category) {
+        case 'Characters':
+          updatedArmy.characters = [...(prevArmy.characters || []), armyUnit];
+          break;
+        case 'Battleline':
+          updatedArmy.battleline = [...(prevArmy.battleline || []), armyUnit];
+          break;
+        case 'Dedicated Transports':
+          updatedArmy.dedicatedTransports = [...(prevArmy.dedicatedTransports || []), armyUnit];
+          break;
+        case 'Other Datasheets':
+          updatedArmy.otherDatasheets = [...(prevArmy.otherDatasheets || []), armyUnit];
+          break;
+        case 'Allied Units':
+          updatedArmy.alliedUnits = [...(prevArmy.alliedUnits || []), armyUnit];
+          break;
+      }
+      return updatedArmy;
+    });
   };
 
   const handleDeleteUnit = (unitId: string, category: string) => {
-    const updatedArmy = { ...army };
-    switch (category) {
-      case 'Characters':
-        updatedArmy.characters = (army.characters || []).filter((u) => u.id !== unitId);
-        break;
-      case 'Battleline':
-        updatedArmy.battleline = (army.battleline || []).filter((u) => u.id !== unitId);
-        break;
-      case 'Dedicated Transports':
-        updatedArmy.dedicatedTransports = (army.dedicatedTransports || []).filter(
-          (u) => u.id !== unitId
-        );
-        break;
-      case 'Other Datasheets':
-        updatedArmy.otherDatasheets = (army.otherDatasheets || []).filter((u) => u.id !== unitId);
-        break;
-      case 'Allied Units':
-        updatedArmy.alliedUnits = (army.alliedUnits || []).filter((u) => u.id !== unitId);
-        break;
-    }
-    onArmyUpdate(updatedArmy);
+    onArmyUpdate((prevArmy) => {
+      const updatedArmy = { ...prevArmy };
+      switch (category) {
+        case 'Characters':
+          updatedArmy.characters = (prevArmy.characters || []).filter((u) => u.id !== unitId);
+          break;
+        case 'Battleline':
+          updatedArmy.battleline = (prevArmy.battleline || []).filter((u) => u.id !== unitId);
+          break;
+        case 'Dedicated Transports':
+          updatedArmy.dedicatedTransports = (prevArmy.dedicatedTransports || []).filter(
+            (u) => u.id !== unitId
+          );
+          break;
+        case 'Other Datasheets':
+          updatedArmy.otherDatasheets = (prevArmy.otherDatasheets || []).filter(
+            (u) => u.id !== unitId
+          );
+          break;
+        case 'Allied Units':
+          updatedArmy.alliedUnits = (prevArmy.alliedUnits || []).filter((u) => u.id !== unitId);
+          break;
+      }
+      return updatedArmy;
+    });
     setOpenMenuId(null);
   };
 
   const handleDuplicateUnit = (unit: Unit, category: string) => {
-    const updatedArmy = { ...army };
     const duplicatedUnit = { ...unit, id: `${unit.id.split('-')[0]}-${Date.now()}` };
-    switch (category) {
-      case 'Characters':
-        updatedArmy.characters = [...(army.characters || []), duplicatedUnit];
-        break;
-      case 'Battleline':
-        updatedArmy.battleline = [...(army.battleline || []), duplicatedUnit];
-        break;
-      case 'Dedicated Transports':
-        updatedArmy.dedicatedTransports = [...(army.dedicatedTransports || []), duplicatedUnit];
-        break;
-      case 'Other Datasheets':
-        updatedArmy.otherDatasheets = [...(army.otherDatasheets || []), duplicatedUnit];
-        break;
-      case 'Allied Units':
-        updatedArmy.alliedUnits = [...(army.alliedUnits || []), duplicatedUnit];
-        break;
-    }
-    onArmyUpdate(updatedArmy);
+
+    onArmyUpdate((prevArmy) => {
+      const updatedArmy = { ...prevArmy };
+      switch (category) {
+        case 'Characters':
+          updatedArmy.characters = [...(prevArmy.characters || []), duplicatedUnit];
+          break;
+        case 'Battleline':
+          updatedArmy.battleline = [...(prevArmy.battleline || []), duplicatedUnit];
+          break;
+        case 'Dedicated Transports':
+          updatedArmy.dedicatedTransports = [
+            ...(prevArmy.dedicatedTransports || []),
+            duplicatedUnit,
+          ];
+          break;
+        case 'Other Datasheets':
+          updatedArmy.otherDatasheets = [...(prevArmy.otherDatasheets || []), duplicatedUnit];
+          break;
+        case 'Allied Units':
+          updatedArmy.alliedUnits = [...(prevArmy.alliedUnits || []), duplicatedUnit];
+          break;
+      }
+      return updatedArmy;
+    });
     setOpenMenuId(null);
   };
 
   const handleMakeWarlord = (unitId: string, category: string) => {
     if (category !== 'Characters') return; // Only characters can be warlord
-    const updatedArmy = { ...army };
-    if (updatedArmy.characters) {
-      // remove warlord from all characters
-      updatedArmy.characters = updatedArmy.characters.map((u) => ({ ...u, isWarlord: false }));
-      // assign warlord
-      updatedArmy.characters = updatedArmy.characters.map((u) =>
-        u.id === unitId ? { ...u, isWarlord: true } : u
-      );
-    }
-    onArmyUpdate(updatedArmy);
+
+    onArmyUpdate((prevArmy) => {
+      const updatedArmy = { ...prevArmy };
+      if (updatedArmy.characters) {
+        // remove warlord from all characters, then assign the new one
+        updatedArmy.characters = updatedArmy.characters.map((u) => ({
+          ...u,
+          isWarlord: u.id === unitId,
+        }));
+      }
+      return updatedArmy;
+    });
     setOpenMenuId(null);
   };
 
-  const handleUnitUpdate = (updatedUnit: Unit) => {
-    const updatedArmy = { ...army };
-    let found = false;
-    for (const cat of [
-      'characters',
-      'battleline',
-      'dedicatedTransports',
-      'otherDatasheets',
-      'alliedUnits',
-    ] as const) {
-      if (updatedArmy[cat]) {
-        const index = updatedArmy[cat]!.findIndex((u) => u.id === updatedUnit.id);
-        if (index !== -1) {
-          updatedArmy[cat]![index] = updatedUnit;
-          found = true;
-          break;
+  const handleUnitUpdate = (update: (prevUnit: Unit) => Unit) => {
+    if (!selectedUnitId) return;
+    const unitId = selectedUnitId;
+
+    onArmyUpdate((prevArmy) => {
+      const updatedArmy = { ...prevArmy };
+      for (const cat of [
+        'characters',
+        'battleline',
+        'dedicatedTransports',
+        'otherDatasheets',
+        'alliedUnits',
+      ] as const) {
+        const list = prevArmy[cat];
+        if (list) {
+          const index = list.findIndex((u) => u.id === unitId);
+          if (index !== -1) {
+            const newList = [...list];
+            newList[index] = update(list[index]);
+            updatedArmy[cat] = newList;
+            return updatedArmy;
+          }
         }
       }
-    }
-    if (found) {
-      onArmyUpdate(updatedArmy);
-      setSelectedUnit(updatedUnit);
-    }
+      return prevArmy;
+    });
   };
 
   //controls which category is expanded to add available units
@@ -202,7 +229,7 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
   };
 
   const handleEditArmy = (updatedData: Partial<Army>) => {
-    onArmyUpdate({ ...army, ...updatedData });
+    onArmyUpdate((prevArmy) => ({ ...prevArmy, ...updatedData }));
     setIsEditModalOpen(false);
   };
 
@@ -218,7 +245,7 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
     return (
       <UnitDetailTab
         unit={selectedUnit}
-        onBack={() => setSelectedUnit(null)}
+        onBack={() => setSelectedUnitId(null)}
         onUpdate={handleUnitUpdate}
       />
     );
@@ -308,7 +335,7 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
                     {categoryUnits.map((unit) => (
                       <div
                         key={unit.id}
-                        onClick={() => setSelectedUnit(unit)}
+                        onClick={() => setSelectedUnitId(unit.id)}
                         className="relative flex justify-between items-center py-3 px-3 bg-gray-100 dark:bg-gray-600 rounded cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-500 transition-colors"
                       >
                         <div className="flex flex-col">
