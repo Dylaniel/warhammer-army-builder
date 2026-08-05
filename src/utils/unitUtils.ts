@@ -202,6 +202,23 @@ export const getDisplayStats = (unit: Unit): UnitStats => {
 };
 
 /**
+ * Resolve the price to advertise for a unit that has NOT yet been added to
+ * an army (e.g. the unit-picker "Add" row). `basePoints` is only a legacy
+ * fallback and can disagree with the real cheapest `pointTiers` entry for
+ * generated Task 6.6 data (7 of 1597 units, e.g. `aquila-kill-team`:
+ * `basePoints` 100 vs a real cheapest tier of 200) — prefer the cheapest
+ * defined tier when tiers exist. 0 is a legitimate price (e.g. Spore
+ * Mines, Ripper Swarms, Mucolid Spores are genuinely free units) and must
+ * never be treated as "missing".
+ */
+export const getUnitPickerPrice = (unit: Unit): number => {
+  if (unit.pointTiers && unit.pointTiers.length > 0) {
+    return Math.min(...unit.pointTiers.map((tier) => tier.points));
+  }
+  return unit.basePoints;
+};
+
+/**
  * Build a human-readable "1x Sergeant, 4x Marine" summary of a unit's
  * current composition, resolving each key against `modelGroups` (falling
  * back to legacy `composition`/`quantity` for unmigrated data).

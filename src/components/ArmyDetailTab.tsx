@@ -5,6 +5,7 @@ import {
   calculateArmyPoints,
   describeUnitComposition,
   getDisplayStats,
+  getUnitPickerPrice,
   generateArmyUnitId,
   getWarlordStatus,
   WarlordStatus,
@@ -527,7 +528,9 @@ function AvailableUnitRow({ unit, onAdd }: { unit: Unit; onAdd: () => void }) {
       >
         <span className="font-medium dark:text-white text-gray-900">{unit.name}</span>
         <div className="flex items-center space-x-3">
-          <span className="text-sm text-gray-600 dark:text-gray-300">{unit.basePoints} pts</span>
+          <span className="text-sm text-gray-600 dark:text-gray-300">
+            {getUnitPickerPrice(unit)} pts
+          </span>
           <button
             onClick={(e) => {
               e.stopPropagation();
