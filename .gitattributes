@@ -1,2 +1,16 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Explicitly pin source/text files to LF on checkout so line endings are
+# deterministic across platforms (Windows dev machines, Linux CI/Vercel).
+# core.autocrlf=true on a dev machine would otherwise rewrite these to CRLF
+# on checkout, which conflicts with prettier's default endOfLine: "lf".
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.css text eol=lf
