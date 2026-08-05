@@ -168,8 +168,9 @@ The following items appeared in earlier planning but have been **deliberately sc
 - [ ] **6.4b Sanitize legacy composition display values** *(found by Task 6.4 Pass 2 QA — minor)*
   - `describeUnitComposition`'s legacy fallback in `unitUtils.ts` (~lines 151-155) interpolates `count` with no type/finite check, so a corrupted legacy `composition` renders literal roster text like `-3x Sergeant, nullx Marine, notanumberx Garbage`. No crash and no `NaN`, but inconsistent with the `modelGroups` path, which coerces defensively via `normalizeModelGroupComposition`.
 
-- [ ] **6.5 HQ / Warlord Validation Warning**
-  - Implement a soft, non-blocking warning banner on the `ArmyDetailTab` that alerts the user if their army does not currently contain a designated Warlord/HQ unit.
+- [x] **6.5 HQ / Warlord Validation Warning**
+  - Added `getWarlordStatus(army)` to `unitUtils.ts` returning a discriminated union (`no-characters` | `no-warlord-designated` | `ok`), keeping the logic out of the component per AGENTS.md §1. `ArmyDetailTab` renders a `WarlordWarningBanner` beneath the army header that distinguishes the two cases with different guidance — add a Character first, vs. designate one of the existing Characters via the ⋮ menu — and renders nothing once a Warlord is set.
+  - Strictly advisory per the project's "warns but never blocks" value: nothing is disabled or gated. Verified at runtime across all three states (empty army → character added → warlord designated → warlord deleted brings it back), and confirmed units can still be added/deleted and Battle Mode opened while the banner shows.
 
 - [ ] **6.6 Automated Data Pipeline & Full Hydration**
   - Build a Node.js parsing script (`scripts/parse-bsdata.ts`) to read machine-readable community XML/CAT files (fetched automatically from the community repository at `https://github.com/BSData/wh40k-10e.git` into `/raw-data`) and transform them into 10th-edition compliant JSON files mapped perfectly to the Task 6.1 entity-centric schema. Spawn parallel sub-agents to execute this script across all 26 factions, replacing the currently incomplete partial-hydration files with perfectly accurate datasets.

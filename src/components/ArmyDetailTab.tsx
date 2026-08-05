@@ -6,6 +6,8 @@ import {
   describeUnitComposition,
   getDisplayStats,
   generateArmyUnitId,
+  getWarlordStatus,
+  WarlordStatus,
 } from '../utils/unitUtils';
 import { useFactionUnits } from '../hooks/useFactionUnits';
 import EditArmyModal from './EditArmyModal';
@@ -43,6 +45,7 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
   ];
   const currentPoints = calculateArmyPoints(allArmyUnits);
   const isOverPoints = currentPoints > army.points;
+  const warlordStatus = getWarlordStatus(army);
   const selectedUnit = selectedUnitId
     ? (allArmyUnits.find((u) => u.id === selectedUnitId) ?? null)
     : null;
@@ -303,6 +306,8 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
           <div className="text-sm mb-1 text-gray-300">Detachment: {army.detachment}</div>
         </div>
 
+        <WarlordWarningBanner status={warlordStatus} />
+
         {/* Unit categories */}
         <div className="space-y-3">
           {categories.map((category) => {
@@ -468,6 +473,41 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
         onSubmit={handleEditArmy}
         army={army}
       />
+    </div>
+  );
+}
+
+/**
+ * Soft, non-blocking advisory banner shown when the army has no designated
+ * Warlord. Purely informational — it never disables or gates anything
+ * elsewhere on the page. Renders nothing once a Warlord is set.
+ */
+function WarlordWarningBanner({ status }: { status: WarlordStatus }) {
+  if (status.state === 'ok') return null;
+
+  const message =
+    status.state === 'no-characters'
+      ? 'No Warlord designated. Add a Character unit to the Characters section — one of them will need to be your Warlord.'
+      : 'No Warlord designated. Open a Character unit’s ⋮ menu and select "Make Warlord (HQ)" to designate one.';
+
+  return (
+    <div
+      role="status"
+      className="mb-4 flex items-start gap-2 rounded-lg border border-yellow-400 bg-yellow-50 px-3 py-2 text-sm text-yellow-900 dark:border-yellow-600 dark:bg-yellow-900/20 dark:text-yellow-200"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="mt-0.5 h-4 w-4 flex-shrink-0"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fillRule="evenodd"
+          d="M8.257 3.099c.765-1.36 2.72-1.36 3.485 0l6.28 11.18c.75 1.334-.213 2.987-1.742 2.987H3.72c-1.53 0-2.492-1.653-1.743-2.987l6.28-11.18zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.75a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z"
+          clipRule="evenodd"
+        />
+      </svg>
+      <span className="font-medium">{message}</span>
     </div>
   );
 }
