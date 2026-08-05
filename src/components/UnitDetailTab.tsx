@@ -170,7 +170,7 @@ export default function UnitDetailTab({ unit, onBack, onUpdate }: UnitDetailTabP
           Back to Roster
         </button>
         <span className="pointer-events-auto px-3 py-2 rounded text-sm font-bold shadow-md border border-gray-700 bg-gray-800 text-white">
-          {unit.totalPoints || unit.basePoints} pts
+          {unit.totalPoints ?? unit.basePoints} pts
         </span>
       </div>
 
@@ -367,7 +367,7 @@ export default function UnitDetailTab({ unit, onBack, onUpdate }: UnitDetailTabP
               <div className="text-sm text-gray-400 border-t border-gray-700 pt-3">
                 Total unit cost:{' '}
                 <span className="font-bold text-yellow-400">
-                  {unit.totalPoints || unit.basePoints} pts
+                  {unit.totalPoints ?? unit.basePoints} pts
                 </span>
               </div>
             </div>

@@ -364,7 +364,7 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
                         </div>
                         <div className="flex items-center">
                           <span className="text-sm font-bold text-gray-700 dark:text-gray-200 mr-3">
-                            {unit.totalPoints || unit.basePoints} pts
+                            {unit.totalPoints ?? unit.basePoints} pts
                           </span>
                           <button
                             onClick={(e) => {
