@@ -5,6 +5,7 @@ import {
   calculateArmyPoints,
   describeUnitComposition,
   getDisplayStats,
+  generateArmyUnitId,
 } from '../utils/unitUtils';
 import { useFactionUnits } from '../hooks/useFactionUnits';
 import EditArmyModal from './EditArmyModal';
@@ -149,7 +150,10 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
   };
 
   const handleDuplicateUnit = (unit: Unit, category: string) => {
-    const duplicatedUnit = { ...unit, id: `${unit.id.split('-')[0]}-${Date.now()}` };
+    // Generated once per click (not inside the updater, which may be
+    // re-invoked by React) so each of N rapid clicks yields a distinct,
+    // full-base-id-preserving id — see generateArmyUnitId in unitUtils.
+    const duplicatedUnit = { ...unit, id: generateArmyUnitId(unit.id) };
 
     onArmyUpdate((prevArmy) => {
       const updatedArmy = { ...prevArmy };

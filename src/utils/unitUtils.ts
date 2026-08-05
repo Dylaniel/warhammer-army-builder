@@ -210,6 +210,38 @@ export const getSelectedOptions = (unit: Unit, selectedOptionIds: string[]): Uni
 };
 
 /**
+ * Monotonic counter mixed into generated ids so multiple ids requested
+ * within the same millisecond (e.g. rapid-click "Add"/"Duplicate") never
+ * collide, even though `Date.now()` alone has only millisecond resolution.
+ */
+let uniqueIdCounter = 0;
+
+const nextUniqueSuffix = (): string => {
+  uniqueIdCounter = (uniqueIdCounter + 1) % 1_000_000;
+  return `${Date.now()}-${uniqueIdCounter}`;
+};
+
+/**
+ * Strip a previously-appended uniqueness suffix (as produced by
+ * `nextUniqueSuffix`/`generateArmyUnitId`) from an id, so re-duplicating an
+ * already-instantiated army unit doesn't accumulate suffixes and the
+ * readable base id (e.g. "captain-in-gravis-armour") is preserved rather
+ * than collapsed to its first hyphen segment.
+ */
+const stripUniqueSuffix = (id: string): string => id.replace(/-\d{10,}(-\d+)?$/, '');
+
+/**
+ * Generate a globally-unique id for an army-unit instance derived from a
+ * catalog unit id. Preserves the full base id (only trimming a prior
+ * uniqueness suffix if one is already present) and appends a fresh
+ * collision-resistant token, so this stays safe to call many times in a
+ * single millisecond (e.g. rapid-click duplication).
+ */
+export const generateArmyUnitId = (baseUnitId: string): string => {
+  return `${stripUniqueSuffix(baseUnitId)}-${nextUniqueSuffix()}`;
+};
+
+/**
  * Create an army unit from a base unit with selected options
  */
 export const createArmyUnit = (
@@ -229,7 +261,7 @@ export const createArmyUnit = (
 
   return {
     ...unitWithComposition,
-    id: `${unit.id}-${Date.now()}`, // Generate unique ID
+    id: generateArmyUnitId(unit.id), // Generate unique ID
     selectedOptions: selectedOptionIds,
     totalPoints,
     quantity,
