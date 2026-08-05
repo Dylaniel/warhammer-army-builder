@@ -1,4 +1,4 @@
-import { Unit, UnitOption } from '../types/army';
+import { Unit, UnitOption, UnitStats } from '../types/army';
 import unitsData from '../data/units.json';
 
 /**
@@ -56,6 +56,108 @@ export const getUnitById = (id: string): Unit | undefined => {
 };
 
 /**
+ * Determine whether two model-group composition maps represent the same
+ * configuration. Zero-count entries are treated as absent so callers don't
+ * need to worry about whether zeros are included explicitly.
+ */
+const compositionsMatch = (a: Record<string, number>, b: Record<string, number>): boolean => {
+  const normalize = (map: Record<string, number>): [string, number][] =>
+    Object.entries(map)
+      .filter(([, count]) => count > 0)
+      .sort(([keyA], [keyB]) => keyA.localeCompare(keyB));
+
+  const normA = normalize(a);
+  const normB = normalize(b);
+  if (normA.length !== normB.length) return false;
+  return normA.every(([key, count], idx) => normB[idx][0] === key && normB[idx][1] === count);
+};
+
+/**
+ * Normalize a (possibly stale or legacy) composition map against a unit's
+ * current `modelGroups`. Armies persisted in localStorage before Task 6.4
+ * may carry a `composition` keyed by legacy Profile *name* rather than
+ * ModelGroup id, or reference groups that no longer exist. Unknown keys are
+ * dropped and missing groups are filled in at their `minQuantity` so the
+ * app can never crash on load. Returns `{}` when the unit has no
+ * `modelGroups` (legacy/unmigrated data).
+ */
+export const normalizeModelGroupComposition = (
+  unit: Unit,
+  composition: Record<string, number> | undefined
+): Record<string, number> => {
+  const groups = unit.modelGroups;
+  if (!groups) return {};
+
+  const normalized: Record<string, number> = {};
+  for (const groupId of Object.keys(groups)) {
+    const group = groups[groupId];
+    const raw = composition ? composition[groupId] : undefined;
+    const value = typeof raw === 'number' && Number.isFinite(raw) ? raw : group.minQuantity;
+    normalized[groupId] = Math.max(group.minQuantity, Math.min(group.maxQuantity, value));
+  }
+  return normalized;
+};
+
+/**
+ * Resolve the total points for a unit's current model-group composition
+ * against its `pointTiers` (Task 6.4 schema). Falls back to the lowest
+ * defined tier if no exact match exists (e.g. a composition outside
+ * currently-migrated data) rather than guessing a formula.
+ */
+export const resolveModelGroupPoints = (
+  unit: Unit,
+  composition: Record<string, number>
+): number => {
+  if (!unit.pointTiers || unit.pointTiers.length === 0) {
+    return unit.basePoints;
+  }
+
+  const match = unit.pointTiers.find((tier) => compositionsMatch(tier.composition, composition));
+  return match ? match.points : unit.pointTiers[0].points;
+};
+
+/**
+ * Resolve a representative statline for display purposes (e.g. the
+ * unit-picker preview stat block). Prefers the first `leader` model group,
+ * then the first defined model group, then falls back to legacy
+ * `profiles`/`stats` so unmigrated or malformed data can never crash the UI.
+ */
+export const getDisplayStats = (unit: Unit): UnitStats => {
+  const groups = unit.modelGroups ? Object.values(unit.modelGroups) : [];
+  if (groups.length > 0) {
+    const leader = groups.find((g) => g.category === 'leader');
+    return (leader || groups[0]).stats;
+  }
+  if (unit.profiles && unit.profiles.length > 0) {
+    return unit.profiles[0].stats;
+  }
+  return unit.stats;
+};
+
+/**
+ * Build a human-readable "1x Sergeant, 4x Marine" summary of a unit's
+ * current composition, resolving each key against `modelGroups` (falling
+ * back to legacy `composition`/`quantity` for unmigrated data).
+ */
+export const describeUnitComposition = (unit: Unit): string => {
+  if (unit.modelGroups && Object.keys(unit.modelGroups).length > 0) {
+    const composition = normalizeModelGroupComposition(unit, unit.composition);
+    const parts = Object.entries(composition)
+      .filter(([, count]) => count > 0)
+      .map(([groupId, count]) => `${count}x ${unit.modelGroups?.[groupId]?.name ?? groupId}`);
+    if (parts.length > 0) return parts.join(', ');
+  }
+
+  if (unit.composition && Object.keys(unit.composition).length > 0) {
+    return Object.entries(unit.composition)
+      .map(([name, count]) => `${count}x ${name}`)
+      .join(', ');
+  }
+
+  return `${unit.quantity || 1}x ${unit.name} Models`;
+};
+
+/**
  * Calculate total points for a unit with selected options
  */
 export const calculateUnitPoints = (unit: Unit, selectedOptionIds: string[] = []): number => {
@@ -66,8 +168,12 @@ export const calculateUnitPoints = (unit: Unit, selectedOptionIds: string[] = []
 
   let baseCost = unit.basePoints;
 
-  // 10th edition tiered point costing based on total models in the unit
-  if (unit.pointsTiers && unit.pointsTiers.length > 0) {
+  if (unit.modelGroups && Object.keys(unit.modelGroups).length > 0) {
+    // Task 6.4 schema: resolve points from the per-model-group composition.
+    const composition = normalizeModelGroupComposition(unit, unit.composition);
+    baseCost = resolveModelGroupPoints(unit, composition);
+  } else if (unit.pointsTiers && unit.pointsTiers.length > 0) {
+    // Legacy 10th edition tiered point costing based on total models in the unit.
     let totalModels = 0;
     if (unit.composition && Object.keys(unit.composition).length > 0) {
       totalModels = Object.values(unit.composition).reduce((a, b) => a + b, 0);
@@ -111,10 +217,18 @@ export const createArmyUnit = (
   selectedOptionIds: string[] = [],
   quantity: number = 1
 ): Unit => {
-  const totalPoints = calculateUnitPoints(unit, selectedOptionIds);
+  // Task 6.4 schema: seed composition at each model group's minQuantity so
+  // points resolve correctly the moment the unit is added, before the user
+  // touches any counters.
+  const initialComposition = unit.modelGroups
+    ? normalizeModelGroupComposition(unit, undefined)
+    : unit.composition;
+
+  const unitWithComposition: Unit = { ...unit, composition: initialComposition };
+  const totalPoints = calculateUnitPoints(unitWithComposition, selectedOptionIds);
 
   return {
-    ...unit,
+    ...unitWithComposition,
     id: `${unit.id}-${Date.now()}`, // Generate unique ID
     selectedOptions: selectedOptionIds,
     totalPoints,
