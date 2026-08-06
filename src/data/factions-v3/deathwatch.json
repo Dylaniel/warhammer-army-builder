@@ -1,0 +1,5321 @@
+[
+  {
+    "id": "corvus-blackstar",
+    "name": "Corvus Blackstar",
+    "faction": "Deathwatch",
+    "role": "FLYER",
+    "basePoints": 180,
+    "stats": {
+      "movement": 20,
+      "toughness": 10,
+      "save": "3+",
+      "wounds": 14,
+      "leadership": "6+",
+      "objectiveControl": 0
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "armoured-hull",
+        "name": "Armoured hull",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      },
+      {
+        "id": "hurricane-bolter",
+        "name": "Hurricane bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 6,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 6",
+          "Twin-Linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "twin-assault-cannon",
+        "name": "Twin assault cannon",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 6,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds",
+          "Twin-Linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "twin-lascannon",
+        "name": "Twin lascannon",
+        "type": "Assault",
+        "range": 48,
+        "attacks": 1,
+        "strength": 12,
+        "armourPenetration": -3,
+        "damage": "D6+1",
+        "abilities": [
+          "Twin-Linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "blackstar-rocket-launcher",
+        "name": "Blackstar rocket launcher",
+        "type": "Assault",
+        "range": 30,
+        "attacks": "D6+1",
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "stormstrike-missile-launcher",
+        "name": "Stormstrike missile launcher",
+        "type": "Assault",
+        "range": 48,
+        "attacks": 1,
+        "strength": 10,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": [],
+        "ballisticSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Blackstar Cluster Launcher",
+        "description": "Each time this model ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 5+, that unit suffers 1 mortal wound."
+      },
+      {
+        "name": "Damaged: 1-5 Wounds Remaining",
+        "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+      },
+      {
+        "name": "Transport",
+        "description": "This model has a transport capacity of 12 ADEPTUS ASTARTES INFANTRY or KILL TEAM models. Each JUMP PACK, GRAVIS or TERMINATOR model takes up the space of 2 models and each CENTURION model takes up the space of 3 models."
+      },
+      {
+        "name": "Auspex Array",
+        "description": "Ranged weapons equipped by the bearer have the [IGNORES COVER] ability."
+      },
+      {
+        "name": "Infernum Halo-launcher",
+        "description": "The bearer has the SMOKE keyword."
+      },
+      {
+        "name": "Deadly Demise",
+        "description": "Some models have 'Deadly Demise x' listed in their abilities. When such a model is destroyed, roll one D6 before removing it from play (if such a model is a TRANSPORT, roll before any embarked models disembark). On a 6, each unit within 6\" of that model suffers a number of mortal wounds denoted by 'x' (if this is a random number, roll separately for each unit within 6\")."
+      },
+      {
+        "name": "Hover",
+        "description": "Some **^^Aircraft^^** models have 'Hover' listed in their abilities. When you are instructed to Declare Battle Formations, before doing anything else, you must first declare which models from your army with this ability will be in Hover mode.\n\nIf a model is in Hover mode, then until the end of the battle, its Move characteristic is changed to 20\", it loses the **^^Aircraft^^** keyword and it loses all associated rules for being an **^^Aircraft^^** model. Models in Hover mode do not start the battle in Reserves, but you can choose to place them into Strategic Reserves following the normal rules if you wish."
+      },
+      {
+        "name": "Stealth",
+        "description": "If every model in a unit has this ability, then each time a ranged attack is made against it, subtract 1 from that attack’s Hit roll."
+      },
+      {
+        "name": "Mission Tactics",
+        "description": "Refer to the Detachment Rule for more information."
+      },
+      {
+        "name": "Oath of Moment",
+        "description": "If your Army Faction is **^^Adeptus Astartes^^**, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the **^^Blood Angels^^**, **^^Dark Angels^^**, **^^Deathwatch^^** or **^^Space Wolves^^** keywords, add 1 to the Wound roll as well."
+      }
+    ],
+    "modelGroups": {
+      "corvus-blackstar": {
+        "id": "corvus-blackstar",
+        "name": "Corvus Blackstar",
+        "category": "follower",
+        "stats": {
+          "movement": 20,
+          "toughness": 10,
+          "save": "3+",
+          "wounds": 14,
+          "leadership": "6+",
+          "objectiveControl": 0
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "wargear-armoured-hull",
+            "description": "Wargear: Armoured hull",
+            "exclusiveWith": [
+              "wargear-hurricane-bolter"
+            ]
+          },
+          {
+            "id": "wargear-hurricane-bolter",
+            "description": "Wargear: Hurricane bolter",
+            "exclusiveWith": [
+              "wargear-armoured-hull"
+            ]
+          }
+        ],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "corvus-blackstar": 1
+        },
+        "points": 180
+      }
+    ]
+  },
+  {
+    "id": "deathwatch-terminator-squad",
+    "name": "Deathwatch Terminator Squad",
+    "faction": "Deathwatch",
+    "role": "ELITES",
+    "basePoints": 190,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "2+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "power-fist",
+        "name": "Power Fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "storm-bolter",
+        "name": "Storm Bolter",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 2"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "power-weapon",
+        "name": "Power Weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "thunder-hammer",
+        "name": "Thunder Hammer",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds"
+        ],
+        "weaponSkill": 4
+      },
+      {
+        "id": "chainfist",
+        "name": "Chainfist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Anti-Vehicle 3+"
+        ],
+        "weaponSkill": 4
+      },
+      {
+        "id": "twin-lightning-claws",
+        "name": "Twin lightning claws",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Twin-linked"
+        ],
+        "weaponSkill": 3
+      },
+      {
+        "id": "assault-cannon",
+        "name": "Assault Cannon",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 6,
+        "strength": 6,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "heavy-flamer",
+        "name": "Heavy flamer",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "plasma-cannon-standard",
+        "name": "➤ Plasma cannon - standard",
+        "type": "Assault",
+        "range": 36,
+        "attacks": "D3",
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Blast"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-cannon-supercharge",
+        "name": "➤ Plasma cannon - supercharge",
+        "type": "Assault",
+        "range": 36,
+        "attacks": "D3",
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Blast",
+          "Hazardous"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "cyclone-missile-launcher-frag",
+        "name": "➤ Cyclone missile launcher - frag",
+        "type": "Assault",
+        "range": 36,
+        "attacks": "2D6",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "cyclone-missile-launcher-krak",
+        "name": "➤ Cyclone missile launcher - krak",
+        "type": "Assault",
+        "range": 36,
+        "attacks": 2,
+        "strength": 9,
+        "armourPenetration": -2,
+        "damage": "D6",
+        "abilities": [],
+        "ballisticSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Terminatus Assault",
+        "description": "You can re-roll Charge rolls made for this unit. Each time this unit ends a Charge move, each enemy unit within Engagement Range of this unit must take a Battle-shock test. If that enemy unit does not have the IMPERIUM or CHAOS keywords, subtract 1 from that test."
+      },
+      {
+        "name": "Teleport Homer",
+        "description": "At the start of the battle, you can set up one Teleport Homer token for this unit anywhere on the battlefield that is not in your opponent’s deployment zone. If you do, once per battle, you can target this unit with the Rapid Ingress Stratagem for 0CP, but when resolving that Stratagem, you must set this unit up within 3\" of that token and not within 9\" of any enemy models. That token is then removed."
+      },
+      {
+        "name": "Invulnerable Save",
+        "description": "Models in this unit have a 4+ invulnerable save."
+      },
+      {
+        "name": "Attached Unit",
+        "description": "If a CHARACTER unit from your army with the Leader ability can be attached to a TERMINATOR SQUAD, it can be attached to this unit instead."
+      },
+      {
+        "name": "Deep Strike",
+        "description": "During the Declare Battle Formations step, if every model in a unit has this ability, you can set it up in Reserves instead of setting it up on the battlefield. If you do, in the Reinforcements step of one of your Movement phases you can set up this unit anywhere on the battlefield that is more than 9\" horizontally away from all enemy models.\n\nIf a unit with the Deep Strike ability arrives from Strategic Reserves, the controlling player can choose for that unit to be set up either using the rules for Strategic Reserves or using the Deep Strike ability."
+      },
+      {
+        "name": "Oath of Moment",
+        "description": "If your Army Faction is **^^Adeptus Astartes^^**, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the **^^Blood Angels^^**, **^^Dark Angels^^**, **^^Deathwatch^^** or **^^Space Wolves^^** keywords, add 1 to the Wound roll as well."
+      },
+      {
+        "name": "Mission Tactics",
+        "description": "Refer to the Detachment Rule for more information."
+      }
+    ],
+    "modelGroups": {
+      "deathwatch-terminator": {
+        "id": "deathwatch-terminator",
+        "name": "Deathwatch Terminator",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "2+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 9,
+        "availableOptions": [
+          {
+            "id": "terminator-weapons-twin-lightning-claws",
+            "description": "Terminator Weapons: Twin Lightning Claws",
+            "exclusiveWith": [
+              "terminator-weapons-power-fist-storm-bolter",
+              "terminator-weapons-storm-bolter-power-weapon",
+              "terminator-weapons-thunder-hammer-storm-shield",
+              "terminator-weapons-storm-bolter-chainfist"
+            ]
+          },
+          {
+            "id": "terminator-weapons-power-fist-storm-bolter",
+            "description": "Terminator Weapons: Power Fist & Storm Bolter",
+            "exclusiveWith": [
+              "terminator-weapons-twin-lightning-claws",
+              "terminator-weapons-storm-bolter-power-weapon",
+              "terminator-weapons-thunder-hammer-storm-shield",
+              "terminator-weapons-storm-bolter-chainfist"
+            ]
+          },
+          {
+            "id": "terminator-weapons-storm-bolter-power-weapon",
+            "description": "Terminator Weapons: Storm Bolter & Power Weapon",
+            "exclusiveWith": [
+              "terminator-weapons-twin-lightning-claws",
+              "terminator-weapons-power-fist-storm-bolter",
+              "terminator-weapons-thunder-hammer-storm-shield",
+              "terminator-weapons-storm-bolter-chainfist"
+            ]
+          },
+          {
+            "id": "terminator-weapons-thunder-hammer-storm-shield",
+            "description": "Terminator Weapons: Thunder Hammer & Storm Shield",
+            "exclusiveWith": [
+              "terminator-weapons-twin-lightning-claws",
+              "terminator-weapons-power-fist-storm-bolter",
+              "terminator-weapons-storm-bolter-power-weapon",
+              "terminator-weapons-storm-bolter-chainfist"
+            ]
+          },
+          {
+            "id": "terminator-weapons-storm-bolter-chainfist",
+            "description": "Terminator Weapons: Storm Bolter & Chainfist",
+            "exclusiveWith": [
+              "terminator-weapons-twin-lightning-claws",
+              "terminator-weapons-power-fist-storm-bolter",
+              "terminator-weapons-storm-bolter-power-weapon",
+              "terminator-weapons-thunder-hammer-storm-shield"
+            ]
+          }
+        ],
+        "equippedWargear": [
+          "power-fist-storm-bolter"
+        ]
+      },
+      "deathwatch-terminator-w-heavy-weapon": {
+        "id": "deathwatch-terminator-w-heavy-weapon",
+        "name": "Deathwatch Terminator w/ Heavy Weapon",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "2+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 3,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "deathwatch-terminator-sergeant": {
+        "id": "deathwatch-terminator-sergeant",
+        "name": "Deathwatch Terminator Sergeant",
+        "category": "leader",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "2+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "terminator-weapons-twin-lightning-claws",
+            "description": "Terminator Weapons: Twin Lightning Claws",
+            "exclusiveWith": [
+              "terminator-weapons-power-fist-storm-bolter",
+              "terminator-weapons-storm-bolter-power-weapon",
+              "terminator-weapons-thunder-hammer-storm-shield",
+              "terminator-weapons-storm-bolter-chainfist"
+            ]
+          },
+          {
+            "id": "terminator-weapons-power-fist-storm-bolter",
+            "description": "Terminator Weapons: Power Fist & Storm Bolter",
+            "exclusiveWith": [
+              "terminator-weapons-twin-lightning-claws",
+              "terminator-weapons-storm-bolter-power-weapon",
+              "terminator-weapons-thunder-hammer-storm-shield",
+              "terminator-weapons-storm-bolter-chainfist"
+            ]
+          },
+          {
+            "id": "terminator-weapons-storm-bolter-power-weapon",
+            "description": "Terminator Weapons: Storm Bolter & Power Weapon",
+            "exclusiveWith": [
+              "terminator-weapons-twin-lightning-claws",
+              "terminator-weapons-power-fist-storm-bolter",
+              "terminator-weapons-thunder-hammer-storm-shield",
+              "terminator-weapons-storm-bolter-chainfist"
+            ]
+          },
+          {
+            "id": "terminator-weapons-thunder-hammer-storm-shield",
+            "description": "Terminator Weapons: Thunder Hammer & Storm Shield",
+            "exclusiveWith": [
+              "terminator-weapons-twin-lightning-claws",
+              "terminator-weapons-power-fist-storm-bolter",
+              "terminator-weapons-storm-bolter-power-weapon",
+              "terminator-weapons-storm-bolter-chainfist"
+            ]
+          },
+          {
+            "id": "terminator-weapons-storm-bolter-chainfist",
+            "description": "Terminator Weapons: Storm Bolter & Chainfist",
+            "exclusiveWith": [
+              "terminator-weapons-twin-lightning-claws",
+              "terminator-weapons-power-fist-storm-bolter",
+              "terminator-weapons-storm-bolter-power-weapon",
+              "terminator-weapons-thunder-hammer-storm-shield"
+            ]
+          }
+        ],
+        "equippedWargear": [
+          "power-fist-storm-bolter"
+        ]
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "deathwatch-terminator": 4,
+          "deathwatch-terminator-w-heavy-weapon": 0,
+          "deathwatch-terminator-sergeant": 1
+        },
+        "points": 190
+      },
+      {
+        "composition": {
+          "deathwatch-terminator": 9,
+          "deathwatch-terminator-w-heavy-weapon": 0,
+          "deathwatch-terminator-sergeant": 1
+        },
+        "points": 350
+      }
+    ]
+  },
+  {
+    "id": "deathwatch-veterans",
+    "name": "Deathwatch Veterans",
+    "faction": "Deathwatch",
+    "role": "TROOPS",
+    "basePoints": 100,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "boltgun",
+        "name": "Boltgun",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "power-weapon",
+        "name": "Power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "deathwatch-thunder-hammer",
+        "name": "Deathwatch thunder hammer",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 10,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": [
+          "Devastating Wounds"
+        ],
+        "weaponSkill": 4
+      },
+      {
+        "id": "frag-cannon",
+        "name": "Frag cannon",
+        "type": "Rapid Fire",
+        "range": 18,
+        "attacks": "D3",
+        "strength": 7,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Blast",
+          "Heavy",
+          "Rapid Fire D3"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "infernus-heavy-bolter-heavy-bolter",
+        "name": "➤ Infernus heavy bolter - heavy bolter",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Heavy",
+          "Sustained Hits 1"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "infernus-heavy-bolter-heavy-flamer",
+        "name": "➤ Infernus heavy bolter - heavy flamer",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "stalker-pattern-boltgun",
+        "name": "Stalker-pattern boltgun",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Heavy",
+          "Precision"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "deathwatch-shotgun",
+        "name": "Deathwatch shotgun",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 2,
+        "abilities": [
+          "Assault"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "blackshield-blades",
+        "name": "Blackshield blades",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Twin-linked"
+        ],
+        "weaponSkill": 3
+      },
+      {
+        "id": "xenophase-blade",
+        "name": "Xenophase blade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ],
+        "weaponSkill": 3
+      },
+      {
+        "id": "combi-weapon",
+        "name": "Combi-weapon",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 4+",
+          "Devastating Wounds",
+          "Rapid Fire 1"
+        ],
+        "ballisticSkill": 4
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Death to the Alien",
+        "description": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target of that attack does not have the IMPERIUM or CHAOS keywords, you can re-roll the Hit roll instead."
+      },
+      {
+        "name": "Attached Unit",
+        "description": "If a CHARACTER unit from your army with the Leader ability can be attached to a STERNGUARD VETERAN SQUAD, it can be attached to this unit instead."
+      },
+      {
+        "name": "Astartes shield",
+        "description": "The bearer has a 4+ invulnerable save."
+      },
+      {
+        "name": "Mission Tactics",
+        "description": "Refer to the Detachment Rule for more information."
+      },
+      {
+        "name": "Oath of Moment",
+        "description": "If your Army Faction is **^^Adeptus Astartes^^**, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the **^^Blood Angels^^**, **^^Dark Angels^^**, **^^Deathwatch^^** or **^^Space Wolves^^** keywords, add 1 to the Wound roll as well."
+      }
+    ],
+    "modelGroups": {
+      "veteran-w-boltgun-and-power-weapon": {
+        "id": "veteran-w-boltgun-and-power-weapon",
+        "name": "Veteran w/ boltgun and power weapon",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 10,
+        "availableOptions": [],
+        "equippedWargear": [
+          "boltgun",
+          "power-weapon"
+        ]
+      },
+      "veteran-w-deathwatch-thunder-hammer": {
+        "id": "veteran-w-deathwatch-thunder-hammer",
+        "name": "Veteran w/ Deathwatch thunder hammer",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 4,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "veteran-w-frag-cannon-and-ccw": {
+        "id": "veteran-w-frag-cannon-and-ccw",
+        "name": "Veteran w/ frag cannon and CCW",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 2,
+        "availableOptions": [],
+        "equippedWargear": [
+          "close-combat-weapon"
+        ]
+      },
+      "veteran-w-infernus-heavy-bolter-and-ccw": {
+        "id": "veteran-w-infernus-heavy-bolter-and-ccw",
+        "name": "Veteran w/ infernus heavy bolter and CCW",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 2,
+        "availableOptions": [],
+        "equippedWargear": [
+          "close-combat-weapon",
+          "infernus-heavy-bolter"
+        ]
+      },
+      "veteran-w-astartes-shield-and-boltgun": {
+        "id": "veteran-w-astartes-shield-and-boltgun",
+        "name": "Veteran w/ Astartes shield and boltgun",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 4,
+        "availableOptions": [],
+        "equippedWargear": [
+          "boltgun",
+          "close-combat-weapon"
+        ]
+      },
+      "veteran-w-astartes-shield-and-power-weapon": {
+        "id": "veteran-w-astartes-shield-and-power-weapon",
+        "name": "Veteran w/ Astartes shield and power weapon",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 4,
+        "availableOptions": [],
+        "equippedWargear": [
+          "power-weapon"
+        ]
+      },
+      "veteran-w-stalker-pattern-boltgun-and-ccw": {
+        "id": "veteran-w-stalker-pattern-boltgun-and-ccw",
+        "name": "Veteran w/ stalker-pattern boltgun and CCW",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 2,
+        "availableOptions": [],
+        "equippedWargear": [
+          "close-combat-weapon"
+        ]
+      },
+      "veteran-w-deathwatch-shotgun-and-ccw": {
+        "id": "veteran-w-deathwatch-shotgun-and-ccw",
+        "name": "Veteran w/ Deathwatch shotgun and CCW",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 4,
+        "availableOptions": [],
+        "equippedWargear": [
+          "close-combat-weapon"
+        ]
+      },
+      "veteran-w-black-shield-blades": {
+        "id": "veteran-w-black-shield-blades",
+        "name": "Veteran w/ Black Shield blades",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "sgt-w-astartes-shield-and-xenophase-blade": {
+        "id": "sgt-w-astartes-shield-and-xenophase-blade",
+        "name": "Sgt w/ Astartes shield and xenophase blade",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "xenophase-blade"
+        ]
+      },
+      "sgt-w-boltgun-and-xenophase-blade": {
+        "id": "sgt-w-boltgun-and-xenophase-blade",
+        "name": "Sgt w/ boltgun and xenophase blade",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "boltgun",
+          "xenophase-blade"
+        ]
+      },
+      "sgt-w-combi-weapon-and-power-weapon": {
+        "id": "sgt-w-combi-weapon-and-power-weapon",
+        "name": "Sgt w/ combi-weapon and power weapon",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "power-weapon",
+          "combi-weapon"
+        ]
+      },
+      "sgt-w-combi-weapon-and-xenophase-blade": {
+        "id": "sgt-w-combi-weapon-and-xenophase-blade",
+        "name": "Sgt w/ combi-weapon and xenophase blade",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "xenophase-blade",
+          "combi-weapon"
+        ]
+      },
+      "sgt-w-astartes-shield-and-combi-weapon": {
+        "id": "sgt-w-astartes-shield-and-combi-weapon",
+        "name": "Sgt w/ Astartes shield and combi-weapon",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "combi-weapon"
+        ]
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "veteran-w-boltgun-and-power-weapon": 5,
+          "veteran-w-deathwatch-thunder-hammer": 0,
+          "veteran-w-frag-cannon-and-ccw": 0,
+          "veteran-w-infernus-heavy-bolter-and-ccw": 0,
+          "veteran-w-astartes-shield-and-boltgun": 0,
+          "veteran-w-astartes-shield-and-power-weapon": 0,
+          "veteran-w-stalker-pattern-boltgun-and-ccw": 0,
+          "veteran-w-deathwatch-shotgun-and-ccw": 0,
+          "veteran-w-black-shield-blades": 0,
+          "sgt-w-astartes-shield-and-xenophase-blade": 0,
+          "sgt-w-boltgun-and-xenophase-blade": 0,
+          "sgt-w-combi-weapon-and-power-weapon": 0,
+          "sgt-w-combi-weapon-and-xenophase-blade": 0,
+          "sgt-w-astartes-shield-and-combi-weapon": 0
+        },
+        "points": 100
+      },
+      {
+        "composition": {
+          "veteran-w-boltgun-and-power-weapon": 10,
+          "veteran-w-deathwatch-thunder-hammer": 4,
+          "veteran-w-frag-cannon-and-ccw": 0,
+          "veteran-w-infernus-heavy-bolter-and-ccw": 0,
+          "veteran-w-astartes-shield-and-boltgun": 1,
+          "veteran-w-astartes-shield-and-power-weapon": 0,
+          "veteran-w-stalker-pattern-boltgun-and-ccw": 0,
+          "veteran-w-deathwatch-shotgun-and-ccw": 0,
+          "veteran-w-black-shield-blades": 0,
+          "sgt-w-astartes-shield-and-xenophase-blade": 0,
+          "sgt-w-boltgun-and-xenophase-blade": 0,
+          "sgt-w-combi-weapon-and-power-weapon": 0,
+          "sgt-w-combi-weapon-and-xenophase-blade": 0,
+          "sgt-w-astartes-shield-and-combi-weapon": 0
+        },
+        "points": 190
+      }
+    ]
+  },
+  {
+    "id": "decimus-kill-team",
+    "name": "Decimus Kill Team",
+    "faction": "Deathwatch",
+    "role": "TROOPS",
+    "basePoints": 100,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "plasma-pistol-standard",
+        "name": "➤ Plasma pistol - Standard",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-pistol-supercharge",
+        "name": "➤ Plasma pistol - Supercharge",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Hazardous",
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "power-weapon",
+        "name": "Power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Sustained Hits 1"
+        ],
+        "weaponSkill": 3
+      },
+      {
+        "id": "stalker-bolt-rifle",
+        "name": "Stalker bolt rifle",
+        "type": "Heavy",
+        "range": 30,
+        "attacks": 2,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Heavy",
+          "Lethal Hits",
+          "Precision"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-incinerator-standard",
+        "name": "➤ Plasma incinerator - Standard",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Assault",
+          "Heavy"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-incinerator-supercharge",
+        "name": "➤ Plasma incinerator - Supercharge",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Assault",
+          "Hazardous",
+          "Heavy"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol",
+          "Lethal Hits"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "heavy-thunder-hammer",
+        "name": "Heavy thunder hammer",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 10,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": [
+          "Devastating Wounds"
+        ],
+        "weaponSkill": 4
+      },
+      {
+        "id": "deathwatch-marksman-bolt-carbine",
+        "name": "Deathwatch marksman bolt carbine",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Heavy",
+          "Lethal Hits"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "combat-knife",
+        "name": "Combat knife",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Precision"
+        ],
+        "weaponSkill": 3
+      },
+      {
+        "id": "special-issue-bolt-pistol",
+        "name": "Special-issue bolt pistol",
+        "type": "Pistol",
+        "range": 18,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Pistol",
+          "Precision",
+          "Lethal Hits"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "frag-cannon",
+        "name": "Frag cannon",
+        "type": "Rapid Fire",
+        "range": 18,
+        "attacks": "D3",
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Blast",
+          "Heavy",
+          "Lethal Hits",
+          "Rapid Fire D3"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "hellstorm-bolt-rifle",
+        "name": "Hellstorm bolt rifle",
+        "type": "Assault",
+        "range": 30,
+        "attacks": 2,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Assault",
+          "Heavy",
+          "Lethal Hits"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "astartes-grenade-launcher-frag",
+        "name": "➤ Astartes grenade launcher - frag",
+        "type": "Assault",
+        "range": 24,
+        "attacks": "D3",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "astartes-grenade-launcher-krak",
+        "name": "➤ Astartes grenade launcher - krak",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 1,
+        "strength": 9,
+        "armourPenetration": -2,
+        "damage": "D3",
+        "abilities": [],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "infernus-heavy-bolter-heavy-bolter",
+        "name": "➤ Infernus heavy bolter - heavy bolter",
+        "type": "Assault",
+        "range": 36,
+        "attacks": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": [
+          "Sustained Hits 1"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "infernus-heavy-bolter-heavy-flamer",
+        "name": "➤ Infernus heavy bolter - heavy flamer",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "xenophase-blade",
+        "name": "Xenophase blade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds"
+        ],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Death to the Alien",
+        "description": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target of that attack does not have the ^^**Imperium^^** or ^^**Chaos^^** keywords, you can re-roll the Hit roll instead."
+      },
+      {
+        "name": "Attached Unit",
+        "description": "If a ^^**Character^^** unit from your army can be attached to a ^^**Fortis Kill Team^^** unit, it can be attached to this unit instead."
+      },
+      {
+        "name": "Mission Tactics",
+        "description": "Refer to the Detachment Rule for more information."
+      },
+      {
+        "name": "Oath of Moment",
+        "description": "If your Army Faction is **^^Adeptus Astartes^^**, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the **^^Blood Angels^^**, **^^Dark Angels^^**, **^^Deathwatch^^** or **^^Space Wolves^^** keywords, add 1 to the Wound roll as well."
+      }
+    ],
+    "modelGroups": {
+      "kill-team-sergeant": {
+        "id": "kill-team-sergeant",
+        "name": "Kill Team Sergeant",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "plasma-pistol"
+        ]
+      },
+      "deathwatch-veteran-w-stalker-bolt-rifle": {
+        "id": "deathwatch-veteran-w-stalker-bolt-rifle",
+        "name": "Deathwatch Veteran w/ stalker bolt rifle",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "exchange-rifle-plasma-incinerator",
+            "description": "Exchange rifle: Plasma incinerator",
+            "exclusiveWith": [
+              "exchange-rifle-stalker-bolt-rifle"
+            ]
+          },
+          {
+            "id": "exchange-rifle-stalker-bolt-rifle",
+            "description": "Exchange rifle: Stalker bolt rifle",
+            "exclusiveWith": [
+              "exchange-rifle-plasma-incinerator"
+            ]
+          }
+        ],
+        "equippedWargear": [
+          "bolt-pistol",
+          "close-combat-weapon",
+          "stalker-bolt-rifle"
+        ]
+      },
+      "deathwatch-veteran-w-heavy-thunder-hammer": {
+        "id": "deathwatch-veteran-w-heavy-thunder-hammer",
+        "name": "Deathwatch Veteran w/ heavy thunder hammer",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "exchange-hammer-power-weapon-and-astartes-shield",
+            "description": "Exchange hammer: Power weapon and Astartes shield",
+            "exclusiveWith": [
+              "exchange-hammer-heavy-thunder-hammer"
+            ]
+          },
+          {
+            "id": "exchange-hammer-heavy-thunder-hammer",
+            "description": "Exchange hammer: Heavy thunder hammer",
+            "exclusiveWith": [
+              "exchange-hammer-power-weapon-and-astartes-shield"
+            ]
+          }
+        ],
+        "equippedWargear": [
+          "bolt-pistol",
+          "heavy-thunder-hammer"
+        ]
+      },
+      "deathwatch-veteran-w-carbine": {
+        "id": "deathwatch-veteran-w-carbine",
+        "name": "Deathwatch Veteran w/ carbine",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "exchange-carbine-deathwatch-marksman-bolt-carbine",
+            "description": "Exchange carbine: Deathwatch marksman bolt carbine",
+            "exclusiveWith": [
+              "exchange-carbine-combat-knife"
+            ]
+          },
+          {
+            "id": "exchange-carbine-combat-knife",
+            "description": "Exchange carbine: Combat knife",
+            "exclusiveWith": [
+              "exchange-carbine-deathwatch-marksman-bolt-carbine"
+            ]
+          }
+        ],
+        "equippedWargear": [
+          "close-combat-weapon",
+          "deathwatch-marksman-bolt-carbine"
+        ]
+      },
+      "gravis-veteran-w-infernus-heavy-bolter": {
+        "id": "gravis-veteran-w-infernus-heavy-bolter",
+        "name": "Gravis Veteran w/ infernus heavy bolter",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 6,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "weapon-frag-cannon",
+            "description": "Weapon: Frag cannon",
+            "exclusiveWith": [
+              "weapon-hellstorm-bolt-rifle-and-grenade-launcher",
+              "weapon-infernus-heavy-bolter"
+            ]
+          },
+          {
+            "id": "weapon-hellstorm-bolt-rifle-and-grenade-launcher",
+            "description": "Weapon: Hellstorm bolt rifle and grenade launcher",
+            "exclusiveWith": [
+              "weapon-frag-cannon",
+              "weapon-infernus-heavy-bolter"
+            ]
+          },
+          {
+            "id": "weapon-infernus-heavy-bolter",
+            "description": "Weapon: Infernus heavy bolter",
+            "exclusiveWith": [
+              "weapon-frag-cannon",
+              "weapon-hellstorm-bolt-rifle-and-grenade-launcher"
+            ]
+          }
+        ],
+        "equippedWargear": [
+          "bolt-pistol",
+          "close-combat-weapon",
+          "infernus-heavy-bolter"
+        ]
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "kill-team-sergeant": 1,
+          "deathwatch-veteran-w-stalker-bolt-rifle": 1,
+          "deathwatch-veteran-w-heavy-thunder-hammer": 1,
+          "deathwatch-veteran-w-carbine": 1,
+          "gravis-veteran-w-infernus-heavy-bolter": 1
+        },
+        "points": 200
+      }
+    ]
+  },
+  {
+    "id": "fortis-kill-team",
+    "name": "Fortis Kill Team",
+    "faction": "Deathwatch",
+    "role": "ELITES",
+    "basePoints": 180,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "astartes-chainsword",
+        "name": "Astartes Chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "deathwatch-bolt-rifle",
+        "name": "Deathwatch bolt rifle",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Assault",
+          "Heavy",
+          "Lethal Hits"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "power-weapon",
+        "name": "Power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "hand-flamer",
+        "name": "Hand flamer",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": "D6",
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Pistol",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "plasma-pistol-supercharge",
+        "name": "➤ Plasma pistol - supercharge",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Hazardous",
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-pistol-standard",
+        "name": "➤ Plasma pistol - standard",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "power-fist",
+        "name": "Power fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "thunder-hammer",
+        "name": "Thunder Hammer",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Devastating Wounds"
+        ],
+        "weaponSkill": 4
+      },
+      {
+        "id": "astartes-grenade-launcher-krak",
+        "name": "➤ Astartes grenade launcher - krak",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 1,
+        "strength": 9,
+        "armourPenetration": -2,
+        "damage": "D3",
+        "abilities": [],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "astartes-grenade-launcher-frag",
+        "name": "➤ Astartes grenade launcher - frag",
+        "type": "Assault",
+        "range": 24,
+        "attacks": "D3",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "heavy-bolt-pistol",
+        "name": "Heavy bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "pyreblaster",
+        "name": "Pyreblaster",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "plasma-incinerator-standard",
+        "name": "➤ Plasma incinerator - Standard",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Assault",
+          "Heavy"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-incinerator-supercharge",
+        "name": "➤ Plasma incinerator - Supercharge",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Assault",
+          "Hazardous",
+          "Heavy"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "castellan-launcher",
+        "name": "Castellan Launcher",
+        "type": "Assault",
+        "range": 36,
+        "attacks": "D3",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast",
+          "Indirect Fire"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "vengor-launcher",
+        "name": "Vengor launcher",
+        "type": "Assault",
+        "range": 48,
+        "attacks": "D6",
+        "strength": 7,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Blast",
+          "Indirect Fire"
+        ],
+        "ballisticSkill": 2
+      },
+      {
+        "id": "superfrag-missile-launcher",
+        "name": "Superfrag missile launcher",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": "D6+1",
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast",
+          "Heavy"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "superkrak-missile-launcher",
+        "name": "Superkrak missile launcher",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 1,
+        "strength": 10,
+        "armourPenetration": -2,
+        "damage": "D6+1",
+        "abilities": [
+          "Heavy"
+        ],
+        "ballisticSkill": 4
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Fortis Doctrines",
+        "description": "Each time a model in this unit makes an attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Hit roll and add 1 to the Wound roll instead."
+      },
+      {
+        "name": "Attached Unit",
+        "description": "If a CHARACTER from your army with the Leader ability can be attached to an INTERCESSOR SQUAD, it can be attached to this unit instead."
+      },
+      {
+        "name": "Mission Tactics",
+        "description": "Refer to the Detachment Rule for more information."
+      },
+      {
+        "name": "Oath of Moment",
+        "description": "If your Army Faction is **^^Adeptus Astartes^^**, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the **^^Blood Angels^^**, **^^Dark Angels^^**, **^^Deathwatch^^** or **^^Space Wolves^^** keywords, add 1 to the Wound roll as well."
+      }
+    ],
+    "modelGroups": {
+      "kill-team-sergeant": {
+        "id": "kill-team-sergeant",
+        "name": "Kill Team Sergeant",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "replace-bolt-rifle-astartes-chainsword",
+            "description": "Replace bolt rifle: Astartes Chainsword",
+            "exclusiveWith": [
+              "replace-bolt-rifle-deathwatch-bolt-rifle",
+              "replace-bolt-rifle-power-weapon",
+              "replace-bolt-rifle-hand-flamer",
+              "replace-bolt-rifle-plasma-pistol"
+            ]
+          },
+          {
+            "id": "replace-bolt-rifle-deathwatch-bolt-rifle",
+            "description": "Replace bolt rifle: Deathwatch bolt rifle",
+            "exclusiveWith": [
+              "replace-bolt-rifle-astartes-chainsword",
+              "replace-bolt-rifle-power-weapon",
+              "replace-bolt-rifle-hand-flamer",
+              "replace-bolt-rifle-plasma-pistol"
+            ]
+          },
+          {
+            "id": "replace-bolt-rifle-power-weapon",
+            "description": "Replace bolt rifle: Power Weapon",
+            "exclusiveWith": [
+              "replace-bolt-rifle-astartes-chainsword",
+              "replace-bolt-rifle-deathwatch-bolt-rifle",
+              "replace-bolt-rifle-hand-flamer",
+              "replace-bolt-rifle-plasma-pistol"
+            ]
+          },
+          {
+            "id": "replace-bolt-rifle-hand-flamer",
+            "description": "Replace bolt rifle: Hand Flamer",
+            "exclusiveWith": [
+              "replace-bolt-rifle-astartes-chainsword",
+              "replace-bolt-rifle-deathwatch-bolt-rifle",
+              "replace-bolt-rifle-power-weapon",
+              "replace-bolt-rifle-plasma-pistol"
+            ]
+          },
+          {
+            "id": "replace-bolt-rifle-plasma-pistol",
+            "description": "Replace bolt rifle: Plasma Pistol",
+            "exclusiveWith": [
+              "replace-bolt-rifle-astartes-chainsword",
+              "replace-bolt-rifle-deathwatch-bolt-rifle",
+              "replace-bolt-rifle-power-weapon",
+              "replace-bolt-rifle-hand-flamer"
+            ]
+          },
+          {
+            "id": "replace-ccw-close-combat-weapon",
+            "description": "Replace CCW: Close combat weapon",
+            "exclusiveWith": [
+              "replace-ccw-power-weapon",
+              "replace-ccw-power-fist",
+              "replace-ccw-thunder-hammer",
+              "replace-ccw-astartes-chainsword"
+            ]
+          },
+          {
+            "id": "replace-ccw-power-weapon",
+            "description": "Replace CCW: Power Weapon",
+            "exclusiveWith": [
+              "replace-ccw-close-combat-weapon",
+              "replace-ccw-power-fist",
+              "replace-ccw-thunder-hammer",
+              "replace-ccw-astartes-chainsword"
+            ]
+          },
+          {
+            "id": "replace-ccw-power-fist",
+            "description": "Replace CCW: Power Fist",
+            "exclusiveWith": [
+              "replace-ccw-close-combat-weapon",
+              "replace-ccw-power-weapon",
+              "replace-ccw-thunder-hammer",
+              "replace-ccw-astartes-chainsword"
+            ]
+          },
+          {
+            "id": "replace-ccw-thunder-hammer",
+            "description": "Replace CCW: Thunder Hammer",
+            "exclusiveWith": [
+              "replace-ccw-close-combat-weapon",
+              "replace-ccw-power-weapon",
+              "replace-ccw-power-fist",
+              "replace-ccw-astartes-chainsword"
+            ]
+          },
+          {
+            "id": "replace-ccw-astartes-chainsword",
+            "description": "Replace CCW: Astartes Chainsword",
+            "exclusiveWith": [
+              "replace-ccw-close-combat-weapon",
+              "replace-ccw-power-weapon",
+              "replace-ccw-power-fist",
+              "replace-ccw-thunder-hammer"
+            ]
+          }
+        ],
+        "equippedWargear": [
+          "bolt-pistol",
+          "deathwatch-bolt-rifle",
+          "close-combat-weapon"
+        ]
+      },
+      "kill-team-intercessor": {
+        "id": "kill-team-intercessor",
+        "name": "Kill Team Intercessor",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 2,
+        "maxQuantity": 9,
+        "availableOptions": [],
+        "equippedWargear": [
+          "bolt-pistol",
+          "close-combat-weapon",
+          "deathwatch-bolt-rifle"
+        ]
+      },
+      "kill-team-intercessor-w-grenade-launcher": {
+        "id": "kill-team-intercessor-w-grenade-launcher",
+        "name": "Kill Team Intercessor w/ grenade launcher",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 2,
+        "availableOptions": [],
+        "equippedWargear": [
+          "bolt-pistol",
+          "close-combat-weapon",
+          "deathwatch-bolt-rifle",
+          "astartes-grenade-launcher"
+        ]
+      },
+      "kill-team-intercessor-w-heavy-bolt-pistol": {
+        "id": "kill-team-intercessor-w-heavy-bolt-pistol",
+        "name": "Kill Team Intercessor w/ heavy bolt pistol",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 4,
+        "availableOptions": [],
+        "equippedWargear": [
+          "astartes-chainsword"
+        ]
+      },
+      "kill-team-intercessor-w-pyreblaster": {
+        "id": "kill-team-intercessor-w-pyreblaster",
+        "name": "Kill Team Intercessor w/ pyreblaster",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 4,
+        "availableOptions": [],
+        "equippedWargear": [
+          "bolt-pistol",
+          "close-combat-weapon",
+          "pyreblaster"
+        ]
+      },
+      "kill-team-intercessor-w-plasma-pistol-and-incinerator": {
+        "id": "kill-team-intercessor-w-plasma-pistol-and-incinerator",
+        "name": "Kill Team Intercessor w/ plasma pistol and incinerator",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "close-combat-weapon",
+          "plasma-pistol",
+          "plasma-incinerator"
+        ]
+      },
+      "kill-team-intercessor-w-bolt-pistol-and-incinerator": {
+        "id": "kill-team-intercessor-w-bolt-pistol-and-incinerator",
+        "name": "Kill Team Intercessor w/ bolt pistol and incinerator",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 4,
+        "availableOptions": [],
+        "equippedWargear": [
+          "close-combat-weapon",
+          "bolt-pistol",
+          "plasma-incinerator"
+        ]
+      },
+      "kill-team-intercessor-w-vengor-launcher": {
+        "id": "kill-team-intercessor-w-vengor-launcher",
+        "name": "Kill Team Intercessor w/ vengor launcher",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "close-combat-weapon",
+          "bolt-pistol",
+          "castellan-launcher",
+          "vengor-launcher"
+        ]
+      },
+      "kill-team-intercessor-w-superfrag-missile-launcher": {
+        "id": "kill-team-intercessor-w-superfrag-missile-launcher",
+        "name": "Kill Team Intercessor w/ superfrag missile launcher",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 2,
+        "availableOptions": [],
+        "equippedWargear": [
+          "close-combat-weapon",
+          "bolt-pistol",
+          "castellan-launcher"
+        ]
+      },
+      "kill-team-intercessor-w-superkrak-missile-launcher": {
+        "id": "kill-team-intercessor-w-superkrak-missile-launcher",
+        "name": "Kill Team Intercessor w/ superkrak missile launcher",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 2,
+        "availableOptions": [],
+        "equippedWargear": [
+          "close-combat-weapon",
+          "bolt-pistol",
+          "castellan-launcher"
+        ]
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "kill-team-sergeant": 1,
+          "kill-team-intercessor": 9,
+          "kill-team-intercessor-w-grenade-launcher": 0,
+          "kill-team-intercessor-w-heavy-bolt-pistol": 4,
+          "kill-team-intercessor-w-pyreblaster": 2,
+          "kill-team-intercessor-w-plasma-pistol-and-incinerator": 0,
+          "kill-team-intercessor-w-bolt-pistol-and-incinerator": 0,
+          "kill-team-intercessor-w-vengor-launcher": 0,
+          "kill-team-intercessor-w-superfrag-missile-launcher": 0,
+          "kill-team-intercessor-w-superkrak-missile-launcher": 0
+        },
+        "points": 180
+      }
+    ]
+  },
+  {
+    "id": "indomitor-kill-team",
+    "name": "Indomitor Kill Team",
+    "faction": "Deathwatch",
+    "role": "ELITES",
+    "basePoints": 265,
+    "stats": {
+      "movement": 5,
+      "toughness": 6,
+      "save": "3+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "melta-rifle",
+        "name": "Melta rifle",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 1,
+        "strength": 9,
+        "armourPenetration": -4,
+        "damage": "D6",
+        "abilities": [
+          "Heavy",
+          "Melta 2"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "multi-melta",
+        "name": "Multi-melta",
+        "type": "Heavy",
+        "range": 18,
+        "attacks": 2,
+        "strength": 9,
+        "armourPenetration": -4,
+        "damage": "D6",
+        "abilities": [
+          "Heavy",
+          "Melta 2"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "auto-boltstorm-gauntlets",
+        "name": "Auto boltstorm gauntlets",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Twin-linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "twin-power-fists",
+        "name": "Twin power fists",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Twin-linked"
+        ],
+        "weaponSkill": 3
+      },
+      {
+        "id": "fragstorm-grenade-launcher",
+        "name": "Fragstorm grenade launcher",
+        "type": "Assault",
+        "range": 18,
+        "attacks": "D6",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "flamestorm-gauntlets",
+        "name": "Flamestorm gauntlets",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6+1",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent",
+          "Twin-linked"
+        ]
+      },
+      {
+        "id": "deathwatch-heavy-bolt-rifle",
+        "name": "Deathwatch heavy bolt rifle",
+        "type": "Assault",
+        "range": 30,
+        "attacks": 2,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Assault",
+          "Heavy",
+          "Lethal Hits"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "deathwatch-heavy-bolter",
+        "name": "Deathwatch heavy bolter",
+        "type": "Assault",
+        "range": 36,
+        "attacks": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": [
+          "Assault",
+          "Heavy",
+          "Lethal Hits",
+          "Sustained Hits 1"
+        ],
+        "ballisticSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Indomitor Doctrines",
+        "description": "Each time a model in this unit makes a ranged attack that targets the closest eligible target, or makes a melee attack in a turn in which it made a Charge move, improve the Strength characteristic of that attack by 2."
+      },
+      {
+        "name": "Attached Unit",
+        "description": "If a CHARACTER unit from your army can be attached to a HEAVY INTERCESSOR SQUAD, it can be attached to this unit instead."
+      },
+      {
+        "name": "Mission Tactics",
+        "description": "Refer to the Detachment Rule for more information."
+      },
+      {
+        "name": "Oath of Moment",
+        "description": "If your Army Faction is **^^Adeptus Astartes^^**, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the **^^Blood Angels^^**, **^^Dark Angels^^**, **^^Deathwatch^^** or **^^Space Wolves^^** keywords, add 1 to the Wound roll as well."
+      }
+    ],
+    "modelGroups": {
+      "kill-team-heavy-intercessor-w-melta-rifle": {
+        "id": "kill-team-heavy-intercessor-w-melta-rifle",
+        "name": "Kill Team Heavy Intercessor w/ melta rifle",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 6,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 3,
+        "availableOptions": [],
+        "equippedWargear": [
+          "bolt-pistol",
+          "close-combat-weapon",
+          "melta-rifle"
+        ]
+      },
+      "kill-team-heavy-intercessor-w-multi-melta": {
+        "id": "kill-team-heavy-intercessor-w-multi-melta",
+        "name": "Kill Team Heavy Intercessor w/ multi-melta",
+        "category": "leader",
+        "stats": {
+          "movement": 5,
+          "toughness": 6,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "bolt-pistol",
+          "close-combat-weapon",
+          "multi-melta"
+        ]
+      },
+      "kill-team-heavy-intercessor-w-power-fists-auto-boltstorm-gauntlets": {
+        "id": "kill-team-heavy-intercessor-w-power-fists-auto-boltstorm-gauntlets",
+        "name": "Kill Team Heavy Intercessor w/ power fists & auto boltstorm gauntlets",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 6,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 3,
+        "availableOptions": [],
+        "equippedWargear": [
+          "fragstorm-grenade-launcher"
+        ]
+      },
+      "kill-team-heavy-intercessor-w-power-fists-flamestorm-gauntlets": {
+        "id": "kill-team-heavy-intercessor-w-power-fists-flamestorm-gauntlets",
+        "name": "Kill Team Heavy Intercessor w/ power fists & flamestorm gauntlets",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 6,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 3,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "kill-team-heavy-intercessor": {
+        "id": "kill-team-heavy-intercessor",
+        "name": "Kill Team Heavy Intercessor",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 6,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 2,
+        "maxQuantity": 10,
+        "availableOptions": [],
+        "equippedWargear": [
+          "bolt-pistol",
+          "close-combat-weapon"
+        ]
+      },
+      "kill-team-heavy-intercessor-w-heavy-bolter": {
+        "id": "kill-team-heavy-intercessor-w-heavy-bolter",
+        "name": "Kill Team Heavy Intercessor w/ heavy bolter",
+        "category": "leader",
+        "stats": {
+          "movement": 5,
+          "toughness": 6,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "bolt-pistol",
+          "close-combat-weapon"
+        ]
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "kill-team-heavy-intercessor-w-melta-rifle": 3,
+          "kill-team-heavy-intercessor-w-multi-melta": 0,
+          "kill-team-heavy-intercessor-w-power-fists-auto-boltstorm-gauntlets": 3,
+          "kill-team-heavy-intercessor-w-power-fists-flamestorm-gauntlets": 0,
+          "kill-team-heavy-intercessor": 10,
+          "kill-team-heavy-intercessor-w-heavy-bolter": 0
+        },
+        "points": 265
+      }
+    ]
+  },
+  {
+    "id": "kill-team-cassius-legends",
+    "name": "Kill Team Cassius [Legends]",
+    "faction": "Deathwatch",
+    "role": "ELITES",
+    "basePoints": 220,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "5+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "artificer-crozius",
+        "name": "Artificer crozius",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 2
+      },
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "boltgun",
+        "name": "Boltgun",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "long-vigil-ranged-weapon",
+        "name": "Long Vigil ranged weapon",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 4+",
+          "Devastating Wounds",
+          "Rapid Fire 1"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "long-vigil-melee-weapon",
+        "name": "Long Vigil melee weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "frag-cannon",
+        "name": "Frag cannon",
+        "type": "Rapid Fire",
+        "range": 18,
+        "attacks": "D3",
+        "strength": 7,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Blast",
+          "Heavy",
+          "Rapid Fire D3"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "twin-lightning-claws",
+        "name": "Twin lightning claws",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Twin-Linked"
+        ],
+        "weaponSkill": 3
+      },
+      {
+        "id": "psychic-cleanse",
+        "name": "Psychic Cleanse",
+        "type": "Assault",
+        "range": 24,
+        "attacks": "D6",
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": "D3",
+        "abilities": [
+          "Psychic"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "force-weapon",
+        "name": "Force weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "strength": 5,
+        "armourPenetration": -3,
+        "damage": "D3",
+        "abilities": [
+          "Psychic"
+        ],
+        "weaponSkill": 2
+      },
+      {
+        "id": "heavy-flamer",
+        "name": "Heavy Flamer",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "power-fist",
+        "name": "Power fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "deathwatch-twin-boltgun",
+        "name": "Deathwatch twin boltgun",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "ballisticSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Catechism of Death",
+        "description": "While this unit contains Chaplain Cassius, melee weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability."
+      },
+      {
+        "name": "Unflinching",
+        "description": "You can re-roll Battle-shock tests for this unit."
+      },
+      {
+        "name": "Invulnerable Save",
+        "description": "Chaplain Cassius has a 4+ invulnerable save."
+      },
+      {
+        "name": "Jump Pack",
+        "description": "The bearer has a Move characteristic of 12\" and can move over models and terrain as if they were not there."
+      },
+      {
+        "name": "Psychic Hood",
+        "description": "Models in the bearer’s unit have the Feel No Pain 4+ ability against Psychic Attacks."
+      },
+      {
+        "name": "Deep Strike",
+        "description": "During the Declare Battle Formations step, if every model in a unit has this ability, you can set it up in Reserves instead of setting it up on the battlefield. If you do, in the Reinforcements step of one of your Movement phases you can set up this unit anywhere on the battlefield that is more than 9\" horizontally away from all enemy models.\n\nIf a unit with the Deep Strike ability arrives from Strategic Reserves, the controlling player can choose for that unit to be set up either using the rules for Strategic Reserves or using the Deep Strike ability."
+      },
+      {
+        "name": "Mission Tactics",
+        "description": "Refer to the Detachment Rule for more information."
+      },
+      {
+        "name": "Oath of Moment",
+        "description": "If your Army Faction is **^^Adeptus Astartes^^**, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the **^^Blood Angels^^**, **^^Dark Angels^^**, **^^Deathwatch^^** or **^^Space Wolves^^** keywords, add 1 to the Wound roll as well."
+      }
+    ],
+    "modelGroups": {
+      "chaplain-cassius": {
+        "id": "chaplain-cassius",
+        "name": "Chaplain Cassius",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 4,
+          "leadership": "5+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "bolt-pistol"
+        ]
+      },
+      "vael-donatus": {
+        "id": "vael-donatus",
+        "name": "Vael Donatus",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "bolt-pistol",
+          "boltgun"
+        ]
+      },
+      "zameon-gydrael": {
+        "id": "zameon-gydrael",
+        "name": "Zameon Gydrael",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "long-vigil-ranged-weapon",
+          "long-vigil-melee-weapon"
+        ]
+      },
+      "rodricus-grytt": {
+        "id": "rodricus-grytt",
+        "name": "Rodricus Grytt",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "bolt-pistol"
+        ]
+      },
+      "antor-delassio": {
+        "id": "antor-delassio",
+        "name": "Antor Delassio",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "long-vigil-ranged-weapon",
+          "long-vigil-melee-weapon"
+        ]
+      },
+      "edryc-setorax": {
+        "id": "edryc-setorax",
+        "name": "Edryc Setorax",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "jensus-natorian": {
+        "id": "jensus-natorian",
+        "name": "Jensus Natorian",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "bolt-pistol"
+        ]
+      },
+      "drenn-redblade": {
+        "id": "drenn-redblade",
+        "name": "Drenn Redblade",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "boltgun",
+          "long-vigil-melee-weapon"
+        ]
+      },
+      "garran-branatar": {
+        "id": "garran-branatar",
+        "name": "Garran Branatar",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "2+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "long-vigil-ranged-weapon"
+        ]
+      },
+      "ennox-sorrlock": {
+        "id": "ennox-sorrlock",
+        "name": "Ennox Sorrlock",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "long-vigil-ranged-weapon"
+        ]
+      },
+      "jetek-suberei": {
+        "id": "jetek-suberei",
+        "name": "Jetek Suberei",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 5,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "long-vigil-melee-weapon"
+        ]
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "chaplain-cassius": 1,
+          "vael-donatus": 1,
+          "zameon-gydrael": 1,
+          "rodricus-grytt": 1,
+          "antor-delassio": 1,
+          "edryc-setorax": 1,
+          "jensus-natorian": 1,
+          "drenn-redblade": 1,
+          "garran-branatar": 1,
+          "ennox-sorrlock": 1,
+          "jetek-suberei": 1
+        },
+        "points": 220
+      }
+    ]
+  },
+  {
+    "id": "spectrus-kill-team",
+    "name": "Spectrus Kill Team",
+    "faction": "Deathwatch",
+    "role": "ELITES",
+    "basePoints": 180,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "deathwatch-marksman-bolt-carbine",
+        "name": "Deathwatch marksman bolt carbine",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Heavy",
+          "Lethal Hits"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "deathwatch-occulus-bolt-carbine",
+        "name": "Deathwatch occulus bolt carbine",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Assault",
+          "Ignores Cover",
+          "Lethal Hits"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "paired-combat-blades",
+        "name": "Paired combat blades",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Sustained Hits 1"
+        ],
+        "weaponSkill": 3
+      },
+      {
+        "id": "special-issue-bolt-pistol",
+        "name": "Special-issue bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Pistol",
+          "Precision"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "combat-knife",
+        "name": "Combat knife",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Precision"
+        ],
+        "weaponSkill": 3
+      },
+      {
+        "id": "deathwatch-bolt-carbine",
+        "name": "Deathwatch Bolt carbine",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Lethal Hits",
+          "Precision"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "instigator-bolt-carbine",
+        "name": "Instigator bolt carbine",
+        "type": "Heavy",
+        "range": 24,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Heavy"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "las-fusil",
+        "name": "Las fusil",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 1,
+        "strength": 9,
+        "armourPenetration": -3,
+        "damage": "D6",
+        "abilities": [
+          "Heavy"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "bolt-sniper-rifle",
+        "name": "Bolt sniper rifle",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 1,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 3,
+        "abilities": [
+          "Heavy",
+          "Precision"
+        ],
+        "ballisticSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Attached Unit",
+        "description": "If a CHARACTER from your army with the Leader ability can be attached to an INFILTRATOR SQUAD, it can be attached to this unit instead. \nIf this unit has a Leader unit attached to it during the Declare Battle Formations step, that Leader unit gains the Infiltrators and Scouts 6\" abilities."
+      },
+      {
+        "name": "Spectrus Doctrines",
+        "description": "At the end of your opponent’s turn, if this unit is more than 6\" away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves."
+      },
+      {
+        "name": "Scouts",
+        "description": "Some units have ‘Scouts x\"’ listed in their abilities. If every model in a unit has this ability, then at the start of the first battle round, before the first turn begins, it can make a Normal move of up to x\", with the exception that, while making that move, the distance moved by each model in that unit can be greater than that model's Move characteristic, as long as it is not greater than x\". \n\nDEDICATED TRANSPORT models can make use of any Scouts x\" ability listed in their abilities, or a Scouts x\" ability that a unit that starts the battle embarked within that DEDICATED TRANSPORT  model has (provided only models with this ability are embarked within that Dedicated Transport model), regardless of how that embarked unit gained this ability (e.g. listed in their abilities, conferred by an Enhancement or by an attached Character, etc.). \n\nA unit that moves using this ability must end that move more than 9\" horizontally away from all enemy models. If both players have units that can do this, the player who is taking the first turn moves their units first."
+      },
+      {
+        "name": "Infiltrators",
+        "description": "During deployment, if every model in a unit has this ability, then when you set it up, it can be set up anywhere on the battlefield that is more than 9\" horizontally away from the enemy deployment zone and all enemy models."
+      },
+      {
+        "name": "Mission Tactics",
+        "description": "Refer to the Detachment Rule for more information."
+      },
+      {
+        "name": "Oath of Moment",
+        "description": "If your Army Faction is **^^Adeptus Astartes^^**, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the **^^Blood Angels^^**, **^^Dark Angels^^**, **^^Deathwatch^^** or **^^Space Wolves^^** keywords, add 1 to the Wound roll as well."
+      }
+    ],
+    "modelGroups": {
+      "kill-team-infiltrator": {
+        "id": "kill-team-infiltrator",
+        "name": "Kill Team Infiltrator",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 3,
+        "maxQuantity": 10,
+        "availableOptions": [],
+        "equippedWargear": [
+          "bolt-pistol",
+          "close-combat-weapon"
+        ]
+      },
+      "kill-team-infiltrator-w-occulus-bolt-carbine": {
+        "id": "kill-team-infiltrator-w-occulus-bolt-carbine",
+        "name": "Kill Team Infiltrator w/ occulus bolt carbine",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 4,
+        "availableOptions": [],
+        "equippedWargear": [
+          "bolt-pistol"
+        ]
+      },
+      "kill-team-infiltrator-w-wargear": {
+        "id": "kill-team-infiltrator-w-wargear",
+        "name": "Kill Team Infiltrator w/ wargear",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "equipment-helix-gauntlet",
+            "description": "Equipment: Helix Gauntlet",
+            "exclusiveWith": [
+              "equipment-infiltrator-comms-array"
+            ]
+          },
+          {
+            "id": "equipment-infiltrator-comms-array",
+            "description": "Equipment: Infiltrator Comms Array",
+            "exclusiveWith": [
+              "equipment-helix-gauntlet"
+            ]
+          }
+        ],
+        "equippedWargear": [
+          "bolt-pistol",
+          "close-combat-weapon"
+        ]
+      },
+      "kill-team-infiltrator-w-combat-knife": {
+        "id": "kill-team-infiltrator-w-combat-knife",
+        "name": "Kill Team Infiltrator w/ combat knife",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 4,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "kill-team-infiltrator-w-bolt-carbine": {
+        "id": "kill-team-infiltrator-w-bolt-carbine",
+        "name": "Kill Team Infiltrator w/ bolt carbine",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 4,
+        "availableOptions": [],
+        "equippedWargear": [
+          "close-combat-weapon"
+        ]
+      },
+      "kill-team-infiltrator-w-instigator-bolt-carbine": {
+        "id": "kill-team-infiltrator-w-instigator-bolt-carbine",
+        "name": "Kill Team Infiltrator w/ instigator bolt carbine",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "bolt-pistol",
+          "close-combat-weapon"
+        ]
+      },
+      "kill-team-infiltrator-w-las-fusil": {
+        "id": "kill-team-infiltrator-w-las-fusil",
+        "name": "Kill Team Infiltrator w/ las fusil",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 3,
+        "availableOptions": [],
+        "equippedWargear": [
+          "bolt-pistol",
+          "close-combat-weapon",
+          "las-fusil"
+        ]
+      },
+      "kill-team-infiltrator-w-bolt-sniper-rifle": {
+        "id": "kill-team-infiltrator-w-bolt-sniper-rifle",
+        "name": "Kill Team Infiltrator w/ bolt sniper rifle",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 3,
+        "availableOptions": [],
+        "equippedWargear": [
+          "bolt-pistol",
+          "close-combat-weapon"
+        ]
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "kill-team-infiltrator": 10,
+          "kill-team-infiltrator-w-occulus-bolt-carbine": 4,
+          "kill-team-infiltrator-w-wargear": 0,
+          "kill-team-infiltrator-w-combat-knife": 3,
+          "kill-team-infiltrator-w-bolt-carbine": 0,
+          "kill-team-infiltrator-w-instigator-bolt-carbine": 0,
+          "kill-team-infiltrator-w-las-fusil": 0,
+          "kill-team-infiltrator-w-bolt-sniper-rifle": 0
+        },
+        "points": 180
+      }
+    ]
+  },
+  {
+    "id": "talonstrike-kill-team",
+    "name": "Talonstrike Kill Team",
+    "faction": "Deathwatch",
+    "role": "ELITES",
+    "basePoints": 275,
+    "stats": {
+      "movement": 12,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 2,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "heavy-bolt-pistol",
+        "name": "Heavy Bolt Pistol",
+        "type": "Pistol",
+        "range": 18,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "hand-flamer",
+        "name": "Hand flamer",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": "D6",
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Pistol",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "plasma-pistol-standard",
+        "name": "➤ Plasma pistol - Standard",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-pistol-supercharge",
+        "name": "➤ Plasma pistol - Supercharge",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Hazardous",
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "astartes-chainsword",
+        "name": "Astartes Chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "power-fist",
+        "name": "Power fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 8,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "power-weapon",
+        "name": "Power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "assault-bolters",
+        "name": "Assault bolters",
+        "type": "Pistol",
+        "range": 18,
+        "attacks": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Assault",
+          "Pistol",
+          "Sustained Hits 2",
+          "Twin-linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-exterminators-standard",
+        "name": "➤ Plasma exterminators - standard",
+        "type": "Pistol",
+        "range": 18,
+        "attacks": 2,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Assault",
+          "Pistol",
+          "Twin-linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "plasma-exterminators-supercharge",
+        "name": "➤ Plasma exterminators - supercharge",
+        "type": "Pistol",
+        "range": 18,
+        "attacks": 2,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 3,
+        "abilities": [
+          "Assault",
+          "Hazardous",
+          "Pistol",
+          "Twin-linked"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Talonstrike Doctrines",
+        "description": "Each time this unit is set up on the battlefield, until the end of the turn:\n- Improve the Armour Penetration characteristic of weapons equipped by models in this unit by 1. \n- Melee weapons equipped by models in this unit have the [LANCE] ability."
+      },
+      {
+        "name": "Attached Unit",
+        "description": "If a CHARACTER unit from your army with the Leader ability can be attached to an ASSAULT INTERCESSORS WITH JUMP PACKS unit, it can be attached to this unit instead."
+      },
+      {
+        "name": "Oath of Moment",
+        "description": "If your Army Faction is **^^Adeptus Astartes^^**, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the **^^Blood Angels^^**, **^^Dark Angels^^**, **^^Deathwatch^^** or **^^Space Wolves^^** keywords, add 1 to the Wound roll as well."
+      },
+      {
+        "name": "Deep Strike",
+        "description": "During the Declare Battle Formations step, if every model in a unit has this ability, you can set it up in Reserves instead of setting it up on the battlefield. If you do, in the Reinforcements step of one of your Movement phases you can set up this unit anywhere on the battlefield that is more than 9\" horizontally away from all enemy models.\n\nIf a unit with the Deep Strike ability arrives from Strategic Reserves, the controlling player can choose for that unit to be set up either using the rules for Strategic Reserves or using the Deep Strike ability."
+      },
+      {
+        "name": "Mission Tactics",
+        "description": "Refer to the Detachment Rule for more information."
+      }
+    ],
+    "modelGroups": {
+      "kill-team-sergeant-w-jump-pack": {
+        "id": "kill-team-sergeant-w-jump-pack",
+        "name": "Kill Team Sergeant w/ Jump Pack",
+        "category": "leader",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "pistol-option-heavy-bolt-pistol",
+            "description": "Pistol option: Heavy Bolt Pistol",
+            "exclusiveWith": [
+              "pistol-option-hand-flamer",
+              "pistol-option-plasma-pistol"
+            ]
+          },
+          {
+            "id": "pistol-option-hand-flamer",
+            "description": "Pistol option: Hand Flamer",
+            "exclusiveWith": [
+              "pistol-option-heavy-bolt-pistol",
+              "pistol-option-plasma-pistol"
+            ]
+          },
+          {
+            "id": "pistol-option-plasma-pistol",
+            "description": "Pistol option: Plasma pistol",
+            "exclusiveWith": [
+              "pistol-option-heavy-bolt-pistol",
+              "pistol-option-hand-flamer"
+            ]
+          },
+          {
+            "id": "melee-option-astartes-chainsword",
+            "description": "Melee option: Astartes Chainsword",
+            "exclusiveWith": [
+              "melee-option-power-fist",
+              "melee-option-power-weapon"
+            ]
+          },
+          {
+            "id": "melee-option-power-fist",
+            "description": "Melee option: Power Fist",
+            "exclusiveWith": [
+              "melee-option-astartes-chainsword",
+              "melee-option-power-weapon"
+            ]
+          },
+          {
+            "id": "melee-option-power-weapon",
+            "description": "Melee option: Power weapon",
+            "exclusiveWith": [
+              "melee-option-astartes-chainsword",
+              "melee-option-power-fist"
+            ]
+          }
+        ],
+        "equippedWargear": [
+          "heavy-bolt-pistol"
+        ]
+      },
+      "intercessor-w-heavy-bolt-pistol-and-jump-pack": {
+        "id": "intercessor-w-heavy-bolt-pistol-and-jump-pack",
+        "name": "Intercessor w/ heavy bolt pistol and Jump Pack",
+        "category": "follower",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 4,
+        "maxQuantity": 9,
+        "availableOptions": [],
+        "equippedWargear": [
+          "astartes-chainsword",
+          "heavy-bolt-pistol"
+        ]
+      },
+      "heavy-intercessor-w-jump-pack": {
+        "id": "heavy-intercessor-w-jump-pack",
+        "name": "Heavy Intercessor w/ Jump Pack",
+        "category": "follower",
+        "stats": {
+          "movement": 10,
+          "toughness": 6,
+          "save": "3+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 5,
+        "availableOptions": [
+          {
+            "id": "weapons-assault-bolters",
+            "description": "Weapons: Assault bolters",
+            "exclusiveWith": [
+              "weapons-plasma-exterminators"
+            ]
+          },
+          {
+            "id": "weapons-plasma-exterminators",
+            "description": "Weapons: Plasma exterminators",
+            "exclusiveWith": [
+              "weapons-assault-bolters"
+            ]
+          }
+        ],
+        "equippedWargear": [
+          "close-combat-weapon",
+          "assault-bolters"
+        ]
+      },
+      "intercessor-w-plasma-pistol-and-jump-pack": {
+        "id": "intercessor-w-plasma-pistol-and-jump-pack",
+        "name": "Intercessor w/ plasma pistol and Jump Pack",
+        "category": "leader",
+        "stats": {
+          "movement": 12,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 2,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "astartes-chainsword",
+          "plasma-pistol"
+        ]
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "kill-team-sergeant-w-jump-pack": 1,
+          "intercessor-w-heavy-bolt-pistol-and-jump-pack": 9,
+          "heavy-intercessor-w-jump-pack": 0,
+          "intercessor-w-plasma-pistol-and-jump-pack": 0
+        },
+        "points": 275
+      }
+    ]
+  },
+  {
+    "id": "watch-captain-artemis",
+    "name": "Watch Captain Artemis",
+    "faction": "Deathwatch",
+    "role": "HQ",
+    "basePoints": 65,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "3+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "hellfire-extremis",
+        "name": "Hellfire Extremis",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Anti-Infantry 4+",
+          "Devastating Wounds",
+          "Ignores Cover",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "master-crafted-power-weapon",
+        "name": "Master-crafted power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 6,
+        "strength": 5,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 2
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "This model has a 4+ invulnerable save."
+      },
+      {
+        "name": "Tactical Instinct",
+        "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+      },
+      {
+        "name": "Unstoppable Champion",
+        "description": "The first time this model is destroyed, roll one D6 at the end of the phase. On a 2+, set this model back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 1 wound remaining."
+      },
+      {
+        "name": "Leader",
+        "description": "This model can be attached to the following units: \n- DEATHWATCH VETERANS\n- FORTIS KILL TEAM"
+      },
+      {
+        "name": "Feel No Pain",
+        "description": "Some models have 'Feel No Pain x+' listed in their abilities. Each time a model with this ability suffers damage and so would lose a wound (including wounds lost due to mortal wounds), roll one D6: if the result is greater than or equal to the number denoted by 'x: that wound is ignored and is not lost. If a model has more than one Feel No Pain ability, you can only use one of those abilities each time that model suffers damage and so would lose a wound."
+      },
+      {
+        "name": "Mission Tactics",
+        "description": "Refer to the Detachment Rule for more information."
+      },
+      {
+        "name": "Oath of Moment",
+        "description": "If your Army Faction is **^^Adeptus Astartes^^**, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the **^^Blood Angels^^**, **^^Dark Angels^^**, **^^Deathwatch^^** or **^^Space Wolves^^** keywords, add 1 to the Wound roll as well."
+      }
+    ],
+    "modelGroups": {
+      "watch-captain-artemis": {
+        "id": "watch-captain-artemis",
+        "name": "Watch Captain Artemis",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "3+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "watch-captain-artemis": 1
+        },
+        "points": 65
+      }
+    ]
+  },
+  {
+    "id": "watch-master",
+    "name": "Watch Master",
+    "faction": "Deathwatch",
+    "role": "HQ",
+    "basePoints": 95,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "2+",
+      "wounds": 5,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "artificer-armour",
+        "name": "Artificer Armour",
+        "points": 10
+      },
+      {
+        "id": "the-honour-vehement",
+        "name": "The Honour Vehement",
+        "points": 15
+      },
+      {
+        "id": "adept-of-the-codex",
+        "name": "Adept of the Codex",
+        "points": 20
+      },
+      {
+        "id": "fire-discipline",
+        "name": "Fire Discipline",
+        "points": 25
+      },
+      {
+        "id": "icon-of-the-angel",
+        "name": "Icon of the Angel",
+        "points": 20
+      },
+      {
+        "id": "speed-of-the-primarch",
+        "name": "Speed of the Primarch",
+        "points": 25
+      },
+      {
+        "id": "rage-fuelled-warrior",
+        "name": "Rage-Fuelled Warrior",
+        "points": 35
+      },
+      {
+        "id": "gift-of-foresight",
+        "name": "Gift of Foresight",
+        "points": 15
+      },
+      {
+        "id": "thief-of-secrets",
+        "name": "Thief of Secrets",
+        "points": 25
+      },
+      {
+        "id": "beacon-angelis",
+        "name": "Beacon Angelis",
+        "points": 25
+      },
+      {
+        "id": "osseus-key",
+        "name": "Osseus Key",
+        "points": 15
+      },
+      {
+        "id": "the-tome-of-ectoclades",
+        "name": "The Tome of Ectoclades",
+        "points": 30
+      },
+      {
+        "id": "shroud-of-heroes",
+        "name": "Shroud of Heroes",
+        "points": 25
+      },
+      {
+        "id": "stubborn-tenacity",
+        "name": "Stubborn Tenacity",
+        "points": 15
+      },
+      {
+        "id": "weapons-of-the-first-legion",
+        "name": "Weapons of the First Legion",
+        "points": 15
+      },
+      {
+        "id": "pennant-of-remembrance",
+        "name": "Pennant of Remembrance",
+        "points": 10
+      },
+      {
+        "id": "execute-and-redeploy",
+        "name": "Execute and Redeploy",
+        "points": 20
+      },
+      {
+        "id": "ghostweave-cloak",
+        "name": "Ghostweave Cloak",
+        "points": 15
+      },
+      {
+        "id": "shadow-war-veteran",
+        "name": "Shadow War Veteran",
+        "points": 30
+      },
+      {
+        "id": "the-blade-driven-deep",
+        "name": "The Blade Driven Deep",
+        "points": 25
+      },
+      {
+        "id": "feinting-withdrawal",
+        "name": "Feinting Withdrawal",
+        "points": 10
+      },
+      {
+        "id": "fury-of-the-storm",
+        "name": "Fury of the Storm",
+        "points": 25
+      },
+      {
+        "id": "portents-of-wisdom",
+        "name": "Portents of Wisdom",
+        "points": 15
+      },
+      {
+        "id": "hunters-instincts",
+        "name": "Hunter's Instincts",
+        "points": 25
+      },
+      {
+        "id": "adept-of-the-omnissiah",
+        "name": "Adept of the Omnissiah",
+        "points": 35
+      },
+      {
+        "id": "master-of-the-machine-war",
+        "name": "Master of the Machine War",
+        "points": 20
+      },
+      {
+        "id": "target-augury-web",
+        "name": "Target Augury Web",
+        "points": 30
+      },
+      {
+        "id": "the-flesh-is-weak",
+        "name": "The Flesh is Weak",
+        "points": 10
+      },
+      {
+        "id": "adamantine-mantle",
+        "name": "Adamantine Mantle",
+        "points": 20
+      },
+      {
+        "id": "champion-of-humanity",
+        "name": "Champion of Humanity",
+        "points": 10
+      },
+      {
+        "id": "forged-in-battle",
+        "name": "Forged in Battle",
+        "points": 15
+      },
+      {
+        "id": "war-tempered-artifice",
+        "name": "War-tempered Artifice",
+        "points": 25
+      },
+      {
+        "id": "architect-of-war",
+        "name": "Architect of War",
+        "points": 25
+      },
+      {
+        "id": "fleet-commander",
+        "name": "Fleet Commander",
+        "points": 15
+      },
+      {
+        "id": "indomitable-fury",
+        "name": "Indomitable Fury",
+        "points": 20
+      },
+      {
+        "id": "stoic-defender",
+        "name": "Stoic Defender",
+        "points": 15
+      },
+      {
+        "id": "fear-made-manifest-aura",
+        "name": "Fear Made Manifest [Aura]",
+        "points": 30
+      },
+      {
+        "id": "iron-resolve",
+        "name": "Iron Resolve",
+        "points": 15
+      },
+      {
+        "id": "rites-of-war",
+        "name": "Rites of War",
+        "points": 10
+      },
+      {
+        "id": "the-imperiums-sword",
+        "name": "The Imperium's Sword",
+        "points": 25
+      },
+      {
+        "id": "master-crafted-weapon",
+        "name": "Master-crafted Weapon",
+        "points": 10
+      },
+      {
+        "id": "mounted-strategist",
+        "name": "Mounted Strategist",
+        "points": 30
+      },
+      {
+        "id": "master-of-manoeuvre",
+        "name": "Master of Manoeuvre",
+        "points": 15
+      },
+      {
+        "id": "recon-hunter",
+        "name": "Recon Hunter",
+        "points": 20
+      },
+      {
+        "id": "eye-of-the-unseen",
+        "name": "Eye of the Unseen",
+        "points": 10
+      },
+      {
+        "id": "champion-of-the-deathwing",
+        "name": "Champion of the Deathwing",
+        "points": 15
+      },
+      {
+        "id": "singular-will",
+        "name": "Singular Will",
+        "points": 20
+      },
+      {
+        "id": "deathwing-assault",
+        "name": "Deathwing Assault",
+        "points": 30
+      },
+      {
+        "id": "archangels-shard",
+        "name": "Archangel's Shard",
+        "points": 15
+      },
+      {
+        "id": "artisan-of-war",
+        "name": "Artisan of War",
+        "points": 20
+      },
+      {
+        "id": "gleaming-pinions",
+        "name": "Gleaming Pinions",
+        "points": 25
+      },
+      {
+        "id": "visage-of-death",
+        "name": "Visage of Death",
+        "points": 15
+      },
+      {
+        "id": "blood-shard",
+        "name": "Blood Shard",
+        "points": 25
+      },
+      {
+        "id": "sanguinius-grace",
+        "name": "Sanguinius' Grace",
+        "points": 20
+      },
+      {
+        "id": "to-slay-the-warmaster",
+        "name": "To Slay the Warmaster",
+        "points": 15
+      },
+      {
+        "id": "vengeful-onslaught",
+        "name": "Vengeful Onslaught",
+        "points": 10
+      },
+      {
+        "id": "calibanite-armaments",
+        "name": "Calibanite Armaments",
+        "points": 15
+      },
+      {
+        "id": "lord-of-the-hunt",
+        "name": "Lord of the Hunt",
+        "points": 15
+      },
+      {
+        "id": "stalwart-champion",
+        "name": "Stalwart Champion",
+        "points": 25
+      },
+      {
+        "id": "fulgus-magna",
+        "name": "Fulgus Magna",
+        "points": 20
+      },
+      {
+        "id": "prescience",
+        "name": "Prescience",
+        "points": 25
+      },
+      {
+        "id": "celerity",
+        "name": "Celerity",
+        "points": 30
+      },
+      {
+        "id": "obfuscation",
+        "name": "Obfuscation",
+        "points": 20
+      },
+      {
+        "id": "fusillade",
+        "name": "Fusillade",
+        "points": 35
+      },
+      {
+        "id": "pyrebrand",
+        "name": "Pyrebrand",
+        "points": 25
+      },
+      {
+        "id": "sacred-rage",
+        "name": "Sacred Rage",
+        "points": 30
+      },
+      {
+        "id": "taramonds-censer",
+        "name": "Taramond's Censer",
+        "points": 15
+      },
+      {
+        "id": "benediction-of-fury",
+        "name": "Benediction of Fury",
+        "points": 10
+      },
+      {
+        "id": "wolves-wisdom",
+        "name": "Wolves' Wisdom",
+        "points": 30
+      },
+      {
+        "id": "foes-fate",
+        "name": "Foes' Fate",
+        "points": 15
+      },
+      {
+        "id": "fangrune-pendant",
+        "name": "Fangrune Pendant",
+        "points": 15
+      },
+      {
+        "id": "longstrider",
+        "name": "Longstrider",
+        "points": 20
+      },
+      {
+        "id": "prescient-flash",
+        "name": "Prescient Flash",
+        "points": 20
+      },
+      {
+        "id": "troubling-visions",
+        "name": "Troubling Visions",
+        "points": 15
+      },
+      {
+        "id": "blazing-icon",
+        "name": "Blazing Icon",
+        "points": 20
+      },
+      {
+        "id": "ordained-sacrifice",
+        "name": "Ordained Sacrifice",
+        "points": 25
+      },
+      {
+        "id": "deathwing-assault-2",
+        "name": "Deathwing Assault",
+        "points": 15
+      },
+      {
+        "id": "tempered-in-battle-aura",
+        "name": "Tempered in Battle (Aura)",
+        "points": 10
+      },
+      {
+        "id": "lord-of-the-ravenwing",
+        "name": "Lord of the Ravenwing",
+        "points": 10
+      },
+      {
+        "id": "ancient-weapons",
+        "name": "Ancient Weapons",
+        "points": 25
+      },
+      {
+        "id": "swift-hunter",
+        "name": "Swift Hunter",
+        "points": 20
+      },
+      {
+        "id": "fenrisian-grit",
+        "name": "Fenrisian Grit",
+        "points": 15
+      },
+      {
+        "id": "feral-rage",
+        "name": "Feral Rage",
+        "points": 10
+      },
+      {
+        "id": "wolf-master",
+        "name": "Wolf Master",
+        "points": 5
+      },
+      {
+        "id": "braggarts-steel",
+        "name": "Braggart's Steel",
+        "points": 20
+      },
+      {
+        "id": "hordeslayer",
+        "name": "Hordeslayer",
+        "points": 15
+      },
+      {
+        "id": "skjald",
+        "name": "Skjald",
+        "points": 15
+      },
+      {
+        "id": "thunderwolfs-fortitude",
+        "name": "Thunderwolf's Fortitude",
+        "points": 25
+      },
+      {
+        "id": "wolf-touched",
+        "name": "Wolf-Touched",
+        "points": 15
+      },
+      {
+        "id": "hunters-guile",
+        "name": "Hunter's Guile",
+        "points": 20
+      },
+      {
+        "id": "elders-guidance",
+        "name": "Elder's Guidance",
+        "points": 20
+      },
+      {
+        "id": "helm-of-the-beastslayer",
+        "name": "Helm of the Beastslayer",
+        "points": 15
+      },
+      {
+        "id": "incendiary-animus",
+        "name": "Incendiary Animus",
+        "points": 25
+      },
+      {
+        "id": "oathbound-exemplar",
+        "name": "Oathbound Exemplar",
+        "points": 15
+      },
+      {
+        "id": "merciless-denunciation",
+        "name": "Merciless Denunciation",
+        "points": 25
+      },
+      {
+        "id": "zealous-vanguard",
+        "name": "Zealous Vanguard",
+        "points": 20
+      },
+      {
+        "id": "consecrating-aura",
+        "name": "Consecrating Aura",
+        "points": 25
+      },
+      {
+        "id": "imperialis-of-the-eternal-crusade",
+        "name": "Imperialis of the Eternal Crusade",
+        "points": 15
+      },
+      {
+        "id": "warden-of-honour",
+        "name": "Warden of Honour",
+        "points": 20
+      },
+      {
+        "id": "orb-of-the-emperors-aegis",
+        "name": "Orb of the Emperor's Aegis",
+        "points": 10
+      },
+      {
+        "id": "paragon-of-fury",
+        "name": "Paragon of Fury",
+        "points": 25
+      },
+      {
+        "id": "battle-psalm-precentor",
+        "name": "Battle-Psalm Precentor",
+        "points": 10
+      },
+      {
+        "id": "augury-servo-host",
+        "name": "Augury Servo-Host",
+        "points": 15
+      },
+      {
+        "id": "herald-of-the-sacred-slaughter",
+        "name": "Herald of the Sacred Slaughter",
+        "points": 15
+      },
+      {
+        "id": "adamantine-mantle-2",
+        "name": "Adamantine Mantle",
+        "points": 20
+      },
+      {
+        "id": "war-tempered-artifice-2",
+        "name": "War-tempered Artifice",
+        "points": 25
+      },
+      {
+        "id": "forged-in-battle-2",
+        "name": "Forged in Battle",
+        "points": 15
+      },
+      {
+        "id": "immolator",
+        "name": "Immolator",
+        "points": 10
+      },
+      {
+        "id": "champion-of-the-feast",
+        "name": "Champion of the Feast",
+        "points": 25
+      },
+      {
+        "id": "disciple-of-rhetoricus",
+        "name": "Disciple of Rhetoricus",
+        "points": 10
+      },
+      {
+        "id": "indomitable-champion",
+        "name": "Indomitable Champion",
+        "points": 20
+      },
+      {
+        "id": "malodraxian-standard",
+        "name": "Malodraxian Standard",
+        "points": 20
+      },
+      {
+        "id": "blackwing-shroud",
+        "name": "Blackwing Shroud",
+        "points": 25
+      },
+      {
+        "id": "coronal-susurrant",
+        "name": "Coronal Susurrant",
+        "points": 30
+      },
+      {
+        "id": "umbral-raptor",
+        "name": "Umbral Raptor",
+        "points": 15
+      },
+      {
+        "id": "hunters-instincts-2",
+        "name": "Hunter's Instincts",
+        "points": 25
+      },
+      {
+        "id": "spiritus-ferrum",
+        "name": "Spiritus Ferrum",
+        "points": 25
+      },
+      {
+        "id": "medusan-roar-aura",
+        "name": "Medusan Roar [Aura]",
+        "points": 30
+      },
+      {
+        "id": "iron-laurel",
+        "name": "Iron Laurel",
+        "points": 10
+      },
+      {
+        "id": "steel-font",
+        "name": "Steel Font",
+        "points": 15
+      },
+      {
+        "id": "spearpoint-paragon",
+        "name": "Spearpoint Paragon",
+        "points": 25
+      },
+      {
+        "id": "stormseers-wisdom",
+        "name": "Stormseer's Wisdom",
+        "points": 15
+      },
+      {
+        "id": "hunters-eye",
+        "name": "Hunter's Eye",
+        "points": 20
+      },
+      {
+        "id": "chogorian-huntmaster",
+        "name": "Chogorian Huntmaster",
+        "points": 25
+      },
+      {
+        "id": "armour-of-antoninus",
+        "name": "Armour of Antoninus",
+        "points": 10
+      },
+      {
+        "id": "oath-of-macragge",
+        "name": "Oath of Macragge",
+        "points": 15
+      },
+      {
+        "id": "student-of-the-codex",
+        "name": "Student of the Codex",
+        "points": 20
+      },
+      {
+        "id": "veteran-of-behemoth",
+        "name": "Veteran of Behemoth",
+        "points": 25
+      },
+      {
+        "id": "grimnars-mark",
+        "name": "Grimnar's Mark",
+        "points": 20
+      },
+      {
+        "id": "howlmaw",
+        "name": "Howlmaw",
+        "points": 15
+      },
+      {
+        "id": "chariots-of-the-storm",
+        "name": "Chariots of the Storm",
+        "points": 25
+      },
+      {
+        "id": "skjalds-foretelling",
+        "name": "Skjald's Foretelling",
+        "points": 25
+      },
+      {
+        "id": "carmine-reliquary",
+        "name": "Carmine Reliquary",
+        "points": 30
+      },
+      {
+        "id": "master-of-the-red-thirst",
+        "name": "Master of the Red Thirst",
+        "points": 25
+      },
+      {
+        "id": "sanguinary-tear-aura",
+        "name": "Sanguinary Tear (Aura)",
+        "points": 35
+      },
+      {
+        "id": "angels-fang",
+        "name": "Angel's Fang",
+        "points": 25
+      },
+      {
+        "id": "eye-of-the-primarch",
+        "name": "Eye of the Primarch",
+        "points": 10
+      },
+      {
+        "id": "hero-of-the-chapter",
+        "name": "Hero of the Chapter",
+        "points": 20
+      },
+      {
+        "id": "blades-of-valour",
+        "name": "Blades of Valour",
+        "points": 15
+      },
+      {
+        "id": "bombast-omnivox",
+        "name": "Bombast Omnivox",
+        "points": 15
+      },
+      {
+        "id": "laurels-of-thunder",
+        "name": "Laurels of Thunder",
+        "points": 15
+      },
+      {
+        "id": "orbital-uplink-reliquary",
+        "name": "Orbital Uplink Reliquary",
+        "points": 25
+      },
+      {
+        "id": "veteran-of-the-vanguard",
+        "name": "Veteran of the Vanguard",
+        "points": 20
+      },
+      {
+        "id": "dedicated-gunship",
+        "name": "Dedicated Gunship",
+        "points": 15
+      },
+      {
+        "id": "seals-of-reconquest",
+        "name": "Seals of Reconquest",
+        "points": 20
+      },
+      {
+        "id": "avenging-avatar-aura",
+        "name": "Avenging Avatar (Aura)",
+        "points": 10
+      },
+      {
+        "id": "scroll-of-proclamation",
+        "name": "Scroll of Proclamation",
+        "points": 15
+      },
+      {
+        "id": "liberatum",
+        "name": "Liberatum",
+        "points": 25
+      },
+      {
+        "id": "honour-indefatigable",
+        "name": "Honour Indefatigable",
+        "points": 25
+      },
+      {
+        "id": "castellum-omnivox",
+        "name": "Castellum Omnivox",
+        "points": 20
+      },
+      {
+        "id": "spy-skull-datalink",
+        "name": "Spy-skull Datalink",
+        "points": 15
+      },
+      {
+        "id": "defensive-mastery",
+        "name": "Defensive Mastery",
+        "points": 25
+      },
+      {
+        "id": "liberator",
+        "name": "Liberator",
+        "points": 15
+      },
+      {
+        "id": "tip-of-the-spear",
+        "name": "Tip of the Spear",
+        "points": 40
+      },
+      {
+        "id": "shock-deployment",
+        "name": "Shock Deployment",
+        "points": 20
+      },
+      {
+        "id": "armoured-commander",
+        "name": "Armoured Commander",
+        "points": 25
+      }
+    ],
+    "weapons": [
+      {
+        "id": "vigil-spear",
+        "name": "Vigil spear",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [],
+        "ballisticSkill": 2
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "This model has a 4+ invulnerable save."
+      },
+      {
+        "name": "Strategic Knowledge",
+        "description": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back."
+      },
+      {
+        "name": "Watch Master",
+        "description": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+      },
+      {
+        "name": "Leader",
+        "description": "This model can be attached to the following units:\n- DEATHWATCH VETERANS\n- FORTIS KILL TEAM"
+      },
+      {
+        "name": "Artificer Armour",
+        "description": "**^^Adeptus Astartes^^** model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability."
+      },
+      {
+        "name": "The Honour Vehement",
+        "description": "**^^Adeptus Astartes^^** model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead."
+      },
+      {
+        "name": "Adept of the Codex",
+        "description": "Captain model only. At the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that doctrine is active for the bearer’s unit only, even if you have already selected that doctrine to be active for your army this battle."
+      },
+      {
+        "name": "Fire Discipline",
+        "description": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, , you can reroll Advance rolls made for that unit."
+      },
+      {
+        "name": "Icon of the Angel",
+        "description": "Adeptus Astartes model only. Each time an enemy unit (excluding Monsters and Vehicles) within Engagement Range of the bearer’s unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests as if their unit was Battle-shocked. When doing so, if that enemy unit is also Battle-shocked by other means, subtract 1 from each of those Desperate Escape tests."
+      },
+      {
+        "name": "Speed of the Primarch",
+        "description": "Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Fights First ability"
+      },
+      {
+        "name": "Rage-Fuelled Warrior",
+        "description": "Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer's melee weapons have the [SUSTAINED HITS 3] ability."
+      },
+      {
+        "name": "Gift of Foresight",
+        "description": "Adeptus Astartes model only. Once per battle round, just after making a Hit roll, a Wound roll or a saving throw for the bearer, you can treat the result as a unmodified 6 instead."
+      },
+      {
+        "name": "Thief of Secrets",
+        "description": "**^^Adeptus Astartes^^** model only. Improve the Strength, Damage and Armour Penetration characteristics of the bearer’s melee weapons by 1. At the end of the Fight phase, if one or more enemy models were destroyed as a result of a melee attack made by the bearer this phase, until the end of the battle, improve the Strength, Damage and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead."
+      },
+      {
+        "name": "Beacon Angelis",
+        "description": "ADEPTUS ASTARTES model only. Models in the bearer’s unit have the Deep Strike ability. In addition, you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP."
+      },
+      {
+        "name": "Osseus Key",
+        "description": "WATCH MASTER or TECHMARINE model only. At the start of your opponent’s Shooting phase, select one enemy VEHICLE unit (excluding TITANIC units) within 12\" of and visible to the bearer. That model must take a Leadership test. If that test is passed, until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll; if that test is failed, that unit is not eligible to shoot this phase."
+      },
+      {
+        "name": "The Tome of Ectoclades",
+        "description": "WATCH MASTER or CAPTAIN model only. Once per battle, after you have selected your Oath of Moment target, the bearer can use this Enhancement. If it does, select a second enemy unit to be an Oath of Moment target. \n\n\n**Designer’s Note:** *This means that each time a model with the Oath of Moment ability makes an attack that targets either of your Oath of Moment targets, you can re-roll the Hit roll.*"
+      },
+      {
+        "name": "Shroud of Heroes",
+        "description": "Adeptus Astartes model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining (if the bearer was Battle-shocked when it was destroyed, it is instead returned with its full wounds remaining)."
+      },
+      {
+        "name": "Stubborn Tenacity",
+        "description": "Adeptus Astartes model only. While the bearer is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Battle-shocked and below its Starting Strength."
+      },
+      {
+        "name": "Weapons of the First Legion",
+        "description": "**^^Adeptus Astartes^^** model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. While the bearer is Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead."
+      },
+      {
+        "name": "Pennant of Remembrance",
+        "description": "Ancient model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability. While that unit\nis Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead."
+      },
+      {
+        "name": "Execute and Redeploy",
+        "description": "Phobos model only. In your Shooting phase, after the bearer's unit has shot, if that unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does until the end of the turn, that unit is not eligible to delcare a charge. This cannot allow the bearer's unit to move more than once in your Shooting phase."
+      },
+      {
+        "name": "Ghostweave Cloak",
+        "description": "Adeptus Astartes model only. The bearer has the Stealth and Lone Operative Abilities"
+      },
+      {
+        "name": "Shadow War Veteran",
+        "description": "Phobos model only.  Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP"
+      },
+      {
+        "name": "The Blade Driven Deep",
+        "description": "Adpetus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the Infiltrators Ability"
+      },
+      {
+        "name": "Feinting Withdrawal",
+        "description": "Adeptus Astartes model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it fell back"
+      },
+      {
+        "name": "Fury of the Storm",
+        "description": "Adeptus Astartes Mounted model only. Improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 2 instead."
+      },
+      {
+        "name": "Portents of Wisdom",
+        "description": "Adeptus Astartes model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit."
+      },
+      {
+        "name": "Hunter's Instincts",
+        "description": "Adeptus Astartes Mounted model only. If the bearer's unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round as being one higher than it actually is"
+      },
+      {
+        "name": "Adept of the Omnissiah",
+        "description": "**^^Techmarine^^** model only. Once per battle round, when a saving throw is failed for a friendly **^^Adeptus Astartes Vehicle^^** model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0."
+      },
+      {
+        "name": "Master of the Machine War",
+        "description": "ADEPTUS ASTARTES model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE within 6\" of the bearer. Until the start of your next Command phase, that VEHICLE is eligible to shoot even if it Fell Back or Advanced this turn."
+      },
+      {
+        "name": "Target Augury Web",
+        "description": "TECHMARINE model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that VEHICLE have the [Lethal Hits] ability."
+      },
+      {
+        "name": "The Flesh is Weak",
+        "description": "Adeptus Astartes model only. The bearer has the Feel No Pain 4+ ability."
+      },
+      {
+        "name": "Adamantine Mantle",
+        "description": "**^^Adeptus Astartes^^** model only. Each time an attack is allocated the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a **[MELTA]** or **[TORRENT]** weapon, change the Damage characteristic of that attack to 1 instead."
+      },
+      {
+        "name": "Champion of Humanity",
+        "description": "Tacticus model only. While the bearer is leading a unit, models in that unit can ignore any or all modifiers to their characteristics and/or to any roll or test made for them (excluding modifiers to saving throws)."
+      },
+      {
+        "name": "Forged in Battle",
+        "description": "Adeptus Astartes model only. While the bearer is leading a unit, once per turn after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an umodified 6."
+      },
+      {
+        "name": "War-tempered Artifice",
+        "description": "**^^Adeptus Astartes Infantry^^** model only. Add 3 to the Strength characteristic of the bearer's melee weapons."
+      },
+      {
+        "name": "Architect of War",
+        "description": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability."
+      },
+      {
+        "name": "Fleet Commander",
+        "description": "Captain model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the center of the first marker, then draw a straight line between the center of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+ that unit suffers D3 mortal wounds. Both markers are then removed."
+      },
+      {
+        "name": "Indomitable Fury",
+        "description": "Gravis Model only. The first time the bearer is destroyed, roll on D6 at the end of the phase. On a 2+ set the bearer back on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining."
+      },
+      {
+        "name": "Stoic Defender",
+        "description": "Adeptus Astartes model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0"
+      },
+      {
+        "name": "Fear Made Manifest [Aura]",
+        "description": "Adeptus Astartes model only. While an enemy unit (excluding Monsters and Vehicles) is within 6\" of the bearer, each time that unit fails a Battle-Shock test, one model in that unit is destroyed (chosen by it's controlling player.) Once per battle, when such an enemy unit fails a Battle-Shock test, you can choose for D3 models in that unit to be destroyed in this way instead."
+      },
+      {
+        "name": "Iron Resolve",
+        "description": "Adeptus Astartes Terminator model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer's unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Feel No Pain 5+ ability."
+      },
+      {
+        "name": "Rites of War",
+        "description": "Adeptus Astartes Terminator model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer's unit as well."
+      },
+      {
+        "name": "The Imperium's Sword",
+        "description": "**^^Adeptus Astartes^^** model only. Add 1 to the Attacks characteristic of the bearer's melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer's unit."
+      },
+      {
+        "name": "Master-crafted Weapon",
+        "description": "RAVENWING model only. Melee weapons equipped by the bearer have the Precision ability."
+      },
+      {
+        "name": "Mounted Strategist",
+        "description": "RAVENWING model only. You can re‑roll Advance and Charge rolls made for the bearer’s unit."
+      },
+      {
+        "name": "Master of Manoeuvre",
+        "description": "RAVENWING model only. If the bearer's unit starts the battle in Strategic Reserves, its points value does not count towards the combined points limit for units from your army that are in Strategic Reserve, and for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is."
+      },
+      {
+        "name": "Recon Hunter",
+        "description": "RAVENWING model only. Models in the bearer's unit have the Scouts 9\" ability."
+      },
+      {
+        "name": "Eye of the Unseen",
+        "description": "Deathwing model only. Each time you target the bearer's unit with a Stratagem, roll one D6, adding 1 if the bearer is within range of your Vowed objective marker: on a 5+ you gain 1CP."
+      },
+      {
+        "name": "Champion of the Deathwing",
+        "description": "**^^Deathwing^^** model only. Melee weapons equipped by the bearer have the **[LETHAL HITS]** ability, and each time the bearer makes a melee attack, if it is within range of your Vowed objective marker, a Critical Hit is scored on an unmodified Hit roll of 5+."
+      },
+      {
+        "name": "Singular Will",
+        "description": "Deathwing model only. Each time the bearer's unit Pile In or Consolidates, models in that unit can move an additional 3\"."
+      },
+      {
+        "name": "Deathwing Assault",
+        "description": "Deathwing model with the Deep Strike ability only. The bearer's unit can set up using the Deep Strike ability in the Reinforcement step of your first, second or third Movement phase, regardless of any mission rules."
+      },
+      {
+        "name": "Archangel's Shard",
+        "description": "Adeptus Astartes model only. The bearer’s melee weapons have the [ANTI-CHAOS 5+] and [LANCE] abilities."
+      },
+      {
+        "name": "Artisan of War",
+        "description": "Adeptus Astartes Jump Pack model only. Improve the Armour Penetration characteristic of the bearer’s weapons by 1, and the bearer has a Save characteristic of 2+."
+      },
+      {
+        "name": "Gleaming Pinions",
+        "description": "Adeptus Astartes Jump Pack model only. Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of the bearer, if this bearer's unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\""
+      },
+      {
+        "name": "Visage of Death",
+        "description": "Adeptus Astartes Jump Pack model only. In the Battle-shock step of your opponent's Command phase, each enemy unit (excluding Monsters and Vehicles) within Engagement Range of the bearer must take a Battle-shock test."
+      },
+      {
+        "name": "Blood Shard",
+        "description": "Death Company model only. The first time the bearer is destroyed, at the end of the phase, roll one D6: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining."
+      },
+      {
+        "name": "Sanguinius' Grace",
+        "description": "Death Company model only. Once per battle at the end of the Fight phase, if the bearer is within Engagement Range of three or more enemy models. the bearer can fight one additional time."
+      },
+      {
+        "name": "To Slay the Warmaster",
+        "description": "Death Company Model only. Once per battle, at the start of the Fight Phase, if the bearer is within Engagement Range of one or more enemy Character units, you can select one of those Character units and roll six D6: for each 4+, one Character model in that unit suffers 1 mortal wound."
+      },
+      {
+        "name": "Vengeful Onslaught",
+        "description": "Death Company model only. If the bearer is destroyed, until the end of your next turn, each time a friendly Death Company model make an attack, add 1 to the Hit roll."
+      },
+      {
+        "name": "Calibanite Armaments",
+        "description": "**^^Adeptus Astartes^^** model only. Add 1 to the Damage characteristic of the bearer’s melee weapons."
+      },
+      {
+        "name": "Lord of the Hunt",
+        "description": "Ravenwing model only. The bearer’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back and you can re‑roll Desperate Escape tests taken for models in the bearer’s unit."
+      },
+      {
+        "name": "Stalwart Champion",
+        "description": "Captain, Chaplain or Lieutenant model only. While the bearer’s unit is not Battle‑shocked, add 1 to the Objective Control characteristic of models in the bearer’s unit."
+      },
+      {
+        "name": "Fulgus Magna",
+        "description": "Deathwing model only. Once per battle, at the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into Strategic Reserves."
+      },
+      {
+        "name": "Prescience",
+        "description": "Adeptus Astartes Psyker model only (excluding Terminator models). Once per turn, when an enemy\nunit ends a Normal, Advance or Fall Back move within 9\" of the bearer’s unit, the bearer’s unit can\nmake a Normal move of up to D6\", or up to 6\" instead if the Divination Discipline is active for your army"
+      },
+      {
+        "name": "Celerity",
+        "description": "Adeptus Astartes Psyker model only. The bearer’s unit is eligible to declare a charge in a turn in which it Advanced, and if the Biomancy Discipline is active for your army, it is eligible to declare a charge in a turn in which it Fell Back."
+      },
+      {
+        "name": "Obfuscation",
+        "description": "Adeptus Astartes Psyker model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot\nat the bearer’s unit, and if the Telepathy Discipline is active for your army, the bearer’s unit cannot be\ntargeted by ranged attacks unless the attacking model is within 18\"."
+      },
+      {
+        "name": "Fusillade",
+        "description": "Adeptus Astartes Psyker model only. Ranged weapons equipped by models in the bearer’s unit have\nthe [ANTI‑MONSTER 5+] and [ANTI‑VEHICLE 5+] abilities, and:\n\n\n■ The [SUSTAINED HITS 1] ability if the Pyromancy\nDiscipline is active for your army.\n■ Add 6\" to the Range characteristic of those\nweapons if the Telekinesis Discipline is active for\nyour army"
+      },
+      {
+        "name": "Pyrebrand",
+        "description": "Black Templars model only. Models in the bearer’s unit have the Stealth ability."
+      },
+      {
+        "name": "Sacred Rage",
+        "description": "Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use\nthis Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability."
+      },
+      {
+        "name": "Taramond's Censer",
+        "description": "Black Templars model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer’s unit must take a Battle‑shock test. When doing so, subtract 1 from the result"
+      },
+      {
+        "name": "Benediction of Fury",
+        "description": "Chaplain model only. The bearer’s melee weapons have the [DEVASTATING WOUNDS] ability."
+      },
+      {
+        "name": "Wolves' Wisdom",
+        "description": "Adeptus Astartes Infantry model only. The bearer’s unit can declare a charge against one or more units within 6\" instead of within 3\" when using The Great Wolf Watches Detachment rule."
+      },
+      {
+        "name": "Foes' Fate",
+        "description": "Adeptus Astartes Terminator model only. Each time an enemy unit (excluding Monsters and  Vehicles) within Engagement Range of the bearer’s unit Falls Back, all models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is Battle‑shocked, subtract 1 from each of\nthose tests."
+      },
+      {
+        "name": "Fangrune Pendant",
+        "description": "Adeptus Astartes Terminator model only. The bearer’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+      },
+      {
+        "name": "Longstrider",
+        "description": "Adeptus Astartes model only. You can re‑roll Charge rolls made for the bearer’s unit."
+      },
+      {
+        "name": "Prescient Flash",
+        "description": "Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability"
+      },
+      {
+        "name": "Troubling Visions",
+        "description": "Adeptus Astartes model only. Once per battle, in your Command phase, the bearer can use this\nEnhancement. When it does, until the start of your next Command phase, all Angelic Legacy abilities\n(see left) are active for the bearer’s unit, instead of only two of them."
+      },
+      {
+        "name": "Blazing Icon",
+        "description": "Adeptus Astartes Infantry model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit."
+      },
+      {
+        "name": "Ordained Sacrifice",
+        "description": "Adeptus Astartes model only. The first time the bearer is destroyed, roll one D6 at the end of the phase: on a 2+, set the bearer back up on the battlefield as close as possible to where it was  destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining"
+      },
+      {
+        "name": "Tempered in Battle (Aura)",
+        "description": "**^^Adeptus Astartes**^^ model only. While a friendly **^^Adeptus Astartes**^^ unit is within 6\" of this model, you can re-roll Battle-shock and Leadership tests taken for that unit."
+      },
+      {
+        "name": "Lord of the Ravenwing",
+        "description": "**^^Ravenwing**^^ model only. You can re-roll Advance and Charge rolls made for the bearer’s unit."
+      },
+      {
+        "name": "Ancient Weapons",
+        "description": "^^**Adeptus Astartes**^^ model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, and improve the Armour Penetration and Damage characteristics of those weapons by 1."
+      },
+      {
+        "name": "Swift Hunter",
+        "description": "SPACE WOLVES model only. Model's in the bearer's unit have the Scouts 7\" ability."
+      },
+      {
+        "name": "Fenrisian Grit",
+        "description": "ADEPTUS ASTARTES model only. The bearer has the Feel No Pain 4+ ability."
+      },
+      {
+        "name": "Feral Rage",
+        "description": "**^^Adeptus Astartes^^** model only. Add 1 to the Attacks characteristic of melee weapons equipped by the bearer. Each time the bearer ends a Charge move, until the end of the turn, add an additional 1 to the Attacks characteristic of those weapons."
+      },
+      {
+        "name": "Wolf Master",
+        "description": "SPACE WOLVES model only. In your Command phase, select one friendly SPACE WOLVES unit within 9\" of the bearer. Until the start of your next Command phase, teeth and claws and Tyrnak and Fenrir weapons equipped by models in that unit have the [LETHAL HITS] ability."
+      },
+      {
+        "name": "Braggart's Steel",
+        "description": "**^^Space Wolves^^** model only. Add 2 to the Strength characteristic of melee weapons equipped by the bearer. If the bearer's unit has achieved one or more Boasts, add 1 to the Damage characteristic as well."
+      },
+      {
+        "name": "Hordeslayer",
+        "description": "**^^Space Wolves^^** model only. At the start of the Fight phase, if there are more enemy models than friendly models wholly within 6\" of the bearer, until the end of the phase, add 2 to the Attacks characteristic of melee weapons equipped by the bearer. If the bearer's unit has achieved one or more Boasts, add 3 to the Attacks characteristic instead."
+      },
+      {
+        "name": "Skjald",
+        "description": "ADEPTUS ASTARTES model only. Each time a SPACE WOLVES CHARACTER unit from your army achieves a Boast, if the bearer is on the battlefield, you gain 1 CP"
+      },
+      {
+        "name": "Thunderwolf's Fortitude",
+        "description": "ADEPTUS ASTARTES model only. The first time the bearer is destroyed, remove it from play, then, at the end of the phase, roll one D6: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining."
+      },
+      {
+        "name": "Wolf-Touched",
+        "description": "SPACE WOLVES model only. Add 2\" to the Move characteristic of the bearer. In the Declare Battle Formations step, the bearer can be attached to a WULFEN INFANTRY unit"
+      },
+      {
+        "name": "Hunter's Guile",
+        "description": "ADEPTUS ASTARTES model only. After both players have deployed their armies, select up to three THUNDERWOLF CAVALRY, WULFEN and/or BLOOD CLAWS units from your army and redeploy them. When doing so you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves"
+      },
+      {
+        "name": "Elder's Guidance",
+        "description": "SPACE WOLVES model only. Once per battle, at the start of the Fight phase, if the bearer is leading a BLOOD CLAWS unit, the bearer can use this Enhancement. If it does, until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
+      },
+      {
+        "name": "Helm of the Beastslayer",
+        "description": "ADEPTUS ASTARTES model only. Each time an attack is made by a CHARACTER, MONSTER, or VEHICLE model that targets the bearer's unit, reduce the Armour Penetration characteristic of that attack by 1."
+      },
+      {
+        "name": "Incendiary Animus",
+        "description": "CHAPLAIN or JUDICIAR model only. Improve the Armour Penetration characteristic of melee weapons equipped by models in the bearer's unit by 1"
+      },
+      {
+        "name": "Oathbound Exemplar",
+        "description": "ADEPTUS ASTARTES INFANTRY model only. Add 1 to the Advance rolls made for the bearer's unit. If the mission pack you are playing features Actions, the bearer's unit is eligible to start to perform an Action in a turn in which it Advanced."
+      },
+      {
+        "name": "Merciless Denunciation",
+        "description": "CHAPLAIN or JUDICIAR model only. Each time a model in the bearer's unit makes a melee attack, you can re-roll the hit roll."
+      },
+      {
+        "name": "Zealous Vanguard",
+        "description": "ADEPTUS ASTARTES model only. Models in the bearer's unit have the Scouts 6\" ability."
+      },
+      {
+        "name": "Consecrating Aura",
+        "description": "ADEPTUS ASTARTES model only. Model's in the bearer's unit have a 5+ invulnerable save."
+      },
+      {
+        "name": "Imperialis of the Eternal Crusade",
+        "description": "ANCIENT model only. Each time an enemy unit selects the bearer's unit as a target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll)"
+      },
+      {
+        "name": "Warden of Honour",
+        "description": "CRUSADE ANCIENT model only. While the bearer is leading a unit, each time you roll one D6 for the bearer's Vengeful Exhortation ability, add 1 to the result."
+      },
+      {
+        "name": "Orb of the Emperor's Aegis",
+        "description": "ADEPTUS ASTARTES model only. Models in the bearer's unit have the Deep Strike ability"
+      },
+      {
+        "name": "Paragon of Fury",
+        "description": "**^^Adeptus Astartes^^** model only. Add 2 the Strength characteristic of melee weapons equipped by the bearer. Each time a melee attack made by the bearer is allocated to an enemy model, if the bearer disembarked from a **^^Transport^^** this turn, add 1 to the Damage characteristic of that attack."
+      },
+      {
+        "name": "Battle-Psalm Precentor",
+        "description": "ADEPTUS ASTARTES model only. Each time the bearer's unit declares a charge, if an enemy unit takes a Battle-shock test as a result of the Shock and Awe detachment rule, subtract 1 from that Battle-shock test."
+      },
+      {
+        "name": "Augury Servo-Host",
+        "description": "ADEPTUS ASTARTES model only. At the start of your shooting phase, select one enemy unit within 12\" of and visible to the bearer. Until the end of the phase, models in that unit cannot have the Benefit of Cover."
+      },
+      {
+        "name": "Herald of the Sacred Slaughter",
+        "description": "ADEPTUS ASTARTES model only. In the Declare Battle Formations step, if the bearer starts the battle embarked within a DEDICATED TRANSPORT, that DEDICATED TRANSPORT has the Scouts 9\" ability."
+      },
+      {
+        "name": "Immolator",
+        "description": "Adeptus Astartes model only. Add 1 to the attacks characteristics of Torrent weapons equipped by models in the bearer's unit."
+      },
+      {
+        "name": "Champion of the Feast",
+        "description": "**^^Adeptus Astartes^^** model only. Add 1 to the Attacks characteristic of the bearer's melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer's unit."
+      },
+      {
+        "name": "Disciple of Rhetoricus",
+        "description": "Adeptus Astartes Terminator model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer's unit as well."
+      },
+      {
+        "name": "Indomitable Champion",
+        "description": "Adeptus Astartes Terminator model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining."
+      },
+      {
+        "name": "Malodraxian Standard",
+        "description": "Adeptus Astartes Ancient model only. Each time an attack targets the bearer’s unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of the bearer’s unit, subtract 1 from the Wound roll."
+      },
+      {
+        "name": "Blackwing Shroud",
+        "description": "Adeptus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the\nInfiltrators ability."
+      },
+      {
+        "name": "Coronal Susurrant",
+        "description": "Phobos model only. The bearer has the following ability:\n\n\nLord of Deceit (Aura): Each time your opponent targets a unit from their army with a Stratagem, if that\nunit is within 12\" of this model, increase the cost of that usage of that Stratagem by 1CP."
+      },
+      {
+        "name": "Umbral Raptor",
+        "description": "Adeptus Astartes model only. The bearer has the Stealth and Lone Operative abilities."
+      },
+      {
+        "name": "Spiritus Ferrum",
+        "description": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well."
+      },
+      {
+        "name": "Medusan Roar [Aura]",
+        "description": "Adeptus Astartes model only. While an enemy unit (excluding Monsters and Vehicles) is within 6\" of\nthe bearer, each time that unit fails a Battle‑shock test, one model in that unit is destroyed (chosen by\nits controlling player). Once per battle, when such an enemy unit fails a Battle‑shock test, you can choose for D3 models in that unit to be destroyed in this way instead."
+      },
+      {
+        "name": "Iron Laurel",
+        "description": "Adeptus Astartes model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well."
+      },
+      {
+        "name": "Steel Font",
+        "description": "Adeptus Astartes Terminator model only. While the bearer is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit."
+      },
+      {
+        "name": "Spearpoint Paragon",
+        "description": "Adeptus Astartes model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead."
+      },
+      {
+        "name": "Stormseer's Wisdom",
+        "description": "Adeptus Astartes model only. While the bearer is leading a unit, you can re‑roll Advance rolls made for that unit."
+      },
+      {
+        "name": "Hunter's Eye",
+        "description": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the\n[SUSTAINED HITS 1] and [IGNORES COVER] abilities."
+      },
+      {
+        "name": "Chogorian Huntmaster",
+        "description": "Adeptus Astartes Mounted model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is."
+      },
+      {
+        "name": "Armour of Antoninus",
+        "description": "**^^Adeptus Astartes^^** model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability."
+      },
+      {
+        "name": "Oath of Macragge",
+        "description": "**^^Adeptus Astartes^^** model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead."
+      },
+      {
+        "name": "Student of the Codex",
+        "description": "Adeptus Astartes model only. At the start of your Command phase, if the bearer is on the battlefield, it\ncan use this Enhancement. If it does, until the start of your next Command phase, the Tactical  doctrine is active for this unit (instead of any other Combat Doctrine you select to be active for your army, and even if there is no Combat Doctrine active for your army)."
+      },
+      {
+        "name": "Veteran of Behemoth",
+        "description": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, , you can reroll Advance rolls made for that unit."
+      },
+      {
+        "name": "Grimnar's Mark",
+        "description": "Adeptus Astartes Terminator Captain model only. Once per battle round, from the second battle round\nonwards, you can target the bearer’s unit with the Rapid Ingress or Heroic Intervention Stratagem for\n0CP, and can do so even if you have already targeted a different unit with that Stratagem this turn.\n\n\nIn the Declare Battle Formations step, the bearer can be attached to a Wolf Guard Terminators unit."
+      },
+      {
+        "name": "Howlmaw",
+        "description": "Wolf priest model only. At the start of the Fight phase, you can select one enemy unit within 6\" of the\nbearer. That unit must take a Battle-shock, subtracting 1 from the result."
+      },
+      {
+        "name": "Chariots of the Storm",
+        "description": "Adeptus Astartes model only. After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+      },
+      {
+        "name": "Skjald's Foretelling",
+        "description": "Wolf Guard Battle Leader model only. While the bearer is leading a unit, weapons equipped by models in that unit have the [LANCE] ability."
+      },
+      {
+        "name": "Carmine Reliquary",
+        "description": "Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a\nBattle-shock test for an Adeptus Astartes unit within 6\" of the bearer, you can re-roll the result"
+      },
+      {
+        "name": "Master of the Red Thirst",
+        "description": "Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use\nthis Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights\nFirst ability."
+      },
+      {
+        "name": "Sanguinary Tear (Aura)",
+        "description": "Adeptus Astartes model only. While a friendly Death Company unit is within 6\" of the bearer, add 1 to\nthe Strength characteristic of weapons equipped by models in that unit."
+      },
+      {
+        "name": "Angel's Fang",
+        "description": "Adeptus Astartes model only. Each time the bearer makes a melee attack that targets a Character,\nMonster or Vehicle unit, that attack has the [SUSTAINED HITS 2] ability."
+      },
+      {
+        "name": "Eye of the Primarch",
+        "description": "Adeptus Astartes model only. Ranged weapons equipped by the bearer and Battleline models in the\nbearer’s unit have the [PRECISION] ability"
+      },
+      {
+        "name": "Hero of the Chapter",
+        "description": "Adeptus Astartes model only. While the bearer is leading a unit, the bearer has the Battleline keyword."
+      },
+      {
+        "name": "Blades of Valour",
+        "description": "Adeptus Astartes model only. Improve the Armour Penetration characteristic of melee weapons equipped by the bearer and Battleline models in the bearer’s unit by 1."
+      },
+      {
+        "name": "Bombast Omnivox",
+        "description": "Adeptus Astartes model only. Each time you select the bearer’s unit as the target of a Stratagem, roll one D6, adding 1 if the bearer’s unit has the Battleline keyword: on a 4+, you gain 1CP."
+      },
+      {
+        "name": "Laurels of Thunder",
+        "description": "Adeptus Astartes model only. You can re‑roll Charge rolls made for the bearer’s unit in a turn in which it was set up on the battlefield."
+      },
+      {
+        "name": "Orbital Uplink Reliquary",
+        "description": "Adeptus Astartes model only. After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+      },
+      {
+        "name": "Veteran of the Vanguard",
+        "description": "Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability"
+      },
+      {
+        "name": "Dedicated Gunship",
+        "description": "Adeptus Astartes Terminator model only. Once per battle, at the end of your opponent’s Fight\nphase, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer\ncan use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into\nStrategic Reserves."
+      },
+      {
+        "name": "Seals of Reconquest",
+        "description": "Adeptus Astartes model only. Models in the bearer’s unit have a 5+ invulnerable save."
+      },
+      {
+        "name": "Avenging Avatar (Aura)",
+        "description": "Adeptus Astartes model only. In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 9\" of the bearer, that enemy unit must take a Battle‑shock test."
+      },
+      {
+        "name": "Scroll of Proclamation",
+        "description": "Adeptus Astartes model only. Each time the bearer’s unit declares a charge, if one or more targets of that charge are within range of an objective marker, you can re‑roll the Charge roll."
+      },
+      {
+        "name": "Liberatum",
+        "description": "Adeptus Astartes model only. Each time the bearer makes an attack that targets an enemy unit, if the\ntarget is within range of an objective marker, you can re‑roll the Hit roll and you can re‑roll the Wound roll."
+      },
+      {
+        "name": "Honour Indefatigable",
+        "description": "The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining."
+      },
+      {
+        "name": "Castellum Omnivox",
+        "description": "Each time the bearer’s unit makes a Fall Back move, select one of the following to apply to that unit until the end of the turn: \n- That unit is eligible to perform an Action in a turn in which it Fell Back. \n- That unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+      },
+      {
+        "name": "Spy-skull Datalink",
+        "description": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
+      },
+      {
+        "name": "Defensive Mastery",
+        "description": "After both players have deployed their armies, select up to three ^^**Adeptus Astartes**^^ units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+      },
+      {
+        "name": "Liberator",
+        "description": "Adeptus Astartes model only. If you control an objective marker at the end of your Command phase,\nand the bearer’s unit (or any Heavy Transport it is embarked within) is within range of that objective\nmarker, that objective marker remains under your control until your opponent’s Level of Control over\nthat objective marker is greater than yours at the end of a phase."
+      },
+      {
+        "name": "Tip of the Spear",
+        "description": "Adeptus Astartes model only. If the bearer starts the battle embarked within a Transport, that transport\nhas the Scouts 6\" ability"
+      },
+      {
+        "name": "Shock Deployment",
+        "description": "Adeptus Astartes Terminator or Gravis model only. In your Shooting phase, each time the bearer’s unit is selected to shoot, if it disembarked from a Transport this turn, until the end of the phase, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
+      },
+      {
+        "name": "Armoured Commander",
+        "description": "Adeptus Astartes model only. Once per turn, in your Movement phase, the bearer can use this\nEnhancement. If it does, select one friendly Adeptus Astartes Transport that is in Strategic Reserves. Until the end of the phase, for the purposes of setting up that Transport on the battlefield, treat the current battle round number as being one higher than it actually is."
+      },
+      {
+        "name": "Oath of Moment",
+        "description": "If your Army Faction is **^^Adeptus Astartes^^**, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the **^^Blood Angels^^**, **^^Dark Angels^^**, **^^Deathwatch^^** or **^^Space Wolves^^** keywords, add 1 to the Wound roll as well."
+      },
+      {
+        "name": "Mission Tactics",
+        "description": "Refer to the Detachment Rule for more information."
+      }
+    ],
+    "modelGroups": {
+      "watch-master": {
+        "id": "watch-master",
+        "name": "Watch Master",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "2+",
+          "wounds": 5,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "watch-master": 1
+        },
+        "points": 95
+      }
+    ]
+  }
+]

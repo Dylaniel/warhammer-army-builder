@@ -77,7 +77,7 @@ const compositionsMatch = (a: Record<string, number>, b: Record<string, number>)
  * current `modelGroups`. Armies persisted in localStorage before Task 6.4
  * may carry a `composition` keyed by legacy Profile *name* rather than
  * ModelGroup id, or reference groups that no longer exist. Unknown keys are
- * dropped and missing groups are filled in at their `minQuantity` so the
+ * dropped and missing groups are filled in at a sensible default so the
  * app can never crash on load. Returns `{}` when the unit has no
  * `modelGroups` (legacy/unmigrated data).
  */
@@ -88,11 +88,47 @@ export const normalizeModelGroupComposition = (
   const groups = unit.modelGroups;
   if (!groups) return {};
 
+  // Summing every group's `minQuantity` doesn't always produce a legal (or
+  // sensible) default composition. Two related shapes both break it:
+  //   - All-interchangeable-followers units (e.g. Necron Warriors: two
+  //     weapon-loadout groups that each independently allow
+  //     `minQuantity: 0`) sum to an all-zero composition, even though the
+  //     unit always fields 10+ models per its cheapest `pointTiers` entry.
+  //   - Mandatory-leader units (e.g. Orks Boyz: a 1-model Boss Nob leader
+  //     with `minQuantity: 1`, plus follower groups that all allow
+  //     `minQuantity: 0`) sum to just the leader — a single model — while
+  //     `resolveModelGroupPoints` still rounds that up to the cheapest
+  //     tier's price (a full 10-model squad). The unit then shows 1 model
+  //     on the card but is billed for the whole squad.
+  // Both are instances of the same underlying problem: the min-derived
+  // total undercounts what the cheapest tier actually requires. So rather
+  // than special-casing "every group's minimum is 0", fall back to the
+  // cheapest defined tier's composition as the default whenever the
+  // min-derived total is fewer models than the cheapest tier needs. This
+  // only affects filling in *missing* keys (a group absent from
+  // `composition`), never a key the caller explicitly set to 0, and never
+  // fires for units (like Intercessor Squad: Sergeant 1 + Intercessor 4 =
+  // 5, exactly the 5-model tier) whose min-derived default already meets
+  // the cheapest tier's model count.
+  const cheapestTier =
+    unit.pointTiers && unit.pointTiers.length > 0
+      ? [...unit.pointTiers].sort((a, b) => a.points - b.points)[0]
+      : undefined;
+  const minDerivedTotal = Object.values(groups).reduce((sum, g) => sum + g.minQuantity, 0);
+  const cheapestTierTotal = cheapestTier
+    ? Object.values(cheapestTier.composition).reduce((sum, count) => sum + count, 0)
+    : undefined;
+  const cheapestTierComposition =
+    cheapestTier && cheapestTierTotal !== undefined && minDerivedTotal < cheapestTierTotal
+      ? cheapestTier.composition
+      : undefined;
+
   const normalized: Record<string, number> = {};
   for (const groupId of Object.keys(groups)) {
     const group = groups[groupId];
     const raw = composition ? composition[groupId] : undefined;
-    const value = typeof raw === 'number' && Number.isFinite(raw) ? raw : group.minQuantity;
+    const defaultValue = cheapestTierComposition?.[groupId] ?? group.minQuantity;
+    const value = typeof raw === 'number' && Number.isFinite(raw) ? raw : defaultValue;
     normalized[groupId] = Math.max(group.minQuantity, Math.min(group.maxQuantity, value));
   }
   return normalized;
@@ -100,9 +136,18 @@ export const normalizeModelGroupComposition = (
 
 /**
  * Resolve the total points for a unit's current model-group composition
- * against its `pointTiers` (Task 6.4 schema). Falls back to the lowest
- * defined tier if no exact match exists (e.g. a composition outside
- * currently-migrated data) rather than guessing a formula.
+ * against its `pointTiers` (Task 6.4 schema).
+ *
+ * Prefers an exact composition match (most precise when a tier corresponds
+ * to a specific loadout combination, not just a raw model count). When no
+ * exact match exists, falls back to resolving by total model count: per
+ * TABLETOP_RULES.md, 10th-edition points are strictly tier-based on total
+ * squad size and are NEVER computed per-model, so this rounds UP to the
+ * cheapest tier whose total model count is >= the current total, rather
+ * than interpolating or defaulting to the lowest tier (which would
+ * undercharge, e.g. a 7-model Intercessor Squad silently priced at the
+ * 5-model tier). Only falls back to the highest tier if the composition's
+ * total exceeds every defined tier's total.
  */
 export const resolveModelGroupPoints = (
   unit: Unit,
@@ -112,8 +157,48 @@ export const resolveModelGroupPoints = (
     return unit.basePoints;
   }
 
-  const match = unit.pointTiers.find((tier) => compositionsMatch(tier.composition, composition));
-  return match ? match.points : unit.pointTiers[0].points;
+  const exactMatch = unit.pointTiers.find((tier) =>
+    compositionsMatch(tier.composition, composition)
+  );
+  if (exactMatch) return exactMatch.points;
+
+  const totalModels = Object.values(composition).reduce((sum, count) => sum + count, 0);
+
+  const tiersByModelCount = unit.pointTiers
+    .map((tier) => ({
+      tier,
+      totalModels: Object.values(tier.composition).reduce((sum, count) => sum + count, 0),
+    }))
+    .sort((a, b) => a.totalModels - b.totalModels);
+
+  const applicable = tiersByModelCount.find((t) => t.totalModels >= totalModels);
+  return (applicable ?? tiersByModelCount[tiersByModelCount.length - 1]).tier.points;
+};
+
+/**
+ * The maximum total model count a unit can ever legally field, derived from
+ * its `pointTiers` rather than the sum of each `modelGroup`'s own
+ * `maxQuantity`. Follower ModelGroups are generated independently and their
+ * individual maxima can sum to more models than any priced tier actually
+ * covers — e.g. an Intercessor Squad's Sergeant(1) + Intercessor(4-9) +
+ * Intercessor w/ Grenade Launcher(0-2) groups allow 12 models by their own
+ * per-group limits, but in real 10th-edition rules the grenade-launcher
+ * variant REPLACES base Intercessors rather than adding to them, and no
+ * `pointTiers` entry prices above 10 models. The true ceiling is the
+ * largest total model count that appears across all of the unit's defined
+ * `pointTiers`.
+ *
+ * Returns `undefined` when the unit has no `pointTiers`, so callers can
+ * leave per-group min/max as the only cap and units without pointTiers are
+ * unaffected.
+ */
+export const getUnitModelCeiling = (unit: Unit): number | undefined => {
+  if (!unit.pointTiers || unit.pointTiers.length === 0) return undefined;
+
+  return unit.pointTiers.reduce((max, tier) => {
+    const tierTotal = Object.values(tier.composition).reduce((sum, count) => sum + count, 0);
+    return Math.max(max, tierTotal);
+  }, 0);
 };
 
 /**
@@ -135,9 +220,37 @@ export const getDisplayStats = (unit: Unit): UnitStats => {
 };
 
 /**
+ * Resolve the price to advertise for a unit that has NOT yet been added to
+ * an army (e.g. the unit-picker "Add" row). `basePoints` is only a legacy
+ * fallback and can disagree with the real cheapest `pointTiers` entry for
+ * generated Task 6.6 data (7 of 1597 units, e.g. `aquila-kill-team`:
+ * `basePoints` 100 vs a real cheapest tier of 200) — prefer the cheapest
+ * defined tier when tiers exist. 0 is a legitimate price (e.g. Spore
+ * Mines, Ripper Swarms, Mucolid Spores are genuinely free units) and must
+ * never be treated as "missing".
+ */
+export const getUnitPickerPrice = (unit: Unit): number => {
+  if (unit.pointTiers && unit.pointTiers.length > 0) {
+    return Math.min(...unit.pointTiers.map((tier) => tier.points));
+  }
+  return unit.basePoints;
+};
+
+/**
  * Build a human-readable "1x Sergeant, 4x Marine" summary of a unit's
  * current composition, resolving each key against `modelGroups` (falling
  * back to legacy `composition`/`quantity` for unmigrated data).
+ *
+ * When a unit HAS `modelGroups`, that branch is authoritative and always
+ * returns from within it — it must never fall through to the legacy
+ * `unit.composition` branch below, which formats entries as
+ * `${count}x ${name}` treating its keys as display names. For `modelGroups`
+ * composition maps, the keys are ModelGroup *ids* (kebab-case, e.g.
+ * "warrior-w-gauss-reaper"), not names, so falling through there would leak
+ * raw ids into the UI. This matters especially for the all-zero-count case
+ * (every group's `minQuantity` is 0, e.g. Necron Warriors' interchangeable
+ * weapon-loadout followers) — that case must still resolve using the
+ * groups' `name` fields, never their ids.
  */
 export const describeUnitComposition = (unit: Unit): string => {
   if (unit.modelGroups && Object.keys(unit.modelGroups).length > 0) {
@@ -146,6 +259,9 @@ export const describeUnitComposition = (unit: Unit): string => {
       .filter(([, count]) => count > 0)
       .map(([groupId, count]) => `${count}x ${unit.modelGroups?.[groupId]?.name ?? groupId}`);
     if (parts.length > 0) return parts.join(', ');
+
+    const groupNames = Object.values(unit.modelGroups).map((g) => g.name);
+    return `No models selected (choose from: ${groupNames.join(', ')})`;
   }
 
   if (unit.composition && Object.keys(unit.composition).length > 0) {
@@ -278,12 +394,35 @@ export const validateUnitOptions = (unit: Unit, selectedOptionIds: string[]): bo
 };
 
 /**
+ * Coerce a value that is supposed to be a point total into a finite number,
+ * returning `undefined` for anything else (a non-numeric string smuggled in
+ * via corrupt/legacy localStorage, `NaN`, `Infinity`, `null`, `undefined`,
+ * etc.) so callers can safely fall back instead of silently string-
+ * concatenating or propagating `NaN`/`Infinity`.
+ */
+const toFinitePoints = (value: unknown): number | undefined =>
+  typeof value === 'number' && Number.isFinite(value) ? value : undefined;
+
+/**
+ * Resolve the points to display/sum for a single army-unit instance.
+ * Prefers `totalPoints`, falls back to `basePoints`, and finally to 0 if
+ * both are invalid — the result is always a clean finite number, no matter
+ * what shape of data is sitting in `localStorage`.
+ *
+ * Nullish-style fallback semantics are preserved deliberately: some units
+ * (e.g. spawned Spore Mines, Ripper Swarms) are legitimately 0 points, and
+ * treating 0 as "missing" would wrongly substitute a nonzero fallback price
+ * for them. `toFinitePoints` only rejects genuinely non-numeric/non-finite
+ * values, never a valid 0.
+ */
+export const getSafeUnitPoints = (armyUnit: Unit): number =>
+  toFinitePoints(armyUnit.totalPoints) ?? toFinitePoints(armyUnit.basePoints) ?? 0;
+
+/**
  * Get total points for an army
  */
 export const calculateArmyPoints = (armyUnits: Unit[]): number => {
-  return armyUnits.reduce((total, armyUnit) => {
-    return total + (armyUnit.totalPoints || armyUnit.basePoints);
-  }, 0);
+  return armyUnits.reduce((total, armyUnit) => total + getSafeUnitPoints(armyUnit), 0);
 };
 
 /**

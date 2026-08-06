@@ -1,4 +1,4 @@
-# BattleForge — Agent Rules & Standards
+# OpenForge — Agent Rules & Standards
 
 These rules govern all AI-assisted work in this repository. They are **living standards**: update them when a better pattern emerges from the codebase, not on a schedule.
 
@@ -163,7 +163,9 @@ git commit -m "stuff"
 
 This routing policy was authored assuming a Gemini-based orchestrator (e.g., Antigravity) driving Google-native sub-agents. When **Claude Code** is the acting agent, the requirement to route sub-agent or script execution through specific Google/Gemini models is **waived**: Claude Code executes tasks natively using Anthropic's models via its own CLI, file-editing tools, sub-agent spawning, and standard Node.js scripts. Any instruction elsewhere in this document that names a specific Google model for a task, parsing script, or QA pass should be read as "use Claude Code's native execution tools" instead when Claude Code is doing the work.
 
-This exception applies only to *which model/tooling performs the work*. It does **not** waive this policy's human-authorization requirements — High Tier spawns, any Anthropic-model sub-agent allocation, and merges/pushes to shared branches still require explicit user confirmation before proceeding.
+This exception applies only to *which model/tooling performs the work*. The concurrency caps in §2 and §3, the File Blast Radius Filter, the Dependency Verification rule, and the QA hand-off protocol in §6 all remain fully in force.
+
+**Standing authorization (granted by the repo owner, 2026-08-05):** the human-authorization requirements elsewhere in this policy — High Tier spawns, Anthropic-model sub-agent allocation, and merges/pushes to shared branches — are **pre-approved** and must not be re-confirmed per action. The orchestrator operates autonomously: assess tier and caps, then act. Traceability comes from atomic, immediately-pushed commits, which make any unwanted change trivially revertible. Genuinely destructive git operations (force-push, hard reset, history rewrite) are excluded from this standing authorization and must still be raised before use, since they defeat the revert path the authorization relies on.
 
 ### 1. Multi-Agent Complexity-Based Routing Matrix
 Before spawning any sub-agent, you must evaluate the nature and complexity of the task to determine the appropriate compute tier:
@@ -187,13 +189,19 @@ You must actively throttle background agent invocation based on workspace safety
 *   **Asymmetric Approval Lock:** All Anthropic/Claude allocations are highly intentional and strictly require manual user confirmation to prevent accidental token/quota exhaustion. All native Google/Gemini allocations are granted auto-execution privileges.
 *   **File Blast Radius Filter:** If multiple pending tasks touch the exact same file or tightly coupled directory, parallel execution is strictly forbidden. Force these tasks to run sequentially on a single sub-agent thread to guarantee zero Git merge conflicts.
 *   **Dependency Verification:** Always parse the task tracking list for sequential prerequisites. Never spawn sub-agents for downstream tasks until their upstream dependencies are fully merged and validated.
-*   **Diminishing Returns Cap:** Even if multiple completely independent tasks are available, cap immediate parallel execution at **3 sub-agents max** to preserve system performance and prevent cognitive overhead during code reviews.
+*   **Parallel-By-Default:** Dependency Verification gates what *cannot* run yet; it is not a licence to run everything one at a time. Whenever a set of tasks has no remaining unmet prerequisite, dispatch them to separate concurrent agents rather than sequentially, up to the standing caps (§3, and the Diminishing Returns cap above). Serialize **only** for a genuine blocker — an unmet dependency, the File Blast Radius Filter, or the Single-Checkout Constraint below. Re-evaluate after **each** task completes and passes verification, not just at batch boundaries: the moment a task unblocks another, dispatch it. This applies identically to implementation work and to QA (both passes) — the deciding question is always "does this depend on something unfinished, or share blast radius with something in flight," never "is this QA." When something does run sequentially, record which of the three blockers caused it.
+*   **Diminishing Returns Cap:** Even if multiple completely independent tasks are available, cap immediate parallel execution at **5 sub-agents max** to preserve system performance and prevent cognitive overhead during code reviews.
+*   **Single-Checkout Constraint (Claude Code):** Raising a concurrency cap does not by itself make parallel execution possible. Claude Code sub-agents share one working directory, so two agents cannot sit on different branches at once; and per the File Blast Radius Filter, agents touching the same files must not run concurrently regardless of headroom. Parallelism is therefore only available for tasks that are both on the same branch and file-disjoint, or that use separate git worktrees. Note that a fresh worktree has no `node_modules`, so any agent required to run `npm run build` cannot verify its work there without a separate install.
+
+    A further consequence: even *file-disjoint* agents sharing one working directory contend on git's `.git/index.lock` when they stage or commit concurrently. So same-branch parallelism is safe for agents that only **read and edit** files, but agents that each need to **commit** their own work must either be serialized or given separate worktrees.
+
+*   **Shared Runtime Constraint:** "Read-only" is not the same as "isolated." Concurrent agents also share the **dev server, browser profile, and `localStorage`** — so two browser-driving QA agents will clobber each other's seeded state, and one stopping the server breaks the other. This was observed in practice: two concurrent Pass-1 testers each reported the other creating and deleting armies mid-assertion. Static/analytical work (reading code, scripting over data files, `tsc`, greps) genuinely parallelizes freely. Browser-driving work does **not** — either serialize it, or require each agent to open its own tab and re-verify `localStorage` immediately before every assertion, and to leave the shared dev server running on exit. Any agent that browser-tests concurrently must disclose the contention in its report so results can be weighed accordingly.
 
 ### 3. Absolute Provider Caps
 When parallel scaling *is* valid and authorized, the total background pool must strictly respect these hard limits. **Note:** These limits apply ONLY to Implementation/Development sub-agents:
-*   **Anthropic Hard Ceiling:** Max **2 active sub-agents** concurrently across any Claude variants.
+*   **Anthropic Hard Ceiling:** Max **4 active sub-agents** concurrently across any Claude variants.
 *   **Google Hard Ceiling:** Max **5 active sub-agents** concurrently.
-*   **Global Workspace Ceiling:** The total combination of *all* active sub-agents across all providers combined must **never exceed 5**.
+*   **Global Workspace Ceiling:** The total combination of *all* active sub-agents across all providers combined must **never exceed 7**.
 
 ### 4. Execution Verification
 *   Every sub-agent must append its runtime signature to its atomic commit log using the format: `[Model: <Model Name>]`.
@@ -220,19 +228,38 @@ Whenever an implementation sub-agent completes an initial assignment:
     *   **Beyond the Happy Path:** While the QA agent must verify the items listed in the Changelog, it must intentionally test edge cases, invalid inputs, rapid/out-of-order clicks, and boundary conditions to ensure the application does not crash under duress.
     *   **Burden of Proof:** A test pass is only considered successful if the implementation survives deliberate attempts to break the specific logic being tested.
 
-### 2. The Single Self-Correction Loop (The "One-Strike" Rule)
-If the QA Sub-Agent detects any failures, errors, or broken visual/state logic during the initial pass, the system is permitted **exactly one** automated fix attempt per user prompt:
-*   **Reroute to Orchestrator (Pass 2):** The QA sub-agent passes the failure logs back to the Lead Orchestrator. The Orchestrator modifies the implementation files exactly *one time* to resolve the specific bugs found.
-*   **Generate Fixes Changelog:** The Orchestrator must generate a dedicated "Fixes Changelog" detailing the exact lines, logic, or components altered during this correction step.
-*   **Final Test Pass:** The Orchestrator hands the project back to the QA Sub-Agent along with an updated summary. The QA Sub-Agent runs its test suite a second time (strictly adhering to the authorization rules outlined in Step 1).
+### 2. The Self-Correction Loop (The "Two-Strike" Rule)
+If QA detects any failures, errors, or broken visual/state logic, the system is permitted **up to two** automated fix-and-reverify loops per user prompt (raised from one). Each loop follows the fresh-tester and structured-handoff protocol below.
+*   **Reroute to Orchestrator:** The failure list passes back to the Lead Orchestrator, which modifies the implementation to resolve the specific defects found.
+*   **Generate Fixes Changelog:** The Orchestrator must generate a dedicated "Fixes Changelog" detailing the exact lines, logic, or components altered during that correction step, with commit hashes.
+*   **Reverify:** A **freshly spawned** tester re-checks the work (see below).
+
+#### Fresh Tester & Structured Hand-Off (mandatory every loop)
+Each loop's tester must be a **new agent spawn with no memory of the prior loop** — never the same session continuing. A tester that recalls its own earlier conclusions about code that has since changed is itself a hallucination risk; every loop starts from zero trust in what the last one believed.
+
+The Orchestrator hands the new tester exactly four artifacts, and nothing more:
+1. **The prior failure list** — defect, file/function/line, repro steps.
+2. **The Fixes Changelog** — what changed per defect, with commit hashes.
+3. **The actual diff** between the pre-fix and post-fix commits — not merely the changelog's description of itself. The tester must independently confirm the diff matches the changelog's claims and look for side effects outside the stated scope, rather than trusting the fixer's self-report.
+4. **An explicit scope note** — which defects this loop is re-verifying. Out-of-scope areas are neither assumed fine (there is no memory to trust) nor re-audited from scratch (that wastes the loop); flag anything suspicious noticed in passing, but the verification burden is the listed defects.
+
+**Must not carry forward:** the prior tester's raw exploration transcript, tool-call history, or reasoning about why it believed something passed or failed. Only the four artifacts above.
+
+#### Two-Loop Ceiling
+If Loop 2 also fails, that is a **harder halt** than a single-loop failure. The report to the user must explicitly state that the defect class survived two independent fix attempts, and that this signals a scope or design gap rather than something worth a third automated patch. **No third loop under any circumstances**, however small Loop 2's failure appears. The report must also distinguish whether Loop 2's failure was a *narrow continuation* of Loop 1's defect (e.g. a generalization that still misses cases) or a *freshly discovered, unrelated* defect — both consume the same budget, but they imply different next steps for the human.
 
 ### 3. Post-Merge Reporting Gate & Hard Halt Exception
-If a QA test passes (Pass 1 or Pass 2), the Orchestrator will automatically merge the feature branch into `main`. The Orchestrator will present the final report (and any Fixes Changelog) *after* the merge is complete. If the automated fixes are incorrect, the user will manually instruct a Git revert.
-*   **Hard Halt Exception:** Only halt and refuse to merge if Pass 2 QA explicitly fails with unresolved critical bugs. In this scenario, the system must completely freeze background operations and present a comprehensive report of the remaining failures to the user. No further automated fixing is allowed without new user prompting.
+If a QA test passes at any loop, the Orchestrator will automatically merge the feature branch into `main`. The Orchestrator will present the final report (and any Fixes Changelog) *after* the merge is complete. If the automated fixes are incorrect, the user will manually instruct a Git revert.
+*   **Hard Halt Exception:** Halt and refuse to merge if QA explicitly fails with unresolved critical bugs, or if the two-loop budget in §2 is exhausted. In this scenario, the system must completely freeze background operations and present a comprehensive report of the remaining failures to the user. No further automated fixing is allowed without new user prompting.
 
 ### 4. QA Concurrency Limits
-*   **Initial Test Pass (Pass 1) Limit:** The QA sub-agent pool is strictly capped at a maximum of **2 concurrent sub-agents**, regardless of the model provider being used.
-*   **Final Test Pass (Pass 2) Limit:** Following the One-Strike auto-fix loop, the second and final test pass must be executed by **strictly 1 (one) single QA sub-agent**. No parallel execution is allowed during the final verification pass to ensure a completely linear and uncorrupted final log.
+
+**"Strictly 1 agent" means one agent per *check*, not one agent per pass.** The rule exists to prevent two or more agents testing the same thing, which would produce a non-linear or conflicting log for that check. It was never meant to serialize independent checks.
+
+*   **One owner per check:** each individual QA check — one defect, one area of functionality, one branch — is owned by exactly one agent for its entire lifecycle. No redundant or duplicate agents re-testing the same check.
+*   **Independent checks run concurrently:** multiple checks with no unmet dependency and no blast-radius overlap may and should run in parallel, up to the standing caps (§3, and the §2 Diminishing Returns cap). This holds for **both** the Initial Test Pass and the Final Test Pass; Pass 2's limit reads as "one agent per check, dependency- and blast-radius-gated like everything else," not a hard global cap of 1 for the whole pass.
+*   **Pass 1 note:** the historical cap of 2 concurrent QA sub-agents is superseded by the standing caps in §3.
+*   QA is read-only and therefore parallelizes freely under the Single-Checkout Constraint (§2) — it is the best use of spare concurrency headroom.
 
 ### 5. Sub-Agent Lifecycle & Termination Protocol
 *   **Graceful Teardown:** Sub-agents must never be left running idle. However, the Lead Orchestrator must not forcefully "kill" a sub-agent that has successfully completed its objective. Instead, the Orchestrator must use the appropriate graceful shutdown mechanism (e.g., instructing the agent to self-terminate with a success code, resolving the agent's task promise, or using a `.dismiss()`/`.complete()` API). 

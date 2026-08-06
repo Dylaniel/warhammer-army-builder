@@ -1,0 +1,5457 @@
+[
+  {
+    "id": "accursed-cultists",
+    "name": "Accursed Cultists",
+    "faction": "Chaos Knights",
+    "role": "ELITES",
+    "basePoints": 90,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "6+",
+      "wounds": 3,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "hideous-mutations",
+        "name": "Hideous mutations",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": "D6+2",
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 4
+      },
+      {
+        "id": "blasphemous-appendages",
+        "name": "Blasphemous appendages",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Howling Horde",
+        "description": "Each time an enemy unit has shot, if one or more models from this unit were destroyed as a result of those attacks, this unit can make a Horde move. To do so, roll one D6; this unit can move a number of inches up to the result, but this unit must finish that move as close as possible to the nearest enemy unit (excluding AIRCRAFT). When doing so, those models can be moved within Engagement Range of that enemy unit. This unit cannot make a Horde move while it is Battle-shocked."
+      },
+      {
+        "name": "Khorne",
+        "description": "Add 2 to the Strength characteristic of this model's hellforged weapons."
+      },
+      {
+        "name": "Nurgle",
+        "description": "Add 1 to this model's Toughness characteristic."
+      },
+      {
+        "name": "Slaanesh",
+        "description": "Add 2\" to this model's Move characteristic."
+      },
+      {
+        "name": "Tzeentch",
+        "description": "Add 3 to the Attacks characteristic of this model's infernal cannon."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      },
+      {
+        "name": "Feel No Pain",
+        "description": "Some models have 'Feel No Pain x+' listed in their abilities. Each time a model with this ability suffers damage and so would lose a wound (including wounds lost due to mortal wounds), roll one D6: if the result is greater than or equal to the number denoted by 'x: that wound is ignored and is not lost. If a model has more than one Feel No Pain ability, you can only use one of those abilities each time that model suffers damage and so would lose a wound."
+      },
+      {
+        "name": "Scouts",
+        "description": "Some units have ‘Scouts x\"’ listed in their abilities. If every model in a unit has this ability, then at the start of the first battle round, before the first turn begins, it can make a Normal move of up to x\", with the exception that, while making that move, the distance moved by each model in that unit can be greater than that model's Move characteristic, as long as it is not greater than x\". \n\nDEDICATED TRANSPORT models can make use of any Scouts x\" ability listed in their abilities, or a Scouts x\" ability that a unit that starts the battle embarked within that DEDICATED TRANSPORT  model has (provided only models with this ability are embarked within that Dedicated Transport model), regardless of how that embarked unit gained this ability (e.g. listed in their abilities, conferred by an Enhancement or by an attached Character, etc.). \n\nA unit that moves using this ability must end that move more than 9\" horizontally away from all enemy models. If both players have units that can do this, the player who is taking the first turn moves their units first."
+      }
+    ],
+    "modelGroups": {
+      "torment": {
+        "id": "torment",
+        "name": "Torment",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "6+",
+          "wounds": 3,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 3,
+        "maxQuantity": 6,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "mutant": {
+        "id": "mutant",
+        "name": "Mutant",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "6+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 5,
+        "maxQuantity": 10,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "torment": 3,
+          "mutant": 5
+        },
+        "points": 90
+      },
+      {
+        "composition": {
+          "torment": 6,
+          "mutant": 10
+        },
+        "points": 195
+      }
+    ]
+  },
+  {
+    "id": "cultist-firebrand",
+    "name": "Cultist Firebrand",
+    "faction": "Chaos Knights",
+    "role": "HQ",
+    "basePoints": 45,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "4+",
+      "wounds": 4,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "talisman-of-burning-blood",
+        "name": "Talisman of Burning Blood",
+        "points": 15
+      },
+      {
+        "id": "eye-of-tzeentch",
+        "name": "Eye of Tzeentch",
+        "points": 15
+      },
+      {
+        "id": "orbs-of-unlife",
+        "name": "Orbs of Unlife",
+        "points": 15
+      },
+      {
+        "id": "intoxicating-elixir",
+        "name": "Intoxicating Elixir",
+        "points": 15
+      },
+      {
+        "id": "warmasters-gift",
+        "name": "Warmaster's Gift",
+        "points": 15
+      },
+      {
+        "id": "eager-for-vengeance",
+        "name": "Eager for Vengeance",
+        "points": 20
+      },
+      {
+        "id": "eye-of-abaddon",
+        "name": "Eye of Abaddon",
+        "points": 15
+      },
+      {
+        "id": "mark-of-legend",
+        "name": "Mark of Legend",
+        "points": 10
+      },
+      {
+        "id": "falsehood",
+        "name": "Falsehood",
+        "points": 10
+      },
+      {
+        "id": "cursed-fang",
+        "name": "Cursed Fang",
+        "points": 10
+      },
+      {
+        "id": "shroud-of-obfuscation",
+        "name": "Shroud of Obfuscation",
+        "points": 15
+      },
+      {
+        "id": "soul-link",
+        "name": "Soul Link",
+        "points": 5
+      },
+      {
+        "id": "despots-claim",
+        "name": "Despot's Claim",
+        "points": 15
+      },
+      {
+        "id": "dread-reaver",
+        "name": "Dread Reaver",
+        "points": 15
+      },
+      {
+        "id": "mark-of-the-hound",
+        "name": "Mark of the Hound",
+        "points": 25
+      },
+      {
+        "id": "tyrants-lash",
+        "name": "Tyrant's Lash",
+        "points": 20
+      },
+      {
+        "id": "willbreaker",
+        "name": "Willbreaker",
+        "points": 10
+      },
+      {
+        "id": "nights-shroud",
+        "name": "Night's Shroud",
+        "points": 20
+      },
+      {
+        "id": "forges-blessing",
+        "name": "Forge's Blessing",
+        "points": 20
+      },
+      {
+        "id": "eater-of-dread",
+        "name": "Eater of Dread",
+        "points": 15
+      },
+      {
+        "id": "bastion-plate",
+        "name": "Bastion Plate",
+        "points": 10
+      },
+      {
+        "id": "ironbound-enmity",
+        "name": "Ironbound Enmity",
+        "points": 15
+      },
+      {
+        "id": "warp-tracer",
+        "name": "Warp Tracer",
+        "points": 20
+      },
+      {
+        "id": "iron-artifice",
+        "name": "Iron Artifice",
+        "points": 10
+      },
+      {
+        "id": "amulet-of-tainted-vigour",
+        "name": "Amulet of Tainted Vigour",
+        "points": 20
+      },
+      {
+        "id": "incendiary-goad",
+        "name": "Incendiary Goad",
+        "points": 15
+      },
+      {
+        "id": "cultists-brand",
+        "name": "Cultist's Brand",
+        "points": 20
+      },
+      {
+        "id": "warped-foresight",
+        "name": "Warped Foresight",
+        "points": 10
+      },
+      {
+        "id": "warp-fuelled-thrusters",
+        "name": "Warp-fuelled Thrusters",
+        "points": 20
+      },
+      {
+        "id": "invigorated-mechatendrils",
+        "name": "Invigorated Mechatendrils",
+        "points": 15
+      },
+      {
+        "id": "soul-harvester",
+        "name": "Soul Harvester",
+        "points": 15
+      },
+      {
+        "id": "tempting-addendum",
+        "name": "Tempting Addendum",
+        "points": 25
+      },
+      {
+        "id": "surgical-precision",
+        "name": "Surgical Precision",
+        "points": 10
+      },
+      {
+        "id": "living-carapace",
+        "name": "Living Carapace",
+        "points": 15
+      },
+      {
+        "id": "helm-of-all-seeing",
+        "name": "Helm of All-Seeing",
+        "points": 25
+      },
+      {
+        "id": "prime-test-subject",
+        "name": "Prime Test Subject",
+        "points": 35
+      },
+      {
+        "id": "touched-by-the-warp",
+        "name": "Touched by the Warp",
+        "points": 10
+      },
+      {
+        "id": "eye-of-zdesh",
+        "name": "Eye of Z'Desh",
+        "points": 25
+      },
+      {
+        "id": "mind-blade",
+        "name": "Mind Blade",
+        "points": 25
+      },
+      {
+        "id": "infernal-avatar",
+        "name": "Infernal Avatar",
+        "points": 20
+      },
+      {
+        "id": "greyveil-hex",
+        "name": "Greyveil Hex",
+        "points": 25
+      },
+      {
+        "id": "warp-fuelled-thrusters-2",
+        "name": "Warp-fuelled Thrusters",
+        "points": 20
+      },
+      {
+        "id": "sorrowscent-vulture",
+        "name": "Sorrowscent Vulture",
+        "points": 35
+      },
+      {
+        "id": "terrorglut-parasite",
+        "name": "Terrorglut Parasite",
+        "points": 20
+      },
+      {
+        "id": "voice-of-the-tyrant",
+        "name": "Voice of the Tyrant",
+        "points": 25
+      },
+      {
+        "id": "raid-leader",
+        "name": "Raid Leader",
+        "points": 20
+      },
+      {
+        "id": "dread-reputation",
+        "name": "Dread Reputation",
+        "points": 25
+      },
+      {
+        "id": "eager-for-bloodshed",
+        "name": "Eager for Bloodshed",
+        "points": 30
+      },
+      {
+        "id": "weaponised-hatred",
+        "name": "Weaponised Hatred",
+        "points": 35
+      },
+      {
+        "id": "eyes-of-the-hunter",
+        "name": "Eyes of the Hunter",
+        "points": 15
+      },
+      {
+        "id": "fratricidal-trophies",
+        "name": "Fratricidal Trophies",
+        "points": 5
+      },
+      {
+        "id": "empyric-symbiote",
+        "name": "Empyric Symbiote",
+        "points": 15
+      },
+      {
+        "id": "infernal-fulgurite",
+        "name": "Infernal Fulgurite",
+        "points": 20
+      },
+      {
+        "id": "eye-of-the-warp",
+        "name": "Eye of the Warp",
+        "points": 15
+      },
+      {
+        "id": "akshurs-binding-runes",
+        "name": "Akshur's Binding Runes",
+        "points": 20
+      },
+      {
+        "id": "tzagulla",
+        "name": "Tzagulla",
+        "points": 25
+      },
+      {
+        "id": "wyredjinn",
+        "name": "Wyredjinn",
+        "points": 25
+      },
+      {
+        "id": "cybinfernal-font",
+        "name": "Cybinfernal Font",
+        "points": 20
+      },
+      {
+        "id": "mark-of-the-soul-forges",
+        "name": "Mark of the Soul Forges",
+        "points": 20
+      },
+      {
+        "id": "crown-of-worms",
+        "name": "Crown of Worms",
+        "points": 15
+      }
+    ],
+    "weapons": [
+      {
+        "id": "balefire-pike",
+        "name": "Balefire pike",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6+3",
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Fiery Faith",
+        "description": "While this model is leading a unit, you can re-roll Leadership tests taken for that unit."
+      },
+      {
+        "name": "Cursed Flames",
+        "description": "In your Shooting phase, after this model has shot, select one enemy INFANTRY unit hit by one or more of those attacks. That unit must make a Battle-shock test."
+      },
+      {
+        "name": "Leader",
+        "description": "This model can be attached to the following units:\n■ ACCURSED CULTISTS\n■ CULTIST MOB"
+      },
+      {
+        "name": "Talisman of Burning Blood",
+        "description": "Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. Each time the bearer’s unit makes a Dark Pact and does not fail the resulting Leadership test, roll one D3; until the end of the phase, add the result to the Attacks and Strength characteristics of the bearer’s melee weapons instead."
+      },
+      {
+        "name": "Eye of Tzeentch",
+        "description": "Each time the bearer’s unit makes a Dark Pact and does not fail the resulting Leadership test, if the result of that test was 8 or more, you gain 1CP."
+      },
+      {
+        "name": "Orbs of Unlife",
+        "description": "At the end of the Fight phase, roll one D6 for every enemy unit within 3\" of the bearer, adding 1 to the result if the bearer’s unit made a Dark Pact that phase and did not fail the resulting Leadership test: on a 4+, that enemy unit suffers D3 mortal wounds."
+      },
+      {
+        "name": "Intoxicating Elixir",
+        "description": "The bearer has the Feel No Pain 5+ ability. Each time the bearer shoots or fights, if the bearer’s unit made a Dark Pact this phase and did not fail the resulting Leadership test, after the bearer has resolved those attacks, select one enemy unit that was hit by one or more of those attacks; that enemy unit must take a Battle-shock test."
+      },
+      {
+        "name": "Warmaster's Gift",
+        "description": "Each time the bearer makes an attack that targets your focus of hatred, an unmodified successful wound roll of 5+ scores a Critical Wound."
+      },
+      {
+        "name": "Eager for Vengeance",
+        "description": "The bearer's unit is eligible to shoot and declare a charge in a turn in which it Fell Back. While doing so, each time a model in that unit makes an attack that targets your focus of hatred, add 1 to the Hit roll and each time you select your focus of hatred as a target of that unit's charge, add 1 to the Charge roll."
+      },
+      {
+        "name": "Eye of Abaddon",
+        "description": "While the bearer is on the battlefield, each time your focus of hatred is destroyed, roll one D6; on a 4+, you gain 1CP."
+      },
+      {
+        "name": "Mark of Legend",
+        "description": "Once per turn, you can re-roll one Hit roll, one Wound roll or one saving throw made for the bearer."
+      },
+      {
+        "name": "Falsehood",
+        "description": "In the Declare Battle Formations step, you can set up the bearer in Reserves instead of setting it up on the battlefield. If you do, in the Reinforcements step of one of your Movement phases, you can select one model in a friendly LEGIONARIES or CHOSEN unit that has two or more models remaining and is on the battlefield (excluding Attached units). The selected model is destroyed (ignoring any rules that are triggered when a model is destroyed) and the bearer is set up as close as possible to where that model was destroyed and only within Engagement Range of any units if the destroyed model was in Engagement Range of those units. The bearer now attaches to that unit as its Leader."
+      },
+      {
+        "name": "Cursed Fang",
+        "description": "Improve the Armour Penetration characteristic of the bearer's melee weapons by 1, and the bearer's melee weapons have the [PRECISION] ability."
+      },
+      {
+        "name": "Shroud of Obfuscation",
+        "description": "The bearer has the Stealth and Lone Operative abilities."
+      },
+      {
+        "name": "Soul Link",
+        "description": "At the start of your Command phase, you can select one other HERETIC ASTARTES INFANTRY CHARACTER model from your army (excluding EPIC HEROES). Until the start of your next Command phase, the bearer gains the PSYKER keyword, and replace the bearer's datasheet abilities with the datasheet abilities of the CHARACTER you selected."
+      },
+      {
+        "name": "Despot's Claim",
+        "description": "At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding one to the result if the bearer is wholly within 12\" of your opponent's deployment zone; on a 5+, you gain 1CP."
+      },
+      {
+        "name": "Dread Reaver",
+        "description": "Each time the bearer makes a melee attack, if the bearer is wholly within 12\" of your opponent's deployment zone, you can re-roll the Hit roll and you can re-roll the Wound roll."
+      },
+      {
+        "name": "Mark of the Hound",
+        "description": "Models in the bearer's unit have the Scouts 6\" ability."
+      },
+      {
+        "name": "Tyrant's Lash",
+        "description": "You can re-roll Advance rolls made for the bearer's unit, and the bearer's unit is eligible to shoot in a turn in which it Fell Back."
+      },
+      {
+        "name": "Willbreaker",
+        "description": "In the Fight phase, after the bearer has made its attacks, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test."
+      },
+      {
+        "name": "Night's Shroud",
+        "description": "Models in the bearer's unit have the Stealth ability."
+      },
+      {
+        "name": "Forge's Blessing",
+        "description": "In your Command phase, select one friendly HERETIC ASTARTES VEHICLE unit within 12\" of the bearer. Until the start of your next Command phase, that unit has the Feel No Pain 6+ ability."
+      },
+      {
+        "name": "Eater of Dread",
+        "description": "At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result for each Battle-shocked enemy unit that is on the battlefield: on a 5+, you gain 1CP."
+      },
+      {
+        "name": "Bastion Plate",
+        "description": "Once per battle round, when a saving throw is failed for the bearer's unit, you can change the Damage characteristic of that attack to 0."
+      },
+      {
+        "name": "Ironbound Enmity",
+        "description": "Each time the bearer makes an attack while within range of an objective marker, add 1 to the Wound roll."
+      },
+      {
+        "name": "Warp Tracer",
+        "description": "In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover."
+      },
+      {
+        "name": "Iron Artifice",
+        "description": "The bearer's weapons have the [ANTI-VEHICLE 4+] and [ANTI-FORTIFICATION 4+] abilities."
+      },
+      {
+        "name": "Amulet of Tainted Vigour",
+        "description": "In your Command phase, you can return up to D3 destroyed DAMNED models (excluding CHARACTER models) to the bearer's unit."
+      },
+      {
+        "name": "Incendiary Goad",
+        "description": "While the bearer's unit is below its Starting Strength, add 1 to the Strength characteristic of melee weapons equipped by DAMNED models in that unit, and while that unit is Below Half-Strength, add 1 to the Attacks characteristic of those weapons as well."
+      },
+      {
+        "name": "Cultist's Brand",
+        "description": "If every other model in the bearer's unit (excluding Dark Disciples) is DAMNED, you can re-roll Advance and Charge rolls made for the bearer's unit."
+      },
+      {
+        "name": "Warped Foresight",
+        "description": "The bearer has the Scouts 6\" ability."
+      },
+      {
+        "name": "Warp-fuelled Thrusters",
+        "description": "At the end of your opponent's turn, if the bearer's unit is not within Engagement Range of one or more enemy units, you can remove the bearer's unit from the battlefield and place it into Strategic Reserves."
+      },
+      {
+        "name": "Invigorated Mechatendrils",
+        "description": "Add 4\" to the bearer's Move characteristic."
+      },
+      {
+        "name": "Soul Harvester",
+        "description": "While the bearer is on the battlefield, each time an enemy unit within 12\" of the bearer is destroyed, roll one D6; on a 5+, you gain 1CP."
+      },
+      {
+        "name": "Tempting Addendum",
+        "description": "Each time a HERETIC ASTARTES DAEMON VEHICLE from your army invokes its contract while within 3\" of the bearer:\n- If it suffers one or more mortal wounds as a result of that Dark Pact, add 1 to the number of mortal wounds it suffers.\n- Until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll."
+      },
+      {
+        "name": "Surgical Precision",
+        "description": "HERETIC ASTARTES model (excluding DAMNED models) only. The bearer’s melee weapons have the [PRECISION] ability."
+      },
+      {
+        "name": "Living Carapace",
+        "description": "CHAOS LORD model only. Add 1 to the bearer’s Wounds characteristic and the bearer has the Feel No Pain 5+ ability."
+      },
+      {
+        "name": "Helm of All-Seeing",
+        "description": "HERETIC ASTARTES INFANTRY model (excluding DAMNED models) only. Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of the bearer."
+      },
+      {
+        "name": "Prime Test Subject",
+        "description": "**^^Heretic Astartes Infantry^^** model (excluding **^^Damned^^** models) only. Add 1 to the Damage characteristic of melee weapons equipped by the bearer. Each time the bearer makes a melee attack, you can re‑roll the Hit roll."
+      },
+      {
+        "name": "Touched by the Warp",
+        "description": "The bearer gains the ^^**Psyker^^** keyword."
+      },
+      {
+        "name": "Eye of Z'Desh",
+        "description": "Models in the bearer's unit have the Scouts 6\" ability."
+      },
+      {
+        "name": "Mind Blade",
+        "description": "Melee weapons equipped by models in the bearer’s unit have the [LANCE] ability."
+      },
+      {
+        "name": "Infernal Avatar",
+        "description": "Improve the Strength characteristic of melee weapons equipped by the bearer by 2, and improve the Armour Penetration characteristic of those weapons by 1."
+      },
+      {
+        "name": "Greyveil Hex",
+        "description": "Models in the bearer's unit have the Stealth ability.\n\nWhile the bearer’s unit is within range of one or more objective markers you control, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
+      },
+      {
+        "name": "Sorrowscent Vulture",
+        "description": "Models in the bearer’s unit have the Scouts 6\" ability.\nIn the Declare Battle Formations step, the bearer can be attached to a Warp Talons unit."
+      },
+      {
+        "name": "Terrorglut Parasite",
+        "description": "At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle‑shock test, subtracting 1 from the result."
+      },
+      {
+        "name": "Voice of the Tyrant",
+        "description": "The bearer’s unit has both abilities from the Tyrannical Motivation Detachment rule."
+      },
+      {
+        "name": "Raid Leader",
+        "description": "Each time the bearer’s unit is set up after disembarking from a ^^**Transport**^^ that has made a Normal move this turn, the bearer’s unit is still eligible to declare a charge."
+      },
+      {
+        "name": "Dread Reputation",
+        "description": "Each time the bearer’s unit is set up on the battlefield, each enemy unit within 6” of the bearer’s unit (or within 12” if the bearer’s unit was set up using the Deep Strike ability) takes a Battle‑shock test."
+      },
+      {
+        "name": "Eager for Bloodshed",
+        "description": "The bearer has the Infiltrators ability."
+      },
+      {
+        "name": "Weaponised Hatred",
+        "description": "Once per battle round, after your Vendetta target is destroyed, if the bearer is on the battlefield, you can select one enemy unit visible to the bearer. That enemy unit becomes your Vendetta target until you select a new one."
+      },
+      {
+        "name": "Eyes of the Hunter",
+        "description": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
+      },
+      {
+        "name": "Fratricidal Trophies",
+        "description": "In a turn in which the bearer’s unit chose to Default to Doctrine, until the end of the turn, each time a model in this unit makes an attack, you can re‑roll the Hit roll."
+      },
+      {
+        "name": "Empyric Symbiote",
+        "description": "Add 1 to Advance and Charge rolls made for the bearer’s unit."
+      },
+      {
+        "name": "Infernal Fulgurite",
+        "description": "Once per battle, you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+      },
+      {
+        "name": "Eye of the Warp",
+        "description": "Each time the bearer’s unit is set up on the battlefield, until the end of the turn, you can re‑roll Charge rolls made for that unit."
+      },
+      {
+        "name": "Akshur's Binding Runes",
+        "description": "The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules."
+      },
+      {
+        "name": "Tzagulla",
+        "description": "Improve the Attacks, Strength and Armour Penetration characteristics of the bearer’s weapons by 1. In addition, each time the bearer’s unit is set up on the battlefield from Reserves, until the end of the turn, improve the Damage characteristic of the bearer’s weapons by 1."
+      },
+      {
+        "name": "Wyredjinn",
+        "description": "At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP."
+      },
+      {
+        "name": "Cybinfernal Font",
+        "description": "Models in the bearer’s unit have the ^^**Soul Forge**^^ keyword."
+      },
+      {
+        "name": "Mark of the Soul Forges",
+        "description": "Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit."
+      },
+      {
+        "name": "Crown of Worms",
+        "description": "Add 3” to the range of the bearer’s Warpsmith, Master of Mechanisms and Enrage Machine Spirits abilities."
+      },
+      {
+        "name": "Khorne",
+        "description": "Add 2 to the Strength characteristic of this model's hellforged weapons."
+      },
+      {
+        "name": "Nurgle",
+        "description": "Add 1 to this model's Toughness characteristic."
+      },
+      {
+        "name": "Slaanesh",
+        "description": "Add 2\" to this model's Move characteristic."
+      },
+      {
+        "name": "Tzeentch",
+        "description": "Add 3 to the Attacks characteristic of this model's infernal cannon."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      }
+    ],
+    "modelGroups": {
+      "cultist-firebrand": {
+        "id": "cultist-firebrand",
+        "name": "Cultist Firebrand",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "4+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "wargear-balefire-pike",
+            "description": "Wargear: Balefire pike",
+            "exclusiveWith": [
+              "wargear-close-combat-weapon"
+            ]
+          },
+          {
+            "id": "wargear-close-combat-weapon",
+            "description": "Wargear: Close combat weapon",
+            "exclusiveWith": [
+              "wargear-balefire-pike"
+            ]
+          }
+        ],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cultist-firebrand": 1
+        },
+        "points": 45
+      }
+    ]
+  },
+  {
+    "id": "cultist-mob",
+    "name": "Cultist Mob",
+    "faction": "Chaos Knights",
+    "role": "TROOPS",
+    "basePoints": 50,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "6+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "brutal-assault-weapon",
+        "name": "Brutal assault weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      },
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "autopistol",
+        "name": "Autopistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 4
+      }
+    ],
+    "abilities": [
+      {
+        "name": "For the Dark Gods",
+        "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+      },
+      {
+        "name": "Warp Stalker",
+        "description": "You can re-roll Advance and Charge rolls made for this model's unit."
+      },
+      {
+        "name": "Unholy Speed",
+        "description": "Add 1 to Advance and Charge rolls made for this model's unit."
+      },
+      {
+        "name": "Mutant Form",
+        "description": "Add 1 to this model's Wounds characteristic."
+      },
+      {
+        "name": "Massive Fangs",
+        "description": "Melee weapons equipped by this model have the **[LANCE]** ability."
+      },
+      {
+        "name": "Eightfold Eyes",
+        "description": "Once per turn, you can re-roll one Hit roll, one Wound roll, one Damage roll or one saving throw made for this model."
+      },
+      {
+        "name": "Daemonic Flesh",
+        "description": "Add 1 to this model's Toughness characteristic."
+      },
+      {
+        "name": "Scorpion Tail",
+        "description": "Add 1 to the Attacks characteristic of melee weapons equipped by this model."
+      },
+      {
+        "name": "Iron-hard Talons",
+        "description": "Improve the Armour Penetration characteristic of melee weapons equipped by this model by 1."
+      },
+      {
+        "name": "Dark Blessing",
+        "description": "Once per battle, at the start of your opponent's Shooting phase, this model can use this ability. If it does, until the end of the phase, this model's unit has the Stealth ability."
+      },
+      {
+        "name": "Khorne",
+        "description": "Add 2 to the Strength characteristic of this model's hellforged weapons."
+      },
+      {
+        "name": "Nurgle",
+        "description": "Add 1 to this model's Toughness characteristic."
+      },
+      {
+        "name": "Slaanesh",
+        "description": "Add 2\" to this model's Move characteristic."
+      },
+      {
+        "name": "Tzeentch",
+        "description": "Add 3 to the Attacks characteristic of this model's infernal cannon."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      }
+    ],
+    "modelGroups": {
+      "cultist-champion": {
+        "id": "cultist-champion",
+        "name": "Cultist Champion",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "6+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "pistol-bolt-pistol",
+            "description": "Pistol: Bolt pistol",
+            "exclusiveWith": [
+              "pistol-autopistol"
+            ]
+          },
+          {
+            "id": "pistol-autopistol",
+            "description": "Pistol: Autopistol",
+            "exclusiveWith": [
+              "pistol-bolt-pistol"
+            ]
+          }
+        ],
+        "equippedWargear": [
+          "autopistol"
+        ]
+      },
+      "cultist-w-autopistol-and-brutal-assault-weapon": {
+        "id": "cultist-w-autopistol-and-brutal-assault-weapon",
+        "name": "Cultist w/ autopistol and brutal assault weapon",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "6+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 9,
+        "maxQuantity": 19,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cultist-champion": 1,
+          "cultist-w-autopistol-and-brutal-assault-weapon": 9
+        },
+        "points": 50
+      },
+      {
+        "composition": {
+          "cultist-champion": 1,
+          "cultist-w-autopistol-and-brutal-assault-weapon": 19
+        },
+        "points": 100
+      }
+    ]
+  },
+  {
+    "id": "cultist-mob-with-firearms-legends",
+    "name": "Cultist Mob with Firearms [Legends]",
+    "faction": "Chaos Knights",
+    "role": "TROOPS",
+    "basePoints": 50,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "6+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "brutal-assault-weapon",
+        "name": "Brutal assault weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      },
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "autopistol",
+        "name": "Autopistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 1,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      },
+      {
+        "id": "autogun",
+        "name": "Autogun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 1"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "flamer",
+        "name": "Flamer",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "cultist-grenade-launcher-frag",
+        "name": "➤ Cultist grenade launcher - frag",
+        "type": "Assault",
+        "range": 24,
+        "attacks": "D3",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "cultist-grenade-launcher-krak",
+        "name": "➤ Cultist grenade launcher - krak",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 1,
+        "strength": 9,
+        "armourPenetration": -2,
+        "damage": "D3",
+        "abilities": [],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "heavy-stubber",
+        "name": "Heavy stubber",
+        "type": "Rapid Fire",
+        "range": 36,
+        "attacks": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Heavy",
+          "Rapid Fire 3"
+        ],
+        "ballisticSkill": 5
+      }
+    ],
+    "abilities": [
+      {
+        "name": "For the Dark Gods",
+        "description": "At the end of your Command phase, if this unit is within range of an objective marker  you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+      },
+      {
+        "name": "Khorne",
+        "description": "Add 2 to the Strength characteristic of this model's hellforged weapons."
+      },
+      {
+        "name": "Nurgle",
+        "description": "Add 1 to this model's Toughness characteristic."
+      },
+      {
+        "name": "Slaanesh",
+        "description": "Add 2\" to this model's Move characteristic."
+      },
+      {
+        "name": "Tzeentch",
+        "description": "Add 3 to the Attacks characteristic of this model's infernal cannon."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      }
+    ],
+    "modelGroups": {
+      "cultist-champion": {
+        "id": "cultist-champion",
+        "name": "Cultist Champion",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "6+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "wargear-bolt-pistol-and-brutal-assault-weapon",
+            "description": "Wargear: Bolt pistol and brutal assault weapon",
+            "exclusiveWith": [
+              "wargear-autopistol-and-brutal-assault-weapon",
+              "wargear-autogun-and-close-combat-weapon"
+            ]
+          },
+          {
+            "id": "wargear-autopistol-and-brutal-assault-weapon",
+            "description": "Wargear: Autopistol and brutal assault weapon",
+            "exclusiveWith": [
+              "wargear-bolt-pistol-and-brutal-assault-weapon",
+              "wargear-autogun-and-close-combat-weapon"
+            ]
+          },
+          {
+            "id": "wargear-autogun-and-close-combat-weapon",
+            "description": "Wargear: Autogun and close combat weapon",
+            "exclusiveWith": [
+              "wargear-bolt-pistol-and-brutal-assault-weapon",
+              "wargear-autopistol-and-brutal-assault-weapon"
+            ]
+          }
+        ],
+        "equippedWargear": [
+          "autopistol"
+        ]
+      },
+      "cultist-w-autopistol-and-brutal-assault-weapon": {
+        "id": "cultist-w-autopistol-and-brutal-assault-weapon",
+        "name": "Cultist w/ autopistol and brutal assault weapon",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "6+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 19,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "cultist-w-autogun-and-close-combat-weapon": {
+        "id": "cultist-w-autogun-and-close-combat-weapon",
+        "name": "Cultist w/ autogun and close combat weapon",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "6+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 19,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "cultist-w-flamer": {
+        "id": "cultist-w-flamer",
+        "name": "Cultist w/ flamer",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "6+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "cultist-w-cultist-grenade-launcher": {
+        "id": "cultist-w-cultist-grenade-launcher",
+        "name": "Cultist w/ cultist grenade launcher",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "6+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "cultist-w-heavy-stubber": {
+        "id": "cultist-w-heavy-stubber",
+        "name": "Cultist w/ heavy stubber",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "6+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "cultist-champion": 1,
+          "cultist-w-autopistol-and-brutal-assault-weapon": 9,
+          "cultist-w-autogun-and-close-combat-weapon": 0,
+          "cultist-w-flamer": 0,
+          "cultist-w-cultist-grenade-launcher": 0,
+          "cultist-w-heavy-stubber": 0
+        },
+        "points": 50
+      },
+      {
+        "composition": {
+          "cultist-champion": 1,
+          "cultist-w-autopistol-and-brutal-assault-weapon": 19,
+          "cultist-w-autogun-and-close-combat-weapon": 0,
+          "cultist-w-flamer": 0,
+          "cultist-w-cultist-grenade-launcher": 0,
+          "cultist-w-heavy-stubber": 0
+        },
+        "points": 100
+      }
+    ]
+  },
+  {
+    "id": "dark-commune",
+    "name": "Dark Commune",
+    "faction": "Chaos Knights",
+    "role": "HQ",
+    "basePoints": 90,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "6+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "talisman-of-burning-blood",
+        "name": "Talisman of Burning Blood",
+        "points": 15
+      },
+      {
+        "id": "eye-of-tzeentch",
+        "name": "Eye of Tzeentch",
+        "points": 15
+      },
+      {
+        "id": "orbs-of-unlife",
+        "name": "Orbs of Unlife",
+        "points": 15
+      },
+      {
+        "id": "intoxicating-elixir",
+        "name": "Intoxicating Elixir",
+        "points": 15
+      },
+      {
+        "id": "warmasters-gift",
+        "name": "Warmaster's Gift",
+        "points": 15
+      },
+      {
+        "id": "eager-for-vengeance",
+        "name": "Eager for Vengeance",
+        "points": 20
+      },
+      {
+        "id": "eye-of-abaddon",
+        "name": "Eye of Abaddon",
+        "points": 15
+      },
+      {
+        "id": "mark-of-legend",
+        "name": "Mark of Legend",
+        "points": 10
+      },
+      {
+        "id": "falsehood",
+        "name": "Falsehood",
+        "points": 10
+      },
+      {
+        "id": "cursed-fang",
+        "name": "Cursed Fang",
+        "points": 10
+      },
+      {
+        "id": "shroud-of-obfuscation",
+        "name": "Shroud of Obfuscation",
+        "points": 15
+      },
+      {
+        "id": "soul-link",
+        "name": "Soul Link",
+        "points": 5
+      },
+      {
+        "id": "despots-claim",
+        "name": "Despot's Claim",
+        "points": 15
+      },
+      {
+        "id": "dread-reaver",
+        "name": "Dread Reaver",
+        "points": 15
+      },
+      {
+        "id": "mark-of-the-hound",
+        "name": "Mark of the Hound",
+        "points": 25
+      },
+      {
+        "id": "tyrants-lash",
+        "name": "Tyrant's Lash",
+        "points": 20
+      },
+      {
+        "id": "willbreaker",
+        "name": "Willbreaker",
+        "points": 10
+      },
+      {
+        "id": "nights-shroud",
+        "name": "Night's Shroud",
+        "points": 20
+      },
+      {
+        "id": "forges-blessing",
+        "name": "Forge's Blessing",
+        "points": 20
+      },
+      {
+        "id": "eater-of-dread",
+        "name": "Eater of Dread",
+        "points": 15
+      },
+      {
+        "id": "bastion-plate",
+        "name": "Bastion Plate",
+        "points": 10
+      },
+      {
+        "id": "ironbound-enmity",
+        "name": "Ironbound Enmity",
+        "points": 15
+      },
+      {
+        "id": "warp-tracer",
+        "name": "Warp Tracer",
+        "points": 20
+      },
+      {
+        "id": "iron-artifice",
+        "name": "Iron Artifice",
+        "points": 10
+      },
+      {
+        "id": "amulet-of-tainted-vigour",
+        "name": "Amulet of Tainted Vigour",
+        "points": 20
+      },
+      {
+        "id": "incendiary-goad",
+        "name": "Incendiary Goad",
+        "points": 15
+      },
+      {
+        "id": "cultists-brand",
+        "name": "Cultist's Brand",
+        "points": 20
+      },
+      {
+        "id": "warped-foresight",
+        "name": "Warped Foresight",
+        "points": 10
+      },
+      {
+        "id": "warp-fuelled-thrusters",
+        "name": "Warp-fuelled Thrusters",
+        "points": 20
+      },
+      {
+        "id": "invigorated-mechatendrils",
+        "name": "Invigorated Mechatendrils",
+        "points": 15
+      },
+      {
+        "id": "soul-harvester",
+        "name": "Soul Harvester",
+        "points": 15
+      },
+      {
+        "id": "tempting-addendum",
+        "name": "Tempting Addendum",
+        "points": 25
+      },
+      {
+        "id": "surgical-precision",
+        "name": "Surgical Precision",
+        "points": 10
+      },
+      {
+        "id": "living-carapace",
+        "name": "Living Carapace",
+        "points": 15
+      },
+      {
+        "id": "helm-of-all-seeing",
+        "name": "Helm of All-Seeing",
+        "points": 25
+      },
+      {
+        "id": "prime-test-subject",
+        "name": "Prime Test Subject",
+        "points": 35
+      },
+      {
+        "id": "touched-by-the-warp",
+        "name": "Touched by the Warp",
+        "points": 10
+      },
+      {
+        "id": "eye-of-zdesh",
+        "name": "Eye of Z'Desh",
+        "points": 25
+      },
+      {
+        "id": "mind-blade",
+        "name": "Mind Blade",
+        "points": 25
+      },
+      {
+        "id": "infernal-avatar",
+        "name": "Infernal Avatar",
+        "points": 20
+      },
+      {
+        "id": "greyveil-hex",
+        "name": "Greyveil Hex",
+        "points": 25
+      },
+      {
+        "id": "warp-fuelled-thrusters-2",
+        "name": "Warp-fuelled Thrusters",
+        "points": 20
+      },
+      {
+        "id": "sorrowscent-vulture",
+        "name": "Sorrowscent Vulture",
+        "points": 35
+      },
+      {
+        "id": "terrorglut-parasite",
+        "name": "Terrorglut Parasite",
+        "points": 20
+      },
+      {
+        "id": "voice-of-the-tyrant",
+        "name": "Voice of the Tyrant",
+        "points": 25
+      },
+      {
+        "id": "raid-leader",
+        "name": "Raid Leader",
+        "points": 20
+      },
+      {
+        "id": "dread-reputation",
+        "name": "Dread Reputation",
+        "points": 25
+      },
+      {
+        "id": "eager-for-bloodshed",
+        "name": "Eager for Bloodshed",
+        "points": 30
+      },
+      {
+        "id": "weaponised-hatred",
+        "name": "Weaponised Hatred",
+        "points": 35
+      },
+      {
+        "id": "eyes-of-the-hunter",
+        "name": "Eyes of the Hunter",
+        "points": 15
+      },
+      {
+        "id": "fratricidal-trophies",
+        "name": "Fratricidal Trophies",
+        "points": 5
+      },
+      {
+        "id": "empyric-symbiote",
+        "name": "Empyric Symbiote",
+        "points": 15
+      },
+      {
+        "id": "infernal-fulgurite",
+        "name": "Infernal Fulgurite",
+        "points": 20
+      },
+      {
+        "id": "eye-of-the-warp",
+        "name": "Eye of the Warp",
+        "points": 15
+      },
+      {
+        "id": "akshurs-binding-runes",
+        "name": "Akshur's Binding Runes",
+        "points": 20
+      },
+      {
+        "id": "tzagulla",
+        "name": "Tzagulla",
+        "points": 25
+      },
+      {
+        "id": "wyredjinn",
+        "name": "Wyredjinn",
+        "points": 25
+      },
+      {
+        "id": "cybinfernal-font",
+        "name": "Cybinfernal Font",
+        "points": 20
+      },
+      {
+        "id": "mark-of-the-soul-forges",
+        "name": "Mark of the Soul Forges",
+        "points": 20
+      },
+      {
+        "id": "crown-of-worms",
+        "name": "Crown of Worms",
+        "points": 15
+      }
+    ],
+    "weapons": [
+      {
+        "id": "commune-blade",
+        "name": "Commune blade",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      },
+      {
+        "id": "autopistol",
+        "name": "Autopistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 1,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      },
+      {
+        "id": "warp-curse-witchfire",
+        "name": "➤ Warp Curse - witchfire",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Psychic"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "warp-curse-focused-witchfire",
+        "name": "➤ Warp Curse - focused witchfire",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Hazardous",
+          "Psychic",
+          "Sustained Hits 2"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "commune-stave",
+        "name": "Commune stave",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": "D3",
+        "abilities": [
+          "Devastating Wounds"
+        ],
+        "weaponSkill": 4
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "This model can be attached to the following units:\n■ ACCURSED CULTISTS\n■ CULTIST MOB"
+      },
+      {
+        "name": "Faithful Flock",
+        "description": "While this unit is leading a unit and contains a CULT DEMAGOGUE model, models in that unit have a 5+ invulnerable save."
+      },
+      {
+        "name": "Dark Ritual",
+        "description": "Once per battle, in your Command phase, if this unit contains a CULT DEMAGOGUE model, it can use this ability. If it does, until the end of the turn, this unit can declare a charge in a turn in which it Advanced and each time a model in this unit makes an attack, add 1 to the Hit roll and add 1 to the Wound roll."
+      },
+      {
+        "name": "Chaos icon",
+        "description": "Each time the bearer’s unit takes a Leadership test for the Dark Pacts ability, you can re-roll that test."
+      },
+      {
+        "name": "Khorne",
+        "description": "Add 2 to the Strength characteristic of this model's hellforged weapons."
+      },
+      {
+        "name": "Nurgle",
+        "description": "Add 1 to this model's Toughness characteristic."
+      },
+      {
+        "name": "Slaanesh",
+        "description": "Add 2\" to this model's Move characteristic."
+      },
+      {
+        "name": "Tzeentch",
+        "description": "Add 3 to the Attacks characteristic of this model's infernal cannon."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      }
+    ],
+    "modelGroups": {
+      "blessed-blades": {
+        "id": "blessed-blades",
+        "name": "Blessed Blades",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "6+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 2,
+        "maxQuantity": 2,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "iconarch": {
+        "id": "iconarch",
+        "name": "Iconarch",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "6+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "chaos-icon"
+        ]
+      },
+      "mindwitch": {
+        "id": "mindwitch",
+        "name": "Mindwitch",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "6+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "cult-demagogue": {
+        "id": "cult-demagogue",
+        "name": "Cult Demagogue",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "6+",
+          "wounds": 4,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "wargear-autopistol",
+            "description": "Wargear: Autopistol",
+            "exclusiveWith": [
+              "wargear-commune-stave"
+            ]
+          },
+          {
+            "id": "wargear-commune-stave",
+            "description": "Wargear: Commune stave",
+            "exclusiveWith": [
+              "wargear-autopistol"
+            ]
+          }
+        ],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "blessed-blades": 2,
+          "iconarch": 1,
+          "mindwitch": 1,
+          "cult-demagogue": 1
+        },
+        "points": 90
+      }
+    ]
+  },
+  {
+    "id": "fellgor-beastmen",
+    "name": "Fellgor Beastmen",
+    "faction": "Chaos Knights",
+    "role": "ELITES",
+    "basePoints": 70,
+    "stats": {
+      "movement": 6,
+      "toughness": 4,
+      "save": "5+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "chainsword",
+        "name": "Chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      },
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "plasma-pistol-standard",
+        "name": "➤ Plasma pistol - standard",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "plasma-pistol-supercharge",
+        "name": "➤ Plasma pistol- supercharge",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Hazardous",
+          "Pistol"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "autopistol",
+        "name": "Autopistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      },
+      {
+        "id": "great-weapon",
+        "name": "Great weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "strength": 8,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 5
+      },
+      {
+        "id": "corrupted-stave",
+        "name": "Corrupted stave",
+        "type": "Assault",
+        "range": 18,
+        "attacks": "D3",
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Devastating Wounds",
+          "Psychic"
+        ],
+        "ballisticSkill": 4
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Bestial Raiders",
+        "description": "If this unit begins the game in Strategic Reserves, it can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. If this unit is in Strategic Reserves, for the purposes of setting it up on the battlefield, treat the current battle round number as being one higher than it actually is."
+      },
+      {
+        "name": "Khorne",
+        "description": "Add 2 to the Strength characteristic of this model's hellforged weapons."
+      },
+      {
+        "name": "Nurgle",
+        "description": "Add 1 to this model's Toughness characteristic."
+      },
+      {
+        "name": "Slaanesh",
+        "description": "Add 2\" to this model's Move characteristic."
+      },
+      {
+        "name": "Tzeentch",
+        "description": "Add 3 to the Attacks characteristic of this model's infernal cannon."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      }
+    ],
+    "modelGroups": {
+      "fellgor-champion": {
+        "id": "fellgor-champion",
+        "name": "Fellgor Champion",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "pistol-bolt-pistol",
+            "description": "Pistol: Bolt pistol",
+            "exclusiveWith": [
+              "pistol-plasma-pistol"
+            ]
+          },
+          {
+            "id": "pistol-plasma-pistol",
+            "description": "Pistol: Plasma pistol",
+            "exclusiveWith": [
+              "pistol-bolt-pistol"
+            ]
+          }
+        ],
+        "equippedWargear": [
+          "bolt-pistol"
+        ]
+      },
+      "beastman": {
+        "id": "beastman",
+        "name": "Beastman",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 9,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "beastman-w-great-weapon": {
+        "id": "beastman-w-great-weapon",
+        "name": "Beastman w/ great weapon",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "beastman-w-corrupted-stave": {
+        "id": "beastman-w-corrupted-stave",
+        "name": "Beastman w/ corrupted stave",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "fellgor-champion": 1,
+          "beastman": 9,
+          "beastman-w-great-weapon": 0,
+          "beastman-w-corrupted-stave": 0
+        },
+        "points": 70
+      }
+    ]
+  },
+  {
+    "id": "gellerpox-infected-legends",
+    "name": "Gellerpox Infected [Legends]",
+    "faction": "Chaos Knights",
+    "role": "ELITES",
+    "basePoints": 125,
+    "stats": {
+      "movement": 5,
+      "toughness": 5,
+      "save": "6+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "brutal-weapons",
+        "name": "Brutal weapons",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      },
+      {
+        "id": "hideous-mutations",
+        "name": "Hideous mutations",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 4
+      },
+      {
+        "id": "belly-flamer",
+        "name": "Belly flamer",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ]
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Fearsome (Aura)",
+        "description": "While an enemy unit is within 6\" of this unit, each time that enemy unit takes a Battle-shock or Leadership test, subtract 1 from the result."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      },
+      {
+        "name": "Feel No Pain",
+        "description": "Some models have 'Feel No Pain x+' listed in their abilities. Each time a model with this ability suffers damage and so would lose a wound (including wounds lost due to mortal wounds), roll one D6: if the result is greater than or equal to the number denoted by 'x: that wound is ignored and is not lost. If a model has more than one Feel No Pain ability, you can only use one of those abilities each time that model suffers damage and so would lose a wound."
+      }
+    ],
+    "modelGroups": {
+      "gellerpox-mutant": {
+        "id": "gellerpox-mutant",
+        "name": "Gellerpox Mutant",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "6+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 3,
+        "maxQuantity": 3,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "nightmare-hulk": {
+        "id": "nightmare-hulk",
+        "name": "Nightmare Hulk",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 5,
+          "save": "6+",
+          "wounds": 4,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 3,
+        "maxQuantity": 3,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "gellerpox-mutant": 3,
+          "nightmare-hulk": 3
+        },
+        "points": 125
+      }
+    ]
+  },
+  {
+    "id": "mutoid-vermin-legends",
+    "name": "Mutoid Vermin [Legends]",
+    "faction": "Chaos Knights",
+    "role": "FAST_ATTACK",
+    "basePoints": 85,
+    "stats": {
+      "movement": 8,
+      "toughness": 2,
+      "save": "7+",
+      "wounds": 1,
+      "leadership": "8+",
+      "objectiveControl": 0
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "diseased-claws-and-fangs",
+        "name": "Diseased claws and fangs",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "strength": 2,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Lethal Hits"
+        ],
+        "weaponSkill": 4
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Mischief Makers (Aura)",
+        "description": "While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of this unit, each time a model in that unit makes a melee attack, subtract 1 from the Hit roll."
+      },
+      {
+        "name": "Feel No Pain",
+        "description": "Some models have 'Feel No Pain x+' listed in their abilities. Each time a model with this ability suffers damage and so would lose a wound (including wounds lost due to mortal wounds), roll one D6: if the result is greater than or equal to the number denoted by 'x: that wound is ignored and is not lost. If a model has more than one Feel No Pain ability, you can only use one of those abilities each time that model suffers damage and so would lose a wound."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      }
+    ],
+    "modelGroups": {
+      "mutoid-vermin": {
+        "id": "mutoid-vermin",
+        "name": "Mutoid Vermin",
+        "category": "follower",
+        "stats": {
+          "movement": 8,
+          "toughness": 2,
+          "save": "7+",
+          "wounds": 1,
+          "leadership": "8+",
+          "objectiveControl": 0
+        },
+        "minQuantity": 16,
+        "maxQuantity": 16,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "mutoid-vermin": 16
+        },
+        "points": 85
+      }
+    ]
+  },
+  {
+    "id": "negavolt-cultists-legends",
+    "name": "Negavolt Cultists [Legends]",
+    "faction": "Chaos Knights",
+    "role": "ELITES",
+    "basePoints": 55,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "7+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "electro-goads",
+        "name": "Electro-goads",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Sustained Hits 2"
+        ],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Invulnerable Save",
+        "description": "Models in this unit have a 5+ invulnerable save."
+      },
+      {
+        "name": "Voltagheist Field",
+        "description": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers 1 mortal wound."
+      },
+      {
+        "name": "Servants of the Abyss",
+        "description": "If a unit from your army with the Leader ability can be attached to a CULTIST MOB, it can be attached to this unit instead."
+      },
+      {
+        "name": "Khorne",
+        "description": "Add 2 to the Strength characteristic of this model's hellforged weapons."
+      },
+      {
+        "name": "Nurgle",
+        "description": "Add 1 to this model's Toughness characteristic."
+      },
+      {
+        "name": "Slaanesh",
+        "description": "Add 2\" to this model's Move characteristic."
+      },
+      {
+        "name": "Tzeentch",
+        "description": "Add 3 to the Attacks characteristic of this model's infernal cannon."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      },
+      {
+        "name": "Feel No Pain",
+        "description": "Some models have 'Feel No Pain x+' listed in their abilities. Each time a model with this ability suffers damage and so would lose a wound (including wounds lost due to mortal wounds), roll one D6: if the result is greater than or equal to the number denoted by 'x: that wound is ignored and is not lost. If a model has more than one Feel No Pain ability, you can only use one of those abilities each time that model suffers damage and so would lose a wound."
+      }
+    ],
+    "modelGroups": {
+      "negavolt-cultist": {
+        "id": "negavolt-cultist",
+        "name": "Negavolt Cultist",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "7+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 4,
+        "maxQuantity": 4,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "negavolt-cultist": 4
+        },
+        "points": 55
+      }
+    ]
+  },
+  {
+    "id": "renegade-enforcer-legends",
+    "name": "Renegade Enforcer [Legends]",
+    "faction": "Chaos Knights",
+    "role": "HQ",
+    "basePoints": 65,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "talisman-of-burning-blood",
+        "name": "Talisman of Burning Blood",
+        "points": 15
+      },
+      {
+        "id": "eye-of-tzeentch",
+        "name": "Eye of Tzeentch",
+        "points": 15
+      },
+      {
+        "id": "orbs-of-unlife",
+        "name": "Orbs of Unlife",
+        "points": 15
+      },
+      {
+        "id": "intoxicating-elixir",
+        "name": "Intoxicating Elixir",
+        "points": 15
+      },
+      {
+        "id": "warmasters-gift",
+        "name": "Warmaster's Gift",
+        "points": 15
+      },
+      {
+        "id": "eager-for-vengeance",
+        "name": "Eager for Vengeance",
+        "points": 20
+      },
+      {
+        "id": "eye-of-abaddon",
+        "name": "Eye of Abaddon",
+        "points": 15
+      },
+      {
+        "id": "mark-of-legend",
+        "name": "Mark of Legend",
+        "points": 10
+      },
+      {
+        "id": "falsehood",
+        "name": "Falsehood",
+        "points": 10
+      },
+      {
+        "id": "cursed-fang",
+        "name": "Cursed Fang",
+        "points": 10
+      },
+      {
+        "id": "shroud-of-obfuscation",
+        "name": "Shroud of Obfuscation",
+        "points": 15
+      },
+      {
+        "id": "soul-link",
+        "name": "Soul Link",
+        "points": 5
+      },
+      {
+        "id": "despots-claim",
+        "name": "Despot's Claim",
+        "points": 15
+      },
+      {
+        "id": "dread-reaver",
+        "name": "Dread Reaver",
+        "points": 15
+      },
+      {
+        "id": "mark-of-the-hound",
+        "name": "Mark of the Hound",
+        "points": 25
+      },
+      {
+        "id": "tyrants-lash",
+        "name": "Tyrant's Lash",
+        "points": 20
+      },
+      {
+        "id": "willbreaker",
+        "name": "Willbreaker",
+        "points": 10
+      },
+      {
+        "id": "nights-shroud",
+        "name": "Night's Shroud",
+        "points": 20
+      },
+      {
+        "id": "forges-blessing",
+        "name": "Forge's Blessing",
+        "points": 20
+      },
+      {
+        "id": "eater-of-dread",
+        "name": "Eater of Dread",
+        "points": 15
+      },
+      {
+        "id": "bastion-plate",
+        "name": "Bastion Plate",
+        "points": 10
+      },
+      {
+        "id": "ironbound-enmity",
+        "name": "Ironbound Enmity",
+        "points": 15
+      },
+      {
+        "id": "warp-tracer",
+        "name": "Warp Tracer",
+        "points": 20
+      },
+      {
+        "id": "iron-artifice",
+        "name": "Iron Artifice",
+        "points": 10
+      },
+      {
+        "id": "amulet-of-tainted-vigour",
+        "name": "Amulet of Tainted Vigour",
+        "points": 20
+      },
+      {
+        "id": "incendiary-goad",
+        "name": "Incendiary Goad",
+        "points": 15
+      },
+      {
+        "id": "cultists-brand",
+        "name": "Cultist's Brand",
+        "points": 20
+      },
+      {
+        "id": "warped-foresight",
+        "name": "Warped Foresight",
+        "points": 10
+      },
+      {
+        "id": "warp-fuelled-thrusters",
+        "name": "Warp-fuelled Thrusters",
+        "points": 20
+      },
+      {
+        "id": "invigorated-mechatendrils",
+        "name": "Invigorated Mechatendrils",
+        "points": 15
+      },
+      {
+        "id": "soul-harvester",
+        "name": "Soul Harvester",
+        "points": 15
+      },
+      {
+        "id": "tempting-addendum",
+        "name": "Tempting Addendum",
+        "points": 25
+      },
+      {
+        "id": "surgical-precision",
+        "name": "Surgical Precision",
+        "points": 10
+      },
+      {
+        "id": "living-carapace",
+        "name": "Living Carapace",
+        "points": 15
+      },
+      {
+        "id": "helm-of-all-seeing",
+        "name": "Helm of All-Seeing",
+        "points": 25
+      },
+      {
+        "id": "prime-test-subject",
+        "name": "Prime Test Subject",
+        "points": 35
+      },
+      {
+        "id": "touched-by-the-warp",
+        "name": "Touched by the Warp",
+        "points": 10
+      },
+      {
+        "id": "eye-of-zdesh",
+        "name": "Eye of Z'Desh",
+        "points": 25
+      },
+      {
+        "id": "mind-blade",
+        "name": "Mind Blade",
+        "points": 25
+      },
+      {
+        "id": "infernal-avatar",
+        "name": "Infernal Avatar",
+        "points": 20
+      },
+      {
+        "id": "greyveil-hex",
+        "name": "Greyveil Hex",
+        "points": 25
+      },
+      {
+        "id": "warp-fuelled-thrusters-2",
+        "name": "Warp-fuelled Thrusters",
+        "points": 20
+      },
+      {
+        "id": "sorrowscent-vulture",
+        "name": "Sorrowscent Vulture",
+        "points": 35
+      },
+      {
+        "id": "terrorglut-parasite",
+        "name": "Terrorglut Parasite",
+        "points": 20
+      },
+      {
+        "id": "voice-of-the-tyrant",
+        "name": "Voice of the Tyrant",
+        "points": 25
+      },
+      {
+        "id": "raid-leader",
+        "name": "Raid Leader",
+        "points": 20
+      },
+      {
+        "id": "dread-reputation",
+        "name": "Dread Reputation",
+        "points": 25
+      },
+      {
+        "id": "eager-for-bloodshed",
+        "name": "Eager for Bloodshed",
+        "points": 30
+      },
+      {
+        "id": "weaponised-hatred",
+        "name": "Weaponised Hatred",
+        "points": 35
+      },
+      {
+        "id": "eyes-of-the-hunter",
+        "name": "Eyes of the Hunter",
+        "points": 15
+      },
+      {
+        "id": "fratricidal-trophies",
+        "name": "Fratricidal Trophies",
+        "points": 5
+      },
+      {
+        "id": "empyric-symbiote",
+        "name": "Empyric Symbiote",
+        "points": 15
+      },
+      {
+        "id": "infernal-fulgurite",
+        "name": "Infernal Fulgurite",
+        "points": 20
+      },
+      {
+        "id": "eye-of-the-warp",
+        "name": "Eye of the Warp",
+        "points": 15
+      },
+      {
+        "id": "akshurs-binding-runes",
+        "name": "Akshur's Binding Runes",
+        "points": 20
+      },
+      {
+        "id": "tzagulla",
+        "name": "Tzagulla",
+        "points": 25
+      },
+      {
+        "id": "wyredjinn",
+        "name": "Wyredjinn",
+        "points": 25
+      },
+      {
+        "id": "cybinfernal-font",
+        "name": "Cybinfernal Font",
+        "points": 20
+      },
+      {
+        "id": "mark-of-the-soul-forges",
+        "name": "Mark of the Soul Forges",
+        "points": 20
+      },
+      {
+        "id": "crown-of-worms",
+        "name": "Crown of Worms",
+        "points": 15
+      }
+    ],
+    "weapons": [
+      {
+        "id": "enforcer-melee-weapon",
+        "name": "Enforcer melee weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "power-weapon",
+        "name": "Power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "power-fist",
+        "name": "Power fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "enforcer-pistol",
+        "name": "Enforcer pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "autogun",
+        "name": "Autogun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 1"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "lasgun",
+        "name": "Lasgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 1"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "shotgun",
+        "name": "Shotgun",
+        "type": "Assault",
+        "range": 18,
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Assault"
+        ],
+        "ballisticSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Brutal Example",
+        "description": "While this model is leading a unit, you can target that unit with the Insane Bravery Stratagem for 0CP, and can do so even if another unit from your army has already been targeted with that Stratagem this phase. Each time you use this ability, one Bodyguard model in that unit is destroyed."
+      },
+      {
+        "name": "Enforcer",
+        "description": "This model's unit is eligible to declare a charge in a turn in which it Fell Back."
+      },
+      {
+        "name": "Leader",
+        "description": "This model can be attached to the following units:\n■ TRAITOR GUARDSMEN SQUAD\n■ RENEGADE HEAVY WEAPONS SQUAD"
+      },
+      {
+        "name": "Invulnerable Save",
+        "description": "This model has a 5+ invulnerable save."
+      },
+      {
+        "name": "Talisman of Burning Blood",
+        "description": "Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. Each time the bearer’s unit makes a Dark Pact and does not fail the resulting Leadership test, roll one D3; until the end of the phase, add the result to the Attacks and Strength characteristics of the bearer’s melee weapons instead."
+      },
+      {
+        "name": "Eye of Tzeentch",
+        "description": "Each time the bearer’s unit makes a Dark Pact and does not fail the resulting Leadership test, if the result of that test was 8 or more, you gain 1CP."
+      },
+      {
+        "name": "Orbs of Unlife",
+        "description": "At the end of the Fight phase, roll one D6 for every enemy unit within 3\" of the bearer, adding 1 to the result if the bearer’s unit made a Dark Pact that phase and did not fail the resulting Leadership test: on a 4+, that enemy unit suffers D3 mortal wounds."
+      },
+      {
+        "name": "Intoxicating Elixir",
+        "description": "The bearer has the Feel No Pain 5+ ability. Each time the bearer shoots or fights, if the bearer’s unit made a Dark Pact this phase and did not fail the resulting Leadership test, after the bearer has resolved those attacks, select one enemy unit that was hit by one or more of those attacks; that enemy unit must take a Battle-shock test."
+      },
+      {
+        "name": "Warmaster's Gift",
+        "description": "Each time the bearer makes an attack that targets your focus of hatred, an unmodified successful wound roll of 5+ scores a Critical Wound."
+      },
+      {
+        "name": "Eager for Vengeance",
+        "description": "The bearer's unit is eligible to shoot and declare a charge in a turn in which it Fell Back. While doing so, each time a model in that unit makes an attack that targets your focus of hatred, add 1 to the Hit roll and each time you select your focus of hatred as a target of that unit's charge, add 1 to the Charge roll."
+      },
+      {
+        "name": "Eye of Abaddon",
+        "description": "While the bearer is on the battlefield, each time your focus of hatred is destroyed, roll one D6; on a 4+, you gain 1CP."
+      },
+      {
+        "name": "Mark of Legend",
+        "description": "Once per turn, you can re-roll one Hit roll, one Wound roll or one saving throw made for the bearer."
+      },
+      {
+        "name": "Falsehood",
+        "description": "In the Declare Battle Formations step, you can set up the bearer in Reserves instead of setting it up on the battlefield. If you do, in the Reinforcements step of one of your Movement phases, you can select one model in a friendly LEGIONARIES or CHOSEN unit that has two or more models remaining and is on the battlefield (excluding Attached units). The selected model is destroyed (ignoring any rules that are triggered when a model is destroyed) and the bearer is set up as close as possible to where that model was destroyed and only within Engagement Range of any units if the destroyed model was in Engagement Range of those units. The bearer now attaches to that unit as its Leader."
+      },
+      {
+        "name": "Cursed Fang",
+        "description": "Improve the Armour Penetration characteristic of the bearer's melee weapons by 1, and the bearer's melee weapons have the [PRECISION] ability."
+      },
+      {
+        "name": "Shroud of Obfuscation",
+        "description": "The bearer has the Stealth and Lone Operative abilities."
+      },
+      {
+        "name": "Soul Link",
+        "description": "At the start of your Command phase, you can select one other HERETIC ASTARTES INFANTRY CHARACTER model from your army (excluding EPIC HEROES). Until the start of your next Command phase, the bearer gains the PSYKER keyword, and replace the bearer's datasheet abilities with the datasheet abilities of the CHARACTER you selected."
+      },
+      {
+        "name": "Despot's Claim",
+        "description": "At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding one to the result if the bearer is wholly within 12\" of your opponent's deployment zone; on a 5+, you gain 1CP."
+      },
+      {
+        "name": "Dread Reaver",
+        "description": "Each time the bearer makes a melee attack, if the bearer is wholly within 12\" of your opponent's deployment zone, you can re-roll the Hit roll and you can re-roll the Wound roll."
+      },
+      {
+        "name": "Mark of the Hound",
+        "description": "Models in the bearer's unit have the Scouts 6\" ability."
+      },
+      {
+        "name": "Tyrant's Lash",
+        "description": "You can re-roll Advance rolls made for the bearer's unit, and the bearer's unit is eligible to shoot in a turn in which it Fell Back."
+      },
+      {
+        "name": "Willbreaker",
+        "description": "In the Fight phase, after the bearer has made its attacks, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test."
+      },
+      {
+        "name": "Night's Shroud",
+        "description": "Models in the bearer's unit have the Stealth ability."
+      },
+      {
+        "name": "Forge's Blessing",
+        "description": "In your Command phase, select one friendly HERETIC ASTARTES VEHICLE unit within 12\" of the bearer. Until the start of your next Command phase, that unit has the Feel No Pain 6+ ability."
+      },
+      {
+        "name": "Eater of Dread",
+        "description": "At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result for each Battle-shocked enemy unit that is on the battlefield: on a 5+, you gain 1CP."
+      },
+      {
+        "name": "Bastion Plate",
+        "description": "Once per battle round, when a saving throw is failed for the bearer's unit, you can change the Damage characteristic of that attack to 0."
+      },
+      {
+        "name": "Ironbound Enmity",
+        "description": "Each time the bearer makes an attack while within range of an objective marker, add 1 to the Wound roll."
+      },
+      {
+        "name": "Warp Tracer",
+        "description": "In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover."
+      },
+      {
+        "name": "Iron Artifice",
+        "description": "The bearer's weapons have the [ANTI-VEHICLE 4+] and [ANTI-FORTIFICATION 4+] abilities."
+      },
+      {
+        "name": "Amulet of Tainted Vigour",
+        "description": "In your Command phase, you can return up to D3 destroyed DAMNED models (excluding CHARACTER models) to the bearer's unit."
+      },
+      {
+        "name": "Incendiary Goad",
+        "description": "While the bearer's unit is below its Starting Strength, add 1 to the Strength characteristic of melee weapons equipped by DAMNED models in that unit, and while that unit is Below Half-Strength, add 1 to the Attacks characteristic of those weapons as well."
+      },
+      {
+        "name": "Cultist's Brand",
+        "description": "If every other model in the bearer's unit (excluding Dark Disciples) is DAMNED, you can re-roll Advance and Charge rolls made for the bearer's unit."
+      },
+      {
+        "name": "Warped Foresight",
+        "description": "The bearer has the Scouts 6\" ability."
+      },
+      {
+        "name": "Warp-fuelled Thrusters",
+        "description": "At the end of your opponent's turn, if the bearer's unit is not within Engagement Range of one or more enemy units, you can remove the bearer's unit from the battlefield and place it into Strategic Reserves."
+      },
+      {
+        "name": "Invigorated Mechatendrils",
+        "description": "Add 4\" to the bearer's Move characteristic."
+      },
+      {
+        "name": "Soul Harvester",
+        "description": "While the bearer is on the battlefield, each time an enemy unit within 12\" of the bearer is destroyed, roll one D6; on a 5+, you gain 1CP."
+      },
+      {
+        "name": "Tempting Addendum",
+        "description": "Each time a HERETIC ASTARTES DAEMON VEHICLE from your army invokes its contract while within 3\" of the bearer:\n- If it suffers one or more mortal wounds as a result of that Dark Pact, add 1 to the number of mortal wounds it suffers.\n- Until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll."
+      },
+      {
+        "name": "Surgical Precision",
+        "description": "HERETIC ASTARTES model (excluding DAMNED models) only. The bearer’s melee weapons have the [PRECISION] ability."
+      },
+      {
+        "name": "Living Carapace",
+        "description": "CHAOS LORD model only. Add 1 to the bearer’s Wounds characteristic and the bearer has the Feel No Pain 5+ ability."
+      },
+      {
+        "name": "Helm of All-Seeing",
+        "description": "HERETIC ASTARTES INFANTRY model (excluding DAMNED models) only. Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of the bearer."
+      },
+      {
+        "name": "Prime Test Subject",
+        "description": "**^^Heretic Astartes Infantry^^** model (excluding **^^Damned^^** models) only. Add 1 to the Damage characteristic of melee weapons equipped by the bearer. Each time the bearer makes a melee attack, you can re‑roll the Hit roll."
+      },
+      {
+        "name": "Touched by the Warp",
+        "description": "The bearer gains the ^^**Psyker^^** keyword."
+      },
+      {
+        "name": "Eye of Z'Desh",
+        "description": "Models in the bearer's unit have the Scouts 6\" ability."
+      },
+      {
+        "name": "Mind Blade",
+        "description": "Melee weapons equipped by models in the bearer’s unit have the [LANCE] ability."
+      },
+      {
+        "name": "Infernal Avatar",
+        "description": "Improve the Strength characteristic of melee weapons equipped by the bearer by 2, and improve the Armour Penetration characteristic of those weapons by 1."
+      },
+      {
+        "name": "Greyveil Hex",
+        "description": "Models in the bearer's unit have the Stealth ability.\n\nWhile the bearer’s unit is within range of one or more objective markers you control, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
+      },
+      {
+        "name": "Sorrowscent Vulture",
+        "description": "Models in the bearer’s unit have the Scouts 6\" ability.\nIn the Declare Battle Formations step, the bearer can be attached to a Warp Talons unit."
+      },
+      {
+        "name": "Terrorglut Parasite",
+        "description": "At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle‑shock test, subtracting 1 from the result."
+      },
+      {
+        "name": "Voice of the Tyrant",
+        "description": "The bearer’s unit has both abilities from the Tyrannical Motivation Detachment rule."
+      },
+      {
+        "name": "Raid Leader",
+        "description": "Each time the bearer’s unit is set up after disembarking from a ^^**Transport**^^ that has made a Normal move this turn, the bearer’s unit is still eligible to declare a charge."
+      },
+      {
+        "name": "Dread Reputation",
+        "description": "Each time the bearer’s unit is set up on the battlefield, each enemy unit within 6” of the bearer’s unit (or within 12” if the bearer’s unit was set up using the Deep Strike ability) takes a Battle‑shock test."
+      },
+      {
+        "name": "Eager for Bloodshed",
+        "description": "The bearer has the Infiltrators ability."
+      },
+      {
+        "name": "Weaponised Hatred",
+        "description": "Once per battle round, after your Vendetta target is destroyed, if the bearer is on the battlefield, you can select one enemy unit visible to the bearer. That enemy unit becomes your Vendetta target until you select a new one."
+      },
+      {
+        "name": "Eyes of the Hunter",
+        "description": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
+      },
+      {
+        "name": "Fratricidal Trophies",
+        "description": "In a turn in which the bearer’s unit chose to Default to Doctrine, until the end of the turn, each time a model in this unit makes an attack, you can re‑roll the Hit roll."
+      },
+      {
+        "name": "Empyric Symbiote",
+        "description": "Add 1 to Advance and Charge rolls made for the bearer’s unit."
+      },
+      {
+        "name": "Infernal Fulgurite",
+        "description": "Once per battle, you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+      },
+      {
+        "name": "Eye of the Warp",
+        "description": "Each time the bearer’s unit is set up on the battlefield, until the end of the turn, you can re‑roll Charge rolls made for that unit."
+      },
+      {
+        "name": "Akshur's Binding Runes",
+        "description": "The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules."
+      },
+      {
+        "name": "Tzagulla",
+        "description": "Improve the Attacks, Strength and Armour Penetration characteristics of the bearer’s weapons by 1. In addition, each time the bearer’s unit is set up on the battlefield from Reserves, until the end of the turn, improve the Damage characteristic of the bearer’s weapons by 1."
+      },
+      {
+        "name": "Wyredjinn",
+        "description": "At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP."
+      },
+      {
+        "name": "Cybinfernal Font",
+        "description": "Models in the bearer’s unit have the ^^**Soul Forge**^^ keyword."
+      },
+      {
+        "name": "Mark of the Soul Forges",
+        "description": "Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit."
+      },
+      {
+        "name": "Crown of Worms",
+        "description": "Add 3” to the range of the bearer’s Warpsmith, Master of Mechanisms and Enrage Machine Spirits abilities."
+      },
+      {
+        "name": "Khorne",
+        "description": "Add 2 to the Strength characteristic of this model's hellforged weapons."
+      },
+      {
+        "name": "Nurgle",
+        "description": "Add 1 to this model's Toughness characteristic."
+      },
+      {
+        "name": "Slaanesh",
+        "description": "Add 2\" to this model's Move characteristic."
+      },
+      {
+        "name": "Tzeentch",
+        "description": "Add 3 to the Attacks characteristic of this model's infernal cannon."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      }
+    ],
+    "modelGroups": {
+      "renegade-enforcer-legends": {
+        "id": "renegade-enforcer-legends",
+        "name": "Renegade Enforcer [Legends]",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "renegade-enforcer-legends": 1
+        },
+        "points": 65
+      }
+    ]
+  },
+  {
+    "id": "renegade-heavy-weapons-squad-legends",
+    "name": "Renegade Heavy Weapons Squad [Legends]",
+    "faction": "Chaos Knights",
+    "role": "ELITES",
+    "basePoints": 75,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 2,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "renegade-firearm",
+        "name": "Renegade firearm",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 1"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "close-combat-weapons",
+        "name": "Close combat weapons",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      },
+      {
+        "id": "heavy-stubber",
+        "name": "Heavy stubber",
+        "type": "Rapid Fire",
+        "range": 36,
+        "attacks": 4,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Heavy",
+          "Rapid Fire 3"
+        ],
+        "ballisticSkill": 5
+      },
+      {
+        "id": "heavy-bolter",
+        "name": "Heavy bolter",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 3,
+        "strength": 5,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Heavy",
+          "Sustained Hits 1"
+        ],
+        "ballisticSkill": 5
+      },
+      {
+        "id": "autocannon",
+        "name": "Autocannon",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 2,
+        "strength": 9,
+        "armourPenetration": -1,
+        "damage": 3,
+        "abilities": [
+          "Heavy"
+        ],
+        "ballisticSkill": 5
+      },
+      {
+        "id": "lascannon",
+        "name": "Lascannon",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": 1,
+        "strength": 12,
+        "armourPenetration": -3,
+        "damage": "D6+1",
+        "abilities": [
+          "Heavy"
+        ],
+        "ballisticSkill": 5
+      },
+      {
+        "id": "missile-launcher-frag",
+        "name": "➤ Missile launcher - frag",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": "D6",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast",
+          "Heavy"
+        ],
+        "ballisticSkill": 5
+      },
+      {
+        "id": "missile-launcher-krak",
+        "name": "➤ Missile launcher - krak",
+        "type": "Assault",
+        "range": 48,
+        "attacks": 1,
+        "strength": 9,
+        "armourPenetration": -2,
+        "damage": "D6",
+        "abilities": [
+          "Blast"
+        ],
+        "ballisticSkill": 5
+      },
+      {
+        "id": "mortar",
+        "name": "Mortar",
+        "type": "Heavy",
+        "range": 48,
+        "attacks": "D6",
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast",
+          "Heavy",
+          "Indirect Fire"
+        ],
+        "ballisticSkill": 5
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Covering Fire",
+        "description": "Each time you target this unit with the Fire Overwatch Stratagem, while resolving that Stratagem, hits are scored on unmodified Hit rolls of 5+."
+      },
+      {
+        "name": "Khorne",
+        "description": "Add 2 to the Strength characteristic of this model's hellforged weapons."
+      },
+      {
+        "name": "Nurgle",
+        "description": "Add 1 to this model's Toughness characteristic."
+      },
+      {
+        "name": "Slaanesh",
+        "description": "Add 2\" to this model's Move characteristic."
+      },
+      {
+        "name": "Tzeentch",
+        "description": "Add 3 to the Attacks characteristic of this model's infernal cannon."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      }
+    ],
+    "modelGroups": {
+      "heavy-weapons-team": {
+        "id": "heavy-weapons-team",
+        "name": "Heavy Weapons Team",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 2,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 3,
+        "maxQuantity": 3,
+        "availableOptions": [
+          {
+            "id": "heavy-weapon-heavy-stubber",
+            "description": "Heavy weapon: Heavy stubber",
+            "exclusiveWith": [
+              "heavy-weapon-heavy-bolter",
+              "heavy-weapon-autocannon",
+              "heavy-weapon-lascannon",
+              "heavy-weapon-missile-launcher",
+              "heavy-weapon-mortar"
+            ]
+          },
+          {
+            "id": "heavy-weapon-heavy-bolter",
+            "description": "Heavy weapon: Heavy bolter",
+            "exclusiveWith": [
+              "heavy-weapon-heavy-stubber",
+              "heavy-weapon-autocannon",
+              "heavy-weapon-lascannon",
+              "heavy-weapon-missile-launcher",
+              "heavy-weapon-mortar"
+            ]
+          },
+          {
+            "id": "heavy-weapon-autocannon",
+            "description": "Heavy weapon: Autocannon",
+            "exclusiveWith": [
+              "heavy-weapon-heavy-stubber",
+              "heavy-weapon-heavy-bolter",
+              "heavy-weapon-lascannon",
+              "heavy-weapon-missile-launcher",
+              "heavy-weapon-mortar"
+            ]
+          },
+          {
+            "id": "heavy-weapon-lascannon",
+            "description": "Heavy weapon: Lascannon",
+            "exclusiveWith": [
+              "heavy-weapon-heavy-stubber",
+              "heavy-weapon-heavy-bolter",
+              "heavy-weapon-autocannon",
+              "heavy-weapon-missile-launcher",
+              "heavy-weapon-mortar"
+            ]
+          },
+          {
+            "id": "heavy-weapon-missile-launcher",
+            "description": "Heavy weapon: Missile launcher",
+            "exclusiveWith": [
+              "heavy-weapon-heavy-stubber",
+              "heavy-weapon-heavy-bolter",
+              "heavy-weapon-autocannon",
+              "heavy-weapon-lascannon",
+              "heavy-weapon-mortar"
+            ]
+          },
+          {
+            "id": "heavy-weapon-mortar",
+            "description": "Heavy weapon: Mortar",
+            "exclusiveWith": [
+              "heavy-weapon-heavy-stubber",
+              "heavy-weapon-heavy-bolter",
+              "heavy-weapon-autocannon",
+              "heavy-weapon-lascannon",
+              "heavy-weapon-missile-launcher"
+            ]
+          }
+        ],
+        "equippedWargear": [
+          "heavy-stubber"
+        ]
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "heavy-weapons-team": 3
+        },
+        "points": 75
+      }
+    ]
+  },
+  {
+    "id": "renegade-ogryn-beast-handler-legends",
+    "name": "Renegade Ogryn Beast Handler [Legends]",
+    "faction": "Chaos Knights",
+    "role": "FAST_ATTACK",
+    "basePoints": 40,
+    "stats": {
+      "movement": 6,
+      "toughness": 6,
+      "save": "5+",
+      "wounds": 4,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "mauler-goad-and-ripper-claw",
+        "name": "Mauler goad and ripper claw",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 4,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "befouled-fangs-and-claws",
+        "name": "Befouled fangs and claws",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "strength": 5,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Beastmaster",
+        "description": "While this unit contains an Ogryn Pack Master model, you can re-roll Charge rolls made for this unit, and each time a Chaos Mauler Hound model in this unit makes an attack, re-roll a Hit roll of 1."
+      },
+      {
+        "name": "Khorne",
+        "description": "Add 2 to the Strength characteristic of this model's hellforged weapons."
+      },
+      {
+        "name": "Nurgle",
+        "description": "Add 1 to this model's Toughness characteristic."
+      },
+      {
+        "name": "Slaanesh",
+        "description": "Add 2\" to this model's Move characteristic."
+      },
+      {
+        "name": "Tzeentch",
+        "description": "Add 3 to the Attacks characteristic of this model's infernal cannon."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      }
+    ],
+    "modelGroups": {
+      "ogryn-pack-master": {
+        "id": "ogryn-pack-master",
+        "name": "Ogryn Pack Master",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 6,
+          "save": "5+",
+          "wounds": 4,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "chaos-mauler-hound": {
+        "id": "chaos-mauler-hound",
+        "name": "Chaos Mauler Hound",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 4,
+          "save": "6+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 3,
+        "maxQuantity": 6,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "ogryn-pack-master": 1,
+          "chaos-mauler-hound": 3
+        },
+        "points": 40
+      },
+      {
+        "composition": {
+          "ogryn-pack-master": 1,
+          "chaos-mauler-hound": 6
+        },
+        "points": 70
+      }
+    ]
+  },
+  {
+    "id": "renegade-ogryn-brutes-legends",
+    "name": "Renegade Ogryn Brutes [Legends]",
+    "faction": "Chaos Knights",
+    "role": "ELITES",
+    "basePoints": 95,
+    "stats": {
+      "movement": 6,
+      "toughness": 6,
+      "save": "5+",
+      "wounds": 3,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "ogryn-weapon",
+        "name": "Ogryn weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "ogryn-power-drill",
+        "name": "Ogryn power drill",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 10,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Ogryn Combat Stimms",
+        "description": "Each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+      },
+      {
+        "name": "Khorne",
+        "description": "Add 2 to the Strength characteristic of this model's hellforged weapons."
+      },
+      {
+        "name": "Nurgle",
+        "description": "Add 1 to this model's Toughness characteristic."
+      },
+      {
+        "name": "Slaanesh",
+        "description": "Add 2\" to this model's Move characteristic."
+      },
+      {
+        "name": "Tzeentch",
+        "description": "Add 3 to the Attacks characteristic of this model's infernal cannon."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      }
+    ],
+    "modelGroups": {
+      "brute-w-ogryn-weapon": {
+        "id": "brute-w-ogryn-weapon",
+        "name": "Brute w/ Ogryn weapon",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 6,
+          "save": "5+",
+          "wounds": 3,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 2,
+        "maxQuantity": 3,
+        "availableOptions": [],
+        "equippedWargear": []
+      },
+      "brute-w-power-drill": {
+        "id": "brute-w-power-drill",
+        "name": "Brute w/ power drill",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 6,
+          "save": "5+",
+          "wounds": 3,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "brute-w-ogryn-weapon": 3,
+          "brute-w-power-drill": 0
+        },
+        "points": 95
+      }
+    ]
+  },
+  {
+    "id": "renegade-plague-ogryns-legends",
+    "name": "Renegade Plague Ogryns [Legends]",
+    "faction": "Chaos Knights",
+    "role": "ELITES",
+    "basePoints": 95,
+    "stats": {
+      "movement": 5,
+      "toughness": 7,
+      "save": "5+",
+      "wounds": 3,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "ogryn-plague-claws",
+        "name": "Ogryn plague claws",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [
+          "Lethal Hits"
+        ],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Wall of Muscle",
+        "description": "Each time an attack is allocated to a model in this unit, subtract 1 from the Damage characteristic of that attack."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      },
+      {
+        "name": "Feel No Pain",
+        "description": "Some models have 'Feel No Pain x+' listed in their abilities. Each time a model with this ability suffers damage and so would lose a wound (including wounds lost due to mortal wounds), roll one D6: if the result is greater than or equal to the number denoted by 'x: that wound is ignored and is not lost. If a model has more than one Feel No Pain ability, you can only use one of those abilities each time that model suffers damage and so would lose a wound."
+      }
+    ],
+    "modelGroups": {
+      "renegade-plague-ogryn": {
+        "id": "renegade-plague-ogryn",
+        "name": "Renegade Plague Ogryn",
+        "category": "follower",
+        "stats": {
+          "movement": 5,
+          "toughness": 7,
+          "save": "5+",
+          "wounds": 3,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 3,
+        "maxQuantity": 3,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "renegade-plague-ogryn": 3
+        },
+        "points": 95
+      }
+    ]
+  },
+  {
+    "id": "rogue-psyker-legends",
+    "name": "Rogue Psyker [Legends]",
+    "faction": "Chaos Knights",
+    "role": "HQ",
+    "basePoints": 60,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 3,
+      "leadership": "7+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "talisman-of-burning-blood",
+        "name": "Talisman of Burning Blood",
+        "points": 15
+      },
+      {
+        "id": "eye-of-tzeentch",
+        "name": "Eye of Tzeentch",
+        "points": 15
+      },
+      {
+        "id": "orbs-of-unlife",
+        "name": "Orbs of Unlife",
+        "points": 15
+      },
+      {
+        "id": "intoxicating-elixir",
+        "name": "Intoxicating Elixir",
+        "points": 15
+      },
+      {
+        "id": "warmasters-gift",
+        "name": "Warmaster's Gift",
+        "points": 15
+      },
+      {
+        "id": "eager-for-vengeance",
+        "name": "Eager for Vengeance",
+        "points": 20
+      },
+      {
+        "id": "eye-of-abaddon",
+        "name": "Eye of Abaddon",
+        "points": 15
+      },
+      {
+        "id": "mark-of-legend",
+        "name": "Mark of Legend",
+        "points": 10
+      },
+      {
+        "id": "falsehood",
+        "name": "Falsehood",
+        "points": 10
+      },
+      {
+        "id": "cursed-fang",
+        "name": "Cursed Fang",
+        "points": 10
+      },
+      {
+        "id": "shroud-of-obfuscation",
+        "name": "Shroud of Obfuscation",
+        "points": 15
+      },
+      {
+        "id": "soul-link",
+        "name": "Soul Link",
+        "points": 5
+      },
+      {
+        "id": "despots-claim",
+        "name": "Despot's Claim",
+        "points": 15
+      },
+      {
+        "id": "dread-reaver",
+        "name": "Dread Reaver",
+        "points": 15
+      },
+      {
+        "id": "mark-of-the-hound",
+        "name": "Mark of the Hound",
+        "points": 25
+      },
+      {
+        "id": "tyrants-lash",
+        "name": "Tyrant's Lash",
+        "points": 20
+      },
+      {
+        "id": "willbreaker",
+        "name": "Willbreaker",
+        "points": 10
+      },
+      {
+        "id": "nights-shroud",
+        "name": "Night's Shroud",
+        "points": 20
+      },
+      {
+        "id": "forges-blessing",
+        "name": "Forge's Blessing",
+        "points": 20
+      },
+      {
+        "id": "eater-of-dread",
+        "name": "Eater of Dread",
+        "points": 15
+      },
+      {
+        "id": "bastion-plate",
+        "name": "Bastion Plate",
+        "points": 10
+      },
+      {
+        "id": "ironbound-enmity",
+        "name": "Ironbound Enmity",
+        "points": 15
+      },
+      {
+        "id": "warp-tracer",
+        "name": "Warp Tracer",
+        "points": 20
+      },
+      {
+        "id": "iron-artifice",
+        "name": "Iron Artifice",
+        "points": 10
+      },
+      {
+        "id": "amulet-of-tainted-vigour",
+        "name": "Amulet of Tainted Vigour",
+        "points": 20
+      },
+      {
+        "id": "incendiary-goad",
+        "name": "Incendiary Goad",
+        "points": 15
+      },
+      {
+        "id": "cultists-brand",
+        "name": "Cultist's Brand",
+        "points": 20
+      },
+      {
+        "id": "warped-foresight",
+        "name": "Warped Foresight",
+        "points": 10
+      },
+      {
+        "id": "warp-fuelled-thrusters",
+        "name": "Warp-fuelled Thrusters",
+        "points": 20
+      },
+      {
+        "id": "invigorated-mechatendrils",
+        "name": "Invigorated Mechatendrils",
+        "points": 15
+      },
+      {
+        "id": "soul-harvester",
+        "name": "Soul Harvester",
+        "points": 15
+      },
+      {
+        "id": "tempting-addendum",
+        "name": "Tempting Addendum",
+        "points": 25
+      },
+      {
+        "id": "surgical-precision",
+        "name": "Surgical Precision",
+        "points": 10
+      },
+      {
+        "id": "living-carapace",
+        "name": "Living Carapace",
+        "points": 15
+      },
+      {
+        "id": "helm-of-all-seeing",
+        "name": "Helm of All-Seeing",
+        "points": 25
+      },
+      {
+        "id": "prime-test-subject",
+        "name": "Prime Test Subject",
+        "points": 35
+      },
+      {
+        "id": "touched-by-the-warp",
+        "name": "Touched by the Warp",
+        "points": 10
+      },
+      {
+        "id": "eye-of-zdesh",
+        "name": "Eye of Z'Desh",
+        "points": 25
+      },
+      {
+        "id": "mind-blade",
+        "name": "Mind Blade",
+        "points": 25
+      },
+      {
+        "id": "infernal-avatar",
+        "name": "Infernal Avatar",
+        "points": 20
+      },
+      {
+        "id": "greyveil-hex",
+        "name": "Greyveil Hex",
+        "points": 25
+      },
+      {
+        "id": "warp-fuelled-thrusters-2",
+        "name": "Warp-fuelled Thrusters",
+        "points": 20
+      },
+      {
+        "id": "sorrowscent-vulture",
+        "name": "Sorrowscent Vulture",
+        "points": 35
+      },
+      {
+        "id": "terrorglut-parasite",
+        "name": "Terrorglut Parasite",
+        "points": 20
+      },
+      {
+        "id": "voice-of-the-tyrant",
+        "name": "Voice of the Tyrant",
+        "points": 25
+      },
+      {
+        "id": "raid-leader",
+        "name": "Raid Leader",
+        "points": 20
+      },
+      {
+        "id": "dread-reputation",
+        "name": "Dread Reputation",
+        "points": 25
+      },
+      {
+        "id": "eager-for-bloodshed",
+        "name": "Eager for Bloodshed",
+        "points": 30
+      },
+      {
+        "id": "weaponised-hatred",
+        "name": "Weaponised Hatred",
+        "points": 35
+      },
+      {
+        "id": "eyes-of-the-hunter",
+        "name": "Eyes of the Hunter",
+        "points": 15
+      },
+      {
+        "id": "fratricidal-trophies",
+        "name": "Fratricidal Trophies",
+        "points": 5
+      },
+      {
+        "id": "empyric-symbiote",
+        "name": "Empyric Symbiote",
+        "points": 15
+      },
+      {
+        "id": "infernal-fulgurite",
+        "name": "Infernal Fulgurite",
+        "points": 20
+      },
+      {
+        "id": "eye-of-the-warp",
+        "name": "Eye of the Warp",
+        "points": 15
+      },
+      {
+        "id": "akshurs-binding-runes",
+        "name": "Akshur's Binding Runes",
+        "points": 20
+      },
+      {
+        "id": "tzagulla",
+        "name": "Tzagulla",
+        "points": 25
+      },
+      {
+        "id": "wyredjinn",
+        "name": "Wyredjinn",
+        "points": 25
+      },
+      {
+        "id": "cybinfernal-font",
+        "name": "Cybinfernal Font",
+        "points": 20
+      },
+      {
+        "id": "mark-of-the-soul-forges",
+        "name": "Mark of the Soul Forges",
+        "points": 20
+      },
+      {
+        "id": "crown-of-worms",
+        "name": "Crown of Worms",
+        "points": 15
+      }
+    ],
+    "weapons": [
+      {
+        "id": "chaos-stave",
+        "name": "Chaos stave",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 1,
+        "strength": 6,
+        "armourPenetration": -1,
+        "damage": "D3",
+        "abilities": [
+          "Psychic"
+        ],
+        "weaponSkill": 4
+      },
+      {
+        "id": "laspistol",
+        "name": "Laspistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "psychic-strike-focused-witchfire",
+        "name": "➤ Psychic Strike - focused witchfire",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6+3",
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Blast",
+          "Devastating Wounds",
+          "Hazardous",
+          "Psychic"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "psychic-strike-witchfire",
+        "name": "➤ Psychic Strike - witchfire",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Blast",
+          "Devastating Wounds",
+          "Psychic"
+        ],
+        "ballisticSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "This model can be attached to the following units:\n■ ACCURSED CULTISTS\n■ CULTIST MOB\n■ NEGAVOLT CULTISTS"
+      },
+      {
+        "name": "Cursed Wardings (Psychic)",
+        "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks."
+      },
+      {
+        "name": "Psychic Barrier (Psychic)",
+        "description": "At the start of your opponent’s Shooting phase, you can roll one D6: on a 1, this PSYKER’s unit suffers D3 mortal wounds; on a 2+, until the end of the phase, models in this PSYKER’s unit have a 4+ invulnerable save."
+      },
+      {
+        "name": "Khorne",
+        "description": "Add 2 to the Strength characteristic of this model's hellforged weapons."
+      },
+      {
+        "name": "Nurgle",
+        "description": "Add 1 to this model's Toughness characteristic."
+      },
+      {
+        "name": "Slaanesh",
+        "description": "Add 2\" to this model's Move characteristic."
+      },
+      {
+        "name": "Tzeentch",
+        "description": "Add 3 to the Attacks characteristic of this model's infernal cannon."
+      },
+      {
+        "name": "Talisman of Burning Blood",
+        "description": "Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. Each time the bearer’s unit makes a Dark Pact and does not fail the resulting Leadership test, roll one D3; until the end of the phase, add the result to the Attacks and Strength characteristics of the bearer’s melee weapons instead."
+      },
+      {
+        "name": "Eye of Tzeentch",
+        "description": "Each time the bearer’s unit makes a Dark Pact and does not fail the resulting Leadership test, if the result of that test was 8 or more, you gain 1CP."
+      },
+      {
+        "name": "Orbs of Unlife",
+        "description": "At the end of the Fight phase, roll one D6 for every enemy unit within 3\" of the bearer, adding 1 to the result if the bearer’s unit made a Dark Pact that phase and did not fail the resulting Leadership test: on a 4+, that enemy unit suffers D3 mortal wounds."
+      },
+      {
+        "name": "Intoxicating Elixir",
+        "description": "The bearer has the Feel No Pain 5+ ability. Each time the bearer shoots or fights, if the bearer’s unit made a Dark Pact this phase and did not fail the resulting Leadership test, after the bearer has resolved those attacks, select one enemy unit that was hit by one or more of those attacks; that enemy unit must take a Battle-shock test."
+      },
+      {
+        "name": "Warmaster's Gift",
+        "description": "Each time the bearer makes an attack that targets your focus of hatred, an unmodified successful wound roll of 5+ scores a Critical Wound."
+      },
+      {
+        "name": "Eager for Vengeance",
+        "description": "The bearer's unit is eligible to shoot and declare a charge in a turn in which it Fell Back. While doing so, each time a model in that unit makes an attack that targets your focus of hatred, add 1 to the Hit roll and each time you select your focus of hatred as a target of that unit's charge, add 1 to the Charge roll."
+      },
+      {
+        "name": "Eye of Abaddon",
+        "description": "While the bearer is on the battlefield, each time your focus of hatred is destroyed, roll one D6; on a 4+, you gain 1CP."
+      },
+      {
+        "name": "Mark of Legend",
+        "description": "Once per turn, you can re-roll one Hit roll, one Wound roll or one saving throw made for the bearer."
+      },
+      {
+        "name": "Falsehood",
+        "description": "In the Declare Battle Formations step, you can set up the bearer in Reserves instead of setting it up on the battlefield. If you do, in the Reinforcements step of one of your Movement phases, you can select one model in a friendly LEGIONARIES or CHOSEN unit that has two or more models remaining and is on the battlefield (excluding Attached units). The selected model is destroyed (ignoring any rules that are triggered when a model is destroyed) and the bearer is set up as close as possible to where that model was destroyed and only within Engagement Range of any units if the destroyed model was in Engagement Range of those units. The bearer now attaches to that unit as its Leader."
+      },
+      {
+        "name": "Cursed Fang",
+        "description": "Improve the Armour Penetration characteristic of the bearer's melee weapons by 1, and the bearer's melee weapons have the [PRECISION] ability."
+      },
+      {
+        "name": "Shroud of Obfuscation",
+        "description": "The bearer has the Stealth and Lone Operative abilities."
+      },
+      {
+        "name": "Soul Link",
+        "description": "At the start of your Command phase, you can select one other HERETIC ASTARTES INFANTRY CHARACTER model from your army (excluding EPIC HEROES). Until the start of your next Command phase, the bearer gains the PSYKER keyword, and replace the bearer's datasheet abilities with the datasheet abilities of the CHARACTER you selected."
+      },
+      {
+        "name": "Despot's Claim",
+        "description": "At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding one to the result if the bearer is wholly within 12\" of your opponent's deployment zone; on a 5+, you gain 1CP."
+      },
+      {
+        "name": "Dread Reaver",
+        "description": "Each time the bearer makes a melee attack, if the bearer is wholly within 12\" of your opponent's deployment zone, you can re-roll the Hit roll and you can re-roll the Wound roll."
+      },
+      {
+        "name": "Mark of the Hound",
+        "description": "Models in the bearer's unit have the Scouts 6\" ability."
+      },
+      {
+        "name": "Tyrant's Lash",
+        "description": "You can re-roll Advance rolls made for the bearer's unit, and the bearer's unit is eligible to shoot in a turn in which it Fell Back."
+      },
+      {
+        "name": "Willbreaker",
+        "description": "In the Fight phase, after the bearer has made its attacks, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test."
+      },
+      {
+        "name": "Night's Shroud",
+        "description": "Models in the bearer's unit have the Stealth ability."
+      },
+      {
+        "name": "Forge's Blessing",
+        "description": "In your Command phase, select one friendly HERETIC ASTARTES VEHICLE unit within 12\" of the bearer. Until the start of your next Command phase, that unit has the Feel No Pain 6+ ability."
+      },
+      {
+        "name": "Eater of Dread",
+        "description": "At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result for each Battle-shocked enemy unit that is on the battlefield: on a 5+, you gain 1CP."
+      },
+      {
+        "name": "Bastion Plate",
+        "description": "Once per battle round, when a saving throw is failed for the bearer's unit, you can change the Damage characteristic of that attack to 0."
+      },
+      {
+        "name": "Ironbound Enmity",
+        "description": "Each time the bearer makes an attack while within range of an objective marker, add 1 to the Wound roll."
+      },
+      {
+        "name": "Warp Tracer",
+        "description": "In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover."
+      },
+      {
+        "name": "Iron Artifice",
+        "description": "The bearer's weapons have the [ANTI-VEHICLE 4+] and [ANTI-FORTIFICATION 4+] abilities."
+      },
+      {
+        "name": "Amulet of Tainted Vigour",
+        "description": "In your Command phase, you can return up to D3 destroyed DAMNED models (excluding CHARACTER models) to the bearer's unit."
+      },
+      {
+        "name": "Incendiary Goad",
+        "description": "While the bearer's unit is below its Starting Strength, add 1 to the Strength characteristic of melee weapons equipped by DAMNED models in that unit, and while that unit is Below Half-Strength, add 1 to the Attacks characteristic of those weapons as well."
+      },
+      {
+        "name": "Cultist's Brand",
+        "description": "If every other model in the bearer's unit (excluding Dark Disciples) is DAMNED, you can re-roll Advance and Charge rolls made for the bearer's unit."
+      },
+      {
+        "name": "Warped Foresight",
+        "description": "The bearer has the Scouts 6\" ability."
+      },
+      {
+        "name": "Warp-fuelled Thrusters",
+        "description": "At the end of your opponent's turn, if the bearer's unit is not within Engagement Range of one or more enemy units, you can remove the bearer's unit from the battlefield and place it into Strategic Reserves."
+      },
+      {
+        "name": "Invigorated Mechatendrils",
+        "description": "Add 4\" to the bearer's Move characteristic."
+      },
+      {
+        "name": "Soul Harvester",
+        "description": "While the bearer is on the battlefield, each time an enemy unit within 12\" of the bearer is destroyed, roll one D6; on a 5+, you gain 1CP."
+      },
+      {
+        "name": "Tempting Addendum",
+        "description": "Each time a HERETIC ASTARTES DAEMON VEHICLE from your army invokes its contract while within 3\" of the bearer:\n- If it suffers one or more mortal wounds as a result of that Dark Pact, add 1 to the number of mortal wounds it suffers.\n- Until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll."
+      },
+      {
+        "name": "Surgical Precision",
+        "description": "HERETIC ASTARTES model (excluding DAMNED models) only. The bearer’s melee weapons have the [PRECISION] ability."
+      },
+      {
+        "name": "Living Carapace",
+        "description": "CHAOS LORD model only. Add 1 to the bearer’s Wounds characteristic and the bearer has the Feel No Pain 5+ ability."
+      },
+      {
+        "name": "Helm of All-Seeing",
+        "description": "HERETIC ASTARTES INFANTRY model (excluding DAMNED models) only. Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of the bearer."
+      },
+      {
+        "name": "Prime Test Subject",
+        "description": "**^^Heretic Astartes Infantry^^** model (excluding **^^Damned^^** models) only. Add 1 to the Damage characteristic of melee weapons equipped by the bearer. Each time the bearer makes a melee attack, you can re‑roll the Hit roll."
+      },
+      {
+        "name": "Touched by the Warp",
+        "description": "The bearer gains the ^^**Psyker^^** keyword."
+      },
+      {
+        "name": "Eye of Z'Desh",
+        "description": "Models in the bearer's unit have the Scouts 6\" ability."
+      },
+      {
+        "name": "Mind Blade",
+        "description": "Melee weapons equipped by models in the bearer’s unit have the [LANCE] ability."
+      },
+      {
+        "name": "Infernal Avatar",
+        "description": "Improve the Strength characteristic of melee weapons equipped by the bearer by 2, and improve the Armour Penetration characteristic of those weapons by 1."
+      },
+      {
+        "name": "Greyveil Hex",
+        "description": "Models in the bearer's unit have the Stealth ability.\n\nWhile the bearer’s unit is within range of one or more objective markers you control, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
+      },
+      {
+        "name": "Sorrowscent Vulture",
+        "description": "Models in the bearer’s unit have the Scouts 6\" ability.\nIn the Declare Battle Formations step, the bearer can be attached to a Warp Talons unit."
+      },
+      {
+        "name": "Terrorglut Parasite",
+        "description": "At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle‑shock test, subtracting 1 from the result."
+      },
+      {
+        "name": "Voice of the Tyrant",
+        "description": "The bearer’s unit has both abilities from the Tyrannical Motivation Detachment rule."
+      },
+      {
+        "name": "Raid Leader",
+        "description": "Each time the bearer’s unit is set up after disembarking from a ^^**Transport**^^ that has made a Normal move this turn, the bearer’s unit is still eligible to declare a charge."
+      },
+      {
+        "name": "Dread Reputation",
+        "description": "Each time the bearer’s unit is set up on the battlefield, each enemy unit within 6” of the bearer’s unit (or within 12” if the bearer’s unit was set up using the Deep Strike ability) takes a Battle‑shock test."
+      },
+      {
+        "name": "Eager for Bloodshed",
+        "description": "The bearer has the Infiltrators ability."
+      },
+      {
+        "name": "Weaponised Hatred",
+        "description": "Once per battle round, after your Vendetta target is destroyed, if the bearer is on the battlefield, you can select one enemy unit visible to the bearer. That enemy unit becomes your Vendetta target until you select a new one."
+      },
+      {
+        "name": "Eyes of the Hunter",
+        "description": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
+      },
+      {
+        "name": "Fratricidal Trophies",
+        "description": "In a turn in which the bearer’s unit chose to Default to Doctrine, until the end of the turn, each time a model in this unit makes an attack, you can re‑roll the Hit roll."
+      },
+      {
+        "name": "Empyric Symbiote",
+        "description": "Add 1 to Advance and Charge rolls made for the bearer’s unit."
+      },
+      {
+        "name": "Infernal Fulgurite",
+        "description": "Once per battle, you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+      },
+      {
+        "name": "Eye of the Warp",
+        "description": "Each time the bearer’s unit is set up on the battlefield, until the end of the turn, you can re‑roll Charge rolls made for that unit."
+      },
+      {
+        "name": "Akshur's Binding Runes",
+        "description": "The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules."
+      },
+      {
+        "name": "Tzagulla",
+        "description": "Improve the Attacks, Strength and Armour Penetration characteristics of the bearer’s weapons by 1. In addition, each time the bearer’s unit is set up on the battlefield from Reserves, until the end of the turn, improve the Damage characteristic of the bearer’s weapons by 1."
+      },
+      {
+        "name": "Wyredjinn",
+        "description": "At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP."
+      },
+      {
+        "name": "Cybinfernal Font",
+        "description": "Models in the bearer’s unit have the ^^**Soul Forge**^^ keyword."
+      },
+      {
+        "name": "Mark of the Soul Forges",
+        "description": "Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit."
+      },
+      {
+        "name": "Crown of Worms",
+        "description": "Add 3” to the range of the bearer’s Warpsmith, Master of Mechanisms and Enrage Machine Spirits abilities."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      }
+    ],
+    "modelGroups": {
+      "rogue-psyker-legends": {
+        "id": "rogue-psyker-legends",
+        "name": "Rogue Psyker [Legends]",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 3,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "wargear-chaos-stave",
+            "description": "Wargear: Chaos stave",
+            "exclusiveWith": [
+              "wargear-laspistol",
+              "wargear-psychic-strike"
+            ]
+          },
+          {
+            "id": "wargear-laspistol",
+            "description": "Wargear: Laspistol",
+            "exclusiveWith": [
+              "wargear-chaos-stave",
+              "wargear-psychic-strike"
+            ]
+          },
+          {
+            "id": "wargear-psychic-strike",
+            "description": "Wargear: Psychic Strike",
+            "exclusiveWith": [
+              "wargear-chaos-stave",
+              "wargear-laspistol"
+            ]
+          }
+        ],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "rogue-psyker-legends": 1
+        },
+        "points": 60
+      }
+    ]
+  },
+  {
+    "id": "traitor-enforcer",
+    "name": "Traitor Enforcer",
+    "faction": "Chaos Knights",
+    "role": "HQ",
+    "basePoints": 55,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 3,
+      "leadership": "6+",
+      "objectiveControl": 1
+    },
+    "options": [
+      {
+        "id": "talisman-of-burning-blood",
+        "name": "Talisman of Burning Blood",
+        "points": 15
+      },
+      {
+        "id": "eye-of-tzeentch",
+        "name": "Eye of Tzeentch",
+        "points": 15
+      },
+      {
+        "id": "orbs-of-unlife",
+        "name": "Orbs of Unlife",
+        "points": 15
+      },
+      {
+        "id": "intoxicating-elixir",
+        "name": "Intoxicating Elixir",
+        "points": 15
+      },
+      {
+        "id": "warmasters-gift",
+        "name": "Warmaster's Gift",
+        "points": 15
+      },
+      {
+        "id": "eager-for-vengeance",
+        "name": "Eager for Vengeance",
+        "points": 20
+      },
+      {
+        "id": "eye-of-abaddon",
+        "name": "Eye of Abaddon",
+        "points": 15
+      },
+      {
+        "id": "mark-of-legend",
+        "name": "Mark of Legend",
+        "points": 10
+      },
+      {
+        "id": "falsehood",
+        "name": "Falsehood",
+        "points": 10
+      },
+      {
+        "id": "cursed-fang",
+        "name": "Cursed Fang",
+        "points": 10
+      },
+      {
+        "id": "shroud-of-obfuscation",
+        "name": "Shroud of Obfuscation",
+        "points": 15
+      },
+      {
+        "id": "soul-link",
+        "name": "Soul Link",
+        "points": 5
+      },
+      {
+        "id": "despots-claim",
+        "name": "Despot's Claim",
+        "points": 15
+      },
+      {
+        "id": "dread-reaver",
+        "name": "Dread Reaver",
+        "points": 15
+      },
+      {
+        "id": "mark-of-the-hound",
+        "name": "Mark of the Hound",
+        "points": 25
+      },
+      {
+        "id": "tyrants-lash",
+        "name": "Tyrant's Lash",
+        "points": 20
+      },
+      {
+        "id": "willbreaker",
+        "name": "Willbreaker",
+        "points": 10
+      },
+      {
+        "id": "nights-shroud",
+        "name": "Night's Shroud",
+        "points": 20
+      },
+      {
+        "id": "forges-blessing",
+        "name": "Forge's Blessing",
+        "points": 20
+      },
+      {
+        "id": "eater-of-dread",
+        "name": "Eater of Dread",
+        "points": 15
+      },
+      {
+        "id": "bastion-plate",
+        "name": "Bastion Plate",
+        "points": 10
+      },
+      {
+        "id": "ironbound-enmity",
+        "name": "Ironbound Enmity",
+        "points": 15
+      },
+      {
+        "id": "warp-tracer",
+        "name": "Warp Tracer",
+        "points": 20
+      },
+      {
+        "id": "iron-artifice",
+        "name": "Iron Artifice",
+        "points": 10
+      },
+      {
+        "id": "amulet-of-tainted-vigour",
+        "name": "Amulet of Tainted Vigour",
+        "points": 20
+      },
+      {
+        "id": "incendiary-goad",
+        "name": "Incendiary Goad",
+        "points": 15
+      },
+      {
+        "id": "cultists-brand",
+        "name": "Cultist's Brand",
+        "points": 20
+      },
+      {
+        "id": "warped-foresight",
+        "name": "Warped Foresight",
+        "points": 10
+      },
+      {
+        "id": "warp-fuelled-thrusters",
+        "name": "Warp-fuelled Thrusters",
+        "points": 20
+      },
+      {
+        "id": "invigorated-mechatendrils",
+        "name": "Invigorated Mechatendrils",
+        "points": 15
+      },
+      {
+        "id": "soul-harvester",
+        "name": "Soul Harvester",
+        "points": 15
+      },
+      {
+        "id": "tempting-addendum",
+        "name": "Tempting Addendum",
+        "points": 25
+      },
+      {
+        "id": "surgical-precision",
+        "name": "Surgical Precision",
+        "points": 10
+      },
+      {
+        "id": "living-carapace",
+        "name": "Living Carapace",
+        "points": 15
+      },
+      {
+        "id": "helm-of-all-seeing",
+        "name": "Helm of All-Seeing",
+        "points": 25
+      },
+      {
+        "id": "prime-test-subject",
+        "name": "Prime Test Subject",
+        "points": 35
+      },
+      {
+        "id": "touched-by-the-warp",
+        "name": "Touched by the Warp",
+        "points": 10
+      },
+      {
+        "id": "eye-of-zdesh",
+        "name": "Eye of Z'Desh",
+        "points": 25
+      },
+      {
+        "id": "mind-blade",
+        "name": "Mind Blade",
+        "points": 25
+      },
+      {
+        "id": "infernal-avatar",
+        "name": "Infernal Avatar",
+        "points": 20
+      },
+      {
+        "id": "greyveil-hex",
+        "name": "Greyveil Hex",
+        "points": 25
+      },
+      {
+        "id": "warp-fuelled-thrusters-2",
+        "name": "Warp-fuelled Thrusters",
+        "points": 20
+      },
+      {
+        "id": "sorrowscent-vulture",
+        "name": "Sorrowscent Vulture",
+        "points": 35
+      },
+      {
+        "id": "terrorglut-parasite",
+        "name": "Terrorglut Parasite",
+        "points": 20
+      },
+      {
+        "id": "voice-of-the-tyrant",
+        "name": "Voice of the Tyrant",
+        "points": 25
+      },
+      {
+        "id": "raid-leader",
+        "name": "Raid Leader",
+        "points": 20
+      },
+      {
+        "id": "dread-reputation",
+        "name": "Dread Reputation",
+        "points": 25
+      },
+      {
+        "id": "eager-for-bloodshed",
+        "name": "Eager for Bloodshed",
+        "points": 30
+      },
+      {
+        "id": "weaponised-hatred",
+        "name": "Weaponised Hatred",
+        "points": 35
+      },
+      {
+        "id": "eyes-of-the-hunter",
+        "name": "Eyes of the Hunter",
+        "points": 15
+      },
+      {
+        "id": "fratricidal-trophies",
+        "name": "Fratricidal Trophies",
+        "points": 5
+      },
+      {
+        "id": "empyric-symbiote",
+        "name": "Empyric Symbiote",
+        "points": 15
+      },
+      {
+        "id": "infernal-fulgurite",
+        "name": "Infernal Fulgurite",
+        "points": 20
+      },
+      {
+        "id": "eye-of-the-warp",
+        "name": "Eye of the Warp",
+        "points": 15
+      },
+      {
+        "id": "akshurs-binding-runes",
+        "name": "Akshur's Binding Runes",
+        "points": 20
+      },
+      {
+        "id": "tzagulla",
+        "name": "Tzagulla",
+        "points": 25
+      },
+      {
+        "id": "wyredjinn",
+        "name": "Wyredjinn",
+        "points": 25
+      },
+      {
+        "id": "cybinfernal-font",
+        "name": "Cybinfernal Font",
+        "points": 20
+      },
+      {
+        "id": "mark-of-the-soul-forges",
+        "name": "Mark of the Soul Forges",
+        "points": 20
+      },
+      {
+        "id": "crown-of-worms",
+        "name": "Crown of Worms",
+        "points": 15
+      }
+    ],
+    "weapons": [
+      {
+        "id": "power-fist",
+        "name": "Power fist",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 6,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 3
+      },
+      {
+        "id": "bolt-pistol",
+        "name": "Bolt pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 3
+      },
+      {
+        "id": "ogryn-weapons",
+        "name": "Ogryn weapons",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 5,
+        "strength": 7,
+        "armourPenetration": -1,
+        "damage": 2,
+        "abilities": [],
+        "weaponSkill": 3
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Leader",
+        "description": "This unit can be attached to the following unit:\n■ TRAITOR GUARDSMAN SQUAD"
+      },
+      {
+        "name": "Brutal Example",
+        "description": "Once per turn, while this unit is leading a unit and contains a TRAITOR ENFORCER model, you can target that unit with the Fire Overwatch Stratagem for 0CP, and can do so even if you have already targeted a different unit from your army with that Stratagem this phase. Each time you use this ability, one Bodyguard model in that unit is destroyed."
+      },
+      {
+        "name": "Mutated Bodyguard",
+        "description": "While this unit contains a Traitor Ogryn model, CHARACTER models in this unit have the Feel No Pain 4+ ability."
+      },
+      {
+        "name": "Invulnerable Save",
+        "description": "This unit's TRAITOR ENFORCER model has a 5+ invulnerable save"
+      },
+      {
+        "name": "Talisman of Burning Blood",
+        "description": "Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. Each time the bearer’s unit makes a Dark Pact and does not fail the resulting Leadership test, roll one D3; until the end of the phase, add the result to the Attacks and Strength characteristics of the bearer’s melee weapons instead."
+      },
+      {
+        "name": "Eye of Tzeentch",
+        "description": "Each time the bearer’s unit makes a Dark Pact and does not fail the resulting Leadership test, if the result of that test was 8 or more, you gain 1CP."
+      },
+      {
+        "name": "Orbs of Unlife",
+        "description": "At the end of the Fight phase, roll one D6 for every enemy unit within 3\" of the bearer, adding 1 to the result if the bearer’s unit made a Dark Pact that phase and did not fail the resulting Leadership test: on a 4+, that enemy unit suffers D3 mortal wounds."
+      },
+      {
+        "name": "Intoxicating Elixir",
+        "description": "The bearer has the Feel No Pain 5+ ability. Each time the bearer shoots or fights, if the bearer’s unit made a Dark Pact this phase and did not fail the resulting Leadership test, after the bearer has resolved those attacks, select one enemy unit that was hit by one or more of those attacks; that enemy unit must take a Battle-shock test."
+      },
+      {
+        "name": "Warmaster's Gift",
+        "description": "Each time the bearer makes an attack that targets your focus of hatred, an unmodified successful wound roll of 5+ scores a Critical Wound."
+      },
+      {
+        "name": "Eager for Vengeance",
+        "description": "The bearer's unit is eligible to shoot and declare a charge in a turn in which it Fell Back. While doing so, each time a model in that unit makes an attack that targets your focus of hatred, add 1 to the Hit roll and each time you select your focus of hatred as a target of that unit's charge, add 1 to the Charge roll."
+      },
+      {
+        "name": "Eye of Abaddon",
+        "description": "While the bearer is on the battlefield, each time your focus of hatred is destroyed, roll one D6; on a 4+, you gain 1CP."
+      },
+      {
+        "name": "Mark of Legend",
+        "description": "Once per turn, you can re-roll one Hit roll, one Wound roll or one saving throw made for the bearer."
+      },
+      {
+        "name": "Falsehood",
+        "description": "In the Declare Battle Formations step, you can set up the bearer in Reserves instead of setting it up on the battlefield. If you do, in the Reinforcements step of one of your Movement phases, you can select one model in a friendly LEGIONARIES or CHOSEN unit that has two or more models remaining and is on the battlefield (excluding Attached units). The selected model is destroyed (ignoring any rules that are triggered when a model is destroyed) and the bearer is set up as close as possible to where that model was destroyed and only within Engagement Range of any units if the destroyed model was in Engagement Range of those units. The bearer now attaches to that unit as its Leader."
+      },
+      {
+        "name": "Cursed Fang",
+        "description": "Improve the Armour Penetration characteristic of the bearer's melee weapons by 1, and the bearer's melee weapons have the [PRECISION] ability."
+      },
+      {
+        "name": "Shroud of Obfuscation",
+        "description": "The bearer has the Stealth and Lone Operative abilities."
+      },
+      {
+        "name": "Soul Link",
+        "description": "At the start of your Command phase, you can select one other HERETIC ASTARTES INFANTRY CHARACTER model from your army (excluding EPIC HEROES). Until the start of your next Command phase, the bearer gains the PSYKER keyword, and replace the bearer's datasheet abilities with the datasheet abilities of the CHARACTER you selected."
+      },
+      {
+        "name": "Despot's Claim",
+        "description": "At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding one to the result if the bearer is wholly within 12\" of your opponent's deployment zone; on a 5+, you gain 1CP."
+      },
+      {
+        "name": "Dread Reaver",
+        "description": "Each time the bearer makes a melee attack, if the bearer is wholly within 12\" of your opponent's deployment zone, you can re-roll the Hit roll and you can re-roll the Wound roll."
+      },
+      {
+        "name": "Mark of the Hound",
+        "description": "Models in the bearer's unit have the Scouts 6\" ability."
+      },
+      {
+        "name": "Tyrant's Lash",
+        "description": "You can re-roll Advance rolls made for the bearer's unit, and the bearer's unit is eligible to shoot in a turn in which it Fell Back."
+      },
+      {
+        "name": "Willbreaker",
+        "description": "In the Fight phase, after the bearer has made its attacks, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test."
+      },
+      {
+        "name": "Night's Shroud",
+        "description": "Models in the bearer's unit have the Stealth ability."
+      },
+      {
+        "name": "Forge's Blessing",
+        "description": "In your Command phase, select one friendly HERETIC ASTARTES VEHICLE unit within 12\" of the bearer. Until the start of your next Command phase, that unit has the Feel No Pain 6+ ability."
+      },
+      {
+        "name": "Eater of Dread",
+        "description": "At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result for each Battle-shocked enemy unit that is on the battlefield: on a 5+, you gain 1CP."
+      },
+      {
+        "name": "Bastion Plate",
+        "description": "Once per battle round, when a saving throw is failed for the bearer's unit, you can change the Damage characteristic of that attack to 0."
+      },
+      {
+        "name": "Ironbound Enmity",
+        "description": "Each time the bearer makes an attack while within range of an objective marker, add 1 to the Wound roll."
+      },
+      {
+        "name": "Warp Tracer",
+        "description": "In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover."
+      },
+      {
+        "name": "Iron Artifice",
+        "description": "The bearer's weapons have the [ANTI-VEHICLE 4+] and [ANTI-FORTIFICATION 4+] abilities."
+      },
+      {
+        "name": "Amulet of Tainted Vigour",
+        "description": "In your Command phase, you can return up to D3 destroyed DAMNED models (excluding CHARACTER models) to the bearer's unit."
+      },
+      {
+        "name": "Incendiary Goad",
+        "description": "While the bearer's unit is below its Starting Strength, add 1 to the Strength characteristic of melee weapons equipped by DAMNED models in that unit, and while that unit is Below Half-Strength, add 1 to the Attacks characteristic of those weapons as well."
+      },
+      {
+        "name": "Cultist's Brand",
+        "description": "If every other model in the bearer's unit (excluding Dark Disciples) is DAMNED, you can re-roll Advance and Charge rolls made for the bearer's unit."
+      },
+      {
+        "name": "Warped Foresight",
+        "description": "The bearer has the Scouts 6\" ability."
+      },
+      {
+        "name": "Warp-fuelled Thrusters",
+        "description": "At the end of your opponent's turn, if the bearer's unit is not within Engagement Range of one or more enemy units, you can remove the bearer's unit from the battlefield and place it into Strategic Reserves."
+      },
+      {
+        "name": "Invigorated Mechatendrils",
+        "description": "Add 4\" to the bearer's Move characteristic."
+      },
+      {
+        "name": "Soul Harvester",
+        "description": "While the bearer is on the battlefield, each time an enemy unit within 12\" of the bearer is destroyed, roll one D6; on a 5+, you gain 1CP."
+      },
+      {
+        "name": "Tempting Addendum",
+        "description": "Each time a HERETIC ASTARTES DAEMON VEHICLE from your army invokes its contract while within 3\" of the bearer:\n- If it suffers one or more mortal wounds as a result of that Dark Pact, add 1 to the number of mortal wounds it suffers.\n- Until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll."
+      },
+      {
+        "name": "Surgical Precision",
+        "description": "HERETIC ASTARTES model (excluding DAMNED models) only. The bearer’s melee weapons have the [PRECISION] ability."
+      },
+      {
+        "name": "Living Carapace",
+        "description": "CHAOS LORD model only. Add 1 to the bearer’s Wounds characteristic and the bearer has the Feel No Pain 5+ ability."
+      },
+      {
+        "name": "Helm of All-Seeing",
+        "description": "HERETIC ASTARTES INFANTRY model (excluding DAMNED models) only. Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of the bearer."
+      },
+      {
+        "name": "Prime Test Subject",
+        "description": "**^^Heretic Astartes Infantry^^** model (excluding **^^Damned^^** models) only. Add 1 to the Damage characteristic of melee weapons equipped by the bearer. Each time the bearer makes a melee attack, you can re‑roll the Hit roll."
+      },
+      {
+        "name": "Touched by the Warp",
+        "description": "The bearer gains the ^^**Psyker^^** keyword."
+      },
+      {
+        "name": "Eye of Z'Desh",
+        "description": "Models in the bearer's unit have the Scouts 6\" ability."
+      },
+      {
+        "name": "Mind Blade",
+        "description": "Melee weapons equipped by models in the bearer’s unit have the [LANCE] ability."
+      },
+      {
+        "name": "Infernal Avatar",
+        "description": "Improve the Strength characteristic of melee weapons equipped by the bearer by 2, and improve the Armour Penetration characteristic of those weapons by 1."
+      },
+      {
+        "name": "Greyveil Hex",
+        "description": "Models in the bearer's unit have the Stealth ability.\n\nWhile the bearer’s unit is within range of one or more objective markers you control, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
+      },
+      {
+        "name": "Sorrowscent Vulture",
+        "description": "Models in the bearer’s unit have the Scouts 6\" ability.\nIn the Declare Battle Formations step, the bearer can be attached to a Warp Talons unit."
+      },
+      {
+        "name": "Terrorglut Parasite",
+        "description": "At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle‑shock test, subtracting 1 from the result."
+      },
+      {
+        "name": "Voice of the Tyrant",
+        "description": "The bearer’s unit has both abilities from the Tyrannical Motivation Detachment rule."
+      },
+      {
+        "name": "Raid Leader",
+        "description": "Each time the bearer’s unit is set up after disembarking from a ^^**Transport**^^ that has made a Normal move this turn, the bearer’s unit is still eligible to declare a charge."
+      },
+      {
+        "name": "Dread Reputation",
+        "description": "Each time the bearer’s unit is set up on the battlefield, each enemy unit within 6” of the bearer’s unit (or within 12” if the bearer’s unit was set up using the Deep Strike ability) takes a Battle‑shock test."
+      },
+      {
+        "name": "Eager for Bloodshed",
+        "description": "The bearer has the Infiltrators ability."
+      },
+      {
+        "name": "Weaponised Hatred",
+        "description": "Once per battle round, after your Vendetta target is destroyed, if the bearer is on the battlefield, you can select one enemy unit visible to the bearer. That enemy unit becomes your Vendetta target until you select a new one."
+      },
+      {
+        "name": "Eyes of the Hunter",
+        "description": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
+      },
+      {
+        "name": "Fratricidal Trophies",
+        "description": "In a turn in which the bearer’s unit chose to Default to Doctrine, until the end of the turn, each time a model in this unit makes an attack, you can re‑roll the Hit roll."
+      },
+      {
+        "name": "Empyric Symbiote",
+        "description": "Add 1 to Advance and Charge rolls made for the bearer’s unit."
+      },
+      {
+        "name": "Infernal Fulgurite",
+        "description": "Once per battle, you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+      },
+      {
+        "name": "Eye of the Warp",
+        "description": "Each time the bearer’s unit is set up on the battlefield, until the end of the turn, you can re‑roll Charge rolls made for that unit."
+      },
+      {
+        "name": "Akshur's Binding Runes",
+        "description": "The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules."
+      },
+      {
+        "name": "Tzagulla",
+        "description": "Improve the Attacks, Strength and Armour Penetration characteristics of the bearer’s weapons by 1. In addition, each time the bearer’s unit is set up on the battlefield from Reserves, until the end of the turn, improve the Damage characteristic of the bearer’s weapons by 1."
+      },
+      {
+        "name": "Wyredjinn",
+        "description": "At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP."
+      },
+      {
+        "name": "Cybinfernal Font",
+        "description": "Models in the bearer’s unit have the ^^**Soul Forge**^^ keyword."
+      },
+      {
+        "name": "Mark of the Soul Forges",
+        "description": "Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit."
+      },
+      {
+        "name": "Crown of Worms",
+        "description": "Add 3” to the range of the bearer’s Warpsmith, Master of Mechanisms and Enrage Machine Spirits abilities."
+      },
+      {
+        "name": "Khorne",
+        "description": "Add 2 to the Strength characteristic of this model's hellforged weapons."
+      },
+      {
+        "name": "Nurgle",
+        "description": "Add 1 to this model's Toughness characteristic."
+      },
+      {
+        "name": "Slaanesh",
+        "description": "Add 2\" to this model's Move characteristic."
+      },
+      {
+        "name": "Tzeentch",
+        "description": "Add 3 to the Attacks characteristic of this model's infernal cannon."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      }
+    ],
+    "modelGroups": {
+      "traitor-enforcer": {
+        "id": "traitor-enforcer",
+        "name": "Traitor Enforcer",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 3,
+          "leadership": "6+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "wargear-bolt-pistol",
+            "description": "Wargear: Bolt pistol",
+            "exclusiveWith": [
+              "wargear-power-fist"
+            ]
+          },
+          {
+            "id": "wargear-power-fist",
+            "description": "Wargear: Power fist",
+            "exclusiveWith": [
+              "wargear-bolt-pistol"
+            ]
+          }
+        ],
+        "equippedWargear": []
+      },
+      "traitor-ogryn": {
+        "id": "traitor-ogryn",
+        "name": "Traitor Ogryn",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 6,
+          "save": "5+",
+          "wounds": 4,
+          "leadership": "7+",
+          "objectiveControl": 1
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": []
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "traitor-enforcer": 1,
+          "traitor-ogryn": 1
+        },
+        "points": 55
+      }
+    ]
+  },
+  {
+    "id": "traitor-guardsmen-squad",
+    "name": "Traitor Guardsmen Squad",
+    "faction": "Chaos Knights",
+    "role": "ELITES",
+    "basePoints": 70,
+    "stats": {
+      "movement": 6,
+      "toughness": 3,
+      "save": "5+",
+      "wounds": 1,
+      "leadership": "7+",
+      "objectiveControl": 2
+    },
+    "options": [],
+    "weapons": [
+      {
+        "id": "chainsword",
+        "name": "Chainsword",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 3,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      },
+      {
+        "id": "power-weapon",
+        "name": "Power weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 2,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      },
+      {
+        "id": "close-combat-weapon",
+        "name": "Close combat weapon",
+        "type": "Melee",
+        "range": "Melee",
+        "attacks": 1,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [],
+        "weaponSkill": 4
+      },
+      {
+        "id": "corrupted-pistol",
+        "name": "Corrupted pistol",
+        "type": "Pistol",
+        "range": 12,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": -1,
+        "damage": 1,
+        "abilities": [
+          "Pistol"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "boltgun",
+        "name": "Boltgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 1"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "lasgun",
+        "name": "Lasgun",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "strength": 3,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 1"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "flamer",
+        "name": "Flamer",
+        "type": "Assault",
+        "range": 12,
+        "attacks": "D6",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Ignores Cover",
+          "Torrent"
+        ]
+      },
+      {
+        "id": "plasma-gun-standard",
+        "name": "➤ Plasma gun - standard",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "strength": 7,
+        "armourPenetration": -2,
+        "damage": 1,
+        "abilities": [
+          "Rapid Fire 1"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "plasma-gun-supercharge",
+        "name": "➤ Plasma gun - supercharge",
+        "type": "Rapid Fire",
+        "range": 24,
+        "attacks": 1,
+        "strength": 8,
+        "armourPenetration": -3,
+        "damage": 2,
+        "abilities": [
+          "Hazardous",
+          "Rapid Fire 1"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "meltagun",
+        "name": "Meltagun",
+        "type": "Assault",
+        "range": 12,
+        "attacks": 1,
+        "strength": 9,
+        "armourPenetration": -4,
+        "damage": "D6",
+        "abilities": [
+          "Melta 2"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "cultist-sniper-rifle",
+        "name": "Cultist sniper rifle",
+        "type": "Heavy",
+        "range": 36,
+        "attacks": 1,
+        "strength": 4,
+        "armourPenetration": -2,
+        "damage": 2,
+        "abilities": [
+          "Heavy",
+          "Precision"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "cultist-grenade-launcher-frag",
+        "name": "➤ Cultist grenade launcher - frag",
+        "type": "Assault",
+        "range": 24,
+        "attacks": "D3",
+        "strength": 4,
+        "armourPenetration": 0,
+        "damage": 1,
+        "abilities": [
+          "Blast"
+        ],
+        "ballisticSkill": 4
+      },
+      {
+        "id": "cultist-grenade-launcher-krak",
+        "name": "➤ Cultist grenade launcher - krak",
+        "type": "Assault",
+        "range": 24,
+        "attacks": 1,
+        "strength": 9,
+        "armourPenetration": -2,
+        "damage": "D3",
+        "abilities": [],
+        "ballisticSkill": 4
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Twisted Defence Force",
+        "description": "While this unit is within range of an objective marker, each time a ranged attack targets this unit, models in this unit have the Benefit of Cover against that attack."
+      },
+      {
+        "name": "Khorne",
+        "description": "Add 2 to the Strength characteristic of this model's hellforged weapons."
+      },
+      {
+        "name": "Nurgle",
+        "description": "Add 1 to this model's Toughness characteristic."
+      },
+      {
+        "name": "Slaanesh",
+        "description": "Add 2\" to this model's Move characteristic."
+      },
+      {
+        "name": "Tzeentch",
+        "description": "Add 3 to the Attacks characteristic of this model's infernal cannon."
+      },
+      {
+        "name": "Dark Pacts",
+        "description": "If your Army Faction is ^^**Heretic Astartes**^^, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
+      }
+    ],
+    "modelGroups": {
+      "traitor-sergeant": {
+        "id": "traitor-sergeant",
+        "name": "Traitor Sergeant",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 1,
+        "maxQuantity": 1,
+        "availableOptions": [
+          {
+            "id": "melee-weapon-close-combat-weapon",
+            "description": "Melee weapon: Close combat weapon",
+            "exclusiveWith": [
+              "melee-weapon-chainsword",
+              "melee-weapon-power-weapon"
+            ]
+          },
+          {
+            "id": "melee-weapon-chainsword",
+            "description": "Melee weapon: Chainsword",
+            "exclusiveWith": [
+              "melee-weapon-close-combat-weapon",
+              "melee-weapon-power-weapon"
+            ]
+          },
+          {
+            "id": "melee-weapon-power-weapon",
+            "description": "Melee weapon: Power weapon",
+            "exclusiveWith": [
+              "melee-weapon-close-combat-weapon",
+              "melee-weapon-chainsword"
+            ]
+          },
+          {
+            "id": "ranged-weapon-corrupted-pistol",
+            "description": "Ranged weapon: Corrupted pistol",
+            "exclusiveWith": [
+              "ranged-weapon-boltgun"
+            ]
+          },
+          {
+            "id": "ranged-weapon-boltgun",
+            "description": "Ranged weapon: Boltgun",
+            "exclusiveWith": [
+              "ranged-weapon-corrupted-pistol"
+            ]
+          }
+        ],
+        "equippedWargear": [
+          "close-combat-weapon",
+          "corrupted-pistol"
+        ]
+      },
+      "guardsman-w-lasgun": {
+        "id": "guardsman-w-lasgun",
+        "name": "Guardsman w/ lasgun",
+        "category": "follower",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 9,
+        "availableOptions": [],
+        "equippedWargear": [
+          "close-combat-weapon"
+        ]
+      },
+      "guardsman-w-flamer": {
+        "id": "guardsman-w-flamer",
+        "name": "Guardsman w/ flamer",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "close-combat-weapon"
+        ]
+      },
+      "guardsman-w-plasma-gun": {
+        "id": "guardsman-w-plasma-gun",
+        "name": "Guardsman w/ plasma gun",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "close-combat-weapon"
+        ]
+      },
+      "guardsman-w-meltagun": {
+        "id": "guardsman-w-meltagun",
+        "name": "Guardsman w/ meltagun",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "close-combat-weapon"
+        ]
+      },
+      "guardsman-w-cultist-sniper-rifle": {
+        "id": "guardsman-w-cultist-sniper-rifle",
+        "name": "Guardsman w/ Cultist sniper rifle",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "close-combat-weapon"
+        ]
+      },
+      "guardsman-w-cultist-grenade-launcher": {
+        "id": "guardsman-w-cultist-grenade-launcher",
+        "name": "Guardsman w/ Cultist grenade launcher",
+        "category": "leader",
+        "stats": {
+          "movement": 6,
+          "toughness": 3,
+          "save": "5+",
+          "wounds": 1,
+          "leadership": "7+",
+          "objectiveControl": 2
+        },
+        "minQuantity": 0,
+        "maxQuantity": 1,
+        "availableOptions": [],
+        "equippedWargear": [
+          "close-combat-weapon"
+        ]
+      }
+    },
+    "pointTiers": [
+      {
+        "composition": {
+          "traitor-sergeant": 1,
+          "guardsman-w-lasgun": 9,
+          "guardsman-w-flamer": 1,
+          "guardsman-w-plasma-gun": 1,
+          "guardsman-w-meltagun": 1,
+          "guardsman-w-cultist-sniper-rifle": 0,
+          "guardsman-w-cultist-grenade-launcher": 0
+        },
+        "points": 70
+      }
+    ]
+  }
+]
