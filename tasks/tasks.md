@@ -1,7 +1,7 @@
-# BattleForge â€” Task List
+# OpenForge â€” Task List
 
 > **For AI agents and human contributors alike.**
-> This is the canonical task list for the BattleForge project.
+> This is the canonical task list for the OpenForge project.
 > It supersedes `tasks.json` (deleted). Source of truth: `REASSESSMENT.md` (2026-06-12) + live codebase audit.
 >
 > **Status legend:** `[ ]` todo Â· `[/]` in progress Â· `[x]` done
