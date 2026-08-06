@@ -88,21 +88,39 @@ export const normalizeModelGroupComposition = (
   const groups = unit.modelGroups;
   if (!groups) return {};
 
-  // Some generated datasheets are composed entirely of interchangeable
-  // weapon-loadout variants with no single mandatory "leader" group — e.g.
-  // Necron Warriors has two follower groups (gauss flayer / gauss reaper)
-  // that each independently allow `minQuantity: 0`, even though the unit
-  // itself always fields 10+ models per its cheapest `pointTiers` entry.
-  // Seeding a fresh composition purely from `minQuantity` in that case
-  // yields an all-zero composition — wrong (the unit isn't free) and
-  // unusable (nothing to decrement from). When every group's minimum is 0,
-  // fall back to the cheapest defined tier's composition as the default
-  // instead. This only affects filling in *missing* keys (a group absent
-  // from `composition`), never a key the caller explicitly set to 0.
-  const allMinsZero = Object.values(groups).every((g) => g.minQuantity === 0);
+  // Summing every group's `minQuantity` doesn't always produce a legal (or
+  // sensible) default composition. Two related shapes both break it:
+  //   - All-interchangeable-followers units (e.g. Necron Warriors: two
+  //     weapon-loadout groups that each independently allow
+  //     `minQuantity: 0`) sum to an all-zero composition, even though the
+  //     unit always fields 10+ models per its cheapest `pointTiers` entry.
+  //   - Mandatory-leader units (e.g. Orks Boyz: a 1-model Boss Nob leader
+  //     with `minQuantity: 1`, plus follower groups that all allow
+  //     `minQuantity: 0`) sum to just the leader — a single model — while
+  //     `resolveModelGroupPoints` still rounds that up to the cheapest
+  //     tier's price (a full 10-model squad). The unit then shows 1 model
+  //     on the card but is billed for the whole squad.
+  // Both are instances of the same underlying problem: the min-derived
+  // total undercounts what the cheapest tier actually requires. So rather
+  // than special-casing "every group's minimum is 0", fall back to the
+  // cheapest defined tier's composition as the default whenever the
+  // min-derived total is fewer models than the cheapest tier needs. This
+  // only affects filling in *missing* keys (a group absent from
+  // `composition`), never a key the caller explicitly set to 0, and never
+  // fires for units (like Intercessor Squad: Sergeant 1 + Intercessor 4 =
+  // 5, exactly the 5-model tier) whose min-derived default already meets
+  // the cheapest tier's model count.
+  const cheapestTier =
+    unit.pointTiers && unit.pointTiers.length > 0
+      ? [...unit.pointTiers].sort((a, b) => a.points - b.points)[0]
+      : undefined;
+  const minDerivedTotal = Object.values(groups).reduce((sum, g) => sum + g.minQuantity, 0);
+  const cheapestTierTotal = cheapestTier
+    ? Object.values(cheapestTier.composition).reduce((sum, count) => sum + count, 0)
+    : undefined;
   const cheapestTierComposition =
-    allMinsZero && unit.pointTiers && unit.pointTiers.length > 0
-      ? [...unit.pointTiers].sort((a, b) => a.points - b.points)[0].composition
+    cheapestTier && cheapestTierTotal !== undefined && minDerivedTotal < cheapestTierTotal
+      ? cheapestTier.composition
       : undefined;
 
   const normalized: Record<string, number> = {};
