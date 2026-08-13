@@ -191,7 +191,7 @@ The following items appeared in earlier planning but have been **deliberately sc
     5. *(MINOR)* Composition values aren't checked for integrality — `Number.isFinite(3.7)` passes, so hand-edited localStorage renders `3.7x Neophyte w/ Firearm`. Pre-existing, line unchanged by this branch.
     6. *(MINOR, cosmetic)* `scripts/hydrate-units.js:454,479,487` help text still says "units.json"; the script actually writes to `src/data/factions/<faction>.json`.
 
-  - **AWAITING USER DECISION — tier round-up on intermediate compositions.** `resolveModelGroupPoints` rounds up to the next tier. Correct per TABLETOP_RULES ("never undercharge") but freely reachable: a 7-model Intercessor Squad (1+4+2) charges the 10-model 160pts. Options laid out for the user; deliberately not resolved unilaterally.
+  - **RESOLVED — tier round-up is intended behaviour, not a defect.** Owner decision (2026-08-05): the user may build any total within each group's min/max range, and pays the next tier up if that total isn't a priced size. "If they want to have 6 minis even though it is double the points that is fine, they just won't be as economical as they could be. Ultimately that is up to the user to judge." This is consistent with the project's warns-but-never-blocks value — do not add a hard constraint to legal tier sizes, and do not treat the 356 units with reachable unpriced sizes as a bug.
 
   - *Superseded — earlier Pass 2 minor findings, still open:* a unit zeroed to 0 models still costs the cheapest tier (Necron Warriors 0 models = 90pts); `toFinitePoints` accepts negative and scientific-notation values (`-50 pts`, `1e+21 pts`).
 
@@ -204,6 +204,14 @@ The following items appeared in earlier planning but have been **deliberately sc
 
 - [ ] **6.6 (original scope note)**
   - Build a Node.js parsing script (`scripts/parse-bsdata.ts`) to read machine-readable community XML/CAT files (fetched automatically from the community repository at `https://github.com/BSData/wh40k-10e.git` into `/raw-data`) and transform them into 10th-edition compliant JSON files mapped perfectly to the Task 6.1 entity-centric schema. Spawn parallel sub-agents to execute this script across all 26 factions, replacing the currently incomplete partial-hydration files with perfectly accurate datasets.
+
+- [ ] **6.8 Per-Model Wargear — parser hydration** *(prerequisite for 6.9)*
+  - `ModelGroup.equippedWargear` and `ModelGroup.availableOptions` exist in `army.ts` but are **empty for all 1597 units** — `parse-bsdata.ts` never populated them. Extend the parser to resolve BSData `entryLink`/`infoLink` references (including into the shared `* Library.cat` catalogues) and fill both fields, keeping the two concepts distinct: `equippedWargear` = what this group already carries (display), `availableOptions` = what it may swap (choice), with `exclusiveWith` for conflicting selections.
+  - Attempted to measure how often rank-and-file models (vs. leaders) have real wargear choices, in order to size the UI clutter risk. **The measurement failed and its numbers must not be trusted** — an ad-hoc script reached only 60-169 of 1597 units because it did not resolve `entryLink`s, so its "88% have no wargear choice" reflects unresolved links rather than genuine absence. The owner's own screenshot of the official app shows Infernus Marine (rank-and-file) carrying Bolt pistol / Pyreblaster / Close combat weapon, directly contradicting it. The real frequency distribution falls out of this task as a by-product; decide 6.9's UI only once it exists.
+
+- [ ] **6.9 Per-Model Wargear — UI** *(blocked on 6.8)*
+  - Reference behaviour, from the official GW app (owner-supplied screenshots): wargear is shown **per model group**, and the widget shape follows the group's size — **checkboxes when the group is a single model** (e.g. Infernus Sergeant), **counters when it has several** (e.g. "Bolt pistol ×4" across 4 Infernus Marines). A "Default Wargear" heading separates the carried loadout from any swaps.
+  - Owner's stated concern is clutter — repeating identical rows across five model groups. Mitigations to apply: render nothing for groups with no options; keep the loadout inside the existing collapsed "Wargear Options" accordion rather than expanding every group; surface swap options only where they exist. If options do concentrate on leaders, most groups render nothing and the clutter largely does not materialise — but confirm against real 6.8 data rather than assuming.
 
 - [ ] **6.7 Army Import / Export via JSON**
   - Implement robust list-sharing capabilities as the final ecosystem layer. Build a clipboard-copy mechanism for exporting full active states as JSON strings, alongside a text-area input window during army creation to parse and reconstruct lists.
