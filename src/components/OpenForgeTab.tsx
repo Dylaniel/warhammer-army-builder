@@ -97,7 +97,14 @@ export default function OpenForgeTab({ armies, setArmies }: OpenForgeTabProps) {
     alliedUnits: Unit[];
   }) => {
     if (armies.length < MAX_ARMIES) {
-      setArmies([...armies, formData]);
+      // Functional updater — resolves against the latest committed armies
+      // state rather than the `armies` prop closed over at render time, so
+      // a concurrent update (e.g. a Delete Army click landing in the same
+      // tick) isn't silently overwritten. See the same fix in
+      // `onArmyUpdate` below and in `ArmyDetailTab.tsx:22-28`.
+      setArmies((prevArmies) =>
+        prevArmies.length < MAX_ARMIES ? [...prevArmies, formData] : prevArmies
+      );
       setIsModalOpen(false);
     }
   };
@@ -154,7 +161,9 @@ export default function OpenForgeTab({ armies, setArmies }: OpenForgeTabProps) {
             <ArmyCard
               key={index}
               army={army}
-              onDelete={() => setArmies(armies.filter((_, i) => i !== realIndex))}
+              onDelete={() =>
+                setArmies((prevArmies) => prevArmies.filter((_, i) => i !== realIndex))
+              }
               onView={() => setViewingArmyIndex(realIndex)}
               onEdit={() => setEditingArmyIndex(realIndex)}
             />
@@ -167,9 +176,15 @@ export default function OpenForgeTab({ armies, setArmies }: OpenForgeTabProps) {
           isOpen={true}
           onClose={() => setEditingArmyIndex(null)}
           onSubmit={(updatedData) => {
-            const updatedArmies = [...armies];
-            updatedArmies[editingArmyIndex] = { ...armies[editingArmyIndex], ...updatedData };
-            setArmies(updatedArmies);
+            // Functional updater, same reasoning as handleCreateArmy/onDelete
+            // above — must not resolve against the `armies` prop snapshot.
+            setArmies((prevArmies) => {
+              const target = prevArmies[editingArmyIndex];
+              if (!target) return prevArmies;
+              const updatedArmies = [...prevArmies];
+              updatedArmies[editingArmyIndex] = { ...target, ...updatedData };
+              return updatedArmies;
+            });
             setEditingArmyIndex(null);
           }}
           army={armies[editingArmyIndex]}
