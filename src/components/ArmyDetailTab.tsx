@@ -11,6 +11,7 @@ import {
   getWarlordStatus,
   WarlordStatus,
 } from '../utils/unitUtils';
+import { serializeArmy } from '../utils/armyIO';
 import { useFactionUnits } from '../hooks/useFactionUnits';
 import EditArmyModal from './EditArmyModal';
 import UnitDetailTab from './UnitDetailTab';
@@ -296,13 +297,16 @@ export default function ArmyDetailTab({ army, onBack, onArmyUpdate }: ArmyDetail
           style={{ boxShadow: '0 0 0 2px #000' }}
         >
           <div className="flex justify-between items-start mb-1">
-            <h2 className="text-lg font-bold uppercase text-white">{army.armyName}</h2>
-            <button
-              onClick={() => setIsEditModalOpen(true)}
-              className="px-2 py-1 bg-blue-600 text-xs rounded text-white hover:bg-blue-700 transition-colors"
-            >
-              Edit
-            </button>
+            <h2 className="text-lg font-bold uppercase text-white pr-2">{army.armyName}</h2>
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <ExportArmyControl army={army} />
+              <button
+                onClick={() => setIsEditModalOpen(true)}
+                className="px-2 py-1 bg-blue-600 text-xs rounded text-white hover:bg-blue-700 transition-colors"
+              >
+                Edit
+              </button>
+            </div>
           </div>
           <div className="text-sm mb-1 text-gray-300">Faction: {army.faction}</div>
           <div className="text-sm mb-1 text-gray-300">Detachment: {army.detachment}</div>
@@ -511,6 +515,88 @@ function WarlordWarningBanner({ status }: { status: WarlordStatus }) {
       </svg>
       <span className="font-medium">{message}</span>
     </div>
+  );
+}
+
+/**
+ * Copies the current army to the clipboard as a JSON string (Task 6.7
+ * export). Feature-detects the async Clipboard API rather than assuming
+ * it's available — non-secure origins and older browsers don't expose
+ * `navigator.clipboard`, and even where it exists the write can reject
+ * (e.g. missing permission). Either case falls back to a selectable
+ * textarea overlay so the user can still copy the JSON by hand, instead of
+ * letting an unavailable/failed clipboard throw an unhandled rejection.
+ */
+function ExportArmyControl({ army }: { army: Army }) {
+  const [status, setStatus] = useState<'idle' | 'copied' | 'failed'>('idle');
+  const [showFallback, setShowFallback] = useState(false);
+
+  const handleExport = () => {
+    const json = serializeArmy(army);
+    const canUseClipboard =
+      typeof navigator !== 'undefined' &&
+      !!navigator.clipboard &&
+      typeof navigator.clipboard.writeText === 'function';
+
+    if (!canUseClipboard) {
+      setShowFallback(true);
+      return;
+    }
+
+    navigator.clipboard.writeText(json).then(
+      () => {
+        setStatus('copied');
+        setShowFallback(false);
+        window.setTimeout(() => setStatus('idle'), 2000);
+      },
+      () => {
+        setStatus('failed');
+        setShowFallback(true);
+      }
+    );
+  };
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={handleExport}
+        className="px-2 py-1 bg-purple-600 text-xs rounded text-white hover:bg-purple-700 transition-colors"
+        title="Copy this army as JSON"
+      >
+        {status === 'copied' ? 'Copied!' : status === 'failed' ? 'Copy Failed' : 'Export JSON'}
+      </button>
+
+      {showFallback && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+          onClick={() => setShowFallback(false)}
+        >
+          <div
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-4 w-full max-w-xs"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <p className="mb-2 text-xs text-gray-700 dark:text-gray-300">
+              Automatic clipboard copy isn&apos;t available here. Select the text below and copy it
+              manually.
+            </p>
+            <textarea
+              readOnly
+              value={serializeArmy(army)}
+              onFocus={(e) => e.currentTarget.select()}
+              className="w-full h-40 text-[10px] font-mono p-2 rounded bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-700"
+            />
+            <button
+              type="button"
+              onClick={() => setShowFallback(false)}
+              className="mt-2 w-full px-3 py-1.5 text-sm bg-gray-600 text-white rounded hover:bg-gray-700 transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
