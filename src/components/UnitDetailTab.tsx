@@ -106,6 +106,7 @@ function ModelGroupCounter({
 export default function UnitDetailTab({ unit, onBack, onUpdate }: UnitDetailTabProps) {
   const [isCompositionOpen, setIsCompositionOpen] = useState(true);
   const [isWargearOpen, setIsWargearOpen] = useState(true);
+  const [isAbilitiesOpen, setIsAbilitiesOpen] = useState(true);
 
   const modelGroups =
     unit.modelGroups && Object.keys(unit.modelGroups).length > 0 ? unit.modelGroups : null;
@@ -280,29 +281,6 @@ export default function UnitDetailTab({ unit, onBack, onUpdate }: UnitDetailTabP
               </div>
             </div>
           )}
-
-          {/* Abilities */}
-          {unit.abilities && unit.abilities.length > 0 && (
-            <div>
-              <h4 className="font-semibold text-gray-400 mb-1 text-xs uppercase tracking-wider">
-                Abilities
-              </h4>
-              <div className="bg-gray-900 rounded p-2 border border-gray-700">
-                <ul className="list-disc list-inside text-sm text-gray-300 space-y-1">
-                  {unit.abilities.map((ability, idx) =>
-                    typeof ability === 'string' ? (
-                      <li key={idx}>{ability}</li>
-                    ) : (
-                      <li key={idx}>
-                        <span className="font-bold text-white">{ability.name}:</span>{' '}
-                        {ability.description}
-                      </li>
-                    )
-                  )}
-                </ul>
-              </div>
-            </div>
-          )}
         </div>
 
         {/* Unit Composition Accordion */}
@@ -431,6 +409,37 @@ export default function UnitDetailTab({ unit, onBack, onUpdate }: UnitDetailTabP
             </div>
           )}
         </div>
+
+        {/* Abilities Accordion */}
+        {unit.abilities && unit.abilities.length > 0 && (
+          <div className="bg-gray-800 dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+            <button
+              className="w-full flex justify-between items-center p-4 bg-gray-700 text-white font-bold uppercase hover:bg-gray-600 transition-colors"
+              onClick={() => setIsAbilitiesOpen(!isAbilitiesOpen)}
+            >
+              <span>Abilities</span>
+              <span>{isAbilitiesOpen ? '▼' : '▶'}</span>
+            </button>
+            {isAbilitiesOpen && (
+              <div className="p-4">
+                <div className="bg-gray-900 rounded p-2 border border-gray-700">
+                  <ul className="list-disc list-inside text-sm text-gray-300 space-y-1">
+                    {unit.abilities.map((ability, idx) =>
+                      typeof ability === 'string' ? (
+                        <li key={idx}>{ability}</li>
+                      ) : (
+                        <li key={idx}>
+                          <span className="font-bold text-white">{ability.name}:</span>{' '}
+                          {ability.description}
+                        </li>
+                      )
+                    )}
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
