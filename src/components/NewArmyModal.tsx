@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Unit } from '../types/army';
 import { SUPPORTED_FACTIONS } from '../utils/unitUtils';
 import { FACTION_DETACHMENTS } from '../data/detachments';
+import { parseAndValidateArmyJson } from '../utils/armyIO';
 
 interface NewArmyModalProps {
   isOpen: boolean;
@@ -28,6 +29,9 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
     detachment: '',
     points: 2000,
   });
+  const [showImport, setShowImport] = useState(false);
+  const [importText, setImportText] = useState('');
+  const [importError, setImportError] = useState<string | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -77,6 +81,36 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
         ...prev,
         [name]: value,
       }));
+    }
+  };
+
+  // Parses/validates the pasted JSON via armyIO (all validation logic lives
+  // there, not here) and, on success, reconstructs the army through the
+  // same `onSubmit` path as manual creation. Wrapped in try/catch as a
+  // last-resort guard — `parseAndValidateArmyJson` itself never throws —
+  // so a pasted payload can never propagate an unhandled exception into
+  // the React tree.
+  const handleImport = () => {
+    try {
+      const result = parseAndValidateArmyJson(importText);
+      if (!result.ok) {
+        setImportError(result.error);
+        return;
+      }
+      setImportError(null);
+      if (result.warning) {
+        // Faction not in SUPPORTED_FACTIONS: per Task 6.7 this warns but
+        // never blocks the import. window.alert guarantees the user sees
+        // it even though this modal closes immediately after onSubmit.
+        window.alert(result.warning);
+      }
+      onSubmit(result.army);
+      setImportText('');
+      setShowImport(false);
+    } catch {
+      setImportError(
+        'Something went wrong importing this army. Please check the JSON and try again.'
+      );
     }
   };
 
@@ -192,6 +226,55 @@ export default function NewArmyModal({ isOpen, onClose, onSubmit }: NewArmyModal
           </button>
         </div>
       </form>
+
+      <div className="mt-6 pt-4 border-t border-gray-600 dark:border-gray-600">
+        <button
+          type="button"
+          onClick={() => setShowImport((prev) => !prev)}
+          className="text-sm font-medium text-blue-400 hover:text-blue-300 underline"
+        >
+          {showImport ? 'Hide Import' : 'Import Army from JSON'}
+        </button>
+
+        {showImport && (
+          <div className="mt-3 space-y-2">
+            <label
+              className="block text-sm font-medium mb-1 dark:text-gray-300 text-gray-700"
+              htmlFor="importJson"
+            >
+              Paste an exported army JSON string
+            </label>
+            <textarea
+              id="importJson"
+              value={importText}
+              onChange={(e) => {
+                setImportText(e.target.value);
+                if (importError) setImportError(null);
+              }}
+              rows={6}
+              placeholder="Paste JSON exported from another army here..."
+              className="w-full px-3 py-2 rounded bg-gray-700 dark:bg-gray-700 bg-gray-100 focus:outline-none focus:ring text-white dark:text-white text-gray-900 text-xs font-mono"
+            />
+            {importError && (
+              <div role="alert" className="text-sm text-red-400 dark:text-red-400">
+                {importError}
+              </div>
+            )}
+            <button
+              type="button"
+              onClick={handleImport}
+              disabled={!importText.trim()}
+              className={`w-full px-4 py-2 rounded font-bold transition-colors ${
+                importText.trim()
+                  ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                  : 'bg-gray-600 text-gray-400 cursor-not-allowed'
+              }`}
+            >
+              Import Army
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
