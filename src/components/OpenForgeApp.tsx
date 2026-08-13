@@ -30,10 +30,18 @@ export default function OpenForgeApp() {
     }
   }, []);
 
-  // Save armies to localStorage whenever it changes
+  // Save armies to localStorage whenever it changes. Wrapped in try/catch:
+  // `setItem` can throw (e.g. `QuotaExceededError` from an oversized import,
+  // or a browser blocking storage entirely) and an uncaught throw inside a
+  // render-triggered effect crashes the whole React tree. Persistence
+  // failing should never stop the user from continuing to work in-memory.
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      localStorage.setItem('armies', JSON.stringify(armies));
+      try {
+        localStorage.setItem('armies', JSON.stringify(armies));
+      } catch (error) {
+        console.error('Failed to save armies to localStorage:', error);
+      }
     }
   }, [armies]);
 
