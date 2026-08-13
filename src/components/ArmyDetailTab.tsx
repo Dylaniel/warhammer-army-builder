@@ -552,6 +552,7 @@ function ExportArmyControl({ army }: { army: Army }) {
       () => {
         setStatus('failed');
         setShowFallback(true);
+        window.setTimeout(() => setStatus('idle'), 2000);
       }
     );
   };
