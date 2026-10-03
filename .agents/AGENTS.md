@@ -167,6 +167,14 @@ This exception applies only to *which model/tooling performs the work*. The conc
 
 **Standing authorization (granted by the repo owner, 2026-08-05):** the human-authorization requirements elsewhere in this policy — High Tier spawns, Anthropic-model sub-agent allocation, and merges/pushes to shared branches — are **pre-approved** and must not be re-confirmed per action. The orchestrator operates autonomously: assess tier and caps, then act. Traceability comes from atomic, immediately-pushed commits, which make any unwanted change trivially revertible. Genuinely destructive git operations (force-push, hard reset, history rewrite) are excluded from this standing authorization and must still be raised before use, since they defeat the revert path the authorization relies on.
 
+**Model currency (Claude Code):** always use the **most up-to-date model available** in the permitted tier. The specific versions named anywhere in this document (`Claude Sonnet 4.6 (Thinking)`, `Gemini 3.1 Pro`, `Gemini 3.5 Flash`, `GPT-OSS 120B`, and the commit-message examples in §5) are historical examples from when the policy was written — they are **not** pins, and must never be chosen over a newer model in the same family. In practice:
+
+*   **Orchestrator:** whichever model the owner has selected for the session.
+*   **Sub-agents, High and Medium Tier, and all QA:** the latest **Sonnet**. Spawn by family alias (`sonnet`), never by a hardcoded version id, so the newest release is picked up automatically.
+*   **Sub-agents, Low Tier:** the latest **Haiku** is acceptable for trivial mechanical work; otherwise the latest Sonnet.
+*   **No Opus sub-agents.** Owner instruction: Opus sub-agents exhausted the session usage limit twice and killed runs mid-task. "Most up-to-date" therefore means the newest model *within Sonnet/Haiku*, not the most capable model overall.
+*   **Commit signatures** must name the model that actually did the work at the time (`[Model: <real current model name>]`), never a version copied from this document.
+
 ### 1. Multi-Agent Complexity-Based Routing Matrix
 Before spawning any sub-agent, you must evaluate the nature and complexity of the task to determine the appropriate compute tier:
 
