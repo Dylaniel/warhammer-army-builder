@@ -165,28 +165,56 @@ This routing policy was authored assuming a Gemini-based orchestrator (e.g., Ant
 
 This exception applies only to *which model/tooling performs the work*. The concurrency caps in §2 and §3, the File Blast Radius Filter, the Dependency Verification rule, and the QA hand-off protocol in §6 all remain fully in force.
 
-**Standing authorization (granted by the repo owner, 2026-08-05):** the human-authorization requirements elsewhere in this policy — High Tier spawns, Anthropic-model sub-agent allocation, and merges/pushes to shared branches — are **pre-approved** and must not be re-confirmed per action. The orchestrator operates autonomously: assess tier and caps, then act. Traceability comes from atomic, immediately-pushed commits, which make any unwanted change trivially revertible. Genuinely destructive git operations (force-push, hard reset, history rewrite) are excluded from this standing authorization and must still be raised before use, since they defeat the revert path the authorization relies on.
+**Standing authorization (granted by the repo owner, 2026-08-05):** the human-authorization requirements elsewhere in this policy — High Tier spawns, Haiku/Sonnet sub-agent allocation, and merges/pushes to shared branches — are **pre-approved** and must not be re-confirmed per action. The sole spawning exception is **Opus**, which always goes through the escalation protocol in §1a. The orchestrator operates autonomously: assess tier and caps, then act. Traceability comes from atomic, immediately-pushed commits, which make any unwanted change trivially revertible. Genuinely destructive git operations (force-push, hard reset, history rewrite) are excluded from this standing authorization and must still be raised before use, since they defeat the revert path the authorization relies on.
+
+**Model currency:** this policy names model **families**, never versions. Always use the **most up-to-date model available in the chosen family**, and spawn by family alias (e.g. `haiku`, `sonnet`) rather than a hardcoded version id so new releases are picked up automatically. Any specific version that still appears elsewhere in this document (for example in the §5 commit-message examples) is a historical example, not a pin. **Commit signatures** must name the model that actually did the work at the time (`[Model: <real current model name>]`), never a version copied from this document. The **orchestrator** is whichever model the owner has selected for the session.
 
 ### 1. Multi-Agent Complexity-Based Routing Matrix
-Before spawning any sub-agent, you must evaluate the nature and complexity of the task to determine the appropriate compute tier:
+Before spawning any sub-agent, evaluate the nature and complexity of the task and pick a tier. The tier describes **the task**, not how important it feels.
 
-*   **High Tier (Architecture & Core Logic):** Multi-file refactoring, core business logic, schema changes, or complex state/combat machines.
-    *   *Primary Model:* `Claude Sonnet 4.6 (Thinking)`
-    *   *Failover Model:* `Gemini 3.1 Pro (High)`
-    *   *Human Authorization:* **REQUIRED**. You must prompt the user and obtain explicit permission via the interface before spawning.
-*   **Medium Tier (Component & Layout):** Single-file implementation, isolated UI layout modifications, component refinement, or standalone helper functions.
-    *   *Primary Model:* `Gemini 3.1 Pro (High)`
-    *   *Failover Model:* `Gemini 3.5 Flash (High)`
-    *   *Human Authorization:* **Auto-Approve**. You are permitted to execute these silently within concurrency limits.
-*   **Low Tier (Utility & Automation):** Unit test generation, script execution, data hydration, typos, boilerplate, or documentation.
-    *   *Primary Model:* `Gemini 3.5 Flash (High)`
-    *   *Failover Model:* `Gemini 3.5 Flash (Medium)`
-    *   *Human Authorization:* **Auto-Approve**. You are permitted to execute these silently within concurrency limits.
+**Model families, cheapest to most expensive within each provider:**
+
+| Provider | Light | Standard | Heavy |
+|---|---|---|---|
+| Anthropic | Haiku | Sonnet | Opus |
+| Google | Gemini Flash Lite | Gemini Flash | Gemini Pro |
+| OpenAI | GPT Luna | GPT Terra | GPT Sol |
+
+The **Heavy** column is each provider's flagship. Heavy families are never assigned by tier — they are reachable only through the escalation protocol in §1a.
+
+**Tiers:**
+
+| Tier | Typical work | Permitted families | Authorization |
+|---|---|---|---|
+| **Low** (Utility & Automation) | Unit test generation, script execution, data hydration, typos, boilerplate, documentation, mechanical renames | **Haiku**, Gemini Flash Lite, GPT Luna | Auto-approve |
+| **Medium** (Component & Layout) | Single-file implementation, isolated UI layout changes, component refinement, standalone helper functions, re-verification of a narrow, already-specified fix | **Haiku** or **Sonnet**, Gemini Flash Lite or Flash, GPT Luna or Terra | Auto-approve |
+| **High** (Architecture & Core Logic) | Multi-file refactoring, core business logic, schema changes, data pipelines, complex state machines, adversarial QA of any of these | **Sonnet**, Gemini Flash, GPT Terra | Auto-approve (standing authorization, §0) |
+| **Escalated** (Precision & Context) | Work that has been *shown* to exceed High Tier — see §1a | **Opus**, Gemini Pro, GPT Sol | **Owner approval required, per task** |
+
+**Selection rules:**
+
+*   **Cheapest family that can do the task reliably.** Within Medium Tier, use **Haiku** when the task is fully specified, confined to one file, and has a mechanical check (build, type-check, a named test); use **Sonnet** when it needs design judgment, touches state or points logic, or parses untrusted input.
+*   **Escalate on evidence, not in advance.** If a lighter family's attempt fails verification for a capability reason (not a bad brief), rerun it one family up. Do not start a task on a heavier family "to be safe."
+*   **Keep briefs tight.** Sub-agent cost is driven by scope as much as by family: batch checks, name the files, and state what is out of scope.
+
+### 1a. Heavy-Model (Opus) Escalation Protocol
+
+This protocol is written in terms of Opus, the Heavy family Claude Code can actually spawn, and applies identically to every Heavy family (Gemini Pro, GPT Sol) under any other orchestrator.
+
+Opus has valid uses, but it is never a default and never a tier a task is simply assigned to. The only valid framing is: **"this task requires Opus for great precision and context."** Opus sub-agents previously exhausted the session usage limit twice and killed runs mid-task, so every use must be justified and approved individually.
+
+1.  **Raise.** A sub-agent or the orchestrator may conclude a task needs Opus. A sub-agent cannot spawn Opus itself — it stops and returns an escalation request to the orchestrator stating why.
+2.  **Evaluate.** The orchestrator independently evaluates the request rather than forwarding it. Valid grounds are things like: the task requires holding a large, tightly coupled context in mind at once and cannot be split; a Standard-family attempt has already failed verification for reasons of reasoning rather than specification; or a subtle error would be costly and hard to detect (e.g. a schema migration or the data pipeline). **Not** valid grounds: the task is High Tier, the task is important, speed, or habit.
+3.  **Display.** The orchestrator shows the owner its evaluation: the task, the specific evidence that a Standard family is insufficient, the expected scope and usage cost, the alternatives considered (splitting the task, a tighter brief, another Sonnet pass), and its own recommendation — which may be "not warranted."
+4.  **Ask.** The orchestrator then prompts the owner to allow or deny. Opus is spawned only on an explicit yes.
+5.  **Scope.** Approval covers that one task. It is not a standing approval and does not carry to later tasks or later loops of the same task. If denied, proceed with Sonnet, split the task, or halt and report.
+
+This protocol is an explicit **exception to the standing authorization in §0**.
 
 ### 2. Intelligent Spawning & Throttling Guardrails
 You must actively throttle background agent invocation based on workspace safety, rather than blindly scaling to maximum capacities:
 
-*   **Asymmetric Approval Lock:** All Anthropic/Claude allocations are highly intentional and strictly require manual user confirmation to prevent accidental token/quota exhaustion. All native Google/Gemini allocations are granted auto-execution privileges.
+*   **Approval Lock:** Low, Medium and High Tier allocations run without confirmation under the standing authorization (§0). The one kind of allocation that always requires manual owner confirmation is a **Heavy family** (Opus, Gemini Pro, GPT Sol), via the escalation protocol in §1a, to prevent usage-limit exhaustion.
 *   **File Blast Radius Filter:** If multiple pending tasks touch the exact same file or tightly coupled directory, parallel execution is strictly forbidden. Force these tasks to run sequentially on a single sub-agent thread to guarantee zero Git merge conflicts.
 *   **Dependency Verification:** Always parse the task tracking list for sequential prerequisites. Never spawn sub-agents for downstream tasks until their upstream dependencies are fully merged and validated.
 *   **Parallel-By-Default:** Dependency Verification gates what *cannot* run yet; it is not a licence to run everything one at a time. Whenever a set of tasks has no remaining unmet prerequisite, dispatch them to separate concurrent agents rather than sequentially, up to the standing caps (§3, and the Diminishing Returns cap above). Serialize **only** for a genuine blocker — an unmet dependency, the File Blast Radius Filter, or the Single-Checkout Constraint below. Re-evaluate after **each** task completes and passes verification, not just at batch boundaries: the moment a task unblocks another, dispatch it. This applies identically to implementation work and to QA (both passes) — the deciding question is always "does this depend on something unfinished, or share blast radius with something in flight," never "is this QA." When something does run sequentially, record which of the three blockers caused it.
@@ -221,8 +249,8 @@ This protocol enforces a maximum of one self-correction loop per user prompt to 
 Whenever an implementation sub-agent completes an initial assignment:
 *   **Generate Changelog:** The Lead Orchestrator compiles a brief, bulleted "Initial Changelog & Test Criteria" summary detailing exactly what UI elements, state changes, or data mutations were built.
 *   **Spawn QA Sub-Agent:** The Orchestrator spawns a dedicated testing agent.
-    *   *Designated QA Model:* `Gemini 3.5 Flash (Medium)` OR `GPT-OSS 120B (Medium)`.
-    *   *Authorization Rule:* **Auto-Approve is STRICTLY EXCLUSIVE to native Google models (e.g., Gemini).** Because `GPT-OSS 120B (Medium)` shares the premium Claude/GPT quota pool, if it (or any other non-Google model) is selected, **explicit manual user authorization is REQUIRED** before spawning. NEVER auto-approve a GPT or Claude model.
+    *   *QA Model:* chosen by the routing matrix (§1 of the routing policy) like any other task. Adversarial QA of High Tier work is itself High Tier (**Sonnet**, Gemini Flash, GPT Terra); re-verifying a narrow, already-specified fix is Medium Tier and may run on **Haiku** or Gemini Flash.
+    *   *Authorization Rule:* auto-approved under the standing authorization. QA never runs on Opus except through the escalation protocol (§1a).
 *   **Test Execution & Adversarial Mandate:** The QA Sub-Agent uses integrated browser/terminal tools to verify the local development server (e.g., `localhost:3000`), testing the exact items listed in the initial changelog.
     *   **Adversarial Mindset:** The primary objective of the QA Sub-Agent is **to fail the implementation, not to pass it.** The agent must actively attempt to break the UI, bypass state gating, and prove that the implementation is flawed.
     *   **Beyond the Happy Path:** While the QA agent must verify the items listed in the Changelog, it must intentionally test edge cases, invalid inputs, rapid/out-of-order clicks, and boundary conditions to ensure the application does not crash under duress.
