@@ -178,16 +178,18 @@ Before spawning any sub-agent, evaluate the nature and complexity of the task an
 |---|---|---|---|
 | Anthropic | Haiku | Sonnet | Opus |
 | Google | Gemini Flash Lite | Gemini Flash | Gemini Pro |
-| OpenAI | GPT models — place the specific variant by its size class: mini/small variants count as Light, full-size variants as Standard |||
+| OpenAI | GPT Luna | GPT Terra | GPT Sol |
+
+The **Heavy** column is each provider's flagship. Heavy families are never assigned by tier — they are reachable only through the escalation protocol in §1a.
 
 **Tiers:**
 
 | Tier | Typical work | Permitted families | Authorization |
 |---|---|---|---|
-| **Low** (Utility & Automation) | Unit test generation, script execution, data hydration, typos, boilerplate, documentation, mechanical renames | **Haiku**, Gemini Flash Lite, Light GPT | Auto-approve |
-| **Medium** (Component & Layout) | Single-file implementation, isolated UI layout changes, component refinement, standalone helper functions, re-verification of a narrow, already-specified fix | **Haiku** or **Sonnet**, Gemini Flash, Light or Standard GPT | Auto-approve |
-| **High** (Architecture & Core Logic) | Multi-file refactoring, core business logic, schema changes, data pipelines, complex state machines, adversarial QA of any of these | **Sonnet**, Gemini Pro, Standard GPT | Auto-approve (standing authorization, §0) |
-| **Escalated** (Precision & Context) | Work that has been *shown* to exceed High Tier — see §1a | **Opus** | **Owner approval required, per task** |
+| **Low** (Utility & Automation) | Unit test generation, script execution, data hydration, typos, boilerplate, documentation, mechanical renames | **Haiku**, Gemini Flash Lite, GPT Luna | Auto-approve |
+| **Medium** (Component & Layout) | Single-file implementation, isolated UI layout changes, component refinement, standalone helper functions, re-verification of a narrow, already-specified fix | **Haiku** or **Sonnet**, Gemini Flash Lite or Flash, GPT Luna or Terra | Auto-approve |
+| **High** (Architecture & Core Logic) | Multi-file refactoring, core business logic, schema changes, data pipelines, complex state machines, adversarial QA of any of these | **Sonnet**, Gemini Flash, GPT Terra | Auto-approve (standing authorization, §0) |
+| **Escalated** (Precision & Context) | Work that has been *shown* to exceed High Tier — see §1a | **Opus**, Gemini Pro, GPT Sol | **Owner approval required, per task** |
 
 **Selection rules:**
 
@@ -195,7 +197,9 @@ Before spawning any sub-agent, evaluate the nature and complexity of the task an
 *   **Escalate on evidence, not in advance.** If a lighter family's attempt fails verification for a capability reason (not a bad brief), rerun it one family up. Do not start a task on a heavier family "to be safe."
 *   **Keep briefs tight.** Sub-agent cost is driven by scope as much as by family: batch checks, name the files, and state what is out of scope.
 
-### 1a. Opus Escalation Protocol
+### 1a. Heavy-Model (Opus) Escalation Protocol
+
+This protocol is written in terms of Opus, the Heavy family Claude Code can actually spawn, and applies identically to every Heavy family (Gemini Pro, GPT Sol) under any other orchestrator.
 
 Opus has valid uses, but it is never a default and never a tier a task is simply assigned to. The only valid framing is: **"this task requires Opus for great precision and context."** Opus sub-agents previously exhausted the session usage limit twice and killed runs mid-task, so every use must be justified and approved individually.
 
@@ -245,7 +249,7 @@ This protocol enforces a maximum of one self-correction loop per user prompt to 
 Whenever an implementation sub-agent completes an initial assignment:
 *   **Generate Changelog:** The Lead Orchestrator compiles a brief, bulleted "Initial Changelog & Test Criteria" summary detailing exactly what UI elements, state changes, or data mutations were built.
 *   **Spawn QA Sub-Agent:** The Orchestrator spawns a dedicated testing agent.
-    *   *QA Model:* chosen by the routing matrix (§1 of the routing policy) like any other task. Adversarial QA of High Tier work is itself High Tier (**Sonnet**, Gemini Pro, Standard GPT); re-verifying a narrow, already-specified fix is Medium Tier and may run on **Haiku** or Gemini Flash.
+    *   *QA Model:* chosen by the routing matrix (§1 of the routing policy) like any other task. Adversarial QA of High Tier work is itself High Tier (**Sonnet**, Gemini Flash, GPT Terra); re-verifying a narrow, already-specified fix is Medium Tier and may run on **Haiku** or Gemini Flash.
     *   *Authorization Rule:* auto-approved under the standing authorization. QA never runs on Opus except through the escalation protocol (§1a).
 *   **Test Execution & Adversarial Mandate:** The QA Sub-Agent uses integrated browser/terminal tools to verify the local development server (e.g., `localhost:3000`), testing the exact items listed in the initial changelog.
     *   **Adversarial Mindset:** The primary objective of the QA Sub-Agent is **to fail the implementation, not to pass it.** The agent must actively attempt to break the UI, bypass state gating, and prove that the implementation is flawed.
